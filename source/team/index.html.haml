@@ -5,7 +5,8 @@
       %h3 We bring together the very best people and deploy them on your hardest digital problems
   %section.team-cards.twelve.columns
     - data.team.each do |person|
-      .team-card{style: "background-image:url(/images/team_photos/#{person.photo})"}
+      - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
+      .team-card{style: style}
         .stats
           %h3.name= person.full_name
           %h4.title= person.title
