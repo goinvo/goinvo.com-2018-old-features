@@ -1,1 +1,132 @@
-team
+%article#the-team
+  %header.hero
+    .title
+      %h2 Our Team
+      %h3 We bring together the very best people and deploy them on your hardest digital problems
+  %section.team-cards.twelve.columns
+    - data.team.each do |person|
+      .team-card{style: "background-image:url(/images/team_photos/#{person.photo})"}
+        .stats
+          %h3.name= person.full_name
+          %h4.title= person.title
+          %ul.social-icons
+            - unless person.linkedin_url.blank?
+              %li.linkedin= link_to(image_tag('team/social-icons/linkedin.png'), person.linkedin_url)
+            - unless person.github_username.blank?
+              %li.github= link_to(image_tag('team/social-icons/github.png'), github_url_for(person.github_username))
+            - unless person.twitter_username.blank?
+              %li.twitter= link_to(image_tag('team/social-icons/twitter.png'), twitter_url_for(person.twitter_username))
+            - unless person.flickr_username.blank?
+              %li.flickr= link_to(image_tag('team/social-icons/flickr.png'), flickr_url_for(person.flickr_username))
+            - unless person.dribbble_username.blank?
+              %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username))
+            - unless person.tumblr_url.blank?
+              %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url)
+            - unless person.lastfm_username.blank?
+              %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username))
+            - unless person.pinterest_username.blank?
+              %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username))
+          %div{style: "clear:both"}
+          %p.bio= person.bio
+        %div{style: "clear:both"}
+        .character-sheet
+          .content
+            - unless person.mbti.blank?
+              .myers-briggs
+                MBTI
+                %span.value= person.mbti
+            - unless person.github_username.blank?
+              .sparkline.github-commits
+                .graph{"data-member-id" => person.id}
+                %label
+  .sidebar.four.columns.omega
+    %section.code-of-ethics
+      %h2 CODE of ETHICS
+      %h3 Speak the Truth
+      %p We tell the truth to others, with the intention and in the way of trying to do the most possible good.
+      %h3 Make the World Useful, Beautiful and Delightful
+      %p We exercise the discipline required to produce ideas and things that are useful to and beautiful in the world.
+      %h3 Learn, Share & Build
+      %p We are curious, open creators who welcome new ideas and the input of others.
+      %h3 Be Vigilant
+      %p Identify and respond to inequality, protecting and serving the ideas, community and people in our world.
+      %h3 Go Like Hell
+      %p We are driven and committed to what we do, putting in extra effort in our quest for exceptional results.
+    .photo
+      = link_to( image_tag('team/team1.jpg'), '#' )
+      %h3 Dedicated + hyper-focused team
+      %p.caption
+        We carefully craft the best team to fit you and your project. The team we assemble is 100% committed to a single project, yours. You’ll have direct access to the team designing your product. Sounds like common- sense but not all design studio’s operate like us.
+    .photo
+      = link_to( image_tag('team/team3.jpg'), '#' )
+      %h3 Thou must ship!
+      %p.caption
+        We’re not in this field to just make pretty designs. We’re looking to design highly functional products that make huge impact. We’ll stretch your design thinking and push the bounds but our work is destined to ship, and beautifully.
+    %section.timeline
+      %ul
+        %li
+          %p.date June 2004
+          %h3 Invo is born!
+          %p Dirk Knemeyer and Andrei Herasimchuk incorporate Involution Studios in Palo Alto, CA.
+        %li
+          %p.date December 2004
+          %h3 Skunkworks Design Gig for Jim Clark
+          %p Invo chosen to design a new, secret product for Jim Clark. It was Shutterfly.
+        %li
+          %p.date December 2005
+          %h3 First 3 hires
+          %p Made our first 3 hires: Benjamin Listwon (who would go on to be a co-founder), Donna Driscoll, and Tiffany Altieri
+        %li
+          %p.date July 2006
+          %h3 Invo as Yahoo Design Partner
+          %p Yahoo was developing a new tool to help small businesses quickly design effective websites that looked unique and not templatized. Invo was called in to design the software.
+        %li
+          %p.date 2007
+          %h3 Invo’s First Building
+          %p Bought and moved into a building for Invo at 1294 Kifer Rd., Sunnyvale, CA
+        %li
+          %p.date 2008
+          %h3 McAfee Security Center
+          %p McAfee signs Invo to a massive contract to completely redesign the McAfee Security Center. 85M users infected by Involution’s design.
+        %li
+          %p.date May 2008
+          %h3 Oracle PLM Service
+          %p Oracle engages Invo to grow a design culture, and build and rearchitect their PLM service.
+        %li
+          %p.date September 2008
+          %h3 Studio reaches 20 people
+          %p The Silicon Valley studio reaches 20 designers and engineers.
+        %li
+          %p.date 2009
+          %h3 Boston Studio is Born
+          %p Juhan Sonin leaves MITRE and begins Invo Boston with Dirk Knemeyer.
+        %li
+          %p.date November 2009
+          %h3 Invo Silicon Valley Closes
+          %p Involution Studios Silicon Valley closes shop. Sunnyvale building is sold.
+        %li
+          %p.date February 2010
+          %h3 A Better Voter Registration
+          %p President Obama and the DNC give Invo the thumbs up on designing their open source online voting service.
+        %li
+          %p.date July 2010
+          %h3 Jonathan Follett joins Invo
+          %p Jon Follett becomes an Invo principal, and his Hot Knife Design studio merges with Invo Boston.
+        %li
+          %p.date September 2010
+          %h3 PTC Pro Engineer Redesign
+          %p PTC’s Creo (formerly Pro/ENGINEER) software is one of the oldest and most successful professional- grade software apps still in common use. They chose Involution to refresh it.
+        %li
+          %p.date October 2010
+          %h3 The Digital Life Podcast Begins
+        %li
+          %p.date November 2011
+          %h3 Dirk Speaks at TEDx Columbus
+        %li
+          %p.date March 2013
+          %h3 Studio Reaches 15 People
+          %p The Boston studio reaches 15 designers and engineers.
+        %li
+          %p.date May 2013
+          %h3 Bytes & Atoms Conference
+          %p Bytes and Atoms is a micro conference (organized by Jon Follett) exploring the Internet of Things and the interaction between the physical and digital world.
