@@ -1,0 +1,95 @@
+#the-team {
+  .hero {
+    background-image: url(/images/team/hero.png);
+  }
+
+  .team-card {
+    position: relative;
+    background-size: cover;
+    background-color: #666;
+    color: #EBEBEB;
+    margin: $grid-spacing/2 0;
+    height: 450px;
+    width: 750px;
+
+    .stats {
+      margin: $grid-spacing;
+      float: left;
+      width: 300px;
+      margin-bottom: 10px;
+      padding: 10px;
+      @include transparent-background(#000, 0.45);
+
+      h3 {
+        color: #EBEBEB;
+        line-height: 1em;
+      }
+
+      h4 {
+        color: #EBEBEB;
+        margin-bottom: $grid-spacing / 4;
+      }
+
+      .social-icons {
+        li {
+          float: left;
+          margin-right: 10px;
+          img {
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+
+      .bio {
+        margin: $grid-spacing/4 auto;
+      }
+    }
+    .character-sheet {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #EBEBEB;
+      @include transparent-background(#000, 0.25);
+
+      .content {
+        margin: 10px;
+      }
+
+      .sparkline {
+        margin: 10px;
+        float: left;
+        margin: 0 $grid-spacing/2;
+        text-align: center;
+        .graph {
+          margin: 0 auto;
+        }
+        label {
+          position: relative;
+          top: -8px;
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          line-height: 10px;
+        }
+      }
+
+      .myers-briggs {
+        margin: 10px;
+        float: left;
+        .value {
+          @include border-radius(10px);
+          border: 1px solid #EBEBEB;
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .code-of-ethics {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+projects:
+  - client: "Oracle"
+    description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
+    practice_area_names: "Enterprise"
+    budget: 88000
+  - client: "Measured Health"
+    description: "For customers like Measured Health we create a complex app ecosystem across platforms, devices and contexts of use."
+    practice_area_names: "Health"
+    budget: 75000
+  - name: ""
+    client: "3M"
+    description: "How our skunkworks for an ambitious start-up led to a $100MM exit."
+    practice_area_names: "Health"
+    budget: 120000
+    phases_attributes:
+      - order: 1
+        duration: 8
+        full_time_staff: 1
+        service_names: "Envision"
+      - order: 2
+        duration: 8
+        full_time_staff: 1.5
+        service_names: "Envision, Craft"
+      - order: 3
+        duration: 32
+        full_time_staff: 3
+        service_names: "Envision, Blueprint, Craft, Build, Support"
+      - order: 4
+        duration: 12
+        full_time_staff: 2.25
+        service_names: "Craft, Build, Support"
+    milestones_attributes:
+      - description: "Product vision realized, sales team hits pavement."
+        during_week: 10
+      - description: "Prototype captures first customer, production begins."
+        during_week: 16
+      - description: "CodeRyte sold to 3M"
+        during_week: 40
+      - description: "v01 launched, 50% efficiency gains."
+        during_week: 48
+  - name: ""
+    client: "Becton Dickinson"
+    description: "Medical device provider with over $7B in annual revenues."
+    practice_area_names: "Health"
+    budget: 95000
+    phases_attributes:
+      - order: 1
+        duration: 14
+        full_time_staff: 2
+        service_names: "Envision, Craft"
+      - order: 2
+        duration: 4
+        full_time_staff: 0.2
+        service_names: "Craft"
+      - order: 3
+        duration: 18
+        full_time_staff: 2.5
+        service_names: "Craft, Build, Support"
+      - order: 4
+        duration: 8
+        full_time_staff: 2
+        service_names: "Craft, Build, Support"
+      - order: 5
+        duration: 6
+        full_time_staff: 1.5
+        service_names: "Craft, Build, Support"
+    milestones_attributes:
+      - description: "Re-envision entire software"
+        during_week: 10
+      - description: "Design 2 year software plan."
+        during_week: 14
+      - description: "Beta users start using software."
+        during_week: 36
+      - description: "IPO planned in next 12 months"
+        during_week: 50
+  - name: ""
+    client: "Affinnova"
+    description: "Product marketing workflow & testing system."
+    practice_area_names: "Marketing"
+    budget: 80000
+    phases_attributes:
+      - order: 1
+        duration: 14
+        full_time_staff: 2
+        service_names: "Envision, Craft"

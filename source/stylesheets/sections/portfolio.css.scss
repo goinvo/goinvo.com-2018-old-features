@@ -1,0 +1,102 @@
+
+.filters {
+  padding: $grid-spacing;
+  .filter, .stat {
+    font-size: 30px;
+    color: #999;
+    label {
+      display: block;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.portfolio-cards {
+  padding: $grid-spacing / 2;
+  padding-bottom: 100px;
+}
+.project-card {
+  margin: $grid-spacing auto;
+  overflow: hidden;
+  border-top: 1px solid #EBEBEB;
+  padding-top: $grid-spacing;
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .overview {
+    width: 220px;
+    margin-right: 10px;
+    float: left;
+
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    .practice-areas {
+      text-transform: uppercase;
+      color: #999;
+      font-size: 14px;
+      a {
+        display: inline-block;
+        margin: 4px;
+        color: #999;
+        padding: 2px 4px;
+        text-decoration: none;
+        @include transition(all 0.5s ease-in-out);
+        &:hover {
+          background: #CCC;
+          color: #FFF;
+        }
+      }
+    }
+    .description {
+      margin: 5px 0 10px 0;
+    }
+  }
+  .graph {
+    float: left;
+    width: 750px;
+    .phase-container {
+      float: left;
+      height: 150px;
+      position: relative;
+      .phase {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        .service-areas {
+          font-size: 10px;
+          line-height: 12px;
+          padding: 0 6px;
+        }
+        .staffing {
+          font-size: 10px;
+          line-height: 12px;
+          padding: 4px;
+          margin-bottom: 5px;
+        }
+        .bar {
+          width: 100%;
+          min-height: 4px;
+          @include opacity(1.0);
+          @include transition(opacity 0.25s ease-in-out);
+          &:hover {
+            @include opacity(0.7);
+          }
+        }
+      }
+    }
+  }
+}
+.milestone {
+  position: absolute;
+  font-size: 10px;
+  line-height: 12px;
+  width: 60px;
+  @include transparent-background(#FFF, 0.25);
+  padding: 10px 0 0 4px;
+  border-left: 1px solid #EBEBEB;
+}

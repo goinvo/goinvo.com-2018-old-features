@@ -1,0 +1,113 @@
+@import "compass/typography";
+@import "grid";
+
+
+/*************************************************************
+ *  BASELINE
+**************************************************************/
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+@include establish-baseline();
+
+
+/*************************************************************
+ *  FONT FAMILES
+**************************************************************/
+
+@font-face {
+  font-family: 'Jenson Pro Light';
+  src: url('/fonts/AJensonPro-LtDisp.eot');
+  src: url('/fonts/jensonpro/AJensonPro-LtDisp.woff') format('woff'),
+       url('/fonts/jensonpro/AJensonPro-LtDisp.ttf') format('truetype'),
+       url('/fonts/jensonpro/AJensonPro-LtDisp.svg') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jenson Pro Regular';
+  src: url('/fonts/jensonpro/AJensonPro-Disp.eot');
+  src: url('/fonts/jensonpro/AJensonPro-Disp.woff') format('woff'),
+       url('/fonts/jensonpro/AJensonPro-Disp.ttf') format('truetype'),
+       url('/fonts/jensonpro/AJensonPro-Disp.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jenson Pro Bold';
+  src: url('/fonts/jensonpro/AJensonPro-BoldDisp.eot');
+  src: url('/fonts/jensonpro/AJensonPro-BoldDisp.woff') format('woff'),
+       url('/fonts/jensonpro/AJensonPro-BoldDisp.ttf') format('truetype'),
+       url('/fonts/jensonpro/AJensonPro-BoldDisp.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jenson Pro Italic';
+  src: url('/fonts/jensonpro/AJensonPro-ItDisp.eot');
+  src: url('/fonts/jensonpro/AJensonPro-ItDisp.woff') format('woff'),
+       url('/fonts/jensonpro/AJensonPro-ItDisp.ttf') format('truetype'),
+       url('/fonts/jensonpro/AJensonPro-ItDisp.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+$base-font-light:   'Helvetica Light';
+$base-font-regular: 'Helvetica', 'Helvetica Neue', sans-serif;
+$base-font-bold:    'Helvetica Bold', 'Helvetica Black';
+
+
+/*************************************************************
+ *  TYPES OF TYPE
+**************************************************************/
+
+body {
+  font-family: $base-font-regular;
+  color: #444;
+}
+
+h1, h2, h3, h4, h5 {
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(40px);
+  font-family: $base-font-bold;
+}
+
+h2 {
+  @include adjust-font-size-to(32px);
+  font-family: $base-font-bold;
+  margin-bottom: $grid-spacing / 2;
+}
+
+h3 {
+  @include adjust-font-size-to(24px);
+  font-family: $base-font-bold;
+}
+
+h4 {
+  @include adjust-font-size-to(18px);
+  font-family: $base-font-bold;
+}
+
+p {
+  margin-bottom: 1em;
+  em {
+    font-family: $base-font-light;
+    font-style: italic;
+  }
+  strong {
+    font-family: $base-font-bold;
+  }
+  a {
+    text-decoration: none;
+    color: $darkblue;
+  }
+}
