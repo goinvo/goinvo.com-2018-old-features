@@ -45,17 +45,17 @@ $ ->
 
 
   # Populate and render GitHub commit sparklines
-  $('.github-commits.sparkline .graph').each (i,el) ->
-    el = $(el)
-    id = el.data('member-id')
-    $.ajax
-      url: "/team/#{id}/github/commit_history",
-      success: (data) ->
-        totalCommits = 0
-        $.each data, ->
-          totalCommits += parseInt(this) || 0
-
-        el.html(data.join(','))
-        el.siblings('label').html("#{totalCommits} commits in the last 30d")
-        el.sparkline('html', {type: 'bar', barColor: '#EBEBEB', barWidth: 3} )
-        el.show()
+  # $('.github-commits.sparkline .graph').each (i,el) ->
+  #   el = $(el)
+  #   id = el.data('member-id')
+  #   $.ajax
+  #     url: "/team/#{id}/github/commit_history",
+  #     success: (data) ->
+  #       totalCommits = 0
+  #       $.each data, ->
+  #         totalCommits += parseInt(this) || 0
+  #
+  #       el.html(data.join(','))
+  #       el.siblings('label').html("#{totalCommits} commits in the last 30d")
+  #       el.sparkline('html', {type: 'bar', barColor: '#EBEBEB', barWidth: 3} )
+  #       el.show()
