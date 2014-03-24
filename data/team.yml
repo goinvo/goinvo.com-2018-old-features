@@ -13,6 +13,8 @@
   title: Designer
   bio: "Eric is a designer specializing in system design and software application. He leads our creationary process in UI design and pushing concepts into production. Eric joined Invo in 2010 and is a graduate of Johnson & Wales University. Eric enjoys tinkering with Arduino controllers and taking random ‘make’ classes at the Artisan’s Asylum."
   mbti: INFP
+  linkedin_url: "http://www.linkedin.com/in/ericjbenoit"
+  twitter_username: "ebenoit"
   github_username: "ericbenwa"
   photo: eric_benoit.jpeg
 - first_name: Sarah
@@ -25,6 +27,7 @@
   title: Designer
   bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the rochester Institute of Technology."
   mbti: ISFJ
+  twitter_username: "catamariface"
   github_username: "jen-p"
   photo: jen_patel.jpeg
 - first_name: Ben
@@ -32,32 +35,47 @@
   title: Designer
   bio: "Ben is a designer specializing in engineering and holistic design. He orchestrates exceptional outcomes in algorithm-driven software and specializes in transitioning beautiful designs from pixels to production code. Ben joined Invo in 2012 and is a graduate of the Olin College of Engineering. Ben also works to revolutionize the world of coffee brewing at"
   mbti: ENTP
+  twitter_username: "bensalinas"
+  github_username: "bsalinas"
 - first_name: Roger
   last_name: Zhu
   title: Designer
   bio: "Roger is an industrial designer specializing in interaction design and prototyping. He focuses on complex medical and consumer healthcare solutions and data visualization. Roger joined Invo in 2012 (after designing hand drills for Bosch) and received his Masters of Industrial Design from the Rhode Island School of Design."
+  mbti: INTJ
   photo: roger_zhu.jpeg
 - first_name: Sein
   last_name: Woo
   title: Designer
   bio: "Sein is an interface designer specializing in communication design and industrial design. She makes desirable interfaces that are honest in function and natural to people. She is a hands-on designer and regularly crafts furniture and jewelry. Sein joined Invo in 2013 and is a graduate of the Rhode Island School of Design."
-  mbti: ENTP
+  mbti: ENFJ
+  linkedin_url: "http://www.linkedin.com/in/seinwoo"
+  twitter_username: "seinwoo"
   github_username: "swoo"
   photo: sein_woo.jpeg
 - first_name: Adam
   last_name: Pere
   title: Engineer
   bio: "Adam is an engineer specializing data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College."
+  linkedin_url: "http://www.linkedin.com/in/adampere"
+  github_username: "apere"
   photo: adam_pere.jpeg
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
   bio: "Dirk specializes in strategy and invention. He a founder of Involution Studios LLC and part of the leadership team. Dirk’s writing about society, technology and the future have been published in dozens of publications including Business Week and he has spoken on these topics at conference keynotes in the United States and European Union, as well as a TEDx"
   mbti: INFJ
+  twitter_username: "dknemeyer"
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
   bio: "Jonathan is an executive who previously ran his own design studio. He is the director of business development for Involution Studios. Jonathan joined Invo in 2009 and is a graduate of Boston University."
+  twitter_username: "jonfollett"
+  github_username: "jonfollett"
+- first_name: Eli
+  last_name: Rodriguez
+  title: Business Admin
+  bio: "Eli is a multi-talented administrator specializing in organization and follow-through. She is the studio manager at Involution Studios Columbus. Eli joined Invo in 2012 from a similar role in New York City."
+  mbti: ESFJ
 - first_name: Emily
   last_name: Twaddell
   title: Studio Manager
