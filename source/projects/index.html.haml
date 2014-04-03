@@ -1,1 +1,73 @@
-projects
+%article.portfolio
+  .filters.clearfix
+    = form_tag "/projects", html: {id: 'project-filter-form'} do
+      .filter.three.columns.alpha
+        %select{name: "practice_area"}
+          - data.practice_areas.each do |practice_area|
+            %option{value: practice_area}= practice_area
+        %label{for: "practice_area"} Practice Area
+      .filter.three.columns
+        %select{name: "budget"}
+          - [['$500k+','500000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
+            %option{value: text_and_value[1]}= text_and_value[0]
+        %label{for: 'budget'} Budget
+      .stat.three.columns
+        .value 4%
+        %label Repeat Customers
+      .stat.three.columns
+        .value 120k
+        %label Avg First Project Budget
+      .stat.three.columns.omega
+        .value 31 weeks
+        %label Avg First Project Duration
+  .portfolio-cards
+    - if data.projects.any?
+      - data.projects.each do |project|
+        - next if project.phases.blank?
+        .project-card{id: "project-#{project.id}"}
+          %section.overview
+            %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
+            %p.practice-areas
+              - practice_areas(project).each do |area|
+                = link_to area, "/projects/#{area}"
+            %p.description= project.description
+            %p= link_to 'Read Story', '#', class: 'button', style: "background: #{client_for_name(project.client).primary_color}"
+          %section.graph
+            - project.phases.each do |phase|
+              
+              .phase-container{style: "width:#{(phase.duration.to_f / project.duration.to_f * 750).to_i}px"}
+                .phase
+                  .service-areas= phase.service_names
+                  .staffing
+                    = phase.duration
+                    w, #{phase.full_time_staff} FTE
+                  .bar{style: "height:#{(phase.full_time_staff * 15).to_i}px; background:#{client_for_name(project.client).primary_color}"}
+        -# - for milestone in project.milestones do
+        -#   .milestone{"data-offset" => milestone.during_week / project.duration, "data-project-id" => project.id}
+        -#     = milestone.description
+    - else
+      %p Easy there on the filtering, cowboy.
+        
+  - content_for :worlds_end do
+    :javascript
+      $(document).ready(function(){
+
+        // Submit filter form on change
+        $('#project-filter-form select').change(function() {
+          $(this).parents('form').submit();
+        });
+
+        // Position milestone labels
+        $('.milestone').each(function(i, milestone) {
+          var milestone = $(milestone);
+          var projectGraph = $('#project-'+milestone.data('project-id') + ' .graph');
+          var offset = '-' + (parseFloat(milestone.data('offset')) * 700) + 'px';
+          new Tether({
+            element: $(this),
+            target: projectGraph,
+            attachment: 'top left',
+            targetAttachment: 'bottom left',
+            offset: '-10px '+offset});
+        });
+
+      });

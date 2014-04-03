@@ -76,4 +76,6 @@ configure :build do
 end
 
 require "lib/link_formatters"
+require "lib/data_helper"
+helpers DataHelper
 helpers LinkFormatters

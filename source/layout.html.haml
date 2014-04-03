@@ -40,10 +40,9 @@
           %h2= link_to 'Portfolio', '/projects'
         .menu-items
           %ul
-            %li list of project
-            %li right here
-            %li and stuff
-            %li yep derp herp
+            - data.projects.each do |project|
+              -# - next if project.show_in_layout != "true"
+              %li= project.client
         %footer.podcast
           %p
             = link_to 'The Digital Life Podcast', 'http://thedigitalife.com'
