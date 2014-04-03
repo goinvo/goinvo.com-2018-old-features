@@ -1,7 +1,5 @@
-#= require jquery
-#= require jquery_ujs
-#= require jquery-sparkline.min
-#= require tether.min
-#= require masonry.min
-#= require turbolinks
+#= require vendor/jquery
+#= require vendor/jquery.sparkline
+#= require vendor/tether
+#= require vendor/masonry.min
 #= require base/ui

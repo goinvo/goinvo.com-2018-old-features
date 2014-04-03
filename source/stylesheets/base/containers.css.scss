@@ -2,6 +2,8 @@
 @import "type";
 @import "grid";
 @import "mixins";
+@import "base/grid";
+@import "base/colors";
 
 body {
   background: $lightblue;

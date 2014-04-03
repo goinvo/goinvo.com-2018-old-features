@@ -1,3 +1,6 @@
+@import "compass";
+@import "base/grid";
+@import "base/mixins";
 
 .filters {
   padding: $grid-spacing;

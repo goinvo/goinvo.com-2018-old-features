@@ -1,3 +1,6 @@
+@import "base/grid";
+@import "base/mixins";
+
 #the-team {
   .hero {
     background-image: url(/images/team/hero.png);
