@@ -1,3 +1,4 @@
+
 module LinkFormatters
     # Builds a URL to the Dribbble profile for the given username
   def dribbble_url_for(username)
@@ -28,9 +29,9 @@ module LinkFormatters
   # Greets a user
   def greeting_for(user)
     greetings = {
-      'English' => 'Hello',
+      'English' => 'Hello'
       # 'Arabic' => 'Salām',
-      # 'Austrian' => 'Grüß gott',
+      # 'Austiran' => 'Grüßgott',
       # 'French' => 'Salut',
       # 'German' => 'Guten Tag',
       # 'French' => 'Bonjour',
