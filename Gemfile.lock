@@ -17,14 +17,17 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     eventmachine (1.0.3)
+    eventmachine (1.0.3-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.3)
+    ffi (1.9.3-x86-mingw32)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    http_parser.rb (0.5.3-x86-mingw32)
     i18n (0.6.9)
     json (1.8.1)
     kramdown (1.3.3)
@@ -88,11 +91,15 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    wdm (0.1.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   haml
+  listen (<= 2.4)
   middleman
   middleman-livereload (= 3.2.1)
+  wdm (>= 0.1.0)
