@@ -1,3 +1,4 @@
+
 module LinkFormatters
     # Builds a URL to the Dribbble profile for the given username
   def dribbble_url_for(username)
@@ -28,28 +29,28 @@ module LinkFormatters
   # Greets a user
   def greeting_for(user)
     greetings = {
-      'English' => 'Hello',
-      'Arabic' => 'Salām',
-      'Austiran' => 'Grüßgott',
-      'French' => 'Salut',
-      'German' => 'Guten Tag',
-      'French' => 'Bonjour',
-      'Bengali' => 'Nomoshkar',
-      'Portuguese' => 'Olá',
-      'Russian' => 'Privet',
-      'Klingon' => 'nuqneH',
-      'Danish' => 'Hej',
-      'Spanish' => 'Hola',
-      'Finnish' => 'Hyvää päivää',
-      'Greek' => 'Γεια σας',
-      'Icelandic' => 'Góðan dag',
-      'Italian' => 'Ciào',
-      'Korean' => '안녕하세요',
-      'Japanese' => '今日は',
-      'Chinese' => '你好',
-      'Hindi' => 'नमस्ते',
-      'Romanian' => 'Salut',
-      'Vietnamese' => 'Xin chào'
+      'English' => 'Hello'
+      # 'Arabic' => 'Salām',
+      # 'Austiran' => 'Grüßgott',
+      # 'French' => 'Salut',
+      # 'German' => 'Guten Tag',
+      # 'French' => 'Bonjour',
+      # 'Bengali' => 'Nomoshkar',
+      # 'Portuguese' => 'Olá',
+      # 'Russian' => 'Privet',
+      # 'Klingon' => 'nuqneH',
+      # 'Danish' => 'Hej',
+      # 'Spanish' => 'Hola',
+      # 'Finnish' => 'Hyvää päivää',
+      # 'Greek' => 'Γεια σας',
+      # 'Icelandic' => 'Góðan dag',
+      # 'Italian' => 'Ciào',
+      # 'Korean' => '안녕하세요',
+      # 'Japanese' => '今日は',
+      # 'Chinese' => '你好',
+      # 'Hindi' => 'नमस्ते',
+      # 'Romanian' => 'Salut',
+      # 'Vietnamese' => 'Xin chào'
     }
 
     greeting = greetings.to_a.sample
