@@ -4,6 +4,9 @@
 
 # Change Compass configuration
 compass_config do |config|
+  # Require any additional compass plugins here.
+  config.add_import_path "bower_components/foundation/scss"
+  
   config.output_style = :compact
 end
 
@@ -39,7 +42,7 @@ page "humans.txt", :layout => false
 # activate :automatic_image_sizes
 
 # Livereload
-#activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -47,6 +50,13 @@ page "humans.txt", :layout => false
 #     "Helping"
 #   end
 # end
+
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -77,5 +87,6 @@ end
 
 require "lib/link_formatters"
 require "lib/data_helper"
+
 helpers DataHelper
 helpers LinkFormatters

@@ -102,4 +102,4 @@ DEPENDENCIES
   listen (<= 2.4)
   middleman
   middleman-livereload (= 3.2.1)
-  wdm (>= 0.1.0)
+  wdm (~> 0.1.0)
