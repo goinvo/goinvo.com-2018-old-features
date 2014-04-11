@@ -3,25 +3,52 @@
 #careers {
   .hero {
     background-image: url(/images/careers/hero.jpg);
+    position:relative;
+    
+      .title {
+          position:absolute;
+          bottom:0;
+          padding-bottom:2em;
+          color:white;
+          
+          h3 {
+              padding-left:31%;
+              padding-right:31%;
+              line-height: 1.2em;
+          }
+      }
+      
   }
 
   #choose-your-adventure {
     text-align: center;
     width: 100%;
-
+    list-style:none;
+      
+    li:first-child { 
+        border-width:0px;
+        border-right-width: 3px;
+        border-color: #f1f1f1;
+        border-style:solid;
+        text-align:left;
+        padding-right:7%;
+    }
+    li:last-child {
+        padding-left:7%;
+    }
     li {
-      float: left;
-      width: 50%;
-
+        float: left;
+        text-align:center;
+        margin-bottom:1em;
       a {
         font-size: 30px;
-        color: #EBEBEB;
+        color: #a8aaa9;
         text-decoration: none;
       }
       &.selected {
         a {
-          background: $lightblue;
-          color: #FFF;
+            font-weight:800;
+            color:black;    
         }
       }
     }
