@@ -24,6 +24,11 @@
     text-align: center;
     width: 100%;
     list-style:none;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    padding-top:0px; 
+    line-height: 1em;
       
     li:first-child { 
         border-width:0px;
@@ -39,7 +44,7 @@
     li {
         float: left;
         text-align:center;
-        margin-bottom:1em;
+        margin-bottom:2em;
       a {
         font-size: 30px;
         color: #a8aaa9;
@@ -53,6 +58,15 @@
       }
     }
   }
+    
+  #mainContent {
+    padding-top: 2em;   
+  }
+    
+  section.centerContent {
+      padding-left:2em;
+      padding-right:2em;
+  } 
 
   .career-path {
     clear: both;
