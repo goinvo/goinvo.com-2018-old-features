@@ -1,8 +1,6 @@
 @import "colors";
 @import "type";
-@import "grid";
 @import "mixins";
-@import "base/grid";
 @import "base/colors";
 
 body {
@@ -32,12 +30,10 @@ body {
   #site-title {
     position: relative;
     top: 10px;
-    left: $grid-spacing;
   }
   #menu-button {
     cursor: pointer;
     position: absolute;
-    right: $grid-spacing;
     top: 10px;
     text-transform: uppercase;
     &.active {
@@ -66,8 +62,6 @@ body {
   background: #000;
   color: #CCC;
   overflow: hidden;
-  margin-top: $grid-spacing;
-  padding: $grid-spacing 0;
 
   h4 {
     color: #EBEBEB;
@@ -155,7 +149,6 @@ body {
             display: block;
             width: 100%;
             height: 95px;
-            padding-left: $grid-spacing;
             color: #000;
             text-decoration: none;
           }
@@ -189,7 +182,6 @@ body {
     &.articles {
       ul {
         li.article {
-          padding: $grid-spacing / 2;
           min-height: 100px;
           cursor: pointer;
           .featured {
@@ -236,8 +228,6 @@ body {
 
   position: relative;
   padding: 1em;
-  top: $grid-spacing;
-  margin: $grid-spacing * 2;
   overflow: hidden;
 
   p {
@@ -252,7 +242,6 @@ body {
     height: 1.5em;
     text-align: center;
     position: absolute;
-    right: $grid-spacing;
     text-decoration: none;
   }
 
@@ -282,15 +271,12 @@ header.hero {
   position: relative;
   height: 460px;
   width: 100%;
-  margin-top: $grid-spacing;
-  margin-bottom: $grid-spacing / 2;
   background-size: cover;
   text-align: center;
   color: #EBEBEB;
   .title {
     width: 100%;
     position: absolute;
-    bottom: $grid-spacing;
   }
   h2 {
     font-size: 60px;
@@ -321,7 +307,6 @@ header.hero {
 
   section {
     background: #F9FDFD;
-    padding: $grid-spacing / 2;
   }
 
   .timeline {
@@ -329,7 +314,6 @@ header.hero {
       background: url(/images/timeline-bar.png) top left repeat-y;
       li {
         position: relative;
-        padding-bottom: $grid-spacing/2;
         margin-left: 40px;
         width: 128px;
         .date {
@@ -364,15 +348,8 @@ header.hero {
 
   .photo, .video {
     background: #F9FDFD;
-    margin: $grid-spacing/2 0;
     img {
       width: 100%;
-    }
-    h3 {
-      padding: 0 $grid-spacing/2;
-    }
-    .caption {
-      padding: $grid-spacing / 2;
     }
   }
 }

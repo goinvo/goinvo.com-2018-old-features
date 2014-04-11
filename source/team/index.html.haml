@@ -1,46 +1,49 @@
-%article#the-team
-  %header.hero
-    .title
-      %h2 Our Team
-      %h3 We bring together the very best people and deploy them on your hardest digital problems
-  %section.team-cards.twelve.columns
-    - data.team.each do |person|
-      - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
-      .team-card{style: style}
-        .stats
-          %h3.name= person.full_name
-          %h4.title= person.title
-          %ul.social-icons
-            - unless person.linkedin_url.blank?
-              %li.linkedin= link_to(image_tag('team/social-icons/linkedin.png'), person.linkedin_url)
-            - unless person.github_username.blank?
-              %li.github= link_to(image_tag('team/social-icons/github.png'), github_url_for(person.github_username))
-            - unless person.twitter_username.blank?
-              %li.twitter= link_to(image_tag('team/social-icons/twitter.png'), twitter_url_for(person.twitter_username))
-            - unless person.flickr_username.blank?
-              %li.flickr= link_to(image_tag('team/social-icons/flickr.png'), flickr_url_for(person.flickr_username))
-            - unless person.dribbble_username.blank?
-              %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username))
-            - unless person.tumblr_url.blank?
-              %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url)
-            - unless person.lastfm_username.blank?
-              %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username))
-            - unless person.pinterest_username.blank?
-              %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username))
+.row
+  .medium-12.column
+    %header.hero
+      .title
+        %h2 Our Team
+        %h3 We bring together the very best people and deploy them on your hardest digital problems
+.row
+  .medium-10.small-12.columns
+    %section.team-cards.twelve.columns
+      - data.team.each do |person|
+        - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
+        .team-card{style: style}
+          .stats
+            %h3.name= person.full_name
+            %h4.title= person.title
+            %ul.social-icons
+              - unless person.linkedin_url.blank?
+                %li.linkedin= link_to(image_tag('team/social-icons/linkedin.png'), person.linkedin_url)
+              - unless person.github_username.blank?
+                %li.github= link_to(image_tag('team/social-icons/github.png'), github_url_for(person.github_username))
+              - unless person.twitter_username.blank?
+                %li.twitter= link_to(image_tag('team/social-icons/twitter.png'), twitter_url_for(person.twitter_username))
+              - unless person.flickr_username.blank?
+                %li.flickr= link_to(image_tag('team/social-icons/flickr.png'), flickr_url_for(person.flickr_username))
+              - unless person.dribbble_username.blank?
+                %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username))
+              - unless person.tumblr_url.blank?
+                %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url)
+              - unless person.lastfm_username.blank?
+                %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username))
+              - unless person.pinterest_username.blank?
+                %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username))
+            %div{style: "clear:both"}
+            %p.bio= person.bio
           %div{style: "clear:both"}
-          %p.bio= person.bio
-        %div{style: "clear:both"}
-        .character-sheet
-          .content
-            - unless person.mbti.blank?
-              .myers-briggs
-                MBTI
-                %span.value= person.mbti
-            - unless person.github_username.blank?
-              .sparkline.github-commits
-                .graph{"data-member-id" => person.id}
-                %label
-  .sidebar.four.columns.omega
+          .character-sheet
+            .content
+              - unless person.mbti.blank?
+                .myers-briggs
+                  MBTI
+                  %span.value= person.mbti
+              - unless person.github_username.blank?
+                .sparkline.github-commits
+                  .graph{"data-member-id" => person.id}
+                  %label
+  .medium-2.small-12columns.sidebar.omega
     %section.code-of-ethics
       %h2 CODE of ETHICS
       %h3 Speak the Truth

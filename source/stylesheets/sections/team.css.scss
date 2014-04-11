@@ -1,4 +1,3 @@
-@import "base/grid";
 @import "base/mixins";
 
 #the-team {
@@ -11,12 +10,10 @@
     background-size: cover;
     background-color: #666;
     color: #EBEBEB;
-    margin: $grid-spacing/2 0;
     height: 450px;
     width: 750px;
 
     .stats {
-      margin: $grid-spacing;
       float: left;
       width: 300px;
       margin-bottom: 10px;
@@ -30,7 +27,6 @@
 
       h4 {
         color: #EBEBEB;
-        margin-bottom: $grid-spacing / 4;
       }
 
       .social-icons {
@@ -44,9 +40,6 @@
         }
       }
 
-      .bio {
-        margin: $grid-spacing/4 auto;
-      }
     }
     .character-sheet {
       width: 100%;
@@ -63,7 +56,6 @@
       .sparkline {
         margin: 10px;
         float: left;
-        margin: 0 $grid-spacing/2;
         text-align: center;
         .graph {
           margin: 0 auto;

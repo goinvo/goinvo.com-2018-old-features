@@ -1,4 +1,3 @@
-@import "base/grid";
 @import "base/colors";
 
 #careers {
@@ -7,7 +6,6 @@
   }
 
   #choose-your-adventure {
-    margin: $grid-spacing*2 0;
     text-align: center;
     width: 100%;
 
@@ -16,7 +14,6 @@
       width: 50%;
 
       a {
-        padding: $grid-spacing/2 $grid-spacing*2;
         font-size: 30px;
         color: #EBEBEB;
         text-decoration: none;
@@ -32,17 +29,6 @@
 
   .career-path {
     clear: both;
-    padding-top: $grid-spacing;
-  }
-
-  #application-form {
-    margin: $grid-spacing 0;
-    .form-field {
-      input,
-      textarea {
-        width: $container-width / 16 * 8 - $grid-spacing - 20px;
-      }
-    }
   }
 
 }

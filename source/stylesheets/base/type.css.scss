@@ -1,5 +1,4 @@
 @import "compass/typography";
-@import "grid";
 @import "base/colors";
 
 
@@ -85,7 +84,6 @@ h1 {
 h2 {
   @include adjust-font-size-to(32px);
   font-family: $base-font-bold;
-  margin-bottom: $grid-spacing / 2;
 }
 
 h3 {

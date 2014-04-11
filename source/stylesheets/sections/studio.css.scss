@@ -1,4 +1,3 @@
-@import "base/grid";
 @import "base/mixins";
 
 #the-studio {
@@ -7,9 +6,6 @@
     h2 {
       display: none;
     }
-  }
-  .content {
-    padding: $grid-spacing / 2;
   }
 }
 
