@@ -1,12 +1,12 @@
 %article#careers
   .row
-    .medium-12.columns
+    .columns
       %header.hero
         .title
           %h2 Careers
           %h3 People come for the growth culture, access to leading minds, and getting to work on complex software solutions.
   .row#mainContent
-    .medium-2.small-12.columns
+    .medium-3.small-12.columns
       %section.sidebar
         .photo
           = image_tag('careers/business.jpg')
@@ -26,12 +26,14 @@
             RIT Class of 2010
             %br/
             Intern
-    .medium-8.small-12.columns
+    .medium-6.small-12.columns
       %section.centerContent
         %ul#choose-your-adventure
           %li.designer= link_to 'Designer', "/careers#designer"
           %li.engineer= link_to 'Engineer', "/careers#engineer"
         #designer.career-path
+          .subtitle
+            %p Intern or Seasoned Veteran
           %p We’re looking for a designer to join our intimate studio.
           %p
             If you’re familiar with our work, you know we design, build, and ship beautiful software for companies of all sizes, like Apple, Microsoft, and Oracle, to micro startups. Often the applications require dealing with big data, involved workflows, information visualization, and competing business and design directions. We wrangle all of these variables, are hyper-concerned about guiding people through tough decisions, and produce eyebrow-raising results.
@@ -49,6 +51,8 @@
           %p If you have any questions about the position, please email me.
           %p To apply, send me your resume, portfolio, and phone number so we can chat.
         #engineer.career-path
+          .subtitle
+            %p Intern or Seasoned Veteran
           %p We’re looking for an engineer to join our intimate studio.
         %p
           Looking forward,
@@ -59,7 +63,7 @@
         #application-form
           hubspot for application form?
     
-    .medium-2.small-12.columns      
+    .medium-3.small-12.columns      
       %section.sidebar
         .photo
           = image_tag('careers/break-bread.jpg')

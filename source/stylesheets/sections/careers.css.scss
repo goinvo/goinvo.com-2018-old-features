@@ -44,7 +44,7 @@
     li {
         float: left;
         text-align:center;
-        margin-bottom:2em;
+        margin-bottom:.75em;
       a {
         font-size: 30px;
         color: #a8aaa9;
@@ -66,6 +66,10 @@
   section.centerContent {
       padding-left:2em;
       padding-right:2em;
+      
+      div.subtitle {
+          font-size:.75em;
+      }
   } 
 
   .career-path {

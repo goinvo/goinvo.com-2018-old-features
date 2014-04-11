@@ -5,7 +5,7 @@
         %h2 Our Team
         %h3 We bring together the very best people and deploy them on your hardest digital problems
 .row
-  .medium-10.small-12.columns
+  .medium-9.small-12.columns
     %section.team-cards.twelve.columns
       - data.team.each do |person|
         - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
@@ -43,7 +43,7 @@
                 .sparkline.github-commits
                   .graph{"data-member-id" => person.id}
                   %label
-  .medium-2.small-12.columns.sidebar.omega
+  .medium-3.small-12.columns.sidebar.omega
     %section.code-of-ethics
       %h2 CODE of ETHICS
       %h3 Speak the Truth
