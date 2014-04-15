@@ -1,6 +1,43 @@
+@import "compass/css3/box-shadow";
+
 #projects {
+  
+  & > .row {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+  }
+  
   .phase-container {
-    display: inline-block;
-    margin-left: -5px;
+    float: left;
+    position: relative;
+    height: 150px;
+  }
+  
+  .phase {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    .service-areas, .staffing {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+  
+  .project > h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .practice-areas {
+    font-size: 14px;
+    
+    a {
+      color: #ccc;
+    }
+  }
+  
+  .description {
+    padding-right: 50px;
   }
 }

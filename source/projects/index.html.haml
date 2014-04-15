@@ -27,13 +27,13 @@
   - data.projects.each do |project|
     - next if project.phases.blank?
     .row
-      .medium-3.columns
+      .medium-3.columns.project
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
           - practice_areas(project).each do |area|
             = link_to area, "/projects/#{area}"
         %p.description= project.description
-        %p= link_to 'Read Story', '#', class: 'button', style: "background: #{client_for_name(project.client).primary_color}"
+        %p= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}"
       .medium-9.columns
         - project.phases.each do |phase|
           
