@@ -1,0 +1,10 @@
+$footer-color: #979A99;
+
+footer {
+  background-color: #131313;
+  color: $footer-color;
+  
+  h1,h2,h3,h4,h5,h6,a {
+    color: $footer-color;
+  }
+}
