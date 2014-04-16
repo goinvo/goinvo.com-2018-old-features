@@ -14,64 +14,64 @@
     %meta{content: "boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design", name: "keywords"}/
       
   %body
-    -# #site-overlay
-    -# %header#main-header
-    -#   %header#site-header
-    -#     = link_to( image_tag('logo-header.png', alt: "Involution Studios"), '/', id: 'site-title')
-    -#     %span#menu-button Menu
-    -# %nav#main-menu
-    -#   %section.studio
-    -#     %header
-    -#       %h2= link_to 'Studio', '/studio'
-    -#     .menu-items
-    -#       %ul
-    -#         %li.team= link_to 'Team', '/team'
-    -#         %li.careers= link_to 'Careers', '/careers'
-    -#         %li.process= link_to 'Process', '/process'
-    -#         %li.contact= link_to 'Contact', '/contact'
-    -#     %footer
-    -#       %p Open Office Hours
-    -#       %p
-    -#         Thursdays 4-6
-    -#         %sub P
-    -#       %p.detail Bring your problems, get advice.
-    -#   %section.portfolio
-    -#     %header
-    -#       %h2= link_to 'Portfolio', '/projects'
-    -#     .menu-items
-    -#       %ul
-    -#         - data.projects.each do |project|
-    -#           -# - next if project.show_in_layout != "true"
-    -#           %li= project.client
-    -#     %footer.podcast
-    -#       %p
-    -#         = link_to 'The Digital Life Podcast', 'http://thedigitalife.com'
-    -#       %p.detail
-    -#         = link_to 'Subscribe on iTunes', 'https://itunes.apple.com/us/podcast/the-digital-life/id392069970#ls=1'
-    -#   %section.articles
-    -#     %header
-    -#       %h2= link_to 'Articles', '#'
-    -#     .menu-items
-    -#       %ul
-    -#         %li.article.with-image{style: "background-image: url(#{asset_url('/images/mock-images/parthenon.jpg')})"}
-    -#           %p.featured Featured
-    -#           %p.title= link_to 'Rethinking Government', '#'
-    -#         %li.article
-    -#           %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
-    -#           %p.date-posted 17 JAN 14
-    -#         %li.article
-    -#           %p.title= link_to "Product Development and Applied UX at Codemash", '#'
-    -#           %p.date-posted 8 JAN 14
-    -#         %li.article
-    -#           %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
-    -#           %p.date-posted 17 JAN 14
-    -#         %li.article
-    -#           %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
-    -#           %p.date-posted 17 JAN 14
-    -#     %footer
-    -#       %p 10 Design Tips for Project Managers
-    -#       %p.detail Download white paper.
-    -# .container
+    #site-overlay
+      %header#main-header
+        %header#site-header
+          = link_to( image_tag('logo-header.png', alt: "Involution Studios"), '/', id: 'site-title')
+          %span#menu-button Menu
+      %nav#main-menu
+        %section.studio
+          %header
+            %h2= link_to 'Studio', '/studio'
+          .menu-items
+            %ul
+              %li.team= link_to 'Team', '/team'
+              %li.careers= link_to 'Careers', '/careers'
+              %li.process= link_to 'Process', '/process'
+              %li.contact= link_to 'Contact', '/contact'
+          %footer
+            %p Open Office Hours
+            %p
+              Thursdays 4-6
+              %sub P
+            %p.detail Bring your problems, get advice.
+        %section.portfolio
+          %header
+            %h2= link_to 'Portfolio', '/projects'
+          .menu-items
+            %ul
+              - data.projects.each do |project|
+                - next if project.show_in_layout != "true"
+                %li= project.client
+          %footer.podcast
+            %p
+              = link_to 'The Digital Life Podcast', 'http://thedigitalife.com'
+            %p.detail
+              = link_to 'Subscribe on iTunes', 'https://itunes.apple.com/us/podcast/the-digital-life/id392069970#ls=1'
+        %section.articles
+          %header
+            %h2= link_to 'Articles', '#'
+          .menu-items
+            %ul
+              %li.article.with-image{style: "background-image: url(#{asset_url('/images/mock-images/parthenon.jpg')})"}
+                %p.featured Featured
+                %p.title= link_to 'Rethinking Government', '#'
+              %li.article
+                %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
+                %p.date-posted 17 JAN 14
+              %li.article
+                %p.title= link_to "Product Development and Applied UX at Codemash", '#'
+                %p.date-posted 8 JAN 14
+              %li.article
+                %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
+                %p.date-posted 17 JAN 14
+              %li.article
+                %p.title= link_to "Involution's Arlington Visual Budget Wins MMA Innovation Award", '#'
+                %p.date-posted 17 JAN 14
+          %footer
+            %p 10 Design Tips for Project Managers
+            %p.detail Download white paper.
+      .container
     #main-container
       .container.content
         = yield

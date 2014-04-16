@@ -95,8 +95,11 @@ body {
   }
 
   section {
-    width: 404px;
+    //width: 404px;
+    width:25%;
+    display: inline;
     float: left;
+    border: solid red 1px;
     margin-left: 1px;
     background: #FFF;
 
