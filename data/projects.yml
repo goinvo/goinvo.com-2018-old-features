@@ -1,22 +1,13 @@
-- client: "Oracle"
-  description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
-  practice_area_names: "Enterprise"
-  budget: 88000
-  logo: oracle.jpg
-  show_in_layout: false
-- client: "Measured Health"
-  description: "For customers like Measured Health we create a complex app ecosystem across platforms, devices and contexts of use."
-  practice_area_names: "Health"
-  budget: 75000
-  show_in_layout: false
 - client: "3M"
+  practice_area_names: "Enterprise, Health"
   description: "How our skunkworks for an ambitious start-up led to a $100MM exit."
-  practice_area_names: "Health"
-  budget: 120000
-  duration: 60
+  budget: 500000 #Verify
+  duration: 60 #Verify
+  repeat_client: true
+  story_template: true
   show_in_layout: true
   logo: 3m.jpg
-  phases:
+  phases: #Verify
     - duration: 8
       full_time_staff: 1
       service_names: "Envision"
@@ -38,46 +29,209 @@
       during_week: 40
     - description: "v01 launched, 50% efficiency gains."
       during_week: 48
-- client: "Becton Dickinson"
-  description: "Medical device provider with over $7B in annual revenues."
-  practice_area_names: "Health"
-  budget: 95000
-  duration: 50
-  show_in_layout: true
-  logo: bd.jpg
-  phases:
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
-    - duration: 4
-      full_time_staff: 0.2
-      service_names: "Craft"
-    - duration: 18
-      full_time_staff: 2.5
-      service_names: "Craft, Build, Support"
-    - duration: 8
-      full_time_staff: 2
-      service_names: "Craft, Build, Support"
-    - duration: 6
-      full_time_staff: 1.5
-      service_names: "Craft, Build, Support"
-  milestones:
-    - description: "Re-envision entire software"
-      during_week: 10
-    - description: "Design 2 year software plan."
-      during_week: 14
-    - description: "Beta users start using software."
-      during_week: 36
-    - description: "IPO planned in next 12 months"
-      during_week: 50
 - client: "Affinnova"
+  practice_area_names: "Enterprise, Marketing Optimization"
   description: "Product marketing workflow & testing system."
-  practice_area_names: "Marketing"
-  budget: 80000
-  duration: 14
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: true
+  story_template: false
   show_in_layout: true
-  logo: affinova.jpg
-  phases:
+  logo: affinnova.jpg
+  phases: #Verify
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+- client: "Alcatel-Lucent"
+  practice_area_names: "Enterprise"
+  description: ""
+  budget: 50000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: alcatellucent.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+- client: "Applause"
+  practice_area_names: "Enterprise"
+  description: ""
+  budget: 50000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: applause.jpg
+- client: "DataXu"
+  practice_area_names: "Enterprise, Marketing Optimization"
+  description: ""
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: dataxu.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+- client: "DNC"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 20000 #Verify
+  repeat_client: false
+  story_template: false
+  show_in_layout: true
+  logo: dnc.jpg
+- client: "Empirix"
+  practice_area_names: "Enterprise"
+  description: ""
+  budget: 100000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: empirix.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+- client: "Health Axioms"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: healthaxioms.jpg
+- client: "hGraph"
+  practice_area_names: "Quantified Self"
+  description: ""
+  budget: 50000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: hgraph.jpg
+- client: "McAfee"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 500000 #Verify
+  duration: 14 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  show_in_layout: true
+  logo: mcafee.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+- client: "Measured Health"
+  practice_area_names: "Health"
+  description: "For customers like Measured Health we create a complex app ecosystem across platforms, devices and contexts of use."
+  budget: 100000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: measuredhealth.jpg
+- client: "Microsoft"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: microsoft.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+- client: "Oracle"
+  practice_area_names: "Enterprise"
+  description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
+  budget: 500000 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  show_in_layout: true
+  logo: oracle.jpg
+- client: "Personal Genome Project"
+  practice_area_names: "Healthcare"
+  description: ""
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: personalgenomeproject.jpg
+- client: "RueLaLa"
+  practice_area_names: "Enterprise"
+  description: ""
+  budget: 200000 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  show_in_layout: true
+  logo: ruelala.jpg
+- client: "SegTerra"
+  practice_area_names: "Quantified Self"
+  description: ""
+  budget: 20000 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: segterra.jpg
+- client: "SSI"
+  practice_area_names: "Enterprise, Marketing Optimization"
+  description: ""
+  budget: 100000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: ssi.jpg
+- client: "Strength Matters"
+  practice_area_names: "Enterprise"
+  description: ""
+  budget: 100000 #Verify
+  repeat_client: fales #Verify
+  story_template: false
+  show_in_layout: true
+  logo: strengthmatters.jpg
+- client: "Telerik"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 50000 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  show_in_layout: true
+  logo: telerik.jpg
+- client: "Town Visual Budget"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 0
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: townvisualbudget.jpg
+- client: "University of Missouri"
+  practice_area_names: "Healthcare"
+  description: ""
+  budget: 100000 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: universityofmissouri.jpg
+- client: "Vivox"
+  practice_area_names: "Consumer"
+  description: ""
+  budget: 50000 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: vivox.jpg
+- client: "Yahoo"
+  practice_area_names: ""
+  description: ""
+  budget: 0 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  show_in_layout: true
+  logo: yahoo.jpg
