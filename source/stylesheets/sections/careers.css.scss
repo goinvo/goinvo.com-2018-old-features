@@ -1,79 +1,129 @@
 @import "base/colors";
+$white: #FFFFFF;
+$black: #000000;
+$blue: rgb(139, 187, 217);
+$gray: #a8aaa9;
+$border-radius: 4px;
+$outer-sidebar-padding:20px;
+$sidebar-padding:20px;
+$center-padding:30px;
 
 #careers {
   .hero {
     background-image: url(/images/careers/hero.jpg);
-    position:relative;
-    
-      .title {
-          position:absolute;
-          bottom:0;
-          padding-bottom:2em;
-          color:white;
-          
-          h3 {
-              padding-left:31%;
-              padding-right:31%;
-              line-height: 1.2em;
-          }
-      }
-      
-  }
-
-  #choose-your-adventure {
-    text-align: center;
-    width: 100%;
-    list-style:none;
-    margin-top:0px;
-    margin-bottom:0px;
-    margin-left:0px;
-    padding-top:0px; 
-    line-height: 1em;
-      
-    li:first-child { 
-        border-width:0px;
-        border-right-width: 3px;
-        border-color: #f1f1f1;
-        border-style:solid;
-        text-align:left;
-        padding-right:7%;
+    background-position: center center;
+    background-size: cover;
+    min-height: 500px;
+    position:relative;  
+    z-index: -1;
+    .title {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        padding-bottom:25px;
     }
-    li:last-child {
-        padding-left:7%;
-    }
-    li {
-        float: left;
+      
+    h2, h3 {
         text-align:center;
-        margin-bottom:.75em;
-      a {
-        font-size: 30px;
-        color: #a8aaa9;
-        text-decoration: none;
-      }
-      &.selected {
-        a {
-            font-weight:800;
-            color:black;    
-        }
-      }
+        margin: 0 auto;
+        color: $white;
+        line-height:1em;
     }
-  }
+      
+    h2 {
+        font-size:4.5em; 
+        font-weight:600;
+    }
+      
+    h3 {
+        
+        max-width: 50%;
+        font-size:1.2em;
+        font-weight:300;
+        line-height:1.5em;
+        margin-bottom:20px;
+    }
+      
+  } //end of hero
     
   #mainContent {
-    padding-top: 2em;   
+    padding: 40px;
+    #choose-your-adventure {
+        list-style:none;
+        font-size:2em;
+        margin-left:0px;
+        margin-bottom:0px;
+        line-height: normal;
+        vertical-align: top;
+        li {
+            display:inline-block;
+            vertical-align: top;
+            a {
+                color:$gray;
+                vertical-align: top;
+            }
+        }
+        li:first-child {
+            padding-right:20px; 
+        }
+        li:last-child {
+            padding-left:20px;    
+        }
+        .selected {
+            font-weight:800;
+            vertical-align: top;
+            a {
+                color:$black;
+                vertical-align:top;
+            }
+        }
+    }
+    .subtitle {
+        p {
+            color: $gray;
+            
+        }
+    }
   }
     
-  section.centerContent {
-      padding-left:2em;
-      padding-right:2em;
-      
-      div.subtitle {
-          font-size:.75em;
-      }
-  } 
-
-  .career-path {
-    clear: both;
+  .centerContent {
+     padding-left:$center-padding;
+     padding-right:$center-padding;
   }
-
+  
+  .sidebar {
+      padding-right:$outer-sidebar-padding;
+      padding-left:$outer-sidebar-padding;
+      font-size: 0.75em;
+      color: $gray;
+      .photo, .video {
+          border-radius: $border-radius;
+          font-size:inherit;
+          background-color:transparentize($blue, .97);
+          
+          img {
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+          }
+          h3 {
+            padding-top: $sidebar-padding;
+            padding-left: $sidebar-padding;
+            padding-right: $sidebar-padding;
+            
+            font-size:inherit;
+            font-weight:500;
+            color:inherit;
+          }
+          p.caption {
+            padding-bottom: $sidebar-padding;
+            padding-left: $sidebar-padding;
+            padding-right: $sidebar-padding;
+            font-size:inherit;      
+          }
+          
+          
+      }
+  }
 }
+
+  
