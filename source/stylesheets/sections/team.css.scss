@@ -1,90 +1,102 @@
 @import "base/mixins";
+@import "base/colors";
+@import "base/type";
 
-#the-team {
-  .hero {
-    background-image: url(/images/team/hero.png);
-  }
+$stats-padding:40px;
+$icon-size:25px;
+$ethics-padding:30px;
 
-  .team-card {
-    position: relative;
-    background-size: cover;
-    background-color: #666;
-    color: #EBEBEB;
-    height: 450px;
-    width: 750px;
-
-    .stats {
-      float: left;
-      width: 300px;
-      margin-bottom: 10px;
-      padding: 10px;
-      @include transparent-background(#000, 0.45);
-
-      h3 {
-        color: #EBEBEB;
-        line-height: 1em;
-      }
-
-      h4 {
-        color: #EBEBEB;
-      }
-
-      .social-icons {
-        li {
-          float: left;
-          margin-right: 10px;
-          img {
-            height: 25px;
-            width: 25px;
-          }
+.team-cards {
+    
+    .team-card {
+        height: 600px;
+        background-color:$darkgray;
+        position:relative;
+        .stats {
+            color:$white;
+            padding-left: $stats-padding;
+            padding-right:$stats-padding;
+            padding-top: $stats-padding;
+            
+            h3 {
+                color: $white;
+                font-size:3.2em;
+                line-height: .9em;
+            }
+            
+            h4 {
+                color:$white;
+                font-size:1.4em;
+                letter-spacing: .04em;
+                line-height: .9em;
+            }
+            
+            .social-icons {
+                list-style: none;
+                margin-left:0px;
+                margin-right:0px;
+                padding-left:0px;
+                padding-right:0px;
+                
+                li {
+                    display:inline-block;
+                    margin-right: 10px;
+                    max-width:$icon-size;
+                    max-height:$icon-size;
+                    vertica-align:center;
+                }
+            }
+            
+            .bio {
+                width: 42%; 
+                font-size:1.4em;
+                letter-spacing: .04em;
+                line-height: 1.2em;
+            }
         }
-      }
-
+        
+        .character-sheet {
+            color:transparentize($white, .3);
+            background-color:transparentize($black, .5);
+            height: 100px;
+            width:100%;
+            position:absolute;
+            bottom:0;
+            
+        }
     }
-    .character-sheet {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: #EBEBEB;
-      @include transparent-background(#000, 0.25);
+    
+}
 
-      .content {
-        margin: 10px;
-      }
-
-      .sparkline {
-        margin: 10px;
-        float: left;
-        text-align: center;
-        .graph {
-          margin: 0 auto;
-        }
-        label {
-          position: relative;
-          top: -8px;
-          margin: 0;
-          padding: 0;
-          font-size: 10px;
-          line-height: 10px;
-        }
-      }
-
-      .myers-briggs {
-        margin: 10px;
-        float: left;
-        .value {
-          @include border-radius(10px);
-          border: 1px solid #EBEBEB;
-          padding: 4px 10px;
-        }
-      }
-    }
-  }
-
-  .sidebar {
+.sidebar {
+    
     .code-of-ethics {
-      text-align: center;
+        text-align:center;
+        color:$darkgray;
+        background-color:transparentize($blue, .97);
+        h2, h3 {
+            color:$darkgray;
+            em {
+                font-family: $base-font-italic;  
+            }
+            line-height: 1.2em;
+        }
+        
+        h2 {
+            margin-bottom:$ethics-padding;  
+            padding-top:$ethics-padding;
+        }
+        
+        p {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom:$ethics-padding;
+            line-height: 1.2em;
+        }
+        
+        p:last-child {
+            padding-bottom: $ethics-padding;       
+        }
     }
-  }
+    
 }
