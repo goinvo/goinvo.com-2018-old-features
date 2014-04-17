@@ -1,4 +1,5 @@
 @import "base/colors";
+@import "base/type";
 $border-radius: 4px;
 $outer-sidebar-padding:20px;
 $sidebar-padding:20px;
@@ -24,19 +25,21 @@ $center-padding:30px;
         margin: 0 auto;
         color: $white;
         line-height:1em;
+        letter-spacing:.06em;
     }
       
     h2 {
-        font-size:4.5em; 
-        font-weight:600;
+        font-family: $base-font-bold;
+        font-size:6.5em; 
+        font-weight:800;
     }
       
     h3 {
         
         max-width: 50%;
-        font-size:1.2em;
-        font-weight:300;
-        line-height:1.5em;
+        font-size:1.8em;
+        font-family: $base-font-light;
+        line-height:1.2em;
         margin-bottom:20px;
     }
       
@@ -46,10 +49,10 @@ $center-padding:30px;
     padding: 40px;
     #choose-your-adventure {
         list-style:none;
-        font-size:2.5em;
+        font-size:3.5em;
         margin-left:0px;
         margin-bottom:0px;
-        line-height: normal;
+        line-height: .9em;
         vertical-align: top;
         li {
             display:inline-block;
@@ -90,13 +93,22 @@ $center-padding:30px;
   .centerContent {
      padding-left:$center-padding;
      padding-right:$center-padding;
+      
+   
+    p {
+        font-size:1.4em; 
+        letter-spacing:.04em;
+    }
+     
   }
   
   .sidebar {
       padding-right:$outer-sidebar-padding;
       padding-left:$outer-sidebar-padding;
-      font-size: 0.75em;
-      color: $gray;
+      font-size: 1.05em;
+      letter-spacing:.04em;
+      line-height:1.2em;
+      color: $darkgray;
       .photo, .video {
           border-radius: $border-radius;
           font-size:inherit;
@@ -110,7 +122,7 @@ $center-padding:30px;
             padding-top: $sidebar-padding;
             padding-left: $sidebar-padding;
             padding-right: $sidebar-padding;
-            
+            line-height:inherit;
             font-size:inherit;
             font-weight:500;
             color:inherit;
@@ -119,7 +131,8 @@ $center-padding:30px;
             padding-bottom: $sidebar-padding;
             padding-left: $sidebar-padding;
             padding-right: $sidebar-padding;
-            font-size:inherit;      
+            font-size:inherit;    
+            line-height:inherit;
           }
           
           
