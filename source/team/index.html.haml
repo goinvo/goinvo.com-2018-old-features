@@ -11,7 +11,7 @@
         - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
         .team-card{style: style}
           .stats
-            %h3.name= person.full_name
+            %h3.name= person.first_name + " " + person.last_name
             %h4.title= person.title
             %ul.social-icons
               - unless person.linkedin_url.blank?
