@@ -73,6 +73,8 @@ $ethics-padding:30px;
             width:100%;
             position:absolute;
             bottom:0;
+            font-size:1.3em;
+            letter-spacing: .06em;
             .content {
                 vertical-align:middle;
                 width:100%;
@@ -145,4 +147,67 @@ $ethics-padding:30px;
         }
     }
     
+}
+
+.timeline {
+    padding-top:15px;    
+    padding-left:30px;
+    padding-right:20px;
+    background-color:transparentize($blue, .97);
+    ul {
+        li {
+            position:relative;
+            margin-bottom:0;
+            padding-bottom:2.5em;
+            padding-left:40px;
+            p.date {
+                padding-top:15px;
+                font-size:1em;
+                font-weight:800;
+                color:$darkgray;
+                margin-bottom:0px;
+                padding-bottom:0px;
+                line-height: .5em;
+            }
+            h3 {
+                color:$darkgray;
+                font-size:1.7em;
+                margin-top:0px;
+                padding-top:0px;
+                line-height: 1em;
+                padding-top:2px;
+            }
+            p {
+                font-size:1em;
+                line-height: 1.3em;
+            }
+        }
+        li:after {
+            content: url(/images/team/invo-timeline-logo.png);  
+            position:absolute;
+            border: 5px solid $white;
+            border-radius:90px;
+            left:-25px;
+            top:0px;
+            width:49px;
+            height:49px;
+            box-shadow: 2px 2px 3px $black;
+        }
+        li:before{
+            content:"";
+            position:absolute;
+            left:-7px;
+            border-left:3px solid $gray;
+            border-right:3px solid $gray;
+            height:100%;
+            width:14px;
+        }
+        li:first-child:before{
+            top:6px;   
+        }
+        li:last-child:before {
+            height:6px;   
+        }
+        
+    }
 }
