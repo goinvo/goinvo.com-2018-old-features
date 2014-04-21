@@ -68,7 +68,7 @@ $base-font-italic: 'Jenson Pro Italic';
 
 body {
   font-family: $base-font-regular;
-  color: #444;
+  color: $black;
 }
 
 h1, h2, h3, h4, h5 {
@@ -98,6 +98,10 @@ h4 {
 }
 
 p {
+  font-size:1.4em; 
+  letter-spacing:.04em;
+  line-height:1.2em;
+  font-weight:500;
   margin-bottom: 1em;
   em {
     font-family: $base-font-light;

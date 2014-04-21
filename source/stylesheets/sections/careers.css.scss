@@ -9,40 +9,7 @@ $center-padding:30px;
   .hero {
     background-image: url(/images/careers/hero.jpg);
     background-position: center center;
-    background-size: cover;
-    min-height: 500px;
-    position:relative;  
-    z-index: -1;
-    .title {
-        position:absolute;
-        bottom:0;
-        width:100%;
-        padding-bottom:25px;
-    }
-      
-    h2, h3 {
-        text-align:center;
-        margin: 0 auto;
-        color: $white;
-        line-height:1em;
-        letter-spacing:.06em;
-    }
-      
-    h2 {
-        font-family: $base-font-bold;
-        font-size:6.5em; 
-        font-weight:800;
-    }
-      
-    h3 {
-        
-        max-width: 50%;
-        font-size:1.8em;
-        font-family: $base-font-light;
-        line-height:1.2em;
-        margin-bottom:20px;
-    }
-      
+    background-size: cover;      
   } //end of hero
     
   #mainContent {
@@ -93,8 +60,6 @@ $center-padding:30px;
   .centerContent {
      padding-left:$center-padding;
      padding-right:$center-padding;
-      
-   
     p {
         font-size:1.4em; 
         letter-spacing:.04em;

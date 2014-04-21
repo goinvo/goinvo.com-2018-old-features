@@ -6,11 +6,22 @@ $stats-padding:40px;
 $icon-size:25px;
 $ethics-padding:30px;
 
+  .hero {
+    background-image: url(/images/careers/hero.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+.row.main-content {
+    padding: 40px;   
+}
+
 .team-cards {
-    
     .team-card {
-        height: 600px;
         background-color:$darkgray;
+        background-size:contain;
+        height:0px;
+        padding-bottom:60%;
         position:relative;
         .stats {
             color:$white;
