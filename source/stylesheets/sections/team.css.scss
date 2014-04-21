@@ -21,7 +21,7 @@ $ethics-padding:30px;
         background-color:$darkgray;
         background-size:contain;
         height:0px;
-        padding-bottom:60%;
+        padding-bottom:62.5%;
         position:relative;
         .stats {
             color:$white;
@@ -68,19 +68,54 @@ $ethics-padding:30px;
         
         .character-sheet {
             color:transparentize($white, .3);
-            background-color:transparentize($black, .5);
+            background-color:transparentize($black, .2);
             height: 100px;
             width:100%;
             position:absolute;
             bottom:0;
-            
+            .content {
+                vertical-align:middle;
+                width:100%;
+                display:table;
+                height:100%;
+                padding-left: $stats-padding;
+                padding-right:$stats-padding;
+                .myers-briggs {
+                    display:table-cell;
+                    text-align:left;
+                    vertical-align:middle;
+                    width:auto;
+                    padding-right:$stats-padding;
+                    span.value {
+                        border-style:solid;
+                        border-width:1px;
+                        border-color:transparentize($white, .8);
+                        border-radius:5px;
+                        padding: 4px 20px;
+                        margin-left:10px;
+                        
+                    }
+                }
+                .sparkline.github-commits{
+                    display:table-cell;
+                    text-align:left;
+                    vertical-align:middle;
+                    width:auto;
+                    padding-right:$stats-padding;
+                    .graph {
+                        
+                    }
+                    label {
+                        
+                    }
+                }
+            }
         }
     }
     
 }
 
 .sidebar {
-    
     .code-of-ethics {
         text-align:center;
         color:$darkgray;
