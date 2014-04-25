@@ -1,11 +1,11 @@
 
 window.showMenu = ->
-  $('#site-overlay').fadeIn(100)
+  $('#main-menu').fadeIn(100)
   $('#main-menu').addClass('shown')
   $('#menu-button').addClass('active')
 
 window.hideMenu = ->
-  $('#site-overlay').fadeOut(100)
+  $('#main-menu').fadeOut(100)
   $('#main-menu').removeClass('shown')
   $('#menu-button').removeClass('active')
 
@@ -31,17 +31,17 @@ $ ->
       window.showMenu()
 
   # Show / hide the menu
-  #$('body').click ->
-   # if $('#main-menu').is(':visible')
-    #  window.hideMenu()
+  $('body').click ->
+    if $('#main-menu').is(':visible')
+      window.hideMenu()
 
   #$(window).scroll ->
-#    if $('#main-menu').is(':visible')
- #     window.hideMenu()
+    if $('#main-menu').is(':visible')
+      window.hideMenu()
 
  # # Clicking anywhere within an article in the main menu takes you to the article
-  #$('#main-menu li.article').click ->
-   # window.location = $(this).find('.title a').attr('href')
+  $('#main-menu li.article').click ->
+    window.location = $(this).find('.title a').attr('href')
 
 
   # Populate and render GitHub commit sparklines

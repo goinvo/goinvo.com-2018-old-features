@@ -18,7 +18,9 @@ $ethics-padding:30px;
 
 .team-cards {
     .team-card {
-        background-color:$darkgray;
+        background-color:black;
+        background-position:top right;
+        background-repeat: no-repeat;
         background-size:contain;
         height:0px;
         padding-bottom:62.5%;
