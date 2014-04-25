@@ -1,4 +1,3 @@
-
 window.showMenu = ->
   $('#main-menu').fadeIn(100)
   $('#main-menu').addClass('shown')
