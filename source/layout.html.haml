@@ -75,30 +75,34 @@
     #main-container
       .container.content
         = yield
-    %footer#main-footer.row
-      .medium-3.columns
-        %h4= image_tag 'logo-footer.png', alt: 'Go Involution logo'
-        %p Crafting the future of emerging technology. We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
-        = mail_to "info@goinvo.com"
-        %br/
-        %ul#footer-social-links
-          %li.twitter twitter icon
-          %li.linkedin linkedin icon
-          %li.facebook facebook icon
-          %li.github github icon
-      .medium-6.columns
-        %h4 Boston
-        %p.address
-          661 Massachusetts Ave, 3rd
-          Floor
+    %footer#main-footer
+      .row
+        .medium-3.columns
+          %h4= image_tag 'logo-footer.png', alt: 'Go Invo: Involution Studios logo'
+          %p Crafting the future of emerging technology. We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
+        .medium-3.columns
+          %h4 Boston Studio
+          %p
+            P:
+            %a{href: "tel:6178037043"} 617-803-7043
+            %br/
+            F:
+            %a{href: "tel:7813161883"} 781-316-1883
+          %p.address
+            661 Massachusetts Ave, 3rd
+            Floor
+            %br/
+            Arlington MA, 02476
+          %p.googlemap
+            %a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} Google Map
+        .medium-3.columns
+          %h4 Upcoming Webinar
+        .medium-3.columns
+          = mail_to "info@goinvo.com"
           %br/
-          Arlington MA, 02476
-        %p
-          T:
-          %a{href: "tel:6178037043"} (617) 803-7043
-          %br/
-          F:
-          %a{href: "tel:7813161883"} (781) 316-1883
-      .medium-3.columns
-        %h4 Upcoming Webinar
-    = yield_content :worlds_end
+          %ul#footer-social-links
+            %li.twitter= link_to(image_tag('team/social-icons/twitter.png'), "https://twitter.com/goinvo")
+            %li.linkedin= link_to(image_tag('team/social-icons/linkedin.png'), "https://www.linkedin.com/company/involution-studios")
+            %li.vimeo= link_to(image_tag('team/social-icons/vimeo.png'), "http://vimeo.com/user1317016")
+            %li.github= link_to(image_tag('team/social-icons/github.png'), "https://github.com/goinvo")
+      = yield_content :worlds_end

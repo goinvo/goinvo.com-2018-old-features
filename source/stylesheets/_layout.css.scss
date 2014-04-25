@@ -36,7 +36,7 @@ $border-radius: 4px;
 
     h3 {
 
-        max-width: 50%;
+        max-width: 40%;
         font-size:1.8em;
         font-family: $base-font-light;
         line-height:1.2em;
@@ -44,14 +44,25 @@ $border-radius: 4px;
     }
 }
 
-footer {
+#main-footer {
   background-color: #131313;
   color: $footer-color;
-  
+  padding-top:2%;
+  padding-bottom:2%;
+  padding:2%;
   h1,h2,h3,h4,h5,h6,a {
     color: $footer-color;
   }
+    
+    #footer-social-links {
+        li {
+            display:inline-block;
+            padding-right:5px;
+        }
+    }
 }
+
+
 
   .sidebar {
       padding-right:$outer-sidebar-padding;

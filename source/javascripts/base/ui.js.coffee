@@ -1,21 +1,21 @@
 
-#window.showMenu = ->
-#  $('#site-overlay').fadeIn(100)
-#  $('#main-menu').addClass('shown')
-#  $('#menu-button').addClass('active')
+window.showMenu = ->
+  $('#site-overlay').fadeIn(100)
+  $('#main-menu').addClass('shown')
+  $('#menu-button').addClass('active')
 
-#window.hideMenu = ->
-#  $('#site-overlay').fadeOut(100)
-#  $('#main-menu').removeClass('shown')
-#  $('#menu-button').removeClass('active')
+window.hideMenu = ->
+  $('#site-overlay').fadeOut(100)
+  $('#main-menu').removeClass('shown')
+  $('#menu-button').removeClass('active')
 
 
-#$ ->
+$ ->
 
   # Close flash messages when the 'x' is clicked
- # $('.message a.close').click (event) ->
-#    event.preventDefault()
-#    $(this).parents('.message').fadeOut()
+  $('.message a.close').click (event) ->
+    event.preventDefault()
+    $(this).parents('.message').fadeOut()
 
 
   ##
@@ -23,12 +23,12 @@
   ##
 
   # Show / hide the menu
- # $('#menu-button').click (event) ->
-  #  event.stopPropagation()
-   # if $('#main-menu').is(':visible')
-    #  window.hideMenu()
-#    else
- #     window.showMenu()
+  $('#menu-button').click (event) ->
+    event.stopPropagation()
+    if $('#main-menu').is(':visible')
+      window.hideMenu()
+    else
+      window.showMenu()
 
   # Show / hide the menu
   #$('body').click ->
