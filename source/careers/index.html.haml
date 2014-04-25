@@ -6,7 +6,7 @@
       %h2 Careers
       %h3 People come for the growth culture, access to leading minds, and getting to work on complex software solutions.
   .row#mainContent
-    .medium-3.small-12.columns.sidebar.omega
+    .medium-3.small-12.columns.sidebar.omega.mobile-hide
       %section.sidestuff
         .photo
           = image_tag('careers/business.jpg')
@@ -50,18 +50,36 @@
           %p That’s the kind of person we want. If you have those three qualities, just about anything else is negotiable.
           %p If you have any questions about the position, please email me.
           %p To apply, send me your resume, portfolio, and phone number so we can chat.
+          %p 
+            Looking forward, 
+            %br/
+            Juhan Sonin, Creative Director
+            %br/
+            = mail_to 'juhan@goinvo.com'
+          %form
+            %h1 Apply
+            %input{:type => "text", :placeholder => "Name"}
+            %input{:type => "email", :placeholder => "Email"}
+            %textarea{:placeholder => "Message", :rows => "8"}
+            %button.attach{:type => "button"} Attach Resume or Portfolio
+            %button#dbutton{:type => "button"}Apply for Designer
         #engineer.career-path
           .subtitle
             %p Intern or Seasoned Veteran
           %p We’re looking for an engineer to join our intimate studio.
-        %p
-          Looking forward,
-          %br/
-          Juhan Sonin, Creative Director
-          %br/
-          = mail_to 'juhan@goinvo.com'
-        #application-form
-          hubspot for application form?
+          %p
+            Looking forward,
+            %br/
+            Juhan Sonin, Creative Director
+            %br/
+            = mail_to 'juhan@goinvo.com'
+          %form
+            %h1 Apply
+            %input{:type => "text", :placeholder => "Name"}
+            %input{:type => "email", :placeholder => "Email"}
+            %textarea{:placeholder => "Message", :rows => "8"}
+            %button.attach{:type => "button"} Attach Resume or Portfolio
+            %button#ebutton{:type => "button"}Apply for Engineer
     
     .medium-3.small-12.columns.sidebar.omega     
       %section

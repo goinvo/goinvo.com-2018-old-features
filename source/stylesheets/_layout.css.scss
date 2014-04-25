@@ -100,3 +100,56 @@ $border-radius: 4px;
           
       }
   }
+
+
+form {
+    font-size: 1.4em;
+    letter-spacing: .04em;
+    line-height: 1.2em;
+    
+    input[type=text], input[type=email], textarea, button {
+        font-size: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+        font-weight: inherit; 
+        border-radius:2px;
+    }
+    
+    input[type=text], input[type=email]{
+        padding:5%;
+        padding-left:3%;
+        padding-right:3%;
+    }
+    
+    textarea  {
+        padding:3%;   
+        resize: none;
+    }
+    
+    button {
+        padding-top:9px;
+        padding-bottom:9px;
+        padding-right:27px;
+        padding-left:27px;
+        
+        background-color: transparentize($navy, 0.0);
+        color: transparentize($white, 0.0);
+    }
+    
+    button:hover {
+        background-color: transparentize($navy, 0.2);
+        color: transparentize($white, 0.0);
+    }
+    
+    
+    button.attach {
+        margin-right:16px;
+        background-color: transparentize($gray, .7);
+        color: transparentize($gray, .2);
+    }
+    
+    button.attach:hover {
+        background-color: transparentize($gray, .5);
+        color: transparentize($gray, 0);
+    }
+}

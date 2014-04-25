@@ -14,21 +14,21 @@
             %h4.title= person.title
             %ul.social-icons
               - unless person.linkedin_url.blank?
-                %li.linkedin= link_to(image_tag('team/social-icons/linkedin.svg'), person.linkedin_url)
+                %li.linkedin= link_to(image_tag('team/social-icons/linkedin.svg'), person.linkedin_url, :target => "_blank" )
               - unless person.twitter_username.blank?
-                %li.twitter= link_to(image_tag('team/social-icons/twitter.svg'), twitter_url_for(person.twitter_username))
+                %li.twitter= link_to(image_tag('team/social-icons/twitter.svg'), twitter_url_for(person.twitter_username), :target => "_blank" )
               - unless person.github_username.blank?
-                %li.github= link_to(image_tag('team/social-icons/github.svg'), github_url_for(person.github_username))
+                %li.github= link_to(image_tag('team/social-icons/github.svg'), github_url_for(person.github_username), :target => "_blank" )
               - unless person.flickr_username.blank?
-                %li.flickr= link_to(image_tag('team/social-icons/flickr.svg'), flickr_url_for(person.flickr_username))
+                %li.flickr= link_to(image_tag('team/social-icons/flickr.svg'), flickr_url_for(person.flickr_username), :target => "_blank" )
               - unless person.dribbble_username.blank?
-                %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username))
+                %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username), :target => "_blank" )
               - unless person.tumblr_url.blank?
-                %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url)
+                %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url, :target => "_blank" )
               - unless person.lastfm_username.blank?
-                %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username))
+                %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username), :target => "_blank" )
               - unless person.pinterest_username.blank?
-                %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username))
+                %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username), :target => "_blank" )
             %div{style: "clear:both"}
             %p.bio= person.bio
           %div{style: "clear:both"}
