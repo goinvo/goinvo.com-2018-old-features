@@ -6,6 +6,23 @@ $outer-sidebar-padding:20px;
 $sidebar-padding:20px;
 $border-radius: 4px;
 
+$body-font-size:1.4rem;
+$body-line-height:1.7rem;
+$body-letter-spacing:0.09rem;
+$section-header-font-size:3.2rem;
+
+$sidebar-font-size:1.1rem;
+$sidebar-line-height:1.4rem;
+$sidebar-letter-spacing:0.04rem;
+
+body {
+    p {
+        font-size: $body-font-size;
+        letter-spacing: $body-letter-spacing;
+        line-height: $body-line-height;
+    }   
+}
+
 .hero {
     background-image: url(/images/careers/hero.jpg);
     background-position: center center;
@@ -24,22 +41,22 @@ $border-radius: 4px;
         text-align:center;
         margin: 0 auto;
         color: $white;
-        line-height:1em;
-        letter-spacing:.06em;
+        letter-spacing:.06rem;
     }
 
     h2 {
         font-family: $base-font-bold;
-        font-size:6.5em; 
+        font-size:6.5rem; 
+        line-height:6.5rem;
         font-weight:800;
     }
 
     h3 {
 
         max-width: 40%;
-        font-size:1.8em;
+        font-size:1.8rem;
         font-family: $base-font-light;
-        line-height:1.2em;
+        line-height:1.8rem;
         margin-bottom:20px;
     }
 }
@@ -67,9 +84,9 @@ $border-radius: 4px;
   .sidebar {
       padding-right:$outer-sidebar-padding;
       padding-left:$outer-sidebar-padding;
-      font-size: 1.05em;
-      letter-spacing:.04em;
-      line-height:1.2em;
+      font-size: $sidebar-font-size;
+      letter-spacing:$sidebar-letter-spacing;
+      line-height:$sidebar-line-height;
       color: $darkgray;
       .photo, .video {
           border-radius: $border-radius;
@@ -95,17 +112,21 @@ $border-radius: 4px;
             padding-right: $sidebar-padding;
             font-size:inherit;    
             line-height:inherit;
-          }
-          
-          
+            letter-spacing: inherit;
+            line-height: inherit;
+          } 
       }
   }
 
 
 form {
-    font-size: 1.4em;
-    letter-spacing: .04em;
-    line-height: 1.2em;
+    font-size: $body-font-size;
+    letter-spacing: $body-letter-spacing;
+    line-height: $body-line-height;
+    .form-title {
+        font-size :$section-header-font-size;
+        line-height: 4.8rem;    
+    }
     
     input[type=text], input[type=email], textarea, button {
         font-size: inherit;
@@ -129,8 +150,8 @@ form {
     button {
         padding-top:9px;
         padding-bottom:9px;
-        padding-right:27px;
-        padding-left:27px;
+        padding-right:20px;
+        padding-left:20px;
         
         background-color: transparentize($navy, 0.0);
         color: transparentize($white, 0.0);
@@ -143,7 +164,7 @@ form {
     
     
     button.attach {
-        margin-right:16px;
+        margin-right:19px;
         background-color: transparentize($gray, .7);
         color: transparentize($gray, .2);
     }

@@ -16,10 +16,10 @@ $center-padding:30px;
     padding: 40px;
     #choose-your-adventure {
         list-style:none;
-        font-size:3.2em;
+        font-size:3.2rem;
+        line-height: 3.5rem;
         margin-left:0px;
         margin-bottom:0px;
-        line-height: .9em;
         vertical-align: top;
         li {
             display:inline-block;
@@ -30,14 +30,14 @@ $center-padding:30px;
             }
         }
         li:first-child {
-            padding-right:43px; 
+            padding-right:3.4rem; 
             border:0px;
             border-right-width:3px;
             border-color:transparentize($gray, .8);
             border-style:solid;
         }
         li:last-child {
-            padding-left:40px;    
+            padding-left:3.2rem;    
         }
         .selected {
             vertical-align: top;
@@ -50,7 +50,6 @@ $center-padding:30px;
     .subtitle {
         p {
             color: $gray;
-            font-weight:200;
             padding-top:10px;
         }
     }
@@ -60,10 +59,7 @@ $center-padding:30px;
      padding-left:$center-padding;
      padding-right:$center-padding;
     p {
-        font-size:1.4em; 
-        letter-spacing:.04em;
-        line-height:1.2em;
-        font-weight:500;
+
     }
      
   }
