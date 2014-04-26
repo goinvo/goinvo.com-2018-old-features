@@ -101,7 +101,7 @@
   
   - data.projects.each do |project|
     - next if project.phases.blank?
-    .row{data: {project: true, "project-budget" => project.budget, "project-practice-areas" => project.practice_area_names.split(',').to_json}}
+    .row{data: {project: true, "project-budget" => project.budget, "project-practice-areas" => project.practice_area_names.split(',').map(&:strip).to_json}}
       .medium-3.columns.project
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
