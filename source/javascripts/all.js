@@ -1,3 +1,5 @@
+//= require lodash/dist/lodash
+//= require async/lib/async
 //= require jquery/dist/jquery
 //= require foundation/js/foundation.min
 

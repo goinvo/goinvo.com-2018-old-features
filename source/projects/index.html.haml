@@ -1,15 +1,72 @@
+- content_for(:worlds_end) do
+  :javascript
+    var $noProjects = $('.no-projects-match');
+    $noProjects.hide();
+    
+    $(function() {
+      var $practiceAreas = $('[name="practice_area"]')
+        , $budget = $('[name="budget"]');
+      
+      function filterProjects(event) {
+        $noProjects.slideUp('fast');
+        
+        event.preventDefault();
+        
+        var $projects = $('[data-project]')
+          criterion = {
+              budget: (_.isEmpty($budget.val()) ? false : $budget.val())
+            , practiceAreas: (_.isEmpty($practiceAreas.val()) ? false : $practiceAreas.val())
+          };
+        
+        if(criterion.budget) {
+          var values = _.map(criterion.budget.split(','), function(number) { return parseInt(number); })
+          criterion.budget = _.range(values[0], values[1]);
+        }
+        
+        var animations = _.map($projects, function(project) {
+          return function(callback) {
+            var $project = $(this);
+            
+            if((!criterion.budget && !criterion.practiceAreas) || // "all" for both
+               (_.contains(criterion.budget, $project.data('project-budget'))) || // budget within range
+               false // TBD for practice areas
+              ) {
+              _.defer(function() {
+                this.slideDown('fast');
+              }.bind($project));
+              callback(null, "down");
+            } else {
+              _.defer(function() {
+                this.slideUp('fast');
+              }.bind($project));
+              callback(null, "up");
+            }
+          }.bind(project);
+        });
+        
+        async.parallel(animations, function(err, animationsResults) {
+          if("up" == _.uniq(animationsResults))
+            $noProjects.show();
+        });
+      }
+      
+      $practiceAreas.on('change', filterProjects);
+      $budget.on('change', filterProjects);
+    })
+  
 #projects
   .row
     = form_tag "/projects", html: {id: 'project-filter-form'} do
       .medium-2.columns
         %select{name: "practice_area"}
+          %option{value: ""} All
           - data.practice_areas.each do |practice_area|
             %option{value: practice_area}= practice_area
         %label{for: "practice_area"} Practice Area
           
       .medium-2.columns
         %select{name: "budget"}
-          - [['$500k+','500000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
+          - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
             %option{value: text_and_value[1]}= text_and_value[0]
         %label{for: 'budget'} Budget
           
@@ -24,9 +81,14 @@
       .medium-2.columns
         .value 31 weeks
         %label Avg First Project Duration
+          
+  .row.no-projects-match
+    .medium-12.colummn
+      %h3 No projects match your filters :-(
+  
   - data.projects.each do |project|
     - next if project.phases.blank?
-    .row
+    .row{data: {project: true, "project-budget" => project.budget, "project-practice-areas" => project.practice_area_names.split(',').to_json}}
       .medium-3.columns.project
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
@@ -44,6 +106,10 @@
                 = phase.duration
                 w, #{phase.full_time_staff} FTE
               .bar{style: "height:#{(phase.full_time_staff * 15).to_i}px; background:#{client_for_name(project.client).primary_color}"}
-    -# - for milestone in project.milestones do
-    -#   .milestone{"data-offset" => milestone.during_week / project.duration, "data-project-id" => project.id}
-    -#     = milestone.description
+      - if project.milestones.present?
+        .row
+          .medium-3.columns
+          .medium-9.columns
+            - project.milestones.each do |milestone|
+              .milestone{"data-offset" => milestone.during_week / project.duration, "data-project-id" => project.id}
+                = milestone.description
