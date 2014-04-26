@@ -16,8 +16,6 @@
       }
       
       function filterProjects(event) {
-        $noProjects.slideUp('fast');
-        
         event.preventDefault(); // derp?
         
         var $projects = $('[data-project]')
@@ -60,6 +58,8 @@
         async.parallel(animations, function(err, animationsResults) {
           if("up" == _.uniq(animationsResults))
             $noProjects.show();
+          else
+            $noProjects.hide();
         });
       }
       
