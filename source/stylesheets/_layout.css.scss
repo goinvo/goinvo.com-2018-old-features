@@ -1,19 +1,23 @@
 @import "base/colors";
 @import "base/type";
 
-$footer-color: #979A99;
+$footer-color: transparentize($white, .3);
 $outer-sidebar-padding:20px;
 $sidebar-padding:20px;
 $border-radius: 4px;
 
-$body-font-size:1.4rem;
-$body-line-height:1.7rem;
+$body-font-size:1.3rem;
+$body-line-height:1.5rem;
 $body-letter-spacing:0.09rem;
 $section-header-font-size:3.2rem;
 
 $sidebar-font-size:1.1rem;
-$sidebar-line-height:1.4rem;
+$sidebar-line-height:1.3rem;
 $sidebar-letter-spacing:0.04rem;
+
+/************************************
+ **  Main Layout
+ ************************************/
 
 body {
     p {
@@ -64,18 +68,64 @@ body {
 #main-footer {
   background-color: #131313;
   color: $footer-color;
-  padding-top:2%;
-  padding-bottom:2%;
-  padding:2%;
+  padding:40px;
+  padding-top:0px;
+    
+  .row.footerlogo {
+    margin-bottom:20px;  
+    padding-top:20px;
+  }
+    
   h1,h2,h3,h4,h5,h6,a {
     color: $footer-color;
   }
     
+  .addrcol, .linkscol {
+     font-family: sans-serif;
+      
+     h4, p.googlemap {
+         font-family:inherit;
+         text-transform:uppercase;
+     }
+      
+      p, h4{
+        font-size:.9rem;
+        line-height:1.2rem;
+        letter-spacing: 0.02rem;
+      }
+      
+      p.googlemap{
+        font-size:.6rem;
+          line-height:.9rem;
+      }
+      
+      p {
+        margin-bottom:1.2rem;  
+      } 
+     
+ }
+    .linkscol {
+        font-size:.9rem;
+        line-height:1.2rem;
+        letter-spacing: 0.02rem;   
+        margin-top:2rem;
+    }
+    
+    
     #footer-social-links {
+        margin-left:0px;
+        padding-top:10px;
         li {
             display:inline-block;
-            padding-right:5px;
+            padding-right:10px;
         }
+    }
+    
+    p {
+        color: transparentize($blue, .6);
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.03rem;
     }
 }
 
@@ -87,7 +137,7 @@ body {
       font-size: $sidebar-font-size;
       letter-spacing:$sidebar-letter-spacing;
       line-height:$sidebar-line-height;
-      color: $darkgray;
+      color: transparentize($darkgray, .1);
       .photo, .video {
           border-radius: $border-radius;
           font-size:inherit;
@@ -150,8 +200,8 @@ form {
     button {
         padding-top:9px;
         padding-bottom:9px;
-        padding-right:20px;
-        padding-left:20px;
+        padding-right:24px;
+        padding-left:24px;
         
         background-color: transparentize($navy, 0.0);
         color: transparentize($white, 0.0);
@@ -174,3 +224,5 @@ form {
         color: transparentize($gray, 0);
     }
 }
+
+

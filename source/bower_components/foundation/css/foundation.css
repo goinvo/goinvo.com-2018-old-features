@@ -6,8 +6,8 @@ meta.foundation-mq-small {
   width: 0em; }
 
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:40.063em)/";
-  width: 40.063em; }
+  font-family: "/only screen and (min-width:46.875em)/";
+  width: 46.875em; }
 
 meta.foundation-mq-large {
   font-family: "/only screen and (min-width:64.063em)/";
@@ -312,7 +312,7 @@ select {
   .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
     float: right; } }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .medium-push-0 {
     position: relative;
     left: 0%;
@@ -1029,7 +1029,7 @@ select {
     .small-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .medium-block-grid-1 > li {
     width: 100%;
     list-style: none; }
@@ -1385,7 +1385,7 @@ button, .button {
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #f04124; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   button, .button {
     display: inline-block; } }
 
@@ -1595,7 +1595,7 @@ button, .button {
   .clearing-feature li.clearing-featured-img {
     display: block; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .clearing-main-prev, .clearing-main-next {
     position: absolute;
     height: 100%;
@@ -2360,7 +2360,7 @@ label.error {
   left: 0; }
 
 /* Styles for screens that are at least 768px; */
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .joyride-tip-guide {
     width: 300px;
     left: inherit; }
@@ -2703,7 +2703,7 @@ label.error {
 .touch .orbit-bullets {
   display: none; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
     display: inherit; }
   .touch .orbit-bullets {
@@ -2981,7 +2981,7 @@ dialog, .reveal-modal {
   @media only screen and (max-width: 40em) {
     dialog, .reveal-modal {
       min-height: 100vh; } }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     dialog, .reveal-modal {
       left: 50%; } }
   dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
@@ -2990,11 +2990,11 @@ dialog, .reveal-modal {
     margin-top: 0; }
   dialog > :last-child, .reveal-modal > :last-child {
     margin-bottom: 0; }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     dialog, .reveal-modal {
       margin-left: -40%;
       width: 80%; } }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     dialog, .reveal-modal {
       top: 6.25rem; } }
   dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
@@ -3011,7 +3011,7 @@ dialog[open] {
   display: block;
   visibility: visible; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   dialog, .reveal-modal {
     padding: 1.875rem; }
     dialog.radius, .reveal-modal.radius {
@@ -3020,23 +3020,23 @@ dialog[open] {
       border-radius: 1000px; }
     dialog.collapse, .reveal-modal.collapse {
       padding: 0; }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.tiny, .reveal-modal.tiny {
         margin-left: -15%;
         width: 30%; } }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.small, .reveal-modal.small {
         margin-left: -20%;
         width: 40%; } }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.medium, .reveal-modal.medium {
         margin-left: -30%;
         width: 60%; } }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.large, .reveal-modal.large {
         margin-left: -35%;
         width: 70%; } }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.xlarge, .reveal-modal.xlarge {
         margin-left: -47.5%;
         width: 95%; } }
@@ -3046,7 +3046,7 @@ dialog[open] {
     height: 100vh;
     min-height: 100vh;
     margin-left: 0 !important; }
-    @media only screen and (min-width:40.063em) {
+    @media only screen and (min-width:46.875em) {
       dialog.full, .reveal-modal.full {
         margin-left: -50vw;
         width: 100vw; } } }
@@ -3407,7 +3407,7 @@ table {
     .tabs-content.vertical > .content {
       padding: 0 0.9375rem; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .tabs.vertical {
     width: 20%;
     float: left;
@@ -3487,7 +3487,7 @@ table {
   color: #777;
   font-weight: normal; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .tooltip > .nub {
     border-color: transparent transparent #333 transparent;
     top: -10px; }
@@ -3511,8 +3511,8 @@ table {
     margin-top: -5px; } }
 
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.063em)/";
-  width: 40.063em; }
+  font-family: "/only screen and (min-width:46.875em)/";
+  width: 46.875em; }
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
@@ -3803,7 +3803,7 @@ meta.foundation-mq-topbar {
 .js-generated {
   display: block; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .top-bar {
     background: #333;
     *zoom: 1;
@@ -3983,7 +3983,7 @@ meta.foundation-mq-topbar {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:40.063em) and (max-width:64em) {
+@media only screen and (min-width:46.875em) and (max-width:64em) {
   .medium-only-text-left {
     text-align: left !important; }
   .medium-only-text-right {
@@ -3993,7 +3993,7 @@ meta.foundation-mq-topbar {
   .medium-only-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .medium-text-left {
     text-align: left !important; }
   .medium-text-right {
@@ -4259,7 +4259,7 @@ blockquote, blockquote p {
   border: none;
   padding: 0 0.0625rem; }
 
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
@@ -4384,7 +4384,7 @@ blockquote, blockquote p {
   text-align: center;
   height: 2.8125rem;
   top: 0; }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     .tab-bar-section {
       text-align: left; } }
   .tab-bar-section.left {
@@ -4509,7 +4509,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     .move-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4534,7 +4534,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width:40.063em) {
+  @media only screen and (min-width:46.875em) {
     .move-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4565,7 +4565,7 @@ ul.off-canvas-list {
     display: table-cell !important; } }
 
 /* medium displays */
-@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:46.875em) {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }
   .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xxlarge-only, .show-for-xxlarge-up {

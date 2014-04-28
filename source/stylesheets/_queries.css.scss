@@ -1,0 +1,67 @@
+
+/************************************
+ **  Media Queries
+ ************************************/
+
+//changes that should always happen -1105px
+@media only screen and (max-width:1105px) {
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+            padding-right:1.4rem; 
+        }
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+            padding-left:1.2rem;    
+        }
+}
+
+
+//changes that shold always happen -980px
+@media only screen and (max-width: 980px) {
+    section.centerContent ul#choose-your-adventure li {      
+        font-size:2.2rem;
+        line-height: 2.5rem;
+     }
+    
+    .sidebar.omega {
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+
+//changes that shold always happen -800px
+@media only screen and (max-width: 800px) {
+    
+    .sidebar.omega {
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+
+//changes that shold always happen -980px
+@media only screen and (max-width: 770px) {
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+            padding-right:1rem; 
+        }
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+            padding-left:.8rem;    
+        }
+}
+
+//changes that shold always happen -980px
+@media only screen and (max-width: 750px) and (min-width:640px) {
+    section.centerContent ul#choose-your-adventure li {      
+        font-size:1.8rem;
+        line-height: 2.0rem;
+     }
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+            padding-right:.6rem; 
+        }
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+            padding-left:.4rem;    
+        }
+}
+
+@media only screen and (max-width:640px) {
+    div.sidebar.mobile-hide {
+        display:none;
+    }   
+}
