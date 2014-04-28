@@ -16,75 +16,55 @@ $ethics-padding:30px;
     padding: 40px;   
 }
 
+
 .team-cards {
-    .team-card {
-        background-color:black;
-        background-position:top right;
-        background-repeat: no-repeat;
-        background-size:contain;
-        height:0px;
-        padding-bottom:62.5%;
-        position:relative;
-        .stats {
-            color:$white;
+    color:$white;
+    h3 {
+            color: $white;
+            font-size:3.2em;
+            line-height: .9em;
+        }
+    
+    h4 {
+        color:$white;
+        font-size:1.4em;
+        letter-spacing: .04em;
+        line-height: .9em;
+    }
+    
+     .social-icons {
+        list-style: none;
+        margin-left:0px;
+        margin-right:0px;
+        padding-left:0px;
+        padding-right:0px;
+
+        li {
+            display:inline-block;
+            margin-right: 10px;
+            max-width:$icon-size;
+            max-height:$icon-size;
+            vertica-align:center;
+        }
+     }
+
+    .bio {
+        width: 65%; 
+    }
+    
+    .character-sheet {
+        color:transparentize($white, .3);
+        background-color:transparentize($black, .2);
+        height: 70px;
+        
+        .content {
+            vertical-align:middle;
+            width:100%;
+            display:table;
+            height:100%;
             padding-left: $stats-padding;
             padding-right:$stats-padding;
-            padding-top: $stats-padding;
-            
-            h3 {
-                color: $white;
-                font-size:3.2em;
-                line-height: .9em;
-            }
-            
-            h4 {
-                color:$white;
-                font-size:1.4em;
-                letter-spacing: .04em;
-                line-height: .9em;
-            }
-            
-            .social-icons {
-                list-style: none;
-                margin-left:0px;
-                margin-right:0px;
-                padding-left:0px;
-                padding-right:0px;
-                
-                li {
-                    display:inline-block;
-                    margin-right: 10px;
-                    max-width:$icon-size;
-                    max-height:$icon-size;
-                    vertica-align:center;
-                }
-            }
-            
-            .bio {
-                width: 42%; 
-                font-size:1.4em;
-                letter-spacing: .04em;
-                line-height: 1.2em;
-            }
-        }
-        
-        .character-sheet {
-            color:transparentize($white, .3);
-            background-color:transparentize($black, .2);
-            height: 100px;
-            width:100%;
-            position:absolute;
-            bottom:0;
-            font-size:1.3em;
-            letter-spacing: .06em;
-            .content {
-                vertical-align:middle;
-                width:100%;
-                display:table;
-                height:100%;
-                padding-left: $stats-padding;
-                padding-right:$stats-padding;
-                .myers-briggs {
+            .myers-briggs {
                     display:table-cell;
                     text-align:left;
                     vertical-align:middle;
@@ -100,23 +80,75 @@ $ethics-padding:30px;
                         
                     }
                 }
-                .sparkline.github-commits{
-                    display:table-cell;
-                    text-align:left;
-                    vertical-align:middle;
-                    width:auto;
-                    padding-right:$stats-padding;
-                    .graph {
-                        
-                    }
-                    label {
-                        
-                    }
+            .sparkline.github-commits{
+                display:table-cell;
+                text-align:left;
+                vertical-align:middle;
+                width:auto;
+                padding-right:$stats-padding;
+                .graph {
+
+                }
+                label {
+
                 }
             }
         }
     }
+    .team-card {
+        background-color:black;
+        background-position:top right;
+        background-repeat: no-repeat;
+        background-size:contain;
+        height:0px;
+        padding-bottom:62.5%;
+        position:relative;
+        .stats {
+            padding-left: $stats-padding;
+            padding-right:$stats-padding;
+            padding-top: $stats-padding;
+           
+        }
+        
+        .character-sheet {
+            width:100%;
+            position:absolute;
+            bottom:0;
+        }
+    }
     
+    
+    
+}
+
+.expandedcards {
+    .teamcard {
+        
+    }
+    
+    .team-card-info {
+        color: $white; 
+        background-color:transparentize($black, 0.1);
+        padding: $stats-padding - 10px;
+        
+        .bio {
+            width:100%;  
+            margin-bottom:0px;
+        }
+        
+        h3, h4 {
+            color:$white;   
+        }
+    }
+    
+    .team-card-character {
+        margin-bottom:40px;   
+        
+        .character-sheet {
+            height:70px;   
+            background-color:transparentize($black, 0);
+        }
+    }
 }
 
 .sidebar {
@@ -141,7 +173,6 @@ $ethics-padding:30px;
             width: 80%;
             margin: 0 auto;
             margin-bottom:$ethics-padding;
-            line-height: 1.2em;
         }
         
         p:last-child {
@@ -167,11 +198,12 @@ $ethics-padding:30px;
     left:44px;
     top:2130px;
     z-index:300;
+    display:none;
 }
 
 .timeline {
     padding-top:20px;    
-    padding-left:30px;
+    padding-left:20px;
     padding-right:20px;
     background-color:transparentize($blue, .97);
     
@@ -185,23 +217,22 @@ $ethics-padding:30px;
             p.date {
                 padding-top:15px;
                 font-size:1em;
-                font-weight:800;
                 color:$darkgray;
                 margin-bottom:0px;
                 padding-bottom:0px;
-                line-height: .5em;
+                line-height: 1em;
             }
             h3 {
                 color:$darkgray;
                 font-family:$base-font-regular;
-                font-size:1.7em;
                 margin-top:0px;
                 line-height: 1em;
                 padding-top:7px;
             }
             p {
-                font-size:1em;
-                line-height: 1.3em;
+                font-size:1.1rem;
+                line-height: 1.3rem;
+                letter-spacing:0.04rem;
             }
         }
         li:before{

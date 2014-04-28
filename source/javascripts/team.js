@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
     // Stick the #nav to the top of the window
     var nav = $('#invo-logo');
     var navHomeY = $("li#first").offset().top;
@@ -40,4 +40,4 @@ $(function() {
         
     });
     
-});
+});*/

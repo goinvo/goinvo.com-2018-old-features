@@ -4,7 +4,7 @@
     %h2 Our Team
     %h3 We bring together the very best people and deploy them<br>on your hardest digital problems
 .row.main-content
-  .medium-9.small-12.columns
+  .medium-9.small-12.columns.contractedcards
     %section.team-cards.twelve.columns
       - data.team.each do |person|
         - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
@@ -42,6 +42,46 @@
                 .sparkline.github-commits
                   .graph{"data-member-id" => person.id}
                   %label
+  .medium-9.small-12.columns.expandedcards
+    %section.team-cards.twelve.columns
+      - data.team.each do |person|
+        - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
+        .team-card{style: style}
+        .team-card-info
+          .stats
+            %h3.name= person.first_name + " " + person.last_name
+            %h4.title= person.title
+            %ul.social-icons
+              - unless person.linkedin_url.blank?
+                %li.linkedin= link_to(image_tag('team/social-icons/linkedin.svg'), person.linkedin_url, :target => "_blank" )
+              - unless person.twitter_username.blank?
+                %li.twitter= link_to(image_tag('team/social-icons/twitter.svg'), twitter_url_for(person.twitter_username), :target => "_blank" )
+              - unless person.github_username.blank?
+                %li.github= link_to(image_tag('team/social-icons/github.svg'), github_url_for(person.github_username), :target => "_blank" )
+              - unless person.flickr_username.blank?
+                %li.flickr= link_to(image_tag('team/social-icons/flickr.svg'), flickr_url_for(person.flickr_username), :target => "_blank" )
+              - unless person.dribbble_username.blank?
+                %li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username), :target => "_blank" )
+              - unless person.tumblr_url.blank?
+                %li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url, :target => "_blank" )
+              - unless person.lastfm_username.blank?
+                %li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username), :target => "_blank" )
+              - unless person.pinterest_username.blank?
+                %li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username), :target => "_blank" )
+            %div{style: "clear:both"}
+            %p.bio= person.bio
+          %div{style: "clear:both"}
+        .team-card-character
+          .character-sheet
+            .content
+              - unless person.mbti.blank?
+                .myers-briggs
+                  MBTI
+                  %span.value= person.mbti
+              - unless person.github_username.blank?
+                .sparkline.github-commits
+                  .graph{"data-member-id" => person.id}
+                  %label
   .medium-3.small-12.columns.sidebar.omega
     %section.code-of-ethics
       %h2 CODE <em>of</em><br> ETHICS
@@ -66,7 +106,7 @@
       %p.caption
         We’re not in this field to just make pretty designs. We’re looking to design highly functional products that make huge impact. We’ll stretch your design thinking and push the bounds but our work is destined to ship, and beautifully.
     #invo-logo
-    %section.timeline
+    %section.timeline.mobile-hide
       %ul
         %li#first
           %p.date June 2004
@@ -74,7 +114,7 @@
           %p Dirk Knemeyer and Andrei Herasimchuk incorporate Involution Studios in Palo Alto, CA.
         %li
           %p.date December 2004
-          %h3 Skunkworks Design Gig<br>for Jim Clark
+          %h3 Skunkworks Design Gig for Jim Clark
           %p Invo chosen to design a new, secret product for Jim Clark. It was Shutterfly.
         %li
           %p.date December 2005
@@ -82,7 +122,7 @@
           %p Made our first 3 hires: Benjamin Listwon (who would go on to be a co-founder), Donna Driscoll, and Tiffany Altieri
         %li
           %p.date July 2006
-          %h3 Invo as Yahoo<br>Design<br>Partner
+          %h3 Invo as Yahoo Design Partner
           %p Yahoo was developing a new tool to help small businesses quickly design effective websites that looked unique and not templatized. Invo was called in to design the software.
         %li
           %p.date 2007

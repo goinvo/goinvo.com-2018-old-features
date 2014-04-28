@@ -25,11 +25,18 @@
         padding-left:10px;
         padding-right:10px;
     }
+    
+    .medium-9.columns.expandedcards {
+        display: inherit;   
+    }
+    
+    .medium-9.columns.contractedcards {
+        display: none;
+    }
 }
 
 //changes that shold always happen -800px
 @media only screen and (max-width: 800px) {
-    
     .sidebar.omega {
         padding-left:5px;
         padding-right:5px;
@@ -60,8 +67,8 @@
         }
 }
 
-@media only screen and (max-width:640px) {
-    div.sidebar.mobile-hide {
+@media only screen and (max-width:750px) {
+    div.sidebar.mobile-hide, section.timeline.mobile-hide {
         display:none;
     }   
 }
