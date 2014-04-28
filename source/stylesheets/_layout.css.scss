@@ -31,7 +31,9 @@ body {
     background-image: url(/images/careers/hero.jpg);
     background-position: center center;
     background-size: cover;
-    min-height: 500px;
+    max-height: 460px;
+    min-height:300px;
+    padding-top:35%;
     position:relative;  
     z-index: -1;
     .title {
@@ -46,6 +48,8 @@ body {
         margin: 0 auto;
         color: $white;
         letter-spacing:.06rem;
+        padding-left:5px;
+        padding-right:5px;
     }
 
     h2 {
@@ -56,12 +60,12 @@ body {
     }
 
     h3 {
-
-        max-width: 40%;
+        max-width: 600px;
         font-size:1.8rem;
         font-family: $base-font-light;
         line-height:1.8rem;
         margin-bottom:20px;
+
     }
 }
 

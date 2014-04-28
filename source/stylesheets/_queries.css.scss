@@ -3,6 +3,13 @@
  **  Media Queries
  ************************************/
 
+@media only screen and (min-width:1280px) {
+    header.hero {
+        padding-top:460px;   
+    }
+}
+
+
 //changes that should always happen -1105px
 @media only screen and (max-width:1105px) {
     #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
@@ -71,4 +78,9 @@
     div.sidebar.mobile-hide, section.timeline.mobile-hide {
         display:none;
     }   
+    
+    .hero .title h2 {
+        font-size:5.5rem;
+        line-height: 5.5rem;
+    }
 }

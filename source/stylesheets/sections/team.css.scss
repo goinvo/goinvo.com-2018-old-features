@@ -49,7 +49,7 @@ $ethics-padding:30px;
      }
 
     .bio {
-        width: 65%; 
+        width: 60%; 
     }
     
     .character-sheet {
@@ -114,6 +114,8 @@ $ethics-padding:30px;
             width:100%;
             position:absolute;
             bottom:0;
+            
+            
         }
     }
     
@@ -147,6 +149,11 @@ $ethics-padding:30px;
         .character-sheet {
             height:70px;   
             background-color:transparentize($black, 0);
+            
+            .content {
+                padding-left:30px;   
+            }
+
         }
     }
 }
