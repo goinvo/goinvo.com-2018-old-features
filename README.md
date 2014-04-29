@@ -9,3 +9,8 @@ To see the site locally in development mode open up your favorite shell, cd to t
   * `middleman`
   
 And visit http://localhost:4567 in your favorite browser.
+
+
+### Generate Static Site
+
+`bundle exec middleman build`
