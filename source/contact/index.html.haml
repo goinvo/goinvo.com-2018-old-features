@@ -1,1 +1,15 @@
-%h2 Say Hello
+%article#contact
+  .row.get-in-touch
+    .small-7.medium-centered.columns
+      %form#contactForm
+        .form-title
+          %h3 Get in touch!
+          %h4.phoneNumber
+            %a{href: "tel:6178037043"}  617-803-7043
+          %h4.mailTo
+            = mail_to "info@goinvo.com"
+        %input{:type => "text", :placeholder => "Your name"}
+        %input{:type => "email", :placeholder => "Email"}
+        %textarea{:placeholder => "What can we do for you?", :rows => "6"}
+        %input#subscribe{:type => "checkbox"} <div class = "check-label">Subscribe to our newsletter</div>
+        %button#send{:type => "button"}Send

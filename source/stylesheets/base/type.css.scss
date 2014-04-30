@@ -97,6 +97,11 @@ h4 {
   font-family: $base-font-bold;
 }
 
+#contactForm h4 {
+    @include adjust-font-size-to(18px);
+  font-family: $base-font-regular;
+}
+
 p {
   font-size:1.4em; 
   letter-spacing:.04em;
@@ -112,6 +117,10 @@ p {
   }
   a {
     text-decoration: none;
-    color: $blue;
+    color: $navy;
   }
+}
+
+a {
+     color: $darkblue;  
 }

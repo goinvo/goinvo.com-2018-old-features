@@ -224,6 +224,65 @@ form {
     }
 }
 
+#contact {
+    background-image:url("../images/google_map.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+#contactForm {
+    padding-top:100px;
+    padding-bottom:80px;
+    .form-title {
+        h3, h4 {
+            margin-top:0px;
+            margin-bottom:0px;   
+        }
+        h3 {
+            font-size: 3.2rem;
+            line-height: 1rem;
+            font-weight:800;
+            padding-top:20px;
+        }
+        h4 {
+            display:inline-block;
+            font-size: 2rem;
+            line-height: 1rem;
+        }
+        
+        h4.phoneNumber a{
+            color: $black; 
+            letter-spacing:0rem;
+        }
+    }
+    
+    input, textarea {
+        padding-top:calc(5% + 7px);
+        font-size:2rem;
+        line-height:2.2rem;
+    }
+    
+    #send, div.check-label {
+        font-size:2rem;
+        line-height:2rem;
+    }
+    
+    div.check-label {
+        display:inline-block;
+        color:$gray;
+        padding-left:10px;
+        vertical-align: middle;
+        width: calc(100% - 181px);
+    }
+    
+    #send {
+        padding-right:50px;
+        padding-left:50px;
+        padding-top:15px;
+    }
+}
+
+
 .expandedcards {
     display:none;   
 }
