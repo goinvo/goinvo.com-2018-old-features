@@ -18,6 +18,14 @@
     #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
             padding-left:1.2rem;    
         }
+    
+     .medium-9.columns.expandedcards {
+        display: inherit;   
+    }
+    
+    .medium-9.columns.contractedcards {
+        display: none;
+    }
 }
 
 
@@ -33,13 +41,7 @@
         padding-right:10px;
     }
     
-    .medium-9.columns.expandedcards {
-        display: inherit;   
-    }
-    
-    .medium-9.columns.contractedcards {
-        display: none;
-    }
+   
 }
 
 //changes that shold always happen -800px
@@ -60,27 +62,56 @@
         }
 }
 
-//changes that shold always happen -980px
-@media only screen and (max-width: 750px) and (min-width:640px) {
+@media only screen and (max-width:749px) {
     section.centerContent ul#choose-your-adventure li {      
         font-size:1.8rem;
         line-height: 2.0rem;
      }
+    
     #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
-            padding-right:.6rem; 
+            padding-right:.7rem; 
         }
     #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
             padding-left:.4rem;    
         }
-}
-
-@media only screen and (max-width:750px) {
+    
+    //hide everything that should be hidden (class: mobile-hide)
     div.sidebar.mobile-hide, section.timeline.mobile-hide {
         display:none;
     }   
     
     .hero .title h2 {
-        font-size:5.5rem;
-        line-height: 5.5rem;
+        font-size:4.5rem;
+        line-height: 4.5rem;
     }
+    
 }
+
+@media only screen and (max-width:649px) {  
+    //hide everything that should be hidden (class: mobile-hide)
+    div.sidebar.mobile-hide, section.timeline.mobile-hide {
+        display:none;
+    }   
+    
+    .hero .title h2 {
+        font-size:3.5rem;
+        line-height: 3.5rem;
+    }
+    
+    .hero .title h3 {
+       font-size: 1.3rem;
+       letter-spacing: 0.09rem;
+       line-height: 1.5rem;
+        padding-lef:10px;
+        padding-right:10px;
+    }   
+    
+
+    
+}
+
+
+
+
+
+
