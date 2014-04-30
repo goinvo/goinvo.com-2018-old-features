@@ -70,65 +70,52 @@ body {
 }
 
 #main-footer {
-  background-color: #131313;
+  background-color: $black;
   color: $footer-color;
   padding:40px;
   padding-top:0px;
     
-  .row.footerlogo {
-    margin-bottom:20px;  
+  .row.footerlogo { 
     padding-top:20px;
+    text-transform:uppercase;
+    
   }
     
-  h1,h2,h3,h4,h5,h6,a {
+  h1,h2,h3,h4,h5,h6,a, .logocol,  .row.footerlogo div, .subcol{
     color: $footer-color;
   }
     
+  #news-letter-input {
+    width: calc(100% - 140px);   
+    display:inline-block;
+    padding-top:22px;
+    padding-bottom:20px;
+  }
+  
+  #phoneNum {
+    margin-bottom:0px;  
+  }
+    
   .addrcol, .linkscol {
-     font-family: sans-serif;
-      
-     h4, p.googlemap {
-         font-family:inherit;
-         text-transform:uppercase;
-     }
-      
-      p, h4{
-        font-size:.9rem;
-        line-height:1.2rem;
-        letter-spacing: 0.02rem;
-      }
-      
-      p.googlemap{
-        font-size:.6rem;
-          line-height:.9rem;
-      }
       
       p {
         margin-bottom:1.2rem;  
       } 
      
  }
-    .linkscol {
-        font-size:.9rem;
-        line-height:1.2rem;
-        letter-spacing: 0.02rem;   
-        margin-top:2rem;
-    }
-    
     
     #footer-social-links {
         margin-left:0px;
         padding-top:10px;
         li {
             display:inline-block;
-            padding-right:10px;
+            padding-right:15px;
         }
     }
     
     p {
-        color: transparentize($blue, .6);
         font-size: 1.2rem;
-        line-height: 1.5rem;
+        line-height: 1.4rem;
         letter-spacing: 0.03rem;
     }
 }
@@ -206,7 +193,7 @@ form {
     }
     
     button {
-        padding-top:9px;
+        padding-top:11px;
         padding-bottom:9px;
         padding-right:24px;
         padding-left:24px;
