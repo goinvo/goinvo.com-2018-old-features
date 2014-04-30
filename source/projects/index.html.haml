@@ -1,52 +1,52 @@
 - content_for(:worlds_end) do
-  = javascript_include_tag 'projects'  
+  = javascript_include_tag 'projects'
   
 #projects
   .row
     = form_tag "/projects", html: {id: 'project-filter-form'} do
-      .medium-2.columns
+      .medium-2.small-12.columns
         %select{name: "practice_area"}
           %option{value: ""} All
           - data.practice_areas.each do |practice_area|
             %option{value: practice_area}= practice_area
         %label{for: "practice_area"} Practice Area
           
-      .medium-2.columns
+      .medium-2.small-12.columns
         %select{name: "budget"}
           - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
             %option{value: text_and_value[1]}= text_and_value[0]
         %label{for: 'budget'} Budget
           
-      .medium-2.columns
+      .medium-2.small-4.columns
         .value 4%
         %label Repeat Customers
           
-      .medium-2.columns
+      .medium-2.small-4.columns
         .value 120k
         %label Avg First Project Budget
           
-      .medium-2.columns
+      .medium-2.small-4.columns
         .value 31 weeks
         %label Avg First Project Duration
           
   .row.no-projects-match
-    .medium-12.colummn
+    .medium-12.column
       %h3 No projects match your filters :-(
   
   - data.projects.each do |project|
     - next if project.phases.blank?
     .row{data: {project: true, "project-budget" => project.budget, "project-practice-areas" => project.practice_area_names.split(',').map(&:strip).to_json}}
-      .medium-3.columns.project
+      .medium-3.small-12.columns.project
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
           - practice_areas(project).each do |area|
             = link_to area, "/projects/#{area}"
         %p.description= project.description
         %p= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}"
-      .medium-9.columns
+      .medium-9.small-12.columns
         - project.phases.each do |phase|
           
-          .phase-container{style: "width:#{(phase.duration.to_f / project.duration.to_f * 750).to_i}px"}
+          .phase-container.show-for-medium-up{style: "width:#{(phase.duration.to_f / project.duration.to_f) * 100}%"}
             .phase
               .service-areas= phase.service_names
               .staffing
@@ -54,9 +54,7 @@
                 w, #{phase.full_time_staff} FTE
               .bar{style: "height:#{(phase.full_time_staff * 15).to_i}px; background:#{client_for_name(project.client).primary_color}"}
       - if project.milestones.present?
-        .row
-          .medium-3.columns
-          .medium-9.columns
-            - project.milestones.each do |milestone|
-              .milestone{"data-offset" => milestone.during_week / project.duration, "data-project-id" => project.id}
-                = milestone.description
+        .medium-offset-3.medium-9.column.show-for-medium-up
+          - project.milestones.each do |milestone|
+            .milestone{"data-offset" => milestone.during_week / project.duration, "data-project-id" => project.id}
+              = milestone.description
