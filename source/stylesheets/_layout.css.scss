@@ -160,6 +160,9 @@ body {
             font-weight:500;
             color:inherit;
           }
+          h3.quote {
+            text-indent: -0.45rem;   
+          }
           p.caption {
             padding-bottom: $sidebar-padding;
             padding-left: $sidebar-padding;
@@ -168,6 +171,7 @@ body {
             line-height:inherit;
             letter-spacing: inherit;
             line-height: inherit;
+            
           } 
       }
   }

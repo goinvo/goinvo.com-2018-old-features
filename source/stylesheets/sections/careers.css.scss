@@ -17,9 +17,7 @@ $center-padding:30px;
   } //end of hero
     
   #mainContent {
-    padding: 40px;
-      padding-left:20px;
-      padding-right:20px;
+    padding: 40px 20px;
     #choose-your-adventure {
         list-style:none;
         font-size:3.2rem;
@@ -36,14 +34,14 @@ $center-padding:30px;
             }
         }
         li:first-child {
-            padding-right:3.4rem; 
+            padding-right:1.4rem;  
             border:0px;
             border-right-width:3px;
             border-color:transparentize($gray, .8);
             border-style:solid;
         }
         li:last-child {
-            padding-left:3.2rem;    
+            padding-left:1.2rem;    
         }
         .selected {
             vertical-align: top;
@@ -76,4 +74,9 @@ $center-padding:30px;
 
 }
 
-  
+#dbutton, #dbutton2 {
+    padding-top:11px;
+    padding-bottom:7px;
+    width: calc(100% - 201px);
+    min-width:209px;
+}
