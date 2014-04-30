@@ -18,8 +18,8 @@
 //changes that should always happen -1105px
 @media only screen and (max-width:1105px) {
        
-     .expandedcards {
-        display: inherit;   
+     div.main-content .expandedcards {
+        display:inherit; 
     }
     
     .contractedcards {
@@ -27,6 +27,25 @@
     }
 }
 
+//changes only present from 924px <-> 750px
+@media only screen and (max-width:924px) and (min-width:750px) {
+    #main-footer #footer-social-links li:last-child, #main-footer #footer-social-links li:nth-child(2) {
+        padding-top:15px;
+    }
+}
+
+//changes only present from 924px <-> 750px
+@media only screen and (max-width:924px) and (min-width:819px) {
+     #main-footer #footer-social-links li:nth-child(2) {
+         padding-right:75px;
+     }
+}
+
+@media only screen and (max-width:819px) and (min-width:750px) {
+    #main-footer #footer-social-links li:nth-child(2) {
+         padding-right:35px;
+     }
+}
 
 //changes that shold always happen -980px
 @media only screen and (max-width: 980px) {
@@ -74,9 +93,13 @@
         }
     
     //hide everything that should be hidden (class: mobile-hide)
-    div.sidebar.mobile-hide, section.timeline.mobile-hide {
+    div.sidebar.mobile-hide, section.timeline.mobile-hide, .mobile-hide {
         display:none;
     }   
+    
+    p.large-hide {
+        display:inherit;   
+    }
     
     .hero .title h2 {
         font-size:4.5rem;

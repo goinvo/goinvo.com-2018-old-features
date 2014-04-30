@@ -79,11 +79,11 @@
       .row.footerlogo
         .medium-3.columns.sidebar
           %p= image_tag 'logo-footer.png', alt: 'Go Invo: Involution Studios logo'
-        .medium-5.columns.sidebar
+        .medium-5.columns.sidebar.mobile-hide
           %p Boston
-        .medium-4.columns.sidebar
+        .medium-4.columns.sidebar.mobile-hide
           %p Subscribe to our newsletter
-      .row
+      .row.footerContent
         .medium-3.columns.logocol.sidebar
           %p
             %em
@@ -94,6 +94,8 @@
             %li.vimeo= link_to(image_tag('facebook_foot.svg'), "https://www.facebook.com/goinvo", :target => "_blank" )
             %li.github= link_to(image_tag('github_foot.svg'), "https://github.com/goinvo", :target => "_blank" )
         .medium-3.columns.addrcol.sidebar
+          %p.large-hide
+            Boston
           %p.address
             %a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} 661 Massachusetts Ave, 3rd Floor <br>Arlington MA, 02476
           %p#phoneNum
@@ -102,6 +104,8 @@
         .medium-2.columns.sidebar.blankcol
           <br>
         .medium-4.columns.sidebar.subcol
+          %p.large-hide
+            Subscribe to our newsletter
           %form
             %input#news-letter-input{:type => "email", :placeholder => "Email"}
             %button#news-letter-button{:type => "button"}Subscribe

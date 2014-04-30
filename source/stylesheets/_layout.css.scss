@@ -75,14 +75,18 @@ body {
   padding:40px;
   padding-top:0px;
     
-  .row.footerlogo { 
+  .row.footerlogo, .row.footerContent .large-hide { 
     padding-top:20px;
     text-transform:uppercase;
-    
+    color:inherit;
   }
     
-  h1,h2,h3,h4,h5,h6,a, .logocol,  .row.footerlogo div, .subcol{
+  h1,h2,h3,h4,h5,h6,a, .logocol,  .row.footerlogo div, .subcol, .row.footerContent .large-hide{
     color: $footer-color;
+  }
+    
+  .row.footerContent .large-hide {
+    margin-bottom:5px;   
   }
     
   #news-letter-input {
@@ -98,11 +102,11 @@ body {
     
   .addrcol, .linkscol {
       
-      p {
+    p {
         margin-bottom:1.2rem;  
-      } 
+    } 
      
- }
+  }
     
     #footer-social-links {
         margin-left:0px;
@@ -221,5 +225,9 @@ form {
 }
 
 .expandedcards {
+    display:none;   
+}
+
+.large-hide {
     display:none;   
 }
