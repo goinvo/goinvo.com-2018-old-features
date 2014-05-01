@@ -7,7 +7,7 @@
   .medium-9.small-12.columns.contractedcards
     %section.team-cards.twelve.columns
       - data.team.each do |person|
-        - style = person.photo.nil? ? "" : "background-image:url(../images/team_photos/#{person.photo})"
+        - style = person.photo.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,1) 0%, rgba(2,0,0,0.73) 12%, rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,1)), color-stop(12%,rgba(2,0,0,0.73)), color-stop(44%,rgba(255,255,255,0))),url(../images/team_photos/#{person.photo}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020000', endColorstr='#00ffffff',GradientType=1 ),url(../images/team_photos/#{person.photo}); /* IE6-9 */"
         .team-card{style: style}
           .stats
             %h3.name= person.first_name + " " + person.last_name
@@ -45,7 +45,7 @@
   .medium-9.small-12.columns.expandedcards
     %section.team-cards.twelve.columns
       - data.team.each do |person|
-        - style = person.photo.nil? ? "" : "background-image:url(../images/team_photos/#{person.photo})"
+        - style = person.photo.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,1) 0%, rgba(2,0,0,0.73) 12%, rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,1)), color-stop(12%,rgba(2,0,0,0.73)), color-stop(44%,rgba(255,255,255,0))),url(../images/team_photos/#{person.photo}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,1) 0%,rgba(2,0,0,0.73) 12%,rgba(255,255,255,0) 44%),url(../images/team_photos/#{person.photo}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020000', endColorstr='#00ffffff',GradientType=1 ),url(../images/team_photos/#{person.photo}); /* IE6-9 */"
         .team-card{style: style}
         .team-card-info
           .stats
