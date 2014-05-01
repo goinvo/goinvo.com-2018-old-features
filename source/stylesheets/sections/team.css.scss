@@ -23,6 +23,7 @@ $ethics-padding:30px;
             color: $white;
             font-size:3.2em;
             line-height: .9em;
+            margin-bottom:0px;
         }
     
     h4 {
@@ -30,6 +31,8 @@ $ethics-padding:30px;
         font-size:1.4em;
         letter-spacing: .04em;
         line-height: .9em;
+        margin-bottom:7px;
+        margin-top:3px;
     }
     
      .social-icons {
@@ -49,7 +52,8 @@ $ethics-padding:30px;
      }
 
     .bio {
-        width: 60%; 
+        margin-top:40px;
+        width: 50%; 
     }
     
     .designerButton, a .engineerButton {
@@ -72,6 +76,7 @@ $ethics-padding:30px;
         color:transparentize($white, .3);
         background-color:transparentize($black, .2);
         height: 70px;
+        display:none;
         
         .content {
             vertical-align:middle;

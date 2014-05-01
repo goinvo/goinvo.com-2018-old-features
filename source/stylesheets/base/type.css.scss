@@ -97,8 +97,12 @@ h4 {
   font-family: $base-font-bold;
 }
 
-#contactForm h4 {
-    @include adjust-font-size-to(18px);
+h3.name {
+  font-family: $base-font-regular;  
+}
+
+#contactForm h4, h4.title {
+  @include adjust-font-size-to(18px);
   font-family: $base-font-regular;
 }
 
