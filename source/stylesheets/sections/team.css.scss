@@ -7,7 +7,7 @@ $icon-size:25px;
 $ethics-padding:30px;
 
   .hero {
-    background-image: url('../../images/team/hero.png');
+    background-image: image-url('team/hero.png');
     background-position: center center;
     background-size: cover;
   }
@@ -50,6 +50,22 @@ $ethics-padding:30px;
 
     .bio {
         width: 60%; 
+    }
+    
+    .designerButton, a .engineerButton {
+        border-style:solid;
+        border-width:1px;
+        border-color:transparentize($white, .8);
+        border-radius:5px;
+        padding: 5px 15px;
+        margin-right:10px;
+        display:inline-block;
+        font-size:1.2rem;
+        font-weight: 100;
+    }
+    
+    a {
+        color:inherit;   
     }
     
     .character-sheet {
@@ -190,7 +206,7 @@ $ethics-padding:30px;
 }
 
 #invo-logo {
-    background-image: asset_url("images/team/invo-timeline-logo.png");
+    background-image: image-url("team/invo-timeline-logo.png");
     background-position: center center;
     background-size: cover;
 

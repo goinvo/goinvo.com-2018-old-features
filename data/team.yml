@@ -22,6 +22,11 @@
   title: Designer
   bio: "Sarah is an artist specializing in user interface design, motion graphics, and illustration. She creates beautiful interfaces in 2 and 3D space. Sarah joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
   mbti: ISTP
+- first_name: Your Career
+  last_name: Awaits!
+  title: We're always looking for amazing talent.
+  bio: <a href = "careers#designer"><div class = "designerButton">Designer</div></a> <a href = "careers#engineer"><div class = "engineerButton">Engineer</div></a>
+  photo: potential.jpeg
 - first_name: Jennifer
   last_name: Patel
   title: Designer
