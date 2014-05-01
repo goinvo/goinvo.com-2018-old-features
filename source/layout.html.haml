@@ -17,18 +17,18 @@
     #site-overlay
       %header#main-header
         %header#site-header
-          = link_to( image_tag('logo-header.png', alt: "Involution Studios"), '/', id: 'site-title')
+          = link_to( image_tag('logo-header.png', alt: "Involution Studios"), asset_url('/'), id: 'site-title')
           %span#menu-button Menu
       %nav#main-menu
         %section.studio
           %header
-            %h2= link_to 'Studio', '/studio'
+            %h2= link_to 'Studio', asset_url('studio')
           .menu-items
             %ul
-              %li.team= link_to 'Team', '/team'
-              %li.careers= link_to 'Careers', '/careers'
-              %li.process= link_to 'Process', '/process'
-              %li.contact= link_to 'Contact', '/contact'
+              %li.team= link_to 'Team', asset_url('team')
+              %li.careers= link_to 'Careers', asset_url('careers')
+              %li.process= link_to 'Process', asset_url('process')
+              %li.contact= link_to 'Contact', asset_url('contact')
           %footer
             %p Open Office Hours
             %p
@@ -37,7 +37,7 @@
             %p.detail Bring your problems, get advice.
         %section.portfolio
           %header
-            %h2= link_to 'Portfolio', '/projects'
+            %h2= link_to 'Portfolio', asset_url('projects')
           .menu-items
             %ul
               - data.projects.each do |project|
@@ -50,7 +50,7 @@
               = link_to 'Subscribe on iTunes', 'https://itunes.apple.com/us/podcast/the-digital-life/id392069970#ls=1'
         %section.articles
           %header
-            %h2= link_to 'Articles', '#'
+            %h2= link_to 'Articles', asset_url('#')
           .menu-items
             %ul
               %li.article.with-image{style: "background-image: url(#{asset_url('/images/mock-images/parthenon.jpg')})"}

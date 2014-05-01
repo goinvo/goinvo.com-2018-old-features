@@ -7,7 +7,7 @@ $icon-size:25px;
 $ethics-padding:30px;
 
   .hero {
-    background-image: url(/images/team/hero.png);
+    background-image: url('../../images/team/hero.png');
     background-position: center center;
     background-size: cover;
   }
@@ -190,7 +190,7 @@ $ethics-padding:30px;
 }
 
 #invo-logo {
-    background-image: url(/images/team/invo-timeline-logo.png);
+    background-image: asset_url("images/team/invo-timeline-logo.png");
     background-position: center center;
     background-size: cover;
 

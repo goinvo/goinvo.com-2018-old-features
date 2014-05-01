@@ -7,7 +7,7 @@
   .medium-9.small-12.columns.contractedcards
     %section.team-cards.twelve.columns
       - data.team.each do |person|
-        - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
+        - style = person.photo.nil? ? "" : "background-image:url(../images/team_photos/#{person.photo})"
         .team-card{style: style}
           .stats
             %h3.name= person.first_name + " " + person.last_name
@@ -45,7 +45,7 @@
   .medium-9.small-12.columns.expandedcards
     %section.team-cards.twelve.columns
       - data.team.each do |person|
-        - style = person.photo.nil? ? "" : "background-image:url(/images/team_photos/#{person.photo})"
+        - style = person.photo.nil? ? "" : "background-image:url(../images/team_photos/#{person.photo})"
         .team-card{style: style}
         .team-card-info
           .stats
