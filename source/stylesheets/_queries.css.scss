@@ -27,6 +27,12 @@
     }
 }
 
+@media only screen and (max-width:1020px) {
+    div.social-card.photo.landscape.super-long {
+        min-width: 660px;  
+    }
+}
+
 //changes only present from 924px <-> 750px
 @media only screen and (max-width:924px) and (min-width:750px) {
     #main-footer #footer-social-links li:last-child, #main-footer #footer-social-links li:nth-child(2) {
@@ -115,6 +121,13 @@
     div.career-content {
         padding-left:5px;
         padding-right:5px;
+    }
+}
+
+
+@media only screen and (max-width:667px) {
+    div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card {
+        min-width:85%;
     }
 }
 
