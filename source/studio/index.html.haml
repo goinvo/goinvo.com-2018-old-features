@@ -112,7 +112,7 @@
       .avatar{style: "background-image:url(../images/mock-images/avatars/juhan.png)"}
       
 :javascript
-  $(document).ready(function(){
+  $(window).load(function(){
 
     $('.social-card').click(function(){
       window.location = $(this).data('link');
@@ -122,7 +122,8 @@
       columnWidth: '.social-card.photo',
       itemSelector: '.social-card',
       gutter: 0,
-      isFitWidth: true
+      isFitWidth: true, 
+      animate: true
     });
 
 
