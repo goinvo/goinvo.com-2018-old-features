@@ -46,7 +46,7 @@
     
     .caption {
         padding: 5px 65px 5px 10px;
-        width: inherit;
+        width: 100%;
         color: #FFF;
         position: absolute;
         bottom: -100px;
@@ -59,6 +59,13 @@
         background-size:cover;
         &.portrait {
             min-height:456px;
+        }
+        &.landscape {
+            min-width:660px;
+            
+            &.super-long {
+                min-width:1000px;   
+            }
         }
     
     }
