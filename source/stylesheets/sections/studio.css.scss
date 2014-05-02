@@ -1,4 +1,5 @@
 @import "base/mixins";
+@import "base/colors";
 
 #the-studio {
   .hero {
@@ -16,7 +17,7 @@
 .social-card {
     cursor: pointer;
     overflow:hidden;
-    @include box-shadow(3px 2px 1px transparentize(#666, 0.6));
+    @include box-shadow(2px 2px 1px transparentize($black, 0.6));
     position:relative;
     margin-top:30px;
     margin-left:10px;
@@ -24,7 +25,7 @@
     width:320px;
     min-width:320px;
     min-height:213px;
-    height:auto;
+    
     
     .avatar {
         height: 50px;
@@ -46,12 +47,13 @@
     
     .caption {
         padding: 5px 65px 5px 10px;
+        margin-bottom:0px;
         width: 100%;
-        color: #FFF;
+        color: $white;
         position: absolute;
         bottom: -100px;
         @include opacity(0.0);
-        @include transparent-background(#000, 0.25);
+        @include transparent-background($black, 0.25);
         @include transition(all 0.5s ease-in-out);
   }
     
@@ -71,11 +73,13 @@
     }
     
     &.tweet {
-        border-top: 1px solid transparentize(#999, 0.6);
-        border-left: 1px solid transparentize(#999, 0.6);
+        border: 1px solid transparentize($gray, 0.6);
         height:auto;
-        p.content {
+        min-height: 10px;
+        p.contents {
             padding:10px;   
+            padding-bottom:20px;
+            height:auto;
         }
     }
 }
