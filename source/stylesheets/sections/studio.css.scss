@@ -3,66 +3,74 @@
 #the-studio {
   .hero {
     background-image: image-url("studio.jpg");
-    h2 {
-      display: none;
-    }
+  }
+    
+  .content {
+    padding-left:20px;
+    padding-right:10px;
+    padding-bottom:30px;
+    margin:0 auto;
   }
 }
 
 .social-card {
-  cursor: pointer;
-  margin: 10px 0;
-  position: relative;
-  overflow: hidden;
-  @include box-shadow(3px 2px 1px transparentize(#666, 0.6));
+    cursor: pointer;
+    overflow:hidden;
+    @include box-shadow(3px 2px 1px transparentize(#666, 0.6));
+    position:relative;
+    margin-top:30px;
+    margin-left:10px;
+    margin-right:10px;
+    width:320px;
+    min-width:320px;
+    min-height:213px;
+    height:auto;
+    
+    .avatar {
+        height: 50px;
+        width: 50px;
+        border: 1px solid #FFF;
+        @include border-radius(25px);
+        background-size: cover;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
 
-  .caption {
-    padding: 5px 65px 5px 10px;
-    width: 100%;
-    color: #FFF;
-    position: absolute;
-    bottom: -100px;
-    @include opacity(0.0);
-    @include transparent-background(#000, 0.25);
-    @include transition(all 0.5s ease-in-out);
-  }
-
-  .avatar {
-    height: 50px;
-    width: 50px;
-    border: 1px solid #FFF;
-    @include border-radius(25px);
-    background-size: cover;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-  }
-
-  &:hover {
+   &:hover {
+     .caption {
+       bottom: 0;
+       @include opacity(1.0);
+     }
+   }
+    
     .caption {
-      bottom: 0;
-      @include opacity(1.0);
-    }
+        padding: 5px 65px 5px 10px;
+        width: inherit;
+        color: #FFF;
+        position: absolute;
+        bottom: -100px;
+        @include opacity(0.0);
+        @include transparent-background(#000, 0.25);
+        @include transition(all 0.5s ease-in-out);
   }
-
-  &.photo {
-    height: 240px;
-    width: 320px;
-    max-width: 920px;
-    background-size: cover;
-    &.portrait {
-      height: 320px;
-      width: 240px;
+    
+    &.photo {
+        background-size:cover;
+        &.portrait {
+            min-height:456px;
+        }
+    
     }
-  }
-
-  &.tweet {
-    border-top: 1px solid transparentize(#999, 0.6);
-    border-left: 1px solid transparentize(#999, 0.6);
-    width: 240px;
-    height: 240px;
-    p.content {
-      padding: 10px;
+    
+    &.tweet {
+        border-top: 1px solid transparentize(#999, 0.6);
+        border-left: 1px solid transparentize(#999, 0.6);
+        height:auto;
+        p.content {
+            padding:10px;   
+        }
     }
-  }
 }
+
+

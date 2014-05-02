@@ -1,6 +1,6 @@
+= stylesheet_link_tag 'sections/studio'
 %article#the-studio
   %header.hero
-    %h2 The Studio
   .content
     .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/8721720458/", style: "background-image:url(/images/mock-images/flickr1.png)"}
       %p.caption Wednesday Afternoon
@@ -11,13 +11,13 @@
     .social-card.portrait.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7777472866/", style: "background-image:url(/images/mock-images/flickr5.png);"}
       %p.caption Portrait Photo!
       .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
-    .social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+    .columns.social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
       %p.content
         Open office hours today + every Thu at the
         %a{href: "https://twitter.com/goinvo"} @goinvo
         studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
       .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
-    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7797009954/", style: "background-image:url(/images/mock-images/flickr4.jpg); width: 1024px"}
+    .social-card.photo.landscape{"data-link" => "http://www.flickr.com/photos/juhansonin/7797009954/", style: "background-image:url(/images/mock-images/flickr4.jpg);"}
       %p.caption Long photo is long.
       .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
     .social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
@@ -29,17 +29,101 @@
     .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7797007558/", style: "background-image:url(/images/mock-images/flickr3.png)"}
       %p.caption Board Games + Green Lunch
       .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/8721720458/", style: "background-image:url(/images/mock-images/flickr1.png)"}
+      %p.caption Wednesday Afternoon
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/9458738515/", style: "background-image:url(/images/mock-images/flickr2.png)"}
+      %p.caption National EHR Design Guidelines... Tiny photo has excessively long caption. Calm down.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.portrait.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7777472866/", style: "background-image:url(/images/mock-images/flickr5.png);"}
+      %p.caption Portrait Photo!
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .columns.social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo.landscape{"data-link" => "http://www.flickr.com/photos/juhansonin/7797009954/", style: "background-image:url(/images/mock-images/flickr4.jpg);"}
+      %p.caption Long photo is long.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7797007558/", style: "background-image:url(/images/mock-images/flickr3.png)"}
+      %p.caption Board Games + Green Lunch
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/8721720458/", style: "background-image:url(/images/mock-images/flickr1.png)"}
+      %p.caption Wednesday Afternoon
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/9458738515/", style: "background-image:url(/images/mock-images/flickr2.png)"}
+      %p.caption National EHR Design Guidelines... Tiny photo has excessively long caption. Calm down.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.portrait.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7777472866/", style: "background-image:url(/images/mock-images/flickr5.png);"}
+      %p.caption Portrait Photo!
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .columns.social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo.landscape{"data-link" => "http://www.flickr.com/photos/juhansonin/7797009954/", style: "background-image:url(/images/mock-images/flickr4.jpg);"}
+      %p.caption Long photo is long.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7797007558/", style: "background-image:url(/images/mock-images/flickr3.png)"}
+      %p.caption Board Games + Green Lunch
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/8721720458/", style: "background-image:url(/images/mock-images/flickr1.png)"}
+      %p.caption Wednesday Afternoon
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/9458738515/", style: "background-image:url(/images/mock-images/flickr2.png)"}
+      %p.caption National EHR Design Guidelines... Tiny photo has excessively long caption. Calm down.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.portrait.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7777472866/", style: "background-image:url(/images/mock-images/flickr5.png);"}
+      %p.caption Portrait Photo!
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .columns.social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo.landscape{"data-link" => "http://www.flickr.com/photos/juhansonin/7797009954/", style: "background-image:url(/images/mock-images/flickr4.jpg);"}
+      %p.caption Long photo is long.
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+    .social-card.tweet{"data-link" => "https://twitter.com/goinvo/status/441627197468868608"}
+      %p.content
+        Open office hours today + every Thu at the
+        %a{href: "https://twitter.com/goinvo"} @goinvo
+        studio from 4-6pm. No appointment necessary. 661 Mass Ave, 3rd Floor, Arlington, MA 02476
+      .avatar{style: "background-image:url(https://pbs.twimg.com/profile_images/2429819542/j9sruacw9gyubs3pag4d.png)"}
+    .social-card.photo{"data-link" => "http://www.flickr.com/photos/juhansonin/7797007558/", style: "background-image:url(/images/mock-images/flickr3.png)"}
+      %p.caption Board Games + Green Lunch
+      .avatar{style: "background-image:url(/images/mock-images/avatars/juhan.png)"}
+      
 :javascript
   $(document).ready(function(){
 
     $('.social-card').click(function(){
       window.location = $(this).data('link');
     });
-
+    
     $('#the-studio .content').masonry({
-      columnWidth: 320,
+      columnWidth: '.social-card.photo',
       itemSelector: '.social-card',
-      gutter: 10
+      gutter: 0,
+      isFitWidth: true
     });
+
 
   });
