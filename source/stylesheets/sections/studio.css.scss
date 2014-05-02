@@ -3,12 +3,10 @@
 
 #the-studio {
   .hero {
-    background-image: image_url("studio.jpg");
+    background-image: image-url("studio.jpg");
   }
     
   .content {
-    padding-left:20px;
-    padding-right:10px;
     padding-bottom:30px;
     margin:0 auto;
   }
@@ -17,7 +15,7 @@
 .social-card {
     cursor: pointer;
     overflow:hidden;
-    @include box-shadow(2px 2px 1px transparentize($black, 0.6));
+    @include box-shadow(1px 1px 1px transparentize($black, 0.3));
     position:relative;
     margin-top:30px;
     margin-left:10px;
