@@ -77,7 +77,7 @@
         = yield
     %footer#main-footer
       .row.footerlogo
-        .medium-3.columns.sidebar
+        .medium-3.columns.sidebar.mobile-hide
           %p= image_tag 'logo-footer.png', alt: 'Go Invo: Involution Studios logo'
         .medium-5.columns.sidebar.mobile-hide
           %p Boston
@@ -85,10 +85,10 @@
           %p Subscribe to our newsletter
       .row.footerContent
         .medium-3.columns.logocol.sidebar
-          %p
+          %p.mobile-hide
             %em
               Crafting the future of emerging technology. We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
-          %ul#footer-social-links
+          %ul#footer-social-links.mobile-hide
             %li.twitter= link_to(image_tag('twitter_foot.svg'), "https://twitter.com/goinvo", :target => "_blank" )
             %li.linkedin= link_to(image_tag('linkedin_foot.svg'), "https://www.linkedin.com/company/involution-studios", :target => "_blank" )
             %li.vimeo= link_to(image_tag('facebook_foot.svg'), "https://www.facebook.com/goinvo", :target => "_blank" )
@@ -101,9 +101,14 @@
           %p#phoneNum
             %a{href: "tel:6178037043"}  617&ndash;803&ndash;7043
           = mail_to "info@goinvo.com"
+          %ul#footer-social-links.large-hide
+            %li.twitter= link_to(image_tag('twitter_foot.svg'), "https://twitter.com/goinvo", :target => "_blank" )
+            %li.linkedin= link_to(image_tag('linkedin_foot.svg'), "https://www.linkedin.com/company/involution-studios", :target => "_blank" )
+            %li.vimeo= link_to(image_tag('facebook_foot.svg'), "https://www.facebook.com/goinvo", :target => "_blank" )
+            %li.github= link_to(image_tag('github_foot.svg'), "https://github.com/goinvo", :target => "_blank" )
         .medium-2.columns.sidebar.blankcol
           <br>
-        .medium-4.columns.sidebar.subcol
+        .medium-4.columns.sidebar.subcol.mobile-hide
           %p.large-hide
             Subscribe to our newsletter
           %form
