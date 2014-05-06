@@ -42,10 +42,26 @@
           - practice_areas(project).each do |area|
             = link_to area, "/projects/#{area}"
         %p.description= project.description
-        %p= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}"
+        %p.show-for-medium-up= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+          
+      -# ~5" and down
+      .small-12.columns.phase-container.show-for-small-only.small-circles
+        .small-4.columns.text-center
+          %p.gray-circle 2.5
+          %p TOTAL FTE
+        .small-4.columns.text-center
+          %p.gray-circle= project.duration
+          %p TOTAL TIME
+            
+        .small-4.columns.text-center
+          %p.gray-circle= project.phases.count
+          %p NUMBER OF ENGAGEMENTS
+      
+      .medium-3.small-12.columns.end.show-for-small-only
+        %p= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
       .medium-9.small-12.columns
         - project.phases.each do |phase|
-          
+          -# tablets and larger
           .phase-container.show-for-medium-up{style: "width:#{(phase.duration.to_f / project.duration.to_f) * 100}%"}
             .phase
               .service-areas= phase.service_names

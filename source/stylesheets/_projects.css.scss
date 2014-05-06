@@ -14,7 +14,12 @@
   .phase-container {
     float: left;
     position: relative;
-    height: 150px;
+  }
+  
+  @media only screen and (min-width: 40.063em) {
+    .phase-container {
+      height: 150px;
+    }
   }
   
   .phase {
@@ -43,5 +48,22 @@
   
   .description {
     padding-right: 50px;
+  }
+  
+  .small-circles p {
+    font-size: 0.8em;
+    letter-spacing: initial;
+    line-height: initial;
+    color: #9CA2A3;
+    
+    &.gray-circle {
+      background: url(/images/gray-circle.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      height: 50px;
+      width: 50px;
+      padding-top: 18px;
+      color: #FFF;
+      margin: 15px auto;
+    }
   }
 }
