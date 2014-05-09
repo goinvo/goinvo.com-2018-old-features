@@ -1,16 +1,18 @@
 var userListData = [];
 var social2 = "";
+var offsetNumber = 0;
 
 
 // Combines all events' html together & pushes it to the web page
 function populateSocialMedia(listLength, offset) {
     $.getJSON( 'http://goinvo-api.herokuapp.com/social/events/' + listLength + '/' + offset, function( data ) {
+        console.log(data);
         // Aggregate html for all events to be displayed
         $.each(data, function(){
             var temp = this;
             $.when(getUser(this)).then(function(user2) {social2 += generateEventHTML(user2, temp);}); //Make sure that we have the user before generating html
         });
-        $('#the-studio div.content').html(social2);
+        $('#the-studio div.content').append(social2);
     
         $( ".social-card.photo, .social-card.tweet, .social-card.github " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes all social cards links (open in new tab)
         
@@ -22,6 +24,10 @@ function populateSocialMedia(listLength, offset) {
               isFitWidth: true, 
               animate: true
             });
+        
+         $('#the-studio .content').masonry( 'reloadItems' );
+        $('#the-studio .content').masonry( 'layout' );
+        social2 = ""; //comment out to duplicate current events w/ every scroll
     });
 }
 
@@ -87,6 +93,15 @@ function generateEventHTML(user, data) {
 $(document).ready(function() {
     //Get the list of users & save it to a global variable, then populate the social media
     $.getJSON( 'http://goinvo-api.herokuapp.com/users/userlist', function( data ) { userListData = data;}).done(function() {
-       populateSocialMedia(25, 0)
+       populateSocialMedia(25, offsetNumber)
     });
+});
+
+$(function(){
+   $(window).scroll(function(){
+       if($(document).height()==$(window).scrollTop()+$(window).height()){
+           offsetNumber += 25;
+           populateSocialMedia(25, offsetNumber);
+       }
+   });
 });
