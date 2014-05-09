@@ -23,7 +23,7 @@
     width:320px;
     min-width:320px;
     min-height:213px;
-    
+    border: 1px solid transparentize($gray, 0.6);
     
     .avatar {
         height: 50px;
@@ -70,10 +70,9 @@
     
     }
     
-    &.tweet {
-        border: 1px solid transparentize($gray, 0.6);
+    &.tweet, &.github {
         height:auto;
-        min-height: 10px;
+        min-height: 100px;
         p.contents {
             padding:10px;   
             padding-bottom:20px;

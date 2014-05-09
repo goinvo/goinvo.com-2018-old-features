@@ -41,10 +41,6 @@ function populateSocialMedia(listLength, offset) {
             window.open(this.dataset.link,'_blank');
         });
     }).done(function() {
-        $('.social-card').click(function(){
-              window.location = $(this).data('link');
-            });
-
             $('#the-studio .content').masonry({
               columnWidth: '.social-card.photo',
               itemSelector: '.social-card',
@@ -95,21 +91,22 @@ function generateTableData(user, data) {
     var stop = 0;
     console.log(user);
     if(data.type == "twitter") {
-        social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar'>" + user.avatar+  "<br> " + data.date + "</div></div>";
+        social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     else if(data.type == "flickr") {
         temp = data.content_embed;
-        start = temp.indexOf("<img");
+        start = temp.indexOf("<img src=") +10;
         temp = temp.substring(start);
-        stop = temp.indexOf(">")+1;
+        stop = temp.indexOf("width") -2;
         temp = temp.substring(0,stop);
-        social += "<div class = 'social-card photo' data-link = '" + data.url + "'>" + temp + "<p class = 'caption'>" + data.content + "</p><div class = 'avatar'>"+ user.avatar +"<br>" + data.date + "</div></div>";
+        console.log(temp);
+        social += "<div class = 'social-card photo'  style = 'background-image:url(" + temp + ")' data-link = '" + data.url + "' ><p class = 'caption'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     else if(data.type == "github") {
-        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar'>" + user.avatar+"<br>" + data.date +"</div></div>";
+        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     else if(this.type === "soundcloud") {
-        social += "<div class = 'social-card soundcloud' data-link = '" + data.url + "'>" + data.content_embed + "<p class = 'caption'>" + data.content +" " + data.date + "<div class = 'avatar'>"+ user.avatar + "<br>" + data.date +"</div></div>";
+        social += "<div class = 'social-card soundcloud' data-link = '" + data.url + "'>" + data.content_embed + "<p class = 'caption'>" + data.content +" " + data.date + "<div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     return social;
    
