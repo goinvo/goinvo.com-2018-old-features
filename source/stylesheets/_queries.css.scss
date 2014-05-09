@@ -70,9 +70,6 @@
         padding-left:10px;
         padding-right:10px;
     }
-    
-    
-   
 }
 
 //changes that shold always happen -800px
@@ -126,8 +123,8 @@
 
 
 @media only screen and (max-width:667px) {
-    div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card {
-        min-width:85%;
+    div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
+        min-width:95%;
     }
 }
 

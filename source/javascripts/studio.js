@@ -2,60 +2,34 @@ var userListData = [];
 var social2 = "";
 
 
-
-
-// Fill table with data
-function populateSocialMedia() {
-    // jQuery AJAX call for JSON
-    $.getJSON( 'http://goinvo-api.herokuapp.com/social/events/25/0', function( data ) {
-        // For each item in our JSON, add a table row and cells to the content string
-        $.each(data, function(){
-            var name = "";
-            var temp = this;
-
-            social2 += generateTableData(name, temp);
-            $('#social-media').html(social2);
-            $( ".social-card" ).click(function() {
-                window.open(this.dataset.link,'_blank');
-            });
-        });
-    });
-}
-
-// Fill table with data
+// Combines all events' html together & pushes it to the web page
 function populateSocialMedia(listLength, offset) {
-    // jQuery AJAX call for JSON
     $.getJSON( 'http://goinvo-api.herokuapp.com/social/events/' + listLength + '/' + offset, function( data ) {
-        // For each item in our JSON, add a table row and cells to the content string
+        // Aggregate html for all events to be displayed
         $.each(data, function(){
-            var name = "";
             var temp = this;
-            
-            $.when(getName(this)).then(function(name2) {
-                console.log(name2);
-                social2 += generateTableData(name2, temp);
-            });
+            $.when(getUser(this)).then(function(user2) {social2 += generateEventHTML(user2, temp);}); //Make sure that we have the user before generating html
         });
         $('#the-studio div.content').html(social2);
-        $( ".social-card" ).click(function() {
-            window.open(this.dataset.link,'_blank');
-        });
-    }).done(function() {
+    
+        $( ".social-card.photo, .social-card.tweet, .social-card.github " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes all social cards links (open in new tab)
+        
+    }).done(function() { //Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
             $('#the-studio .content').masonry({
-              columnWidth: '.social-card.photo',
+              columnWidth: '.social-card.photo', //The width of the first card sets the column width (note: all .social-card are the same width)
               itemSelector: '.social-card',
-              gutter: 0,
+              gutter: 0, //Use margins instead. I found that this makes the grid much more consistent
               isFitWidth: true, 
               animate: true
             });
     });
 }
 
-function getName(data) {
+//returns the user who the event belongs to
+function getUser(data) {
     var username = data.username;
     var type = data.type;
     var name = data;
-    console.log(userListData);
     $.each(userListData, function() {
         if(type === "twitter") {
            if(this.twitter == username){
@@ -82,14 +56,13 @@ function getName(data) {
 }
 
 
-
-function generateTableData(user, data) {
-      // Empty content string
+//Returns the html for an event's social-card
+function generateEventHTML(user, data) {
     var social = "";
     var temp = "";
     var start = 0;
     var stop = 0;
-    console.log(user);
+    
     if(data.type == "twitter") {
         social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
@@ -99,23 +72,20 @@ function generateTableData(user, data) {
         temp = temp.substring(start);
         stop = temp.indexOf("width") -2;
         temp = temp.substring(0,stop);
-        console.log(temp);
+        
         social += "<div class = 'social-card photo'  style = 'background-image:url(" + temp + ")' data-link = '" + data.url + "' ><p class = 'caption'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     else if(data.type == "github") {
         social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
-    else if(this.type === "soundcloud") {
-        social += "<div class = 'social-card soundcloud' data-link = '" + data.url + "'>" + data.content_embed + "<p class = 'caption'>" + data.content +" " + data.date + "<div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
+    else if(data.type == "soundcloud") {
+        social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "<div class = 'avatar' style = 'background-image:url(" + user.avatar + ")'></div></div>";
     }
     return social;
-   
 }
 
 $(document).ready(function() {
-    console.log("document  ready");
-     // jQuery AJAX call for JSON
-    
+    //Get the list of users & save it to a global variable, then populate the social media
     $.getJSON( 'http://goinvo-api.herokuapp.com/users/userlist', function( data ) { userListData = data;}).done(function() {
        populateSocialMedia(25, 0)
     });

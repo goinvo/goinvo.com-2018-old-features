@@ -70,6 +70,14 @@
     
     }
     
+    &.soundcloud {
+        min-width:660px;
+        p.contents {
+            padding:10px;
+            padding-bottom:20px;
+        }
+    }
+    
     &.tweet, &.github {
         height:auto;
         min-height: 100px;
