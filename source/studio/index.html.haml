@@ -6,21 +6,3 @@
   %header.hero
   .content
    
-      
-:javascript
-  $(window).load(function(){
-
-    $('.social-card').click(function(){
-      window.location = $(this).data('link');
-    });
-    
-    $('#the-studio .content').masonry({
-      columnWidth: '.social-card.photo',
-      itemSelector: '.social-card',
-      gutter: 0,
-      isFitWidth: true, 
-      animate: true
-    });
-
-
-  });
