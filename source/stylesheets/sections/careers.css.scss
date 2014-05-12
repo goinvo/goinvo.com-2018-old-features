@@ -51,6 +51,13 @@ $center-padding:30px;
             }
         }
     }
+      
+       #engineer ul, #engineer ul li {
+           font-size: 1.3rem;
+           letter-spacing: 0.09rem;
+           line-height: 1.5rem; 
+      }
+      
     .subtitle {
         p {
             color: $gray;
@@ -62,10 +69,6 @@ $center-padding:30px;
   .centerContent {
      padding-left:$center-padding;
      padding-right:$center-padding;
-    p {
-
-    }
-     
   }
   
     form {

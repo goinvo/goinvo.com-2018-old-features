@@ -1,6 +1,8 @@
 /************************************
  **  Main Menu
  ************************************/
+@import "base/colors";
+@import "base/type";
 
 #site-overlay {
     width:100%;
@@ -13,106 +15,31 @@
 
 #main-header {
 	height: 43px;
-	background: rgba(18,18,18,0);
+	background: rgba(18,18,18,1);
 	padding: 9px 31px 0px 31px;
 	transition: background .3s ease;
 
 
-	&:hover {
-		background: rgba(18,18,18,1);
-	}
-
-	#menu-button {
-		margin-top: 9px;
-		float: right;
-		font-family: 'Jenson Pro Regular', Georgia;
-		font-size: 14px;
-		color: #ddd;
-	}
-}
-
-#main-menu {
-	background: #fff;
-    display:none;
-	section {
-		display: inline;
-		width: 33.3%;
-		float: left;
-		font-family: 'Jenson Pro Regular', Georgia;
-
-		header {
-			background: #232323;
-			padding: 0px 0px 0px 31px;
-			height: 116px;
-			padding-top: 19px;
-
-			h2 a{
-				color: #ebebeb;
-				font-family: 'Jenson Pro Bold', Georgia;
-				font-weight: bold;
-				font-size: 30px;
-			}
-		}
-		
-		.menu-items {
-
-			ul {
-				margin-left: 0px;
-				margin-right: 1px;
-
-				li {
-					list-style: none;
-					margin-top:1px;
-					padding: 0px 0px 0px 31px;					
-					background: #f6f6f6;
-					height: 95px;
-					padding-top: 38px;
-
-					a {
-						font-family: 'Jenson Pro Bold', Georgia;
-						font-weight: bold;
-						color: #303030;
-						font-size: 16px;
-					}
-				}
-			}
-		}
-	}
-
-	section.articles {
-		.menu-items {
-			ul {
-				li {
-					background-color: #fff;
-					
-					.featured {
-						text-transform: uppercase;
-						margin-bottom: 0px;
-						color: #fff;
-					}
-					
-					.title {
-						margin-right: 35px;
-						margin-bottom: 0px;
-					}
-
-					.date-posted {
-						margin-top: 0px;
-						color: #ebebeb;
-					}
-				}
-				li.with-image {
-					height: 190px;
-					border-radius: 2px;
-					color: #fff;
-
-					a {
-						font-size: 30px;
-						color: #fff;
-						line-height: 24px;
-					}
-				}
-			}
-		}
-	}
+    #nav-buttons {
+        display:inline-block;
+        vertical-align:middle;
+        position:absolute;
+        right:0;
+        top:0;
+        padding-top:15px;
+        .nav-button {
+            padding-right:20px;
+            a {
+                font-family: $base-font-bold;
+                color:$white;
+                
+                span.underline {
+                    border-style:solid;
+                    border-color:$white;
+                    border-width:0px;
+                    border-bottom-width:1px;
+              }
+            }
+        }
+    }
 }
