@@ -16,16 +16,18 @@ function populateSocialMedia(listLength, offset) {
         $( ".social-card.photo " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes all social cards links (open in new tab)
         
     }).done(function() { //Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
-            
-        $('#the-studio .content').masonry({
+        
+            $('#the-studio .content').masonry({
               columnWidth: '.social-card', //The width of the first card sets the column width (note: all .social-card are the same width)
               itemSelector: '.social-card',
               gutter: 0, //Use margins instead. I found that this makes the grid much more consistent
               isFitWidth: true, 
               animate: true
             });
-        $('#the-studio .content').masonry( 'reloadItems' );
-        $('#the-studio .content').masonry( 'layout' );
+            
+            $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
+            setTimeout( function() { $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );}, 500);
+            
     
     });
 }
@@ -77,6 +79,11 @@ $(document).ready(function() {
     $.getJSON( 'http://goinvo-api.herokuapp.com/v1/users/userlist', function( data ) { }).done(function() {
        populateSocialMedia(25, offsetNumber)
     });
+});
+
+$(window).load(function() {            
+    $('#the-studio .content').masonry( 'reloadItems' );
+    $('#the-studio .content').masonry( 'layout' );
 });
 
 $(function(){
