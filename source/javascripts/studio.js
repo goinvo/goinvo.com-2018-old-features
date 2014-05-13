@@ -13,7 +13,7 @@ function populateSocialMedia(listLength, offset) {
                 $('#the-studio div.content').append(generateEventHTML(temp));
             }); //Make sure that we have the user before generating html
         });
-        $( ".social-card.photo, .social-card.tweet, .social-card.github " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes all social cards links (open in new tab)
+        $( ".social-card.photo " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes all social cards links (open in new tab)
         
     }).done(function() { //Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
             
@@ -26,6 +26,7 @@ function populateSocialMedia(listLength, offset) {
             });
         $('#the-studio .content').masonry( 'reloadItems' );
         $('#the-studio .content').masonry( 'layout' );
+    
     });
 }
 
@@ -47,7 +48,12 @@ function generateEventHTML( data) {
     var stop = 0;
     
     if(data.type == "twitter") {
-        social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></div>";
+        if(data.media_url.length > 0) {
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../images/twitter_foot.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-US")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+        }
+        else {
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/twitter_foot.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-US")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+        } 
     }
     else if(data.type == "flickr") {
         temp = data.content_embed;
@@ -55,13 +61,13 @@ function generateEventHTML( data) {
         temp = temp.substring(start);
         stop = temp.indexOf("width") -2;
         temp = temp.substring(0,stop);
-        social += "<div class = 'social-card photo'  style = 'background-image:url(" + temp + ")' data-link = '" + data.url + "' ><p class = 'caption'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></div>";
+        social += "<div class = 'social-card photo' data-link = '" + data.url + "' ><img class = 'flickr-photo' src = '" + temp + "' width = '100%' height = 'auto'><p class = 'caption'>" + data.content + "</p><div class = 'social-links'><img src = '../images/flickr_foot_black.png' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username  + "<br>" +  new Date(data.date).toLocaleDateString("en-US") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
     }
     else if(data.type == "github") {
-        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></div>";
+        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/github_foot.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-US")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
     }
     else if(data.type == "soundcloud") {
-        social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "<div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></div>";
+        social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/soundcloud_foot.svg' width = '35px' height = 'auto'></div><a href = '" + data.url + "' class = 'social-handle'>" + data.username + "<br>" + new Date(data.date).toLocaleDateString("en-US") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
     }
     return social;
 }

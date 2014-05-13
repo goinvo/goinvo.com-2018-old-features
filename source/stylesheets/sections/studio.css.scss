@@ -3,7 +3,7 @@
 
 #the-studio {
   .hero {
-    background-image: image-url("studio.jpg");
+    background-image:url("../../images/studio.jpg");
   }
     
   .content {
@@ -13,7 +13,7 @@
 }
 
 .social-card {
-    cursor: pointer;
+    
     overflow:hidden;
     @include box-shadow(1px 1px 1px transparentize($black, 0.3));
     position:relative;
@@ -24,38 +24,56 @@
     min-width:320px;
     min-height:213px;
     border: 1px solid transparentize($gray, 0.6);
+    border-right-width:0px;
+    border-bottom-width:0px;
     
     .avatar {
+        cursor: pointer;
         height: 50px;
         width: 50px;
         border: 1px solid #FFF;
-        @include border-radius(25px);
+        border:none;
+        border-radius: 4px;
         background-size: cover;
         position: absolute;
         bottom: 10px;
+        left: 10px;
+    }
+    
+    .social-links {
+        position:absolute;
+        bottom: 10px;
         right: 10px;
+    }
+    
+    .social-handle {
+        position:absolute;
+        bottom:10px;
+        left:70px;
+        
     }
 
    &:hover {
      .caption {
-       bottom: 0;
+       top: 0;
        @include opacity(1.0);
      }
    }
     
     .caption {
-        padding: 5px 65px 5px 10px;
+        padding: 10px 65px 10px 10px;
         margin-bottom:0px;
         width: 100%;
         color: $white;
         position: absolute;
-        bottom: -100px;
+        top: -100px;
         @include opacity(0.0);
         @include transparent-background($black, 0.25);
         @include transition(all 0.5s ease-in-out);
   }
     
     &.photo {
+        cursor:pointer;
         background-size:cover;
         &.portrait {
             min-height:456px;
@@ -67,6 +85,11 @@
                 min-width:1000px;   
             }
         }
+        
+   
+        img.flickr-photo {
+            padding-bottom:70px;   
+        }
     
     }
     
@@ -74,8 +97,10 @@
         min-width:660px;
         p.contents {
             padding:10px;
-            padding-bottom:20px;
+            padding-bottom:50px;
         }
+        
+        
     }
     
     &.tweet, &.github {
@@ -83,8 +108,13 @@
         min-height: 100px;
         p.contents {
             padding:10px;   
-            padding-bottom:20px;
+            padding-top:10px;
+            padding-bottom:50px;
             height:auto;
+            
+            img.twitter-photo {
+                padding-top:5px;   
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ $sidebar-letter-spacing:0.04rem;
  ************************************/
 
 body {
-    p {
+    p, .social-card a.social-handle, .social-card .social-handle a {
         font-size: $body-font-size;
         letter-spacing: $body-letter-spacing;
         line-height: $body-line-height;
