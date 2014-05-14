@@ -136,7 +136,7 @@ body {
       .photo, .video {
           border-radius: $border-radius;
           font-size:inherit;
-          background-color:transparentize($blue, .94);
+          background-color:transparentize($sidebar_color, .4);
           
           img {
             border-top-left-radius: $border-radius;

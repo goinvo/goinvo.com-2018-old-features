@@ -111,7 +111,7 @@ p {
   letter-spacing:.04rem;
   line-height:1.2rem;
   font-weight:500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   em {
     font-family: $base-font-italic;
     font-style: italic;
@@ -121,10 +121,18 @@ p {
   }
   a {
     text-decoration: none;
-    color: $navy;
+    color: $blue;
   }
 }
 
+.social-card a {
+    color: $navy;
+}
+
+.social-card a:hover {
+    color:$blue;   
+}
+
 a {
-     color: $darkblue;  
+     color: $blue;  
 }

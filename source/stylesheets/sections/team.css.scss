@@ -16,6 +16,9 @@ $ethics-padding:30px;
     padding: 40px 20px;
 }
 
+#team-design-button {
+    cursor:pointer;
+}
 
 .team-cards {
     color:$white;
@@ -231,6 +234,7 @@ $ethics-padding:30px;
 }
 
 .timeline {
+    display:none;
     padding-top:20px;    
     padding-left:20px;
     padding-right:20px;

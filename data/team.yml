@@ -25,7 +25,7 @@
 - first_name: Your Career
   last_name: Awaits!
   title: We're always looking for amazing talent.
-  bio: <a href = "careers#designer"><div class = "designerButton">Designer</div></a> <a href = "careers#engineer"><div class = "engineerButton">Engineer</div></a>
+  bio: "<div class = "designerButton" id = "team-design-button">Designer</div> <a><div class = "engineerButton" id = "team-engine-button">Engineer</div></a>"
   photo: potential.jpeg
 - first_name: Jennifer
   last_name: Patel

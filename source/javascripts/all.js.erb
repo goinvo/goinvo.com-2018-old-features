@@ -14,25 +14,26 @@ $(document).foundation();
 
 
 Mousetrap.bind('p', function () {
-    window.location.href = '/projects';
+    window.location.href = "<%= asset_url('projects') %>";
 });
 
 Mousetrap.bind('s', function () {
-    window.location.href = '/studio';
+    window.location.href = "<%= asset_url('studio') %>";
 });
 
 Mousetrap.bind('t', function () {
-    window.location.href = '/team';
+    window.location.href = "<%= asset_url('team') %>";
 });
 
 Mousetrap.bind('a', function () {
-    window.location.href = '/#';
+    window.location.href = '#';
 });
 
 Mousetrap.bind('c', function () {
-    window.location.href = '/contact';
+    window.location.href = "<%= asset_url('contact') %>";
 });
 
 Mousetrap.bind('a c', function () {
-    window.location.href = '/careers';
+    window.location.href = "<%= asset_url('careers') %>";
 });
+

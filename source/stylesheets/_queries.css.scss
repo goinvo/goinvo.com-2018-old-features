@@ -146,11 +146,14 @@
         padding-lef:10px;
         padding-right:10px;
     }   
-    
-
-    
 }
 
+
+@media only screen and (max-width:484px) {
+    .expandedcards .team-card-info h3 {
+        line-height:3.4rem;   
+    }
+}
 
 
 
