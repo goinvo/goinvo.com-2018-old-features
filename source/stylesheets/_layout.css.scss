@@ -20,7 +20,7 @@ $sidebar-letter-spacing:0.04rem;
  ************************************/
 
 body {
-    p, .social-card a.social-handle, .social-card .social-handle a {
+    p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-footer p, #main-footer a, #main-header #nav-buttons .nav-button a {
         font-size: $body-font-size;
         letter-spacing: $body-letter-spacing;
         line-height: $body-line-height;
@@ -121,12 +121,6 @@ body {
         li {
             padding-top:20px;   
         }
-    }
-    
-    p {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-        letter-spacing: 0.03rem;
     }
 }
 

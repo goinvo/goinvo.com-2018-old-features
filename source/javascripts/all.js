@@ -6,6 +6,33 @@
 //= require vendor/jquery.sparkline.js
 //= require vendor/tether.js
 //= require vendor/masonry.min.js
+//= require vendor/mousetrap.js
 //= require base/ui.js
 
 $(document).foundation();
+
+
+
+Mousetrap.bind('p', function () {
+    window.location.href = '/projects';
+});
+
+Mousetrap.bind('s', function () {
+    window.location.href = '/studio';
+});
+
+Mousetrap.bind('t', function () {
+    window.location.href = '/team';
+});
+
+Mousetrap.bind('a', function () {
+    window.location.href = '/#';
+});
+
+Mousetrap.bind('c', function () {
+    window.location.href = '/contact';
+});
+
+Mousetrap.bind('a c', function () {
+    window.location.href = '/careers';
+});
