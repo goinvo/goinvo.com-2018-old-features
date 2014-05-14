@@ -15,7 +15,7 @@
 
 #main-header {
 	height: 50px;
-	background: rgba(18,18,18,1);
+	background: rgba(18,18,18,.875);
 	padding: 9px 31px 0px 31px;
 	transition: background .3s ease;
 
@@ -35,7 +35,7 @@
                 
                 span.underline {
                     border-style:solid;
-                    border-color:$white;
+                    border-color:transparentize($white, .7);
                     border-width:0px;
                     border-bottom-width:1px;
               }

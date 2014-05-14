@@ -85,6 +85,10 @@ body {
     color: $footer-color;
   }
     
+  a:hover {
+    color: $white;   
+  }
+    
   .row.footerContent .large-hide {
     margin-bottom:5px;   
   }
@@ -114,6 +118,10 @@ body {
         li {
             display:inline-block;
             padding-right:15px;
+        }
+        
+        li a:hover img{
+            fill:white;   
         }
     }
     
@@ -251,6 +259,11 @@ form {
             line-height: 1.5rem;
         }
         
+        h4.address {
+            display:block;   
+            padding-bottom:7px;
+        }
+        
         h4.phoneNumber a{
             color: $black; 
             letter-spacing:0rem;
@@ -259,6 +272,7 @@ form {
     
     input[type=text], input[type=email] {
         padding:3.5%;   
+        padding-top:4%;
     }
     
     #send, div.check-label {
@@ -269,7 +283,7 @@ form {
         display:inline-block;
         color:$gray;
         padding-left:10px;
-        vertical-align: middle;
+        vertical-align: baseline;
         width: calc(100% - 160px);
     }
     
