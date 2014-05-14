@@ -21,15 +21,15 @@ $ethics-padding:30px;
     color:$white;
     h3 {
             color: $white;
-            font-size:3.2em;
-            line-height: .9em;
+            font-size:3.2rem;
+            line-height: .9rem;
             margin-bottom:0px;
         }
     
     h4 {
         color:$white;
         margin-bottom:7px;
-        margin-top:3px;
+        margin-top:17px;
     }
     
      .social-icons {
@@ -186,7 +186,8 @@ $ethics-padding:30px;
             em {
                 font-family: $base-font-italic;  
             }
-            line-height: 1.2em;
+            font-size: 1.5rem;
+            line-height:1.7rem;
         }
         
         h2 {
@@ -198,6 +199,9 @@ $ethics-padding:30px;
             width: 80%;
             margin: 0 auto;
             margin-bottom:$ethics-padding;
+            font-size:inherit;
+            line-height:inherit;
+            letter-spacing: inherit;
         }
         
         p:last-child {
@@ -241,20 +245,18 @@ $ethics-padding:30px;
             padding-left:40px;
             p.date {
                 padding-top:15px;
-                font-size:1em;
                 color:$darkgray;
                 margin-bottom:0px;
                 padding-bottom:0px;
-                line-height: 1em;
             }
             h3 {
                 color:$darkgray;
                 font-family:$base-font-regular;
                 margin-top:0px;
-                line-height: 1em;
+                line-height: 1.7rem;
                 padding-top:7px;
             }
-            p {
+            p, p.date {
                 font-size:1.1rem;
                 line-height: 1.3rem;
                 letter-spacing:0.04rem;

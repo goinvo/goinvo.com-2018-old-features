@@ -234,6 +234,7 @@ form {
     padding-top:100px;
     padding-bottom:80px;
     .form-title {
+        line-height:3.2rem;
         h3, h4 {
             margin-top:0px;
             margin-bottom:0px;   
@@ -246,8 +247,8 @@ form {
         }
         h4 {
             display:inline-block;
-            font-size: 2rem;
-            line-height: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
         }
         
         h4.phoneNumber a{
@@ -256,14 +257,12 @@ form {
         }
     }
     
-    input, textarea {
-        padding-top:calc(5% + 7px);
-
+    input[type=text], input[type=email] {
+        padding:3.5%;   
     }
     
     #send, div.check-label {
-        font-size:2rem;
-        line-height:2rem;
+       
     }
     
     div.check-label {
@@ -271,7 +270,7 @@ form {
         color:$gray;
         padding-left:10px;
         vertical-align: middle;
-        width: calc(100% - 181px);
+        width: calc(100% - 160px);
     }
     
     #send {
