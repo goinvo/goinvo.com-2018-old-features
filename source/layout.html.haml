@@ -4,10 +4,10 @@
     
     %meta{charset: "utf-8"}
     %meta{name: "viewport",  content: "width=device-width, initial-scale=1.0"}
- 
+  
     = javascript_include_tag 'all'
     = stylesheet_link_tag 'all'
- 
+  
     %title
       - if content_for? :title
         = yield title
@@ -24,7 +24,7 @@
           = link_to( image_tag('logo-header.png', alt: "Involution Studios"), asset_url('/'), id: 'site-title')
           #nav-buttons
             %span.nav-button
-              = link_to '<span class = "underline">P</span>ortfolio', asset_url('projects')
+              = link_to '<span class = "underline">P</span>ortfolio', asset_url('portfolio')
             %span.nav-button
               = link_to '<span class = "underline">S</span>tudio', asset_url('studio')
             %span.nav-button
