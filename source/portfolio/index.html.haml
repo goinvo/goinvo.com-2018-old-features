@@ -3,31 +3,30 @@
   
 #projects
   .row
-    = form_tag "/projects", html: {id: 'project-filter-form'} do
-      .medium-2.small-12.columns
-        %select{name: "practice_area"}
-          %option{value: ""} All
-          - data.practice_areas.each do |practice_area|
-            %option{value: practice_area}= practice_area
-        %label{for: "practice_area"} Practice Area
-          
-      .medium-2.small-12.columns
-        %select{name: "budget"}
-          - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
-            %option{value: text_and_value[1]}= text_and_value[0]
-        %label{for: 'budget'} Budget
-          
-      .medium-2.small-4.columns
-        .value 4%
-        %label Repeat Customers
-          
-      .medium-2.small-4.columns
-        .value 120k
-        %label Avg First Project Budget
-          
-      .medium-2.small-4.columns
-        .value 31 weeks
-        %label Avg First Project Duration
+    .medium-2.small-12.columns
+      %select{name: "practice_area"}
+        %option{value: ""} All
+        - data.practice_areas.each do |practice_area|
+          %option{value: practice_area}= practice_area
+      %label{for: "practice_area"} Practice Area
+        
+    .medium-2.small-12.columns
+      %select{name: "budget"}
+        - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
+          %option{value: text_and_value[1]}= text_and_value[0]
+      %label{for: 'budget'} Budget
+        
+    .medium-2.small-4.columns
+      .value 4%
+      %label Repeat Customers
+        
+    .medium-2.small-4.columns
+      .value 120k
+      %label Avg First Project Budget
+        
+    .medium-2.small-4.columns
+      .value 31 weeks
+      %label Avg First Project Duration
           
   .row.no-projects-match
     .medium-12.column
@@ -42,7 +41,7 @@
           - practice_areas(project).each do |area|
             = link_to area, "/projects/#{area}"
         %p.description= project.description
-        %p.show-for-medium-up= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p.show-for-medium-up= link_to 'Read Story', "/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
           
       -# ~5" and down
       .small-12.columns.phase-container.show-for-small-only.small-circles
@@ -58,7 +57,7 @@
           %p NUMBER OF ENGAGEMENTS
       
       .medium-3.small-12.columns.end.show-for-small-only
-        %p= link_to 'Read Story', '#', class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p= link_to 'Read Story', "/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
       .medium-9.small-12.columns
         - project.phases.each do |phase|
           -# tablets and larger
