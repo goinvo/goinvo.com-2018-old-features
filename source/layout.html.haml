@@ -7,10 +7,11 @@
   
     = javascript_include_tag 'all'
     = stylesheet_link_tag 'all'
+    = yield_content :page_head
   
     %title
       - if content_for? :title
-        = yield title
+        = yield_content :title
       - else
         Involution Studios
     
