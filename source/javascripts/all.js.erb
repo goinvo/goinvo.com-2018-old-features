@@ -11,29 +11,30 @@
 
 $(document).foundation();
 
-
+var currentURL = 'http://code.goinvo.com/goinvo-temp/';
+//var currentURL = 'localhost:4567/';
 
 Mousetrap.bind('p', function () {
-    window.location.href = "<%= asset_url('projects') %>";
+    window.location.href = currentURL + 'projects';
 });
 
 Mousetrap.bind('s', function () {
-    window.location.href = "<%= asset_url('studio') %>";
+    window.location.href = currentURL + 'studio';
 });
 
 Mousetrap.bind('t', function () {
-    window.location.href = "<%= asset_url('team') %>";
+    window.location.href = currentURL + 'team';
 });
 
 Mousetrap.bind('a', function () {
-    window.location.href = '#';
+    window.location.href = currentURL + '#';
 });
 
 Mousetrap.bind('c', function () {
-    window.location.href = "<%= asset_url('contact') %>";
+    window.location.href = currentURL + 'contact';
 });
 
 Mousetrap.bind('a c', function () {
-    window.location.href = "<%= asset_url('careers') %>";
+    window.location.href = currentURL + 'careers';
 });
 

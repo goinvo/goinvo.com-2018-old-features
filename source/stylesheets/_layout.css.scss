@@ -7,13 +7,13 @@ $sidebar-padding:20px;
 $border-radius: 4px;
 
 $body-font-size:1.3rem;
-$body-line-height:1.5rem;
-$body-letter-spacing:0.09rem;
+$body-line-height:1.7rem;
+$body-letter-spacing:0.03em;
 $section-header-font-size:3.2rem;
 
 $sidebar-font-size:1.1rem;
-$sidebar-line-height:1.3rem;
-$sidebar-letter-spacing:0.04rem;
+$sidebar-line-height:1.42rem;
+$sidebar-letter-spacing:0.02rem;
 
 /************************************
  **  Main Layout
@@ -24,6 +24,7 @@ body {
         font-size: $body-font-size;
         letter-spacing: $body-letter-spacing;
         line-height: $body-line-height;
+        word-spacing: 0rem;
     }   
 }
 
@@ -140,6 +141,7 @@ body {
       font-size: $sidebar-font-size;
       letter-spacing:$sidebar-letter-spacing;
       line-height:$sidebar-line-height;
+      word-spacing:0.1rem;
       color: transparentize($darkgray, .1);
       .photo, .video {
           border-radius: $border-radius;
