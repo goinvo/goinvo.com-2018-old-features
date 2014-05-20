@@ -1,0 +1,20 @@
+@import "base/colors";
+@import "base/type";
+
+article#complex-case {
+
+    div.row {
+        text-align:center;
+        background-color:$gray;
+       
+        h3 {
+            font-family: $base-font-italic;
+        }
+        
+        p.quote-author {
+            color:$darkgray;   
+        }
+    }
+    
+    
+}
