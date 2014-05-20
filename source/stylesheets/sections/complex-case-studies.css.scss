@@ -2,19 +2,229 @@
 @import "base/type";
 
 article#complex-case {
-
-    div.row {
-        text-align:center;
-        background-color:$gray;
-       
-        h3 {
-            font-family: $base-font-italic;
+    header.hero {
+        background-image: url('../../images/sections/case-studies/3m/head.JPG');
+        div.row div div.title {
+            h2, h3 {
+                text-align:left;    
+                margin-left:0px;
+                text-shadow:2px 2px transparentize($black, .8);
+            }
+            h2 {
+                font-size:5.2rem;
+                line-height: 4.75rem;
+            }
         }
         
-        p.quote-author {
-            color:$darkgray;   
+
+    }
+    
+    p.bottom, h2.bottom {
+            padding-bottom: 40px;   
+            
+            &.double {
+                padding-bottom: 80px;  
+            }
+        }
+    
+     p.top, h2.top {
+            padding-top:30px;
+            
+            &.double {
+                padding-top:60px;   
+            }
+            
+            &.triple {
+                padding-top:120px;   
+            }
+        }
+    
+      h2 {
+            font-size:59px;
+            line-height:62px;
+            padding-bottom:24px;
+        }
+    
+    h2.center, p.center {
+        text-align:center;
+        width:140%;
+        position:relative;
+        left:-20%;
+        font-family: $base-font-italic;
+    }
+    .center-image-content.large {
+            position:relative;
+            left:-29%;
+            width:158%;   
+            height:auto;
+        
+        .caption {
+            padding-top:5px;
+            margin-top:5px;   
+            font-size:1.1rem;
+            line-height:1.42rem;
+            letter-spacing:0.02rem;
+            color:$gray;
+            margin-top:7px;   
+           &.bottom {
+                margin-bottom:30px;   
+           }
+        }
+        
+    }
+    
+    #mainContent {
+        padding-top:60px;   
+
+        p span.firstcharacter {
+            color: #d62a31;
+            float: left; 
+            font-size: 75px; 
+            line-height: 60px; 
+            padding-top: 4px; 
+            padding-right: 5px; 
+            padding-left: 3px;
+        }
+        
+        
+      
+        span.image-float {
+            position:relative;
+            left:-120px;
+            float:left; 
+            padding:18px;
+            padding-left:0px;
+            padding-bottom:20px;
+            margin-right:-110px;
+        }
+   
+        div.center-graph-content {
+            position:relative;
+            left:-30%;
+            width:160%;
+            padding-bottom:60px;
+            padding-top:30px;
+        }
+        
+        .center-image-content.large {
+        
+            .caption {
+                position:relative;
+                top: 20px;
+                width:55%;
+                margin-left:10%;
+                padding-left:10px;
+                padding-bottom:30px;
+                border-width:0px;
+                border-left-width:2px;
+                border-color:transparentize($gray, .75);
+                border-style: solid;
+                
+                &.underneath {
+                    top:-50px;
+                    padding-bottom: 0px;
+                    padding-top:60px;
+                    
+                    &.other {
+                        top: -110px;
+                        margin-bottom:-60px;
+                    }
+                }
+            }
+
+            img {
+                padding-bottom:60px;  
+            }
+            
+            &.nobottom img {
+                padding-bottom:0px;   
+            }
         }
     }
     
+    div.row#quote {
+        max-width:none;
+        margin-left:0px;
+        margin-right:0px;
+        text-align:center;
+        background-color:transparentize($gray, .9);
+        padding:60px 9%;
+        div.moon-image {
+            background-image:url('../../images/sections/case-studies/3m/georgemoon.png');    
+            width: 200px;
+            height:200px;
+            background-size: cover;
+            border-radius:150px;
+            margin:0 auto;
+            margin-bottom:20px;
+        }
+        
+        h2.quote{
+            font-family: $base-font-italic;
+            margin: 0 auto;
+            margin-bottom:30px;
+            max-width:70rem;
+        }
+        
+        p.quote-author {
+            color:$gray;   
+        }
+    }
+    
+    div.row#image-background {
+        div.row {
+            max-width:80rem;
+            margin: 0 auto;
+        }
+        
+        max-width:none;
+        background: -moz-linear-gradient(top,  rgba(196,196,196,0.4) 0%, rgba(196,196,196,0.41) 1%, rgba(103,116,124,0.88) 38%, rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(196,196,196,0.4)), color-stop(1%,rgba(196,196,196,0.41)), color-stop(38%,rgba(103,116,124,0.88)), color-stop(47%,rgba(103,116,124,1))), url('../../images/sections/case-studies/3m/herman.jpg'); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66c4c4c4', endColorstr='#67747c',GradientType=0 ), url('../../images/sections/case-studies/3m/herman.jpg'); /* IE6-9 */
+        background-size:contain;
+        padding-top:375px;
+        color:$white;
+        min-height:1800px;
+        
+        h2 {
+            color:inherit; 
+        }
+        
+        
+        
+        .caption {
+            margin-top:7px;   
+            margin-bottom:60px;
+        }
+    }
+    
+    .full-two-images {
+            position:relative;
+            left:-50%;
+            width:200%;
+        }
+    
+    div.row#imageContent {
+        background-color:$black;
+    }
+    
+    div.row#email-content {
+        padding-top:30px;
+        padding-bottom:30px;
+        max-width:none;
+        background-color: #b9bfc2;   
+        div.center-image-content.large {
+            margin:0 auto;   
+            padding-left:175px;
+        }
+        p.caption {
+            color:$white;   
+            margin-left:210px;
+        }
+    }
     
 }
