@@ -144,11 +144,7 @@ $ethics-padding:30px;
     
 }
 
-.expandedcards {
-    .teamcard {
-        
-    }
-    
+.expandedcards {    
     .team-card-info {
         color: $white; 
         background-color:transparentize($black, 0.1);
@@ -189,8 +185,8 @@ $ethics-padding:30px;
             em {
                 font-family: $base-font-italic;  
             }
-            font-size: 1.5rem;
-            line-height:1.7rem;
+            font-size: 26px;
+            line-height:30px;
         }
         
         h2 {
