@@ -277,16 +277,13 @@ form {
         padding-top:4%;
     }
     
-    #send, div.check-label {
-       
-    }
     
     div.check-label {
         display:inline-block;
         color:$gray;
         padding-left:10px;
         vertical-align: baseline;
-        width: calc(100% - 160px);
+        width: calc(100% - 168px);
     }
     
     #send {

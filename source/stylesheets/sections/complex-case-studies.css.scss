@@ -52,13 +52,8 @@ article#complex-case {
         left:-20%;
         font-family: $base-font-italic;
     }
-    .center-image-content.large {
-            position:relative;
-            left:-29%;
-            width:158%;   
-            height:auto;
-        
-        .caption {
+    
+    .caption {
             padding-top:5px;
             margin-top:5px;   
             font-size:1.1rem;
@@ -70,7 +65,12 @@ article#complex-case {
                 margin-bottom:30px;   
            }
         }
-        
+    
+    .center-image-content.large {
+            position:relative;
+            left:-29%;
+            width:158%;   
+            height:auto;        
     }
     
     #mainContent {
