@@ -7,7 +7,7 @@
   flickr_username: "juhansonin"
   twitter_username: "jsonin"
   github_username: "jsonin"
-  photo: juhan_sonin.png
+  photo: juhan_sonin.jpg
 - first_name: Eric
   last_name: Benoit
   title: Designer
@@ -18,7 +18,7 @@
   github_username: "ericbenwa"
   fitbit_username: "276GNC"
   dropbox_username: "benwa02@gmail.com"
-  photo: eric_benoit.jpeg
+  photo: eric_benoit.jpg
 - first_name: Sarah
   last_name: Kaiser
   title: Designer
@@ -26,6 +26,7 @@
   mbti: ISTP
   linkedin_url: "http://www.linkedin.com/pub/sarah-kaiser/27/bb1/315"
   twitter_username: "DamnTorren"
+  photo: sarah_kaiser.jpg
 - first_name: "Your Career"
   last_name: Awaits!
   title: "We're always looking for amazing talent."
@@ -34,11 +35,11 @@
 - first_name: Jennifer
   last_name: Patel
   title: Designer
-  bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the rochester Institute of Technology."
+  bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
   mbti: ISFJ
   twitter_username: "catamariface"
   github_username: "jen-p"
-  photo: jen_patel.jpeg
+  photo: jennifer_patel.jpg
 - first_name: Ben
   last_name: Salinas
   title: Designer
@@ -49,12 +50,13 @@
   github_username: "bsalinas"
   fitbit_username: "25WCYP"
   dropbox_username: "ben@goinvo.com"
+  photo: ben_salinas.jpg
 - first_name: Roger
   last_name: Zhu
   title: Designer
   bio: "Roger has a unique background of industrial design, user-centered research and design strategy. Experienced in bringing physical and digital products into people's life. Roger's focus is on complex medical and consumer healthcare solutions and data visualization.<br>Prior to Invo: Bosch Power Tool, MIT <br>Education: MID, Industrial Design, RISD"
   mbti: INTJ
-  photo: roger_zhu.jpeg
+  photo: roger_zhu.jpg
   linkedin_url: "http://www.linkedin.com/pub/roger-zhu/16/660/528"
   dropbox_username: "roger@goinvo.com"
 - first_name: Sein
@@ -67,28 +69,32 @@
   github_username: "swoo"
   fitbit_username: "27RVYS"
   dropbox_username: "sein@goinvo.com"
-  photo: sein_woo.jpeg
+  photo: sein_woo.jpg
 - first_name: Adam
   last_name: Pere
   title: Engineer
-  bio: "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College w/ a degree in Computer Science and Visual Arts."
+  bio: "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College with a degree in Computer Science and Visual Arts."
   linkedin_url: "http://www.linkedin.com/in/adampere"
   flickr_username: "adampere"
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
-  photo: adam_pere.jpeg
+  photo: adam_pere.jpg
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
-  bio: "Dirk specializes in strategy and invention. He a founder of Involution Studios LLC and part of the leadership team. Dirk’s writing about society, technology and the future have been published in dozens of publications including Business Week and he has spoken on these topics at conference keynotes in the United States and European Union, as well as a TEDx participant. Dirk graduated with a Master of Arts in Popular Culture from Bowling Green."
+  bio: "Dirk specializes in strategy and invention. He is a founder of Involution Studios LLC and part of the leadership team. Dirk’s writing about society, technology and the future have been published in dozens of publications including Business Week and he has spoken on these topics at conference keynotes in the United States and European Union, as well as a TEDx participant. Dirk graduated with a Master of Arts in Popular Culture from Bowling Green."
+  linkedin_url: "https://www.linkedin.com/in/knemeyer"
   mbti: INFJ
   twitter_username: "dknemeyer"
+  photo: dirk_knemeyer.jpg
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
   bio: "Jonathan is an executive who previously ran his own design studio. He is the director of business development for Involution Studios. Jonathan joined Invo in 2009 and is a graduate of Boston University."
+  linkedin_url: "https://www.linkedin.com/in/jonfollett"
   twitter_username: "jonfollett"
   github_username: "jonfollett"
+  photo: jon_follett.jpg
 - first_name: Eli
   last_name: Rodriguez
   title: Business Admin
@@ -103,4 +109,4 @@
   bio: "Emily is a mentor and leader specializing in x and y. She is the studio manager at Involution Studios Boston. Emily joined Invo in 2013 and is a graduate of Boston University."
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
-  photo: emily_twaddell.jpeg
+  photo: emily_twaddell.jpg
