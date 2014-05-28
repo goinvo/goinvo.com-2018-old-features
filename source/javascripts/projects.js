@@ -15,6 +15,26 @@
         return (practiceArea && _.contains(projectPracticeAreas, practiceArea))
       }
       
+      function calculateAverageValues() {
+        var visibleProjects = $('[data-project]:visible');
+        
+        var totals = _.reduce(visibleProjects, function(totals, element, index) {
+          var $element = $(element)
+            , projectBudget = $element.data().projectBudget
+            , projectDuration = $element.data().projectDuration;
+          
+          totals.budget += projectBudget || 0;
+          totals.duration += projectDuration || 0;
+          
+          return totals;
+        }, {budget: 0, duration: 0});
+        
+        var averageBudget = visibleProjects.length == 0 ? 0 : parseInt((totals.budget / visibleProjects.length))
+          , averageDuration = visibleProjects.length == 0 ? 0 : parseInt((totals.duration / visibleProjects.length))
+        $('[data-average-budget]').text("$" + averageBudget);
+        $('[data-average-duration]').text(averageDuration + " weeks");
+      }
+      
       function filterProjects(event) {
         event.preventDefault(); // derp?
         
@@ -43,14 +63,13 @@
                (budgetMatched && practiceAreaMatched) // matched both
               ) {
               _.defer(function() {
-                this.slideDown('fast');
+                this.slideDown('fast', callback.bind(this, null, "down"));
               }.bind($project));
-              callback(null, "down");
+              
             } else {
               _.defer(function() {
-                this.slideUp('fast');
+                this.slideUp('fast', callback.bind(this, null, "up"));
               }.bind($project));
-              callback(null, "up");
             }
           }.bind(project);
         });
@@ -60,11 +79,15 @@
             $noProjects.show();
           else
             $noProjects.hide();
+          
+          calculateAverageValues();
         });
       }
       
       $practiceAreas.on('change', filterProjects);
       $budget.on('change', filterProjects);
+      
+      calculateAverageValues();
     })
   })
 })(jQuery);
