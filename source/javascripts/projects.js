@@ -35,6 +35,26 @@
         $('[data-average-duration]').text(averageDuration + " weeks");
       }
       
+      function setupMilestones() {
+        var milestoneWrappers = $('[data-milestones] .milestone-wrapper');
+        
+        _.each(milestoneWrappers, function(milestoneWrapper) {
+          var $wrapperEl = $(milestoneWrapper)
+            , milestones = $wrapperEl.find('.milestone');
+          
+          $wrapperEl.css({"position": "relative"});
+          
+          _.each(milestones, function(milestone, index) {
+            var $milestoneEl = $(milestone);
+            $milestoneEl.css({
+                "position": "absolute"
+              , "left": $milestoneEl.data().offset + "%"
+              , "padding-top": (index + 1) * 20 + "px"
+            })
+          });
+        });
+      }
+      
       function filterProjects(event) {
         event.preventDefault(); // derp?
         
@@ -88,6 +108,7 @@
       $budget.on('change', filterProjects);
       
       calculateAverageValues();
+      setupMilestones();
     })
   })
 })(jQuery);
