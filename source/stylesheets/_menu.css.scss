@@ -20,7 +20,7 @@
 	transition: background .3s ease;
 
 
-    #nav-buttons {
+    #nav-buttons, #nav-buttons-mobile {
         display:inline-block;
         vertical-align:middle;
         position:absolute;
@@ -39,6 +39,38 @@
                     border-width:0px;
                     border-bottom-width:1px;
               }
+            }
+        }
+    }
+    
+    #mobile-hamburger {
+        cursor:pointer;
+        position:absolute;
+        top:20px;
+        right:31px;
+        display:none;
+    }
+    
+    #nav-buttons-mobile {
+        display:none;
+        background: rgba(18,18,18,.875);
+        top:55px;
+        left:0;
+        .nav-button {
+            display:block;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-right:10px;
+            padding-left:31px;
+            border-width:0px;
+            border-bottom-width:1px;
+            border-style:solid;
+            border-color: $gray;
+            &:first-child {
+                border-top-width:1px;
+                }
+            a span.underline {
+                border-bottom-width:0px;
             }
         }
     }

@@ -41,6 +41,14 @@ $ ->
  # # Clicking anywhere within an article in the main menu takes you to the article
   $('#main-menu li.article').click ->
     window.location = $(this).find('.title a').attr('href')
+    
+  $('header#main-header #mobile-hamburger').click ->
+    if $('header#main-header #nav-buttons-mobile').is(':visible')
+      $('header#main-header #nav-buttons-mobile').css('display', 'none')
+    else
+      $('header#main-header #nav-buttons-mobile').css('display', 'block')
+   
+
 
 
   # Populate and render GitHub commit sparklines
