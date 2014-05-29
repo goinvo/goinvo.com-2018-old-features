@@ -72,13 +72,11 @@ $center-padding:30px;
      padding-right:$center-padding;
   }
   
-    form {
-        padding-top:5%;   
-    }
+
 
 }
 
-#dbutton, #dbutton2 {
+#dbutton, #dbutton2, #attach_resume-02f6d985-bc3d-40a0-9bff-c8610111844b {
     padding-top:11px;
     padding-bottom:7px;
     width: calc(100% - 219px);
@@ -87,4 +85,8 @@ $center-padding:30px;
 
 #abutton, #abutton2 {
     padding-top:11px;   
+}
+
+#email-02f6d985-bc3d-40a0-9bff-c8610111844b, #email_content2-02f6d985-bc3d-40a0-9bff-c8610111844b, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b, #email_content2-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+    width:100%;   
 }

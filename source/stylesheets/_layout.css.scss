@@ -181,17 +181,19 @@ body {
       }
   }
 
+.form-title {
+        font-size :$section-header-font-size;
+        line-height: 4.8rem;    
+        margin-top:5%;
+    }
 
 form {
     font-size: $body-font-size;
     letter-spacing: $body-letter-spacing;
     line-height: $body-line-height;
-    .form-title {
-        font-size :$section-header-font-size;
-        line-height: 4.8rem;    
-    }
     
-    input[type=text], input[type=email], textarea, button, input[type=submit], #email-50d88d90-87a2-48ed-94a9-a141da52c545 {
+    
+    input[type=text], input[type=email], textarea, button, input[type=submit], #email-50d88d90-87a2-48ed-94a9-a141da52c545, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
         font-size: inherit;
         letter-spacing: inherit;
         line-height: inherit;
@@ -201,9 +203,12 @@ form {
     }
     
     input[type=text], input[type=email]{
-        padding:5%;
-        padding-left:3%;
-        padding-right:3%;
+        padding: 27px 20px;
+       
+    }
+    
+    #email_content2-02f6d985-bc3d-40a0-9bff-c8610111844b,  #email_content2-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+        height:274px;   
     }
     
     textarea  {
@@ -232,7 +237,7 @@ form {
     }
     
     
-    button.attach {
+    button.attachb {
         margin-right:19px;
         background-color: transparentize($gray, .7);
         color: transparentize($gray, .2);
@@ -249,6 +254,11 @@ form {
     background-position: center center;
     background-size: cover;
 }
+
+
+span.hs-form-required {
+        display:none;   
+    }
 
 #contactForm {
     padding-top:100px;
@@ -282,9 +292,6 @@ form {
         }
     }
     
-    span.hs-form-required {
-        display:none;   
-    }
     
     .hs-form fieldset {
         max-width:none;   
@@ -332,7 +339,7 @@ form {
         height: 346px;   
     }
     
-    #firstname-60744b7c-0aa6-40b2-9943-42137a951d16, #lastname-60744b7c-0aa6-40b2-9943-42137a951d16 {
+    #firstname-60744b7c-0aa6-40b2-9943-42137a951d16, #lastname-60744b7c-0aa6-40b2-9943-42137a951d16{
         height:auto;   
         width:100%;
     }
@@ -351,7 +358,10 @@ form {
         width: calc(100% - 168px);
     }
     
-    #send, .hs-button.primary.large {
+    
+}
+
+#send, .hs-button.primary.large {
         padding-right:50px;
         padding-left:50px;
         padding-top:15px;
@@ -359,8 +369,22 @@ form {
         position: absolute;
         right: 20px;
     }
+
+#hsForm_50d88d90-87a2-48ed-94a9-a141da52c545 input.hs-button.primary.large {
+    position:inherit;   
 }
 
+#hsForm_02f6d985-bc3d-40a0-9bff-c8610111844b input.hs-button.primary.large {
+    right:90px;   
+}
+
+#hsForm_dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b input.hs-button.primary.large{
+    right:89px;   
+}
+
+#hsForm_dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+    margin-bottom:100px;   
+}
 
 .expandedcards {
     display:none;   
