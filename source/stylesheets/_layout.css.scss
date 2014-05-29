@@ -19,6 +19,10 @@ $sidebar-letter-spacing:0.03rem;
  **  Main Layout
  ************************************/
 
+header#site-header {
+    padding-top:6px;   
+}
+
 body {
     p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-footer p, #main-footer a, #main-header #nav-buttons .nav-button a {
         font-size: $body-font-size;
