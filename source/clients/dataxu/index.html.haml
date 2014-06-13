@@ -1,0 +1,46 @@
+- content_for(:page_head) do
+  = stylesheet_link_tag "sections/simple-case-studies"
+- client = client_for_name("DataXu")
+    
+.row
+  .medium-3.small-12.column
+    %h1.client{style: "color: #{client.primary_color}"} DataXu
+    
+    %h6.subheader
+      RESULTS
+    
+    %p Real-time decision engine for marketing investments.
+    
+    %p.quote
+      =link_to 'At any given moment, our team is managing hundreds of different campaigns, so how we use our time is critical. With this new console, DataXu has made a huge leap forward for programmatic ease of use.', "http://www.businesswire.com/news/home/20140327005894/en/DataXu-Simplifies-Programmatic-Marketing-Software-Console#.U5tYSJRdWps"
+    %p.caption
+      Joel Nierman, VP, media and digital strategy, Liquidus
+    
+    %h6.subheader DETAILS
+    %ul
+      %li Envision next generation user experience and suite user interface design
+      %li Leapfrog competitors in the advertising analytics space
+      %li Design, engineer, and launch production software
+    
+    %h6.subheader PROJECT TYPE
+    
+    %h5.subheader UI Design, Engineering
+    
+    .similar-project-container
+      %h6.subheader Have a similar project?
+      = link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+    
+  .medium-9.small-12.column
+    %img{alt: "DataXu Campaign Dashboard Advertising Optimization Software", src: "../images/clients/dataxu/dataxu-campaign-dashboard-user-interface.png"}
+    
+    #masthead
+      %p.caption “Programmatic can be a challenge if it’s not simple to navigate, but DataXu makes campaign management seamless and the new user interface just extends its commitment to creating a positive user experience that leads to better campaign results.” - Juli Johnson, associate media director and trading desk head, BSSP
+    / //masthead//
+    .col-a
+      %div
+        %img{alt: "User experience group session with DataXu", src: "../images/clients/dataxu/dataxu-group-design-session.jpg"}/
+      %p.caption Group design session with DataXu team to define user profiles.
+      %div
+        %img{alt: "Exploration of many concepts for various parts of the software", src: "../images/clients/dataxu/dataxu-ux-concept-sketches.jpg"}/
+      %p.caption Sketches allowed us to explore the possibilities and push the boundaries of the user experience.
+    / //col-a//

@@ -1,0 +1,48 @@
+- content_for(:page_head) do
+  = stylesheet_link_tag "sections/simple-case-studies"
+- client = client_for_name("Numera")
+    
+.row
+  .medium-3.small-12.column
+    %h1.client{style: "color: #{client.primary_color}"} Numera
+    
+    %h6.subheader
+      RESULTS
+    
+    %p For customers like Numera we create a complex app ecosystem across platforms, devices and contexts of use.
+    
+    %p.quote
+      We knew to make Measured Health great we needed the best designers money could by. We knew we needed Involution.
+    %p.caption
+      Mark Oswald, Numera, CTO
+    
+    %h6.subheader DETAILS
+    %ul
+      %li System design that incorporates various digital hardware and interfaces
+      %li Creation of the dozens of necessary screens for the software
+      %li Prototyped with code written to be leveraged by the Numera engineers
+      %li 18 weeks of our project lead working closely with their team
+    
+    %h6.subheader PROJECT TYPE
+    
+    %p UX Strategy, Design & Engineering
+    
+    .similar-project-container
+      %h6.subheader Have a similar project?
+      = link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+    
+  .medium-9.small-12.column
+    %img{alt: "App ecosystem across devices", src: "../images/clients/numera/numera_plan_joined.jpg"}
+    %p.caption Taking Numera from a big idea to a well-integrated app ecosystem leveraged many of Involution's expert software skills.
+
+    %div
+      %img{alt: "Mobile UX application for iOS", src: "../images/clients/numera/numera-iphone-app-design.jpg"}/
+    %p.caption Complete activities and track them in the moment to leapfrog your competition.
+
+    %div
+      %img{alt: "Track health goals to monitor your success", src: "../images/clients/numera/numera-goals-facebook-design.jpg"}/
+    %p.caption Track health goals with your daily plan to monitor your success.
+
+    %div
+      %img{alt: "Whiteboard sketching with founders and engineers", src: "../images/clients/numera/numera-whiteboard-ui-sketch.jpg"}/
+    %p.caption Working with Numera team of founders and engineers we started mapping the screens and user flow.
