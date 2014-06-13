@@ -5,7 +5,7 @@
   duration: 60 #Verify
   repeat_client: true
   story_template: true
-  show_in_layout: true
+  show_in_layout: true #Will this delete the html page or just hide its visibility.
   logo: 3m.jpg
   phases: #Verify
     - duration: 8
@@ -49,7 +49,7 @@
   duration: 14 #Verify
   repeat_client: false #Verify
   story_template: false
-  show_in_layout: true
+  show_in_layout: false
   logo: alcatellucent.jpg
   phases: #Verify
     - duration: 14
@@ -65,7 +65,7 @@
   logo: applause.jpg
 - client: "DataXu"
   practice_area_names: "Enterprise, Marketing Optimization"
-  description: ""
+  description: "Real-time decision engine for marketing investments."
   budget: 200000 #Verify
   duration: 14 #Verify
   repeat_client: true
@@ -91,7 +91,7 @@
   duration: 14 #Verify
   repeat_client: false #Verify
   story_template: false
-  show_in_layout: true
+  show_in_layout: false
   logo: empirix.jpg
   phases: #Verify
     - duration: 14
@@ -115,7 +115,7 @@
   logo: hgraph.jpg
 - client: "McAfee"
   practice_area_names: "Consumer"
-  description: ""
+  description: "Best-selling consumer and enterprise computer security in the world."
   budget: 500000 #Verify
   duration: 14 #Verify
   repeat_client: true #Verify
@@ -126,14 +126,6 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
-- client: "Measured Health"
-  practice_area_names: "Health"
-  description: "For customers like Measured Health we create a complex app ecosystem across platforms, devices and contexts of use."
-  budget: 100000 #Verify
-  repeat_client: true
-  story_template: false
-  show_in_layout: true
-  logo: measuredhealth.jpg
 - client: "Microsoft"
   practice_area_names: "Consumer"
   description: ""
@@ -147,6 +139,14 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+- client: "Numera"
+  practice_area_names: "Health"
+  description: "Behavioural data with rich visualizations and lifestyle recommendations."
+  budget: 100000 #Verify
+  repeat_client: true
+  story_template: false
+  show_in_layout: true
+  logo: numera.jpg
 - client: "Oracle"
   practice_area_names: "Enterprise"
   description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
@@ -165,7 +165,7 @@
   logo: personalgenomeproject.jpg
 - client: "RueLaLa"
   practice_area_names: "Enterprise"
-  description: ""
+  description: "Members-only upscale, online fashion boutique."
   budget: 200000 #Verify
   repeat_client: true #Verify
   story_template: false
