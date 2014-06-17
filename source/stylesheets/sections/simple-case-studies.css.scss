@@ -1,18 +1,95 @@
-img {
-  padding: 30px 0;
+$body-font-size:20px;
+$body-line-height:23px;
+$body-letter-spacing:0.03em;
+
+$sidebar-font-size:19px;
+$sidebar-line-height:21px;
+$sidebar-letter-spacing:0.03rem;
+
+
+div.container.content {
+    margin-top:100px;
+    margin-bottom:40px;
+    
+    h6.subheader {
+        //text-transform:uppercase;  
+        line-height:$sidebar-line-height;
+        margin-top:40px;
+        
+        &.name {
+            margin-top:0px;
+        }   
+    }
+    
+    img {
+      padding: 20px 0;
+      width: 100%;
+      height:auto;
+      margin-top:20px;
+    }
+    
+    p {
+      &.quote {
+        font-size: $body-font-size;
+        line-height:$body-line-height;
+        letter-spacing: $body-letter-spacing;
+        padding-left: 50px;
+        margin-left: -50px;
+        margin-bottom:5px;
+        padding-top:13px;
+        background-image: url(/images/sections/case-studies/quote.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 42px;
+      }
+        
+    &.caption {
+        font-size: $sidebar-font-size;
+        line-height:$sidebar-line-height;
+        letter-spacing: $sidebar-letter-spacing;
+    }
+    }
+    
+    div.medium-9.small-12.column p.caption {
+        max-width: 45%;   
+    }
+
+    .similar-project-container {
+      border-top: 1px solid #ddd;
+    }
+    
+    ul {
+        font-size: $sidebar-font-size;
+        line-height:$sidebar-line-height;
+        letter-spacing: $sidebar-letter-spacing;
+        
+        li {
+            margin-top:10px;
+        }   
+    }
 }
 
-p {
-  &.quote {
-    padding-left: 50px;
-    margin-left: -50px;
-    background-image: url(/images/sections/case-studies/quote.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 42px;
-  }
-}
+div.similar-project-container {
 
-.similar-project-container {
-  border-top: 1px solid #ddd;
+    a.button.radius {
+        font-size: $body-font-size;
+        line-height:$body-line-height;
+        letter-spacing: $body-letter-spacing;
+        padding:10px 20px;
+        padding-top:12px;
+        background-color:rgb(235, 235, 235);
+        color: #aaa;
+        
+        &:hover{
+            //color:rgb(247, 247, 247);
+            background-color: #dbdddc;
+        }
+    }
+    
+    h6.subheader {
+        font-size: $sidebar-font-size;
+        line-height:$sidebar-line-height;
+        letter-spacing: $sidebar-letter-spacing;
+    }
+
 }

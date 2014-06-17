@@ -78,7 +78,16 @@ body {
   background-color: $black;
   color: $footer-color;
   padding:40px;
-  padding-top:0px;
+  padding-top:20px;
+  padding-bottom:10px;
+    
+    .hs-button.primary.large {
+        padding-right:20px;
+        padding-left:20px;
+        padding-top:7px;
+        padding-bottom:7px;
+        margin-left: 5px;
+    }
     
   .row.footerlogo, .row.footerContent .large-hide { 
     padding-top:20px;
@@ -97,16 +106,50 @@ body {
   .row.footerContent .large-hide {
     margin-bottom:5px;   
   }
+
+    .hs_email.field.hs-form-field.smart-field 
+    {
+        width: calc(100% - 140px);   
+        display:inline-block;
+    }
     
-  #news-letter-input, #email-50d88d90-87a2-48ed-94a9-a141da52c545 {
-    width: calc(100% - 140px);   
+    div.hs_submit {
+        width:auto;
+        display:inline-block;
+    }
+    
+  #news-letter-input, #email-50d88d90-87a2-48ed-94a9-a141da52c545{
+      
+     width:100%;
     display:inline-block;
     padding-top:22px;
     padding-bottom:20px;
+    margin-bottom:10px;
   }
-  
+    
+    p.news-letter {
+        margin-bottom:2px;
+    }
+
+    div.hs_email.field.hs-form-field.smart-field {
+        
+        label {
+            display:none;   
+        }
+        
+    }
+
+  p.address {
+        margin-top:0px;
+        //margin-top:10px;
+        //display:inline-block;  
+  }
+    
   #phoneNum {
+    margin-top:10px;
     margin-bottom:0px;  
+    //display:inline-block;
+    //margin-left:40px;
   }
     
   .addrcol, .linkscol {
@@ -117,12 +160,31 @@ body {
      
   }
     
+    p.mobile-hide.about-us {
+        margin-bottom:0px;
+    }   
+    
+    .social-links-contain {
+        display:inline-block; 
+        margin-right:20px;
+    }
+    
     #footer-social-links {
         margin-left:0px;
         padding-top:10px;
+        margin-bottom:10px;
+        display:inline-block;
+        
+        &.two {
+            display:block;   
+        }
         li {
             display:inline-block;
             padding-right:15px;
+            
+            img {
+                padding:0px;   
+            }
         }
         
         li a:hover img{
