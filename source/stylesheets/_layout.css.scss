@@ -461,3 +461,20 @@ span.hs-form-required {
 .large-hide {
     display:none;   
 }
+
+div.hsformerror {
+    background-image:none;
+    background-color: #FFF;
+    border-width:0px;
+    
+    p, div.close-form-error {
+        color: #0d0d0d!important;
+        font-size: $body-font-size;
+        letter-spacing: $body-letter-spacing;
+        line-height: $body-line-height;
+        font-family: $base-font-regular;   
+    }
+    em {
+        display:none;   
+    }
+}
