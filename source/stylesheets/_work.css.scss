@@ -19,24 +19,44 @@
     }
   }
   
+    
+    label {
+      font-size: 19px;
+      line-height: 21px;
+      letter-spacing: 0.03rem;
+      cursor:text;
+    }
+    
   .phase {
     position: absolute;
     bottom: 0;
     width: 100%;
     
     .service-areas, .staffing {
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing:0.03rem;
     }
   }
   
   .project > h3 {
-    font-size: 24px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
     margin: 0;
+    margin-top:5px;
   }
+    
+    a.button {
+      font-size: 19px;
+      line-height: 21px;
+      letter-spacing: 0.03rem;
+    }
   
   .practice-areas {
-    font-size: 14px;
+      color: #6f6f6f;
+      font-size: 19px;
+      line-height: 21px;
+      letter-spacing: 0.03rem;
     
     a {
       color: #ccc;

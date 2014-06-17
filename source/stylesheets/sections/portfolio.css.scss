@@ -4,7 +4,7 @@
 .filters {
   .filter, .stat {
     font-size: 30px;
-    color: #999;
+    color: #6f6f6f;
     label {
       display: block;
       font-size: 14px;
@@ -35,12 +35,14 @@
     }
     .practice-areas {
       text-transform: uppercase;
-      color: #999;
-      font-size: 14px;
+      color: #6f6f6f;
+      font-size: 19px;
+      line-height: 21px;
+      letter-spacing: 0.03rem;
       a {
         display: inline-block;
         margin: 4px;
-        color: #999;
+        color: #6f6f6f;
         padding: 2px 4px;
         text-decoration: none;
         @include transition(all 0.5s ease-in-out);
