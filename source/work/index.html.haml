@@ -29,7 +29,7 @@
       %h3 No projects match your filters :-(
   
   - data.projects.each do |project|
-    - next if project.phases.blank?
+    - next if project.hide_in_layout or project.phases.blank?
     .row{data: {project: true, project_budget: project.budget, project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
       .medium-3.small-12.columns.project
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
