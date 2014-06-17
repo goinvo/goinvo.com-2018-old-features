@@ -75,10 +75,9 @@
   title: Engineer
   bio: "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College with a degree in Computer Science and Visual Arts."
   linkedin_url: "http://www.linkedin.com/in/adampere"
-  flickr_username: "adampere"
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
-  photo: adam_pere.jpg
+  photo: "adam_pere.jpg"
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
