@@ -4,25 +4,26 @@
 #projects
   .row
     .medium-2.small-12.columns
+      %label{for: "practice_area"} Practice Area
       %select{name: "practice_area"}
         %option{value: ""} All
         - data.practice_areas.each do |practice_area|
           %option{value: practice_area}= practice_area
-      %label{for: "practice_area"} Practice Area
         
     .medium-2.small-12.columns
+      %label{for: 'budget'} Budget
       %select{name: "budget"}
         - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
           %option{value: text_and_value[1]}= text_and_value[0]
-      %label{for: 'budget'} Budget
       
     .medium-3.small-6.columns
-      .value{data: {average_budget: true}}
       %label Avg First Project Budget
+      .value $96,000
+      
         
     .medium-3.small-6.columns
-      .value{data: {average_duration: true}}
       %label Avg First Project Duration
+      .value 12 Weeks
           
   .row.no-projects-match
     .medium-12.column
