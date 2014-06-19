@@ -69,6 +69,57 @@ $( document ).ready(function() {
     else {
         next.html("");   
     }
+    
+    
+    Mousetrap.bind('left', function () {
+        var l = getIndex();
+        if(l >= 0 && l <= 5){
+            l = l -1;   
+        }
+        if(l >= 0 && l <= 5){
+            var url = "http://code.goinvo.com/goinvo-temp/clients/" + projects[l].title.toLowerCase();
+            window.location.href = url;
+        }
+    });
+
+    Mousetrap.bind('right', function () {
+        var l = getIndex();
+        if(l >= 0 && l <= 5){
+            l = l +1;   
+        }
+        if(l >= 0 && l <= 5){
+            var url = "http://code.goinvo.com/goinvo-temp/clients/" + projects[l].title.toLowerCase();
+            window.location.href = url;
+        }
+    });
   
     
 });
+
+function getIndex() {
+    var index2 = 0;
+    var current = document.URL;
+    if(current.indexOf("3m") >= 0) {
+        index2 = 0;
+    }
+    else if(current.indexOf("affinnova") >= 0) {
+       index2 = 1;
+    }
+    else if(current.indexOf("dataxu") >= 0) {
+        index2 = 2;
+    }
+    else if(current.indexOf("mcafee") >= 0) {
+        index2 = 3;
+    }
+    else if(current.indexOf("numera") >= 0) {
+        index2 = 4;
+    }
+    else if(current.indexOf("ruelala") >= 0) {
+        index2 = 5;
+    }
+    else {
+        index2 = -1; 
+    }
+    
+    return index2;
+}
