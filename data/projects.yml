@@ -144,7 +144,7 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 - client: "Numera"
-  main_image: "numera-iphone-app-design.jpg"
+  main_image: "numera-iphone.jpg"
   practice_area_names: "Health"
   description: "Behavioural data with rich visualizations and lifestyle recommendations."
   budget: 100000 #Verify

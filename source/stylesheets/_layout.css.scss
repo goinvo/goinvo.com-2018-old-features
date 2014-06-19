@@ -26,8 +26,8 @@ header#site-header {
 div.homepage-header {
     cursor:pointer;
     width:100%;
-    height:500px;
-    background:linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(/images/soccer_dataviz.png);
+    height:600px;
+    background:linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(/goinvo-temp/images/soccer_dataviz.png);
     background-size:cover;
     padding-top:210px;
 
@@ -58,9 +58,9 @@ div.homepage-header {
         
         h4 {
             margin-top:10px;
-            font-size: 1.8rem;
+            font-size: $body-font-size;
             font-family: "Jenson Pro Light";
-            line-height: 1.8rem;
+            line-height: $body-line-height;
         }
     }
 
@@ -68,10 +68,10 @@ div.homepage-header {
 
 div.feature-article-section {
     width:100%;
-    height:250px;
+    min-height:150px;
     background-size:cover;
     padding-top:20px;
-    background-color:#f7f7f7;
+    background:linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%);
     
     .title {
         width:100%;
@@ -79,7 +79,7 @@ div.feature-article-section {
         h3, h2 {
             text-align:left;
             margin:0 auto;  
-            color: #0d0d0d;
+            color: #f7f7f7;
             letter-spacing: 0.03em;
         }
         
@@ -97,9 +97,15 @@ div.feature-article-section {
         }
         
         .feature-image {
-            display:block;
+            display:inline-block;
             cursor:pointer;
-            margin-top:20px;
+            margin-top:5px;
+            height:75px;
+            width:500px;
+            
+            &.second {
+                margin-left:50px;
+            }   
         }
     }
 
@@ -172,8 +178,7 @@ body {
 #main-footer {
   background-color: $black;
   color: $footer-color;
-  padding:40px;
-  padding-top:20px;
+  padding:10px;
   padding-bottom:10px;
     
     .hs-button.primary.large {
@@ -240,11 +245,12 @@ body {
         //display:inline-block;  
   }
     
-    .addrcol p.invo-name {
-        text-transform:uppercase;
-        margin-bottom:7px;   
-        color: rgba(247, 247, 247, 0.7);
+ .addrcol{
+    p.address, #phoneNum, p.mail {
+        display:inline-block;   
+         margin-right:10px;
     }
+ }
     
   #phoneNum {
     margin-top:0px;
@@ -271,19 +277,24 @@ body {
         margin-right:20px;
     }
     
+    .medium-1.columns.sidebar.social-links {
+        min-width:80px;   
+    }
+    
     #footer-social-links {
-        margin-top:5px;
+        margin-top:0px;
         margin-left:0px;
-        padding-top:10px;
-        margin-bottom:10px;
+        padding-top:0px;
+        margin-bottom:0px;
         display:inline-block;
-        
+        min-width:62px;
+        margin-right:5px;
         &.two {
             display:block;   
         }
         li {
             display:inline-block;
-            padding-right:15px;
+            padding-right:2px;
             
             img {
                 padding:0px;   
