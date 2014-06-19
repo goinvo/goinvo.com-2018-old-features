@@ -1,5 +1,6 @@
 - content_for(:page_head) do
   = stylesheet_link_tag "sections/simple-case-studies"
+  = javascript_include_tag 'worknav'
 - client = client_for_name("Numera")
     
 .row
@@ -49,5 +50,5 @@
 .row#next-project
   .medium-6.small-12.small-centered.columns
     .next-title
-      Next Project
+      Next Project: 
       %span#next

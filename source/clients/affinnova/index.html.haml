@@ -1,5 +1,6 @@
 - content_for(:page_head) do
   = stylesheet_link_tag "sections/simple-case-studies"
+  = javascript_include_tag 'worknav'
 - client = client_for_name("Affinnova")
     
 .row
@@ -55,8 +56,8 @@
       %div
         %img{alt: "Rules Engine UI Design", height: "207", src: "http://www.goinvo.com/images/conceptstudio-rules-ui-design.jpg", width: "460"}/
       %p.caption The finished Concept Studio hit every basic design requirement we insist on: useful, usable and appropriately beautiful.
-.row#next-project
+#next-project.row
   .medium-6.small-12.small-centered.columns
     .next-title
-      Next Project
+      Next Project: 
       %span#next

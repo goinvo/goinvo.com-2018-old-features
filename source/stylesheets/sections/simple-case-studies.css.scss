@@ -7,9 +7,13 @@ $sidebar-line-height:21px;
 $sidebar-letter-spacing:0.03rem;
 
 
+
+
 div.container.content {
     margin-top:100px;
-    margin-bottom:40px;
+    margin-bottom:0px;
+    
+    
     
     h6.subheader {
         //text-transform:uppercase;  
@@ -51,7 +55,7 @@ div.container.content {
     }
     
     div.medium-9.small-12.column p.caption {
-        max-width: 45%;   
+        max-width: 75%;   
     }
 
     .similar-project-container {
@@ -92,4 +96,25 @@ div.similar-project-container {
         letter-spacing: $sidebar-letter-spacing;
     }
 
+}
+
+.row#next-project {
+    max-width:100%;
+    height:200px;
+    margin-top:20px;
+    cursor:pointer;
+    background-size:cover;
+    
+    div.next-title {
+        margin-top: 80px;
+        color:#f7f7f7;
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 800;
+        
+        span {
+            font-size: 4rem;
+        line-height: 4rem;
+        }
+    }
 }
