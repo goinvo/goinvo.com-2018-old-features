@@ -78,14 +78,6 @@
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
   photo: "adam_pere.jpg"
-- first_name: Dirk
-  last_name: Knemeyer
-  title: Founder
-  bio: "Dirk specializes in strategy and invention. He is a founder of Involution Studios LLC and part of the leadership team. Dirk’s writing about society, technology and the future have been published in dozens of publications including Business Week and he has spoken on these topics at conference keynotes in the United States and European Union, as well as a TEDx participant. Dirk graduated with a Master of Arts in Popular Culture from Bowling Green."
-  linkedin_url: "https://www.linkedin.com/in/knemeyer"
-  mbti: INFJ
-  twitter_username: "dknemeyer"
-  photo: dirk_knemeyer.jpg
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
@@ -110,3 +102,11 @@
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
   photo: emily_twaddell.jpg
+- first_name: Dirk
+  last_name: Knemeyer
+  title: Founder
+  bio: "Dirk specializes in strategy and invention. He is a founder of Involution Studios LLC and part of the leadership team. Dirk’s writing about society, technology and the future have been published in dozens of publications including Business Week and he has spoken on these topics at conference keynotes in the United States and European Union, as well as a TEDx participant. Dirk graduated with a Master of Arts in Popular Culture from Bowling Green."
+  linkedin_url: "https://www.linkedin.com/in/knemeyer"
+  mbti: INFJ
+  twitter_username: "dknemeyer"
+  photo: dirk_knemeyer.jpg

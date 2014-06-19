@@ -23,7 +23,91 @@ header#site-header {
     padding-top:6px;   
 }
 
+div.homepage-header {
+    cursor:pointer;
+    width:100%;
+    height:500px;
+    background:linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(/images/soccer_dataviz.png);
+    background-size:cover;
+    padding-top:210px;
+
+    
+    .title {
+        width:100%;
+        
+        h3, h2, h4 {
+            text-align:left;
+            margin:0 auto;  
+            color: #f7f7f7;
+            letter-spacing: 0.03em;
+        }
+        
+        h2 {
+            font-family: "Jenson Pro Bold";
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+            font-weight: 800;   
+        }
+        
+        h3 {
+            margin-top:-2px;
+            font-size: 3rem;
+            line-height: 3rem;
+            font-weight: 800; 
+        }
+        
+        h4 {
+            margin-top:10px;
+            font-size: 1.8rem;
+            font-family: "Jenson Pro Light";
+            line-height: 1.8rem;
+        }
+    }
+
+}
+
+div.feature-article-section {
+    width:100%;
+    height:250px;
+    background-size:cover;
+    padding-top:20px;
+    background-color:#f7f7f7;
+    
+    .title {
+        width:100%;
+        
+        h3, h2 {
+            text-align:left;
+            margin:0 auto;  
+            color: #0d0d0d;
+            letter-spacing: 0.03em;
+        }
+        
+        h2 {
+            font-family: "Jenson Pro Bold";
+            font-size: 3rem;
+            line-height: 3rem;
+            font-weight: 800;    
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            font-family: "Jenson Pro Light";
+            line-height: 1.8rem;   
+        }
+        
+        .feature-image {
+            display:block;
+            cursor:pointer;
+            margin-top:20px;
+        }
+    }
+
+}
+
+
 body {
+    
     p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-footer p, #main-footer a, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {
         font-size: $body-font-size;
         letter-spacing: $body-letter-spacing;
@@ -145,12 +229,19 @@ body {
         //display:inline-block;  
   }
     
+    .addrcol p.invo-name {
+        text-transform:uppercase;
+        margin-bottom:7px;   
+        color: rgba(247, 247, 247, 0.7);
+    }
+    
   #phoneNum {
-    margin-top:10px;
+    margin-top:0px;
     margin-bottom:7px;  
     //display:inline-block;
     //margin-left:40px;
   }
+    
     
   .addrcol, .linkscol {
       
@@ -222,6 +313,7 @@ body {
           }
           
           iframe {
+            border-radius: $border-radius;
             width:100%;
             height:165px;
           }
