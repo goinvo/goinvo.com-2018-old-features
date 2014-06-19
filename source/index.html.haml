@@ -1,3 +1,5 @@
+- content_for(:page_head) do
+  = stylesheet_link_tag "sections/homepage"
 .homepage-header
   .row
     <a href = "http://goinvo.hs-sites.com/articles/world-cup-visualized?hs_preview=daq3yw5R-1052876637">
@@ -6,15 +8,16 @@
         %h2
           World Cup Visualized
         %h3
-          A brief history of team rankings
+          A history of team rankings
         %h4 
-          Written by Dirk Knemeyer, Data Visualiztation by Adam Pere 
+          by Dirk Knemeyer, Data Viz by Adam Pere 
     </a>
+<a href = "http://code.goinvo.com/goinvo-temp/work">    
 .feature-article-section
   .title
     .row
       .medium-12.small-12.columns
         %h2
-          Crafting exceptional software for progressive companies.
-          <a href = "/clients/3m"><img src = "/goinvo-temp/images/3m_main.jpg" class = "feature-image"></a> <a href = "/clients/numera"><img src = "/goinvo-temp/images/numera-iphone.jpg" class = "feature-image second"></a>
+          <div id = "view-work">View Our Work</div>Crafting exceptional software for progressive companies. 
+</a>
       

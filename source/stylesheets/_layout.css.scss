@@ -30,6 +30,10 @@ header#site-header {
     padding-top:6px;   
 }
 
+
+
+
+
 div.homepage-header {
     cursor:pointer;
     width:100%;
@@ -78,7 +82,27 @@ div.feature-article-section {
     min-height:150px;
     background-size:cover;
     padding-top:20px;
-    background:#535353;
+    background-color: #0d0d0d;
+    position:relative;
+    
+    #view-work {
+        float:right;
+        display:inline-block;
+        border-radius: 3px;
+        margin-left:10px;
+        magin-right:20px;
+        font-size: 19px;
+        line-height: 21px;
+        letter-spacing: 0.03rem;
+        
+        padding:20px 50px;
+        background-color:#f7f7f7;
+        color: #0d0d0d;
+
+        &:hover {
+            background-color: rgba(247, 247, 247, 0.6);
+        }
+    }
     
     .title {
         width:100%;
@@ -95,6 +119,7 @@ div.feature-article-section {
             font-size: 3rem;
             line-height: 3rem;
             font-weight: 800;    
+            margin-bottom:10px;
         }
         
         h3 {
