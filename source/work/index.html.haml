@@ -35,9 +35,9 @@
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
           - practice_areas(project).each do |area|
-            = link_to area, "/projects/#{area}"
+            = link_to area, "/goinvo-temp/projects/#{area}"
         %p.description= project.description
-        %p.show-for-medium-up= link_to 'Read Story', "/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p.show-for-medium-up= link_to 'Read Story', "/goinvo-temp/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
           
       -# ~5" and down
       .small-12.columns.phase-container.show-for-small-only.small-circles
@@ -53,24 +53,25 @@
           %p NUMBER OF ENGAGEMENTS
       
       .medium-3.small-12.columns.end.show-for-small-only
-        %p= link_to 'Read Story', "/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p= link_to 'Read Story', "/goinvo-temp/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
       .medium-9.small-12.columns
         .show-for-medium-up
           .row
-            - project.phases.each do |phase|
-              -# tablets and larger
-              .phase-container{style: "width:#{(phase.duration.to_f / project.duration.to_f) * 100}%"}
-                .phase
-                  .service-areas= phase.service_names
-                  .staffing
-                    = phase.duration
-                    w, #{phase.full_time_staff} FTE
-                  .bar{style: "height:#{(phase.full_time_staff * 15).to_i}px; background:#{client_for_name(project.client).primary_color}"}
-            - if project.milestones.present?
-              .clearfix
-              .row{data: {milestones: true}}
-                .medium-12.milestone-wrapper
-                  - project.milestones.each do |milestone|
-                    .milestone{"data-offset" => (milestone.during_week.to_f / project.duration.to_f) * 100, "data-project-id" => project.id}
-                      %img{src: "http://placehold.it/40x40"}
-                      .description= milestone.description
+            .image-container{id:"client#{project.client}", style: "background-image:url(images/clients/#{project.client.downcase}/#{project.main_image});"}
+-#            - project.phases.each do |phase|
+-#              -# tablets and larger
+-#              .phase-container{style: "width:#{(phase.duration.to_f / project.duration.to_f) * 100}%"}
+-#                .phase
+-#                  .service-areas= phase.service_names
+-#                  .staffing
+-#                    = phase.duration
+-#                    w, #{phase.full_time_staff} FTE
+-#                  .bar{style: "height:#{(phase.full_time_staff * 15).to_i}px; background:#{client_for_name(project.client).primary_color}"}
+-#            - if project.milestones.present?
+-#              .clearfix
+-#              .row{data: {milestones: true}}
+-#                .medium-12.milestone-wrapper
+-#                  - project.milestones.each do |milestone|
+-#                    .milestone{"data-offset" => (milestone.during_week.to_f / project.duration.to_f) * 100, "data-project-id" => project.id}
+-#                      %img{src: "http://placehold.it/40x40"}
+-#                      .description= milestone.description

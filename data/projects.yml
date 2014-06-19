@@ -1,4 +1,5 @@
 - client: "3M"
+  main_image: "3m_main.jpg"
   practice_area_names: "Enterprise, Health"
   description: "How our skunkworks for an ambitious start-up led to a $100MM exit."
   budget: 500000 #Verify
@@ -30,6 +31,7 @@
     - description: "v01 launched, 50% efficiency gains."
       during_week: 48
 - client: "Affinnova"
+  main_image: "Concept_Studio_Design_v38.png"
   practice_area_names: "Enterprise, Marketing Optimization"
   description: "Product marketing workflow & testing system."
   budget: 200000 #Verify
@@ -64,6 +66,7 @@
   hide_in_layout: true
   logo: applause.jpg
 - client: "DataXu"
+  main_image: "dataxu-campaign-dashboard-user-interface.png"
   practice_area_names: "Enterprise, Marketing Optimization"
   description: "Real-time decision engine for marketing investments."
   budget: 200000 #Verify
@@ -114,6 +117,7 @@
   hide_in_layout: true
   logo: hgraph.jpg
 - client: "McAfee"
+  main_image: "mcafee-total-protection-desktop-app-design.jpg"
   practice_area_names: "Consumer"
   description: "Best-selling consumer and enterprise computer security in the world."
   budget: 500000 #Verify
@@ -140,6 +144,7 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 - client: "Numera"
+  main_image: "numera-iphone-app-design.jpg"
   practice_area_names: "Health"
   description: "Behavioural data with rich visualizations and lifestyle recommendations."
   budget: 100000 #Verify
@@ -169,6 +174,7 @@
   hide_in_layout: true
   logo: personalgenomeproject.jpg
 - client: "RueLaLa"
+  main_image: "ruelala_calendar_4d.jpg"
   practice_area_names: "Enterprise"
   description: "Members-only upscale, online fashion boutique."
   budget: 200000 #Verify

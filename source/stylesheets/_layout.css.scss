@@ -106,6 +106,17 @@ div.feature-article-section {
 }
 
 
+.image-container {
+    height:200px;   
+    margin-top:9px;
+    border-radius: 3px;
+}
+
+.image-container#client3M, .image-container#clientMcAfee, .image-container#clientNumera {
+    margin-top:35px;   
+}
+
+
 body {
     
     p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-footer p, #main-footer a, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {

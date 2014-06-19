@@ -1,4 +1,4 @@
-(function($) {
+(function($) {    
   $(function(){
     var $noProjects = $('.no-projects-match');
     $noProjects.hide();
