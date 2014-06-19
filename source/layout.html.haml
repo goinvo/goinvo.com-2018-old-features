@@ -35,7 +35,7 @@
                 %span.nav-button
                   = link_to '<span class = "underline">Ca</span>reers', asset_url('careers')
                 %span.nav-button
-                  = link_to '<span class = "underline">A</span>rticles', asset_url('#')
+                  = link_to '<span class = "underline">A</span>rticles', asset_url('http://goinvo.hs-sites.com/articles')
                 %span.nav-button
                   = link_to '<span class = "underline">C</span>ontact', asset_url('contact')
           #mobile-hamburger
@@ -59,7 +59,7 @@
         = yield
     %footer#main-footer
       .row.footerContent
-        .medium-7.columns.logocol.sidebar
+        .medium-8.columns.logocol.sidebar
           %p.mobile-hide.about-us
             %em
               We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
@@ -70,12 +70,5 @@
             = mail_to "info@goinvo.com"
           %p.address
             %a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} Map 
-        .medium-1.columns.sidebar.social-links
-          %ul#footer-social-links.mobile-hide
-            %li.linkedin= link_to(image_tag('linkedin_foot.svg'), "https://www.linkedin.com/company/involution-studios", :target => "_blank" )
-            %li.twitter= link_to(image_tag('twitter_foot.svg'), "https://twitter.com/goinvo", :target => "_blank" )
-            %br
-            %li.github= link_to(image_tag('github_foot.svg'), "https://github.com/goinvo", :target => "_blank" )
-            %li.vimeo= link_to(image_tag('facebook_foot.svg'), "https://www.facebook.com/goinvo", :target => "_blank" )
     = yield_content :worlds_end
     <script type="text/javascript"> (function(d,s,i,r) {if (d.getElementById(i)){return;} var n=d.createElement(s),e=d.getElementsByTagName(s)[0]; n.id=i;n.src='http://js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/356419.js'; e.parentNode.insertBefore(n, e); })(document,"script","hs-analytics",300000); </script>

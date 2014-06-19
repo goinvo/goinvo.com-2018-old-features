@@ -57,7 +57,7 @@ $( document ).ready(function() {
     
     if(index > 0) {
         console.log(index);
-        imgURL = "/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;
+        imgURL = "/goinvo-temp/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;
         
         next.css("background", "linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(" + imgURL + ")");
         next.css("background-size", "cover");

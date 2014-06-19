@@ -240,12 +240,13 @@ body {
 
   .addrcol p.address {
         margin-top:0px;
-        margin-bottom:7px;
+        margin-bottom:0px;
         //margin-top:10px;
         //display:inline-block;  
   }
     
  .addrcol{
+     text-align:right;
     p.address, #phoneNum, p.mail {
         display:inline-block;   
          margin-right:10px;
@@ -254,7 +255,7 @@ body {
     
   #phoneNum {
     margin-top:0px;
-    margin-bottom:7px;  
+    margin-bottom:0px;  
     //display:inline-block;
     //margin-left:40px;
   }
@@ -263,7 +264,7 @@ body {
   .addrcol, .linkscol {
       
     p {
-        margin-bottom:1.2rem;  
+        margin-bottom:0px;  
     } 
      
   }
