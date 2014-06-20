@@ -1,6 +1,12 @@
 @import "base/colors";
 @import "base/type";
 
+
+div#page-wrapper {
+    padding-bottom:45px;   
+}
+
+
 article#complex-case {
     header.hero {
         background-image: url('../../images/sections/case-studies/3m/head.JPG');
@@ -233,7 +239,7 @@ article#complex-case {
 .row#next-project {
     max-width:100%;
     height:200px;
-    margin-top:20px;
+    margin-top:0px;
     cursor:pointer;
     background-size:cover;
     

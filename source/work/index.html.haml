@@ -4,26 +4,17 @@
 #projects
   .row
     .medium-2.small-12.columns
-      %label{for: "practice_area"} Practice Area
       %select{name: "practice_area"}
-        %option{value: ""} All
+        %option{value: ""} All Practice Areas
         - data.practice_areas.each do |practice_area|
           %option{value: practice_area}= practice_area
         
     .medium-2.small-12.columns
-      %label{for: 'budget'} Budget
       %select{name: "budget"}
-        - [["All",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
+        - [["All Budgets",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
           %option{value: text_and_value[1]}= text_and_value[0]
+    .medium-6.small-12.columns
       
-    .medium-3.small-6.columns
-      %label Avg First Project Budget
-      .value $96,000
-      
-        
-    .medium-3.small-6.columns
-      %label Avg First Project Duration
-      .value 12 Weeks
           
   .row.no-projects-match
     .medium-12.column
@@ -36,9 +27,9 @@
         %h3{style: "color:#{client_for_name(project.client).primary_color};"}= project.client
         %p.practice-areas
           - practice_areas(project).each do |area|
-            = link_to area, "/goinvo-temp/projects/#{area}"
+            = link_to area, "/v01/projects/#{area}"
         %p.description= project.description
-        %p.show-for-medium-up= link_to 'Read Story', "/goinvo-temp/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p.show-for-medium-up= link_to 'Read Story', "/v01/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
           
       -# ~5" and down
       .small-12.columns.phase-container.show-for-small-only.small-circles
@@ -54,11 +45,11 @@
           %p NUMBER OF ENGAGEMENTS
       
       .medium-3.small-12.columns.end.show-for-small-only
-        %p= link_to 'Read Story', "/goinvo-temp/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
+        %p= link_to 'Read Story', "/v01/clients/#{project.client.downcase}", class: 'button radius', style: "background: #{client_for_name(project.client).primary_color}; width: 100%;"
       .medium-9.small-12.columns
         .show-for-medium-up
           .row
-            .image-container{id:"client#{project.client}", style: "background-image:url(/goinvo-temp/images/clients/#{project.client.downcase}/#{project.main_image});"}
+            .image-container{id:"client#{project.client}", style: "background-image:url(/v01/images/clients/#{project.client.downcase}/#{project.main_image});"}
 -#            - project.phases.each do |phase|
 -#              -# tablets and larger
 -#              .phase-container{style: "width:#{(phase.duration.to_f / project.duration.to_f) * 100}%"}

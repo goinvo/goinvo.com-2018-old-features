@@ -8,11 +8,11 @@ $( document ).ready(function() {
         }, 
         {
             "title" : "Affinnova",
-            "image" : "Concept_Studio_Design_v38.png"
+            "image" : "affinnova-concept-studio-ui-design.jpg"
         }, 
         {
             "title" : "Dataxu",
-            "image" : "dataxu-campaign-dashboard-user-interface.png"
+            "image" : "dataxu-campaign-dashboard-user-interface.jpg"
         }, 
         {
             "title" : "McAfee",
@@ -24,7 +24,7 @@ $( document ).ready(function() {
         }, 
         {
             "title" : "Ruelala",
-            "image" : "ruelala_calendar_4d.jpg"
+            "image" : "ruelala-calendar-user-interface.jpg"
         }
     ];
 
@@ -57,17 +57,17 @@ $( document ).ready(function() {
     
     if(index > 0) {
         console.log(index);
-        imgURL = "/goinvo-temp/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;
+        imgURL = "/v01/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;
         
         next.css("background", "linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(" + imgURL + ")");
         next.css("background-size", "cover");
         next.on("click", function () {
-               window.location.href ="http://code.goinvo.com/goinvo-temp/clients/" + projects[index].title.toLowerCase();
+               window.location.href ="http://code.goinvo.com/v01/clients/" + projects[index].title.toLowerCase();
         });
         nextTitle.html(projects[index].title);
     }
     else {
-        next.html("");   
+        next.css("display", "none");   
     }
     
     
@@ -77,7 +77,7 @@ $( document ).ready(function() {
             l = l -1;   
         }
         if(l >= 0 && l <= 5){
-            var url = "http://code.goinvo.com/goinvo-temp/clients/" + projects[l].title.toLowerCase();
+            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase();
             window.location.href = url;
         }
     });
@@ -88,7 +88,7 @@ $( document ).ready(function() {
             l = l +1;   
         }
         if(l >= 0 && l <= 5){
-            var url = "http://code.goinvo.com/goinvo-temp/clients/" + projects[l].title.toLowerCase();
+            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase();
             window.location.href = url;
         }
     });
