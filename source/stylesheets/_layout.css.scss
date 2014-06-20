@@ -35,7 +35,15 @@ header#site-header {
     }
 }
 
+a.button.read-story{
+    background-color: #43597b;
+    color: #f7f7f7;
+}
 
+a.button.read-story:hover {
+   background-color: rgba(67, 89, 123, 0.8);
+    color: #f7f7f7;
+}
 
 
 
