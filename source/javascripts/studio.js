@@ -66,10 +66,12 @@ $(document).ready(function() {
 $(window).load(function() {            
     $('#the-studio .content').masonry( 'reloadItems' );
     $('#the-studio .content').masonry( 'layout' );
+    $('div.loading').css("display", "none");  
+    $('div.bottom').css("display", "block");
 });
 
 //Scroll all the way to the bottom and load more events!
-$(function(){
+$(function(){  
    $(window).scroll(function(){
        if($(document).height()==$(window).scrollTop()+$(window).height()){
            offsetNumber += 25;

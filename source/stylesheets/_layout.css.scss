@@ -48,6 +48,19 @@ a.button.read-story:hover {
     color: #f7f7f7;
 }
 
+.project {
+    
+    .project-image {
+        height:250px;   
+        cursor:pointer;
+    }
+    
+    h3, .practice-areas {
+        display: inline-block;   
+        margin-bottom:0px;
+        height:auto;
+    }
+}
 
 
 div.homepage-header {

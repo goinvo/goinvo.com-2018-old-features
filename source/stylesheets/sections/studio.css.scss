@@ -1,6 +1,12 @@
 @import "base/mixins";
 @import "base/colors";
 
+div.loading {
+    text-align:center;   
+    height: 200px;
+    display:block;
+}
+
 #the-studio {
   .hero {
     background-image:url("../../images/studio/boston-user-experience-design-studio.jpg");
@@ -13,7 +19,7 @@
 }
 
 .social-card {
-    
+    background-color:white;
     overflow:hidden;
     @include box-shadow(1px 1px 1px transparentize($black, 0.3));
     position:relative;
@@ -124,6 +130,7 @@
     padding-top:10px;
     padding-bottom:10px;
     text-align: center;
+    display:none;
 }
 
 
