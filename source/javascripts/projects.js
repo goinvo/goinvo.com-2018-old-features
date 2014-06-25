@@ -118,3 +118,12 @@
     })
   })
 })(jQuery);
+
+
+$(document).ready(function() {
+   $('.project').on("click", function() {
+       var url = $(this).data("project-url");
+       window.location.href = url;
+   });
+    
+});
