@@ -1,3 +1,6 @@
+// For some reason when building the fontURL function won't work. Changing from 'font-url' to 'font_url' (or vica versa) will fix this.
+// I have no idea why this happens and it is not consistent
+
 @import "compass/typography";
 @import "base/colors";
 
