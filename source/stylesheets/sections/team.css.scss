@@ -9,11 +9,11 @@ $ethics-padding:30px;
 
 
 
-  .hero {
+.hero {
     background-image: image-url('team/boston-user-experience-company.jpg');
     background-position: center center;
     background-size: cover;
-  }
+}
 
 .row.main-content {
     padding: 40px 20px;
@@ -25,12 +25,13 @@ $ethics-padding:30px;
 
 .team-cards {
     color:$white;
+    
     h3 {
-            color: $white;
-            font-size:3.2rem;
-            line-height: .9rem;
-            margin-bottom:0px;
-        }
+        color: $white;
+        font-size:3.2rem;
+        line-height: .9rem;
+        margin-bottom:0px;
+    }
     
     h4 {
         color:$white;
@@ -38,7 +39,7 @@ $ethics-padding:30px;
         margin-top:17px;
     }
     
-     .social-icons {
+    .social-icons {
         list-style: none;
         margin-left:0px;
         margin-right:0px;
@@ -52,7 +53,7 @@ $ethics-padding:30px;
             max-height:$icon-size;
             vertica-align:center;
         }
-     }
+    }
 
     .bio {
         margin-top:40px;
@@ -88,37 +89,42 @@ $ethics-padding:30px;
             height:100%;
             padding-left: $stats-padding;
             padding-right:$stats-padding;
+            
             .myers-briggs {
-                    display:table-cell;
-                    text-align:left;
-                    vertical-align:middle;
-                    width:auto;
-                    padding-right:$stats-padding;
-                    span.value {
-                        border-style:solid;
-                        border-width:1px;
-                        border-color:transparentize($white, .8);
-                        border-radius:5px;
-                        padding: 4px 20px;
-                        margin-left:10px;
-                        
-                    }
-                }
-            .sparkline.github-commits{
                 display:table-cell;
                 text-align:left;
                 vertical-align:middle;
                 width:auto;
                 padding-right:$stats-padding;
+                
+                span.value {
+                    border-style:solid;
+                    border-width:1px;
+                    border-color:transparentize($white, .8);
+                    border-radius:5px;
+                    padding: 4px 20px;
+                    margin-left:10px;        
+                }
+            }
+            
+            .sparkline.github-commits {
+                display:table-cell;
+                text-align:left;
+                vertical-align:middle;
+                width:auto;
+                padding-right:$stats-padding;
+                
                 .graph {
 
                 }
+                
                 label {
 
                 }
             }
         }
     }
+    
     .team-card {
         background-color:black;
         background-position:top right;
@@ -127,6 +133,7 @@ $ethics-padding:30px;
         height:0px;
         padding-bottom:62.5%;
         position:relative;
+        
         .stats {
             padding-left: $stats-padding;
             padding-right:$stats-padding;
@@ -138,16 +145,12 @@ $ethics-padding:30px;
             width:100%;
             position:absolute;
             bottom:0;
-            
-            
         }
     }
-    
-    
-    
 }
 
-.expandedcards {    
+.expandedcards {  
+    
     .team-card-info {
         color: $white; 
         background-color:transparentize($black, 0.1);
@@ -173,23 +176,25 @@ $ethics-padding:30px;
             .content {
                 padding-left:30px;   
             }
-
         }
     }
 }
 
 .sidebar {
+    
     .code-of-ethics {
         text-align:center;
         color:$darkgray;
         background-color:transparentize($blue, .97);
+        
         h2, h3 {
             color:$darkgray;
+            font-size: 26px;
+            line-height:30px;
+            
             em {
                 font-family: $base-font-italic;  
             }
-            font-size: 26px;
-            line-height:30px;
         }
         
         h2 {
@@ -210,7 +215,6 @@ $ethics-padding:30px;
             padding-bottom: $ethics-padding;       
         }
     }
-    
 }
 
 #invo-logo {
@@ -232,7 +236,7 @@ $ethics-padding:30px;
     display:none;
 }
 
-.timeline {
+.timeline { //currently commented out
     display:none;
     padding-top:20px;    
     padding-left:20px;
@@ -240,18 +244,21 @@ $ethics-padding:30px;
     background-color:transparentize($blue, .97);
     
     ul {
+        
         li {
             list-style:none;
             position:relative;
             margin-bottom:0;
             padding-bottom:2.5em;
             padding-left:40px;
+            
             p.date {
                 padding-top:15px;
                 color:$darkgray;
                 margin-bottom:0px;
                 padding-bottom:0px;
             }
+            
             h3 {
                 color:$darkgray;
                 font-family:$base-font-regular;
@@ -259,12 +266,14 @@ $ethics-padding:30px;
                 line-height: 1.7rem;
                 padding-top:7px;
             }
+            
             p, p.date {
                 font-size:1.1rem;
                 line-height: 1.3rem;
                 letter-spacing:0.04rem;
             }
         }
+        
         li:before{
             content:"";
             position:absolute;
@@ -274,6 +283,7 @@ $ethics-padding:30px;
             height:100%;
             width:14px;
         }
+        
         li:after {
             content:"";
             background-color:white;
@@ -289,9 +299,9 @@ $ethics-padding:30px;
         li:first-child:before{
             top:6px;   
         }
+        
         li:last-child:before {
             height:6px;   
         }
-        
     }
 }

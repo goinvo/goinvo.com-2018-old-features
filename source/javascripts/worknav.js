@@ -1,5 +1,7 @@
+// This js file sets up the navigation between case studies by adding navigation to the left & right keys, and by adding an image/link to the bottom of the page for the next case study.
+// Currently this is not pulling data from the data file and the projects array is it's own in parallel to the data file. This can lead to mistakes in the future as things change.
+
 $( document ).ready(function() {
-    
     var current = document.URL;
     var projects = [
         {
@@ -34,7 +36,6 @@ $( document ).ready(function() {
 
     var index = 0;
     var imgURL = "";
-    console.log(current);
     
     if(current.indexOf("3m") >= 0) {
         index = 1;
@@ -56,13 +57,12 @@ $( document ).ready(function() {
     }
     
     if(index > 0) {
-        console.log(index);
-        imgURL = "/v01/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;
+        imgURL = "/v01/images/clients/" + projects[index].title.toLowerCase() + "/" + projects[index].image;  //note the '/v01/' .. this is hardcoded so it works when we upload to the server
         
         next.css("background", "linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(" + imgURL + ")");
         next.css("background-size", "cover");
         next.on("click", function () {
-               window.location.href ="http://code.goinvo.com/v01/clients/" + projects[index].title.toLowerCase();
+               window.location.href ="http://code.goinvo.com/v01/clients/" + projects[index].title.toLowerCase(); //note the '/v01/'
         });
         nextTitle.html(projects[index].title);
     }
@@ -77,7 +77,7 @@ $( document ).ready(function() {
             l = l -1;   
         }
         if(l >= 0 && l <= 5){
-            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase();
+            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase(); //note the '/v01/'
             window.location.href = url;
         }
     });
@@ -88,17 +88,16 @@ $( document ).ready(function() {
             l = l +1;   
         }
         if(l >= 0 && l <= 5){
-            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase();
+            var url = "http://code.goinvo.com/v01/clients/" + projects[l].title.toLowerCase(); //note the '/v01/'
             window.location.href = url;
         }
     });
-  
-    
 });
 
 function getIndex() {
     var index2 = 0;
     var current = document.URL;
+    
     if(current.indexOf("3m") >= 0) {
         index2 = 0;
     }

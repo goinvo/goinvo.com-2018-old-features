@@ -1,3 +1,5 @@
+//This js file is run on every page
+
 //= require lodash/dist/lodash
 //= require async/lib/async
 //= require jquery/dist/jquery
@@ -11,9 +13,10 @@
 
 $(document).foundation();
 
+//fix for problem where '/v01/' is missing in the url
 var currentURL = 'http://code.goinvo.com/v01/';
-//var currentURL = 'localhost:4567/';
 
+//binds keys to navigation links in the header using the Mousetrap library
 Mousetrap.bind('w', function () {
     window.location.href = currentURL + 'work';
 });

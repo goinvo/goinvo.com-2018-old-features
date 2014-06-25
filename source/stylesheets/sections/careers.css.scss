@@ -1,5 +1,6 @@
 @import "base/colors";
 @import "base/type";
+
 $border-radius: 4px;
 $outer-sidebar-padding:20px;
 $sidebar-padding:20px;
@@ -10,70 +11,71 @@ $center-padding:30px;
  ************************************/
 
 #careers {
-  .hero {
-    background-image: image-url("careers/boston-ux-designer-career.jpg");
-    background-position: center center;
-    background-size: cover;      
-  } //end of hero
-    
-  #mainContent {
-    padding: 40px 20px;
-    #choose-your-adventure {
-        list-style:none;
-        font-size:3.2rem;
-        line-height: 3.5rem;
-        margin-left:0px;
-        margin-bottom:0px;
-        vertical-align: top;
-        li {
-            display:inline-block;
-            vertical-align: top;
-            a {
-                color:$gray;
-                vertical-align: top;
-            }
-        }
-        li:first-child {
-            padding-right:1.4rem;  
-            border:0px;
-            border-right-width:3px;
-            border-color:transparentize($gray, .8);
-            border-style:solid;
-        }
-        li:last-child {
-            padding-left:1.2rem;    
-        }
-        .selected {
-            vertical-align: top;
-            a {
-                color:$black;
-                vertical-align:top;
-            }
-        }
+    .hero {
+        background-image: image-url("careers/boston-ux-designer-career.jpg");
+        background-position: center center;
+        background-size: cover;      
     }
+    
+    #mainContent {
+        padding: 40px 20px;
+        #choose-your-adventure {
+            list-style:none;
+            font-size:3.2rem;
+            line-height: 3.5rem;
+            margin-left:0px;
+            margin-bottom:0px;
+            vertical-align: top;
+            
+            li {
+                display:inline-block;
+                vertical-align: top;
+                a {
+                    color:$gray;
+                    vertical-align: top;
+                }
+                
+                &:first-child {
+                    padding-right:1.4rem;  
+                    border:0px;
+                    border-right-width:3px;
+                    border-color:transparentize($gray, .8);
+                    border-style:solid;
+                }
+                
+                &:last-child {
+                    padding-left:1.2rem;    
+                } 
+            }
+            
+            .selected {
+                vertical-align: top;
+                a {
+                    color:$black;
+                    vertical-align:top;
+                }
+            }
+        }
       
-       #engineer ul, #engineer ul li {
+        #engineer ul, #engineer ul li {
             font-size:26px;
             line-height:30px;
             letter-spacing:0.03em;
             word-spacing:0rem;
-      }
-      
-    .subtitle {
-        p {
-            color: $gray;
-            padding-top:10px;
         }
-    }
+      
+        .subtitle {
+            p {
+                color: $gray;
+                padding-top:10px;
+            }
+        }
   }
     
-  .centerContent {
-     padding-left:$center-padding;
-     padding-right:$center-padding;
-  }
-  
-
-
+    .centerContent {
+        padding-left:$center-padding;
+        padding-right:$center-padding;
+    }
 }
 
 #dbutton, #dbutton2, #attach_resume-02f6d985-bc3d-40a0-9bff-c8610111844b {

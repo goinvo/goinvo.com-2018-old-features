@@ -1,5 +1,115 @@
+@import "base/colors";
+@import "base/type";
+
 body {
     background-image: url("../../images/google_map.png");
     background-position: center center;
     background-size: cover;   
+}
+
+#contactForm {
+    padding-top:100px;
+    padding-bottom:80px;
+    
+    .form-title {
+        line-height:3.2rem;
+        
+        h3, h4 {
+            margin-top:0px;
+            margin-bottom:0px;   
+        }
+        
+        h3 {
+            font-size: 3.2rem;
+            line-height: 1rem;
+            font-weight:800;
+            padding-top:20px;
+        }
+        
+        h4 {
+            display:inline-block;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            
+            &.address {
+                display:block;   
+                padding-bottom:7px;   
+            }
+            
+            &.phoneNumber a{
+                color: $black; 
+                letter-spacing:0rem;
+            }
+        }
+    }
+    
+    .hs-form fieldset {
+        max-width:none;   
+        
+        &.form-columns-1 .hs-input {
+            width:100%;
+        }
+    }
+    
+    div.actions {
+        width:auto;   
+    }
+    
+    ul.inputs-list.multi-container {
+        margin: 0px;
+        list-style: none;
+        display: inline-block;
+        font-size: inherit;
+        line-height: inherit;
+        
+        li.hs-form-radio {
+            margin: 0px;
+            list-style: none;
+            display: inline-block;
+            font-size: inherit;
+            line-height: inherit;   
+            
+            label {
+                margin: 0px;
+                list-style: none;
+                display: inline-block;
+                font-size: inherit;
+                line-height: inherit;
+                width: auto;   
+                color:#a8aaa9;
+                
+                input#blog_default_hubspot_blog_subscription0-60744b7c-0aa6-40b2-9943-42137a951d16 {
+                    width:auto;  
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+    
+    #email_content2-60744b7c-0aa6-40b2-9943-42137a951d16 {
+        height: 346px;   
+    }
+    
+    #firstname-60744b7c-0aa6-40b2-9943-42137a951d16, #lastname-60744b7c-0aa6-40b2-9943-42137a951d16{
+        height:auto;   
+        width:100%;
+    }
+    
+    input[type=text], input[type=email] {
+        padding:3.5%;   
+        padding-top:4%;
+        
+        &#firstname-60744b7c-0aa6-40b2-9943-42137a951d16, &#lastname-60744b7c-0aa6-40b2-9943-42137a951d16 {
+            padding:4% 7% 3.5% 7%;
+        }
+    }
+    
+    
+    div.check-label {
+        display:inline-block;
+        color:$gray;
+        padding-left:10px;
+        vertical-align: baseline;
+        width: calc(100% - 168px);
+    }
 }

@@ -1,3 +1,4 @@
+# This is all old code from a previous version of the navigation menu... I don't believe we are using this anywhere
 window.showMenu = ->
   $('#main-menu').fadeIn(100)
   $('#main-menu').addClass('shown')

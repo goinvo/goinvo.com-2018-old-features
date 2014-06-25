@@ -16,8 +16,6 @@ div.container.content {
     margin-top:100px;
     margin-bottom:0px;
     
-    
-    
     h6.subheader {
         //text-transform:uppercase;  
         line-height:$sidebar-line-height;
@@ -29,32 +27,32 @@ div.container.content {
     }
     
     img {
-      padding: 20px 0;
-      width: 100%;
-      height:auto;
-      margin-top:20px;
+        padding: 20px 0;
+        width: 100%;
+        height:auto;
+        margin-top:20px;
     }
     
     p {
-      &.quote {
-        font-size: $body-font-size;
-        line-height:$body-line-height;
-        letter-spacing: $body-letter-spacing;
-        padding-left: 50px;
-        margin-left: -50px;
-        margin-bottom:5px;
-        padding-top:13px;
-        background-image: url(/images/sections/case-studies/quote.png);
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 42px;
-      }
+        &.quote {
+            font-size: $body-font-size;
+            line-height:$body-line-height;
+            letter-spacing: $body-letter-spacing;
+            padding-left: 50px;
+            margin-left: -50px;
+            margin-bottom:5px;
+            padding-top:13px;
+            background-image: url(/images/sections/case-studies/quote.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 42px;
+        }
         
-    &.caption {
-        font-size: $sidebar-font-size;
-        line-height:$sidebar-line-height;
-        letter-spacing: $sidebar-letter-spacing;
-    }
+        &.caption {
+            font-size: $sidebar-font-size;
+            line-height:$sidebar-line-height;
+            letter-spacing: $sidebar-letter-spacing;
+        }   
     }
     
     div.medium-9.small-12.column p.caption {
@@ -62,7 +60,7 @@ div.container.content {
     }
 
     .similar-project-container {
-      border-top: 1px solid #ddd;
+        border-top: 1px solid #ddd;
     }
     
     ul {
@@ -98,7 +96,6 @@ div.similar-project-container {
         line-height:$sidebar-line-height;
         letter-spacing: $sidebar-letter-spacing;
     }
-
 }
 
 .row#next-project {
@@ -117,7 +114,7 @@ div.similar-project-container {
         
         span {
             font-size: 4rem;
-        line-height: 4rem;
+            line-height: 4rem;
         }
     }
 }

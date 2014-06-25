@@ -1,3 +1,9 @@
+//This is for the project filters on the work page (Practice Areas and Budget)
+//
+//***** The current version of this code was written when we had one project per row.
+// It 'works' with multiple projects per row but it does not rearrange the projects to fill in gaps.
+//
+
 (function($) {    
   $(function(){
     var $noProjects = $('.no-projects-match');

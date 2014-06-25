@@ -8,14 +8,14 @@ div.loading {
 }
 
 #the-studio {
-  .hero {
-    background-image:url("../../images/studio/boston-user-experience-design-studio.jpg");
-  }
+    .hero {
+        background-image:url("../../images/studio/boston-user-experience-design-studio.jpg");
+    }
     
-  .content {
-    padding-bottom:30px;
-    margin:0 auto;
-  }
+    .content {
+        padding-bottom:30px;
+        margin:0 auto;
+    }
 }
 
 .social-card {
@@ -60,12 +60,12 @@ div.loading {
         
     }
 
-   &:hover {
-     .caption {
-       top: 0;
-       @include opacity(1.0);
-     }
-   }
+    &:hover {
+        .caption {
+            top: 0;
+            @include opacity(1.0);
+        }
+    }
     
     .caption {
         padding: 10px 65px 10px 10px;
@@ -82,9 +82,11 @@ div.loading {
     &.photo {
         cursor:pointer;
         background-size:cover;
+        
         &.portrait {
             min-height:456px;
         }
+        
         &.landscape {
             min-width:660px;
             
@@ -93,7 +95,6 @@ div.loading {
             }
         }
         
-   
         img.flickr-photo {
             padding-bottom:70px;   
         }
@@ -102,6 +103,7 @@ div.loading {
     
     &.soundcloud {
         min-width:660px;
+        
         p.contents {
             padding:10px;
             padding-bottom:50px;
@@ -113,6 +115,7 @@ div.loading {
     &.tweet, &.github {
         height:auto;
         min-height: 100px;
+        
         p.contents {
             padding:10px;   
             padding-top:10px;
@@ -132,5 +135,3 @@ div.loading {
     text-align: center;
     display:none;
 }
-
-

@@ -1,96 +1,73 @@
 
 /************************************
  **  Media Queries
+ **
+ *** This is where we put all (well most) of the media queries.
+ *** I tend to go by the philosophy of updating elements when they
+ *** stop looking good instead of updating elements based on common 
+ *** screen sizes.
  ************************************/
 
-@media only screen and (min-width:1280px) {
-    header.hero {
-        padding-top:460px;   
+@media only screen and (max-width:484px) {
+    .expandedcards .team-card-info h3 {
+        line-height:3.4rem;   
     }
 }
 
-@media only screen and (max-width:1019px) {
-    button#dbutton, button#abutton, button#dbutton2, button#abutton2{
-        width:100%;
-    }   
-}
-
-//changes that should always happen -1105px
-@media only screen and (max-width:1105px) {
-       
-     div.main-content .expandedcards {
-        display:inherit; 
-    }
-    
-    .contractedcards {
-        display: none;
-    }
-}
-
-@media only screen and (max-width:1020px) {
-    div.social-card.photo.landscape.super-long {
-        min-width: 660px;  
-    }
-}
-
-
-@media only screen and (max-width: 970px) {
-    #main-footer form .hs_email.field.hs-form-field.smart-field 
-    {
-        width: 100%;  
+@media only screen and (max-width:649px) {  
+    //hide everything that should be hidden (some elements of class: mobile-hide)
+    div.sidebar.mobile-hide, section.timeline.mobile-hide {
+        display:none;
     }   
     
-    #main-footer form .hs-button.primary.large {
-        margin-left:0px;   
+    .hero .title h2 {
+        font-size:3.5rem;
+        line-height: 3.5rem;
     }
-}
-
-//changes that shold always happen -980px
-@media only screen and (max-width: 980px) {
-    section.centerContent ul#choose-your-adventure li {      
-        font-size:2.5rem;
-        line-height: 2.7rem;
-     }
-     #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
-            padding-right:.6rem; 
-        }
-    #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
-            padding-left:.3rem;    
-        }
     
-    .sidebar.omega {
-        padding-left:10px;
+    .hero .title h3 {
+        font-size: 1.3rem;
+        letter-spacing: 0.09rem;
+        line-height: 1.5rem;
+        padding-lef:10px;
         padding-right:10px;
+    }   
+    
+    //lets see that hamburger
+    header#main-header #mobile-hamburger {
+        display:block;
+    }
+    
+    header#main-header div#nav-buttons {
+        display:none;
     }
 }
 
-//changes that shold always happen -800px
-@media only screen and (max-width: 800px) {
-    .sidebar.omega {
-        padding-left:5px;
-        padding-right:5px;
+@media only screen and (max-width:667px) {
+    div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
+        min-width:95%;
+        
     }
 }
-
-
 
 @media only screen and (max-width:749px) {
-    
+    //videos in the sidebar need a specific height.
     .sidebar.omega div.video iframe {
         height:400px;   
     }
     
-     section.centerContent ul#choose-your-adventure li {      
+    section.centerContent ul#choose-your-adventure li {      
         font-size:3.2rem;
         line-height: 3.5rem;
-     }
+    }
     
     #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
-            padding-right:.7rem; 
-        }
+        padding-right:.7rem; 
+    }
+    
     #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
-            padding-left:.4rem;    
-        }
+        padding-left:.4rem;    
+    }
     
     //hide everything that should be hidden (class: mobile-hide)
     div.sidebar.mobile-hide, section.timeline.mobile-hide, .mobile-hide {
@@ -106,7 +83,6 @@
         line-height: 4.5rem;
     }
     
-    
     #careers section.centerContent, section.team-cards.twelve.columns {
         padding-left:0px;
         padding-right:0px;
@@ -116,10 +92,69 @@
         padding-left:5px;
         padding-right:5px;
     }
-    
-    
 }
 
+@media only screen and (max-width: 800px) {
+    .sidebar.omega {
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+
+//We probably don't need this anymore. I believe this is from when we had the subscribe to our newsletter form in the footer.
+@media only screen and (max-width: 970px) {
+    #main-footer form .hs_email.field.hs-form-field.smart-field 
+    {
+        width: 100%;  
+    }   
+    
+    #main-footer form .hs-button.primary.large {
+        margin-left:0px;   
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    section.centerContent ul#choose-your-adventure li {      
+        font-size:2.5rem;
+        line-height: 2.7rem;
+     }
+    
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+        padding-right:.6rem; 
+    }
+    
+    #careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+        padding-left:.3rem;    
+    }
+    
+    .sidebar.omega {
+        padding-left:10px;
+        padding-right:10px;
+    }
+    
+    //Is this for the current footer?
+    div.footerContent .medium-4.columns.addrcol.sidebar{
+        padding-right:0px;   
+        padding-left:0px;
+        max-width:240px;
+    }
+    
+    div.footerContent div.medium-1.columns.social-links {
+        padding-left:0px;
+    } 
+}
+
+@media only screen and (max-width:1019px) {
+    button#dbutton, button#abutton, button#dbutton2, button#abutton2{
+        width:100%;
+    }   
+}
+
+@media only screen and (max-width:1020px) {
+    div.social-card.photo.landscape.super-long {
+        min-width: 660px;  
+    }
+}
 
 @media only screen and (max-width:1080px) {
     div.feature-article-section .title .feature-image.second{
@@ -131,61 +166,21 @@
     }
 }
 
-@media only screen and (max-width: 980px) {
-    div.footerContent .medium-4.columns.addrcol.sidebar{
-        padding-right:0px;   
-        padding-left:0px;
-        max-width:240px;
+@media only screen and (max-width:1105px) {
+     div.main-content .expandedcards {
+        display:inherit; 
     }
     
-    div.footerContent div.medium-1.columns.social-links {
-        padding-left:0px;
-    }   
-}
-
-@media only screen and (max-width:667px) {
-    div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
-        min-width:95%;
-        
-    }
-}
-
-@media only screen and (max-width:649px) {  
-    //hide everything that should be hidden (class: mobile-hide)
-    div.sidebar.mobile-hide, section.timeline.mobile-hide {
-        display:none;
-    }   
-    
-    .hero .title h2 {
-        font-size:3.5rem;
-        line-height: 3.5rem;
-    }
-    
-    .hero .title h3 {
-       font-size: 1.3rem;
-       letter-spacing: 0.09rem;
-       line-height: 1.5rem;
-        padding-lef:10px;
-        padding-right:10px;
-    }   
-    
-    header#main-header #mobile-hamburger {
-        display:block;
-    }
-    
-    header#main-header div#nav-buttons {
-        display:none;
-    }
-}
-
-
-@media only screen and (max-width:484px) {
-    .expandedcards .team-card-info h3 {
-        line-height:3.4rem;   
+    .contractedcards {
+        display: none;
     }
 }
 
 
 
 
-
+@media only screen and (min-width:1280px) {
+    header.hero {
+        padding-top:460px;   
+    }
+}
