@@ -24,7 +24,7 @@
       -projects.each do |project|
         - next if project.hide_in_layout or project.phases.blank?
         .medium-4.small-12.columns.project{data: {project: true, project_budget: project.budget, project_url: "/v01/clients/#{project.client.downcase}", project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
-          .project-image{id:"client#{project.client}", style: "background-image:url(/v01/images/clients/#{project.client.downcase}/#{project.main_image});"}
+          .project-image{id:"client#{project.client}", style: "background-image:url(/images/clients/#{project.client.downcase}/#{project.main_image});"}
           %h3= project.client
           %p.practice-areas
           - practice_areas(project).each do |area|
