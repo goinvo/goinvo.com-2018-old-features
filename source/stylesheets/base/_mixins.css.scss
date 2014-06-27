@@ -1,0 +1,36 @@
+@import "compass/css3";
+
+@mixin transparent-font($color, $opacity, $other-color: null) {
+  @if $other-color {
+    color: mix($other-color, $color, $opacity * 100.0);
+  } @else {
+    color: $color;
+  }
+  color: transparentize($color, $opacity);
+}
+
+@mixin transparent-background($color, $opacity: 0.5, $other-color: null) {
+  @if $other-color {
+    background: mix($other-color, $color, $opacity * 100.0);
+  } @else {
+    background: $color;
+  }
+  background: transparentize($color, $opacity);
+}
+
+@mixin user-select($select) {
+  -webkit-touch-callout: $select;
+  -webkit-user-select: $select;
+  -khtml-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+}
+
+@mixin shadow-headline($color1: #AAA, $color2: #999, $color3: #444) {
+  text-shadow: 0 1px 0 $color1, 0 2px 0 $color2, 0 2px 5px $color3;
+}
+
+@mixin shadow-subline($color1: #AAA, $color2: #444) {
+  text-shadow: 0 1px 0 $color1, 0 2px 2px $color2;
+}

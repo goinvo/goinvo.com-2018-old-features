@@ -1,6 +1,4 @@
-@import "base/colors";
-@import "base/type";
-
+@import "../base/core";
 
 div#page-wrapper {
     padding-bottom:45px;   
@@ -9,7 +7,7 @@ div#page-wrapper {
 
 article#complex-case {
     header.hero {
-        background-image: url('../../images/sections/case-studies/3m/head.JPG');
+        background-image: url('../../images/sections/case-studies/3m/3m-user-interface-sketches-grid.jpg');
         padding-top:490px;
         
         div.row div div.title {
@@ -58,7 +56,6 @@ article#complex-case {
         width:140%;
         position:relative;
         left:-20%;
-        font-family: $base-font-italic;
     }
     
     .caption {
@@ -186,13 +183,13 @@ article#complex-case {
         }
         
         max-width:none;
-        background: -moz-linear-gradient(top,  rgba(196,196,196,0.4) 0%, rgba(196,196,196,0.41) 1%, rgba(103,116,124,0.88) 38%, rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(196,196,196,0.4)), color-stop(1%,rgba(196,196,196,0.41)), color-stop(38%,rgba(103,116,124,0.88)), color-stop(47%,rgba(103,116,124,1))), url('../../images/sections/case-studies/3m/herman.jpg'); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/herman.jpg'); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66c4c4c4', endColorstr='#67747c',GradientType=0 ), url('../../images/sections/case-studies/3m/herman.jpg'); /* IE6-9 */
+        background: -moz-linear-gradient(top,  rgba(196,196,196,0.4) 0%, rgba(196,196,196,0.41) 1%, rgba(103,116,124,0.88) 38%, rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(196,196,196,0.4)), color-stop(1%,rgba(196,196,196,0.41)), color-stop(38%,rgba(103,116,124,0.88)), color-stop(47%,rgba(103,116,124,1))), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66c4c4c4', endColorstr='#67747c',GradientType=0 ), url('../../images/sections/case-studies/3m/memorial-hermann-hospital.jpg'); /* IE6-9 */
         background-size:contain;
         padding-top:375px;
         color:$white;
