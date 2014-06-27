@@ -1,7 +1,13 @@
+// This is our compelete CSS file. All files are imported and compiled here.
+
+// Import bases.
+@import "base/type";
+@import "base/mixins";
 @import "queries";
 @import "settings";
 @import "foundation.scss";
+
+// Import layout styles.
 @import "layout";
-@import "menu";
-@import "work";
-@import "base/type";
+@import "header";
+@import "elements";

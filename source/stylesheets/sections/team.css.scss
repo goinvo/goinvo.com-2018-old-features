@@ -1,18 +1,21 @@
 @import "base/mixins";
 @import "base/colors";
 @import "base/type";
+@import "../base/mixins";
 
 $stats-padding:40px;
 $icon-size:25px;
 $ethics-padding:30px;
 
 
-
-
 .hero {
     background-image: image-url('team/boston-user-experience-company.jpg');
-    background-position: center center;
-    background-size: cover;
+    h2 {
+        @include shadow-headline();
+    }
+    h3 {
+        @include shadow-subline();
+    }
 }
 
 .row.main-content {
@@ -47,11 +50,11 @@ $ethics-padding:30px;
         padding-right:0px;
 
         li {
-            display:inline-block;
+            display: inline-block;
             margin-right: 10px;
-            max-width:$icon-size;
-            max-height:$icon-size;
-            vertica-align:center;
+            max-width: $icon-size;
+            max-height: $icon-size;
+            vertical-align: center;
         }
     }
 

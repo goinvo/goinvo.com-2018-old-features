@@ -15,16 +15,16 @@ body {
    background-color: #0d0d0d; 
 }
 
-div.homepage-header {
-    cursor:pointer;
-    width:100%;
-    min-height:800px; //this needs to be reworked
-    background:linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(../../images/soccer_dataviz.jpg);
-    background-size:cover;
-    padding-top:210px;
+.homepage-header {
+    cursor: pointer;
+    width: 100%;
+    min-height: 800px; //this needs to be reworked
+    background: linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(../../images/soccer_dataviz.jpg);
+    background-size: cover;
+    padding-top: 210px;
 
     .title {
-        width:100%;
+        width: 100%;
         
         h3, h2, h4 {
             text-align:left;

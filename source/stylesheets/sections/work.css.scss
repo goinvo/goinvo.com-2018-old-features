@@ -1,0 +1,106 @@
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "../base/mixins";
+
+#projects {
+	.hero {
+		background-image: url('../../images/work/workv2.jpg');
+		margin-bottom: 15px;
+		h2 {
+			@include shadow-headline();
+		}
+		h3 {
+			@include shadow-subline();
+		}
+	}
+	
+	.phase-container {
+		float: left;
+		position: relative;
+	}
+	
+	// probably the only media query outside of queries.css.scss ... it's also for the phase graph that we are not using.
+	@media only screen and (min-width: 40.063em) {
+		.phase-container {
+			height: 150px;
+		}
+	}
+	
+	label {
+		font-size: 19px;
+		line-height: 21px;
+		letter-spacing: 0.03rem;
+		cursor:text;
+	}
+	
+	.phase {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	
+		.service-areas, .staffing {
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing:0.03rem;
+		}
+	}
+
+	select {
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.project {
+		display: inline-block;
+		padding-left: 0;
+		padding-right: 0;
+		width: calc(100%/3);
+		&:last-child {
+			float: left;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	.project > h3 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		margin: 0;
+		margin-top:5px;
+	}
+	
+	a.button {
+		font-size: 19px;
+		line-height: 21px;
+		letter-spacing: 0.03rem;
+	}
+	
+	.practice-areas {
+		color: #AAA;
+		font-size: 19px;
+		line-height: 21px;
+		letter-spacing: 0.03rem;
+	}
+	
+	.description {
+		padding-right: 50px;
+	}
+	
+	.small-circles p {
+		font-size: 0.8em;
+		letter-spacing: initial;
+		line-height: initial;
+		color: #9CA2A3;
+		&.gray-circle {
+			background: url(/images/gray-circle.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 50px;
+			width: 50px;
+			padding-top: 18px;
+			color: #FFF;
+			margin: 15px auto;
+		}
+	}
+}
