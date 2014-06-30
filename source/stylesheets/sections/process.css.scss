@@ -1,0 +1,88 @@
+html { // This will need to be moved to another css file to keep things conceise.
+	background: #0d0d0d;
+}
+
+#main-container {
+	padding-top: 75px;
+}
+
+section {
+	padding-bottom: 5em;
+}
+
+hr {
+	width: 20%;
+	margin: 0 auto;
+	border-width: 5px;
+	border-color: #EEE;
+	padding-bottom: 5em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+section.intro {
+	h1, h2 {
+		text-align: center;
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 12em;
+	}
+	h2 {
+		font-size: 2.5em;
+		max-width: 600px;
+		max-width: 60rem;
+	}
+}
+
+h1 {
+	font-size: 8em;
+	text-align: center;
+}
+h2 {
+	font-family: "Jenson Pro Italic";
+	margin: 0 auto 1em;
+	text-align: center;
+	font-style: italic;
+}
+
+.section-header {
+	h3, h4, p {
+			max-width: 500px;
+			max-width: 50rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	h3, h4 {
+		text-align: left;
+	}
+}
+
+.section-content {
+	h3, h4, p, ul, ol {
+		max-width: 500px;
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h3 {
+		font-size: 3em;
+		line-height: 1em;
+		margin-bottom: 1em;
+		text-align: left;
+	}
+	h4 {
+		font-family: "Jenson Pro Bold";
+		font-style: normal;
+		font-size: 2.5em;
+		line-height: 1.5em;
+		margin-bottom: 0.25em;
+		text-align: left;
+	}
+	p, ul, ol {
+		font-size: 2em;
+		line-height: 1.3em;
+	}
+}
