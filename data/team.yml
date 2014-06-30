@@ -30,7 +30,7 @@
 - first_name: "Your Career"
   last_name: Awaits!
   title: "We're always looking for amazing talent."
-  bio: "<div class = 'designerButton' id = 'team-design-button'>Designer</div> <a><div class = 'engineerButton' id = 'team-engine-button'>Engineer</div></a>"
+  bio: "<a class='designerButton' id='team-design-button'>Designer</a><a class='engineerButton' id='team-engine-button'>Engineer</a>"
   photo: career_silhouette.jpg
 - first_name: Jennifer
   last_name: Patel
