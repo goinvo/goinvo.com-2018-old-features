@@ -16,65 +16,16 @@ $base-line-height: 24px;
 
 
 /*************************************************************
- *  FONT FAMILES
-**************************************************************/
-
-@font-face {
-  font-family: 'Jenson Pro Light';
-  src: url('../fonts/jensonpro/AJensonPro-LtDisp.eot');
-  src: url('../fonts/jensonpro/AJensonPro-LtDisp.woff') format('woff'),
-       url('../fonts/jensonpro/AJensonPro-LtDisp.ttf') format('truetype'),
-       url('../fonts/jensonpro/AJensonPro-LtDisp.svg') format('svg');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Jenson Pro Regular';
-  src: url('../fonts/jensonpro/AJensonPro-Disp.eot');
-  src: url('../fonts/jensonpro/AJensonPro-Disp.woff') format('woff'),
-       url('../fonts/jensonpro/AJensonPro-Disp.ttf') format('truetype'),
-       url('../fonts/jensonpro/AJensonPro-Disp.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Jenson Pro Bold';
-  src: url('../fonts/jensonpro/AJensonPro-BoldDisp.eot');
-  src: url('../fonts/jensonpro/AJensonPro-BoldDisp.woff') format('woff'),
-       url('../fonts/jensonpro/AJensonPro-BoldDisp.ttf') format('truetype'),
-       url('../fonts/jensonpro/AJensonPro-BoldDisp.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Jenson Pro Italic';
-  src: url('../fonts/jensonpro/AJensonPro-ItDisp.eot');
-  src: url('../fonts/jensonpro/AJensonPro-ItDisp.woff') format('woff'),
-       url('../fonts/jensonpro/AJensonPro-ItDisp.ttf') format('truetype'),
-       url('../fonts/jensonpro/AJensonPro-ItDisp.svg') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-
-$base-font-light:   'Jenson Pro Light';
-$base-font-regular: 'Jenson Pro Regular';
-$base-font-bold:    'Jenson Pro Bold';
-$base-font-italic: 'Jenson Pro Italic';
-
-
-/*************************************************************
  *  TYPES OF TYPE
 **************************************************************/
 
 body {
-  font-family: $base-font-regular;
+  font-family: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
   color: $black;
 }
 
 h1, h2, h3, h4, h5 {
+  font-weight: 700; // Foundation override.
   a {
     text-decoration: none;
   }
@@ -82,42 +33,37 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   @include adjust-font-size-to(40px);
-  font-family: $base-font-bold;
 }
 
 h2 {
   @include adjust-font-size-to(32px);
-  font-family: $base-font-bold;
 }
 
 h3 {
   @include adjust-font-size-to(24px);
-  font-family: $base-font-bold;
 }
 
 h4 {
   @include adjust-font-size-to(18px);
-  font-family: $base-font-bold;
 }
 
 h3.name {
-  font-family: $base-font-regular;  
+  font-weight: 400;  
 }
 
 #contactForm h4, h4.title {
   @include adjust-font-size-to(18px);
-  font-family: $base-font-regular;
+  font-weight: 400;
 }
 
 p {
-  font-size:1.4rem; 
+  font-size :1.4rem; 
   margin-bottom: 1.5rem;
   em {
-    font-family: $base-font-italic;
     font-style: italic;
   }
   strong {
-    font-family: $base-font-bold;
+    font-weight: 700;
   }
   a {
     text-decoration: none;

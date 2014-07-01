@@ -7,6 +7,9 @@
 		
 		= stylesheet_link_tag 'all'
 		= javascript_include_tag 'all'
+		%script{:type => "text/javascript", :src => "//use.typekit.net/brw1pwx.js"}
+		%script{:type => "text/javascript"}
+			try{Typekit.load();}catch(e){}
 		= yield_content :page_head
  
 		%title

@@ -49,10 +49,10 @@ input[type=submit].button {
 .form-field {
   label {
     display: block;
-    font-family: $base-font-bold;
+    font-weight: 700;
     font-size: 1.4em;
-    line-height: .2em;
-    letter-spacing: .04em;
+    line-height: 0.2em;
+    letter-spacing: 0.04em;
   }
 
   input[type=text],
