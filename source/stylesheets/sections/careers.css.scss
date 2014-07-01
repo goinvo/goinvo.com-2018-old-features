@@ -14,7 +14,6 @@ $center-padding:30px;
 #careers {
 	.hero {
 		background-image: image-url("careers/boston-ux-designer-career.jpg");
-		background-position: bottom;
 		h2 {
 			@include shadow-headline();
 		}
@@ -25,6 +24,11 @@ $center-padding:30px;
 	
 	#mainContent {
 		padding: 40px 20px;
+		.title {
+			font-size: 3.2rem;
+			line-height: 3.5rem;
+			
+		}
 	  
 		#engineer ul, #engineer ul li {
 			font-size:26px;
