@@ -20,7 +20,6 @@
 		
 		%meta{content: "Involution Studios is a user interface and application design firm located in Boston and Columbus. We create great user experiences for desktop, mobile, and web applications.", name: "description"}/
 		%meta{content: "boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design", name: "keywords"}/
-			
 	%body
 		#page-wrapper
 			#site-overlay
@@ -34,8 +33,8 @@
 								%nav#nav-buttons
 									%span.nav-button
 										= link_to 'Work', asset_url('work')
-									%span.nav-button
-										= link_to 'Products', asset_url('products')
+									-# %span.nav-button
+									-# 	= link_to 'Products', asset_url('products')
 									%span.nav-button
 										= link_to 'Studio', asset_url('studio')
 									%span.nav-button
@@ -51,8 +50,8 @@
 						%nav#nav-buttons-mobile
 							%span.nav-button
 								= link_to 'Work', asset_url('work')
-							%span.nav-button
-								= link_to 'Products', asset_url('products')
+							-# %span.nav-button
+							-# 	= link_to 'Products', asset_url('products')
 							%span.nav-button
 								= link_to 'Studio', asset_url('studio')
 							%span.nav-button
@@ -70,8 +69,7 @@
 				.row.footerContent
 					.medium-8.columns.logocol.sidebar
 						%p.mobile-hide.about-us
-							%em
-								We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
+							We are a group of future thinkers changing the world through apps, platforms, and creative problem solving.
 					.medium-4.columns.addrcol.sidebar
 						%p#phoneNum
 							%a{href: "tel:6178037043"}  617&ndash;803&ndash;7043

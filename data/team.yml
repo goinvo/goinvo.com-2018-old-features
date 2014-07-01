@@ -1,6 +1,6 @@
 - first_name: Juhan
   last_name: Sonin
-  title: "Creative Director"
+  title: "Chief Creative Officer"
   bio: "Juhan specializes in software design and system engineering. He is the Creative Director and runs Involution Studios LLC. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT."
   mbti: ENTP
   linkedin_url: "http://www.linkedin.com/in/juhansonin"
@@ -10,7 +10,7 @@
   photo: juhan_sonin.jpg
 - first_name: Eric
   last_name: Benoit
-  title: Designer
+  title: Creative Director
   bio: "Eric is a designer specializing in system design and software application. He leads our creationary process in UI design and pushing concepts into production. Eric joined Invo in 2010 and is a graduate of Johnson & Wales University. Eric enjoys tinkering with Arduino controllers and taking random ‘make’ classes at the Artisan’s Asylum; from electronic synthesizers to laser cutting."
   mbti: INFP
   linkedin_url: "http://www.linkedin.com/in/ericjbenoit"
@@ -21,7 +21,7 @@
   photo: eric_benoit.jpg
 - first_name: Sarah
   last_name: Kaiser
-  title: Designer
+  title: Artist
   bio: "Sarah is an artist specializing in user interface design, motion graphics, and illustration. She creates beautiful interfaces in 2 and 3D space. Sarah joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
   mbti: ISTP
   linkedin_url: "http://www.linkedin.com/pub/sarah-kaiser/27/bb1/315"
@@ -34,7 +34,7 @@
   photo: career_silhouette.jpg
 - first_name: Jennifer
   last_name: Patel
-  title: Designer
+  title: "Designer, Engineer"
   bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
   mbti: ISFJ
   twitter_username: "catamariface"
@@ -42,7 +42,7 @@
   photo: jennifer_patel.jpg
 - first_name: Ben
   last_name: Salinas
-  title: Designer
+  title: "Designer, Engineer"
   bio: "Ben is a designer specializing in engineering and holistic design. He orchestrates exceptional outcomes in algorithm-driven software and specializes in transitioning beautiful designs from pixels to production code. Ben joined Invo in 2012 and is a graduate of the Olin College of Engineering. Ben also works to revolutionize the world of coffee brewing at his company, Luminaire Coffee."
   mbti: ENTP
   linkedin_url: "http://www.linkedin.com/profile/view?id=189869447"

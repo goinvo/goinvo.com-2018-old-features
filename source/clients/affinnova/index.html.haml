@@ -1,66 +1,73 @@
 - content_for(:page_head) do
-  = stylesheet_link_tag "sections/simple-case-studies"
-  = javascript_include_tag 'worknav'
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
 - client = client_for_name("Affinnova")
-    
+		
 .row
-  .medium-3.small-12.column
-    %h1.client{style: "color: #{client.primary_color}"} Affinnova
-    
-    %h6.subheader
-      RESULTS
-    
-    %p.caption Product marketing workflow & testing system.
-    
-    %p.quote
-      Concept Studio is likely to transform our business in fundamental ways.
-    %h6.subheader.name
-      Steve Lamoureux<br>Chief Product Officer, Affinnova
-    
-    %h6.subheader DETAILS
-    %ul
-      %li Introduced UX as part of their strategically prioritizing it
-      %li Completely redesigned their initial prototype
-      %li Engineered the UI and stayed with their back-end team
-      %li Helped them hire internal UX staff while training the org best practices
-      %li Almost 6 months on the core project
-    
-    %h6.subheader PROJECT TYPE
-    
-    %p.caption UI Design, Engineering
-    
-    .similar-project-container
-      %h6.subheader Have a similar project?
-      = link_to 'Contact Us', asset_url('contact'), class: 'button radius'
-    
-  .medium-9.small-12.column
-    %img{alt: "Affinnova", src: "../../images/clients/affinnova/affinnova-concept-studio-ui-design.jpg"}
-    
-    #masthead
-      
-      %p.caption Affinnova's Concept Studio gives marketing organizations a powerful tool to test and uplevel their marketing.
-    / //masthead//
-    .col-a
-      %div
-        %img{alt: "Original Concept Studio App, Powerscreener", height: "207", src: "../../images/clients/affinnova/concept-studio-initial-ui-design.jpg", width: "460"}/
-      %p.caption A great idea trapped in a not-so-great design, Concept Studio badly needed strong design leadership.
-      %div
-        %img{alt: "Product Architecture sticky notes meeting", height: "207", src: "../../images/clients/affinnova/concept-studio-product-blueprint-stickies.jpg", width: "460"}/
-      %p.caption Key Affinnova stakeholders dug in with the core Involution team to really stretch and imagine the app’s potential.
-      %div
-        %img{alt: "Early ui designs", height: "207", src: "../../images/clients/affinnova/concept-studio-early-ui-redesign.jpg", width: "460"}/
-      %p.caption In our usual quick and effective way we jumped straight from product architecture into high-resolution, pixel perfect screens, allowing rich and relevant feedback early in the project.
-      %div
-        %img{alt: "CSS Development", height: "207", src: "../../images/clients/affinnova/concept-studio-ui-development.jpg", width: "460"}/
-      %p.caption We prototyped Concept Studio in code from the early weeks, creating a vibrant environment for innovation, iteration and constant improvement.
-      %div
-        %img{alt: "Visual rule creation", height: "207", src: "../../images/clients/affinnova/concept-studio-rules-user-experience-design.jpg", width: "460"}/
-      %p.caption A visual user interface for creating rules between elements helped people see and create relationships.
-      %div
-        %img{alt: "Rules Engine UI Design", height: "207", src: "../../images/clients/affinnova/concept-studio-rules-ui-design.jpg", width: "460"}/
-      %p.caption The finished Concept Studio hit every basic design requirement we insist on: useful, usable and appropriately beautiful.
+	.medium-3.small-12.column
+		%h1.client{style: "color: #{client.primary_color}"} Affinnova
+		
+		%h6.subheader Results
+		
+		%p.caption Product marketing workflow & testing system.
+		
+		%p.quote Concept Studio is likely to transform our business in fundamental ways.
+		%h6.subheader.name Steve Lamoureux<br>Chief Product Officer, Affinnova
+
+		%p.quote Before Invo's work on Concept Studio, a team of Affinnova team members manually built idea matrixes for each customer. Now the customers do it for themselves&mdash; instantly.
+		
+		%h6.subheader Details
+		%ul
+			%li Introduced UX as part of their strategically prioritizing it
+			%li Completely redesigned their initial prototype
+			%li Engineered the UI and stayed with their back-end team
+			%li Helped them hire internal UX staff while training the org best practices
+			%li Almost 6 months on the core project
+		
+		%h6.subheader Practice Areas
+		%p.caption Ad Tech
+
+		%h6.subheader Project Type
+		%p.caption UI Design, Engineering
+
+		%h6.subheader Process
+		%p.caption Learning, Envision, Blueprint, Craft, Build
+
+		%h6.subheader Price
+		%p.caption $200 &ndash; $499k
+		
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+		
+	.medium-9.small-12.column
+		%img{alt: "Affinnova", src: "../../images/clients/affinnova/affinnova-concept-studio-ui-design.jpg"}
+		
+		#masthead
+			
+			%p.caption Affinnova's Concept Studio gives marketing organizations a powerful tool to test and uplevel their marketing.
+		/ //masthead//
+		.col-a
+			%div
+				%img{alt: "Original Concept Studio App, Powerscreener", height: "207", src: "../../images/clients/affinnova/concept-studio-initial-ui-design.jpg", width: "460"}/
+			%p.caption A great idea trapped in a not-so-great design, Concept Studio badly needed strong design leadership.
+			%div
+				%img{alt: "Product Architecture sticky notes meeting", height: "207", src: "../../images/clients/affinnova/concept-studio-product-blueprint-stickies.jpg", width: "460"}/
+			%p.caption Key Affinnova stakeholders dug in with the core Involution team to really stretch and imagine the app’s potential.
+			%div
+				%img{alt: "Early ui designs", height: "207", src: "../../images/clients/affinnova/concept-studio-early-ui-redesign.jpg", width: "460"}/
+			%p.caption In our usual quick and effective way we jumped straight from product architecture into high-resolution, pixel perfect screens, allowing rich and relevant feedback early in the project.
+			%div
+				%img{alt: "CSS Development", height: "207", src: "../../images/clients/affinnova/concept-studio-ui-development.jpg", width: "460"}/
+			%p.caption We prototyped Concept Studio in code from the early weeks, creating a vibrant environment for innovation, iteration and constant improvement.
+			%div
+				%img{alt: "Visual rule creation", height: "207", src: "../../images/clients/affinnova/concept-studio-rules-user-experience-design.jpg", width: "460"}/
+			%p.caption A visual user interface for creating rules between elements helped people see and create relationships.
+			%div
+				%img{alt: "Rules Engine UI Design", height: "207", src: "../../images/clients/affinnova/concept-studio-rules-ui-design.jpg", width: "460"}/
+			%p.caption The finished Concept Studio hit every basic design requirement we insist on: useful, usable and appropriately beautiful.
 #next-project.row
-  .medium-6.small-12.small-centered.columns
-    .next-title
-      Next Project: 
-      %span#next
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project: 
+			%span#next

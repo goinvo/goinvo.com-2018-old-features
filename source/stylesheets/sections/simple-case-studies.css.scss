@@ -8,115 +8,111 @@ $sidebar-font-size:19px;
 $sidebar-line-height:21px;
 $sidebar-letter-spacing:0.03rem;
 
-
-div#page-wrapper {
-    padding-bottom:45px;   
-}
-
-
-div.container.content {
-    margin-top:100px;
-    margin-bottom:0px;
-    
-    h6.subheader {
-        //text-transform:uppercase;  
-        line-height:$sidebar-line-height;
-        margin-top:40px;
-        
-        &.name {
-            margin-top:0px;
-        }   
-    }
-    
-    img {
-        padding: 20px 0;
-        width: 100%;
-        height:auto;
-        margin-top:20px;
-    }
-    
-    p {
-        &.quote {
-            font-size: $body-font-size;
-            line-height:$body-line-height;
-            letter-spacing: $body-letter-spacing;
-            padding-left: 50px;
-            margin-left: -50px;
-            margin-bottom:5px;
-            padding-top:13px;
-            background-image: url(/images/sections/case-studies/quote.png);
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: 42px;
-        }
-        
-        &.caption {
-            font-size: $sidebar-font-size;
-            line-height:$sidebar-line-height;
-            letter-spacing: $sidebar-letter-spacing;
-        }   
-    }
-    
-    div.medium-9.small-12.column p.caption {
-        max-width: 75%;   
-    }
-
-    .similar-project-container {
-        border-top: 1px solid #ddd;
-    }
-    
-    ul {
-        font-size: $sidebar-font-size;
-        line-height:$sidebar-line-height;
-        letter-spacing: $sidebar-letter-spacing;
-        
-        li {
-            margin-top:10px;
-        }   
-    }
+.container {
+	padding-top: 100px;
+	margin-bottom: 0px;
+	
+	h6.subheader {
+		text-transform: uppercase;  
+		line-height: $sidebar-line-height;
+		margin-top: 40px;
+		
+		&.name {
+			text-transform: none;
+			margin-top: 0px;
+		}   
+	}
+	
+	img {
+		padding: 20px 0;
+		width: 100%;
+		height: auto;
+		margin-top: 20px;
+	}
+	
+	p {
+		&.quote {
+			font-size: $body-font-size;
+			line-height:$body-line-height;
+			letter-spacing: $body-letter-spacing;
+			margin-bottom:5px;
+			padding-top:13px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: 42px;
+			&:before {
+				content: "\201C";
+				position: relative;
+			}
+			&:after {
+				content: "\201D";
+			}
+		}
+		
+		&.caption {
+			font-size: $sidebar-font-size;
+			line-height:$sidebar-line-height;
+			letter-spacing: $sidebar-letter-spacing;
+		}   
+	}
+	
+	div.medium-9.small-12.column p.caption {
+		max-width: 75%;   
+	}
+	
+	ul {
+		font-size: $sidebar-font-size;
+		line-height:$sidebar-line-height;
+		letter-spacing: $sidebar-letter-spacing;
+		
+		li {
+			margin-top:10px;
+		}   
+	}
 }
 
 div.similar-project-container {
 
-    a.button.radius {
-        font-size: $body-font-size;
-        line-height:$body-line-height;
-        letter-spacing: $body-letter-spacing;
-        padding:10px 20px;
-        padding-top:12px;
-        background-color:rgb(235, 235, 235);
-        color: #aaa;
-        
-        &:hover{
-            //color:rgb(247, 247, 247);
-            background-color: #dbdddc;
-        }
-    }
-    
-    h6.subheader {
-        font-size: $sidebar-font-size;
-        line-height:$sidebar-line-height;
-        letter-spacing: $sidebar-letter-spacing;
-    }
+	a.button.radius {
+		font-size: $body-font-size;
+		line-height:$body-line-height;
+		letter-spacing: $body-letter-spacing;
+		padding:10px 20px;
+		padding-top:12px;
+		background-color:rgb(235, 235, 235);
+		color: #aaa;
+		
+		&:hover{
+			//color:rgb(247, 247, 247);
+			background-color: #dbdddc;
+		}
+	}
+	
+	h6.subheader {
+		text-transform: none;
+		font-size: $sidebar-font-size;
+		line-height:$sidebar-line-height;
+		letter-spacing: $sidebar-letter-spacing;
+	}
 }
 
 .row#next-project {
-    max-width:100%;
-    height:200px;
-    margin-top:20px;
-    cursor:pointer;
-    background-size:cover;
-    
-    div.next-title {
-        margin-top: 80px;
-        color:#f7f7f7;
-        font-size: 3rem;
-        line-height: 3rem;
-        font-weight: 700;
-        
-        span {
-            font-size: 4rem;
-            line-height: 4rem;
-        }
-    }
+	max-width:100%;
+	height:200px;
+	margin-top:20px;
+	cursor:pointer;
+	background-size:cover;
+	
+	div.next-title {
+		margin-top: 80px;
+		color:#f7f7f7;
+		font-size: 3rem;
+		line-height: 3rem;
+		font-weight: 700;
+		
+		span {
+			font-size: 4rem;
+			line-height: 4rem;
+		}
+	}
 }

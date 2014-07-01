@@ -48,7 +48,7 @@ header#site-header {
 }
 
 body {
-	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-footer p, #main-footer a, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {
+	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {
 		font-size: $body-font-size;
 		letter-spacing: $body-letter-spacing;
 		line-height: $body-line-height;
@@ -203,6 +203,12 @@ div.feature-article-section {
 	color: $footer-color;
 	padding: 30px 0;
 	width: 100%;
+	font-style: italic;
+
+	p {
+		font-size: 18px;
+		font-weight: 300;
+	}
 	
 	.hs-button.primary.large {
 		padding-right: 20px;
