@@ -44,6 +44,9 @@ page "humans.txt", :layout => false
 # Livereload
 activate :livereload
 
+# Take care of all them prefixes
+activate :autoprefixer
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
