@@ -24,29 +24,6 @@ $sidebar-letter-spacing:0.03rem;
 	position: relative;
 }
 
-header#site-header {
-    padding-top:6px;
-    
-    div.tag-line {
-        display:inline-block;
-        color: $footer-color;
-        margin-left:5px;
-        vertical-align: bottom;
-        padding-bottom:2px;
-    }
-
-	padding-top:6px;
-	
-	div.tag-line {
-		display:inline-block;
-		color:$white;
-		margin-left:5px;
-		vertical-align: bottom;
-		padding-bottom:2px;
-	}
-
-}
-
 body {
 	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {
 		font-size: $body-font-size;
@@ -201,9 +178,8 @@ div.feature-article-section {
 #main-footer {
 	background-color: $black;
 	color: $footer-color;
-	padding: 30px 0;
+	padding: 10px 0;
 	width: 100%;
-	font-style: italic;
 
 	p {
 		font-size: 18px;

@@ -5,12 +5,12 @@
 div.loading {
     text-align:center;   
     height: 200px;
-    display:block;
+    display:none;
 }
 
 #the-studio {
     .hero {
-        background-image:url("../../images/studio/studio.jpg");
+        background-image: image-url('images/studio/studio.jpg');
         h2 {
             @include shadow-headline();
         }

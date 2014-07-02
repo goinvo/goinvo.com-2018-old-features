@@ -1,6 +1,18 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
 
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.build
 	= image_tag('process/jpg/process5.jpg')
 	%header.section-header
@@ -31,3 +43,7 @@
 			%li Sharing latest theories and methods with our experts
 			%li Outside minds and eyes reviewing the work
 		%p Engineering is the backbone of every digital experience. Yours should be as strong as it can be.
+%a{:href => asset_url('work/process/support')}
+	%section.process-section.next-section
+		%h3 Next step:
+		%h1 Support

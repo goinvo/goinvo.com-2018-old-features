@@ -1,10 +1,22 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
 
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.training
 	= image_tag('process/jpg/process8.jpg')
 	%header.section-header
-		%h1 Z. Training
+		%h1 Training
 		%h2 Our best projects are the ones which make us redundant.
 	.section-content
 		%h3 As long as we’re bringing you some fish, let us teach you how to catch your own.
@@ -30,3 +42,7 @@
 			%li Preparing groups to adopt our methods in future projects
 			%li Training whole teams or across teams to build exceptional organizational infrastructure
 		%p Take advantage of our time and work together to upgrade the capabilities of your critical people and teams.
+%a{:href => asset_url('work')}
+	%section.process-section.next-section
+		%h3 See the process in action:
+		%h1 View our work

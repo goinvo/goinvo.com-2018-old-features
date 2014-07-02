@@ -6,13 +6,38 @@ html { // This will need to be moved to another css file to keep things conceise
 	padding-top: 75px;
 }
 
+.nav-menu {
+	position: relative;
+	z-index: 20;
+	nav {
+		padding: 1em 0 3em;
+		text-align: center;
+	}
+	a {
+		border-radius: 40px;
+		margin: 10px;
+		color: #888;
+		padding: 10px 20px;
+		font-size: 1.25em;
+		text-align: left;
+		background: #DDD;
+		box-shadow: 0 2px 0 #CCC;
+		transition: color 300ms ease, background 300ms ease, box-shadow 300ms ease;
+		&:hover {
+			background: #425f8e;
+			color: #EEE;
+			box-shadow: 0 2px 0 lighten(#425f8e, 40%);
+		}
+	}
+}
+
 section {
 	img {
 		position: relative;
 		z-index: 1;
 		display: block;
-		max-width: 75%;
-		margin: 0 auto -20em;
+		max-width: 60%;
+		margin: 0 auto -15em;
 	}
 
 	p {
@@ -32,19 +57,40 @@ section {
 			max-width: 60rem;
 		}
 	}
-	&.learning, &.blueprint, &.craft, &.support{
+	&.learning, &.blueprint, &.craft, &.training {
 		img {
-			max-width: 50%;
+			max-width: 40%;
 		}
 	}
 	&.envision {
 		img {
-			margin-bottom: -15em;
+			margin-bottom: -10em;
 		}
 	}
-	&.communication {
+	&.communication, &.support {
 		img {
 			max-width: 35%;
+			margin-bottom: -20em;
+		}
+	}
+	&.next-section {
+		padding: 4em 0;
+		background: #DDD;
+		h3, h1 {
+			text-align: left;
+			max-width: 500px;
+			max-width: 50rem;
+			margin: 0 auto;
+			padding: 0;
+			color: #444;
+		}
+		h3 {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+		h1 {
+			font-size: 6rem;
+			line-height: 6rem;
 		}
 	}
 }
@@ -76,11 +122,11 @@ h2 {
 	z-index: 10;
 	background-image: linear-gradient(fade-out(#FFF, 1), #FFF 50%);
 	h3, h4, p {
-			max-width: 500px;
-			max-width: 50rem;
-			margin-left: auto;
-			margin-right: auto;
-		}
+		max-width: 500px;
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	h3, h4 {
 		text-align: left;
 	}

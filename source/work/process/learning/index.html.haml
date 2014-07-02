@@ -1,6 +1,18 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
 
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.learning
 	= image_tag('process/jpg/process1.jpg')
 	%header.section-header
@@ -41,3 +53,7 @@
 			%li Objective analysis of competitive UX landscape
 			%li Deep insight into your/potential users
 		%p Beyond just informing the consulting and/or design work we do for you, this data has broad uses among your executive team, product professionals and marketing organization.
+%a{:href => asset_url('work/process/envision')}
+	%section.process-section.next-section
+		%h3 Next step:
+		%h1 Envision

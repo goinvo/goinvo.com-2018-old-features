@@ -5,13 +5,15 @@
 @import "base/type";
 
 #site-overlay {
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:3000;
-    
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:3000;
+	
 }
+
+
 
 #main-header {
 	height: 55px;
@@ -19,58 +21,70 @@
 	padding: 9px 31px 0px 31px;
 	transition: background .3s ease;
 
+	#nav-buttons, #nav-buttons-mobile {
+		display:inline-block;
+		vertical-align:middle;
+		position:absolute;
+		right:0;
+		top:-12px;
+		padding-top:15px;
+		
+		.nav-button {
+			padding-right:20px;
+			a {
+				color:$white;
+				
+				span.underline {
+					border-style:solid;
+					border-color:transparentize($white, .7);
+					border-width:0px;
+			  }
+			}
+		}
+	}
+	
+	#mobile-hamburger {
+		cursor:pointer;
+		position:absolute;
+		top:20px;
+		right:31px;
+		display:none;
+	}
+	
+	#nav-buttons-mobile {
+		display:none;
+		background: rgba(18,18,18,.875);
+		top:55px;
+		left:0;
+		.nav-button {
+			display:block;
+			padding-top:10px;
+			padding-bottom:10px;
+			padding-right:10px;
+			padding-left:31px;
+			border-width:0px;
+			border-bottom-width:1px;
+			border-style:solid;
+			border-color: $gray;
+			&:first-child {
+				border-top-width:1px;
+				}
+			a span.underline {
+				border-bottom-width:0px;
+			}
+		}
+	}
+}
 
-    #nav-buttons, #nav-buttons-mobile {
-        display:inline-block;
-        vertical-align:middle;
-        position:absolute;
-        right:0;
-        top:-12px;
-        padding-top:15px;
-        
-        .nav-button {
-            padding-right:20px;
-            a {
-                color:$white;
-                
-                span.underline {
-                    border-style:solid;
-                    border-color:transparentize($white, .7);
-                    border-width:0px;
-              }
-            }
-        }
-    }
-    
-    #mobile-hamburger {
-        cursor:pointer;
-        position:absolute;
-        top:20px;
-        right:31px;
-        display:none;
-    }
-    
-    #nav-buttons-mobile {
-        display:none;
-        background: rgba(18,18,18,.875);
-        top:55px;
-        left:0;
-        .nav-button {
-            display:block;
-            padding-top:10px;
-            padding-bottom:10px;
-            padding-right:10px;
-            padding-left:31px;
-            border-width:0px;
-            border-bottom-width:1px;
-            border-style:solid;
-            border-color: $gray;
-            &:first-child {
-                border-top-width:1px;
-                }
-            a span.underline {
-                border-bottom-width:0px;
-            }
-        }
-    }
+#site-header {
+padding-top: 6px;
+	.tag-line {
+		margin: 0;
+		font-size: 1em;
+		display:inline-block;
+		color:$white;
+		margin-left: 5px;
+		vertical-align: bottom;
+		padding-bottom: 2px;
+	}
 }

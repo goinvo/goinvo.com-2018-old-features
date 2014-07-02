@@ -1,10 +1,22 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
 
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.communication
 	= image_tag('process/jpg/process7.jpg')
 	%header.section-header
-		%h1 Y. Communcation
+		%h1 Communcation
 		%h2 Shared vision is the secret to great success.
 	.section-content
 		%h3 There’s no such thing as too much good communication.
@@ -30,3 +42,7 @@
 			%li Outside perspective on interpersonal and organizational dynamics
 			%li Objective voices to communicate things that challenge internal dogma
 		%p Planned, carefully crafted, thoughtfully delivered communication is an integral part of great organizations. Make it part of yours.
+%a{:href => asset_url('work/process/training')}
+	%section.process-section.next-section
+		%h3 Next step:
+		%h1 Training

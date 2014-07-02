@@ -1,6 +1,17 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
-
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.intro
 	= image_tag('process/jpg/intro.jpg')
 	%header.section-header
@@ -9,3 +20,7 @@
 	.section-content
 		%h3 Our process depends on you.
 		%p We’ve helped every imaginable type of customer make software a core differentiator in their business. The process we outline and the tools we bring to bear depends entirely on the client; on you. It is a product of what your objectives with us are, how you do business, and the particulars of the engagement.
+%a{:href => "process/learning"}
+	%section.process-section.next-section
+		%h3 Next step:
+		%h1 Learning

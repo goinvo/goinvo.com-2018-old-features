@@ -1,6 +1,18 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/process"
 
+.row
+	%header.nav-menu
+		%nav
+			%a.nav-link{:href => asset_url('work/process')} 0. Intro
+			%a.nav-link{:href => asset_url('work/process/learning')} 1. Learning
+			%a.nav-link{:href => asset_url('work/process/envision')} 2. Envision
+			%a.nav-link{:href => asset_url('work/process/blueprint')} 3. Blueprint
+			%a.nav-link{:href => asset_url('work/process/craft')} 4. Craft
+			%a.nav-link{:href => asset_url('work/process/build')} 5. Build
+			%a.nav-link{:href => asset_url('work/process/support')} 6. Support
+			%a.nav-link{:href => asset_url('work/process/communication')} Communication
+			%a.nav-link{:href => asset_url('work/process/training')} Training
 %section.process-section.craft
 	= image_tag('process/jpg/process4.jpg')
 	%header.section-header
@@ -34,3 +46,7 @@
 			%li High-quality visual assets to share with internal stakeholders
 			%li Demonstrable proof of “making it real” creates excitement
 		%p Getting real assets that make your challenges visual with solutions that are desirable shifts the conversation from if you can do it, to when.
+%a{:href => asset_url('work/process/build')}
+	%section.process-section.next-section
+		%h3 Next step:
+		%h1 Build
