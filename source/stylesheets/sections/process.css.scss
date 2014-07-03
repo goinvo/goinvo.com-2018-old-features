@@ -17,11 +17,13 @@ html { // This will need to be moved to another css file to keep things conceise
 		line-height: 3em;
 		margin: 10px;
 		color: #888;
-		padding: 10px 20px;
+		padding: 5px 20px;
 		font-size: 1.25em;
-		transition: color 300ms ease;
+		transition: color 300ms ease, border 300ms ease;
+		border-bottom: 1px solid #CCC;
 		&:hover {
 			color: #425f8e;
+			border-bottom: 5px solid #425f8e;
 		}
 	}
 }
