@@ -20,7 +20,7 @@ body {
 	position: relative;
 
 	&.one {
-		height: 60%;
+		height: 50%;
 		.row {
 			position: relative;
 			top: 40%;
@@ -32,9 +32,11 @@ body {
 		}
 	}
 
-	&.two {
-		height: 40%;
+	&.two, &.three {
+		height: 50%;
 		background: #333;
+		float: left;
+		width: 50%;
 		.row {
 			position: relative;
 			top: 10%;
