@@ -123,7 +123,6 @@ div.feature-article-section {
 			}   
 		}
 	}
-
 }
 
 
@@ -141,6 +140,8 @@ div.feature-article-section {
 	max-height: 460px;
 	min-height: 300px;
 	padding-top: 35%;
+	position: relative;
+	z-index: 1;
 	
 	.title {
 		position: absolute;

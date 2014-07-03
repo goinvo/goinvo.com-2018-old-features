@@ -15,18 +15,13 @@ html { // This will need to be moved to another css file to keep things conceise
 	}
 	a {
 		line-height: 3em;
-		border-radius: 40px;
 		margin: 10px;
 		color: #888;
 		padding: 10px 20px;
 		font-size: 1.25em;
-		background: #DDD;
-		box-shadow: 0 2px 0 #CCC;
-		transition: color 300ms ease, background 300ms ease, box-shadow 300ms ease;
+		transition: color 300ms ease;
 		&:hover {
-			background: #425f8e;
-			color: #EEE;
-			box-shadow: 0 2px 0 lighten(#425f8e, 40%);
+			color: #425f8e;
 		}
 	}
 }
