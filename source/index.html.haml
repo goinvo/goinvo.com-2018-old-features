@@ -1,16 +1,24 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage"
+	= javascript_include_tag "fittext"
+:javascript
+	$(document).ready(function(){
+		$('.title-wrap h2').fitText(1.3);
+		$('.title-wrap h3').fitText(2);
+		$('.two .title-wrap h2').fitText(1.8);
+		$('.two .title-wrap h3').fitText(2.4);
+	});
 .homepage-header.one
 	.row
 		%a{:href => "features/world-cup-history-visualized/"}
-			.medium-12.small-12.columns
+			.title-wrap
 				.title
 					%h2 World Cup History Visualized:
 					%h3 84 years and 77 teams
 .homepage-header.two
 	.row
 		%a{:href => "features/world-cup-history-visualized/"}
-			.medium-12.small-12.columns
+			.title-wrap
 				.title
 					%h2 Something else we don't know about.
 					%h3 It's still a mystery &hellip;

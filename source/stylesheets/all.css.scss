@@ -3,7 +3,6 @@
 // Import bases.
 @import "base/type";
 @import "base/mixins";
-@import "queries";
 @import "settings";
 @import "foundation.scss";
 
@@ -11,3 +10,6 @@
 @import "layout";
 @import "header";
 @import "elements";
+
+//Handle Queries Last
+@import "queries";

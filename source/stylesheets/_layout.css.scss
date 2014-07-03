@@ -25,7 +25,7 @@ $sidebar-letter-spacing:0.03rem;
 }
 
 body {
-	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-header #nav-buttons .nav-button a, #nav-buttons-mobile, #nav-buttons-mobile a {
+	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-header #nav-buttons a.nav-button, #nav-buttons-mobile, #nav-buttons-mobile a {
 		font-size: $body-font-size;
 		letter-spacing: $body-letter-spacing;
 		line-height: $body-line-height;

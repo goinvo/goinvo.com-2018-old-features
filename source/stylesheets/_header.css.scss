@@ -29,17 +29,9 @@
 		top:-12px;
 		padding-top:15px;
 		
-		.nav-button {
+		a {
 			padding-right:20px;
-			a {
-				color:$white;
-				
-				span.underline {
-					border-style:solid;
-					border-color:transparentize($white, .7);
-					border-width:0px;
-			  }
-			}
+			color: $white;
 		}
 	}
 	
