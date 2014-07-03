@@ -45,7 +45,7 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 - client: "DataXu"
-  main_image: "dataxu-campaign-dashboard-user-interface.jpg"
+  main_image: "dataxu-campaign-dashboard-user-interface-tablet.jpg"
   practice_area_names: "Enterprise, Marketing Optimization"
   description: "Real-time decision engine for marketing investments."
   budget: 200000 #Verify
@@ -73,7 +73,7 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 - client: "Numera"
-  main_image: "numera-facebook-application-design.jpg"
+  main_image: "numera-iphone-ios-design.jpg"
   practice_area_names: "Health"
   description: "Behavioural data with rich visualizations and lifestyle recommendations."
   budget: 100000 #Verify
