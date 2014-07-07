@@ -1,5 +1,33 @@
 @import "base/mixins";
 @import "base/colors";
 
+ul.the-article-nav {
+    list-style:none;
+    li {
+        display: inline-block;
+        padding: 5px 20px;
+        border-width:1px;
+        
+        border-style:solid;
+        border-color: $gray;
+        
+    }   
+}
 
+ul.stat-label, ul.stat-data {
+    list-style:none;
+    li {
+        text-align:center;
+        display:inline-block;
+        width: 45px;
+    }   
+}
+
+ul.stat-data {
+    margin-top: 0px;   
+}
+
+ul.stat-label {
+    margin-bottom:5px;   
+}
     
