@@ -15,11 +15,11 @@ body {
 
 .homepage-header {
 	width: 100%;
-	background: linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(../../images/soccer_dataviz.jpg);
-	background-size: cover;
 	position: relative;
 
 	&.one {
+		background: linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(../../images/soccer_dataviz.jpg);
+		background-size: cover;
 		height: 50%;
 		.row {
 			position: relative;
@@ -43,7 +43,7 @@ body {
 		}
 		.title {
 			h2, h3, h4 {
-				color: #000;
+				color: #444;
 			}
 			h2 {
 				font-size: 40px;
@@ -52,6 +52,33 @@ body {
 				line-height: 4rem;
 			}
 		}	
+	}
+
+	&.two {
+		background-image: image-url("home/hgraph_large.png");
+		background-color: #FFF;
+		background-repeat: no-repeat;
+		background-position: center -350%;
+		transition: background-position 300ms ease;
+		&:hover {
+			background-position: center -325%;
+		}
+		.title {
+			h2 {
+				font-size: 25px;
+				font-size: 2.5rem;
+				line-height: 25px;
+				line-height: 2.5rem;
+				font-weight: 400;
+			}
+			h3 {
+				font-size: 18px;
+				font-size: 1.8rem;
+				line-height: 18px;
+				line-height: 1.8rem;
+				font-weight: 400;
+			}
+		}
 	}
 
 	.title-wrap {
@@ -101,5 +128,5 @@ body {
 #main-footer {
 	position: absolute;
 	bottom: 0;
-	background: fade-out(#000, 0.25);
+	background: fade-out(#000, 0.1);
 }
