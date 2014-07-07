@@ -1,51 +1,48 @@
 - content_for(:page_head) do
-  = stylesheet_link_tag "sections/simple-case-studies"
-  = javascript_include_tag 'worknav'
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
 - client = client_for_name("RueLaLa")
-    
+		
 .row
-  .medium-3.small-12.column
-    %h1.client{style: "color: #{client.primary_color}"} RueLaLa
-    
-    %h6.subheader
-      RESULTS
-    
-    %p 
-    
-    %p.quote
-      ?
-    %h6.subheader.name
-      -
-    
-    %h6.subheader DETAILS
-    %ul
-      %li Ethnographic research to understand RueLaLa’s high margin customer
-      %li Conceptualizing a software experience that emphasizes exclusivity
-      %li Total design of the RueLaLa system, with UX support through production and launch
-      %li Over 6 months for the core research and design, followed up by months of support
-    
-    %h6.subheader PROJECT TYPE
-    
-    %p.caption UX Strategy & Design
-    
-    .similar-project-container
-      %h6.subheader Have a similar project?
-      = link_to 'Contact Us', asset_url('contact'), class: 'button radius'
-    
-  .medium-9.small-12.column
-    %img{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-user-interface.jpg"}
-    %p.caption /
-    %div
-      %img{alt: "", src: "../../images/clients/ruelala/ruelala-current-workflow-documentation.jpg"}
-    %p.caption /
-    %div
-      %img{alt: "", src: "../../images/clients/ruelala/ruelala-storemanager-user-experience-workflow.jpg"}
-    %p.caption /
-    %div
-      %img{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-info-visualization.jpg"}
-    %p.caption /
+	.medium-3.small-12.column
+		%h1.client{style: "color: #{client.primary_color}"} RueLaLa
+		
+		%h6.subheader Results
+		
+		%p RueLaLa's vision was to grow from a $250MM to a $2B company. Invo reimagined how they orchestrate their business, providing the platform for such audacious growth. 
+		
+		%p.quote Need quote.
+		%h6.subheader.name NO NAME!
+		
+		%h6.subheader Details
+		%ul
+			%li Ethnographic research to understand RueLaLa’s high margin customer
+			%li Conceptualizing a software experience that emphasizes exclusivity
+			%li Total design of the RueLaLa system, with UX support through production and launch
+			%li Over 6 months for the core research and design, followed up by months of support
+		
+		%h6.subheader Project Type
+		
+		%p.caption UX Strategy & Design
+		
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+		
+	.medium-9.small-12.column
+		%img{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-user-interface.jpg"}
+		%p.caption /
+		%div
+			%img{alt: "", src: "../../images/clients/ruelala/ruelala-current-workflow-documentation.jpg"}
+		%p.caption /
+		%div
+			%img{alt: "", src: "../../images/clients/ruelala/ruelala-storemanager-user-experience-workflow.jpg"}
+		%p.caption /
+		%div
+			%img{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-info-visualization.jpg"}
+		%p.caption /
 .row#next-project
-  .medium-6.small-12.small-centered.columns
-    .next-title
-      Next Project: 
-      %span#next
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project: 
+			%span#next
