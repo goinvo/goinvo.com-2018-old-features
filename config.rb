@@ -4,10 +4,10 @@
 
 # Change Compass configuration
 compass_config do |config|
-  # Require any additional compass plugins here.
-  config.add_import_path "bower_components/foundation/scss"
-  
-  config.output_style = :compact
+	# Require any additional compass plugins here.
+	config.add_import_path "bower_components/foundation/scss"
+	
+	config.output_style = :compact
 end
 
 ###
@@ -56,8 +56,8 @@ activate :autoprefixer
 
 # Add bower's directory to sprockets asset path
 after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+	sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
 
@@ -67,26 +67,26 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  activate :minify_css
+	# For example, change the Compass output style for deployment
+	activate :minify_css
 
-  # Minify Javascript on build
-  activate :minify_javascript
-    
+	# Minify Javascript on build
+	activate :minify_javascript
+		
 
-  # Enable cache buster
-  #activate :cache_buster
+	# Enable cache buster
+	#activate :cache_buster
 
-  # Use relative URLs
-  activate :relative_assets
+	# Use relative URLs
+	activate :relative_assets
 
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  #activate :smusher
+	# Compress PNGs after build
+	# First: gem install middleman-smusher
+	# require "middleman-smusher"
+	#activate :smusher
 
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
+	# Or use a different image path
+	# set :http_path, "image"
 end
 
 require "lib/link_formatters"

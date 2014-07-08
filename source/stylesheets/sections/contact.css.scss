@@ -2,7 +2,7 @@
 @import "base/type";
 
 body {
-	background-image: image-url("../../images/google_map.png");
+	background-image: url('../../images/google_map.png');
 	background-size: cover;   
 	background-repeat: no-repeat;
 }

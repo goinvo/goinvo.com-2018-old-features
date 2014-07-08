@@ -19,6 +19,9 @@ $sidebar-letter-spacing:0.03rem;
  **  Main Layout
  ************************************/
 
+html {
+	background: #000;
+}
 
 #page-wrapper {
 	position: relative;
@@ -245,7 +248,7 @@ div.feature-article-section {
 
 	.footerContent {
 		text-align: right;
-		
+		padding: 0 5em;
 		p.address {
 			margin-top: 0px;
 			margin-bottom: 0px; 

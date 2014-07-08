@@ -25,33 +25,32 @@
 			#site-overlay
 				%header#main-header
 					%header#site-header
-						.row
-							.medium-12.small-12.columns
-								= link_to( image_tag('logo-header.png', alt: "Involution Studios"), asset_url('/'), id: 'site-title')
-								.tag-line Crafting exceptional software for progressive companies
-								%nav#nav-buttons
-									%a.nav-button{:href => asset_url('work')} Work
-									-# %a.nav-button{:href => asset_url('products')}
-									%a.nav-button{:href => asset_url('studio')} Studio
-									%a.nav-button{:href => asset_url('team')} Team
-									%a.nav-button{:href => asset_url('careers')} Careers
-									%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
-									%a.nav-button{:href => asset_url('contact')} Contact
-						#mobile-hamburger
-							=image_tag('hamburger.svg');
-						%nav#nav-buttons-mobile
-							%a.nav-button{:href => asset_url('work')} Work
-							-# %a.nav-button{:href => asset_url('products')}
-							%a.nav-button{:href => asset_url('studio')} Studio
-							%a.nav-button{:href => asset_url('team')} Team
-							%a.nav-button{:href => asset_url('careers')} Careers
-							%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
-							%a.nav-button{:href => asset_url('contact')} Contact
+						.medium-12.small-12.columns
+							= link_to( image_tag('logo-header.png', alt: "Involution Studios"), asset_url('/'), id: 'site-title')
+							.tag-line Crafting exceptional software for progressive companies
+							%nav#nav-buttons
+								%a.nav-button{:href => asset_url('work')} Work
+								-# %a.nav-button{:href => asset_url('products')}
+								%a.nav-button{:href => asset_url('studio')} Studio
+								%a.nav-button{:href => asset_url('team')} Team
+								%a.nav-button{:href => asset_url('careers')} Careers
+								%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
+								%a.nav-button{:href => asset_url('contact')} Contact
+					#mobile-hamburger
+						=image_tag('hamburger.svg');
+					%nav#nav-buttons-mobile
+						%a.nav-button{:href => asset_url('work')} Work
+						-# %a.nav-button{:href => asset_url('products')}
+						%a.nav-button{:href => asset_url('studio')} Studio
+						%a.nav-button{:href => asset_url('team')} Team
+						%a.nav-button{:href => asset_url('careers')} Careers
+						%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
+						%a.nav-button{:href => asset_url('contact')} Contact
 			#main-container
 				.container.content
 					= yield
 			%footer#main-footer
-				.row.footerContent
+				.footerContent
 					%p.mobile-hide.about-us
 						-# Crafting exceptional software for progressive companies
 					%p#phoneNum

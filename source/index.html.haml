@@ -2,72 +2,40 @@
 	= stylesheet_link_tag "sections/homepage"
 	:javascript
 		$(document).ready(function(){
+			$('.homepage-header.two').attr('id', 'hot-swap');
 			function getRandomInt(min, max) {
 				return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
 			var rand = getRandomInt(1, 3);
 			if (rand === 1) {
+				$('.homepage-header.two').addClass('three-m');
 				$('.homepage-header.two h2').html('&ldquo;Invo designed our way to a $150M exit.&rdquo;');
 				$('.homepage-header.two h3').html('George Moon, 3M Vice President');
-				$('.homepage-header.two').css({
-					'background-position': 'center center',
-					'background-size': '100%',
-					'background-size': 'cover',
-					'background-image': 'url(../../images/home/3m.jpg)',
-					'transition': 'none'
-				});
-				$('.homepage-header.two .title-wrap').css({
-					'background-color': 'rgba(255,255,255,0.65)',
-					'padding': '1em'
-				});
 			} else if (rand === 2) {
+				$('.homepage-header.two').addClass('info-b');
 				$('.homepage-header.two h2').html('&ldquo;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&rdquo;');
 				$('.homepage-header.two h3').html('Serban Georgescu MD, Infobionic Director of Clinical Development');
-				$('.homepage-header.two').css({
-					'background-position': 'center center',
-					'background-size': '100%',
-					'background-size': 'cover',
-					'background-image': 'url(../../images/home/ib.png)',
-					'transition': 'none'
-				});
-				$('.homepage-header.two .title-wrap').css({
-					'background-color': 'rgba(255,255,255,0.65)',
-					'padding': '1em'
-				});
 			} else {
+				$('.homepage-header.two').addClass('walgreens');
 				$('.homepage-header.two h2').html('&ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;');
 				$('.homepage-header.two h3').html('Igor Gershfang, Walgreens Emerging Tech Director');
-				$('.homepage-header.two').css({
-					'background-position': 'center center',
-					'background-size': '100%',
-					'background-size': 'cover',
-					'background-image': 'url(../../images/home/image.png)',
-					'transition': 'none'
-				});
-				$('.homepage-header.two .title-wrap').css({
-					'background-color': 'rgba(255,255,255,0.65)',
-					'padding': '1em'
-				});
 			}
 		});
 
 .homepage-header.one
-	.row
-		%a{:href => "features/world-cup-history-visualized/"}
-			.title-wrap
-				.title
-					%h2 World Cup History Visualized:
-					%h3 84 years and 77 teams
+	%a{:href => "features/world-cup-history-visualized/"}
+		.container
+			.title
+				%h2 World Cup History Visualized:
+				%h3 84 years and 77 teams
 .homepage-header.two
-	.row
-		.title-wrap
+	%a{:href => "features/world-cup-history-visualized/"}
+		.container
 			.title
 				%h2 HGraph
 				%h3 Your health in one picture.
 .homepage-header.three
-	.row
-		%a{:href => "features/world-cup-history-visualized/"}
-			.title-wrap
-				.title
-					-# Default text, see script above.
-					%h2 Our Culture
+	%a{:href => "features/world-cup-history-visualized/"}
+		.container
+			.title
+				%h2 Our Culture

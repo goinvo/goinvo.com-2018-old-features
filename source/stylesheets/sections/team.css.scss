@@ -9,7 +9,7 @@ $ethics-padding: 30px;
 
 
 .hero {
-    background-image: image-url('../../images/team/boston-user-experience-company.jpg');
+    background-image: url('../../images/team/boston-user-experience-company.jpg');
     h2 {
         @include shadow-headline();
     }
