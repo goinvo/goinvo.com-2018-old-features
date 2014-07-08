@@ -8,6 +8,7 @@
   twitter_username: "jsonin"
   github_username: "jsonin"
   photo: juhan_sonin.jpg
+
 - first_name: Eric
   last_name: Benoit
   title: Creative Director
@@ -19,6 +20,7 @@
   fitbit_username: "276GNC"
   dropbox_username: "benwa02@gmail.com"
   photo: eric_benoit.jpg
+
 - first_name: Sarah
   last_name: Kaiser
   title: Artist
@@ -27,11 +29,13 @@
   linkedin_url: "http://www.linkedin.com/pub/sarah-kaiser/27/bb1/315"
   twitter_username: "DamnTorren"
   photo: sarah_kaiser.jpg
+
 - first_name: "Your Career"
   last_name: Awaits!
   title: "We're always looking for amazing talent."
   bio: "<a class='designerButton' id='team-design-button'>Designer</a><a class='engineerButton' id='team-engine-button'>Engineer</a>"
   photo: career_silhouette.jpg
+
 - first_name: Jennifer
   last_name: Patel
   title: "Designer, Engineer"
@@ -40,6 +44,7 @@
   twitter_username: "catamariface"
   github_username: "jen-p"
   photo: jennifer_patel.jpg
+
 - first_name: Ben
   last_name: Salinas
   title: "Designer, Engineer"
@@ -51,6 +56,7 @@
   fitbit_username: "25WCYP"
   dropbox_username: "ben@goinvo.com"
   photo: ben_salinas.jpg
+
 - first_name: Roger
   last_name: Zhu
   title: Designer
@@ -59,6 +65,7 @@
   photo: roger_zhu.jpg
   linkedin_url: "http://www.linkedin.com/pub/roger-zhu/16/660/528"
   dropbox_username: "roger@goinvo.com"
+
 - first_name: Sein
   last_name: Woo
   title: Designer
@@ -70,6 +77,7 @@
   fitbit_username: "27RVYS"
   dropbox_username: "sein@goinvo.com"
   photo: sein_woo.jpg
+
 - first_name: Adam
   last_name: Pere
   title: Engineer
@@ -78,6 +86,7 @@
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
   photo: "adam_pere.jpg"
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
@@ -86,6 +95,7 @@
   twitter_username: "jonfollett"
   github_username: "jonfollett"
   photo: jon_follett.jpg
+
 - first_name: Eli
   last_name: Rodriguez
   title: Business Admin
@@ -95,6 +105,7 @@
   dropbox_username: "eli@wecreategoodness.com"
   mbti: ESFJ
   photo: eli_rodriguez.jpg
+
 - first_name: Emily
   last_name: Twaddell
   title: Studio Manager
@@ -102,6 +113,7 @@
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
   photo: emily_twaddell.jpg
+
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder

@@ -56,8 +56,11 @@ body {
 		}
 		.title {
 			position: relative;
-			top: 35%;
+			top: 18%;
 			text-align: center;
+			@media only screen and (max-width: 1020px) {
+				
+			}
 			@media only screen and (max-width: 1020px) {
 				top: 0;
 				padding: 5em;
@@ -98,6 +101,20 @@ body {
 				line-height: 2.0rem;
 				font-weight: 400;
 			}
+			@media only screen and (max-width: 1470px) {
+				h2 {
+					font-size: 22px;
+					font-size: 2.2rem;
+					line-height: 22px;
+					line-height: 2.2rem;
+				}
+				h3 {
+					font-size: 14px;
+					font-size: 1.4rem;
+					line-height: 14px;
+					line-height: 1.4rem;
+				}
+			}
 			.light-button {
 				display: inline-block;
 				margin-top: 15px;
@@ -131,7 +148,7 @@ body {
 			background-image: url('../../images/home/ib.jpg');
 		}
 		&.walgreens {
-			background-image: url('../../images/home/walgreens.jpg');
+			background-image: url('../../images/home/hgraph_ipad.jpg');
 		}
 		.container {
 			h2, h3 {

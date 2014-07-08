@@ -11,6 +11,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "Applause"
   practice_area_names: "Enterprise"
   description: ""
@@ -19,6 +20,7 @@
   story_template: false
   hide_in_layout: true
   logo: applause.jpg
+
 - client: "DNC"
   practice_area_names: "Consumer"
   description: ""
@@ -27,6 +29,7 @@
   story_template: false
   hide_in_layout: true
   logo: dnc.jpg
+
 - client: "Empirix"
   practice_area_names: "Enterprise"
   description: ""
@@ -40,6 +43,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "Health Axioms"
   practice_area_names: "Consumer"
   description: ""
@@ -48,14 +52,7 @@
   story_template: false
   hide_in_layout: true
   logo: healthaxioms.jpg
-- client: "hGraph"
-  practice_area_names: "Quantified Self"
-  description: ""
-  budget: 50000 #Verify
-  repeat_client: true
-  story_template: false
-  hide_in_layout: true
-  logo: hgraph.jpg
+
 - client: "Microsoft"
   practice_area_names: "Consumer"
   description: ""
@@ -69,6 +66,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "Oracle"
   practice_area_names: "Enterprise"
   description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
@@ -77,6 +75,7 @@
   story_template: false
   hide_in_layout: true
   logo: oracle.jpg
+
 - client: "Personal Genome Project"
   practice_area_names: "Health"
   description: ""
@@ -85,6 +84,7 @@
   story_template: false
   hide_in_layout: true
   logo: personalgenomeproject.jpg
+
 - client: "SegTerra"
   practice_area_names: "Quantified Self"
   description: ""
@@ -93,6 +93,7 @@
   story_template: false
   hide_in_layout: true
   logo: segterra.jpg
+
 - client: "SSI"
   practice_area_names: "Enterprise, Marketing Optimization"
   description: ""
@@ -101,6 +102,7 @@
   story_template: false
   hide_in_layout: true
   logo: ssi.jpg
+
 - client: "Strength Matters"
   practice_area_names: "Enterprise"
   description: ""
@@ -109,6 +111,7 @@
   story_template: false
   hide_in_layout: true
   logo: strengthmatters.jpg
+
 - client: "Telerik"
   practice_area_names: "Consumer"
   description: ""
@@ -117,6 +120,7 @@
   story_template: false
   hide_in_layout: true
   logo: telerik.jpg
+
 - client: "Town Visual Budget"
   practice_area_names: "Consumer"
   description: ""
@@ -125,6 +129,7 @@
   story_template: false
   hide_in_layout: true
   logo: townvisualbudget.jpg
+
 - client: "University of Missouri"
   practice_area_names: "Health"
   description: ""
@@ -133,6 +138,7 @@
   story_template: false
   hide_in_layout: true
   logo: universityofmissouri.jpg
+
 - client: "Vivox"
   practice_area_names: "Consumer"
   description: ""
@@ -141,6 +147,7 @@
   story_template: false
   hide_in_layout: true
   logo: vivox.jpg
+
 - client: "Yahoo"
   practice_area_names: "Enterprise"
   description: ""

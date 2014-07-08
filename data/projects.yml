@@ -30,6 +30,7 @@
       during_week: 40
     - description: "v01 launched, 50% efficiency gains."
       during_week: 48
+
 - client: "Affinnova"
   main_image: "concept-studio-product-blueprint-stickies.jpg"
   practice_area_names: "Enterprise, Marketing Optimization"
@@ -44,6 +45,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "DataXu"
   main_image: "dataxu-campaign-dashboard-user-interface-tablet.jpg"
   practice_area_names: "Enterprise, Marketing Optimization"
@@ -58,6 +60,17 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+- client: "hGraph"
+  main_image: "hgraph_your_health_in_one_picture.jpg"
+  practice_area_names: "Health"
+  description: "Open source solutiuon for visualizing a complete range of health metrics."
+  budget: 50000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: hgraph.jpg
+
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
   practice_area_names: "Consumer"
@@ -72,6 +85,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
   practice_area_names: "Health"
@@ -86,6 +100,7 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
 - client: "RueLaLa"
   main_image: "ruelala-calendar-user-interface.jpg"
   practice_area_names: "Enterprise"

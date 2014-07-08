@@ -27,10 +27,11 @@
 		- data.projects.each_slice(3).each do |projects|
 			.row		
 				-projects.each do |project|
-					- next if project.hide_in_layout or project.phases.blank?
+					- next if project.hide_in_layout?
 					.medium-4.small-12.columns.project{data: {project: true, project_budget: project.budget, project_url: "./../clients/#{project.client.downcase}", project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
 						.project-image{id:"client#{project.client}", style: "background-image:url(./../images/clients/#{project.client.downcase}/#{project.main_image});"}
 						%h3= project.client
+						%p.description= project.description
 						%p.practice-areas
 							- x = 1
 							- practice_areas(project).each do |area|
@@ -39,4 +40,3 @@
 								- if x < total
 									= "+"
 								- x = x + 1
-						%p.description= project.description
