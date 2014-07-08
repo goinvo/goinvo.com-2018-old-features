@@ -7,6 +7,9 @@ $body-letter-spacing: 0.03em;
 
 html, body {
 	height: 100%;
+	@media only screen and (max-width: 1020px) {
+		height: auto;
+	}
 }
 
 body {
@@ -23,12 +26,19 @@ body {
 		height: 50%;
 		.container {
 			height: 100%;
+			@media only screen and (max-width: 1020px) {
+				height: auto;
+			}
 		}
 		.title {
 			position: relative;
 			top: 40%;
 			h2, h3, h4 {
 				color: $white;
+			}
+			@media only screen and (max-width: 1020px) {
+				top: 0;
+				padding: 10em 5em 5em;
 			}
 		}
 	}
@@ -40,13 +50,20 @@ body {
 		width: 50%;
 		.container {
 			height: 100%;
+			@media only screen and (max-width: 1020px) {
+				height: auto;
+			}
 		}
 		.title {
 			position: relative;
 			top: 35%;
+			text-align: center;
+			@media only screen and (max-width: 1020px) {
+				top: 0;
+				padding: 5em;
+			}
 			h2, h3, h4 {
 				color: #444;
-				text-align: center;
 			}
 			h2 {
 				font-size: 40px;
@@ -58,13 +75,13 @@ body {
 	}
 
 	&.two {
-		background-image: image-url("home/hgraph_large.jpg");
+		background-image: image-url("home/hgraph_large.png");
 		background-color: #FFF;
 		background-repeat: no-repeat;
-		background-position: center -350%;
+		background-position: center -140%;
 		transition: background-position 300ms ease;
 		&:hover {
-			background-position: center -325%;
+			background-position: center -150%;
 		}
 		.title {
 			h2 {
@@ -80,6 +97,16 @@ body {
 				line-height: 20px;
 				line-height: 2.0rem;
 				font-weight: 400;
+			}
+			.light-button {
+				display: inline-block;
+				margin-top: 15px;
+				padding: 0.65em 0.75em;
+				border: 1px solid #FFF;
+				border-radius: 5px;
+				color: #FFF;
+				font-size: 22px;
+				text-shadow: 1px 1px 0 #444;
 			}
 		}
 	}
@@ -146,6 +173,7 @@ body {
 }
 
 #main-container {
+	@include clearfix();
 	height: 100%;
 	.container {
 		position: relative;
@@ -157,4 +185,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	background: fade-out(#000, 0.1);
+	@media only screen and (max-width: 1020px) {
+		position: static;
+	}
 }

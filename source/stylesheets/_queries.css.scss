@@ -33,7 +33,7 @@
 	div.feature-article-section .title .feature-image{
 		display:block;   
 	}
-	#main-header, #main-container .homepage-header .title, #main-footer .footer-content {
+	#main-header, #main-container .homepage-header .title, #main-footer .footerContent {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
@@ -43,13 +43,24 @@
 	div.social-card.photo.landscape.super-long {
 		min-width: 660px;  
 	}
-	.homepage-header {
-		&.one {
-			h2, h3 {
-				font-size: 90%;
+
+	#main-container .homepage-header {
+		&.one .title{
+			h2 {
+				font-size: 45px;
+				font-size: 4.5rem;
+				line-height: 45px;
+				line-height: 4.5rem;
 			}
 		}
+		&.two, &.three {
+			width: 100%;
+		}
+		#main-footer {
+			position: relative;
+		}
 	}
+	
 }
 
 @media only screen and (max-width: 1019px) {
@@ -186,6 +197,22 @@
 	// Bring back that tagline
 	#site-header .tag-line {
 		display: inline-block;
+	}
+	#main-container .homepage-header {
+		&.one .title{
+			h2 {
+				font-size: 35px;
+				font-size: 3.5rem;
+				line-height: 35px;
+				line-height: 3.5rem;
+			}
+			h3 {
+				font-size: 28px;
+				font-size: 2.8rem;
+				line-height: 28px;
+				line-height: 2.8rem;
+			}
+		}
 	}
 }
 
