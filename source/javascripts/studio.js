@@ -11,6 +11,7 @@ function populateSocialMedia(listLength, offset) {
         $.each(data, function(){
             numEvents++;
             $('#the-studio div.content').append(generateEventHTML(this));
+            $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
         });
         $( ".social-card.photo " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes flickr social cards links (open in new tab)
     }).done(function() { // Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
