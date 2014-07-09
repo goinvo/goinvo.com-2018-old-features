@@ -15,7 +15,7 @@ function populateSocialMedia(listLength, offset) {
         $( ".social-card.photo " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes flickr social cards links (open in new tab)
     }).done(function() { // Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
             $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
-            setTimeout( function() { $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );}, 2000);  // I don't like doing this but I'm waiting xxxms after and then reloading the grid. This is to (hopefully ensure that the newest batch of images has been loaded [and therefore masonry can get its width and height].
+            setTimeout( function() { $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );}, 100);  // I don't like doing this but I'm waiting xxxms after and then reloading the grid. This is to (hopefully ensure that the newest batch of images has been loaded [and therefore masonry can get its width and height].
     });
 }
 
@@ -25,7 +25,7 @@ function generateEventHTML( data) {
     var temp = "";
     var start = 0;
     var stop = 0;
-    
+    try {
     if(data.type == "twitter") {
         if(data.media_url.length > 0) {
             social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../images/twitter_foot.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-US")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
@@ -47,6 +47,13 @@ function generateEventHTML( data) {
     }
     else if(data.type == "soundcloud") {
         social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/soundcloud_foot.svg' width = '35px' height = 'auto'></div><a href = '" + data.url + "' class = 'social-handle'>" + data.username + "<br>" + new Date(data.date).toLocaleDateString("en-US") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+    }
+    }
+    catch(err){
+        console.log("-------");
+        console.log("Error: The following event object is throwing an error when trying to access its contents. The most likely cause is that the event was added to the event database before the event's user was added to the user database. (Note: just adding a user to the twitter list or zapier is not enough when adding a new employee. You must also add the user to the user database. If there are event objects that do not contain a user object, you must either delete the event object or add a user object following the same syntax as other events.");
+        console.log(data);   
+        console.log("-------");
     }
     return social;
 }
