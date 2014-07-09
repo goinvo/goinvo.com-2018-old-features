@@ -7,12 +7,12 @@
 		.title
 			%h2 Our Work
 			%h3 From monitoring Atrial Fibrillation to optimizing marketing campaigns.
-	.row
-		.medium-2.small-12.columns
-			%select{name: "practice_area"}
-				%option{value: ""} All Practice Areas
-				- data.practice_areas.each do |practice_area|
-					%option{value: practice_area}= practice_area
+	-# .row
+	-# 	.medium-2.small-12.columns
+	-# 		%select{name: "practice_area"}
+	-# 			%option{value: ""} All Practice Areas
+	-# 			- data.practice_areas.each do |practice_area|
+	-# 				%option{value: practice_area}= practice_area
 				
 		.medium-2.small-12.columns
 			%select{name: "budget"}

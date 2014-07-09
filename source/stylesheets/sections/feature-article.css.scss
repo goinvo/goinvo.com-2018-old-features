@@ -1,33 +1,88 @@
 @import "base/mixins";
 @import "base/colors";
 
-ul.the-article-nav {
-    list-style:none;
-    li {
-        display: inline-block;
-        padding: 5px 20px;
-        border-width:1px;
-        
-        border-style:solid;
-        border-color: $gray;
-        
-    }   
-}
-
 ul.stat-label, ul.stat-data {
-    list-style:none;
-    li {
-        text-align:center;
-        display:inline-block;
-        width: 45px;
-    }   
+	list-style:none;
+	li {
+		text-align:center;
+		display:inline-block;
+		width: 45px;
+	}   
 }
 
 ul.stat-data {
-    margin-top: 0px;   
+	margin-top: 0px;   
 }
 
 ul.stat-label {
-    margin-bottom:5px;   
+	margin-bottom:5px;   
 }
-    
+
+header.hero {
+	background-image: url('../../images/soccer_dataviz.jpg');
+	margin-bottom: 4em;
+	.title {
+		padding-bottom: 60px;
+		h2 {
+			@include shadow-headline();
+		}
+		h3 {
+			@include shadow-subline();
+		}
+	}
+}
+
+#feature-article {
+	> .row {
+		max-width: 600px;
+		max-width: 60rem;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	#caption {
+		padding-top: 2em;
+		color: #888;
+	}
+	.article-nav {
+		color: #888;
+		background: #EEE;
+		padding: 2em;
+		margin: 2.5em auto;
+		text-align: center;
+		p {
+			font-size: 28px;
+		}
+	}
+	.the-article-nav {
+		list-style: none;
+		margin: 0;
+		@include clearfix();
+		li {
+			font-size: 22px;
+			width: calc(100% / 11);
+			float: left;
+		}
+	}
+	aside {
+		p {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		&.left {
+			float: left;
+			max-width: 300px;
+		}
+		&.right {
+			float: right;
+			max-width: 300px;
+		}
+		&.image {
+			max-width: 400px;
+			.caption {
+				margin-top: 1em;
+			}
+		}
+	}
+}

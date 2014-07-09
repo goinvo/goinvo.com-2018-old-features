@@ -31,6 +31,16 @@
     - description: "v01 launched, 50% efficiency gains."
       during_week: 48
 
+- client: "hGraph"
+  main_image: "hgraph_your_health_in_one_picture_thumb.jpg"
+  practice_area_names: "Health"
+  description: "Open source solution for visualizing a complete range of health metrics."
+  budget: 50000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: hgraph.jpg
+
 - client: "Affinnova"
   main_image: "concept-studio-product-blueprint-stickies.jpg"
   practice_area_names: "Enterprise, Marketing Optimization"
@@ -61,16 +71,6 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "hGraph"
-  main_image: "hgraph_your_health_in_one_picture_thumb.jpg"
-  practice_area_names: "Health"
-  description: "Open source solutiuon for visualizing a complete range of health metrics."
-  budget: 50000 #Verify
-  repeat_client: true
-  story_template: true
-  hide_in_layout: false
-  logo: hgraph.jpg
-
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
   practice_area_names: "Consumer"
@@ -89,7 +89,7 @@
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
   practice_area_names: "Health"
-  description: "Behavioural data with rich visualizations and lifestyle recommendations."
+  description: "Behavioral data with rich visualizations and lifestyle recommendations."
   budget: 100000 #Verify
   duration: 14 #Verify
   repeat_client: true
