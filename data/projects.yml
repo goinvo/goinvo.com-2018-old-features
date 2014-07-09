@@ -62,7 +62,7 @@
       service_names: "Envision, Craft"
 
 - client: "hGraph"
-  main_image: "hgraph_your_health_in_one_picture.jpg"
+  main_image: "hgraph_your_health_in_one_picture_thumb.jpg"
   practice_area_names: "Health"
   description: "Open source solutiuon for visualizing a complete range of health metrics."
   budget: 50000 #Verify

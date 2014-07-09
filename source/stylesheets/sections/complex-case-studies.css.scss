@@ -1,8 +1,17 @@
 @import "../base/core";
 
 article#complex-case {
+    &.three-m {
+        header.hero {
+            background-image: url('../../images/clients/3m/3m-user-interface-sketches-grid.jpg');
+        }
+    }
+    &.hgraph {
+        header.hero {
+            background-image: url('../../images/clients/hgraph/hgraph_ipad_irl.jpg');
+        }
+    }
     header.hero {
-        // background-image: url('../../images/clients/3m/3m-user-interface-sketches-grid.jpg');
         padding-top:490px;
         
         div.row div div.title {
@@ -105,38 +114,43 @@ article#complex-case {
             padding-top:30px;
         }
         
-        .center-image-content.large {
-        
-            .caption {
-                position:relative;
-                top: 20px;
-                width:55%;
-                margin-left:10%;
-                padding-left:10px;
-                padding-bottom:30px;
-                border-width:0px;
-                border-left-width:2px;
-                border-color:transparentize($gray, .75);
-                border-style: solid;
-                
-                &.underneath {
-                    top:-50px;
-                    padding-bottom: 0px;
-                    padding-top:60px;
+        .center-image-content {
+            padding-bottom: 60px;
+            .large {
+                padding-bottom: 0;
+                .caption {
+                    position:relative;
+                    top: 20px;
+                    width:55%;
+                    margin-left:10%;
+                    padding-left:10px;
+                    padding-bottom:30px;
+                    border-width:0px;
+                    border-left-width:2px;
+                    border-color:transparentize($gray, .75);
+                    border-style: solid;
                     
-                    &.other {
-                        top: -110px;
-                        margin-bottom:-60px;
+                    &.underneath {
+                        top:-50px;
+                        padding-bottom: 0px;
+                        padding-top:60px;
+                        
+                        &.other {
+                            top: -110px;
+                            margin-bottom:-60px;
+                        }
                     }
                 }
-            }
 
-            img {
-                padding-bottom:60px;  
-            }
-            
-            &.nobottom img {
-                padding-bottom:0px;   
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    padding-bottom:60px;  
+                }
+                
+                &.nobottom img {
+                    padding-bottom:0px;   
+                }
             }
         }
     }
