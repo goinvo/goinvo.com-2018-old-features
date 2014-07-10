@@ -38,6 +38,26 @@ body {
 				color: $white;
 				font-weight: 400;
 			}
+			@media only screen and (max-height: 920px) {
+				top: 50%;
+			}
+			@media only screen and (max-height: 600px) {
+				top: 40%;
+			}
+			@media only screen and (max-width: 1230px) {
+				h2 {
+					font-size: 40px;
+					font-size: 4rem;
+					line-height: 40px;
+					line-height: 4rem;
+				}
+				h3 {
+					font-size: 25px;
+					font-size: 2.5rem;
+					line-height: 25px;
+					line-height: 2.5rem;
+				}
+			}
 			@media only screen and (max-width: 1020px) {
 				top: 0;
 				padding: 10em 5em 5em;
@@ -60,13 +80,6 @@ body {
 			position: relative;
 			top: 18%;
 			text-align: center;
-			@media only screen and (max-width: 1020px) {
-				
-			}
-			@media only screen and (max-width: 1020px) {
-				top: 0;
-				padding: 5em;
-			}
 			h2, h3, h4 {
 				color: #444;
 			}
@@ -158,6 +171,31 @@ body {
 					line-height: 14px;
 					line-height: 1.4rem;
 				}
+			}
+		}
+		@media only screen and (max-height: 680px) {
+			.title {
+				top: 15%;
+			}
+			&.wallgreens, &.infobionic {
+				h2 {
+					font-size: 18px;
+					font-size: 1.8rem;
+					line-height: 18px;
+					line-height: 1.8rem;
+				}
+				h3 {
+					font-size: 12px;
+					font-size: 1.2rem;
+					line-height: 12px;
+					line-height: 1.2rem;
+				}
+			}
+		}
+		@media only screen and (max-width: 1020px) {
+			.title {
+				top: 0;
+				padding: 5em;
 			}
 		}
 	}

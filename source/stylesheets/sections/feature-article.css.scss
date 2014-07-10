@@ -1,12 +1,15 @@
 @import "base/mixins";
 @import "base/colors";
 
+ul {
+	margin-left: 0;
+}
+
 ul.stat-label, ul.stat-data {
-	list-style:none;
+	list-style: none;
 	li {
-		text-align:center;
-		display:inline-block;
-		width: 45px;
+		text-align: center;
+		display: inline-block;
 	}   
 }
 
@@ -18,28 +21,67 @@ ul.stat-label {
 	margin-bottom:5px;   
 }
 
+ul.starting-xi {
+	list-style: none;
+}
+
 header.hero {
 	background-image: url('../../images/soccer_dataviz.jpg');
 	margin-bottom: 4em;
+	padding-top: 0;
+	max-height: none;
+	min-height: none;
 	.title {
-		padding-bottom: 60px;
+		position: static;
+		bottom: 0;
+		padding: 12em 2.5em 10em;
 		h2 {
 			@include shadow-headline();
 		}
 		h3 {
 			@include shadow-subline();
 		}
+		@media screen and (max-width: 1200px) {
+			padding: 8em 2.5em 6em;
+		}
+		@media screen and (max-width: 1080px) {
+			padding: 6em 2.5em 4em;
+			h2 {
+				font-size: 50px;
+				font-size: 5rem;
+				line-height: 50px;
+				line-height: 5rem;
+			}
+		}
+		@media screen and (max-width: 560px) {
+			h2 {
+				font-size: 35px;
+				font-size: 3.5rem;
+				line-height: 35px;
+				line-height: 3.5rem;
+			}
+		}
 	}
 }
 
-#feature-article {
+.row {
+	max-width: 600px;
+	max-width: 60rem;
+	padding: 0 1.5em;
 	> .row {
-		max-width: 600px;
-		max-width: 60rem;
-		.row {
-			margin-left: 0;
-			margin-right: 0;
-		}
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+#content {
+	h2 {
+		font-size: 30px;
+		font-size: 3rem;
+	}
+	p {
+		font-size: 24px;
+		line-height: 28px;
 	}
 	#caption {
 		padding-top: 2em;
@@ -59,29 +101,50 @@ header.hero {
 		list-style: none;
 		margin: 0;
 		@include clearfix();
+		font-size: 0;
+		text-align: center;
 		li {
+			padding: 0.25em 1em;
 			font-size: 22px;
-			width: calc(100% / 11);
-			float: left;
+			display: inline-block;
 		}
+	}
+	sup {
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 700;
 	}
 	aside {
 		p {
 			font-size: 18px;
 			line-height: 20px;
 		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 		&.left {
 			float: left;
 			max-width: 300px;
+			margin-left: -150px;
 		}
 		&.right {
 			float: right;
 			max-width: 300px;
+			margin-right: -150px;
 		}
 		&.image {
 			max-width: 400px;
 			.caption {
 				margin-top: 1em;
+			}
+		}
+		@media screen and (max-width: 1330px) {
+			&.left {
+				margin-left: 0;
+			}
+			&.right {
+				margin-right: 0;
 			}
 		}
 	}
