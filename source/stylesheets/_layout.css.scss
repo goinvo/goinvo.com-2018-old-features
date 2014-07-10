@@ -35,30 +35,6 @@ body {
 		word-spacing: 0rem;
 	}   
 }
-
-.project {
-	
-	.project-image {
-		height:250px;   
-		cursor:pointer;
-	}
-	
-	h3, .practice-areas {
-		height:auto;
-	}
-	
-	a.button.read-story {
-		background-color: #43597b;
-		color: $white;
-	}
-
-	a.button.read-story:hover {
-		background-color: rgba(67, 89, 123, 0.8);
-		color: $white;
-	}
-}
-
-
 div.feature-article-section {
 	width:100%;
 	min-height:150px;

@@ -1,6 +1,6 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
-@import "../base/mixins";
+@import "../base/core";
 
 #projects {
 	.hero {
@@ -69,6 +69,9 @@
 		.project-info {
 			padding: 10px;
 		}
+		@media screen and (max-width: 940px) {
+			width: 100%;
+		}
 	}
 	
 	.project h3 {
@@ -93,5 +96,26 @@
 		color: #AAA;
 		font-size: 19px;
 		line-height: 21px;
+	}
+
+	.project-image {
+		background-size: 100%;
+		background-size: cover;
+		height: 250px;   
+		cursor: pointer;
+	}
+	
+	h3, .practice-areas {
+		height: auto;
+	}
+	
+	a.button.read-story {
+		background-color: #43597b;
+		color: $white;
+	}
+
+	a.button.read-story:hover {
+		background-color: rgba(67, 89, 123, 0.8);
+		color: $white;
 	}
 }

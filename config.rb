@@ -69,6 +69,14 @@ configure :build do
 
 	# Minify Javascript on build
 	activate :minify_javascript
+
+	# Take care of all them prefixes
+	activate :autoprefixer do |config|
+		config.browsers = ['last 8 versions', 'Explorer >= 9']
+	end
+
+	# Crush images
+	activate :imageoptim
 		
 
 	# Enable cache buster
