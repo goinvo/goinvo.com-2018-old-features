@@ -89,7 +89,6 @@ header.hero {
 	}
 	.article-nav {
 		color: #888;
-		background: #EEE;
 		padding: 2em;
 		margin: 2.5em auto;
 		text-align: center;
@@ -107,6 +106,16 @@ header.hero {
 			padding: 0.25em 1em;
 			font-size: 22px;
 			display: inline-block;
+			a {
+				color: #888;
+				transition: color 300ms ease, border 300ms ease;
+				border-bottom: 1px solid #CCC;
+				white-space: nowrap;
+				&:hover {
+					color: #425f8e;
+					border-bottom: 5px solid #425f8e;
+				}
+			}
 		}
 	}
 	sup {
@@ -142,9 +151,11 @@ header.hero {
 		@media screen and (max-width: 1330px) {
 			&.left {
 				margin-left: 0;
+				float: none;
 			}
 			&.right {
 				margin-right: 0;
+				float: none;
 			}
 		}
 	}
