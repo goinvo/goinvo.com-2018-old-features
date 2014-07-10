@@ -82,7 +82,7 @@ section {
 				padding-top: 8em;
 			}
 			@media screen and  (max-width: 640px) {
-				background-image: linear-gradient(fade-out(#FFF, 1) 30%, #FFF 50%);
+				background: linear-gradient(fade-out(#FFF, 1) 30%, #FFF 50%);
 			}
 		}
 	}
@@ -152,7 +152,7 @@ h2 {
 	position: relative;
 	padding: 5em 0 3em;
 	z-index: 10;
-	background-image: linear-gradient(fade-out(#FFF, 1), #FFF 50%);
+	background: linear-gradient(fade-out(#FFF, 1), #FFF 50%);
 	@media screen and  (max-width: 1024px) {
 		padding-top: 8em;
 	}

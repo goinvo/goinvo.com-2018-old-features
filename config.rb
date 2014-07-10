@@ -69,12 +69,6 @@ configure :build do
 
 	# Minify Javascript on build
 	activate :minify_javascript
-
-	# Take care of all them prefixes
-	activate :autoprefixer
-
-	# Crush images
-	activate :imageoptim
 		
 
 	# Enable cache buster
