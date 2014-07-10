@@ -6,6 +6,7 @@ gem "middleman-smusher"
 gem "haml"
 gem "compass"
 gem "middleman-autoprefixer"
+gem "middleman-imageoptim", "~> 0.1.4"
 
 require 'rbconfig'
 

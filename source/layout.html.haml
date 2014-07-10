@@ -26,8 +26,9 @@
 				%header#main-header
 					%header#site-header
 						.medium-12.small-12.columns
-							= link_to( image_tag('logo-header.png', alt: "Involution Studios"), asset_url('/'), id: 'site-title')
-							.tag-line Crafting exceptional software for progressive companies
+							%a{:href => asset_url('/'), :id => "site-title"}
+								= image_tag('logo-header.png', alt: "Involution Studios")
+								.tag-line Crafting exceptional software for progressive companies
 							%nav#nav-buttons
 								%a.nav-button{:href => asset_url('work')} Work
 								-# %a.nav-button{:href => asset_url('products')}
