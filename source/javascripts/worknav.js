@@ -36,6 +36,7 @@ $( document ).ready(function() {
 
 
 	var next = $('#next-project');
+	var nextArea = $('div.next-title');
 	var nextTitle = $('div.next-title span');
 
 	var index = 0;
@@ -77,7 +78,15 @@ $( document ).ready(function() {
 		nextTitle.html(projects[index].title);
 	}
 	else {
-		next.css("display", "none");   
+		next.on("click", function () {
+			   window.location.href = '../../work/process/'; //note the '/v01/'
+		});
+		nextArea.html('Next: See Our Process');
+		next.css({
+			"background": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(../../images/process/jpg/intro.jpg)",
+			"background-size": "cover",
+			"background-position": "center 25%"
+		})
 	}
 	
 	
