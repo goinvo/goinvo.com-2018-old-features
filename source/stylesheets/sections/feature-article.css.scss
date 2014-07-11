@@ -65,8 +65,8 @@ header.hero {
 }
 
 .row {
-	max-width: 600px;
-	max-width: 60rem;
+	max-width: 480px;
+	max-width: 48rem;
 	padding: 0 1.5em;
 	> .row {
 		margin-left: 0;
@@ -75,13 +75,31 @@ header.hero {
 }
 
 #content {
+	h1,  {
+		max-width: 780px;
+		max-width: 78rem;
+		margin: 2em auto 1em;
+		padding: 0 1.5em;
+		font-size: 38px;
+		font-size: 3.8rem;
+		line-height: 1em;
+		text-align: center;
+	}
 	h2 {
 		font-size: 30px;
 		font-size: 3rem;
 	}
 	p {
-		font-size: 24px;
-		line-height: 28px;
+		font-size: 28px;
+		line-height: 30px;
+	}
+	ul, ol, dl {
+		margin-left: 0;
+		font-size: 20px;
+		line-height: 22px;
+		li {
+			margin-bottom: 1em;
+		}
 	}
 	#caption {
 		padding-top: 2em;
@@ -90,6 +108,10 @@ header.hero {
 	.article-nav {
 		color: #888;
 		padding: 2em;
+		max-width: 1000px;
+		max-width: 100rem;
+		font-size: 18px;
+		text-align: center;
 		margin: 2.5em auto;
 		text-align: center;
 		p {
@@ -104,7 +126,7 @@ header.hero {
 		text-align: center;
 		li {
 			padding: 0.25em 1em;
-			font-size: 22px;
+			font-size: 20px;
 			display: inline-block;
 			a {
 				color: #888;
@@ -136,11 +158,13 @@ header.hero {
 			float: left;
 			max-width: 300px;
 			margin-left: -150px;
+			padding-right: 2em;
 		}
 		&.right {
 			float: right;
 			max-width: 300px;
 			margin-right: -150px;
+			padding-left: 2em;
 		}
 		&.image {
 			max-width: 400px;

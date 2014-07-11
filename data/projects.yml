@@ -32,7 +32,7 @@
       during_week: 48
 
 - client: "hGraph"
-  main_image: "hgraph_your_health_in_one_picture_thumb.jpg"
+  main_image: "hgraph_your_health_in_one_picture.jpg"
   practice_area_names: "Health"
   description: "Open source solution for visualizing a complete range of health metrics."
   budget: 50000 #Verify
@@ -70,6 +70,17 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+# - client: "Infobionic"
+#   main_image: #require
+#   practice_area_names: "Healthcare"
+#   description: "Design strategy and UI design for remote patient monitoring of EKGs (electrocardiogram)."
+#   budget: 100000 #Verify
+#   duration: #require
+#   repeat_client: #require
+#   story_template: false
+#   hide_in_layout: false
+#   logo: #require
 
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
