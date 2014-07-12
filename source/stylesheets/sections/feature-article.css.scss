@@ -75,6 +75,7 @@ header.hero {
 }
 
 #content {
+	color: #2A2A2A;
 	h1,  {
 		max-width: 780px;
 		max-width: 78rem;
@@ -91,7 +92,7 @@ header.hero {
 	}
 	p {
 		font-size: 28px;
-		line-height: 30px;
+		line-height: 1.1em;
 	}
 	ul, ol, dl {
 		margin-left: 0;
@@ -105,6 +106,65 @@ header.hero {
 		padding-top: 2em;
 		color: #888;
 	}
+	.section-footer {
+		margin-top: 2em;
+		border-top: 1px solid #DDD;
+		padding-top: 2em;
+		h4 {
+			font-size: 20px;
+			font-size: 2rem;
+			line-height: 1.1em;
+		}
+		@include clearfix();
+		.col1, .col2 {
+			width: 50%;
+			float: left;
+		}
+		.col1 {
+			padding-right: 0.5em;
+		}
+		.col2 {
+			padding-left: 0.5em;
+		}
+		#caption {
+			padding-top: 0;
+			font-size: 18px;
+		}
+		@media screen and (max-width: 680px) {
+			.col1, .col2 {
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+	table {
+		tr:nth-of-type(even) {
+			background: #DDD;
+			td { 
+				color: #666;
+			}
+		}
+		&.team-stats, &.starting-xi {
+			table-layout: fixed;
+			width: 100%;
+		}
+		&.team-stats {
+			tr td {
+				text-align: center;
+				font-size: 18px;
+				padding: 1em 0.5em;
+			}
+		}
+		&.starting-xi {
+			tr td {
+				&:first-child {
+					width: 25%;
+					text-align: center;
+				}
+				padding: 0.5em;
+			}
+		}
+	} 
 	.article-nav {
 		color: #888;
 		padding: 2em;
@@ -125,12 +185,13 @@ header.hero {
 		font-size: 0;
 		text-align: center;
 		li {
-			padding: 0.25em 1em;
 			font-size: 20px;
 			display: inline-block;
 			a {
 				color: #888;
 				transition: color 300ms ease, border 300ms ease;
+				padding: 0.25em 1em;
+				padding-bottom: 5px;
 				border-bottom: 1px solid #CCC;
 				white-space: nowrap;
 				&:hover {
@@ -152,6 +213,7 @@ header.hero {
 		}
 		img {
 			display: block;
+			width: 100%;
 			margin: 0 auto;
 		}
 		&.left {
