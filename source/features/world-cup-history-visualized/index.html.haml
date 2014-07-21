@@ -24,7 +24,7 @@
 				%li All-Time Rating: showing the average rating for each nation during the selected date range
 			%p There are a variety of controls for choosing which teams to view, any date range you prefer, and “playing” the data as a narrative story. Please enjoy.
 		#dataViz
-			%iframe{:src => "http://code.goinvo.com/soccer", :seamless => ""}
+			%iframe{:src => "http://code.goinvo.com/soccer", :seamless => "", "scrolling" => "no"}
 			:javascript
 				$(document).ready(function(){
 					$('#data-viz').fitVids({ customSelector: "iframe[src^='http://code.goinvo.com/soccer']"});
