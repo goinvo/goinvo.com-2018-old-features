@@ -18,7 +18,7 @@
 #main-header {
 	height: 55px;
 	background: rgba(18,18,18,.875);
-	padding: 9px 5em 0 5em;
+	padding: 15px 5em 0 5em;
 	transition: background .3s ease;
 
 	#nav-buttons, #nav-buttons-mobile {
@@ -69,7 +69,8 @@
 }
 
 #site-header {
-padding-top: 6px;
+	max-width: 80em;
+	margin: 0 auto;
 	.tag-line {
 		margin: 0;
 		font-size: 1em;

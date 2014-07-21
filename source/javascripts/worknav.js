@@ -23,7 +23,11 @@ $( document ).ready(function() {
 		{
 			"title" : "McAfee",
 			"image" : "mcafee-total-protection-desktop-app-design.jpg"
-		}, 
+		},
+		{
+			"title" : "Microsoft",
+			"image" : "Microsoft-expression-studio-redesign.jpg"
+		},
 		{
 			"title" : "Numera",
 			"image" :  "numera-whiteboard-ui-sketch.jpg"
@@ -73,13 +77,13 @@ $( document ).ready(function() {
 			"background-position": "center"
 		})
 		next.on("click", function () {
-			   window.location.href = projects[index].title.toLowerCase(); //note the '/v01/'
+			   window.location.href =  '../clients/' + projects[index].title.toLowerCase();
 		});
 		nextTitle.html(projects[index].title);
 	}
 	else {
 		next.on("click", function () {
-			   window.location.href = '../../work/process/'; //note the '/v01/'
+			   window.location.href = '../../work/process/';
 		});
 		nextArea.html('Next: See Our Process');
 		next.css({
