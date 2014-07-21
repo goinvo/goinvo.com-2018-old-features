@@ -44,6 +44,12 @@ page "humans.txt", :layout => false
 # Livereload
 activate :livereload
 
+# Take care of all them prefixes
+activate :autoprefixer
+
+# Enable cache buster
+activate :cache_buster
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -69,12 +75,6 @@ configure :build do
 
 	# Minify Javascript on build
 	activate :minify_javascript
-
-	# Take care of all them prefixes
-	activate :autoprefixer
-
-	# Enable cache buster
-	#activate :cache_buster
 
 	# Use relative URLs
 	activate :relative_assets

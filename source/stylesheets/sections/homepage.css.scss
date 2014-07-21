@@ -200,14 +200,22 @@ body {
 		}
 	}
 
-	&.three .title {
-		h2 {
-			font-size: 60px;
-			font-size: 6rem;
-			line-height: 60px;
-			line-height: 6rem;
+	&.three {
+		background-image: linear-gradient(to bottom, fade-out(#000, 0.25) 0%, fade-out(#000, 0.35) 100%), url('../../images/home/culture.jpg');
+		background-position: center;
+		background-size: cover;
+		.title {
+			top: 30%;
+			h2 {
+				color: #EEE;
+				font-size: 60px;
+				font-size: 6rem;
+				line-height: 60px;
+				line-height: 6rem;
+				text-shadow: 1px 1px 0 #888;
+			}
 		}
-	}
+	} 
 
 	&#hot-swap {
 		background-position: center;
