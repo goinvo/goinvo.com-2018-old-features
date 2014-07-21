@@ -34,9 +34,9 @@
   primary_color: "#97BE8C"
   logo: "hgraph.jpg"
 
-# - name: "Infobionic"
-#   primary_color: #require
-#   logo: #require
+- name: "Infobionic"
+  primary_color: #require
+  logo: #require
 
 - name: "McAfee"
   primary_color: "#B51737"
