@@ -82,12 +82,15 @@ body {
 			text-align: center;
 			h2, h3, h4 {
 				color: #444;
+				line-height: 1em;
 			}
 			h2 {
 				font-size: 40px;
 				font-size: 4rem;
-				line-height: 40px;
-				line-height: 4rem;
+			}
+			@media only screen and (max-width: 1020px) {
+				top: 0;
+				padding: 5em;
 			}
 		}	
 	}
@@ -105,8 +108,6 @@ body {
 			h2 {
 				font-size: 30px;
 				font-size: 3.0rem;
-				line-height: 30px;
-				line-height: 3.0rem;
 				font-weight: 400;
 			}
 			h3 {
@@ -120,14 +121,10 @@ body {
 				h2 {
 					font-size: 22px;
 					font-size: 2.2rem;
-					line-height: 22px;
-					line-height: 2.2rem;
 				}
 				h3 {
 					font-size: 14px;
 					font-size: 1.4rem;
-					line-height: 14px;
-					line-height: 1.4rem;
 				}
 			}
 			.light-button {
@@ -146,14 +143,10 @@ body {
 				h2 {
 					font-size: 22px;
 					font-size: 2.2rem;
-					line-height: 22px;
-					line-height: 2.2rem;
 				}
 				h3 {
 					font-size: 14px;
 					font-size: 1.4rem;
-					line-height: 14px;
-					line-height: 1.4rem;
 				}
 			}
 		}
@@ -162,42 +155,42 @@ body {
 				h2 {
 					font-size: 22px;
 					font-size: 2.2rem;
-					line-height: 22px;
-					line-height: 2.2rem;
 				}
 				h3 {
 					font-size: 14px;
 					font-size: 1.4rem;
-					line-height: 14px;
-					line-height: 1.4rem;
 				}
 			}
 		}
+
 		@media only screen and (max-height: 680px) {
 			.title {
-				top: 15%;
+				top: 10%;
 			}
 			&.wallgreens, &.infobionic {
 				h2 {
 					font-size: 18px;
 					font-size: 1.8rem;
-					line-height: 18px;
-					line-height: 1.8rem;
 				}
 				h3 {
 					font-size: 12px;
 					font-size: 1.2rem;
-					line-height: 12px;
-					line-height: 1.2rem;
 				}
 			}
 		}
-		@media only screen and (max-width: 1020px) {
-			.title {
-				top: 0;
-				padding: 5em;
+		@media only screen and (max-height: 660px) {
+			&.three-m {
+				h2 {
+					font-size: 22px;
+					font-size: 2.2rem;
+				}
+				h3 {
+					font-size: 16px;
+					font-size: 1.6rem;
+				}
 			}
 		}
+		
 	}
 
 	&.three {
@@ -210,9 +203,14 @@ body {
 				color: #EEE;
 				font-size: 60px;
 				font-size: 6rem;
-				line-height: 60px;
-				line-height: 6rem;
+				line-height: 1em;
 				text-shadow: 1px 1px 0 #888;
+			}
+			@media only screen and (max-width: 1280px) {
+				h2 {
+					font-size: 45px;
+					font-size: 4.5rem;
+				}
 			}
 		}
 	} 
@@ -267,6 +265,9 @@ body {
 
 #page-wrapper {
 	height: 100%;
+	@media only screen and (max-width: 1020px) {
+		height: auto;
+	}
 }
 
 #main-container {
@@ -275,6 +276,12 @@ body {
 	.container {
 		position: relative;
 		height: 100%;
+	}
+	@media only screen and (max-width: 1020px) {
+		height: auto;
+		.container {
+			height: auto;
+		}
 	}
 }
 
