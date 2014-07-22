@@ -77,7 +77,7 @@ $( document ).ready(function() {
 			"background-position": "center"
 		})
 		next.on("click", function () {
-			   window.location.href =  '../clients/' + projects[index].title.toLowerCase();
+			   window.location.href =  '../../clients/' + projects[index].title.toLowerCase();
 		});
 		nextTitle.html(projects[index].title);
 	}
