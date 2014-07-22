@@ -6,7 +6,7 @@
 			function getRandomInt(min, max) {
 				return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
-			var rand = getRandomInt(1, 3);
+			var rand = getRandomInt(1, 2);
 			if (rand === 1) {
 				$('.homepage-header.two').addClass('three-m');
 				$('.homepage-header.two > a').attr('href', 'clients/3m');
@@ -23,7 +23,7 @@
 			} */
 			else {
 				$('.homepage-header.two').addClass('walgreens');
-				$('.homepage-header.two > a').attr('href', 'clients/walgreens');
+				$('.homepage-header.two > a').attr('href', 'clients/hgraph');
 				$('.homepage-header.two h2').html('&ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;');
 				$('.homepage-header.two h3').html('Igor Gershfang, Walgreens Emerging Tech Director');
 				$('.homepage-header.two .title').append('<a class="light-button">See how we did it.</a>');

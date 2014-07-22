@@ -71,16 +71,16 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Infobionic"
-  main_image: #require
-  practice_area_names: "Healthcare"
-  description: "Design strategy and UI design for remote patient monitoring of EKGs (electrocardiogram)."
-  budget: 100000 #Verify
-  duration: #require
-  repeat_client: #require
-  story_template: false
-  hide_in_layout: false
-  logo: #require
+# - client: "Infobionic"
+#   main_image: #require
+#   practice_area_names: "Healthcare"
+#   description: "Design strategy and UI design for remote patient monitoring of EKGs (electrocardiogram)."
+#   budget: 100000 #Verify
+#   duration: #require
+#   repeat_client: #require
+#   story_template: false
+#   hide_in_layout: false
+#   logo: #require
 
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
@@ -97,20 +97,20 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Microsoft"
-  main_image: "Microsoft-expression-studio-product-architecture.jpg"
-  practice_area_names: "Consumer"
-  description: "Microsoft asked Involution to help them take on Adobe."
-  budget: 200000 #Verify
-  duration: 14 #Verify
-  repeat_client: false #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: microsoft.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+# - client: "Microsoft"
+#   main_image: "microsoft-expression-studio-product-architecture.jpg"
+#   practice_area_names: "Consumer"
+#   description: "Microsoft asked Involution to help them take on Adobe."
+#   budget: 200000 #Verify
+#   duration: 14 #Verify
+#   repeat_client: false #Verify
+#   story_template: false
+#   hide_in_layout: true
+#   logo: microsoft.jpg
+#   phases: #Verify
+#     - duration: 14
+#       full_time_staff: 2
+#       service_names: "Envision, Craft"
 
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
@@ -126,6 +126,16 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+- client: "Personal Genome Project"
+  main_image: "pgp_thumb.jpg"
+  practice_area_names: "Health"
+  description: "The PGP Gains New Business Focus with Invo Workshop"
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: personalgenomeproject.jpg
 
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"

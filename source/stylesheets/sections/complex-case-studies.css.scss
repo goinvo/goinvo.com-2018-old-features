@@ -11,6 +11,11 @@ article#complex-case {
             background-image: url('../../images/clients/hgraph/hgraph_ipad_physical_dark.jpg');
         }
     }
+    &.pgp {
+        header.hero {
+            background-image: url('../../images/clients/personalgenomeproject/openhumans_ecosystem_dark.jpg');
+        }
+    }
     header.hero {
         padding-top:490px;
         
@@ -254,13 +259,13 @@ article#complex-case {
     div.next-title {
         margin-top: 80px;
         color:#f7f7f7;
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2.5rem;
+        line-height: 1em;
         font-weight: 700;
         
         span {
-            font-size: 4rem;
-            line-height: 4rem;
+            font-size: 3.5rem;
+            line-height: 1em;
         }
     }
 }
