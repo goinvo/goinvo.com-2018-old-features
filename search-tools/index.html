@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Doc</title>
+</head>
+<body>
+	<form id="search-form">
+		<input type="text" placeholder="Search Goinvo.com" id="search-box">
+	</form>
+	<div class="results">
+		<script>
+			(function() {
+				var cx = '010845384704641467096:gonjsgxlk1g';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						'//www.google.com/cse/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
+
+
+			var currentURL = window.location.href;
+			console.log(currentURL);
+			var qindex = currentURL.indexOf("?");
+			if (qindex >= 0){
+				currentURL = currentURL.substring(0, qindex);
+			}
+			var searchfor = function(event) {
+				event.preventDefault();
+				var query = document.getElementById('search-box').value;
+				window.location.replace(currentURL + "?q=" + query);
+			}
+			document.getElementById('search-form').addEventListener(
+				'submit', searchfor, false
+			);
+		</script>
+		<gcse:searchresults-only></gcse:searchresults-only>
+	</div>
+</body>
+</html>
