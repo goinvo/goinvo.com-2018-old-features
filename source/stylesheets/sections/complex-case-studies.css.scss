@@ -20,6 +20,10 @@ article#complex-case {
         header.hero {
             background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
             background-position: 0 80%;
+            div.row div div.title h2 {
+                font-size: 66px;
+                line-height: 1em;
+            }
         }
         #bigQuote {
             font-size: 38px;
@@ -110,7 +114,7 @@ article#complex-case {
                 padding-top: 2.5em;
                 padding-bottom: 1em;
             }
-            text-align: center;
+            /* text-align: center; */
         }
     }
 
