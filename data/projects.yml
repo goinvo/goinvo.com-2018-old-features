@@ -97,20 +97,20 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-# - client: "Microsoft"
-#   main_image: "microsoft-expression-studio-product-architecture.jpg"
-#   practice_area_names: "Consumer"
-#   description: "Microsoft asked Involution to help them take on Adobe."
-#   budget: 200000 #Verify
-#   duration: 14 #Verify
-#   repeat_client: false #Verify
-#   story_template: false
-#   hide_in_layout: true
-#   logo: microsoft.jpg
-#   phases: #Verify
-#     - duration: 14
-#       full_time_staff: 2
-#       service_names: "Envision, Craft"
+- client: "Microsoft"
+  main_image: "microsoft-expression-studio-product-architecture.jpg"
+  practice_area_names: "Consumer"
+  description: "Microsoft asked Involution to help them take on Adobe."
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  hide_in_layout: false
+  logo: microsoft.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
 
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
