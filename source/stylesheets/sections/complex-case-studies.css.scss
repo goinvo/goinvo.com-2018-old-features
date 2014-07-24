@@ -21,6 +21,10 @@ article#complex-case {
             background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
             background-position: 0 80%;
         }
+        #bigQuote {
+            font-size: 38px;
+            line-height: 1.2em;
+        }
     }
     header.hero {
         padding-top:490px;
@@ -88,7 +92,7 @@ article#complex-case {
     }
 
     .center-image-content.large {
-        padding: 1em 0;
+        padding: 2.5em 0;
         position:relative;
         left:-29%;
         width:158%;
@@ -142,7 +146,6 @@ article#complex-case {
         }
 
         .center-image-content {
-            padding-bottom: 60px;
             .large {
                 padding-bottom: 0;
                 .caption {
@@ -207,7 +210,7 @@ article#complex-case {
             max-width:70rem;
         }
 
-        p.quote-author {
+        p.quote-author, p.block-header {
             color:$gray;
         }
     }
