@@ -33,6 +33,10 @@ $( document ).ready(function() {
 			"image" :  "numera-whiteboard-ui-sketch.jpg"
 		},
 		{
+			"title" : "Oracle",
+			"image" : "oracle-agile-earlydesign-hero.jpg"
+		},
+		{
 			"title" : "Personal Genome Project",
 			"image" : "openhumans_ecosystem.jpg"
 		},
@@ -71,8 +75,11 @@ $( document ).ready(function() {
 	else if(current.indexOf("numera") >= 0) {
 		index = 7;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("oracle") >= 0) {
 		index = 8;
+	}
+	else if(current.indexOf("personalgenomeproject") >= 0) {
+		index = 9;
 	}
 	else {
 		index = -1;
@@ -139,7 +146,7 @@ function getIndex() {
 		index = 2;
 	}
 	else if(current.indexOf("affinnova") >= 0) {
-		index = 3;
+	index = 3;
 	}
 	else if(current.indexOf("dataxu") >= 0) {
 		index = 4;
@@ -153,8 +160,11 @@ function getIndex() {
 	else if(current.indexOf("numera") >= 0) {
 		index = 7;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("oracle") >= 0) {
 		index = 8;
+	}
+	else if(current.indexOf("personalgenomeproject") >= 0) {
+		index = 9;
 	}
 	else {
 		index2 = -1;

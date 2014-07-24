@@ -16,101 +16,107 @@ article#complex-case {
             background-image: url('../../images/clients/personalgenomeproject/openhumans_ecosystem_dark.jpg');
         }
     }
+    &.oracle {
+        header.hero {
+            background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
+            background-position: 0 80%;
+        }
+    }
     header.hero {
         padding-top:490px;
-        
+
         div.row div div.title {
-            
+
             h2, h3 {
-                text-align:left;    
+                text-align:left;
                 margin-left:0px;
                 text-shadow:2px 2px transparentize($black, .8);
             }
-            
+
             h2 {
                 font-size:5.2rem;
                 line-height: 4.75rem;
             }
         }
     }
-    
+
     p.bottom, h2.bottom {
-        padding-bottom: 40px;   
-            
+        padding-bottom: 40px;
+
         &.double {
-            padding-bottom: 80px;  
+            padding-bottom: 80px;
         }
     }
-    
+
     p.top, h2.top {
         padding-top:30px;
-            
+
         &.double {
-            padding-top:60px;   
+            padding-top:60px;
         }
-            
+
         &.triple {
-            padding-top:120px;   
+            padding-top:120px;
         }
     }
-    
+
     h2 {
         font-size:59px;
         line-height:62px;
         padding-bottom:24px;
     }
-    
+
     h2.center, p.center {
         text-align:center;
         width:140%;
         position:relative;
         left:-20%;
     }
-    
+
     .caption {
         padding-top:5px;
-        margin-top:5px;   
+        margin-top:5px;
         font-size:1.1rem;
         line-height:1.42rem;
         letter-spacing:0.02rem;
         color:$gray;
-        margin-top:7px;   
-        
+        margin-top:7px;
+
         &.bottom {
-            margin-bottom:30px;   
+            margin-bottom:30px;
         }
     }
-    
+
     .center-image-content.large {
         position:relative;
         left:-29%;
-        width:158%;   
-        height:auto;        
+        width:158%;
+        height:auto;
     }
-    
+
     #mainContent {
-        padding-top:60px;   
+        padding-top:60px;
 
         p span.firstcharacter {
             color: #d62a31;
-            float: left; 
-            font-size: 75px; 
-            line-height: 60px; 
-            padding-top: 4px; 
-            padding-right: 5px; 
+            float: left;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 5px;
             padding-left: 3px;
         }
-        
+
         span.image-float {
             position:relative;
             left:-120px;
-            float:left; 
+            float:left;
             padding:18px;
             padding-left:0px;
             padding-bottom:20px;
             margin-right:-110px;
         }
-   
+
         div.center-graph-content {
             position:relative;
             left:-30%;
@@ -118,7 +124,7 @@ article#complex-case {
             padding-bottom:60px;
             padding-top:30px;
         }
-        
+
         .center-image-content {
             padding-bottom: 60px;
             .large {
@@ -134,12 +140,12 @@ article#complex-case {
                     border-left-width:2px;
                     border-color:transparentize($gray, .75);
                     border-style: solid;
-                    
+
                     &.underneath {
                         top:-50px;
                         padding-bottom: 0px;
                         padding-top:60px;
-                        
+
                         &.other {
                             top: -110px;
                             margin-bottom:-60px;
@@ -150,16 +156,16 @@ article#complex-case {
                 img {
                     display: block;
                     margin: 0 auto;
-                    padding-bottom:60px;  
+                    padding-bottom:60px;
                 }
-                
+
                 &.nobottom img {
-                    padding-bottom:0px;   
+                    padding-bottom:0px;
                 }
             }
         }
     }
-    
+
     div.row#quote {
         max-width:none;
         margin-left:0px;
@@ -167,9 +173,9 @@ article#complex-case {
         text-align:center;
         background-color:transparentize($gray, .9);
         padding:60px 9%;
-        
+
         div.moon-image {
-            background-image:url('../../images/clients/3m/george-moon-vp-product.jpg');    
+            background-image:url('../../images/clients/3m/george-moon-vp-product.jpg');
             width: 200px;
             height:200px;
             background-size: cover;
@@ -177,25 +183,25 @@ article#complex-case {
             margin:0 auto;
             margin-bottom:20px;
         }
-        
+
         h2.quote{
             font-weight: 400;
             margin: 0 auto;
             margin-bottom:30px;
             max-width:70rem;
         }
-        
+
         p.quote-author {
-            color:$gray;   
+            color:$gray;
         }
     }
-    
+
     div.row#image-background {
         div.row {
             max-width:80rem;
             margin: 0 auto;
         }
-        
+
         max-width:none;
         background: -moz-linear-gradient(top,  rgba(196,196,196,0.4) 0%, rgba(196,196,196,0.41) 1%, rgba(103,116,124,0.88) 38%, rgba(103,116,124,1) 47%), url('../../images/clients/3m/memorial-hermann-hospital.jpg'); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(196,196,196,0.4)), color-stop(1%,rgba(196,196,196,0.41)), color-stop(38%,rgba(103,116,124,0.88)), color-stop(47%,rgba(103,116,124,1))), url('../../images/clients/3m/memorial-hermann-hospital.jpg'); /* Chrome,Safari4+ */
@@ -208,45 +214,45 @@ article#complex-case {
         padding-top:375px;
         color:$white;
         min-height:1800px;
-        
+
         h2 {
-            color:inherit; 
+            color:inherit;
         }
-        
-        
-        
+
+
+
         .caption {
-            margin-top:7px;   
+            margin-top:7px;
             margin-bottom:60px;
         }
     }
-    
+
     .full-two-images {
         position:relative;
         left:-50%;
         width:200%;
     }
-    
+
     div.row#imageContent {
 
     }
-    
+
     div.row#email-content {
         padding-top:30px;
         padding-bottom:30px;
         max-width:none;
-        background-color: #b9bfc2;   
-        
+        background-color: #b9bfc2;
+
         div.center-image-content.large {
-            margin:0 auto;   
+            margin:0 auto;
             padding-left:175px;
         }
         p.caption {
-            color:$white;   
+            color:$white;
             margin-left:210px;
         }
     }
-    
+
 }
 
 .row#next-project {
@@ -255,14 +261,14 @@ article#complex-case {
     margin-top:0px;
     cursor:pointer;
     background-size:cover;
-    
+
     div.next-title {
         margin-top: 80px;
         color:#f7f7f7;
         font-size: 2.5rem;
         line-height: 1em;
         font-weight: 700;
-        
+
         span {
             font-size: 3.5rem;
             line-height: 1em;
