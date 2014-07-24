@@ -128,7 +128,7 @@
       service_names: "Envision, Craft"
 
 - client: "Oracle"
-  main_image: oracle-agile-plm-ui-design-guidelines.jpg
+  main_image: oracle-agile-plm-ui-design-development.jpg
   practice_area_names: "Enterprise"
   description: "We completely redesigned Oracle’s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
   budget: 500000 #Verify

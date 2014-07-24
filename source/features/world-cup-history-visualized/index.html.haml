@@ -1,7 +1,6 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/feature-article"
-	= javascript_include_tag 'fitvids.js'
-		
+
 %article#feature-article.soccer
 	%header.hero
 		.title
@@ -25,10 +24,6 @@
 			%p There are a variety of controls for choosing which teams to view, any date range you prefer, and “playing” the data as a narrative story. Please enjoy.
 		#dataViz
 			%iframe{:src => "http://code.goinvo.com/soccer", :seamless => "", "scrolling" => "no"}
-			:javascript
-				$(document).ready(function(){
-					$('#data-viz').fitVids({ customSelector: "iframe[src^='http://code.goinvo.com/soccer']"});
-				});
 		.row
 			#caption.country-comb-explanation
 				%p Thanks to political changes World Cup nations would combine into one larger nation or break into a variety of smaller ones. In some cases, then, we have only one entry that is covering the historical legacy of nations with different names. Here are the nations affected:
@@ -187,37 +182,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td GK 
+							%td GK
 							%td Edwin van der Sar (1995-2008)
 						%tr
-							%td DF 
+							%td DF
 							%td Ruud Krol (1969-1983)
 						%tr
-							%td DF 
+							%td DF
 							%td Frank de Boer (1990-2004)
 						%tr
-							%td DF 
+							%td DF
 							%td Giovanni van Bronckhorst (1996-2010)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Johan Cruyff (1966-1977)
 						%tr
-							%td MF 
+							%td MF
 							%td Johan Neeskens (1970-1981)
 						%tr
-							%td MF 
+							%td MF
 							%td Puck van Heel (1925-1938)
 						%tr
-							%td MF 
+							%td MF
 							%td Frank Rijkaard (1981-1994)
 						%tr
-							%td MF 
+							%td MF
 							%td Ruud Gullit (1981-1994)
 						%tr
-							%td FW 
+							%td FW
 							%td Dennis Bergkamp (1990-2000)
 						%tr
-							%td FW 
+							%td FW
 							%td Marco Van Basten (1983-1992)
 		.article-nav
 			%p Keep reading:
@@ -241,13 +236,13 @@
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/france-1.jpg"}/
 				%p.caption Sublime French striker Just Fontaine scored 13 goals—still the record—in the 1958 World Cup.
-			%p France qualified for only three of the next six World Cups. The last of these, 1982, marked the beginning of another ascendent French programme. After emerging from their group despite indifferent play they won their second round group going away, albeit against weak Austrian and Northern Ireland teams. However, in the semifinals, West Germany took revenge for 1958 by winning a 3-3 game on penalty kicks. A strong Polish team beat France by a goal in the third place game as well. 
+			%p France qualified for only three of the next six World Cups. The last of these, 1982, marked the beginning of another ascendent French programme. After emerging from their group despite indifferent play they won their second round group going away, albeit against weak Austrian and Northern Ireland teams. However, in the semifinals, West Germany took revenge for 1958 by winning a 3-3 game on penalty kicks. A strong Polish team beat France by a goal in the third place game as well.
 			%p Expectations were appropriately high in 1986 and the team did not disappoint. France easily emerged from Group C behind a good Soviet team on goal differential while beating up on poor entries from Canada and Hungary. In 1986 the second round onward were all knockout games and France faced a brutal path as they defeated defending champion Italy 2-0 and snuck by perennial powerhouse Brazil 1-1 on penalty kicks. Then, in the semifinals, France again fell to West Germany, this time by a clear 2-0 margin. Unlike in 1958 they won the third place game, against Belgium, 4-2 in extra time. This France team also won the EURO Championship in 1984 and were led by Michel Platini, a transcendent attacking midfielder and all-time great passer and strong finisher.
 			%aside.sidebar.image.right
 				%img{:src => "../../images/features/world-cup/france-2.jpg"}/
 				%p.caption The 1998 French National Team was in transition: the leaders were holdovers from the least successful World Cup generation in French history, while the emerging stars would see France to a decade of being among the best squads in the world.
 			%p After the high of 1986 the team failed to qualify for the World Cups in 1990 and 1994. This lull was leading up to the greatest of all highs, the legendary French teams of Zinedine Zidane. Returning to the World Cup in 1998 as the host nation after a 12-year absence, this French team was still the team of long-suffering captain Didier Deschamps. After winning their three group games with nine goals scored against and just one allowed, France had a difficult time in the group stages, defeating Paraguay 1-0 in extra time, getting past Italy on penalty kicks after a 0-0 battle, and then defeating perhaps the best-ever Croatian team 2-1 after trailing in the second half. After all of the narrow victories the championship game was hardly a formality against yet another excellent Brazil, but it turned into a coronation as France thrashed Canarinho 3-0.
-			%p Despite being heavy favourites, France crashed out of the 2002 World Cup without scoring a goal in the group stage. In 2006, seen as the last gasp for this generation of French football, they were fortunate to get out of a weak Group G before handling Spain (3-1), Brazil (1-0), and Portugal (1-0) before the final game in Berlin. Les Bleus were famously defeated by Italy after Zidane was assessed a red card for head-butting an Italian who was antagonizing him and losing on penalty kicks after playing to a 1-1 draw. 
+			%p Despite being heavy favourites, France crashed out of the 2002 World Cup without scoring a goal in the group stage. In 2006, seen as the last gasp for this generation of French football, they were fortunate to get out of a weak Group G before handling Spain (3-1), Brazil (1-0), and Portugal (1-0) before the final game in Berlin. Les Bleus were famously defeated by Italy after Zidane was assessed a red card for head-butting an Italian who was antagonizing him and losing on penalty kicks after playing to a 1-1 draw.
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/france-3.jpg"}/
 				%p.caption The best player of his generation, Zinedine Zidane is unfortunately remembered for his last international game, receiving a red card in the 2006 World Cup Finals to doom the French effort in a game he had been exceptional in.
@@ -279,37 +274,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td GK 
+							%td GK
 							%td Fabien Barthez (1994-2006)
 						%tr
-							%td DF 
+							%td DF
 							%td Robert Jonquet (1948-1960)
 						%tr
-							%td DF 
+							%td DF
 							%td Laurent Blanc (1989-2000)
 						%tr
-							%td DF 
+							%td DF
 							%td Lilian Thuram (1994-2008)
 						%tr
-							%td DF 
+							%td DF
 							%td Marcel Desailly (1993-2004)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Zinedine Zidane (1994-2006)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Michel Platini (1976-1987)
 						%tr
-							%td MF 
+							%td MF
 							%td Raymond Kopa (1952-1962)
 						%tr
-							%td MF 
+							%td MF
 							%td Didier Deschamps (1989-2000)
 						%tr
-							%td FW 
+							%td FW
 							%td Thierry Henry (1997-2010)
 						%tr
-							%td FW 
+							%td FW
 							%td Just Fontaine (1953-1960)
 		.article-nav
 			%p Keep reading:
@@ -367,37 +362,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td *GK 
+							%td *GK
 							%td Gordon Banks (1963-1972)
 						%tr
-							%td *DF 
+							%td *DF
 							%td Bobby Moore (1962-1973)
 						%tr
-							%td DF 
+							%td DF
 							%td Ashley Cole (2001-2014)
 						%tr
-							%td DF 
+							%td DF
 							%td Eddie Hapgood (1930-1939)
 						%tr
-							%td DF 
+							%td DF
 							%td Stuart Pearce (1987-1999)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Bobby Charlton (1958-1970)
 						%tr
-							%td MF 
+							%td MF
 							%td Steven Gerrard (2000-?)
 						%tr
-							%td MF 
+							%td MF
 							%td Stanley Matthews (1934-1957)
 						%tr
-							%td MF 
+							%td MF
 							%td Bryan Robson (1980-1991)
 						%tr
-							%td FW 
+							%td FW
 							%td Gary Lineker (1984-1992)
 						%tr
-							%td FW 
+							%td FW
 							%td Geoff Hurst (1966-1972)
 		.article-nav
 			%p Keep reading:
@@ -412,7 +407,7 @@
 				%li <a href="#section-four">4. Argentina</a>
 				%li <a href="#section-three">3. Italy</a>
 				%li <a href="#section-two">2. Germany</a>
-				%li <a href="#section-one">1. Brazil</a>       
+				%li <a href="#section-one">1. Brazil</a>
 		.row
 			%h2 6. Spain
 			%p Prior to the current, transcendent Spanish team, La Furia Roja were viewed in the same light as the Netherlands: generally competitive, sometimes exceptional, but never able to earn the sport’s highest crown. However, by defeating the Netherlands in 2010, Spain broke through to join the royalty of the sport and change their tale to one of consistent strength and success.
@@ -450,37 +445,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td GK 
+							%td GK
 							%td Iker Casillas (2000-?)
 						%tr
-							%td DF 
+							%td DF
 							%td Fernando Hierro (1989-2002)
 						%tr
-							%td DF 
+							%td DF
 							%td Jose Antonio Camacho (1975-1988)
 						%tr
-							%td DF 
+							%td DF
 							%td Sergio Ramos (2005-?)
 						%tr
-							%td DF 
+							%td DF
 							%td Carles Puyol (2000-2013)
 						%tr
-							%td MF 
+							%td MF
 							%td Xavi (2000-?)
 						%tr
-							%td MF 
+							%td MF
 							%td Andres Iniesta (2006-?)
 						%tr
-							%td MF 
+							%td MF
 							%td Amancio Amaro (1962-1974)
 						%tr
-							%td MF 
+							%td MF
 							%td Luis Suarez (1957-1972)
 						%tr
-							%td FW 
+							%td FW
 							%td David Villa (2005-?)
 						%tr
-							%td FW 
+							%td FW
 							%td Raul (1996-2006)
 		.article-nav
 			%p Keep reading:
@@ -541,37 +536,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td GK 
+							%td GK
 							%td Ladislao Mazurkiewicz (1965-1974)
 						%tr
-							%td *DF 
+							%td *DF
 							%td Jose Nasazzi (1923-1937)
 						%tr
-							%td DF 
+							%td DF
 							%td Diego Lugano (2003-?)
 						%tr
-							%td DF 
+							%td DF
 							%td Schubert Gambetta (1941-1952)
 						%tr
-							%td DF 
+							%td DF
 							%td Paolo Montero (1991-2005)
 						%tr
-							%td MF 
+							%td MF
 							%td Juan Schiaffino (1946-1954)
 						%tr
-							%td MF 
+							%td MF
 							%td Obdulio Varela (1939-1954)
 						%tr
-							%td MF 
+							%td MF
 							%td Jose Andrade (1923-1930)
 						%tr
-							%td FW 
+							%td FW
 							%td Oscar Miguez (1950-1956)
 						%tr
-							%td FW 
+							%td FW
 							%td Pedro Cea (1923-1932)
 						%tr
-							%td FW 
+							%td FW
 							%td Sebastian Abreu (1996-2012)
 		.article-nav
 			%p Keep reading:
@@ -586,7 +581,7 @@
 				%li <a href="#section-four">4. Argentina</a>
 				%li <a href="#section-three">3. Italy</a>
 				%li <a href="#section-two">2. Germany</a>
-				%li <a href="#section-one">1. Brazil</a> 
+				%li <a href="#section-one">1. Brazil</a>
 		.row
 			%h2 4. Argentina
 			%p While Uruguay was the clear top team in the early 20th century, Argentina was just as clearly their antagonist and the #2. Unlike Uruguay, they did not hoist any major hardware beyond the South American Championship in the early years but, whereas Uruguay faded and never approached greatness again, Argentina reversed its decline. After some down decades, since 1974 Argentina has qualified for the cup every single year, winning both of their titles in modern times. They are a team of the past, present, and future, always a threat.
@@ -632,37 +627,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td GK 
+							%td GK
 							%td Ubaldo Fillol (1974-1985)
 						%tr
-							%td DF 
+							%td DF
 							%td Daniel Passarella (1974-1986)
 						%tr
-							%td DF 
+							%td DF
 							%td Roberto Ayala (1994-2007)
 						%tr
-							%td DF 
+							%td DF
 							%td Javier Mascherano (2003-?)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Diego Maradona (1977-1994)
 						%tr
-							%td MF 
+							%td MF
 							%td Carlos Peucelle (1928-1940)
 						%tr
-							%td MF 
+							%td MF
 							%td Jorge Burruchaga (1983-1990)
 						%tr
-							%td MF 
+							%td MF
 							%td Sergio Batista (1985-1990)
 						%tr
-							%td FW 
+							%td FW
 							%td Mario Kempes (1973-1982)
 						%tr
-							%td FW 
+							%td FW
 							%td Gabriel Batistuta (1991-2002)
 						%tr
-							%td FW 
+							%td FW
 							%td Luis Artime (1961-1967)
 		.article-nav
 			%p Keep reading:
@@ -677,7 +672,7 @@
 				%li <a href="#section-four">4. Argentina</a>
 				%li <a href="#section-three">3. Italy</a>
 				%li <a href="#section-two">2. Germany</a>
-				%li <a href="#section-one">1. Brazil</a> 
+				%li <a href="#section-one">1. Brazil</a>
 		.row
 			%h2 3. Italy
 			%p In international football, Italy is special. As the first great European team, and with four World Cup titles to their name, Italy is one of the few teams that are always good. But more than their accomplishments, more than their quality, they bring a sense of romance to the game. The romantic sound of their Italian names. The flowing manes of their stars. Even today, when great Italian players may not look like those of the past, they exude charisma and style while still sporting names lyrical names like “Mario Balotelli.”
@@ -728,37 +723,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td *GK 
+							%td *GK
 							%td Dino Zoff (1968-1983)
 						%tr
-							%td *DF 
+							%td *DF
 							%td Fabio Cannavaro (1997-2010)
 						%tr
-							%td DF 
+							%td DF
 							%td Paolo Maldini (1988-2002)
 						%tr
-							%td DF 
+							%td DF
 							%td Giacinto Facchetti (1963-1977)
 						%tr
-							%td DF 
+							%td DF
 							%td Gaetano Scirea (1975-1986)
 						%tr
-							%td MF 
+							%td MF
 							%td Roberto Baggio (1998-2004)
 						%tr
-							%td MF 
+							%td MF
 							%td Andrea Pirlo (2002-?)
 						%tr
-							%td MF 
+							%td MF
 							%td Demetrio Albertini (1991-2002)
 						%tr
-							%td *FW 
+							%td *FW
 							%td Giuseppe Meazza (1930-1939)
 						%tr
-							%td FW 
+							%td FW
 							%td Paolo Rossi (1977-1986)
 						%tr
-							%td FW 
+							%td FW
 							%td Luigi Riva (1965-1974)
 		.article-nav
 			%p Keep reading:
@@ -777,14 +772,14 @@
 		.row
 			%h2 2. Germany
 			%p In 1990, after being eliminated by Germany in the semifinals, English star striker Gary Lineker famously said, “Football is a simple game; 22 men chase a ball for 90 minutes and at the end, the Germans win.” That is a sentiment shared by many nations. Germany getting through the group stage of a World Cup is the surest thing since death and taxes. The last time Germany was not alive past the group stage was in 1950 when they (along with Japan) were banned from participating in the World Cup as retribution for their role in World War II. Starting with the 1954 World Cup, which they won, they have not just qualified for the tournament every year, they’ve been one of the top half of teams. Of those 15 tournaments they have finished first, second, or third an unbelievable 10 times. Yes, literally two-thirds of the time Germany has held one of the top three places, a record no other nation even begins to approach. Lineker’s frustrated quote holds more truth than even he may have realized.
-			%p After not entering the 1930 World Cup, Germany went to Italy in 1934 and finished in third place. They defeated Belgium (5-2) and Sweden (2-1), before falling to Czechoslovakia in the semifinals. They defeated Austria in the third place game by a 3-2 count. In 1938 they were knocked out in the first round for the only time in their history, playing Switzerland to a 1-1 draw and losing on penalties. Then came World War II and the tournament took a break. 
+			%p After not entering the 1930 World Cup, Germany went to Italy in 1934 and finished in third place. They defeated Belgium (5-2) and Sweden (2-1), before falling to Czechoslovakia in the semifinals. They defeated Austria in the third place game by a 3-2 count. In 1938 they were knocked out in the first round for the only time in their history, playing Switzerland to a 1-1 draw and losing on penalties. Then came World War II and the tournament took a break.
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/germany-1.jpg"}/
 				%p.caption Attacking midfielder Fritz Walter captained West Germany to a surprise victory over Hungary in the 1954 World Cup final.
 			%p In Switzerland 1954, Germany returned to a World Cup featuring a Hungary team that hadn’t lost in four years, as well as the powerful Brazilian runners-up from 1950 and the Uruguayan defending champions who were past their prime but still dangerous.<sup>2</sup> Germany had the bad luck to draw into a group with the mighty Hungarians and, while finishing second and emerging from the group, were thrashed by Hungary 8-3. In the knockouts Germany’s class began to show, handling Yugoslavia 2-0 and drubbing Austria 6-1. In the finals they again faced the indomitable Hungarians but, in The Miracle of Bern, this time defeated them 3-2 to hoist their first World Cup trophy. A new tradition of footballing excellence had begun.
 			%aside.sidebar.right
-				%p 2. From this tournament through the 1990 edition “Germany” would be known as “West Germany.” East Germany also had a national team but they had minimal impact on the World Cup, examples of which will be given as they come up. For simplicity’s sake we will just call “West Germany” “Germany” in this article. 
-			%p In Sweden 1958 Germany, now among the favourites, drew into a difficult group with Argentina, Czechoslovakia, and a surprisingly game Northern Ireland squad. Germany came top of the group, again defeating Yugoslavia in the quarterfinals 1-0. In the semis Germany ran into the host Swedes and were defeated 3-1. In the third place game they were beaten again, this time by France, falling 6-3. In Chile 1962 Germany again won a tough group, this time over the host nation, Italy, and an overmatched Switzerland. For the third straight cup the Germans faced Yugoslavia to start out the knockouts but this time their antagonist flipped the script, winning 1-0 on a goal scored in the 85th minute. 
+				%p 2. From this tournament through the 1990 edition “Germany” would be known as “West Germany.” East Germany also had a national team but they had minimal impact on the World Cup, examples of which will be given as they come up. For simplicity’s sake we will just call “West Germany” “Germany” in this article.
+			%p In Sweden 1958 Germany, now among the favourites, drew into a difficult group with Argentina, Czechoslovakia, and a surprisingly game Northern Ireland squad. Germany came top of the group, again defeating Yugoslavia in the quarterfinals 1-0. In the semis Germany ran into the host Swedes and were defeated 3-1. In the third place game they were beaten again, this time by France, falling 6-3. In Chile 1962 Germany again won a tough group, this time over the host nation, Italy, and an overmatched Switzerland. For the third straight cup the Germans faced Yugoslavia to start out the knockouts but this time their antagonist flipped the script, winning 1-0 on a goal scored in the 85th minute.
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/germany-2.jpg"}/
 				%p.caption The finest striker in German footballing history, Gerd Müller led all goal scorers at the 1970 World Cup with 10.
@@ -836,37 +831,37 @@
 					%table.starting-xi
 						%tbody
 						%tr
-							%td *GK 
+							%td *GK
 							%td Sepp Maier (1966-1979)
 						%tr
-							%td *DF 
+							%td *DF
 							%td Franz Beckenbauer (1965-1977)
 						%tr
-							%td DF 
+							%td DF
 							%td Berti Vogts (1967-1978)
 						%tr
-							%td DF 
+							%td DF
 							%td Paul Janes (1932-1942)
 						%tr
-							%td DF 
+							%td DF
 							%td Karl-Heinz Schnellinger (1958-1971)
 						%tr
-							%td *MF 
+							%td *MF
 							%td Lothar Matthäus (1980-2000)
 						%tr
-							%td MF 
+							%td MF
 							%td Fritz Walter (1940-1958)
 						%tr
-							%td MF 
+							%td MF
 							%td Wolfgang Overath (1963-1974)
 						%tr
-							%td MF 
+							%td MF
 							%td Michael Ballack (1999-2010)
 						%tr
-							%td *FW 
+							%td *FW
 							%td Gerd Müller (1966-1974)
 						%tr
-							%td FW 
+							%td FW
 							%td Uwe Seeler (1954-1970)
 		.article-nav
 			%p Read about another team:
@@ -881,7 +876,7 @@
 				%li <a href="#section-four">4. Argentina</a>
 				%li <a href="#section-three">3. Italy</a>
 				%li <a href="#section-two">2. Germany</a>
-				%li <a href="#section-one">1. Brazil</a> 
+				%li <a href="#section-one">1. Brazil</a>
 		.row
 			%h2 1. Brazil
 			%p When you began reading this article, was there ever any doubt? Since winning their fourth World Cup title in 1994 Brazil has stood as the unquestioned king of international football. It’s not just a matter of their five titles along with the beautiful, attacking style and—in the United States at least—the combination of fun and gravitas offered by the single names that their players go by. The deeper you look into Brazil’s story, the more evidence that surfaces in their favour. Brazil, alone, has competed in every World Cup in history. In those 19 competitions they  failed to advance beyond the first/group rounds only three times: in the early days of 1930 and 1934,  and then in England 1966. They’ve won the most World Cup games, scored the most goals, and easily have the best goal differential. They’ve won their five titles on four continents, showing a unique ability to win anywhere in the world. Curiously, in a quality shared by the other top teams on this list, Brazil is actually more successful in their World Cup results than in their own continental competition. As the stage gets bigger and the environment less familiar Brazil’s star shines even brighter. Their players are the most legendary of all, beginning with the incomparable Pele. They are the only footballers to eclipse the sport and become part of the global consciousness. There is seemingly no end to the plaudits that the Brazilian national team has earned and deserves so let’s re-state that they are obviously the best ever and begin telling their long story, one that spans the entire history of the World Cup itself.
@@ -905,7 +900,7 @@
 				%img{:src => "../../images/features/world-cup/brazil-5.jpg"}/
 				%p.caption With Garrincha in retirement it was again Pele’s time to shine, leading perhaps the best Brazilian team ever to the 1970 World Cup title.
 			%p The Brazilian National Team in 1970. Many consider them the greatest World Cup team ever. They only trailed for 38 minutes total during the tournament, winning all six games and scoring 19 goals against 7 conceded. Their class particularly shone in the knockout rounds beating Peru (4-2), Uruguay (3-1), and Italy (4-1), all in decisive fashion. It was their third title, beating Italy in the final to be the first team to achieve the distinction. This would be Pele’s final World Cup.
-			%p Brazil faced a stiff test in 1974: Group 2 featured an exceptional Yugoslavia squad along with a solid Scotland team. Brazil managed to finish second in the group by goal differential over Scotland. In the second round Group A Brazil came second again, this time to the legendary Netherlands squad of Johan Cruyff. This put them into the third place game where they were beaten by Poland 1-0. Argentina 1978 looked a lot like the 1974 competition. Brazil again struggled through their group, coming second behind Austria and just ahead of Spain. In the second round they finished second in Group B behind eventual champion Argentina but this time won the third place match against Italy, 2-1. This would prove to be their high water mark as the next few World Cups did not live up to Brazil’s singular standards. 
+			%p Brazil faced a stiff test in 1974: Group 2 featured an exceptional Yugoslavia squad along with a solid Scotland team. Brazil managed to finish second in the group by goal differential over Scotland. In the second round Group A Brazil came second again, this time to the legendary Netherlands squad of Johan Cruyff. This put them into the third place game where they were beaten by Poland 1-0. Argentina 1978 looked a lot like the 1974 competition. Brazil again struggled through their group, coming second behind Austria and just ahead of Spain. In the second round they finished second in Group B behind eventual champion Argentina but this time won the third place match against Italy, 2-1. This would prove to be their high water mark as the next few World Cups did not live up to Brazil’s singular standards.
 			%p 1982 started out strongly for Brazil sweeping through Group 6 with three wins, 10 goals scored and just two conceded. However, their second round group was the proverbial “group of death” as they faced Italy and Argentina. While Brazil hung some tough defeats on Italy in previous World Cups this time Gli Arrizzi got the best of Canarinho pushing Brazil to second in the group and out of the tournament. In 1986 the competition returned to Mexico where Brazil made millions of fans with their thrilling 1970 championship. This campaign started strongly winning all of their matches in Group D with five goals scored without conceding any. They opened the knockouts with a 4-0 whitewashing and seemed on their way to another title. However in the quarterfinals a solid French team tied them 1-1 and won on penalty kicks. In 1990 Brazil once again stormed past the competition in an unusually weak Group C but drew defending champion Argentina in the first round. La Albiceleste underperformed in the group stage which created this unusually difficult matchup in the round of 16. Sadly for Brazil this Argentina team was again the real deal, going on to be runners-up and overcoming Brazil 1-0 along the way.
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/brazil-6.jpg"}/
@@ -914,13 +909,13 @@
 			%aside.sidebar.image.right
 				%img{:src => "../../images/features/world-cup/brazil-7.jpg"}/
 				%p.caption Despite flopping in the finals under controversial circumstances, Brazil’s Ronaldo was a revelation in 1998.
-			%p The tournament shifted to France in 1998, and Brazil again topped their group despite losing to Norway after already clinching. In the knockouts they eased past Chile 4-1, then outlasted a strong Denmark side 3-2. In the semifinals Brazil faced the Netherlands, a rematch of the quarterfinals battle in 1994. This time they played to a draw with Brazil winning on penalties. This set up a crowd-pleasing final between the Brazilians and the host French side. France was on the ascent, with a young team preparing to be at or around the top of international football for the next decade and they gave Brazil an uncharacteristically heavy 3-0 loss to take the title. 
+			%p The tournament shifted to France in 1998, and Brazil again topped their group despite losing to Norway after already clinching. In the knockouts they eased past Chile 4-1, then outlasted a strong Denmark side 3-2. In the semifinals Brazil faced the Netherlands, a rematch of the quarterfinals battle in 1994. This time they played to a draw with Brazil winning on penalties. This set up a crowd-pleasing final between the Brazilians and the host French side. France was on the ascent, with a young team preparing to be at or around the top of international football for the next decade and they gave Brazil an uncharacteristically heavy 3-0 loss to take the title.
 			%aside.sidebar.image.left
 				%img{:src => "../../images/features/world-cup/brazil-8.jpg"}/
 				%p.caption Bouncing back from the 1998 Finals, Ronaldo scored both goals of the 2002 World Cup Finals, to make for a tournament-leading eight total.
 			%p For Brazil, coming in as the runners-up in 1998 proved to be a down tournament between titles as they stormed to the championship in 2002. This time they trailed for only 27 minutes in their seven wins. After dominating Group G in winning all of their games with 11 goals for and three against, Brazil drew an overmatched Belgium in the round of 16 and won 2-0. Next came a 2-1 win over England followed by a narrow 1-0 win over a surprisingly game Turkey in the semifinals. This led to another exciting final as the three time champion Germans bid to tie the Brazilian record of four titles. While the game was tight and competitive Ronaldo opened the scoring in the 67th minute and scored again in the 79th to lead Brazil to their fifth title.
 			%p Speaking of Germany, the 2006 edition moved to Deutschland. As usual Brazil won their group, albeit an easy one with Australia, Croatia, and Japan. First they faced and easily dispatched with Ghana 3-0 before facing France in a rematch of the 1998 tournament. France had crashed out in the 2002 group stage but were back in form. Star striker Thierry Henry scored for Les Bleus in the 57th minute to provide the only goal and send Brazil home early. In 2010 Brazil won a very competitive Group G over Portugal and the Ivory Coast, along with a flaccid North Korea. Another title run seemed to be in the offing with a 3-0 dispatch of Chile in the round of 16. However in the quarterfinals the Netherlands exacted some measure of revenge for past defeats, coming back from a 1-0 deficit to vanquish Brazil 2-1.
-			%p This tale is already full of superlatives; what more can be said than Brazil stands as the single greatest nation in the dramatic global history of the greatest sports tournament: the World Cup. Playing with flair, boasting an array of memorable stars, and becoming synonymous with football in every corner of the world—no sport is more Brazilian than football, and nothing is more football than Brazil. 
+			%p This tale is already full of superlatives; what more can be said than Brazil stands as the single greatest nation in the dramatic global history of the greatest sports tournament: the World Cup. Playing with flair, boasting an array of memorable stars, and becoming synonymous with football in every corner of the world—no sport is more Brazilian than football, and nothing is more football than Brazil.
 			.section-footer
 				.col1
 					%h4 Team Stats
@@ -948,74 +943,74 @@
 						%tbody
 
 						%tr
-							%td GK 
+							%td GK
 							%td Gilmar (1953-1969)
 						%tr
-							%td DF 
+							%td DF
 							%td Roberto Carlos (1992-2006)
 						%tr
-							%td DF 
+							%td DF
 							%td Carlos Alberto (1964-1977)
 						%tr
-							%td DF 
+							%td DF
 							%td Djalma Santos (1952-1968)
 						%tr
-							%td DF 
+							%td DF
 							%td Nilton Santos (1949-1962)
 						%tr
-							%td MF 
+							%td MF
 							%td Jarizinho (1964-1982)
 						%tr
-							%td MF 
+							%td MF
 							%td Didi (1952-1962)
 						%tr
-							%td MF 
+							%td MF
 							%td Rivelino (1965-1978)
 						%tr
-							%td *FW 
+							%td *FW
 							%td Pelé (1957-1971)
 						%tr
-							%td *FW 
+							%td *FW
 							%td Ronaldo (1994-2011)
 						%tr
-							%td *FW 
+							%td *FW
 							%td Garrincha (1955-1966)
 					%h4 Second Starting XI
 					%table.starting-xi
 						%tbody
 
 						%tr
-							%td GK 
+							%td GK
 							%td Taffarel (1988-1998)
 						%tr
-							%td DF 
+							%td DF
 							%td Domingos da Guia (1931-1946)
 						%tr
-							%td DF 
+							%td DF
 							%td Lúcio (2000-2011)
 						%tr
-							%td DF 
+							%td DF
 							%td Cafu (1990-2006)
 						%tr
-							%td DF 
+							%td DF
 							%td Bellini (1957-1966)
 						%tr
-							%td MF 
+							%td MF
 							%td Zico (1976-1986)
 						%tr
-							%td MF 
+							%td MF
 							%td Zizinho (1942-1957)
 						%tr
-							%td MF 
+							%td MF
 							%td Gérson (1961-1972)
 						%tr
-							%td MF 
+							%td MF
 							%td Sócrates (1979-1986)
 						%tr
-							%td FW 
+							%td FW
 							%td Romário (1987-2005)
 						%tr
-							%td FW 
+							%td FW
 							%td Leônidas (1932-1946)
 		.article-nav
 			%p Keep reading:
@@ -1030,4 +1025,4 @@
 				%li <a href="#section-four">4. Argentina</a>
 				%li <a href="#section-three">3. Italy</a>
 				%li <a href="#section-two">2. Germany</a>
-				%li <a href="#section-one">1. Brazil</a> 
+				%li <a href="#section-one">1. Brazil</a>
