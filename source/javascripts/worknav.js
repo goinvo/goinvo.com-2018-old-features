@@ -87,7 +87,6 @@ $( document ).ready(function() {
 
 	if(index > 0) {
 		imgURL = "../../images/clients/" + projects[index].title.replace(/ /g, '').toLowerCase() + "/" + projects[index].image;
-		console.log(imgURL);
 
 		next.css({
 			"background": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")",

@@ -10,8 +10,13 @@
 //= require vendor/masonry.min.js
 //= require vendor/mousetrap.js
 //= require base/ui.js
+//= require fitvids.js
 
 $(document).foundation();
+
+$(document).ready(function(){
+    $('.video-box').fitVids();
+});
 
 //fix for problem where '/v01/' is missing in the url
 var currentURL = 'http://code.goinvo.com/v01/';

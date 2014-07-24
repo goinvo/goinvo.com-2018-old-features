@@ -88,10 +88,26 @@ article#complex-case {
     }
 
     .center-image-content.large {
+        padding: 1em 0;
         position:relative;
         left:-29%;
         width:158%;
         height:auto;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .caption {
+            &.overhead {
+                padding-top: 1em;
+                padding-bottom: 2.5em;
+            }
+            &.underneath {
+                padding-top: 2.5em;
+                padding-bottom: 1em;
+            }
+            text-align: center;
+        }
     }
 
     #mainContent {

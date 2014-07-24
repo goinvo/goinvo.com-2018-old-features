@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- If you’re looking for the online demo, it’s here: http://mathiasbynens.be/demo/placeholder -->
+<!-- If you&rsquo;re looking for the online demo, it&rsquo;s here: http://mathiasbynens.be/demo/placeholder -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -28,21 +28,21 @@
 			<p><label><code>textarea</code> <textarea name="message" placeholder="Your message goes here"></textarea></label></p>
 			<p><input type="submit" value="type=submit"></p>
 		</form>
-		<p>— <a href="http://mathiasbynens.be/" title="Mathias Bynens, front-end developer">Mathias</a></p>
+		<p>&mdash; <a href="http://mathiasbynens.be/" title="Mathias Bynens, front-end developer">Mathias</a></p>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jquery.placeholder.js"></script>
 		<script>
-			// To test the @id toggling on password inputs in browsers that don’t support changing an input’s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+			// To test the @id toggling on password inputs in browsers that don&rsquo;t support changing an input&rsquo;s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
 			// $.fn.hide = function() { return this; }
 			// Then uncomment the last rule in the <style> element (in the <head>).
 			$(function() {
 				// Invoke the plugin
 				$('input, textarea').placeholder();
-				// That’s it, really.
+				// That&rsquo;s it, really.
 				// Now display a message if the browser supports placeholder natively
 				var html;
 				if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
-					html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won’t run in this case, since it’s not needed. If you want to test the plugin, use an older browser ;)';
+					html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won&rsquo;t run in this case, since it&rsquo;s not needed. If you want to test the plugin, use an older browser ;)';
 				} else if ($.fn.placeholder.input) {
 					html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
 				}
