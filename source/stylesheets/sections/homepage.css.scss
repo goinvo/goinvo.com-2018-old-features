@@ -20,11 +20,6 @@ body {
 	max-width: 100%;
 }
 
-#main-header {
-	padding-left: 5em;
-	padding-right: 5em;
-}
-
 .homepage-header {
 	width: 100%;
 	position: relative;
@@ -35,20 +30,24 @@ body {
 				font-weight: 400;
 				&.boxed {
 					display: inline-block;
-					padding: 0.25em 1em;
 					margin-bottom: 1em;
-					background-color: #EEE;
-					color: #444;
+					text-transform: uppercase;
+					color: #FFF;
 				}
+			}
+			h5 {
+				font-size: 16px;
+				letter-spacing: 1px;
 			}
 			.light-button {
 				display: inline-block;
 				margin-top: 15px;
-				padding: 0.5em 1em;
-				border: 2px solid #FFF;
+				padding: 0.6em 1em 0.4em;
+				border: 1px solid #AAA;
+				border-radius: 5px;
 				background: #000;
 				background: rgba(0,0,0,0.25);
-				box-shadow: 0 0 3px #000, inset 0 0 3px #000;
+				/* box-shadow: 0 0 3px #000, inset 0 0 3px #000; */
 				color: #FFF;
 				font-size: 22px;
 				text-shadow: 1px 1px 0 #444;

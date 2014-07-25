@@ -10,15 +10,15 @@ ul.stat-label, ul.stat-data {
 	li {
 		text-align: center;
 		display: inline-block;
-	}   
+	}
 }
 
 ul.stat-data {
-	margin-top: 0px;   
+	margin-top: 0px;
 }
 
 ul.stat-label {
-	margin-bottom:5px;   
+	margin-bottom:5px;
 }
 
 ul.starting-xi {
@@ -72,6 +72,10 @@ header.hero {
 		margin-left: 0;
 		margin-right: 0;
 	}
+	&.hidden {
+		display: none;
+		opacity: 0;
+	}
 }
 
 #dataViz iframe {
@@ -86,8 +90,8 @@ header.hero {
 	h1,  {
 		max-width: 780px;
 		max-width: 78rem;
-		margin: 2em auto 1em;
-		padding: 0 1.5em;
+		margin: 0 auto;
+		padding: 2em 0 0.5em;
 		font-size: 38px;
 		font-size: 3.8rem;
 		line-height: 1em;
@@ -147,7 +151,7 @@ header.hero {
 	table {
 		tr:nth-of-type(even) {
 			background: #DDD;
-			td { 
+			td {
 				color: #666;
 			}
 		}
@@ -171,7 +175,7 @@ header.hero {
 				padding: 0.5em;
 			}
 		}
-	} 
+	}
 	.article-nav {
 		color: #888;
 		padding: 2em;
