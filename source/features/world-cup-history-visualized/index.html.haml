@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "World Cup History Visualized"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/feature-article"
 	= javascript_include_tag "featurenav"
+	%meta{:name => "description", :content => "World Cup History Visualized"}/
+	%meta{:name => "keywords", :content => "world cup history, world cup visualized, world cup info viz"}/
 
 %article#feature-article.soccer
 	%header.hero

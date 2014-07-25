@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "The PGP Gains New Focus & New Business with Invo Workshop"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/complex-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "The Personal Genome Project Gains New Focus & New Business with Invo Workshop."}/
+	%meta{:name => "keywords", :content => "personalized health, genomics, user experience, user interface, workshop, product architecture, product strategy"}/
 - client = client_for_name("Personal Genome Project")
 
 %article#complex-case.pgp

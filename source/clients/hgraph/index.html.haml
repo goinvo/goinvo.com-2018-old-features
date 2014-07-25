@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "hGraph Improves Health and Healthcare with Agile Design and Big Data Analytics"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/complex-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "hGraph, your health in one picture, Improves Health and Healthcare with Agile Design and Big Data Analytics"}/
+	%meta{:name => "keywords", :content => "hgraph, health visualization, big data, patient health, health score, hscore, healthcare application"}/
 - client = client_for_name("hGraph")
 
 %article#complex-case.hgraph

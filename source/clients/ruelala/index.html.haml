@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Reimagining a path to grow from a $250MM to a $2B company"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Reimagining a path to grow from a $250MM to a $2B company."}/
+	%meta{:name => "keywords", :content => "product strategy, systemic design, ui design, ux design, research"}/
 - client = client_for_name("Rue La La")
 		
 .row

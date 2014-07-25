@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Application and UI Design for Microsoft Expression Studio"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Boston area UI design firm Involution created design patterns to lead the redesign of Microsoft’s Expression Studio."}/
+	%meta{:name => "keywords", :content => "application design, user interface design, designer tools, developer tools, microsoft, expression, involution, boston user interface design"}/
 - client = client_for_name("Microsoft")
 
 .row
