@@ -19,13 +19,13 @@
 						%h4.title= person.title
 						%ul.social-icons
 							- unless person.linkedin_url.blank?
-								%li.linkedin= link_to(image_tag('team/social-icons/linkedin.svg'), person.linkedin_url )
+								%li.linkedin= link_to(image_tag('icon-linkedin.svg'), person.linkedin_url )
 							- unless person.twitter_username.blank?
-								%li.twitter= link_to(image_tag('team/social-icons/twitter.svg'), twitter_url_for(person.twitter_username) )
+								%li.twitter= link_to(image_tag('icon-twitter.svg'), twitter_url_for(person.twitter_username) )
 							- unless person.github_username.blank?
-								%li.github= link_to(image_tag('team/social-icons/github.svg'), github_url_for(person.github_username) )
+								%li.github= link_to(image_tag('icon-github.svg'), github_url_for(person.github_username) )
 							- unless person.flickr_username.blank?
-								%li.flickr= link_to(image_tag('team/social-icons/flickr.svg'), flickr_url_for(person.flickr_username) )
+								%li.flickr= link_to(image_tag('icon-flickr.svg'), flickr_url_for(person.flickr_username) )
 							- unless person.dribbble_username.blank?
 								%li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username) )
 							- unless person.tumblr_url.blank?
