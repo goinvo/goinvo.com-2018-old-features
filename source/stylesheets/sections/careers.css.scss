@@ -12,6 +12,9 @@ $center-padding:30px;
  ************************************/
 
 #careers {
+	.video-box {
+		padding-bottom: 0;
+	}
 	.hero {
 		background-image: url('../../images/careers/boston-ux-designer-career.jpg');
 		h2 {
@@ -21,22 +24,22 @@ $center-padding:30px;
 			@include shadow-subline();
 		}
 	}
-	
+
 	#mainContent {
 		padding: 40px 20px;
 		.title {
 			font-size: 3.2rem;
 			line-height: 3.5rem;
-			
+
 		}
-	  
+
 		#engineer ul, #engineer ul li {
 			font-size:26px;
 			line-height:30px;
 			letter-spacing:0.03em;
 			word-spacing:0rem;
 		}
-	  
+
 		.subtitle {
 			p {
 				color: $gray;
@@ -44,7 +47,7 @@ $center-padding:30px;
 			}
 		}
   }
-	
+
 	.centerContent {
 		padding-left:$center-padding;
 		padding-right:$center-padding;
@@ -59,9 +62,9 @@ $center-padding:30px;
 }
 
 #abutton, #abutton2 {
-	padding-top:11px;   
+	padding-top:11px;
 }
 
 #email-02f6d985-bc3d-40a0-9bff-c8610111844b, #email_content2-02f6d985-bc3d-40a0-9bff-c8610111844b, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b, #email_content2-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
-	width:100%;   
+	width:100%;
 }
