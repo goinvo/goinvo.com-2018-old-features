@@ -200,7 +200,7 @@ header.hero {
 				padding-bottom: 5px;
 				border-bottom: 1px solid #CCC;
 				white-space: nowrap;
-				&:hover {
+				&:hover, &.active {
 					color: #425f8e;
 					border-bottom: 5px solid #425f8e;
 				}
