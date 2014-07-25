@@ -1,7 +1,11 @@
+- content_for(:title) do
+	= "Portfolio of Software Designed by Involution Studios"
 - content_for(:worlds_end) do
 	= javascript_include_tag "projects"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/work"
+	%meta{:name => "description", :content => "Portfolio of Software Designed by Involution Studios"}/
+	%meta{:name => "keywords", :content => "boston user interface design, boston ui design, software design studio, boston user experience design, boston ux design, boston software design studio, boston software design"}/
 #projects
 	%header.hero.work
 		.title

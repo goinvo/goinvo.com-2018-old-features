@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Natural Language Processing (NLP) Software for 3M Health Information Systems"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/complex-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "When 3M Health Information Systems — the leading Natural Language Processing (NLP) and computer-assisted coding supplier in healthcare — required product"}/
+	%meta{:name => "keywords", :content => "nlp, icd-9, icd-10, hospital coding, his, 3m, natural language processing, prototype, software development, ui design"}/
 - client = client_for_name("3M")
 
 %article#complex-case.three-m

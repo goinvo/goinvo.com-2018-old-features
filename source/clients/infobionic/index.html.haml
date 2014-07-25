@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Infobionic"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Healthcare software to remotely monitoring patient heart arrhythmia's."}/
+	%meta{:name => "keywords", :content => "atrial fibrillation, ui design, healthcare software, heart arrhythmia, patented software"}/
 - client = client_for_name("Infobionic")
 		
 .row

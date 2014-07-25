@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Facebook app and iOS UI Design for Numera"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "The Measured Health board and executive team knew exactly what they wanted: an amazing service that crossed all modern app platforms to transform the health and"}/
+	%meta{:name => "keywords", :content => "facebook app, ios design, mobile design, boston user interface design, boston ui design, boston application design, software design"}/
 - client = client_for_name("Numera")
 		
 .row

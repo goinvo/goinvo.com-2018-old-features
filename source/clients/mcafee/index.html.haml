@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Application and UI Design + Dev for McAfee Total Protection Suite"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Boston area UI design firm Involution completely re-designed and developed the user interface for McAfee’s Total Protection Suite."}/
+	%meta{:name => "keywords", :content => "mcafee total protection suite, boston user interface design, boston ui design, boston application design, software design"}/
 - client = client_for_name("McAfee")
 		
 .row

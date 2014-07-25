@@ -1,6 +1,10 @@
+- content_for(:title) do
+	= "Application and UI Design and Development for Oracle Agile PLM"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/complex-case-studies"
 	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Boston area UI design firm Involution re-conceptualized, designed and developed the user interface for Oracle’s Agile PLM Web application."}/
+	%meta{:name => "keywords", :content => "application design, user interface design, user interface development, agile, plm, product lifecycle management, oracle, involution, boston user interface design"}/
 - client = client_for_name("Oracle")
 
 %article#complex-case.oracle
