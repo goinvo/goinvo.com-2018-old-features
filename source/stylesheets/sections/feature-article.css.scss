@@ -35,12 +35,7 @@ header.hero {
 		position: static;
 		bottom: 0;
 		padding: 12em 2.5em 10em;
-		h2 {
-			@include shadow-headline();
-		}
-		h3 {
-			@include shadow-subline();
-		}
+
 		@media screen and (max-width: 1200px) {
 			padding: 8em 2.5em 6em;
 		}

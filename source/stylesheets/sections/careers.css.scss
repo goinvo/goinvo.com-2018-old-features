@@ -17,12 +17,6 @@ $center-padding:30px;
 	}
 	.hero {
 		background-image: url('../../images/careers/boston-ux-designer-career.jpg');
-		h2 {
-			@include shadow-headline();
-		}
-		h3 {
-			@include shadow-subline();
-		}
 	}
 
 	#mainContent {

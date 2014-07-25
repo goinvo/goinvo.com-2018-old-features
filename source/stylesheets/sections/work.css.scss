@@ -7,12 +7,6 @@
 		background-image: url('../../images/work/work.jpg');
 		background-position: center 65%;
 		margin-bottom: 15px;
-		h2 {
-			@include shadow-headline();
-		}
-		h3 {
-			@include shadow-subline();
-		}
 	}
 	
 	.phase-container {
