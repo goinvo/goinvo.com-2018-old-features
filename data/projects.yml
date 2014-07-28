@@ -32,7 +32,7 @@
       during_week: 48
 
 - client: "hGraph"
-  main_image: "hgraph_your_health_in_one_picture.jpg"
+  main_image: "hgraph-your-health-in-one-picture.jpg"
   practice_area_names: "Health"
   description: "Open source solution for visualizing a complete range of health metrics."
   budget: 50000 #Verify
@@ -166,7 +166,7 @@
       service_names: "Envision, Craft"
 
 - client: "Personal Genome Project"
-  main_image: "pgp_thumb.jpg"
+  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
   practice_area_names: "Health"
   description: "The PGP Gains New Business Focus with Invo Workshop"
   budget: 20000 #Verify

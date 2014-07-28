@@ -46,7 +46,7 @@ $( document ).ready(function() {
 		},
 		{
 			"title" : "Personal Genome Project",
-			"image" : "openhumans_ecosystem.jpg"
+			"image" : "pgp-openhumans-ecosystem.jpg"
 		},
 		{
 			"title" : "Rue La La",
