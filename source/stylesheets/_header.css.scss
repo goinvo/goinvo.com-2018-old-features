@@ -18,19 +18,17 @@
 #main-header {
 	height: 55px;
 	background: rgba(18,18,18,.875);
-	padding: 15px 1.5em 0;
+	padding: 15px 2.125em 0;
 	transition: background .3s ease;
 
 	#nav-buttons, #nav-buttons-mobile {
-		display:inline-block;
-		vertical-align:middle;
-		position:absolute;
-		right:0;
-		top:-12px;
-		padding-top:15px;
-
+		display: inline-block;
+		padding-top: 3px;
+		vertical-align: middle;
+		right: 0;
+		float: right;
 		a {
-			padding-right:20px;
+			padding-left: 20px;
 			color: $white;
 			&:hover {
 				color: #C9C9C9;

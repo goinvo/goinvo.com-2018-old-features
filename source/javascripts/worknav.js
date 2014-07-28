@@ -25,8 +25,8 @@ $( document ).ready(function() {
 			"image" : "democratic-national-committee-voter-registration-UI-design.jpg"
 		},
 		{
-			"title" : "Curl",
-			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
+			"title" : "Personal Genome Project",
+			"image" : "openhumans_ecosystem.jpg"
 		},
 		{
 			"title" : "McAfee",
@@ -45,8 +45,8 @@ $( document ).ready(function() {
 			"image" : "microsoft-expression-studio-redesign.jpg"
 		},
 		{
-			"title" : "Personal Genome Project",
-			"image" : "openhumans_ecosystem.jpg"
+			"title" : "Curl",
+			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
 		},
 		{
 			"title" : "Rue La La",
@@ -77,7 +77,7 @@ $( document ).ready(function() {
 	else if(current.indexOf("dnc") >= 0) {
 		index = 5;
 	}
-	else if(current.indexOf("curl") >= 0) {
+	else if(current.indexOf("personalgenomeproject") >= 0) {
 		index = 6;
 	}
 	else if(current.indexOf("mcafee") >= 0) {
@@ -89,10 +89,10 @@ $( document ).ready(function() {
 	else if(current.indexOf("numera") >= 0) {
 		index = 9;
 	}
-	else if(current.indexOf("microsoft") >= 0) {
+	else if(current.indexOf("curl") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("microsoft") >= 0) {
 		index = 11;
 	}
 	else {
@@ -167,7 +167,7 @@ function getIndex() {
 	else if(current.indexOf("dnc") >= 0) {
 		index = 5;
 	}
-	else if(current.indexOf("curl") >= 0) {
+	else if(current.indexOf("personalgenomeproject") >= 0) {
 		index = 6;
 	}
 	else if(current.indexOf("mcafee") >= 0) {
@@ -179,10 +179,10 @@ function getIndex() {
 	else if(current.indexOf("numera") >= 0) {
 		index = 9;
 	}
-	else if(current.indexOf("microsoft") >= 0) {
+	else if(current.indexOf("curl") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("microsoft") >= 0) {
 		index = 11;
 	}
 	else {

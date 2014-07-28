@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "en"}
 	%head
-		
+
 		%meta{charset: "utf-8"}
 		%meta{name: "viewport",  content: "width=device-width, initial-scale=1.0"}
 
@@ -23,18 +23,17 @@
 			#site-overlay
 				%header#main-header
 					%header#site-header
-						.medium-12.small-12.columns
-							%a{:href => asset_url('/'), :id => "site-title"}
-								= image_tag('logo-header.png', alt: "Involution Studios")
-								.tag-line Crafting exceptional software for progressive companies
-							%nav#nav-buttons
-								%a.nav-button{:href => asset_url('work')} Work
-								-# %a.nav-button{:href => asset_url('products')}
-								%a.nav-button{:href => asset_url('studio')} Studio
-								%a.nav-button{:href => asset_url('team')} Team
-								%a.nav-button{:href => asset_url('careers')} Careers
-								%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
-								%a.nav-button{:href => asset_url('contact')} Contact
+						%a{:href => asset_url('/'), :id => "site-title"}
+							= image_tag('logo-header.png', alt: "Involution Studios")
+							.tag-line Crafting exceptional software for progressive companies
+						%nav#nav-buttons
+							%a.nav-button{:href => asset_url('work')} Work
+							-# %a.nav-button{:href => asset_url('products')}
+							%a.nav-button{:href => asset_url('studio')} Studio
+							%a.nav-button{:href => asset_url('team')} Team
+							%a.nav-button{:href => asset_url('careers')} Careers
+							%a.nav-button{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
+							%a.nav-button{:href => asset_url('contact')} Contact
 					#mobile-hamburger
 						=image_tag('hamburger.svg');
 					%nav#nav-buttons-mobile
@@ -58,8 +57,8 @@
 						= mail_to "info@goinvo.com"
 					%p.twitter= link_to(image_tag('icon-twitter.svg'), "https://twitter.com/goinvo" )
 					%p.address
-						%a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} Map 
-			
+						%a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} Map
+
 			= yield_content :worlds_end
 			<script type="text/javascript"> (function(d,s,i,r) {if (d.getElementById(i)){return;} var n=d.createElement(s),e=d.getElementsByTagName(s)[0]; n.id=i;n.src='http://js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/356419.js'; e.parentNode.insertBefore(n, e); })(document,"script","hs-analytics",300000); </script>
 			<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-10273473-2', 'goinvo.com'); ga('send', 'pageview'); </script>

@@ -95,16 +95,15 @@
 #   hide_in_layout: false
 #   logo: #require
 
-- client: "Curl"
-  main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
-  practice_area_names: "Enterprise, Data Analytics"
-  description: "Curl picked Involution to showcase their powerful technology."
-  budget: 24000 #Verify
-  duration: 6 #Verify
-  repeat_client: false
-  story_template: false
+- client: "Personal Genome Project"
+  main_image: "pgp_thumb.jpg"
+  practice_area_names: "Health"
+  description: "The PGP Gains New Business Focus with Invo Workshop"
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: true
   hide_in_layout: false
-  logo: curl.jpg
+  logo: personalgenomeproject.jpg
 
 ## ROW 3 ##
 
@@ -165,15 +164,16 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Personal Genome Project"
-  main_image: "pgp_thumb.jpg"
-  practice_area_names: "Health"
-  description: "The PGP Gains New Business Focus with Invo Workshop"
-  budget: 20000 #Verify
-  repeat_client: true
-  story_template: true
+- client: "Curl"
+  main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
+  practice_area_names: "Enterprise, Data Analytics"
+  description: "Curl picked Involution to showcase their powerful technology."
+  budget: 24000 #Verify
+  duration: 6 #Verify
+  repeat_client: false
+  story_template: false
   hide_in_layout: false
-  logo: personalgenomeproject.jpg
+  logo: curl.jpg
 
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"
