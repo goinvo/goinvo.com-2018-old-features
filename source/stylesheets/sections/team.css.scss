@@ -7,6 +7,15 @@ $stats-padding: 40px;
 $icon-size: 25px;
 $ethics-padding: 30px;
 
+/************************************
+ **  Team
+ ************************************/
+ 
+#team {
+    .video-box {
+        padding-bottom: 0;
+    }
+}
 
 .hero {
     background-image: url('../../images/team/team.jpg');
