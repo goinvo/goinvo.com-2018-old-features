@@ -1,0 +1,55 @@
+- content_for(:title) do
+	= "Marketing optimization tool for Fortune 500 brands."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => ""}/
+- client = client_for_name("DNC")
+
+.row
+	.medium-3.small-12.column
+		%h1.client{style: "color: #{client.primary_color}"} DNC
+
+		%h6.subheader Results
+		%p.caption
+
+		%h6.subheader Details
+		%p.caption
+		%ul
+			%li
+
+		%h6.subheader Practice Areas
+		%p.caption
+
+		%h6.subheader Project Type
+		%p.caption
+
+		%h6.subheader Process
+		%p.caption
+
+		%h6.subheader Price
+		%p.caption
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.medium-9.small-12.column
+		%div
+			%img{alt: "Regisration form on BarackObama.com.", src: "../../images/clients/dnc/democratic-national-committee-voter-registration-UI-design.jpg"}
+		%p.caption Great design seems to follow U.S. President Barack Obama around. We like to think it&rsquo;s because he won&rsquo;t tolerate less.
+		%p We are comprised of democrats and republicans, and even a libertarian or two. But when we are asked to contribute to improving the democratic process we ignore party lines and get to the business of app development. Voter registration is an integral part of making our U.S. democracy work, so when the Democratic National Committee approached us to help them improve the process for people of all age and level of physical ability we jumped at the chance.
+		%p Online voter registration is a tricky problem. Legal registration still requires something to be physically mailed in, so people who come to register on their computer are often disillusioned to learn they must ultimately go through the same manual process that has been in place for decades. Thus our challenge was not just to best facilitate the role of a web service in fulfilling voter registration, it was also educating and entertaining the user in a way that they will not see the old print-and-mail method that the process boils down to as a negative.
+		%p We engaged the DNC in an agile design process, pushing through quick sprints and leading their re-imagining of online voter registration as a service. In just a matter of weeks we went from initial user research and review of existing services to a fully designed service, customized for rapid deployment by the DNC’s internal crew. And while it’s true that we are politically open-minded as a company there is certainly a special thrill to seeing your app included on the President’s website.
+		%div
+			%img{alt: "Detail of product architecture chart.", src: "../../images/clients/dnc/democratic-national-committee-voter-registration-product-architecture.jpg"}/
+		%p.caption Designing an excellent online service begins with a sensible architecture and workflow.
+		%div
+			%img{alt: "Simple icon mockups designed in Photoshop.", src: "../../images/clients/dnc/democratic-national-committee-voter-registration-pixel-perfect-comps.jpg"}/
+		%p.caption Making this beautiful was a requirement; our jumping quickly to pixel-perfect mock-ups helped facilitate driving us to a gorgeous aesthetic.
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next

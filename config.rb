@@ -6,7 +6,7 @@
 compass_config do |config|
 	# Require any additional compass plugins here.
 	config.add_import_path "bower_components/foundation/scss"
-	
+
 	config.output_style = :compact
 end
 

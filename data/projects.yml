@@ -56,6 +56,9 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
+
+## ROW 2 ##
+
 - client: "DataXu"
   main_image: "dataxu-campaign-dashboard-user-interface-tablet.jpg"
   practice_area_names: "Enterprise, Marketing Optimization"
@@ -71,6 +74,16 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
+- client: "DNC"
+  main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
+  practice_area_names: "Consumer"
+  description: "Involution + Voter Registration = A Better BarackObama.com"
+  budget: 20000 #Verify
+  repeat_client: false
+  story_template: false
+  hide_in_layout: false
+  logo: dnc.jpg
+
 # - client: "Infobionic"
 #   main_image: #require
 #   practice_area_names: "Healthcare"
@@ -81,6 +94,19 @@
 #   story_template: false
 #   hide_in_layout: false
 #   logo: #require
+
+- client: "Curl"
+  main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
+  practice_area_names: "Enterprise, Data Analytics"
+  description: "Curl picked Involution to showcase their powerful technology."
+  budget: 24000 #Verify
+  duration: 6 #Verify
+  repeat_client: false
+  story_template: false
+  hide_in_layout: false
+  logo: curl.jpg
+
+## ROW 3 ##
 
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
@@ -97,20 +123,15 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Microsoft"
-  main_image: "microsoft-expression-studio-product-architecture.jpg"
-  practice_area_names: "Consumer"
-  description: "Microsoft asked Involution to help them take on Adobe."
-  budget: 200000 #Verify
-  duration: 14 #Verify
-  repeat_client: false #Verify
+- client: "Oracle"
+  main_image: oracle-agile-plm-ui-design-development.jpg
+  practice_area_names: "Enterprise"
+  description: "We completely redesigned Oracle&rsquo;s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
+  budget: 500000 #Verify
+  repeat_client: true #Verify
   story_template: false
   hide_in_layout: false
-  logo: microsoft.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+  logo: oracle.jpg
 
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
@@ -127,15 +148,22 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Oracle"
-  main_image: oracle-agile-plm-ui-design-development.jpg
-  practice_area_names: "Enterprise"
-  description: "We completely redesigned Oracle&rsquo;s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
-  budget: 500000 #Verify
-  repeat_client: true #Verify
+## ROW 4 ##
+
+- client: "Microsoft"
+  main_image: "microsoft-expression-studio-product-architecture.jpg"
+  practice_area_names: "Consumer"
+  description: "Microsoft asked Involution to help them take on Adobe."
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
   story_template: false
   hide_in_layout: false
-  logo: oracle.jpg
+  logo: microsoft.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
 
 - client: "Personal Genome Project"
   main_image: "pgp_thumb.jpg"

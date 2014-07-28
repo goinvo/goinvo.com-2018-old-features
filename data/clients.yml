@@ -14,6 +14,10 @@
   primary_color: "#28bcd2"
   logo: "applause.jpg"
 
+- name: "Curl"
+  primary_color: "#058386"
+  logo: "curl.jpg"
+
 - name: "DataXu"
   primary_color: "#0e4474"
   logo: "dataxu.jpg"

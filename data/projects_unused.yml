@@ -21,15 +21,6 @@
   hide_in_layout: true
   logo: applause.jpg
 
-- client: "DNC"
-  practice_area_names: "Consumer"
-  description: ""
-  budget: 20000 #Verify
-  repeat_client: false
-  story_template: false
-  hide_in_layout: true
-  logo: dnc.jpg
-
 - client: "Empirix"
   practice_area_names: "Enterprise"
   description: ""
