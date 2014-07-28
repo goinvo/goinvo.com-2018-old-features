@@ -45,13 +45,10 @@ $( document ).ready(function() {
 			"image" : "microsoft-expression-studio-redesign.jpg"
 		},
 		{
-<<<<<<< HEAD
 			"title" : "Curl",
 			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
-=======
 			"title" : "Personal Genome Project",
 			"image" : "pgp-openhumans-ecosystem.jpg"
->>>>>>> FETCH_HEAD
 		},
 		{
 			"title" : "Rue La La",
