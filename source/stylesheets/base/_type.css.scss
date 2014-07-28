@@ -37,6 +37,7 @@ h1 {
 
 h2 {
   @include adjust-font-size-to(32px);
+  margin-top: 0;
 }
 
 h3 {
