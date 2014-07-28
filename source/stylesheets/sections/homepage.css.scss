@@ -69,7 +69,7 @@ body {
 			position: relative;
 			top: 30%;
 			@media only screen and (max-height: 920px) {
-				top: 20%;
+				top: 25%;
 				h2 {
 					font-size: 40px;
 					font-size: 4rem;
@@ -83,8 +83,8 @@ body {
 					line-height: 2.5rem;
 				}
 			}
-			@media only screen and (max-height: 600px) {
-
+			@media only screen and (max-height: 640px) {
+				top: 20%;
 			}
 			@media only screen and (max-width: 1230px) {
 				h2 {
@@ -121,22 +121,49 @@ body {
 		.title {
 			position: relative;
 			top: 15%;
-			text-align: center;
+			text-align: left;
 			@media only screen and (max-height: 1024px) {
 				top: 10%;
 			}
 			h2 {
-				font-size: 30px;
-				font-size: 3rem;
+				font-size: 24px;
+				font-size: 2.4rem;
 				font-weight: 400;
 				line-height: 1.1em;
-			}
-			h5.boxed {
-				font-size: 22px;
 			}
 			@media only screen and (max-width: 1020px) {
 				top: 0;
 				padding: 5em;
+			}
+			@media screen and (max-height: 940px) {
+				h2 {
+					font-size: 22px;
+					font-size: 2.2rem;
+				}
+				h3 {
+					font-size: 14px;
+					font-size: 1.4rem;
+				}
+			}
+			@media only screen and (max-height: 680px) {
+				h2 {
+					font-size: 18px;
+					font-size: 1.8rem;
+				}
+				h3 {
+					font-size: 12px;
+					font-size: 1.2rem;
+				}
+			}
+			@media only screen and (max-height: 660px) {
+				h2 {
+					font-size: 22px;
+					font-size: 2.2rem;
+				}
+				h3 {
+					font-size: 16px;
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}
@@ -172,59 +199,6 @@ body {
 				}
 			}
 		}
-		@media screen and (max-height: 940px) {
-			&.infobionic {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 14px;
-					font-size: 1.4rem;
-				}
-			}
-		}
-		@media screen and (max-height: 900px) {
-			&.walgreens {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 14px;
-					font-size: 1.4rem;
-				}
-			}
-		}
-
-		@media only screen and (max-height: 680px) {
-			.title {
-				top: 10%;
-			}
-			&.wallgreens, &.infobionic {
-				h2 {
-					font-size: 18px;
-					font-size: 1.8rem;
-				}
-				h3 {
-					font-size: 12px;
-					font-size: 1.2rem;
-				}
-			}
-		}
-		@media only screen and (max-height: 660px) {
-			&.three-m {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 16px;
-					font-size: 1.6rem;
-				}
-			}
-		}
-
 	}
 
 	&.three {
@@ -234,14 +208,7 @@ body {
 		.title {
 			h2 {
 				color: #EEE;
-				line-height: 1em;
 				text-shadow: 1px 1px 0 #888;
-			}
-			@media only screen and (max-width: 1280px) {
-				h2 {
-					font-size: 45px;
-					font-size: 4.5rem;
-				}
 			}
 		}
 	}

@@ -7,48 +7,47 @@
 				return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
 			var rand = getRandomInt(1, 2);
+			$('.homepage-header.two h3').remove();
+			$('.homepage-header.two .title').append('<a class="light-button">See how we did it.</a>');
 			if (rand === 1) {
 				$('.homepage-header.two').addClass('three-m');
-				$('.homepage-header.two > a').attr('href', 'clients/3m');
+				$('a.two').attr('href', 'clients/3m');
 				$('.homepage-header.two h2').html('&ldquo;Invo designed our way to a $150M exit.&rdquo;');
-				$('.homepage-header.two h3').html('George Moon, 3M Vice President');
-				$('.homepage-header.two .title').append('<a class="light-button">See how we did it.</a>');
+
 			}
 			/* else if (rand === 2) {
 				$('.homepage-header.two').addClass('infobionic');
-				$('.homepage-header.two > a').attr('href', 'clients/infobionic');
+				$('a.two').attr('href', 'clients/infobionic');
 				$('.homepage-header.two h2').html('&ldquo;With Invo, design wasn&rsquo;t just design. It impacted our IP portfolio. It changed our business.&rdquo;');
-				$('.homepage-header.two h3').html('Serban Georgescu MD, Infobionic Director of Clinical Development');
-				$('.homepage-header.two .title').append('<a class="light-button">See how we did it.</a>');
 			} */
 			else {
 				$('.homepage-header.two').addClass('walgreens');
-				$('.homepage-header.two > a').attr('href', 'clients/hgraph');
+				$('a.two').attr('href', 'clients/hgraph');
 				$('.homepage-header.two h2').html('&ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;');
-				$('.homepage-header.two h3').html('Igor Gershfang, Walgreens Emerging Tech Director');
-				$('.homepage-header.two .title').append('<a class="light-button">See how we did it.</a>');
 			}
 		});
 
-%a{:href => "features/world-cup-history-visualized/"}
+%a.one{:href => "features/world-cup-history-visualized/"}
 	.homepage-header.one
 		.container
 			.title
 				%h5.boxed July 2014 Feature
 				%h2 World Cup History Visualized:
 				%h3 84 years and 77 teams
-				%a.light-button Read about it
-%a{:href => "http://hgraph.org/"}
+				.light-button Read about it
+
+%a.two{:href => "http://hgraph.org/"}
 	.homepage-header.two
 		.container
 			.title
 				%h5.boxed Client Story
 				%h2 HGraph
 				%h3 Your health in one picture.
-%a{:href => "careers"}
+
+%a.three{:href => "careers"}
 	.homepage-header.three
 		.container
 			.title
 				%h5.boxed Our Culture
 				%h2 Radical transparency is just part of our story&hellip;
-				%a.light-button Read more
+				.light-button Read more

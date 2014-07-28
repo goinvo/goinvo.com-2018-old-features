@@ -114,15 +114,14 @@ div.feature-article-section {
 }
 
 .hero {
-	max-height: 460px;
-	min-height: 300px;
-	padding-top: 35%;
+	min-height: 240px;
+	padding: 20% 1em 5%;
 	position: relative;
 	z-index: 1;
 
 	.title {
-		position: absolute;
-		bottom: 10%;
+		position: relative;
+		top: 10%;
 		width: 100%;
 		padding-bottom: 25px;
 	}
@@ -130,10 +129,7 @@ div.feature-article-section {
 	h2, h3 {
 		text-align: center;
 		margin: 0 auto;
-		color: $white;
-		letter-spacing: .06rem;
-		padding-left: 5px;
-		padding-right: 5px;
+		color: #FFF;
 	}
 
 	h2 {
@@ -322,7 +318,6 @@ div.feature-article-section {
 				padding-right: $sidebar-padding;
 				line-height: inherit;
 				font-size: inherit;
-				font-weight: 600;
 				color: inherit;
 			}
 			h3.quote {

@@ -20,9 +20,12 @@ article#complex-case {
         header.hero {
             background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
             background-position: 0 80%;
-            div.row div div.title h2 {
+            h2 {
                 font-size: 66px;
-                line-height: 1em;
+                line-height: 0.9em;
+                @media only screen and (max-width: 900px) {
+                    font-size: 50px;
+                }
             }
         }
         #bigQuote {
@@ -31,20 +34,24 @@ article#complex-case {
         }
     }
     header.hero {
-        padding-top:490px;
-
-        div.row div div.title {
-
-            h2, h3 {
-                text-align:left;
-                margin-left:0px;
-                text-shadow:2px 2px transparentize($black, .8);
-            }
-
+        padding-top: 12%;
+        @media only screen and (max-width: 900px) {
+            padding-top: 8em;
             h2 {
-                font-size:5.2rem;
-                line-height: 4.75rem;
+                font-size: 40px;
+                font-size: 4rem;
             }
+
+        }
+        h2, h3 {
+            text-align:left;
+            margin-left: 0px;
+            text-shadow: 2px 2px transparentize($black, .8);
+        }
+
+        h2 {
+            font-size: 75px;
+            line-height: 0.9em;
         }
     }
 

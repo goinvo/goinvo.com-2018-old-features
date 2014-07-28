@@ -48,7 +48,7 @@ h4 {
 }
 
 h3.name {
-  font-weight: 400;  
+  font-weight: 400;
 }
 
 #contactForm h4, h4.title {
@@ -56,8 +56,12 @@ h3.name {
   font-weight: 400;
 }
 
+.quote {
+    font-weight: 400;
+}
+
 p {
-  font-size :1.4rem; 
+  font-size :1.4rem;
   margin-bottom: 1.5rem;
   em {
     font-style: italic;
@@ -76,9 +80,9 @@ p {
 }
 
 .social-card a:hover {
-    color:$blue;   
+    color:$blue;
 }
 
 a {
-     color: $blue;  
+     color: $blue;
 }

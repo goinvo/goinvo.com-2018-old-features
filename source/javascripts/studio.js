@@ -1,4 +1,4 @@
-// This js file calls our social media api and gets our social media 25 at a time. 
+// This js file calls our social media api and gets our social media 25 at a time.
 // Scroll to the bottom to load the next 25 until there are none left.
 
 var offsetNumber = 0;
@@ -21,7 +21,7 @@ function populateSocialMedia(listLength, offset) {
 }
 
 // Returns the html for an event's social-card
-function generateEventHTML( data) {
+function generateEventHTML( data ) {
     var social = "";
     var temp = "";
     var start = 0;
@@ -33,7 +33,7 @@ function generateEventHTML( data) {
         }
         else {
             social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-US")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
-        } 
+        }
     }
     else if(data.type == "flickr") {
         temp = data.content_embed;
@@ -53,7 +53,7 @@ function generateEventHTML( data) {
     catch(err){
         console.log("-------");
         console.log("Error: The following event object is throwing an error when trying to access its contents. The most likely cause is that the event was added to the event database before the event's user was added to the user database. (Note: just adding a user to the twitter list or zapier is not enough when adding a new employee. You must also add the user to the user database. If there are event objects that do not contain a user object, you must either delete the event object or add a user object following the same syntax as other events.");
-        console.log(data);   
+        console.log(data);
         console.log("-------");
     }
     return social;
@@ -65,28 +65,28 @@ $(document).ready(function() {
               columnWidth: '.social-card', // The width of the first card sets the column width (note: all .social-card are the same width)
               itemSelector: '.social-card',
               gutter: 0, // Use margins instead. I found that this makes the grid much more consistent
-              isFitWidth: true, 
+              isFitWidth: true,
               animate: true
     });
     populateSocialMedia(25, offsetNumber);
 });
 
 // Probably doens't actually do anything. But Just a catch to make sure that the grid is reloaded after the images are
-$(window).load(function() {            
+$(window).load(function() {
     $('#the-studio .content').masonry( 'reloadItems' );
     $('#the-studio .content').masonry( 'layout' );
-    $('div.loading').css("display", "none");  
+    $('div.loading').css("display", "none");
     $('div.bottom').css("display", "block");
 });
 
 // Scroll all the way to the bottom and load more events!
-$(function(){  
+$(function(){
    $(window).scroll(function(){
        if($(document).height()==$(window).scrollTop()+$(window).height()){
            offsetNumber += 25;
            populateSocialMedia(25, offsetNumber);
            if(numEvents%25 != 0) {
-                $('.bottom').html("You've reached the end!");   
+                $('.bottom').html("You've reached the end!");
            }
        }
    });
