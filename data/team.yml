@@ -33,7 +33,7 @@
 - first_name: "Your Career"
   last_name: Awaits!
   title: "We're always looking for amazing talent."
-  bio: "<a class='designerButton' id='team-button'>Learn why we should work together.</a>"
+  bio: "<a class='careerButton' id='team-button'>Learn why we should work together.</a>"
   photo: career_silhouette.jpg
 
 - first_name: Jennifer
