@@ -47,6 +47,8 @@ $( document ).ready(function() {
 		{
 			"title" : "Curl",
 			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
+		},
+		{
 			"title" : "Personal Genome Project",
 			"image" : "pgp-openhumans-ecosystem.jpg"
 		},

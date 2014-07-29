@@ -96,7 +96,7 @@
 #   logo: #require
 
 - client: "Personal Genome Project"
-  main_image: "pgp_thumb.jpg"
+  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
   practice_area_names: "Health"
   description: "The PGP Gains New Business Focus with Invo Workshop"
   budget: 20000 #Verify
@@ -182,6 +182,8 @@
   story_template: true
   hide_in_layout: false
   logo: curl.jpg
+
+## ROW 5 ##
 
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"
