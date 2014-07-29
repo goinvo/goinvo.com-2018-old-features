@@ -17,30 +17,30 @@
 	-# 			%option{value: ""} All Practice Areas
 	-# 			- data.practice_areas.each do |practice_area|
 	-# 				%option{value: practice_area}= practice_area
-				
+
 		.medium-2.small-12.columns
 			%select{name: "budget"}
 				- [["All Budgets",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
 					%option{value: text_and_value[1]}= text_and_value[0]
 		.medium-6.small-12.columns
-				 
+
 	.row.no-projects-match
 		.medium-12.column
 			%h3 No projects match your filters :-(
 	.projects-container
 		- data.projects.each_slice(3).each do |projects|
-			.row		
+			.row
 				-projects.each do |project|
 					- next if project.hide_in_layout?
-					.medium-4.small-12.columns.project{data: {project: true, project_budget: project.budget, project_url: "./../clients/#{project.client.delete(' ').downcase}", project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
+					.medium-4.small-12.columns.project{data: {project: true, project_budget: project.budget, project_url: "../work/#{project.client.delete(' ').downcase}", project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
 						.project-image{id:"client#{project.client.delete(' ')}", style: "background-image:url(./../images/clients/#{project.client.delete(' ').downcase}/#{project.main_image});"}
 						%h3= project.client
 						%p.description= project.description
-						%p.practice-areas
-							- x = 1
-							- practice_areas(project).each do |area|
-								= link_to area, "/v01/projects/#{area}"
-								- total=practice_areas(project).count
-								- if x < total
-									= "+"
-								- x = x + 1
+						-# %p.practice-areas
+						-# 	- x = 1
+						-# 	- practice_areas(project).each do |area|
+						-# 		= link_to area, "/v01/projects/#{area}"
+						-# 		- total=practice_areas(project).count
+						-# 		- if x < total
+						-# 			= "+"
+						-# 		- x = x + 1

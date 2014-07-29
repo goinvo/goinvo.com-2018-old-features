@@ -13,7 +13,16 @@
 
 }
 
-
+body.work #main-header #nav-buttons .work,
+body.studio #main-header #nav-buttons .studio,
+body.team #main-header #nav-buttons .team,
+body.careers #main-header #nav-buttons .careers,
+body.contact #main-header #nav-buttons .contact, {
+	color: #FFF;
+	&:hover {
+		color: #C9C9C9;
+	}
+}
 
 #main-header {
 	height: 55px;
@@ -29,9 +38,9 @@
 		float: right;
 		a {
 			padding-left: 20px;
-			color: $white;
+			color: #AAA;
 			&:hover {
-				color: #C9C9C9;
+				color: #DDD;
 			}
 		}
 	}
@@ -39,31 +48,33 @@
 	#mobile-hamburger {
 		cursor:pointer;
 		position:absolute;
-		top:20px;
+		top: 17px;
 		right:31px;
 		display:none;
 	}
 
 	#nav-buttons-mobile {
+		position: absolute;
 		display:none;
 		background: rgba(18,18,18,.875);
+		padding-top: 0;
 		top:55px;
 		left:0;
 		.nav-button {
-			display:block;
-			padding-top:10px;
-			padding-bottom:10px;
-			padding-right:10px;
-			padding-left:31px;
-			border-width:0px;
-			border-bottom-width:1px;
-			border-style:solid;
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 10px;
+			padding-left: 31px;
+			border-width: 0px;
+			border-bottom-width: 1px;
+			border-style: solid;
 			border-color: $gray;
 			&:first-child {
-				border-top-width:1px;
+				border-top-width: 1px;
 				}
 			a span.underline {
-				border-bottom-width:0px;
+				border-bottom-width: 0px;
 			}
 		}
 	}

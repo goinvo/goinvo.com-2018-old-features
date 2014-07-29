@@ -59,7 +59,6 @@ $(document).ready(function(){
         $('#sec0').addClass('visible');
         $('#sec10, #sec9, #sec8, #sec7, #sec6, #sec5, #sec4, #sec3, #sec2, #sec1').addClass('hidden');
     }
-
 });
 $(window).load(function(){
     var distance = $('#title').offset().top;
