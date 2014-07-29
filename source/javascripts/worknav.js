@@ -118,9 +118,9 @@ $( document ).ready(function() {
 	}
 	else {
 		next.on("click", function () {
-			   window.location.href = '../../work/process/';
+			   window.location.href = '../../work';
 		});
-		nextArea.html('Next: <span id="next">See Our Process</span>');
+		nextArea.html('Next: <span id="next">See more of our work</span>');
 		next.css({
 			"background": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(../../images/process/jpg/intro.jpg)",
 			"background-size": "cover",
