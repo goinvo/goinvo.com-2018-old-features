@@ -95,18 +95,6 @@
 #   hide_in_layout: false
 #   logo: #require
 
-- client: "Personal Genome Project"
-  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
-  practice_area_names: "Health"
-  description: "The PGP Gains New Business Focus with Invo Workshop"
-  budget: 20000 #Verify
-  repeat_client: true
-  story_template: true
-  hide_in_layout: false
-  logo: personalgenomeproject.jpg
-
-## ROW 3 ##
-
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
   practice_area_names: "Consumer"
@@ -121,6 +109,8 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+## ROW 3 ##
 
 - client: "Oracle"
   main_image: oracle-agile-plm-ui-design-development.jpg
@@ -147,8 +137,6 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-## ROW 4 ##
-
 - client: "Microsoft"
   main_image: "microsoft-expression-studio-product-architecture.jpg"
   practice_area_names: "Consumer"
@@ -163,6 +151,8 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+## ROW 4 ##
 
 - client: "Curl"
   main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
@@ -182,8 +172,6 @@
   story_template: true
   hide_in_layout: false
   logo: curl.jpg
-
-## ROW 5 ##
 
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"

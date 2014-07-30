@@ -25,10 +25,6 @@ $( document ).ready(function() {
 			"image" : "democratic-national-committee-voter-registration-UI-design.jpg"
 		},
 		{
-			"title" : "Personal Genome Project",
-			"image" : "openhumans_ecosystem.jpg"
-		},
-		{
 			"title" : "McAfee",
 			"image" : "mcafee-total-protection-desktop-app-design.jpg"
 		},
@@ -81,22 +77,22 @@ $( document ).ready(function() {
 	else if(current.indexOf("dnc") >= 0) {
 		index = 5;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("mcafee") >= 0) {
 		index = 6;
 	}
-	else if(current.indexOf("mcafee") >= 0) {
+	else if(current.indexOf("oracle") >= 0) {
 		index = 7;
 	}
-	else if(current.indexOf("oracle") >= 0) {
+	else if(current.indexOf("numera") >= 0) {
 		index = 8;
 	}
-	else if(current.indexOf("numera") >= 0) {
+	else if(current.indexOf("microsoft") >= 0) {
 		index = 9;
 	}
 	else if(current.indexOf("curl") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("microsoft") >= 0) {
+	else if(current.indexOf("personalgenomeproject") >= 0) {
 		index = 11;
 	}
 	else {
@@ -112,7 +108,7 @@ $( document ).ready(function() {
 			"background-position": "center"
 		})
 		next.on("click", function () {
-			   window.location.href =  '../../clients/' + projects[index].title.replace(/ /g, '').toLowerCase();
+			   window.location.href =  '../work/' + projects[index].title.replace(/ /g, '').toLowerCase();
 		});
 		nextTitle.html(projects[index].title);
 	}
@@ -171,22 +167,22 @@ function getIndex() {
 	else if(current.indexOf("dnc") >= 0) {
 		index = 5;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("mcafee") >= 0) {
 		index = 6;
 	}
-	else if(current.indexOf("mcafee") >= 0) {
+	else if(current.indexOf("oracle") >= 0) {
 		index = 7;
 	}
-	else if(current.indexOf("oracle") >= 0) {
+	else if(current.indexOf("numera") >= 0) {
 		index = 8;
 	}
-	else if(current.indexOf("numera") >= 0) {
+	else if(current.indexOf("microsoft") >= 0) {
 		index = 9;
 	}
 	else if(current.indexOf("curl") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("microsoft") >= 0) {
+	else if(current.indexOf("personalgenomeproject") >= 0) {
 		index = 11;
 	}
 	else {
