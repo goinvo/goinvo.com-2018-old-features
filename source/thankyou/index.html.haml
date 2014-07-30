@@ -1,12 +1,12 @@
 - content_for(:title) do
-  = "Thank you!"
+    = "Thank you!"
 = stylesheet_link_tag "sections/thankyou"
 - content_for(:page_head) do
     %meta{:name => "description", :content => "Involution Studios is a user interface and software design firm located in Boston. We create great user experiences for deskop, mobile, and web applications."}/
     %meta{:name => "keywords", :content => "boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design"}/
 %article#contact
-.row.thank-you-row
-    .small-11.small-centered.medium-7.medium-centered.columns
-        %h1#submission Thank you for submitting 
+    .row.thank-you-row
+        .small-11.small-centered.medium-7.medium-centered.columns
+            %h1#submission Thank you for submitting
 %script{:type => "text/javascript"}
-try{var url = document.URL; console.log(url); if(url.indexOf("#career") >= 0) {$('#submission').html("Thank you for appyling to a position with us. If we like what we see, we will get back to you shortly.");} else {$('#submission').html("Thank you for contacting us. We will get back to you as soon as possible.");}}catch(e){}
+    try{var url = document.URL; console.log(url); if(url.indexOf("#career") >= 0) {$('#submission').html("Thank you for appyling to a position with us. If we like what we see, we will get back to you shortly.");} else {$('#submission').html("Thank you for contacting us. We will get back to you as soon as possible.");}}catch(e){}
