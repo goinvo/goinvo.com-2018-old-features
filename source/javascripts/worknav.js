@@ -108,7 +108,7 @@ $( document ).ready(function() {
 			"background-position": "center"
 		})
 		next.on("click", function () {
-			   window.location.href =  '../work/' + projects[index].title.replace(/ /g, '').toLowerCase();
+			   window.location.href =  '../../work/' + projects[index].title.replace(/ /g, '').toLowerCase();
 		});
 		nextTitle.html(projects[index].title);
 	}
@@ -124,28 +124,6 @@ $( document ).ready(function() {
 		})
 	}
 
-
-	Mousetrap.bind('left', function () {
-		var l = getIndex();
-		if(l >= 0 && l <= 5){
-			l = l -1;
-		}
-		if(l >= 0 && l <= 5){
-			var url = projects[l].title.replace(/ /g, '').toLowerCase(); //note the '/v01/'
-			window.location.href = url;
-		}
-	});
-
-	Mousetrap.bind('right', function () {
-		var l = getIndex();
-		if(l >= 0 && l <= 5){
-			l = l +1;
-		}
-		if(l >= 0 && l <= 5){
-			var url = projects[l].title.replace(/ /g, '').toLowerCase(); //note the '/v01/'
-			window.location.href = url;
-		}
-	});
 });
 
 function getIndex() {
