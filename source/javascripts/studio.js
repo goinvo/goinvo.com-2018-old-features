@@ -77,11 +77,10 @@ $(window).load(function() {
     $('#the-studio .content').masonry( 'layout' );
     $('div.loading').css("display", "none");
     $('div.bottom').css("display", "block");
-});
-
-// Scroll all the way to the bottom and load more events!
-$(function(){
-   $(window).scroll(function(){
+    
+    $('.bottom').html("Scroll down to load more posts!");
+    //// Scroll all the way to the bottom and load more events! (can't happen until after initial load
+    $(window).scroll(function(){
        if($(document).height()==$(window).scrollTop()+$(window).height()){
            offsetNumber += 25;
            populateSocialMedia(25, offsetNumber);
@@ -91,3 +90,5 @@ $(function(){
        }
    });
 });
+
+
