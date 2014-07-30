@@ -41,7 +41,7 @@ $( document ).ready(function() {
 			"image" : "microsoft-expression-studio-redesign.jpg"
 		},
 		{
-			"title" : "SCSK",
+			"title" : "SCSK Corporation",
 			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
 		},
 		{
