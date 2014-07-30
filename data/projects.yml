@@ -154,10 +154,10 @@
 
 ## ROW 4 ##
 
-- client: "Curl"
+- client: "SCSK Corporation"
   main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
   practice_area_names: "Enterprise, Data Analytics"
-  description: "Curl picked Involution to showcase their powerful technology."
+  description: "SCSK picked Involution to showcase their powerful technology."
   budget: 24000 #Verify
   duration: 6 #Verify
   repeat_client: false

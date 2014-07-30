@@ -41,7 +41,7 @@ $( document ).ready(function() {
 			"image" : "microsoft-expression-studio-redesign.jpg"
 		},
 		{
-			"title" : "Curl",
+			"title" : "SCSK",
 			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
 		},
 		{
@@ -89,7 +89,7 @@ $( document ).ready(function() {
 	else if(current.indexOf("microsoft") >= 0) {
 		index = 9;
 	}
-	else if(current.indexOf("curl") >= 0) {
+	else if(current.indexOf("scsk") >= 0) {
 		index = 10;
 	}
 	else if(current.indexOf("personalgenomeproject") >= 0) {
@@ -179,7 +179,7 @@ function getIndex() {
 	else if(current.indexOf("microsoft") >= 0) {
 		index = 9;
 	}
-	else if(current.indexOf("curl") >= 0) {
+	else if(current.indexOf("scsk") >= 0) {
 		index = 10;
 	}
 	else if(current.indexOf("personalgenomeproject") >= 0) {
