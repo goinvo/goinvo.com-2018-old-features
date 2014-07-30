@@ -285,52 +285,49 @@ div.feature-article-section {
 		}
 	}
 }
+.sidebar {
+	padding-right: $outer-sidebar-padding;
+	padding-left: $outer-sidebar-padding;
+	font-size: $sidebar-font-size;
+	letter-spacing: $sidebar-letter-spacing;
+	line-height: $sidebar-line-height;
+	word-spacing: 0.1rem;
+	color: transparentize($darkgray, .1);
 
+	.photo, .video {
+		border-radius: $border-radius;
+		font-size: inherit;
+		background-color: transparentize($sidebar_color, .4);
 
+		img {
+			width: 100%;
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
+		}
 
-	.sidebar {
-		padding-right: $outer-sidebar-padding;
-		padding-left: $outer-sidebar-padding;
-		font-size: $sidebar-font-size;
-		letter-spacing: $sidebar-letter-spacing;
-		line-height: $sidebar-line-height;
-		word-spacing: 0.1rem;
-		color: transparentize($darkgray, .1);
-
-		.photo, .video {
+		iframe {
 			border-radius: $border-radius;
+			width: 100%;
+		}
+		h3 {
+			padding-top: $sidebar-padding;
+			padding-left: $sidebar-padding;
+			padding-right: $sidebar-padding;
+			line-height: inherit;
 			font-size: inherit;
-			background-color: transparentize($sidebar_color, .4);
-
-			img {
-				width: 100%;
-				border-top-left-radius: $border-radius;
-				border-top-right-radius: $border-radius;
-			}
-
-			iframe {
-				border-radius: $border-radius;
-				width: 100%;
-			}
-			h3 {
-				padding-top: $sidebar-padding;
-				padding-left: $sidebar-padding;
-				padding-right: $sidebar-padding;
-				line-height: inherit;
-				font-size: inherit;
-				color: inherit;
-			}
-			h3.quote {
-				text-indent: -0.45rem;
-			}
-			p.caption {
-				padding-bottom: $sidebar-padding;
-				padding-left: $sidebar-padding;
-				padding-right: $sidebar-padding;
-				font-size: inherit;
-				line-height: inherit;
-				letter-spacing: inherit;
-				line-height: inherit;
+			color: inherit;
+		}
+		h3.quote {
+			text-indent: -0.45rem;
+		}
+		p.caption {
+			padding-bottom: $sidebar-padding;
+			padding-left: $sidebar-padding;
+			padding-right: $sidebar-padding;
+			font-size: inherit;
+			line-height: inherit;
+			letter-spacing: inherit;
+			line-height: inherit;
 		}
 	}
 }
@@ -460,4 +457,13 @@ div.hsformerror {
 div.value {
 	padding-top: 7px;
 	font-size: 20px;
+}
+
+// 404
+.row404 {
+	min-height: 800px;
+	padding-top:250px;
+	h1 {
+		font-size: 5em;
+	}
 }
