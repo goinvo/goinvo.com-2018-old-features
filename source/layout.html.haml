@@ -9,12 +9,12 @@
 				= yield_content :title
 			- else
 				Boston UI Design & UX Design | Involution Studios
-
-		= stylesheet_link_tag 'all'
-		= javascript_include_tag 'all'
 		%script{:type => "text/javascript", :src => "//use.typekit.net/brw1pwx.js"}
 		%script{:type => "text/javascript"}
-			try{Typekit.load();}catch(e){}
+			try{Typekit.load();}catch(e){}            
+		= stylesheet_link_tag 'all'
+		= javascript_include_tag 'all'
+		
 		= yield_content :page_head
 	- currentPage = current_page.path
 	- if currentPage.include? "work"

@@ -16,8 +16,13 @@ function populateSocialMedia(listLength, offset) {
         $( ".social-card.photo " ).click(function() { window.open(this.dataset.link,'_blank'); }); //Makes flickr social cards links (open in new tab)
     }).done(function() { // Masonry is not initialized until after the events' html is completely loaded ---- Controls the page's grid
             $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
-            setTimeout( function() { $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );}, 100);  // I don't like doing this but I'm waiting xxxms after and then reloading the grid. This is to (hopefully ensure that the newest batch of images has been loaded [and therefore masonry can get its width and height].
+            $('#the-studio .content').waitForImages(function() {
+				 $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
+				console.log("done");
+			});
     });
+	
+	
 }
 
 // Returns the html for an event's social-card
