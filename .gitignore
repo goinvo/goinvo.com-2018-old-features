@@ -19,3 +19,6 @@
 .ruby-version
 .cache
 
+# Ignore s3 Keys
+.s3_sync
+
