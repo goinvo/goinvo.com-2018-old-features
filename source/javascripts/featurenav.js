@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	if (window.location.hash === '#intro') {
+	if (window.location.hash === '#intro' || window.location.hash === '') {
 		$('.the-article-nav a[data-section-index=0]').addClass('active');
 		$('#sec0').addClass('visible');
 		$('#sec11, #sec10, #sec9, #sec8, #sec7, #sec6, #sec5, #sec4, #sec3, #sec2, #sec1').addClass('hidden');
@@ -85,11 +85,12 @@ $(window).load(function(){
 	$('.content-container').css('height', initHeight + 'px');
 
 	$('.the-article-nav a').on('click', function(){
+      	var callIndex = parseInt($(this).attr('data-section-index'));
+		var currentLinks = $('a[data-section-index=' + callIndex + ']');
 		stop();
 		$(document).scrollTop(0);
 		$('.the-article-nav a').removeClass('active');
-		$(this).addClass('active');
-		var callIndex = parseInt($(this).attr('data-section-index'));
+		currentLinks.addClass('active');
 		var setHeight = heights[callIndex].css('height');
 		$('section.row.visible').animate({
 			opacity: 0
