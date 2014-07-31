@@ -18,7 +18,6 @@ function populateSocialMedia(listLength, offset) {
             $('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
 			imagesLoaded( document.querySelector('#the-studio .content'), function( instance ) {
 			  	$('#the-studio .content').masonry( 'reloadItems' );$('#the-studio .content').masonry( 'layout' );
-				console.log("done");
 			});
     });
 	
