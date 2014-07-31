@@ -9,41 +9,9 @@
 %article#feature-article.soccer
 	%header.hero
 		.title
-			%h2 World Cup History Visualized:
-			%h3 84 years and 77 teams
-	#content
-		.row
-			%p For each of the 20 World Cup tournaments to date, every team that has competed at least once in the competition is assigned a value between 1 and 6 depending on their quality of play and impact on the tournament:
-			%ol.ranking-explanation
-				%li Champions. The winners of that World Cup, they are the only nation to be assigned a 1.
-				%li Top Contenders. The runners-up, almost always include the third and fourth place teams, and sometimes go a little deeper to recognize exceptional performance.
-				%li Competitive. Even if clearly behind the 1s and 2s, played hard and with some lucky bounces may themselves have won the tournament.
-				%li Credible. Do not appear to have any reasonable possibility of winning the tournament but were generally worthy opponents.
-				%li Overmatched. Not competitive with the clubs above them, typically losing all of their group games.
-				%li Did not play.
-			%p Particularly in the earliest World Cups the sample sizes are very small. Our rankings reflect just what happened in the competition, not considering reputations or other &ldquo;what-if&rsquo;s&rdquo;. So it is more of an objective record&mdash;using a subjective system&mdash;to evaluate the arc of different nations over the course of World Cup history, with the intention of telling the story of the tournament as well as the nations who compete for it.
-			%p There are two different views of the data:
-			%ul.view-explanaton
-				%li Yearly Rating: showing how each nation performed in each World Cup
-				%li All-Time Rating: showing the average rating for each nation during the selected date range
-			%p There are a variety of controls for choosing which teams to view, any date range you prefer, and &ldquo;playing&rdquo; the data as a narrative story. Please enjoy.
-		#dataViz
-			%iframe{:src => "http://code.goinvo.com/soccer", :seamless => "", "scrolling" => "no"}
-			.error
-				%p Interactive visualization only available on screens wider than 768px.
-		.row
-			#caption.country-comb-explanation
-				%p Thanks to political changes World Cup nations would combine into one larger nation or break into a variety of smaller ones. In some cases, then, we have only one entry that is covering the historical legacy of nations with different names. Here are the nations affected:
-				%ul.split-nations#section-intro
-					%li China: reflects all teams that include the name &ldquo;China&rdquo; regardless of political affiliation
-					%li Czech Republic: includes the impressive legacy of Czechoslovakia
-					%li Germany: includes the total performance of &ldquo;Germany&rdquo; (1930-1938; 1994-present) and &ldquo;West Germany&rdquo; (1950-1990)
-					%li Russia: includes the impressive legacy of the Soviet Union
-					%li Serbia: Includes the performance of &ldquo;Serbia &amp; Montenegro&rdquo; in 2006
-					%li Yugoslavia: while Yugoslavia no longer exists none of the successor nations have a primacy that seems worthy of their solid World Cup history. So they remain their own, independent entry
-		%h1#title The 10 Best Nations in World Cup History
+			%h2 The 10 Best Nations in World Cup History
+			%h3 77 teams over 84 years
 		.article-nav
-			%p Sections:
 			%ul.the-article-nav
 				%li <a href="#intro" data-section-index="0">Intro</a>
 				%li <a href="#hungary" data-section-index="10">10. Hungary</a>
@@ -51,11 +19,40 @@
 				%li <a href="#france" data-section-index="8">8. France</a>
 				%li <a href="#england" data-section-index="7">7. England</a>
 				%li <a href="#spain" data-section-index="6">6. Spain</a>
+				%li <a href="#visuals" data-section-index="11">Data Vis</a>
 				%li <a href="#uruguay" data-section-index="5">5. Uruguay</a>
 				%li <a href="#argentina" data-section-index="4">4. Argentina</a>
 				%li <a href="#italy" data-section-index="3">3. Italy</a>
 				%li <a href="#germany" data-section-index="2">2. Germany</a>
 				%li <a href="#brazil" data-section-index="1">1. Brazil</a>
+	#content
+		-# .row
+		-# 	%p For each of the 20 World Cup tournaments to date, every team that has competed at least once in the competition is assigned a value between 1 and 6 depending on their quality of play and impact on the tournament:
+		-# 	%ol.ranking-explanation
+		-# 		%li Champions. The winners of that World Cup, they are the only nation to be assigned a 1.
+		-# 		%li Top Contenders. The runners-up, almost always include the third and fourth place teams, and sometimes go a little deeper to recognize exceptional performance.
+		-# 		%li Competitive. Even if clearly behind the 1s and 2s, played hard and with some lucky bounces may themselves have won the tournament.
+		-# 		%li Credible. Do not appear to have any reasonable possibility of winning the tournament but were generally worthy opponents.
+		-# 		%li Overmatched. Not competitive with the clubs above them, typically losing all of their group games.
+		-# 		%li Did not play.
+		-# 	%p Particularly in the earliest World Cups the sample sizes are very small. Our rankings reflect just what happened in the competition, not considering reputations or other &ldquo;what-if&rsquo;s&rdquo;. So it is more of an objective record&mdash;using a subjective system&mdash;to evaluate the arc of different nations over the course of World Cup history, with the intention of telling the story of the tournament as well as the nations who compete for it.
+		-# 	%p There are two different views of the data:
+		-# 	%ul.view-explanaton
+		-# 		%li Yearly Rating: showing how each nation performed in each World Cup
+		-# 		%li All-Time Rating: showing the average rating for each nation during the selected date range
+		-# 	%p There are a variety of controls for choosing which teams to view, any date range you prefer, and &ldquo;playing&rdquo; the data as a narrative story. Please enjoy.
+		-# 
+		-# .row
+		-# 	#caption.country-comb-explanation
+		-# 		%p Thanks to political changes World Cup nations would combine into one larger nation or break into a variety of smaller ones. In some cases, then, we have only one entry that is covering the historical legacy of nations with different names. Here are the nations affected:
+		-# 		%ul.split-nations#section-intro
+		-# 			%li China: reflects all teams that include the name &ldquo;China&rdquo; regardless of political affiliation
+		-# 			%li Czech Republic: includes the impressive legacy of Czechoslovakia
+		-# 			%li Germany: includes the total performance of &ldquo;Germany&rdquo; (1930-1938; 1994-present) and &ldquo;West Germany&rdquo; (1950-1990)
+		-# 			%li Russia: includes the impressive legacy of the Soviet Union
+		-# 			%li Serbia: Includes the performance of &ldquo;Serbia &amp; Montenegro&rdquo; in 2006
+		-# 			%li Yugoslavia: while Yugoslavia no longer exists none of the successor nations have a primacy that seems worthy of their solid World Cup history. So they remain their own, independent entry
+		-# %h1#title The 10 Best Nations in World Cup History
 		.content-container
 			%section.row#sec0
 				%h2 Introduction
@@ -435,6 +432,11 @@
 								%td FW
 								%td Raul (1996-2006)
 						%p#caption * Indicates one of the finest footballers of all-time
+			%section.row#sec11
+				#dataViz
+					%iframe{:src => "http://code.goinvo.com/soccer", :seamless => "", "scrolling" => "no"}
+					.error
+						%p Interactive visualization only available on screens wider than 768px.
 			%section.row#sec5
 				%h2 5. Uruguay
 				%p The best international programme through the first half of the 20th century was unquestionably, inarguably Uruguay. Unfortunately for <em>La Celeste</em>, during much of that time the World Cup was not being contested. While they dominated the South American Championship, starting in 1916, there was no World Cup and Europe was dealing with World War I. After the war they repeatedly proved their quality in the Olympics, winning the 1924 and 1928 gold medals in the first true generally global football competitions ever held. This supremacy continued with the first World Cup in 1930, where Uruguay and Argentina dominated the grass dojo. After the two South American teams won all five of their games in group play by a combined score of 15-4 they blew out their opponents in the semifinals by identical 6-1 scores. In the final, then, Uruguay defeated their rivals 4-2.
