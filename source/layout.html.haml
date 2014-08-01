@@ -33,7 +33,7 @@
 				%header#main-header
 					%header#site-header
 						%a{:href => asset_url('/'), :id => "site-title"}
-							= image_tag('logo-header.png', alt: "Involution Studios")
+							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
 							.tag-line Crafting exceptional software for progressive companies
 						%nav#nav-buttons
 							%a.nav-button.work{:href => asset_url('work')} Work
@@ -58,8 +58,6 @@
 					= yield
 			%footer#main-footer
 				.footerContent
-					%p.mobile-hide.about-us
-						-# Crafting exceptional software for progressive companies
 					%p#phoneNum
 						%a{href: "tel:6178037043"}  617&ndash;803&ndash;7043
 					%p.mail
