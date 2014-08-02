@@ -73,7 +73,7 @@ end
 
 redirect '/about/', '/team/'
 redirect '/about/code-of-ethics/', '/team/'
-redirect '/about/techtalks/', 'http://yes.goinvo.com/articles/'
+redirect '/about/techtalks/', '/'
 redirect '/careers/studio-life/', '/careers/'
 redirect '/careers/internships-apprenticeships/', '/careers/'
 redirect '/practice-area/enterprise/', '/work/'
