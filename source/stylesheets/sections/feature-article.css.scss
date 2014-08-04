@@ -318,4 +318,24 @@ header.hero {
 			}
 		}
 	}
+	#credits {
+		padding: 2em 8em;
+		max-width: 70px;
+		max-width: 70rem;
+		margin: 0 auto;
+		@include clearfix();
+		.author, .contributors {
+			float: left;
+		}
+		.author {
+			width: 75%;
+			padding-right: 2em;
+		}
+		.contributors {
+			width: 25%;
+			ul {
+				list-style: none;
+			}
+		}
+	}
 }
