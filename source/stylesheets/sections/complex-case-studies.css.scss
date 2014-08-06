@@ -20,10 +20,6 @@ article#complex-case {
 		header.hero {
 			background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
 			background-position: 0 80%;
-			.title {
-				max-width: 40em;
-				margin: 0 auto;
-			}
 			h2 {
 				font-size: 66px;
 				line-height: 0.9em;
@@ -39,6 +35,10 @@ article#complex-case {
 	}
 	header.hero {
 		padding-top: 12%;
+		.title {
+			max-width: 40em;
+			margin: 0 auto;
+		}
 		@media only screen and (max-width: 900px) {
 			padding-top: 8em;
 			h2 {
@@ -79,19 +79,6 @@ article#complex-case {
 		}
 	}
 
-	h2 {
-		font-size:59px;
-		line-height:62px;
-		padding-bottom:24px;
-	}
-
-	h2.center, p.center {
-		text-align:center;
-		width:140%;
-		position:relative;
-		left:-20%;
-	}
-
 	.caption {
 		padding-top:5px;
 		margin-top:5px;
@@ -123,12 +110,11 @@ article#complex-case {
 				padding-top: 2.5em;
 				padding-bottom: 1em;
 			}
-			/* text-align: center; */
 		}
 	}
 
 	#mainContent {
-		padding-top:60px;
+		padding-top: 60px;
 
 		p span.firstcharacter {
 			color: #d62a31;
@@ -152,10 +138,8 @@ article#complex-case {
 
 		div.center-graph-content {
 			position:relative;
-			left:-30%;
-			width:160%;
-			padding-bottom:60px;
-			padding-top:30px;
+			padding-bottom: 60px;
+			padding-top: 30px;
 		}
 
 		.center-image-content {
@@ -207,7 +191,7 @@ article#complex-case {
 		padding:60px 9%;
 
 		div.moon-image {
-			background-image:url('../../images/clients/3m/george-moon-vp-product.jpg');
+			background-image: url('../../images/clients/3m/george-moon-vp-product.jpg');
 			width: 200px;
 			height:200px;
 			background-size: cover;
@@ -229,14 +213,15 @@ article#complex-case {
 	}
 
 	div.row#image-background {
+		padding-bottom: 10em;
 		div.row {
 			max-width:80rem;
 			margin: 0 auto;
 		}
-		background-size: cover;
+		background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
+		background-size: contain;
 		padding-top: 375px;
 		color: $white;
-		min-height: 1800px;
 
 		h2 {
 			color:inherit;
@@ -245,16 +230,6 @@ article#complex-case {
 			margin-top:7px;
 			margin-bottom:60px;
 		}
-	}
-
-	.full-two-images {
-		position:relative;
-		left:-50%;
-		width:200%;
-	}
-
-	div.row#imageContent {
-
 	}
 
 	div.row#email-content {
