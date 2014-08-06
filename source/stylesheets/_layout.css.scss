@@ -9,24 +9,28 @@ html {
 	background: $black;
 }
 
+body {
+	background: $off_white;
+}
+
 #page-wrapper {
 	position: relative;
 }
 
 div.feature-article-section {
-	width:100%;
-	min-height:150px;
-	background-size:cover;
-	padding-top:20px;
+	width: 100%;
+	min-height: 150px;
+	background-size: cover;
+	padding-top: 20px;
 	background-color: $black;
-	position:relative;
+	position: relative;
 
 	#view-work {
-		float:right;
-		display:inline-block;
-		margin-left:10px;
-		margin-right:20px;
-		padding:20px 50px;
+		float:r ight;
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 20px;
+		padding: 20px 50px;
 		color: $black;
 		font-size: 19px;
 		line-height: 21px;
@@ -118,139 +122,7 @@ div.feature-article-section {
 	}
 }
 
-#main-footer {
-	background-color: $black;
-	padding: 10px 0;
-	width: 100%;
 
-	p {
-		font-size: 18px;
-		font-weight: 300;
-	}
-
-	.hs-button.primary.large {
-		padding-right: 20px;
-		padding-left: 20px;
-		padding-top: 10px;
-		padding-bottom: 8px;
-		margin-left: 5px;
-	}
-
-	.row {
-		&.footerlogo, &.footerContent .large-hide {
-			padding-top: 20px;
-			text-transform: uppercase;
-			color: inherit;
-		}
-
-		&.footerContent .large-hide {
-			margin-bottom: 5px;
-		}
-	}
-
-	a:hover {
-		color: $white;
-	}
-
-	.hs_email.field.hs-form-field.smart-field
-	{
-		width: calc(100% - 140px);
-		display: inline-block;
-	}
-
-	div.hs_submit {
-		width: auto;
-		display: inline-block;
-	}
-
-	#news-letter-input, #email-50d88d90-87a2-48ed-94a9-a141da52c545{
-		width: 100%;
-		display: inline-block;
-		padding-top: 22px;
-		padding-bottom: 20px;
-		margin-bottom: 10px;
-	}
-
-	p.news-letter {
-		margin-bottom: 2px;
-	}
-
-	div.hs_email.field.hs-form-field.smart-field {
-
-		label {
-			display: none;
-		}
-	}
-
-	.footerContent {
-		text-align: right;
-		padding: 0 6.5em;
-		p.address {
-			margin-top: 0px;
-			margin-bottom: 0px;
-		}
-
-		p.address, #phoneNum, p.mail, p.twitter {
-			display: inline-block;
-			margin-right: 10px;
-			margin-bottom: 0;
-		}
-	}
-
-
-	#phoneNum {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-
-
-	.addrcol, .linkscol {
-		p {
-			margin-bottom: 0px;
-		}
-	}
-
-	p.mobile-hide.about-us {
-		margin-bottom: 0px;
-	}
-
-	.social-links-contain {
-		display:inline-block;
-		margin-right: 20px;
-	}
-
-	.medium-1.columns.sidebar.social-links {
-		min-width: 80px;
-	}
-
-	#footer-social-links {
-		margin: 0px;
-		display: inline-block;
-		min-width: 62px;
-		margin-right: 5px;
-		&.two {
-			display: block;
-		}
-		li {
-			display: inline-block;
-			padding-right: 2px;
-
-			img {
-				padding: 0px;
-			}
-		}
-
-		li a:hover img{
-			fill: white;
-		}
-	}
-
-	#footer-social-links.large-hide {
-		li {
-			padding-top: 20px;
-		}
-	}
-}
 .sidebar {
 	word-spacing: 0.1rem;
 	color: transparentize($darkgray, .1);

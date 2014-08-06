@@ -1,26 +1,4 @@
-ul {
-	margin-left: 0;
-}
-
-ul.stat-label, ul.stat-data {
-	list-style: none;
-	li {
-		text-align: center;
-		display: inline-block;
-	}
-}
-
-ul.stat-data {
-	margin-top: 0px;
-}
-
-ul.stat-label {
-	margin-bottom:5px;
-}
-
-ul.starting-xi {
-	list-style: none;
-}
+@import "../base/core";
 
 header.hero {
 	background-image: linear-gradient(to bottom, fade-out($black, 0.25) 0%, fade-out($black, 0.45) 100%), url('../../images/soccer_dataviz.jpg');
@@ -206,6 +184,22 @@ header.hero {
 		line-height: 22px;
 		li {
 			margin-bottom: 1em;
+		}
+		&.stat-data {
+			list-style: none;
+			li {
+				text-align: center;
+				display: inline-block;
+			}
+		}
+		&.stat-label {
+			margin-bottom: 5px;
+		}
+		&.stat-data {
+			margin-top: 0px;
+		}
+		&.starting-xi {
+			list-style: none;
 		}
 	}
 	#caption {

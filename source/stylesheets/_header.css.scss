@@ -29,6 +29,9 @@ body.contact #main-header #nav-buttons .contact, {
 	background: rgba(18,18,18,.875);
 	padding: 15px 2.125em 0;
 	transition: background .3s ease;
+	img {
+		display: inline-block;
+	}
 	a {
 		text-decoration: none;
 	}
