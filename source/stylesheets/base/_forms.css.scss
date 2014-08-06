@@ -11,7 +11,7 @@
   padding: $vertical-padding $horizontal-padding;
   @include border-radius(3px);
   background: $daring;
-  color: #FFF;
+  color: $white;
   text-decoration: none;
   border: 0;
 }

@@ -18,7 +18,7 @@ body.studio #main-header #nav-buttons .studio,
 body.team #main-header #nav-buttons .team,
 body.careers #main-header #nav-buttons .careers,
 body.contact #main-header #nav-buttons .contact, {
-	color: #FFF;
+	color: $white;
 	&:hover {
 		color: #C9C9C9;
 	}

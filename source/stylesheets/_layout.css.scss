@@ -20,7 +20,7 @@ $sidebar-letter-spacing:0.03rem;
  ************************************/
 
 html {
-	background: #000;
+	background: $black;
 }
 
 #page-wrapper {
@@ -129,7 +129,7 @@ div.feature-article-section {
 	h2, h3 {
 		text-align: center;
 		margin: 0 auto;
-		color: #FFF;
+		color: $white;
 	}
 
 	h2 {
@@ -437,7 +437,7 @@ span.hs-form-required {
 
 div.hsformerror {
 	background-image: none;
-	background-color: #FFF;
+	background-color: $white;
 	border-width: 0px;
 	margin-top: 10px;
 
