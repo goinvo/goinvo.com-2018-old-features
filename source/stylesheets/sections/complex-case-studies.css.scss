@@ -36,7 +36,7 @@ article#complex-case {
 	header.hero {
 		padding-top: 12%;
 		.title {
-			max-width: 40em;
+			max-width: 640px;
 			margin: 0 auto;
 		}
 		@media only screen and (max-width: 900px) {
@@ -48,7 +48,7 @@ article#complex-case {
 
 		}
 		h2, h3 {
-			text-align:left;
+			text-align: left;
 			margin-left: 0px;
 			text-shadow: 2px 2px transparentize($black, .8);
 		}
@@ -57,6 +57,12 @@ article#complex-case {
 			font-size: 75px;
 			line-height: 0.9em;
 		}
+	}
+
+	p, h1, h2, h3, h4, h5, h6 {
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	p.bottom, h2.bottom {
