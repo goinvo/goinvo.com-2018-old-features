@@ -50,23 +50,23 @@ activate :cache_buster
 
 # S3 Sync
 activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
-  s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
-  s3_sync.delete                     = true # We delete stray files by default.
-  s3_sync.after_build                = false # We do not chain after the build step by default.
-  s3_sync.prefer_gzip                = true
-  s3_sync.path_style                 = true
-  s3_sync.reduced_redundancy_storage = false
-  s3_sync.acl                        = 'public-read'
-  s3_sync.encryption                 = false
-  s3_sync.version_bucket             = false
+	s3_sync.bucket                     = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
+	s3_sync.delete                     = true # We delete stray files by default.
+	s3_sync.after_build                = false # We do not chain after the build step by default.
+	s3_sync.prefer_gzip                = true
+	s3_sync.path_style                 = true
+	s3_sync.reduced_redundancy_storage = false
+	s3_sync.acl                        = 'public-read'
+	s3_sync.encryption                 = false
+	s3_sync.version_bucket             = false
 end
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-  config.bucket                = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
-  config.region                = 'us-east-1'     # The AWS region for your bucket.
-  config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
+	config.bucket                = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	config.region                = 'us-east-1'     # The AWS region for your bucket.
+	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
 
 redirect '/about/', '/team/'
