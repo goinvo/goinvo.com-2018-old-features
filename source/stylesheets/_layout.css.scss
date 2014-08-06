@@ -1,20 +1,6 @@
 @import "base/colors";
 @import "base/type";
 
-$footer-color: transparentize($white, .3);
-$outer-sidebar-padding:20px;
-$sidebar-padding:20px;
-$border-radius: 4px;
-
-$body-font-size:22px;
-$body-line-height:26px;
-$body-letter-spacing:0.03em;
-$section-header-font-size:3.2rem;
-
-$sidebar-font-size:19px;
-$sidebar-line-height:21px;
-$sidebar-letter-spacing:0.03rem;
-
 /************************************
  **  Main Layout
  ************************************/
@@ -27,14 +13,6 @@ html {
 	position: relative;
 }
 
-body {
-	p, .social-card a.social-handle, .social-card .social-handle a, .team-cards h4, #main-header #nav-buttons a.nav-button, #nav-buttons-mobile, #nav-buttons-mobile a {
-		font-size: $body-font-size;
-		letter-spacing: $body-letter-spacing;
-		line-height: $body-line-height;
-		word-spacing: 0rem;
-	}
-}
 div.feature-article-section {
 	width:100%;
 	min-height:150px;
@@ -46,19 +24,13 @@ div.feature-article-section {
 	#view-work {
 		float:right;
 		display:inline-block;
-
-		border-radius: $border-radius;
 		margin-left:10px;
 		margin-right:20px;
 		padding:20px 50px;
-
 		color: $black;
 		font-size: 19px;
 		line-height: 21px;
-		letter-spacing: $sidebar-letter-spacing;
-
-		background-color:$white;
-
+		background-color: $white;
 		&:hover {
 			background-color: rgba(247, 247, 247, 0.6);
 		}
@@ -71,7 +43,6 @@ div.feature-article-section {
 			text-align:left;
 			margin:0 auto;
 			color: $white;
-			letter-spacing: $body-letter-spacing;
 		}
 
 		h2 {
@@ -149,7 +120,6 @@ div.feature-article-section {
 
 #main-footer {
 	background-color: $black;
-	color: $footer-color;
 	padding: 10px 0;
 	width: 100%;
 
@@ -176,10 +146,6 @@ div.feature-article-section {
 		&.footerContent .large-hide {
 			margin-bottom: 5px;
 		}
-	}
-
-	h1,h2,h3,h4,h5,h6, a, .logocol, .row.footerlogo div, .subcol, .row.footerContent .large-hide{
-		color: $footer-color;
 	}
 
 	a:hover {
@@ -286,33 +252,21 @@ div.feature-article-section {
 	}
 }
 .sidebar {
-	padding-right: $outer-sidebar-padding;
-	padding-left: $outer-sidebar-padding;
-	font-size: $sidebar-font-size;
-	letter-spacing: $sidebar-letter-spacing;
-	line-height: $sidebar-line-height;
 	word-spacing: 0.1rem;
 	color: transparentize($darkgray, .1);
 
 	.photo, .video {
-		border-radius: $border-radius;
 		font-size: inherit;
-		background-color: transparentize($sidebar_color, .4);
+		background-color: transparentize($off_white, .4);
 
 		img {
 			width: 100%;
-			border-top-left-radius: $border-radius;
-			border-top-right-radius: $border-radius;
 		}
 
 		iframe {
-			border-radius: $border-radius;
 			width: 100%;
 		}
 		h3 {
-			padding-top: $sidebar-padding;
-			padding-left: $sidebar-padding;
-			padding-right: $sidebar-padding;
 			line-height: inherit;
 			font-size: inherit;
 			color: inherit;
@@ -321,9 +275,6 @@ div.feature-article-section {
 			text-indent: -0.45rem;
 		}
 		p.caption {
-			padding-bottom: $sidebar-padding;
-			padding-left: $sidebar-padding;
-			padding-right: $sidebar-padding;
 			font-size: inherit;
 			line-height: inherit;
 			letter-spacing: inherit;
@@ -333,16 +284,11 @@ div.feature-article-section {
 }
 
 .form-title {
-	font-size: $section-header-font-size;
 	line-height: 4.8rem;
 	margin-top: 5%;
 }
 
 form {
-	font-size: $body-font-size;
-	letter-spacing: $body-letter-spacing;
-	line-height: $body-line-height;
-
 	input[type=text], input[type=email], textarea, button, input[type=submit], #email-50d88d90-87a2-48ed-94a9-a141da52c545, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
 		font-size: inherit;
 		letter-spacing: inherit;
@@ -443,9 +389,6 @@ div.hsformerror {
 
 	p, div.close-form-error {
 		color: $black !important;
-		font-size: $body-font-size;
-		letter-spacing: $body-letter-spacing;
-		line-height: $body-line-height;
 	}
 
 	em {

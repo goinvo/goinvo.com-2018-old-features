@@ -15,6 +15,12 @@ body {
 	max-width: 100%;
 }
 
+a {
+	&.one, &.two, &.three {
+		text-decoration: none;
+	}
+}
+
 .homepage-header {
 	width: 100%;
 	position: relative;
