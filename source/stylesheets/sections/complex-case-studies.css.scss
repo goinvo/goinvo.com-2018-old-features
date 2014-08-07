@@ -56,46 +56,54 @@ article#complex-case {
 		h2 {
 			font-size: 75px;
 			line-height: 0.9em;
+			margin-bottom: 0.25em;
 		}
 	}
 
 	#mainContent {
 		padding-top: 60px;
+		font-size: 1.5em;
 
-		p, h1, h2, h3, h4, h5, h6 {
+		p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
 			max-width: 640px;
 			margin-left: auto;
 			margin-right: auto;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
-		p.bottom, h2.bottom {
-			padding-bottom: 40px;
-
-			&.double {
-				padding-bottom: 80px;
-			}
+		p, ul, ol, dl {
+			line-height: 1.25em;
 		}
 
-		p.top, h2.top {
-			padding-top:30px;
+		p, h2 {
+			&.top {
+				padding-top: 30px;
+				&.double {
+					padding-top:60px;
+				}
 
-			&.double {
-				padding-top:60px;
+				&.triple {
+					padding-top:120px;
+				}
 			}
-
-			&.triple {
-				padding-top:120px;
+			&.bottom {
+				margin-bottom: 0;
+				padding-bottom: 40px;
+				&.double {
+					padding-bottom: 80px;
+				}
 			}
 		}
 
 		.caption, figcaption {
-			padding-top:5px;
-			margin-top:5px;
-			font-size:1.1rem;
-			line-height:1.42rem;
-			letter-spacing:0.02rem;
-			color:$gray;
-			margin-top:7px;
+			padding-top: 5px;
+			margin-top: 5px;
+			font-size: 1.1rem;
+			line-height: 1.42rem;
+			letter-spacing: 0.02em;
+			color: $gray;
+			margin-top: 7px;
 
 			&.bottom {
 				margin-bottom:30px;
@@ -107,26 +115,51 @@ article#complex-case {
 			margin: 0 auto;
 		}
 
-		.center-image-content.large {
-			margin: 2.5em auto;
-			position: relative;
-			display: table;
+		.center-image-content, .center-graph-content, .full-two-images {
 			img {
 				display: block;
 				margin: 0 auto;
 			}
-			.caption {
+		}
+
+
+		figure, figure.center-image.content, .center-image-content {
+			margin: 2em auto;
+			padding-left: 10px;
+			padding-right: 10px; 
+			position: relative;
+			display: table;
+			max-width: 640px;
+
+			.caption, figcaption {
 				display: table-caption;
+				padding-left: 10px;
+				padding-right: 10px;
 				caption-side: bottom;
 				&.overhead {
 					caption-side: top;
 					padding-top: 1em;
-					padding-bottom: 2.5em;
+					padding-bottom: 1.75em;
 				}
 				&.underneath {
-					padding-top: 2.5em;
+					padding-top: 1.75em;
 					padding-bottom: 1em;
 				}
+			}
+			&.large {
+				max-width: 960px;
+			}
+		}
+
+		.center-graph-content {
+			padding: 3em 0;
+			position: relative;
+		}
+
+		.full-two-images {
+			max-width: 100%;
+			img {
+				max-width: 100%;
 			}
 		}
 
@@ -148,12 +181,6 @@ article#complex-case {
 			padding-left: 0px;
 			padding-bottom: 20px;
 			margin-right: -110px;
-		}
-
-		div.center-graph-content {
-			position:relative;
-			padding-bottom: 60px;
-			padding-top: 30px;
 		}
 	}
 
@@ -187,7 +214,7 @@ article#complex-case {
 		}
 	}
 
-	div.row#image-background {
+	#image-background {
 		padding-bottom: 10em;
 		div.row {
 			max-width:80rem;
@@ -197,43 +224,46 @@ article#complex-case {
 		background-size: contain;
 		padding-top: 375px;
 		color: $white;
-
+		.full-two-images {
+			max-width: 1600px;
+		}
 		h2 {
 			color:inherit;
 		}
 		.caption {
-			margin-top:7px;
-			margin-bottom:60px;
+			margin-top: 7px;
+			margin-bottom: 60px;
 		}
 	}
 
-	div.row#email-content {
-		padding-top:30px;
-		padding-bottom:30px;
-		max-width:none;
+	#email-content {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		max-width: none;
 		background-color: #b9bfc2;
-
-		div.center-image-content.large {
-			margin:0 auto;
-			padding-left:175px;
+		h3 {
+			max-width: 860px;
+		}
+		div.center-image-content {
+			max-width: 860px;
+			margin: 2em auto 0;
 		}
 		p.caption {
-			color:$white;
-			margin-left:210px;
+			color: $white;
+			margin-left: 210px;
 		}
 	}
 
 }
 
 #next-project {
-	max-width:100%;
-	height: 200px;
+	max-width: 100%;
 	margin-top: 0px;
 	cursor: pointer;
 	background-size: cover;
 
 	div.next-title {
-		padding-top: 80px;
+		padding: 80px 40px;
 		max-width: 820px;
 		margin: 0 auto;
 		color: #f7f7f7;

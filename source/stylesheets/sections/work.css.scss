@@ -6,37 +6,6 @@
 		background-position: center 65%;
 		margin-bottom: 15px;
 	}
-	
-	.phase-container {
-		float: left;
-		position: relative;
-	}
-	
-	// probably the only media query outside of queries.css.scss ... it's also for the phase graph that we are not using.
-	@media only screen and (min-width: 40.063em) {
-		.phase-container {
-			height: 150px;
-		}
-	}
-	
-	label {
-		font-size: 19px;
-		line-height: 21px;
-		letter-spacing: 0.03rem;
-		cursor:text;
-	}
-	
-	.phase {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-	
-		.service-areas, .staffing {
-			font-size: 12px;
-			line-height: 14px;
-			letter-spacing:0.03rem;
-		}
-	}
 
 	select {
 		&:focus {
@@ -48,8 +17,13 @@
 		padding-bottom: 2em;
 	}
 
+	.projects-row {
+		@include clearfix();
+	}
+
 	.project {
-		display: inline-block;
+		display: block;
+		float: left;
 		padding: 1em;
 		width: calc(100%/3);
 		&:last-child {
@@ -73,24 +47,23 @@
 		margin-top: 0.5em;
 	}
 	
-	a.button {
-		font-size: 19px;
-		line-height: 21px;
-		letter-spacing: 0.03rem;
+	.description, .practice-areas {
+		padding-top: 0.5em;
 	}
-	
+
 	.description {
-		padding-right: 50px;
 		margin-bottom: 0;
+		line-height: 1.2em;
+		letter-spacing: 0.025em;
 	}
 
 	.practice-areas {
 		color: #AAA;
 		font-size: 19px;
-		line-height: 21px;
 	}
 
 	.project-image {
+		border: 2px solid $lightgray;
 		background-size: 100%;
 		background-size: cover;
 		height: 250px;   

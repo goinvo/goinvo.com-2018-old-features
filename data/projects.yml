@@ -1,7 +1,7 @@
 - client: "3M"
   main_image: "3m_main.jpg"
   practice_area_names: "Enterprise, Health"
-  description: "How our skunkworks for an ambitious start-up led to a $100MM exit."
+  description: "How our skunkworks for an ambitious start-up led to a $150M exit."
   budget: 500000 #Verify
   duration: 60 #Verify
   repeat_client: true
