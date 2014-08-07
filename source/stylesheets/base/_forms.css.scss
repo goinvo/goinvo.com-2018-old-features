@@ -7,38 +7,38 @@
 **************************************************************/
 
 @mixin button($font-size: inherit, $vertical-padding: 0.5em, $horizontal-padding: 1.25em) {
-  font-size: $font-size;
-  padding: $vertical-padding $horizontal-padding;
-  @include border-radius(3px);
-  background: $daring;
-  color: $white;
-  text-decoration: none;
-  border: 0;
+	font-size: $font-size;
+	padding: $vertical-padding $horizontal-padding;
+	@include border-radius(3px);
+	background: $daring;
+	color: $white;
+	text-decoration: none;
+	border: 0;
 }
 
 a.button,
 input[type=submit].button {
-  @include button();
+	@include button();
 }
 .button {
-    font-size: 1.4em;
-    line-height: .2em;
-    letter-spacing: .04em;
-  &.disabled {
-    background: #BBB;
-  }
-  &.green {
-    background: $lime;
-  }
-  &.blue {
-    background: $darkblue;
-  }
-  &.red {
-    background: $red;
-  }
-  &.square {
-    @include border-radius(0);
-  }
+		font-size: 1.4em;
+		line-height: .2em;
+		letter-spacing: .04em;
+	&.disabled {
+		background: #BBB;
+	}
+	&.green {
+		background: $lime;
+	}
+	&.blue {
+		background: $darkblue;
+	}
+	&.red {
+		background: $red;
+	}
+	&.square {
+		@include border-radius(0);
+	}
 }
 
 
@@ -47,54 +47,155 @@ input[type=submit].button {
 **************************************************************/
 
 .form-field {
-  label {
-    display: block;
-    font-weight: 700;
-    font-size: 1.4em;
-    line-height: 0.2em;
-    letter-spacing: 0.04em;
-  }
+	label {
+		display: block;
+		font-weight: 700;
+		font-size: 1.4em;
+		line-height: 0.2em;
+		letter-spacing: 0.04em;
+	}
 
-  input[type=text],
-  input[type=password],
-  input[type=number],
-  input[type=url],
-  input[type=email],
-  input[type=tel],
-  textarea {
-    font-size: 1.4em;
-    line-height: .2em;
-    letter-spacing: .04em;
-    border: 1px solid #BBB;
-    padding: 0.75em;
-    @include border-radius(2px);
-  }
+	input[type=text],
+	input[type=password],
+	input[type=number],
+	input[type=url],
+	input[type=email],
+	input[type=tel],
+	textarea {
+		font-size: 1.4em;
+		line-height: .2em;
+		letter-spacing: .04em;
+		border: 1px solid #BBB;
+		padding: 0.75em;
+		@include border-radius(2px);
+	}
 
-  &.check-box {
-    label {
-      display: inline;
-    }
-  }
+	&.check-box {
+		label {
+			display: inline;
+		}
+	}
 
-  &.required {
-    label:after {
-      margin-left: 0.25em;
-      content: '*';
-      color: $red;
-    }
-  }
+	&.required {
+		label:after {
+			margin-left: 0.25em;
+			content: '*';
+			color: $red;
+		}
+	}
 
-  &.with-error {
-    label {
-      color: $red;
-    }
-    input,
-    textarea {
-      border: 1px solid $red;
-    }
-  }
+	&.with-error {
+		label {
+			color: $red;
+		}
+		input,
+		textarea {
+			border: 1px solid $red;
+		}
+	}
 }
 
 .form-actions {
-  text-align: right;
+	text-align: right;
+}
+
+.form-title {
+	margin: 1.5em 0 0.5em;
+	font-weight: 400;
+}
+
+form {
+	input[type=text], input[type=email], textarea, button, input[type=submit], #email-50d88d90-87a2-48ed-94a9-a141da52c545, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+		font-size: inherit;
+		letter-spacing: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		font-family:inherit;
+	}
+
+	input[type=text], input[type=email], textarea {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 10px;
+		width: 100%;
+		border: 2px solid $lightgray;
+		border-radius: 5px;
+		margin-bottom: 0.75em;
+		line-height: 1.4;
+		&:focus {
+			border-color: $blue;
+			outline: 0;
+		}
+	}
+
+	form.hs-form .form-columns-2 .hs-form-field .hs-input, form.hs-form .form-columns-3 .hs-form-field .hs-input {
+		width: 100%;
+	}
+
+	#email_content2-02f6d985-bc3d-40a0-9bff-c8610111844b,  #email_content2-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+		height: 274px;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	button, input[type=submit]{
+		padding-top: 11px;
+		padding-bottom: 9px;
+		padding-right: 24px;
+		padding-left: 24px;
+		border-width: 0px;
+		cursor: pointer;
+		background-color: transparentize($navy, 0.0);
+		color: transparentize($white, 0.0);
+	}
+
+	input[type=submit] {
+		margin: 0px;
+	}
+
+	button:hover, input[type=submit]:hover {
+		background-color: transparentize($navy, 0.2);
+		color: transparentize($white, 0.0);
+	}
+
+	button.attachb {
+		margin-right: 19px;
+		background-color: transparentize($gray, .7);
+		color: transparentize($gray, .2);
+	}
+
+	button.attach:hover {
+		background-color: transparentize($gray, .5);
+		color: transparentize($gray, 0);
+	}
+}
+
+span.hs-form-required {
+	display: none;
+}
+
+#send, .hs-button.primary.large {
+		margin-top: 1.5em;
+		padding: 15px 50px;
+		border-radius: 5px;
+		font-size: 1.3em;
+	}
+
+#hsForm_50d88d90-87a2-48ed-94a9-a141da52c545 input.hs-button.primary.large {
+	position: inherit;
+}
+
+#hsForm_02f6d985-bc3d-40a0-9bff-c8610111844b input.hs-button.primary.large {
+	right: 90px;
+}
+
+#hsForm_dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b input.hs-button.primary.large{
+	right: 89px;
+}
+
+#hsForm_dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+	margin-bottom: 100px;
 }
