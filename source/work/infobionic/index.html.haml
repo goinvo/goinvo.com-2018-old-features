@@ -7,8 +7,8 @@
 	%meta{:name => "keywords", :content => "atrial fibrillation, ui design, healthcare software, heart arrhythmia, patented software"}/
 - client = client_for_name("Infobionic")
 
-.row
-	.medium-3.small-12.column
+#content-area.caseStudyContent
+	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} Infobionic
 
 		%h6.subheader Results
@@ -35,7 +35,7 @@
 			%h6.subheader Have a similar project?
 			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
 
-	.medium-9.small-12.column
+	.projectDetails
 		%img{alt: "App ecosystem across devices", src: "../../images/clients/numera/numera-facebook-application-design.jpg"}
 		%p.caption Taking Numera from a big idea to a well-integrated app ecosystem leveraged many of Involution's expert software skills.
 		%div

@@ -7,8 +7,8 @@
 	%meta{:name => "keywords", :content => "big data ui design, big data ux design, online advertising, data visualization"}/
 - client = client_for_name("DataXu")
 
-.row
-	.medium-3.small-12.column
+#content-area.caseStudyContent
+	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} DataXu
 
 		%h6.subheader Results
@@ -41,22 +41,19 @@
 			%h6.subheader Have a similar project?
 			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
 
-	.medium-9.small-12.column
-		%img{alt: "DataXu Campaign Dashboard Advertising Optimization Software", src: "../../images/clients/dataxu/dataxu-campaign-dashboard-user-interface.jpg"}
-
-		#masthead
-			%p.caption &ldquo;Programmatic can be a challenge if it&rsquo;s not simple to navigate, but DataXu makes campaign management seamless and the new user interface just extends its commitment to creating a positive user experience that leads to better campaign results.&rdquo; - Juli Johnson, associate media director and trading desk head, BSSP
-		/ //masthead//
-		.col-a
-			%div
-				%img{alt: "User experience group session with DataXu", src: "../../images/clients/dataxu/dataxu-group-design-session.jpg"}/
-			%p.caption Group design session with DataXu team to define user profiles.
-			%div
-				%img{alt: "Exploration of many concepts for various parts of the software", src: "../../images/clients/dataxu/dataxu-ux-concept-sketches.jpg"}/
-			%p.caption Sketches allowed us to explore the possibilities and push the boundaries of the user experience.
-			%div
-				%img{alt: "Information visualization for understanding the health of a campaign.", src: "../../images/clients/dataxu/dataxu-information-visualization.jpg"}/
-			%p.caption Information visualization for understanding the health of a campaign.
+	.projectDetails
+		%div
+			%img{alt: "DataXu Campaign Dashboard Advertising Optimization Software", src: "../../images/clients/dataxu/dataxu-campaign-dashboard-user-interface.jpg"}
+		%p.caption &ldquo;Programmatic can be a challenge if it&rsquo;s not simple to navigate, but DataXu makes campaign management seamless and the new user interface just extends its commitment to creating a positive user experience that leads to better campaign results.&rdquo; - Juli Johnson, associate media director and trading desk head, BSSP
+		%div
+			%img{alt: "User experience group session with DataXu", src: "../../images/clients/dataxu/dataxu-group-design-session.jpg"}/
+		%p.caption Group design session with DataXu team to define user profiles.
+		%div
+			%img{alt: "Exploration of many concepts for various parts of the software", src: "../../images/clients/dataxu/dataxu-ux-concept-sketches.jpg"}/
+		%p.caption Sketches allowed us to explore the possibilities and push the boundaries of the user experience.
+		%div
+			%img{alt: "Information visualization for understanding the health of a campaign.", src: "../../images/clients/dataxu/dataxu-information-visualization.jpg"}/
+		%p.caption Information visualization for understanding the health of a campaign.
 .row#next-project
 	.medium-6.small-12.small-centered.columns
 		.next-title

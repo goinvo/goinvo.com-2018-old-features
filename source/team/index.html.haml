@@ -4,91 +4,89 @@
 	= stylesheet_link_tag "sections/team"
 	%meta{:name => "description", :content => "Involution Studios is a user interface and software design firm located in Boston. We create great user experiences for deskop, mobile, and web applications."}/
 	%meta{:name => "keywords", :content => "silicon valley ui design, boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design"}/
-%article#team
+.team
 	%header.hero
 		.title
 			%h2 Our Team
 			%h3 We bring together the very best people and deploy them on your hardest digital problems.
-	.row.main-content
-		.medium-9.small-12.columns.contractedcards
-			%section.team-cards.twelve.columns
-				- data.team.each do |person|
-					- style = person.photo.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,0.85) 0%, rgba(2,0,0,0.55) 24%, rgba(255,255,255,0.01) 68%, rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,0.85)), color-stop(24%,rgba(2,0,0,0.55)), color-stop(68%,rgba(255,255,255,0.01)), color-stop(69%,rgba(255,255,255,0))),url(../images/team_photos/#{person.photo}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9020000', endColorstr='#00ffffff',GradientType=1 ),url(../images/team_photos/#{person.photo}); /* IE6-9 */ background-size:cover;"
-					.team-card{style: style}
-						.stats
-							%h3.name= person.first_name + " " + person.last_name
-							%h4.title= person.title
-							%ul.social-icons
-								- unless person.linkedin_url.blank?
-									%li.linkedin= link_to(image_tag('icon-linkedin.svg'), person.linkedin_url )
-								- unless person.twitter_username.blank?
-									%li.twitter= link_to(image_tag('icon-twitter.svg'), twitter_url_for(person.twitter_username) )
-								- unless person.github_username.blank?
-									%li.github= link_to(image_tag('icon-github.svg'), github_url_for(person.github_username) )
-								- unless person.flickr_username.blank?
-									%li.flickr= link_to(image_tag('icon-flickr.svg'), flickr_url_for(person.flickr_username) )
-								- unless person.dribbble_username.blank?
-									%li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username) )
-								- unless person.tumblr_url.blank?
-									%li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url )
-								- unless person.lastfm_username.blank?
-									%li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username) )
-								- unless person.pinterest_username.blank?
-									%li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username) )
-							%div{style: "clear:both"}
-							%p.bio= person.bio
+	#content-area
+		%section.team-cards.contractedcards
+			- data.team.each do |person|
+				- style = person.photo.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,0.85) 0%, rgba(2,0,0,0.55) 24%, rgba(255,255,255,0.01) 68%, rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,0.85)), color-stop(24%,rgba(2,0,0,0.55)), color-stop(68%,rgba(255,255,255,0.01)), color-stop(69%,rgba(255,255,255,0))),url(../images/team_photos/#{person.photo}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../images/team_photos/#{person.photo}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9020000', endColorstr='#00ffffff',GradientType=1 ),url(../images/team_photos/#{person.photo}); /* IE6-9 */ background-size:cover;"
+				.team-card{style: style}
+					.stats
+						%h3.name= person.first_name + " " + person.last_name
+						%h4.title= person.title
+						%ul.social-icons
+							- unless person.linkedin_url.blank?
+								%li.linkedin= link_to(image_tag('icon-linkedin.svg'), person.linkedin_url )
+							- unless person.twitter_username.blank?
+								%li.twitter= link_to(image_tag('icon-twitter.svg'), twitter_url_for(person.twitter_username) )
+							- unless person.github_username.blank?
+								%li.github= link_to(image_tag('icon-github.svg'), github_url_for(person.github_username) )
+							- unless person.flickr_username.blank?
+								%li.flickr= link_to(image_tag('icon-flickr.svg'), flickr_url_for(person.flickr_username) )
+							- unless person.dribbble_username.blank?
+								%li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username) )
+							- unless person.tumblr_url.blank?
+								%li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url )
+							- unless person.lastfm_username.blank?
+								%li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username) )
+							- unless person.pinterest_username.blank?
+								%li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username) )
 						%div{style: "clear:both"}
-						.character-sheet
-							.content
-								- unless person.mbti.blank?
-									.myers-briggs
-										MBTI
-										%span.value= person.mbti
-								- unless person.github_username.blank?
-									.sparkline.github-commits
-										.graph{"data-member-id" => person.id}
-										%label
-		.medium-9.small-12.columns.expandedcards
-			%section.team-cards.twelve.columns
-				- data.team.each do |person|
-					- style = person.photo.nil? ? "" : "background:url(../images/team_photos/#{person.photo}); background-size:cover; "
-					.team-card{style: style}
-					.team-card-info
-						.stats
-							%h3.name= person.first_name + " " + person.last_name
-							%h4.title= person.title
-							%ul.social-icons
-								- unless person.linkedin_url.blank?
-									%li.linkedin= link_to(image_tag('icon-linkedin.svg'), person.linkedin_url )
-								- unless person.twitter_username.blank?
-									%li.twitter= link_to(image_tag('icon-twitter.svg'), twitter_url_for(person.twitter_username) )
-								- unless person.github_username.blank?
-									%li.github= link_to(image_tag('icon-github.svg'), github_url_for(person.github_username) )
-								- unless person.flickr_username.blank?
-									%li.flickr= link_to(image_tag('icon-flickr.svg'), flickr_url_for(person.flickr_username) )
-								- unless person.dribbble_username.blank?
-									%li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username) )
-								- unless person.tumblr_url.blank?
-									%li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url )
-								- unless person.lastfm_username.blank?
-									%li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username) )
-								- unless person.pinterest_username.blank?
-									%li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username) )
-							%div{style: "clear:both"}
-							%p.bio= person.bio
+						%p.bio= person.bio
+					%div{style: "clear:both"}
+					.character-sheet
+						.content
+							- unless person.mbti.blank?
+								.myers-briggs
+									MBTI
+									%span.value= person.mbti
+							- unless person.github_username.blank?
+								.sparkline.github-commits
+									.graph{"data-member-id" => person.id}
+									%label
+		%section.team-cards.expandedcards
+			- data.team.each do |person|
+				- style = person.photo.nil? ? "" : "background:url(../images/team_photos/#{person.photo}); background-size:cover; "
+				.team-card{style: style}
+				.team-card-info
+					.stats
+						%h3.name= person.first_name + " " + person.last_name
+						%h4.title= person.title
+						%ul.social-icons
+							- unless person.linkedin_url.blank?
+								%li.linkedin= link_to(image_tag('icon-linkedin.svg'), person.linkedin_url )
+							- unless person.twitter_username.blank?
+								%li.twitter= link_to(image_tag('icon-twitter.svg'), twitter_url_for(person.twitter_username) )
+							- unless person.github_username.blank?
+								%li.github= link_to(image_tag('icon-github.svg'), github_url_for(person.github_username) )
+							- unless person.flickr_username.blank?
+								%li.flickr= link_to(image_tag('icon-flickr.svg'), flickr_url_for(person.flickr_username) )
+							- unless person.dribbble_username.blank?
+								%li.dribbble= link_to(image_tag('team/social-icons/dribbble.png'), dribbble_url_for(person.dribbble_username) )
+							- unless person.tumblr_url.blank?
+								%li.tumblr= link_to(image_tag('team/social-icons/tumblr.png'), person.tumblr_url )
+							- unless person.lastfm_username.blank?
+								%li.lastfm= link_to(image_tag('team/social-icons/lastfm.png'), lastfm_url_for(person.lastfm_username) )
+							- unless person.pinterest_username.blank?
+								%li.pinterest= link_to(image_tag('team/social-icons/pinterest.png'), pinterest_url_for(person.pinterest_username) )
 						%div{style: "clear:both"}
-					.team-card-character
-						.character-sheet
-							.content
-								- unless person.mbti.blank?
-									.myers-briggs
-										MBTI
-										%span.value= person.mbti
-								- unless person.github_username.blank?
-									.sparkline.github-commits
-										.graph{"data-member-id" => person.id}
-										%label
-		.medium-3.small-12.columns.sidebar.omega
+						%p.bio= person.bio
+					%div{style: "clear:both"}
+				.team-card-character
+					.character-sheet
+						.content
+							- unless person.mbti.blank?
+								.myers-briggs
+									MBTI
+									%span.value= person.mbti
+							- unless person.github_username.blank?
+								.sparkline.github-commits
+									.graph{"data-member-id" => person.id}
+									%label
+		.sidebar.omega
 			%section.code-of-ethics
 				%h2 CODE <em>of</em><br> ETHICS
 				%h3 Speak the Truth
@@ -117,74 +115,5 @@
 				%h3 Thou must ship!
 				%p.caption
 					We&#39;re not in this field to just make pretty designs. We&rsquo;re looking to design highly functional products that have huge impact. We&rsquo;ll stretch your design thinking and push the bounds but our work is destined to ship, and beautifully.
-			#invo-logo
-			%section.timeline.mobile-hide
-				%ul
-					%li#first
-						%p.date June 2004
-						%h3 Invo is born!
-						%p Dirk Knemeyer and Andrei Herasimchuk incorporate Involution Studios in Palo Alto, CA.
-					%li
-						%p.date December 2004
-						%h3 Skunkworks Design Gig for Jim Clark
-						%p Invo chosen to design a new, secret product for Jim Clark. It was Shutterfly.
-					%li
-						%p.date December 2005
-						%h3 First 3 hires
-						%p Made our first 3 hires: Benjamin Listwon (who would go on to be a co-founder), Donna Driscoll, and Tiffany Altieri
-					%li
-						%p.date July 2006
-						%h3 Invo as Yahoo Design Partner
-						%p Yahoo was developing a new tool to help small businesses quickly design effective websites that looked unique and not templatized. Invo was called in to design the software.
-					%li
-						%p.date 2007
-						%h3 Invo&#39;s First Building
-						%p Bought and moved into a building for Invo at 1294 Kifer Rd., Sunnyvale, CA
-					%li
-						%p.date 2008
-						%h3 McAfee Security Center
-						%p McAfee signs Invo to a massive contract to completely redesign the McAfee Security Center. 85M users infected by Involution&rsquo;s design.
-					%li
-						%p.date May 2008
-						%h3 Oracle PLM Service
-						%p Oracle engages Invo to grow a design culture, and build and rearchitect their PLM service.
-					%li
-						%p.date September 2008
-						%h3 Studio reaches 20 people
-						%p The Silicon Valley studio reaches 20 designers and engineers.
-					%li
-						%p.date 2009
-						%h3 Boston Studio is Born
-						%p Juhan Sonin leaves MITRE and begins Invo Boston with Dirk Knemeyer.
-					%li
-						%p.date November 2009
-						%h3 Invo Silicon Valley Closes
-						%p Involution Studios Silicon Valley closes shop. Sunnyvale building is sold.
-					%li
-						%p.date February 2010
-						%h3 A Better Voter Registration
-						%p President Obama and the DNC give Invo the thumbs up on designing their open source online voting service.
-					%li
-						%p.date July 2010
-						%h3 Jonathan Follett joins Invo
-						%p Jon Follett becomes an Invo principal, and his Hot Knife Design studio merges with Invo Boston.
-					%li
-						%p.date September 2010
-						%h3 PTC Pro Engineer Redesign
-						%p PTC&rsquo;s Creo (formerly Pro/ENGINEER) software is one of the oldest and most successful professional- grade software apps still in common use. They chose Involution to refresh it.
-					%li
-						%p.date October 2010
-						%h3 The Digital Life Podcast Begins
-					%li
-						%p.date November 2011
-						%h3 Dirk Speaks at TEDx Columbus
-					%li
-						%p.date March 2013
-						%h3 Studio Reaches 15 People
-						%p The Boston studio reaches 15 designers and engineers.
-					%li
-						%p.date May 2013
-						%h3 Bytes &amp; Atoms Conference
-						%p Bytes and Atoms is a micro conference (organized by Jon Follett) exploring the Internet of Things and the interaction between the physical and digital world.
 
 = javascript_include_tag 'team'

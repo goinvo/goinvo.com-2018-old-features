@@ -8,304 +8,213 @@ $ethics-padding: 30px;
  **  Team
  ************************************/
  
-#team {
-    .video-box {
-        padding-bottom: 0;
-    }
+div.team {
+	.video-box {
+		padding-bottom: 0;
+	}
 }
 
 .hero {
-    background-image: url('../../images/team/team.jpg');
-    background-position: 0 15%;
+	background-image: url('../../images/team/team.jpg');
+	background-position: 0 15%;
 }
 
-.row.main-content {
-    padding: 40px 20px;
+#content-area {
+	@include clearfix();
+	padding: 40px 20px;
 }
 
 #team-design-button {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+.team-cards, .sidebar {
+	float: left;
 }
 
 .team-cards {
-    color: $white;
-    
-    h3 {
-        color: $white;
-        font-size: 3.2rem;
-        line-height: .9rem;
-        margin-bottom: 0px;
-    }
-    
-    h4 {
-        color: $white;
-        margin-bottom: 7px;
-        margin-top: 17px;
-    }
-    
-    .social-icons {
-        list-style: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
+	color: $white;
+	width: 75%;
+	h3 {
+		color: $white;
+		font-size: 3.2em;
+		line-height: .9rem;
+	}
+	
+	h4 {
+		color: $white;
+		font-size: 1.4em;
+		margin-bottom: 7px;
+		margin-top: -0.2em;
+	}
+	
+	.social-icons {
+		list-style: none;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 
-        li {
-            display: inline-block;
-            margin-right: 10px;
-            max-width: $icon-size;
-            max-height: $icon-size;
-            vertical-align: center;
-        }
-    }
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			max-width: $icon-size;
+			max-height: $icon-size;
+			vertical-align: center;
+		}
+	}
 
-    .bio {
-        margin-top: 40px;
-        width: 50%; 
-    }
-    
-    .careerButton, {
-        border-style: solid;
-        border-width: 1px;
-        border-color: transparentize($white, .8);
-        border-radius: 5px;
-        padding: 5px 15px;
-        margin-right: 10px;
-        display: inline-block;
-        font-size: 1.2rem;
-        font-weight: 100;
-    }
-    
-    a {
-        color: inherit;   
-    }
-    
-    .character-sheet {
-        color: transparentize($white, .3);
-        background-color: transparentize($black, .2);
-        height: 70px;
-        display: none;
-        
-        .content {
-            vertical-align: middle;
-            width: 100%;
-            display: table;
-            height: 100%;
-            padding-left: $stats-padding;
-            padding-right: $stats-padding;
-            
-            .myers-briggs {
-                display: table-cell;
-                text-align: left;
-                vertical-align: middle;
-                width: auto;
-                padding-right: $stats-padding;
-                
-                span.value {
-                    border-style: solid;
-                    border-width: 1px;
-                    border-color: transparentize($white, .8);
-                    border-radius: 5px;
-                    padding: 4px 20px;
-                    margin-left: 10px;        
-                }
-            }
-            
-            .sparkline.github-commits {
-                display: table-cell;
-                text-align: left;
-                vertical-align: middle;
-                width: auto;
-                padding-right: $stats-padding;
-                
-                .graph {
-
-                }
-                
-                label {
-
-                }
-            }
-        }
-    }
-    
-    .team-card {
-        background-color: black;
-        background-position: top right;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 0px;
-        padding-bottom: 62.5%;
-        position: relative;
-        
-        .stats {
-            padding-left: $stats-padding;
-            padding-right: $stats-padding;
-            padding-top: $stats-padding;
-           
-        }
-        
-        .character-sheet {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-    }
+	.bio {
+		margin-top: 40px;
+		width: 50%;
+		line-height: 1.2em;
+	}
+	
+	.careerButton, {
+		border-style: solid;
+		border-width: 1px;
+		border-color: transparentize($white, .8);
+		border-radius: 5px;
+		padding: 5px 15px;
+		margin-right: 10px;
+		display: inline-block;
+		font-size: 1.2rem;
+		font-weight: 100;
+	}
+	
+	a {
+		color: inherit;   
+	}
+	
+	.character-sheet {
+		color: transparentize($white, .3);
+		background-color: transparentize($black, .2);
+		height: 70px;
+		display: none;
+		
+		.content {
+			vertical-align: middle;
+			width: 100%;
+			display: table;
+			height: 100%;
+			padding-left: $stats-padding;
+			padding-right: $stats-padding;
+			
+			.myers-briggs {
+				display: table-cell;
+				text-align: left;
+				vertical-align: middle;
+				width: auto;
+				padding-right: $stats-padding;
+				
+				span.value {
+					border-style: solid;
+					border-width: 1px;
+					border-color: transparentize($white, .8);
+					border-radius: 5px;
+					padding: 4px 20px;
+					margin-left: 10px;        
+				}
+			}
+			
+			.sparkline.github-commits {
+				display: table-cell;
+				text-align: left;
+				vertical-align: middle;
+				width: auto;
+				padding-right: $stats-padding;
+			}
+		}
+	}
+	
+	.team-card {
+		background-color: black;
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 0px;
+		padding-bottom: 62.5%;
+		position: relative;
+		
+		.stats {
+			padding-left: $stats-padding;
+			padding-right: $stats-padding;
+			padding-top: $stats-padding;
+		   
+		}
+		
+		.character-sheet {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+	}
 }
 
 .expandedcards {  
-    
-    .team-card-info {
-        color: $white; 
-        background-color: transparentize($black, 0.1);
-        padding: $stats-padding - 10px;
-        
-        .bio {
-            width: 100%;  
-            margin-bottom: 0px;
-        }
-        
-        h3, h4 {
-            color: $white;   
-        }
-    }
-    
-    .team-card-character {
-        margin-bottom: 40px;   
-        
-        .character-sheet {
-            height: 70px;   
-            background-color: transparentize($black, 0);
-            
-            .content {
-                padding-left: 30px;   
-            }
-        }
-    }
+	.team-card-info {
+		color: $white; 
+		background-color: transparentize($black, 0.1);
+		padding: $stats-padding - 10px;
+		
+		.bio {
+			width: 100%;  
+			margin-bottom: 0px;
+		}
+		
+		h3, h4 {
+			color: $white;   
+		}
+	}
+	
+	.team-card-character {
+		margin-bottom: 40px;   
+		
+		.character-sheet {
+			height: 70px;   
+			background-color: transparentize($black, 0);
+			
+			.content {
+				padding-left: 30px;   
+			}
+		}
+	}
 }
 
 .sidebar {
-    
-    .code-of-ethics {
-        text-align: center;
-        color: $darkgray;
-        background-color: transparentize($blue, .97);
-        
-        h2, h3 {
-            color: $darkgray;
-            font-size: 26px;
-            line-height: 30px;
-            
-            em {
-                font-style: italic;  
-            }
-        }
-        
-        h2 {
-            margin-bottom: $ethics-padding;  
-            padding-top: $ethics-padding;
-        }
-        
-        p {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: $ethics-padding;
-            font-size: inherit;
-            line-height: inherit;
-            letter-spacing: inherit;
-        }
-        
-        p: last-child {
-            padding-bottom: $ethics-padding;       
-        }
-    }
-}
-
-#invo-logo {
-    background-image: image-url("team/invo-timeline-logo.png");
-    background-position: center center;
-    background-size: cover;
-
-    width: 50px;
-    height: 50px;
-
-    border: 4px solid $white;
-    border-radius: 90px;
-    box-shadow: 2px 2px 4px;
-
-    position: absolute;
-    left: 44px;
-    top: 2130px;
-    z-index: 300;
-    display: none;
-}
-
-.timeline { //currently commented out
-    display: none;
-    padding-top: 20px;    
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: transparentize($blue, 0.97);
-    
-    ul {
-        
-        li {
-            list-style: none;
-            position: relative;
-            margin-bottom: 0;
-            padding-bottom: 2.5em;
-            padding-left: 40px;
-            
-            p.date {
-                padding-top: 15px;
-                color: $darkgray;
-                margin-bottom: 0px;
-                padding-bottom: 0px;
-            }
-            
-            h3 {
-                color: $darkgray;
-                font-weight: 400;
-                margin-top: 0px;
-                line-height: 1.7rem;
-                padding-top: 7px;
-            }
-            
-            p, p.date {
-                font-size: 1.1rem;
-                line-height: 1.3rem;
-                letter-spacing: 0.04rem;
-            }
-        }
-        
-        li:before{
-            content: "";
-            position: absolute;
-            left: -6px;
-            border-left: 3px solid $gray;
-            border-right: 3px solid $gray;
-            height: 100%;
-            width: 14px;
-        }
-        
-        li:after {
-            content: "";
-            background-color: white;
-            position: absolute;
-            border: 3px solid $gray;
-            border-radius: 90px;
-            left: -14px;
-            top: 0px;
-            width: 30px;
-            height: 30px;
-        }
-        
-        li:first-child:before{
-            top: 6px;   
-        }
-        
-        li:last-child:before {
-            height: 6px;   
-        }
-    }
+	width: 25%;
+	padding-left: 2em;
+	.code-of-ethics {
+		text-align: center;
+		color: $darkgray;
+		background-color: darken($off_white, 2%);
+		padding: 10px;
+		
+		h2, h3 {
+			color: $darkgray;
+			font-size: 26px;
+			line-height: 30px;
+			
+			em {
+				font-style: italic;  
+			}
+		}
+		
+		h2 {
+			margin-bottom: $ethics-padding;  
+			padding-top: $ethics-padding;
+		}
+		
+		p {
+			width: 80%;
+			margin: 0 auto;
+			margin-bottom: $ethics-padding;
+			font-size: inherit;
+			line-height: inherit;
+			letter-spacing: inherit;
+			&:last-child {
+				padding-bottom: $ethics-padding;       
+			}
+		}
+	}
 }

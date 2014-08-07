@@ -16,11 +16,11 @@
 }
 
 @media only screen and (max-width: 1105px) {
-	 div.main-content .expandedcards {
-		display:inherit;
+	#content-area .expandedcards {
+		display: block;
 	}
 
-	.contractedcards {
+	#content-area .contractedcards {
 		display: none;
 	}
 }
@@ -87,9 +87,13 @@
 		padding-left:.3rem;
 	}
 
+	#content-area .expandedcards {
+		width: 100%;
+	}
+
 	.sidebar.omega {
-		padding-left:10px;
-		padding-right:10px;
+		width: 100%;
+		padding: 0;
 	}
 
 	//Is this for the current footer?
