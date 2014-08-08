@@ -101,7 +101,7 @@ header.hero {
 	}
 }
 
-section, #sec11 {
+section, #sec11 .content {
 	max-width: 480px;
 	max-width: 48rem;
 	margin: 4em auto 0;
@@ -126,7 +126,6 @@ section, #sec11 {
 }
 
 #dataViz {
-	padding-bottom: 3em;
 	iframe {
 		width: 100%;
 		height: 950px;
