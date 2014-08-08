@@ -29,6 +29,7 @@ a {
 			h2, h3, h4, h5 {
 				color: $white;
 				font-weight: 400;
+				margin-bottom: 0;
 				&.boxed {
 					display: inline-block;
 					margin-bottom: 1em;
@@ -42,7 +43,7 @@ a {
 			}
 			.light-button {
 				display: inline-block;
-				margin-top: 15px;
+				margin-top: 1.2em;
 				padding: 0.6em 1em 0.4em;
 				border: 1px solid #AAA;
 				border-radius: 5px;

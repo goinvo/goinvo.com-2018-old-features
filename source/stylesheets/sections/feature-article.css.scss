@@ -101,10 +101,10 @@ header.hero {
 	}
 }
 
-.row, #sec11 .row {
+section, #sec11 {
 	max-width: 480px;
 	max-width: 48rem;
-	margin-top: 4em;
+	margin: 4em auto 0;
 	padding: 0 3em;
 	> .row {
 		margin-left: 0;
