@@ -162,7 +162,7 @@ article#complex-case {
 			}
 		}
 
-		p span.firstcharacter {
+		p.lead:first-letter {
 			color: #d62a31;
 			float: left;
 			font-size: 75px;
@@ -180,6 +180,10 @@ article#complex-case {
 			padding-left: 0px;
 			padding-bottom: 20px;
 			margin-right: -110px;
+		}
+		.image-float .caption {
+			display: block;
+			margin-top: 5px;
 		}
 	}
 
