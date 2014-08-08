@@ -18,7 +18,7 @@ body.studio #main-header #nav-buttons .studio,
 body.team #main-header #nav-buttons .team,
 body.careers #main-header #nav-buttons .careers,
 body.contact #main-header #nav-buttons .contact, {
-	color: #FFF;
+	color: $white;
 	&:hover {
 		color: #C9C9C9;
 	}
@@ -29,13 +29,20 @@ body.contact #main-header #nav-buttons .contact, {
 	background: rgba(18,18,18,.875);
 	padding: 15px 2.125em 0;
 	transition: background .3s ease;
-
+	img {
+		display: inline-block;
+	}
+	a {
+		text-decoration: none;
+	}
 	#nav-buttons, #nav-buttons-mobile {
 		display: inline-block;
-		padding-top: 3px;
+		padding-top: 5px;
 		vertical-align: middle;
 		right: 0;
 		float: right;
+		font-size: 1.375em;
+		letter-spacing: 1px;
 		a {
 			padding-left: 20px;
 			color: #AAA;
@@ -55,11 +62,11 @@ body.contact #main-header #nav-buttons .contact, {
 
 	#nav-buttons-mobile {
 		position: absolute;
-		display:none;
+		display: none;
 		background: rgba(18,18,18,.875);
 		padding-top: 0;
-		top:55px;
-		left:0;
+		top: 55px;
+		left: 0;
 		.nav-button {
 			display: block;
 			padding-top: 10px;
@@ -91,6 +98,6 @@ body.contact #main-header #nav-buttons .contact, {
 		color: #EEE;
 		margin-left: 10px;
 		vertical-align: bottom;
-		padding-bottom: 2px;
+		padding-bottom: 5px;
 	}
 }

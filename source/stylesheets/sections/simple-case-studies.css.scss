@@ -1,21 +1,15 @@
 @import "../base/core";
 
-$body-font-size:20px;
-$body-line-height:23px;
-$body-letter-spacing:0.03em;
-
-$sidebar-font-size:19px;
-$sidebar-line-height:21px;
-$sidebar-letter-spacing:0.03rem;
-
 .container {
-	padding-top: 100px;
+	padding-top: 55px;
 	margin-bottom: 0px;
 	
 	h6.subheader {
-		text-transform: uppercase;  
-		line-height: $sidebar-line-height;
 		margin-top: 40px;
+		font-size: 1em;
+		font-weight: 400;
+		line-height: 1.1em;
+		text-transform: uppercase;
 		
 		&.name {
 			text-transform: none;
@@ -24,22 +18,19 @@ $sidebar-letter-spacing:0.03rem;
 	}
 	
 	img {
-		padding: 20px 0;
+		padding-bottom: 1.5em;
 		width: 100%;
 		height: auto;
-		margin-top: 20px;
 	}
 	
 	p {
+		line-height: 1.2em;
+		letter-spacing: 0.025em;
 		&.quote {
-			font-size: $body-font-size;
-			line-height:$body-line-height;
-			letter-spacing: $body-letter-spacing;
-			margin-bottom:5px;
-			padding-top:13px;
-			background-repeat: no-repeat;
-			background-position: 0 0;
-			background-size: 42px;
+			font-size: 1.25em;
+			line-height: 1.1em;
+			margin-bottom: 0.25em;
+			padding-top: 0.5em;
 			text-indent: -0.3em;
 			&:before {
 				content: "\201C";
@@ -49,70 +40,86 @@ $sidebar-letter-spacing:0.03rem;
 				content: "\201D";
 			}
 		}
-		
-		&.caption {
-			font-size: $sidebar-font-size;
-			line-height:$sidebar-line-height;
-			letter-spacing: $sidebar-letter-spacing;
-		}   
 	}
 	
-	div.medium-9.small-12.column p.caption {
-		max-width: 75%;   
+	p.caption {
+		max-width: 75%;
+		margin-bottom: 3em;
+	}
+
+	p.caption, ul {
+		font-size: 1.1875em;
+		line-height: 1.1em;
 	}
 	
-	ul {
-		font-size: $sidebar-font-size;
-		line-height:$sidebar-line-height;
-		letter-spacing: $sidebar-letter-spacing;
-		margin-left: 0; // THIS SHOULDN'T BE HERE D:
-		li {
-			margin-top:10px;
-		}   
+	li {
+		margin-top: 10px;
 	}
 }
 
-div.similar-project-container {
+#content-area {
+	padding: 3em 35px 0;
+	@include clearfix();
+	.projectData, .projectDetails {
+		float: left;
+	}
+	.projectData {
+		width: 25%;
+	}
+	.projectDetails {
+		width: 75%;
+		padding-left: 2em;
+	}
+}
 
+.similar-project-container {
+	h6.subheader {
+		text-transform: none;
+		font-size: 1.1875em;
+		line-height: 1em;
+		margin: 0;
+		padding-bottom: 2em;
+	}
 	a.button.radius {
-		font-size: $body-font-size;
-		line-height:$body-line-height;
-		letter-spacing: $body-letter-spacing;
-		padding:10px 20px;
-		padding-top:12px;
+		font-size: 1.25em;;
+		padding: 10px 20px;
+		padding-top: 12px;
 		background-color:rgb(235, 235, 235);
 		color: #aaa;
-		
 		&:hover{
 			//color:rgb(247, 247, 247);
 			background-color: #dbdddc;
 		}
 	}
-	
-	h6.subheader {
-		text-transform: none;
-		font-size: $sidebar-font-size;
-		line-height:$sidebar-line-height;
-		letter-spacing: $sidebar-letter-spacing;
-	}
 }
 
-.row#next-project {
+#next-project {
 	max-width: 100%;
-	margin-top: 20px;
+	margin-top: 0px;
 	cursor: pointer;
 	background-size: cover;
-	
+	background-position: center;
+	padding: 80px 40px;
 	div.next-title {
-		padding: 80px 0;
+		max-width: 800px;
+		margin: 0 auto;
 		color: #f7f7f7;
 		font-size: 2.5rem;
 		line-height: 1em;
 		font-weight: 700;
-		
+
 		span {
 			font-size: 3.5rem;
 			line-height: 1em;
+		}
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	#content-area {
+		.projectData, .projectDetails {
+			width: 100%;
+			padding: 0;
 		}
 	}
 }

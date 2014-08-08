@@ -1,9 +1,4 @@
-@import "base/colors";
-@import "base/type";
-
-$body-font-size: 22px;
-$body-line-height: 26px;
-$body-letter-spacing: 0.03em;
+@import "../base/core";
 
 html, body {
 	height: 100%;
@@ -20,19 +15,27 @@ body {
 	max-width: 100%;
 }
 
+a {
+	&.one, &.two, &.three {
+		text-decoration: none;
+	}
+}
+
 .homepage-header {
 	width: 100%;
 	position: relative;
 	&.one, &.two, &.three {
+		padding: 0 1em;
 		.title {
 			h2, h3, h4, h5 {
 				color: $white;
 				font-weight: 400;
+				margin-bottom: 0;
 				&.boxed {
 					display: inline-block;
 					margin-bottom: 1em;
 					text-transform: uppercase;
-					color: #FFF;
+					color: $white;
 				}
 			}
 			h5 {
@@ -41,14 +44,14 @@ body {
 			}
 			.light-button {
 				display: inline-block;
-				margin-top: 15px;
+				margin-top: 1.2em;
 				padding: 0.6em 1em 0.4em;
 				border: 1px solid #AAA;
 				border-radius: 5px;
-				background: #000;
+				background: $black;
 				background: rgba(0,0,0,0.25);
-				/* box-shadow: 0 0 3px #000, inset 0 0 3px #000; */
-				color: #FFF;
+				/* box-shadow: 0 0 3px $black, inset 0 0 3px $black; */
+				color: $white;
 				font-size: 22px;
 				text-shadow: 1px 1px 0 #444;
 			}
@@ -155,22 +158,12 @@ body {
 					font-size: 1.2rem;
 				}
 			}
-			@media only screen and (max-height: 660px) {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 16px;
-					font-size: 1.6rem;
-				}
-			}
 		}
 	}
 
 	&.two {
 		background-image: url(../../images/home/hgraph_large.png);
-		background-color: #FFF;
+		background-color: $white;
 		background-repeat: no-repeat;
 		background-position: center -90%;
 		transition: background-position 300ms ease;
@@ -202,7 +195,7 @@ body {
 	}
 
 	&.three {
-		background-image: linear-gradient(to bottom, fade-out(#000, 0.25) 0%, fade-out(#000, 0.35) 100%), url('../../images/home/culture.jpg');
+		background-image: linear-gradient(to bottom, fade-out($black, 0.25) 0%, fade-out($black, 0.35) 100%), url('../../images/home/culture.jpg');
 		background-position: center;
 		background-size: cover;
 		.title {
@@ -227,7 +220,7 @@ body {
 		}
 		.container {
 			h2, h3 {
-				color: #FFF;
+				color: $white;
 			}
 		}
 	}
@@ -252,8 +245,6 @@ body {
 
 		h4 {
 			margin-top: 10px;
-			font-size: $body-font-size;
-			line-height: $body-line-height;
 		}
 	}
 
@@ -284,7 +275,7 @@ body {
 #main-footer {
 	position: absolute;
 	bottom: 0;
-	background: fade-out(#000, 0.1);
+	background: fade-out($black, 0.1);
 	@media only screen and (max-width: 1020px) {
 		position: static;
 	}

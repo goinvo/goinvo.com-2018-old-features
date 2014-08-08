@@ -103,9 +103,7 @@ $( document ).ready(function() {
 		imgURL = "../../images/clients/" + projects[index].title.replace(/ /g, '').toLowerCase() + "/" + projects[index].image;
 
 		next.css({
-			"background": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")",
-			"background-size": "cover",
-			"background-position": "center"
+			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")"
 		})
 		next.on("click", function () {
 			   window.location.href =  '../../work/' + projects[index].title.replace(/ /g, '').toLowerCase();
@@ -118,9 +116,7 @@ $( document ).ready(function() {
 		});
 		nextArea.html('Next: <span id="next">See more of our work</span>');
 		next.css({
-			"background": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(../../images/process/jpg/intro.jpg)",
-			"background-size": "cover",
-			"background-position": "center 25%"
+			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(../../images/process/jpg/intro.jpg)"
 		})
 	}
 

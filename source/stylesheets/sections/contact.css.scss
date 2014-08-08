@@ -7,23 +7,28 @@ body {
 	background-repeat: no-repeat;
 }
 
+#content-area {
+	max-width: 760px;
+	font-size: 1.2em;
+}
+
 #contactForm {
-	padding-top:100px;
-	padding-bottom:80px;
+	padding: 100px 20px 80px;
 
 	.form-title {
-		line-height:3.2rem;
+		line-height: 3.2rem;
 
 		h3, h4 {
-			margin-top:0px;
-			margin-bottom:0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
 		}
 
 		h3 {
 			font-size: 3.2rem;
 			line-height: 1rem;
-			font-weight:800;
-			padding-top:20px;
+			font-weight: 800;
+			padding-top: 20px;
+			margin-bottom: 0.25em;
 		}
 
 		h4 {
@@ -87,21 +92,7 @@ body {
 	}
 
 	#email_content2-60744b7c-0aa6-40b2-9943-42137a951d16 {
-		height: 346px;
-	}
-
-	#firstname-60744b7c-0aa6-40b2-9943-42137a951d16, #lastname-60744b7c-0aa6-40b2-9943-42137a951d16{
-		height:auto;
-		width:100%;
-	}
-
-	input[type=text], input[type=email] {
-		padding:3.5%;
-		padding-top:4%;
-
-		&#firstname-60744b7c-0aa6-40b2-9943-42137a951d16, &#lastname-60744b7c-0aa6-40b2-9943-42137a951d16 {
-			padding:4% 7% 3.5% 7%;
-		}
+		height: 10em;
 	}
 
 

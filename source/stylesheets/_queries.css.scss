@@ -16,11 +16,11 @@
 }
 
 @media only screen and (max-width: 1105px) {
-	 div.main-content .expandedcards {
-		display:inherit;
+	#content-area .expandedcards {
+		display: block;
 	}
 
-	.contractedcards {
+	#content-area .contractedcards {
 		display: none;
 	}
 }
@@ -34,8 +34,8 @@
 		display:block;
 	}
 	#main-container .homepage-header .title, #main-footer .footerContent {
-		padding-left: 2em;
-		padding-right: 2em;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -87,9 +87,13 @@
 		padding-left:.3rem;
 	}
 
+	#content-area .expandedcards {
+		width: 100%;
+	}
+
 	.sidebar.omega {
-		padding-left:10px;
-		padding-right:10px;
+		width: 100%;
+		padding: 0;
 	}
 
 	//Is this for the current footer?
@@ -101,6 +105,21 @@
 
 	div.footerContent div.medium-1.columns.social-links {
 		padding-left:0px;
+	}
+
+	div.careers {
+		aside.left, .centerContent, aside.right {
+			padding: 0;
+		}
+		aside.left {
+			display: none;
+		}
+		.centerContent, aside.right {
+			width: 100%;
+		}
+		.hs-form fieldset {
+			max-width: 100%;
+		}
 	}
 }
 
@@ -230,5 +249,12 @@
 @media only screen and (max-width: 484px) {
 	.expandedcards .team-card-info h3 {
 		line-height:3.4rem;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	#main-footer .footerContent {
+		text-align: center;
+		font-size: 1em;
 	}
 }

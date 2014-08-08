@@ -2,24 +2,20 @@
 @import "base/type";
 @import "../base/mixins";
 
-$border-radius: 4px;
-$outer-sidebar-padding:20px;
-$sidebar-padding:20px;
-$center-padding:30px;
-
 /************************************
  **  Careers
  ************************************/
 
-#careers {
+.careers {
 	.video-box {
 		padding-bottom: 0;
 	}
 	.hero {
-		background-image: url('../../images/careers/boston-ux-designer-career.jpg');
+		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/careers/careers.jpg');
 	}
 
-	#mainContent {
+	#content-area {
+		@include clearfix();
 		padding: 40px 20px;
 		.title {
 			font-size: 3.2rem;
@@ -40,11 +36,20 @@ $center-padding:30px;
 				padding-top:10px;
 			}
 		}
-  }
+	}
+
+	.left, .centerContent, .right {
+		float: left;
+	}
+
+	.left, .right {
+		width: 25%;
+	}
 
 	.centerContent {
-		padding-left:$center-padding;
-		padding-right:$center-padding;
+		width: 50%;
+		padding: 0 1.25em;
+		line-height: 1.6em;
 	}
 }
 

@@ -1,9 +1,5 @@
 @import "../base/core";
 
-html { // This will need to be moved to another css file to keep things conceise.
-	background: #0d0d0d;
-}
-
 #main-container {
 	padding-top: 75px;
 }
@@ -84,7 +80,7 @@ section {
 				padding-top: 8em;
 			}
 			@media screen and  (max-width: 640px) {
-				background: linear-gradient(fade-out(#FFF, 1) 30%, #FFF 50%);
+				background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
 			}
 		}
 	}
@@ -154,12 +150,12 @@ h2 {
 	position: relative;
 	padding: 5em 0 3em;
 	z-index: 10;
-	background: linear-gradient(fade-out(#FFF, 1), #FFF 50%);
+	background: linear-gradient(fade-out($white, 1), $white 50%);
 	@media screen and  (max-width: 1024px) {
 		padding-top: 8em;
 	}
 	@media screen and  (max-width: 640px) {
-		background-image: linear-gradient(fade-out(#FFF, 1) 50%, #FFF 75%);
+		background-image: linear-gradient(fade-out($white, 1) 50%, $white 75%);
 		padding-top: 16em;
 	}
 	h2 {
@@ -174,7 +170,7 @@ h2 {
 .section-content {
 	position: relative;
 	z-index: 20;
-	background: #FFF;
+	background: $white;
 	h3, h4, p, ul, ol {
 		max-width: 500px;
 		max-width: 50rem;

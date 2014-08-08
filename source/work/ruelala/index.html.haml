@@ -7,8 +7,8 @@
 	%meta{:name => "keywords", :content => "product strategy, systemic design, ui design, ux design, research"}/
 - client = client_for_name("Rue La La")
 		
-.row
-	.medium-3.small-12.column
+#content-area.caseStudyContent
+	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} Rue La La
 		
 		%h6.subheader Results
@@ -38,7 +38,7 @@
 			%h6.subheader Have a similar project?
 			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
 		
-	.medium-9.small-12.column
+	.projectDetails
 		%img{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-user-interface.jpg"}
 		%p.caption The dashboard provides analysts, event coordinators, and merchandise planners a shared decision space to coordinate, schedule, and produce campaigns.
 		%div

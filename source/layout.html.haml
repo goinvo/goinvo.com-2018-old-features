@@ -31,7 +31,7 @@
 					%header#site-header
 						%a{:href => asset_url('/'), :id => "site-title"}
 							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
-							.tag-line Crafting exceptional software for progressive companies
+							%span.tag-line Crafting exceptional software for progressive companies
 						%nav#nav-buttons
 							%a.nav-button.work{:href => asset_url('work')} Work
 							-# %a.nav-button{:href => asset_url('products')}
@@ -55,12 +55,12 @@
 					= yield
 			%footer#main-footer
 				.footerContent
-					%p#phoneNum
+					%span#phoneNum
 						%a{href: "tel:6178037043"}  617&ndash;803&ndash;7043
-					%p.mail
-						= mail_to "info@goinvo.com"
-					%p.twitter= link_to(image_tag('icon-twitter.svg'), "https://twitter.com/goinvo" )
-					%p.address
+					%span.mail
+						<a href="mailto:&#105;&#110;&#102;&#111;&#064;&#103;&#111;&#105;&#110;&#118;&#111;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#103;&#111;&#105;&#110;&#118;&#111;&#046;&#099;&#111;&#109;</a>
+					%span.twitter= link_to(image_tag('icon-twitter.svg'), "httspans://twitter.com/goinvo" )
+					%span.address
 						%a{href: "https://www.google.com/maps/place/661+Massachusetts+Ave/@42.4159556,-71.1542426,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376507914ce3b:0xd3401d7136ceb9f3"} Map
 
 			= yield_content :worlds_end

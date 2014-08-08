@@ -7,8 +7,8 @@
 	%meta{:name => "keywords", :content => "application design, user interface design, designer tools, developer tools, microsoft, expression, involution, boston user interface design"}/
 - client = client_for_name("Microsoft")
 
-.row
-	.medium-3.small-12.column
+#content-area.caseStudyContent
+	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} Microsoft
 
 		%h6.subheader Results
@@ -42,7 +42,7 @@
 			%h6.subheader Have a similar project?
 			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
 
-	.medium-9.small-12.column
+	.projectDetails
 		%div
 			%img{alt: "Redesigned interface in Expression Studio", src: "../../images/clients/microsoft/microsoft-expression-studio-redesign.jpg"}
 		%p With Expression Studio, Microsoft set off on the challenge to enter the market for software professionals dominated by Adobe. Perhaps not surprisingly, their early versions of the product were not well-received, a combination of the difficulty of fighting Adobe&rsquo;s dominant market share and the pitfalls and rough edges of releasing a complex new product outside of the company&rsquo;s competencies. Identifying the interface design as one of the key areas for improvement Microsoft turned to Involution.

@@ -7,8 +7,8 @@
 	%meta{:name => "keywords", :content => "marketing optimization, ui design, ux design, frontend development, prototyping, affinnova, user experience"}/
 - client = client_for_name("Affinnova")
 
-.row
-	.medium-3.small-12.column
+#content-area.caseStudyContent
+	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} Affinnova
 
 		%h6.subheader Results
@@ -43,7 +43,7 @@
 			%h6.subheader Have a similar project?
 			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
 
-	.medium-9.small-12.column
+	.projectDetails
 		%div
 			%img{alt: "Affinnova", src: "../../images/clients/affinnova/affinnova-concept-studio-ui-design.jpg"}
 		%p.caption Affinnova's Concept Studio gives marketing organizations a powerful tool to test and uplevel their marketing.
@@ -68,6 +68,7 @@
 		%div
 			%img{alt: "Rules Engine UI Design", src: "../../images/clients/affinnova/concept-studio-rules-ui-design.jpg"}/
 		%p.caption The finished Concept Studio hit every basic design requirement we insist on: useful, usable and appropriately beautiful.
+
 #next-project.row
 	.medium-6.small-12.small-centered.columns
 		.next-title

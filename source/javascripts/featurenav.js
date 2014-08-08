@@ -92,13 +92,13 @@ $(window).load(function(){
 		$('.the-article-nav a').removeClass('active');
 		currentLinks.addClass('active');
 		var setHeight = heights[callIndex].css('height');
-		$('section.row.visible').animate({
+		$('section.visible').animate({
 			opacity: 0
 		}, 250, function(){
 			$('.content-container').animate({
 				height: setHeight
 			}, 250, function(){
-				$('section.row.visible').toggleClass('visible').toggleClass('hidden').removeAttr('style');
+				$('section.visible').toggleClass('visible').toggleClass('hidden').removeAttr('style');
 				$('#sec' + callIndex).css('display', 'block').animate({
 					opacity: 1
 				}, 250, function(){
@@ -109,6 +109,6 @@ $(window).load(function(){
 	});
 });
 $(window).resize(function(){
-	var newHeight = $('section.row.visible').height();
+	var newHeight = $('section.visible').height();
 	$('.content-container').css('height', newHeight + 'px');
 });

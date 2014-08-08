@@ -2,88 +2,98 @@
 // I have no idea why this happens and it is not consistent
 
 @import "compass/typography";
-@import "base/colors";
-
-
-/*************************************************************
- *  BASELINE
-**************************************************************/
-
-$base-font-size: 16px;
-$base-line-height: 24px;
-
-@include establish-baseline();
-
 
 /*************************************************************
  *  TYPES OF TYPE
 **************************************************************/
 
 body {
-  font-family: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
-  color: $black;
+	font-family: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
+	color: $black;
+	text-rendering: optimizeLegibility;
+	font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; // Foundation override.
-  a {
-    text-decoration: none;
-  }
+	font-weight: 700;
+	margin-bottom: 0.5em;
+	&.name {
+		font-weight: 400;
+	}
 }
 
 h1 {
-  @include adjust-font-size-to(40px);
+	font-size: 3em;
 }
 
 h2 {
-  @include adjust-font-size-to(32px);
-  margin-top: 0;
+	font-size: 2.8em;
 }
 
 h3 {
-  @include adjust-font-size-to(24px);
+	font-size: 2.4em;
 }
 
 h4 {
-  @include adjust-font-size-to(18px);
+	font-size: 2em;
 }
 
-h3.name {
-  font-weight: 400;
+h5 {
+	font-size: 1.8em;
 }
 
-#contactForm h4, h4.title {
-  @include adjust-font-size-to(18px);
-  font-weight: 400;
-}
-
-.quote {
-    font-weight: 400;
-}
-
-p {
-  font-size :1.4rem;
-  margin-bottom: 1.5rem;
-  em {
-    font-style: italic;
-  }
-  strong {
-    font-weight: 700;
-  }
-  a {
-    text-decoration: none;
-    color: $blue;
-  }
-}
-
-.social-card a {
-    color: $navy;
-}
-
-.social-card a:hover {
-    color:$blue;
+h6 {
+	font-size: 1.6em;
 }
 
 a {
-     color: $blue;
+	text-decoration: none;
+}
+
+.subheader {
+	color: $gray;
+}
+
+#contactForm h4, h4.title {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.quote {
+		font-weight: 400;
+}
+
+p {
+	font-size: 1.375em;
+	margin-bottom: 1em;
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: 700;
+	}
+	a {
+		text-decoration: none;
+		color: $blue;
+	}
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	list-style: auto;
+}
+
+.social-card a {
+		color: $navy;
+}
+
+.social-card a:hover {
+		color:$blue;
+}
+
+a {
+		 color: $blue;
 }
