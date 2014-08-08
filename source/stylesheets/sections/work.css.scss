@@ -2,8 +2,8 @@
 
 #projects {
 	.hero {
-		background-image: url('../../images/work/work.jpg');
-		background-position: center 65%;
+		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/work/work.jpg');
+		background-position: center bottom;
 		margin-bottom: 15px;
 	}
 
