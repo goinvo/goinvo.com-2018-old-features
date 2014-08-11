@@ -19,3 +19,35 @@ hr {
 	position: relative;
 	padding-bottom: 1.5em;
 }
+
+.slider { 
+	position: relative; 
+	overflow: auto;
+	li {
+		list-style: none;
+		padding: 0 100px;
+	}
+	ul li {
+		float: left; 
+	}
+	.unslider-arrow {
+		position: absolute;
+		z-index: 10;
+		height: 0;
+		width: 0;
+		top: 45%;
+		border-top: 60px solid transparent;
+		border-bottom: 60px solid transparent;
+		color: transparent;
+		&.prev {
+			border-right: 15px solid #AAA;
+			border-left: 0;
+			left: 40px;
+		}
+		&.next {
+			border-left: 15px solid #AAA;
+			border-right: 0;
+			right: 40px;
+		}
+	}
+}

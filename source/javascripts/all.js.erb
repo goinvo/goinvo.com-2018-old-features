@@ -10,9 +10,28 @@
 //= require vendor/mousetrap.js
 //= require base/ui.js
 //= require fitvids.js
+//= require unslider.js
 
 $(document).ready(function(){
-    $('.video-box').fitVids();
+	$('.video-box').fitVids();
+	
+	var govtSlider = $('#govtSlider').unslider();
+	$('.unslider-arrow').click(function(event) {
+		event.preventDefault();
+		if ($(this).hasClass('next')) {
+			govtSlider.data('unslider').next();
+		} else {
+			govtSlider.data('unslider').prev();
+		};
+	});
+
+	var voteSlider = $('#votingSlider').unslider();
+	$('.votingSlides .visualNav .unslider-button').click(function(event) {
+		event.preventDefault();
+		buttonClass = $(this).attr('class');
+		slideNumber = buttonClass.replace( /^\D+/g, '');
+		voteSlider.data('unslider').move(parseInt(slideNumber));
+	});
 });
 
 //fix for problem where '/v01/' is missing in the url
@@ -20,25 +39,25 @@ var currentURL = 'http://code.goinvo.com/v01/';
 
 //binds keys to navigation links in the header using the Mousetrap library
 Mousetrap.bind('w', function () {
-    window.location.href = currentURL + 'work';
+	window.location.href = currentURL + 'work';
 });
 
 Mousetrap.bind('s', function () {
-    window.location.href = currentURL + 'studio';
+	window.location.href = currentURL + 'studio';
 });
 
 Mousetrap.bind('t', function () {
-    window.location.href = currentURL + 'team';
+	window.location.href = currentURL + 'team';
 });
 
 Mousetrap.bind('a', function () {
-    window.location.href = currentURL + '#';
+	window.location.href = currentURL + '#';
 });
 
 Mousetrap.bind('c', function () {
-    window.location.href = currentURL + 'contact';
+	window.location.href = currentURL + 'contact';
 });
 
 Mousetrap.bind('a c', function () {
-    window.location.href = currentURL + 'careers';
+	window.location.href = currentURL + 'careers';
 });
