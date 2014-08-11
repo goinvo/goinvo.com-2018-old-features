@@ -24,7 +24,7 @@ div.team {
 	padding: 40px 20px;
 }
 
-#team-design-button {
+#team-design-button, #team-button {
 	cursor: pointer;
 }
 
@@ -189,6 +189,8 @@ div.team {
 		color: $darkgray;
 		background-color: darken($off_white, 2%);
 		padding: 10px;
+        margin-bottom: 1em;
+        border-radius: 5px;
 		
 		h2, h3 {
 			color: $darkgray;
@@ -206,12 +208,9 @@ div.team {
 		}
 		
 		p {
-			width: 80%;
+			width: 100%;
 			margin: 0 auto;
 			margin-bottom: $ethics-padding;
-			font-size: inherit;
-			line-height: inherit;
-			letter-spacing: inherit;
 			&:last-child {
 				padding-bottom: $ethics-padding;       
 			}

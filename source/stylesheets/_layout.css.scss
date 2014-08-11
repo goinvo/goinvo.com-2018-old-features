@@ -74,6 +74,16 @@ body {
 	line-height: 1.1em;
 	word-spacing: 0.1rem;
 	color: $darkgray;
+  
+    p.caption {
+        padding: 0 20px 20px;
+    }
+    
+    p.caption, .video h3.quote, .photo h3.quote {
+        font-size: 1.1em;
+        line-height: 1.1em;
+        letter-spacing: 1px; 
+    }
 
 	.photo, .video {
 		border-radius: 5px;
@@ -99,12 +109,6 @@ body {
 		}
 		h3.quote {
 			text-indent: -0.45rem;
-		}
-		p.caption {
-			padding: 0 20px 20px;
-			font-size: 1.1em;
-			line-height: 1.1em;
-			letter-spacing: 1px;
 		}
 	}
 }
