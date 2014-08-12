@@ -3,11 +3,12 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/rethinking-democracy"
 	= javascript_include_tag "unslider"
+	= javascript_include_tag "features/rethinking-democracy.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
 
 %article#feature-article.government
-	%h1 Rethinking Government
+	%h1 Rethinking Democracy
 	%h2 Today's U.S. government is built on principles and practices established more than 2,000 years ago. Can digital technology help us realize a better way?
 
 	%p Democracy first took root around 508 BC in Athens, Greece, the cultural cradle of antiquity. From 508 to 146 BC Greece, particularly Athens, set the foundation upon which western civilization was to develop. Much of modern science, art, and architecture traces directly back to this place and time, building off of or reacting to the achievements of this period over the subsequent 2,160 years. This is certainly the case with modern democracy.
@@ -30,118 +31,126 @@
 
 	%p Systems of government are characterized by a broad and complicated range of characteristics. This complexity can make it difficult to consider new political systems. Let’s look at some familiar approaches to government that have gone out of fashion.
 
-	#govtSlider.slider
-		%a.unslider-arrow.prev{:href => "#"}Prev
-		%a.unslider-arrow.next{:href => "#"}Next
-		%ul
-			%li
-				%h4 Theocracy
-				%p A deity was recognized as the official ruler and policy was set by officials who claimed divine guidance. These leaders largely came from privileged groups and families.
-				%div
-					%h5 Key Strength
-					%p Spiritual basis for rules and decisions encouraged compliance and minimized dissatisfaction.
-				%div
-					%h5 Crippling Weakness
-					%p Abstraction of divinity broke down quickly in the absence of clear religious hegemony.
-				%div
-					%h5 Historical Example
-					%p Chinese Shang Dynasty, 1600-1046 BCE. The emperor, descended from a continuous male line, was treated as God-like. Both a political and religious leader, his written declarations were considered as “directives from above” and the actions of the state as divinely influenced. (have this image with the caption King Tang of Shang http://en.wikipedia.org/wiki/File:King_Tang_of_Shang.jpg)
-				%div
-					%h5 Downfall
-					%p The Shang dynasty weakened over time. Debauched emperor Shang Di Xin poorly managed his holdings and lead his army to destruction, ushering in the Zhou dynasty, which maintained the Shang religious lineage.
-				%div
-					%h5 Lessons Learned
-					%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and--assuming reasonable civil rights--relative harmony.
-			%li
-				%h4 Oligarchy
-				%p Control was exercised by a small group of people whose authority was based on special status related to power, wealth, education, or family.
-				%div
-					%h5 Key Strength
-					%p Efficient application of power by a theoretically enlightened group.
-				%div
-					%h5 Crippling Weakness
-					%p Participation in governance was restricted to the anointed few.
-				%div
-					%h5 Historical Example
-					%p Ancient Sparta, 7th century to 4th century BCE. Twenty-eight men over 60 years of age, along with two kings, made up the “council of elders.” They formulated proposals for acceptance or rejection by all free males.
-				%div
-					%h5 Downfall
-					%p Wars killed citizens and weakened the Spartan geopolitical position. Spartan citizenship was inherited along family lines, so Spartans increasingly became a minority. By the time citizenship and wealth were spread to a broader base the decline was well underway.
-				%div
-					%h5 Lessons Learned
-					%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure--only a privileged and distinctly minority class were considered citizens--was the primary issue.
-			%li
-				%h4 Feudalism
-				%p Powerful regional families lorded over their territory and the people therein, with sovereignty a product of military might.
-				%div
-					%h5 Key Strength
-					%p Civilians had a high degree of social security and stability.
-				%div
-					%h5 Crippling Weakness
-					%p Rigid caste structure trapped most people into lives over which they had little control and may not have wanted.
-				%div
-					%h5 Historical Example
-					%p Medieval Japan, 12th century to 16th century BCE. While Japan was nominally ruled by a weak emperor, regional daimyo served as absolute rulers of their territorial holdings, passed down within the same family. This image http://en.wikipedia.org/wiki/File:Oda_Nobunaga-Portrait_by_Giovanni_NIcolao.jpg with caption Oda Nobunaga.
-				%div
-					%h5 Downfall
-					%p The period of “warring states” consolidated power to a strong emperor, breaking feudal decentralization for good.
-				%div
-					%h5 Lessons Learned
-					%p The combination of decentralization with perpetual military conflict between regional powers meant the emphasis of citizen effort was on subsistence and security. Quality of life, as well as progress in arts and sciences, was minimal.
-			%li
-				%h4 Absolute Monarchy
-				%p A single individual held most of the power over a nation-state.
-				%div
-					%h5 Key Strength
-					%p A single ruler was able to act decisively, set a vision, and execute it without compromise.
-				%div
-					%h5 Crippling Weakness
-					%p No checks and balances. If the monarch were weak or corrupt the nation and citizens could suffer terribly.
-				%div
-					%h5 Historical Example
-					%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe. Illustration of this image (http://www.biography.com/imported/images/Biography/Images/Profiles/L/Louis-XIV-9386885-2-sized.jpg) with the caption Louis XIV.
-				%div
-					%h5 Downfall
-					%p Indulgences by the nobility contrasted with the misery of the common people during a period where theories of civil and political rights transformed popular expectations. The result was the French Revolution which famously ended the millenium-long tradition of hereditary rule. 
-				%div
-					%h5 Lessons Learned
-					%p French contributions to humanity and the arts and sciences continue to reverberate, notably those originating in Louis XIV’s reign of so-called enlightened rule. However, the absolute rulers ultimately neglected their people to the point of their own destruction.
-			%li
-				%h4 Parliamentary Monarchy
-				%p A ruling monarch worked with a democratically elected parliament, all within a code of laws.
-				%div
-					%h5 Key Strength
-					%p Democratic nature of parliament represents the common person although the monarch retains many benefits and powers of an absolute ruler.
-				%div
-					%h5 Crippling Weakness
-					%p Dysfunction between the monarch and parliament can lead to gridlock; ineffectiveness on the part of either the monarch or parliament can unbalance the government.
-				%div
-					%h5 Historical Example
-					%p England/United Kingdom, 17th century CE to present. In the early days, a king or queen presided in conjunction with a parliament and prime minister. By the 20th century the monarch was reduced to a figurehead and the nation was functionally a democracy. (Image: http://upload.wikimedia.org/wikipedia/commons/e/e3/Queen_Victoria_by_Bassano.jpg Caption: Queen Victoria)
-				%div
-					%h5 Downfall
-					%p The United Kingdom remains the pre-eminent European power. The monarchy has evolved with the times, to the point where it has only token monarchical authority. When the monarchy was strong the U.K. became the largest empire in human history; since then, they have evolved with the times to remain one of a handful of leading nations of the modern world.
-				%div
-					%h5 Lessons Learned
-					%p The U.K. now functions as a monarchy in name only. During the reign of Queen Victoria it was the largest empire in history. Thanks to their flexibility the empire declined in a somewhat intentional and controlled way and today the U.K. is still one of the few leading world powers.
-			%li
-				%h4 Single-Party State
-				%p Most western dictatorships of the 20th century were established where a single political party took control of the government and, to varying degrees, independently made decisions relating to rulers and laws.
-				%div
-					%h5 Key Strength
-					%p Similar ideology and platform shared by those in control creates efficiency and sidesteps the friction inherent in multi-party systems.
-				%div
-					%h5 Crippling Weakness
-					%p Civil rights generally take a back seat to maintaining and expanding power, leading to a relatively closed society of a sort that has historically proved unsustainable.
-				%div
-					%h5 Historical Example
-					%p Communist Russia, 1918-1991. The bloody overthrow of the last Russian Tsar saw Russia, a middling European power, rise within 40 years to take eastern Europe under their federal control and become one of the first global superpowers. (This image with caption: Josef Stalin, Vladimir Lenin, Leon Trotsky http://k32.kn3.net/738EDDACE.jpg)
-				%div
-					%h5 Downfall
-					%p The difficulty of lording over many culturally diverse nations, the economic pressure of challenging the United States for supremacy as a global superpower, and increasing demands for civil rights and the freedoms of the West, combined to bring about the dissolution of communist Russia seemingly overnight.
-				%div
-					%h5 Lessons Learned
-					%p Concentrated power and government control enabled the mechanization of powerful forces; closed, controlling society and over-reach of influence on a global level left communist Russia ripe for ignominious collapse.
+	.govtSlides
+		%nav.visualNav
+			%a.unslider-button.slide0{:href => "#"} Theocracy
+			%a.unslider-button.slide1{:href => "#"} Oligarchy
+			%a.unslider-button.slide2{:href => "#"} Feudalism
+			%a.unslider-button.slide3{:href => "#"} Absolute Monarchy
+			%a.unslider-button.slide4{:href => "#"} Parliamentary Monarchy
+			%a.unslider-button.slide5{:href => "#"} Single-Party State
+		#govtSlider.slider
+			%a.unslider-arrow.prev{:href => "#"}Prev
+			%a.unslider-arrow.next{:href => "#"}Next
+			%ul
+				%li
+					%h4 Theocracy
+					%p A deity was recognized as the official ruler and policy was set by officials who claimed divine guidance. These leaders largely came from privileged groups and families.
+					%div
+						%h5 Key Strength
+						%p Spiritual basis for rules and decisions encouraged compliance and minimized dissatisfaction.
+					%div
+						%h5 Crippling Weakness
+						%p Abstraction of divinity broke down quickly in the absence of clear religious hegemony.
+					%div
+						%h5 Historical Example
+						%p Chinese Shang Dynasty, 1600-1046 BCE. The emperor, descended from a continuous male line, was treated as God-like. Both a political and religious leader, his written declarations were considered as “directives from above” and the actions of the state as divinely influenced. (have this image with the caption King Tang of Shang http://en.wikipedia.org/wiki/File:King_Tang_of_Shang.jpg)
+					%div
+						%h5 Downfall
+						%p The Shang dynasty weakened over time. Debauched emperor Shang Di Xin poorly managed his holdings and lead his army to destruction, ushering in the Zhou dynasty, which maintained the Shang religious lineage.
+					%div
+						%h5 Lessons Learned
+						%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and--assuming reasonable civil rights--relative harmony.
+				%li
+					%h4 Oligarchy
+					%p Control was exercised by a small group of people whose authority was based on special status related to power, wealth, education, or family.
+					%div
+						%h5 Key Strength
+						%p Efficient application of power by a theoretically enlightened group.
+					%div
+						%h5 Crippling Weakness
+						%p Participation in governance was restricted to the anointed few.
+					%div
+						%h5 Historical Example
+						%p Ancient Sparta, 7th century to 4th century BCE. Twenty-eight men over 60 years of age, along with two kings, made up the “council of elders.” They formulated proposals for acceptance or rejection by all free males.
+					%div
+						%h5 Downfall
+						%p Wars killed citizens and weakened the Spartan geopolitical position. Spartan citizenship was inherited along family lines, so Spartans increasingly became a minority. By the time citizenship and wealth were spread to a broader base the decline was well underway.
+					%div
+						%h5 Lessons Learned
+						%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure--only a privileged and distinctly minority class were considered citizens--was the primary issue.
+				%li
+					%h4 Feudalism
+					%p Powerful regional families lorded over their territory and the people therein, with sovereignty a product of military might.
+					%div
+						%h5 Key Strength
+						%p Civilians had a high degree of social security and stability.
+					%div
+						%h5 Crippling Weakness
+						%p Rigid caste structure trapped most people into lives over which they had little control and may not have wanted.
+					%div
+						%h5 Historical Example
+						%p Medieval Japan, 12th century to 16th century BCE. While Japan was nominally ruled by a weak emperor, regional daimyo served as absolute rulers of their territorial holdings, passed down within the same family. This image http://en.wikipedia.org/wiki/File:Oda_Nobunaga-Portrait_by_Giovanni_NIcolao.jpg with caption Oda Nobunaga.
+					%div
+						%h5 Downfall
+						%p The period of “warring states” consolidated power to a strong emperor, breaking feudal decentralization for good.
+					%div
+						%h5 Lessons Learned
+						%p The combination of decentralization with perpetual military conflict between regional powers meant the emphasis of citizen effort was on subsistence and security. Quality of life, as well as progress in arts and sciences, was minimal.
+				%li
+					%h4 Absolute Monarchy
+					%p A single individual held most of the power over a nation-state.
+					%div
+						%h5 Key Strength
+						%p A single ruler was able to act decisively, set a vision, and execute it without compromise.
+					%div
+						%h5 Crippling Weakness
+						%p No checks and balances. If the monarch were weak or corrupt the nation and citizens could suffer terribly.
+					%div
+						%h5 Historical Example
+						%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe. Illustration of this image (http://www.biography.com/imported/images/Biography/Images/Profiles/L/Louis-XIV-9386885-2-sized.jpg) with the caption Louis XIV.
+					%div
+						%h5 Downfall
+						%p Indulgences by the nobility contrasted with the misery of the common people during a period where theories of civil and political rights transformed popular expectations. The result was the French Revolution which famously ended the millenium-long tradition of hereditary rule. 
+					%div
+						%h5 Lessons Learned
+						%p French contributions to humanity and the arts and sciences continue to reverberate, notably those originating in Louis XIV’s reign of so-called enlightened rule. However, the absolute rulers ultimately neglected their people to the point of their own destruction.
+				%li
+					%h4 Parliamentary Monarchy
+					%p A ruling monarch worked with a democratically elected parliament, all within a code of laws.
+					%div
+						%h5 Key Strength
+						%p Democratic nature of parliament represents the common person although the monarch retains many benefits and powers of an absolute ruler.
+					%div
+						%h5 Crippling Weakness
+						%p Dysfunction between the monarch and parliament can lead to gridlock; ineffectiveness on the part of either the monarch or parliament can unbalance the government.
+					%div
+						%h5 Historical Example
+						%p England/United Kingdom, 17th century CE to present. In the early days, a king or queen presided in conjunction with a parliament and prime minister. By the 20th century the monarch was reduced to a figurehead and the nation was functionally a democracy. (Image: http://upload.wikimedia.org/wikipedia/commons/e/e3/Queen_Victoria_by_Bassano.jpg Caption: Queen Victoria)
+					%div
+						%h5 Downfall
+						%p The United Kingdom remains the pre-eminent European power. The monarchy has evolved with the times, to the point where it has only token monarchical authority. When the monarchy was strong the U.K. became the largest empire in human history; since then, they have evolved with the times to remain one of a handful of leading nations of the modern world.
+					%div
+						%h5 Lessons Learned
+						%p The U.K. now functions as a monarchy in name only. During the reign of Queen Victoria it was the largest empire in history. Thanks to their flexibility the empire declined in a somewhat intentional and controlled way and today the U.K. is still one of the few leading world powers.
+				%li
+					%h4 Single-Party State
+					%p Most western dictatorships of the 20th century were established where a single political party took control of the government and, to varying degrees, independently made decisions relating to rulers and laws.
+					%div
+						%h5 Key Strength
+						%p Similar ideology and platform shared by those in control creates efficiency and sidesteps the friction inherent in multi-party systems.
+					%div
+						%h5 Crippling Weakness
+						%p Civil rights generally take a back seat to maintaining and expanding power, leading to a relatively closed society of a sort that has historically proved unsustainable.
+					%div
+						%h5 Historical Example
+						%p Communist Russia, 1918-1991. The bloody overthrow of the last Russian Tsar saw Russia, a middling European power, rise within 40 years to take eastern Europe under their federal control and become one of the first global superpowers. (This image with caption: Josef Stalin, Vladimir Lenin, Leon Trotsky http://k32.kn3.net/738EDDACE.jpg)
+					%div
+						%h5 Downfall
+						%p The difficulty of lording over many culturally diverse nations, the economic pressure of challenging the United States for supremacy as a global superpower, and increasing demands for civil rights and the freedoms of the West, combined to bring about the dissolution of communist Russia seemingly overnight.
+					%div
+						%h5 Lessons Learned
+						%p Concentrated power and government control enabled the mechanization of powerful forces; closed, controlling society and over-reach of influence on a global level left communist Russia ripe for ignominious collapse.
 
 	%h3 So, what form of government best fits now?
 
