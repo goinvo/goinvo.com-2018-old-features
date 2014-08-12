@@ -74,15 +74,15 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "DNC"
-  main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
-  practice_area_names: "Consumer"
-  description: "Involution + Voter Registration = A Better BarackObama.com"
-  budget: 20000 #Verify
-  repeat_client: false
+- client: "Oracle"
+  main_image: oracle-agile-plm-ui-design-development.jpg
+  practice_area_names: "Enterprise"
+  description: "We completely redesigned Oracle&rsquo;s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
+  budget: 500000 #Verify
+  repeat_client: true #Verify
   story_template: false
   hide_in_layout: false
-  logo: dnc.jpg
+  logo: oracle.jpg
 
 # - client: "Infobionic"
 #   main_image: #require
@@ -112,16 +112,6 @@
 
 ## ROW 3 ##
 
-- client: "Oracle"
-  main_image: oracle-agile-plm-ui-design-development.jpg
-  practice_area_names: "Enterprise"
-  description: "We completely redesigned Oracle&rsquo;s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
-  budget: 500000 #Verify
-  repeat_client: true #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: oracle.jpg
-
 - client: "Numera"
   main_image: "numera-iphone-ios-design.jpg"
   practice_area_names: "Health"
@@ -136,6 +126,16 @@
     - duration: 14
       full_time_staff: 2
       service_names: "Envision, Craft"
+
+- client: "Personal Genome Project"
+  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
+  practice_area_names: "Health"
+  description: "The PGP Gains New Business Focus with Invo Workshop"
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: curl.jpg
 
 - client: "Microsoft"
   main_image: "microsoft-expression-studio-product-architecture.jpg"
@@ -163,15 +163,15 @@
   repeat_client: false
   story_template: false
 
-- client: "Personal Genome Project"
-  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
-  practice_area_names: "Health"
-  description: "The PGP Gains New Business Focus with Invo Workshop"
+- client: "DNC"
+  main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
+  practice_area_names: "Consumer"
+  description: "Involution + Voter Registration = A Better BarackObama.com"
   budget: 20000 #Verify
-  repeat_client: true
-  story_template: true
+  repeat_client: false
+  story_template: false
   hide_in_layout: false
-  logo: curl.jpg
+  logo: dnc.jpg
 
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"
