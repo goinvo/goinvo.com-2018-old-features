@@ -27,7 +27,7 @@ body.contact #main-header #nav-buttons .contact, {
 #main-header {
 	height: 55px;
 	background: rgba(18,18,18,.875);
-	padding: 15px 2.125em 0;
+	padding: 15px 30px 0;
 	transition: background .3s ease;
 	img {
 		display: inline-block;
@@ -89,8 +89,7 @@ body.contact #main-header #nav-buttons .contact, {
 
 #site-header {
 	margin: 0 auto;
-	padding-left: 3em;
-	padding-right: 3em;
+	padding: 0 40px;
 	.tag-line {
 		margin: 0;
 		font-size: 1em;

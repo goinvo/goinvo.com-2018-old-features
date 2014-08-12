@@ -34,8 +34,10 @@
 		display:block;
 	}
 	#main-container .homepage-header .title, #main-footer .footerContent {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 0;
+	}
+	#main-container .homepage-header.one .title {
+		padding-top: 65px;
 	}
 }
 
@@ -95,32 +97,6 @@
 		width: 100%;
 		padding: 0;
 	}
-
-	//Is this for the current footer?
-	div.footerContent .medium-4.columns.addrcol.sidebar{
-		padding-right:0px;
-		padding-left:0px;
-		max-width:240px;
-	}
-
-	div.footerContent div.medium-1.columns.social-links {
-		padding-left:0px;
-	}
-
-	div.careers {
-		aside.left, .centerContent, aside.right {
-			padding: 0;
-		}
-		aside.left {
-			display: none;
-		}
-		.centerContent, aside.right {
-			width: 100%;
-		}
-		.hs-form fieldset {
-			max-width: 100%;
-		}
-	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -133,11 +109,11 @@
 @media only screen and (max-width: 749px) {
 	//videos in the sidebar need a specific height.
 	.sidebar.omega div.video iframe {
-		height:400px;
+		height: 400px;
 	}
 
 	section.centerContent ul#choose-your-adventure li {
-		font-size:3.2rem;
+		font-size: 3.2rem;
 		line-height: 3.5rem;
 	}
 
@@ -255,7 +231,10 @@
 @media only screen and (max-width: 420px) {
 	#main-footer .footerContent {
 		text-align: center;
-		font-size: 1em;
+		font-size: 0.85em;
+		span {
+			margin: 0 5px;
+		}
 	}
 }
 

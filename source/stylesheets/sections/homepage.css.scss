@@ -8,7 +8,11 @@ html, body {
 }
 
 body {
-   background-color: #0d0d0d;
+	background-color: #0d0d0d;
+	min-height: 640px;
+	@media only screen and (max-width: 1020px) {
+		min-height: 100%;
+	}
 }
 
 #site-header {
@@ -25,7 +29,7 @@ a {
 	width: 100%;
 	position: relative;
 	&.one, &.two, &.three {
-		padding: 0 1em;
+		padding: 0 70px;
 		.title {
 			h2, h3, h4, h5 {
 				color: $white;
@@ -56,6 +60,9 @@ a {
 				text-shadow: 1px 1px 0 #444;
 			}
 		}
+		@media only screen and (max-width: 1080px) {
+			padding: 30px;
+		}
 	}
 	&.one {
 		background: linear-gradient(to bottom, rgba(2,0,0,0.32) 0%,rgba(2,0,0,0.32) 12%,rgba(0,0,0,0.32) 100%), url(../../images/soccer_dataviz.jpg);
@@ -74,38 +81,29 @@ a {
 			@media only screen and (max-height: 920px) {
 				top: 25%;
 				h2 {
-					font-size: 40px;
-					font-size: 4rem;
-					line-height: 40px;
-					line-height: 4rem;
+					font-size: 35px;
+					font-size: 3.5rem;
+					line-height: 1em;
 				}
 				h3 {
 					font-size: 25px;
 					font-size: 2.5rem;
-					line-height: 25px;
-					line-height: 2.5rem;
 				}
-			}
-			@media only screen and (max-height: 640px) {
-				top: 20%;
 			}
 			@media only screen and (max-width: 1230px) {
 				h2 {
-					font-size: 40px;
-					font-size: 4rem;
-					line-height: 40px;
-					line-height: 4rem;
+					font-size: 35px;
+					font-size: 3.5rem;
+					line-height: 1em;
 				}
 				h3 {
 					font-size: 25px;
 					font-size: 2.5rem;
-					line-height: 25px;
-					line-height: 2.5rem;
 				}
 			}
 			@media only screen and (max-width: 1020px) {
-				top: 0;
-				padding: 10em 5em 5em;
+				top: 10%;
+				padding: 15em 5em 5em;
 			}
 		}
 	}
@@ -227,7 +225,6 @@ a {
 
 	.title {
 		width: 100%;
-		padding: 0 5em;
 		h2 {
 			font-size: 55px;
 			font-size: 5.5rem;
