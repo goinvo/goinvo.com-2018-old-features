@@ -249,3 +249,26 @@
      margin-top: 60px; 
   }
 }
+
+@media only screen and (max-width: 800px) {
+  form.hs-form fieldset {
+    max-width: none;  
+  }
+  
+  .careers .sidebar.left {
+     display: none; 
+  }
+  
+  .careers .sidebar.right {
+    display: block;
+    width:100%;
+  }
+  
+  .careers div.centerContent {
+     width:100%; 
+  }
+  
+  div.video-box .fluid-width-video-wrapper {
+    padding-top:60% !important;
+  }
+}
