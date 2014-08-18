@@ -50,7 +50,7 @@ activate :cache_buster
 
 # S3 Sync
 activate :s3_sync do |s3_sync|
-	s3_sync.bucket                     = 'www.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	s3_sync.bucket                     = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
 	s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
 	s3_sync.delete                     = true # We delete stray files by default.
 	s3_sync.after_build                = false # We do not chain after the build step by default.
@@ -59,7 +59,7 @@ activate :s3_sync do |s3_sync|
 	s3_sync.reduced_redundancy_storage = false
 	s3_sync.acl                        = 'public-read'
 	s3_sync.encryption                 = false
-	s3_sync.version_bucket             = false
+	s3_sync.version_bucket             = true
 end
 
 # Manage all them redirects
