@@ -77,7 +77,7 @@
 - client: "Oracle"
   main_image: oracle-agile-plm-ui-design-development.jpg
   practice_area_names: "Enterprise"
-  description: "We completely redesigned Oracle&rsquo;s Agile PLM suite, helped Oracle build an internal user experience team around it, and participated in their shifting from waterfall to agile development process."
+  description: "A complete suite redesign, a new internal UX team, and an agile development process."
   budget: 500000 #Verify
   repeat_client: true #Verify
   story_template: false
@@ -98,7 +98,7 @@
 - client: "McAfee"
   main_image: "mcafee-total-protection-desktop-app-design.jpg"
   practice_area_names: "Consumer"
-  description: "Best-selling consumer and enterprise computer security in the world."
+  description: "Flagship consumer and enterprise computer security software."
   budget: 500000 #Verify
   duration: 14 #Verify
   repeat_client: true #Verify
@@ -130,7 +130,7 @@
 - client: "Personal Genome Project"
   main_image: "pgp-openhumans-ecosystem-thumb.jpg"
   practice_area_names: "Health"
-  description: "The PGP Gains New Business Focus with Invo Workshop"
+  description: "New business strategy and visualization."
   budget: 20000 #Verify
   repeat_client: true
   story_template: true
@@ -140,7 +140,7 @@
 - client: "Microsoft"
   main_image: "microsoft-expression-studio-product-architecture.jpg"
   practice_area_names: "Consumer"
-  description: "Microsoft asked Involution to help them take on Adobe."
+  description: "New design patterns to compete with Adobe."
   budget: 200000 #Verify
   duration: 14 #Verify
   repeat_client: false #Verify
@@ -157,7 +157,7 @@
 - client: "SCSK Corporation"
   main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
   practice_area_names: "Enterprise, Data Analytics"
-  description: "SCSK picked Involution to showcase their powerful technology."
+  description: "Powerful big data platform to showcase new technology."
   budget: 24000 #Verify
   duration: 6 #Verify
   repeat_client: false
@@ -166,7 +166,7 @@
 - client: "DNC"
   main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
   practice_area_names: "Consumer"
-  description: "Involution + Voter Registration = A Better BarackObama.com"
+  description: " A better voter registration process for all."
   budget: 20000 #Verify
   repeat_client: false
   story_template: false
@@ -176,7 +176,7 @@
 - client: "Rue La La"
   main_image: "ruelala-calendar-user-interface.jpg"
   practice_area_names: "Enterprise"
-  description: "Members-only upscale, online fashion boutique."
+  description: "Management of an upscale, members-only online fashion boutique."
   budget: 200000 #Verify
   repeat_client: true #Verify
   story_template: false
