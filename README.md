@@ -19,7 +19,7 @@ And visit http://localhost:4567 in your favorite browser.
 
 To modify and update redirect rules, append new rules to the `config.rb` file with the following format:
 
-  redirect '/path1', 'url or path'
+	redirect '/path1', 'url or path'
   
 Then run `middleman s3_redirect`
 
