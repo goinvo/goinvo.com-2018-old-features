@@ -6,276 +6,297 @@
 	= javascript_include_tag "features/rethinking-democracy.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
-
+%nav.main-nav
+	%a.one{:href => "#section1"} Rethinking Government
+	%a.two{:href => "#section2"} Alternatvies to Democracy
+	%a.three{:href => "#section3"} So, What form of Government Best Fits Now?
+	%a.four{:href => "#section4"} Elements of a Better Democacy
+	%a.five{:href => "#section5"} Issues with the Legislature
+	%a.six{:href => "#section6"} The Tradditional Problem
+	%a.seven{:href => "#section7"} The Digital Solution
 %article#feature-article.government
-	%h1 Rethinking Democracy
-	%h2 Today's U.S. government is built on principles and practices established more than 2,000 years ago. Can digital technology help us realize a better way?
+	%section#section1
+		%header.section-header
+			%h1 Rethinking Democracy
+			%h2 Today's U.S. government is built on principles and practices established more than 2,000 years ago. Can digital technology help us realize a better way?
 
-	%p Democracy first took root around 508 BC in Athens, Greece, the cultural cradle of antiquity. From 508 to 146 BC Greece, particularly Athens, set the foundation upon which western civilization was to develop. Much of modern science, art, and architecture traces directly back to this place and time, building off of or reacting to the achievements of this period over the subsequent 2,160 years. This is certainly the case with modern democracy.
+		%p Democracy first took root around 508 BC in Athens, Greece, the cultural cradle of antiquity. From 508 to 146 BC Greece, particularly Athens, set the foundation upon which western civilization was to develop. Much of modern science, art, and architecture traces directly back to this place and time, building off of or reacting to the achievements of this period over the subsequent 2,160 years. This is certainly the case with modern democracy.
 
-	%p Of course, the Athenians had a very different conception than we do of who was eligible to rule, to say nothing of who could vote. According to A.W. Gomme, of the estimated 315,500 people in Athens during the height of their civilization, there were:
+		%p Of course, the Athenians had a very different conception than we do of who was eligible to rule, to say nothing of who could vote. According to A.W. Gomme, of the estimated 315,500 people in Athens during the height of their civilization, there were:
 
-	%p Only the 25,000 male citizens of Athens could vote, meaning that fewer than 13% of the population had the privilege to choose their leaders. 
+		.aside-image
+			%p Only the 25,000 male citizens of Athens could vote, meaning that fewer than 13% of the population had the privilege to choose their leaders. 
 
-	%p The lack of universal representation was obviously a problem, but a more subtle issue with Athenian democracy was the scale. In their very different and dispersed representational model - with dozens of roles - more than half of the 25,000 male citizens served in some official governing capacity at all times. The consequence was that most of this privileged class participated in government or had direct relationships and access to those who did.
+		%p The lack of universal representation was obviously a problem, but a more subtle issue with Athenian democracy was the scale. In their very different and dispersed representational model - with dozens of roles - more than half of the 25,000 male citizens served in some official governing capacity at all times. The consequence was that most of this privileged class participated in government or had direct relationships and access to those who did.
 
-	%p We continue to model our government systems on the same democratic approach, established more than 2,000 years ago, which represented only a small, privileged minority. Is democracy a mistake?
+		%p We continue to model our government systems on the same democratic approach, established more than 2,000 years ago, which represented only a small, privileged minority. Is democracy a mistake?
+	
+	%section#section2
+		%h3 Alternatives to Democracy
 
-	%h3 Alternatives to Democracy
+		%p Systems of government are characterized by a broad and complicated range of characteristics. This complexity can make it difficult to consider new political systems. Let’s look at some familiar approaches to government that have gone out of fashion.
 
-	%p Systems of government are characterized by a broad and complicated range of characteristics. This complexity can make it difficult to consider new political systems. Let’s look at some familiar approaches to government that have gone out of fashion.
+		.govtSlides
+			%nav.visualNav
+				%a.unslider-button.slide0{:href => "#"} Theocracy
+				%a.unslider-button.slide1{:href => "#"} Oligarchy
+				%a.unslider-button.slide2{:href => "#"} Feudalism
+				%a.unslider-button.slide3{:href => "#"} Absolute Monarchy
+				%a.unslider-button.slide4{:href => "#"} Parliamentary Monarchy
+				%a.unslider-button.slide5{:href => "#"} Single-Party State
+			#govtSlider.slider
+				%a.unslider-arrow.prev{:href => "#"}Prev
+				%a.unslider-arrow.next{:href => "#"}Next
+				%ul
+					%li
+						%h4 Theocracy
+						%p A deity was recognized as the official ruler and policy was set by officials who claimed divine guidance. These leaders largely came from privileged groups and families.
+						%div
+							%h5 Key Strength
+							%p Spiritual basis for rules and decisions encouraged compliance and minimized dissatisfaction.
+						%div
+							%h5 Crippling Weakness
+							%p Abstraction of divinity broke down quickly in the absence of clear religious hegemony.
+						%div
+							%h5 Historical Example
+							%p Chinese Shang Dynasty, 1600-1046 BCE. The emperor, descended from a continuous male line, was treated as God-like. Both a political and religious leader, his written declarations were considered as “directives from above” and the actions of the state as divinely influenced. (have this image with the caption King Tang of Shang http://en.wikipedia.org/wiki/File:King_Tang_of_Shang.jpg)
+						%div
+							%h5 Downfall
+							%p The Shang dynasty weakened over time. Debauched emperor Shang Di Xin poorly managed his holdings and lead his army to destruction, ushering in the Zhou dynasty, which maintained the Shang religious lineage.
+						%div
+							%h5 Lessons Learned
+							%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and--assuming reasonable civil rights--relative harmony.
+					%li
+						%h4 Oligarchy
+						%p Control was exercised by a small group of people whose authority was based on special status related to power, wealth, education, or family.
+						%div
+							%h5 Key Strength
+							%p Efficient application of power by a theoretically enlightened group.
+						%div
+							%h5 Crippling Weakness
+							%p Participation in governance was restricted to the anointed few.
+						%div
+							%h5 Historical Example
+							%p Ancient Sparta, 7th century to 4th century BCE. Twenty-eight men over 60 years of age, along with two kings, made up the “council of elders.” They formulated proposals for acceptance or rejection by all free males.
+						%div
+							%h5 Downfall
+							%p Wars killed citizens and weakened the Spartan geopolitical position. Spartan citizenship was inherited along family lines, so Spartans increasingly became a minority. By the time citizenship and wealth were spread to a broader base the decline was well underway.
+						%div
+							%h5 Lessons Learned
+							%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure--only a privileged and distinctly minority class were considered citizens--was the primary issue.
+					%li
+						%h4 Feudalism
+						%p Powerful regional families lorded over their territory and the people therein, with sovereignty a product of military might.
+						%div
+							%h5 Key Strength
+							%p Civilians had a high degree of social security and stability.
+						%div
+							%h5 Crippling Weakness
+							%p Rigid caste structure trapped most people into lives over which they had little control and may not have wanted.
+						%div
+							%h5 Historical Example
+							%p Medieval Japan, 12th century to 16th century BCE. While Japan was nominally ruled by a weak emperor, regional daimyo served as absolute rulers of their territorial holdings, passed down within the same family. This image http://en.wikipedia.org/wiki/File:Oda_Nobunaga-Portrait_by_Giovanni_NIcolao.jpg with caption Oda Nobunaga.
+						%div
+							%h5 Downfall
+							%p The period of “warring states” consolidated power to a strong emperor, breaking feudal decentralization for good.
+						%div
+							%h5 Lessons Learned
+							%p The combination of decentralization with perpetual military conflict between regional powers meant the emphasis of citizen effort was on subsistence and security. Quality of life, as well as progress in arts and sciences, was minimal.
+					%li
+						%h4 Absolute Monarchy
+						%p A single individual held most of the power over a nation-state.
+						%div
+							%h5 Key Strength
+							%p A single ruler was able to act decisively, set a vision, and execute it without compromise.
+						%div
+							%h5 Crippling Weakness
+							%p No checks and balances. If the monarch were weak or corrupt the nation and citizens could suffer terribly.
+						%div
+							%h5 Historical Example
+							%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe. Illustration of this image (http://www.biography.com/imported/images/Biography/Images/Profiles/L/Louis-XIV-9386885-2-sized.jpg) with the caption Louis XIV.
+						%div
+							%h5 Downfall
+							%p Indulgences by the nobility contrasted with the misery of the common people during a period where theories of civil and political rights transformed popular expectations. The result was the French Revolution which famously ended the millenium-long tradition of hereditary rule. 
+						%div
+							%h5 Lessons Learned
+							%p French contributions to humanity and the arts and sciences continue to reverberate, notably those originating in Louis XIV’s reign of so-called enlightened rule. However, the absolute rulers ultimately neglected their people to the point of their own destruction.
+					%li
+						%h4 Parliamentary Monarchy
+						%p A ruling monarch worked with a democratically elected parliament, all within a code of laws.
+						%div
+							%h5 Key Strength
+							%p Democratic nature of parliament represents the common person although the monarch retains many benefits and powers of an absolute ruler.
+						%div
+							%h5 Crippling Weakness
+							%p Dysfunction between the monarch and parliament can lead to gridlock; ineffectiveness on the part of either the monarch or parliament can unbalance the government.
+						%div
+							%h5 Historical Example
+							%p England/United Kingdom, 17th century CE to present. In the early days, a king or queen presided in conjunction with a parliament and prime minister. By the 20th century the monarch was reduced to a figurehead and the nation was functionally a democracy. (Image: http://upload.wikimedia.org/wikipedia/commons/e/e3/Queen_Victoria_by_Bassano.jpg Caption: Queen Victoria)
+						%div
+							%h5 Downfall
+							%p The United Kingdom remains the pre-eminent European power. The monarchy has evolved with the times, to the point where it has only token monarchical authority. When the monarchy was strong the U.K. became the largest empire in human history; since then, they have evolved with the times to remain one of a handful of leading nations of the modern world.
+						%div
+							%h5 Lessons Learned
+							%p The U.K. now functions as a monarchy in name only. During the reign of Queen Victoria it was the largest empire in history. Thanks to their flexibility the empire declined in a somewhat intentional and controlled way and today the U.K. is still one of the few leading world powers.
+					%li
+						%h4 Single-Party State
+						%p Most western dictatorships of the 20th century were established where a single political party took control of the government and, to varying degrees, independently made decisions relating to rulers and laws.
+						%div
+							%h5 Key Strength
+							%p Similar ideology and platform shared by those in control creates efficiency and sidesteps the friction inherent in multi-party systems.
+						%div
+							%h5 Crippling Weakness
+							%p Civil rights generally take a back seat to maintaining and expanding power, leading to a relatively closed society of a sort that has historically proved unsustainable.
+						%div
+							%h5 Historical Example
+							%p Communist Russia, 1918-1991. The bloody overthrow of the last Russian Tsar saw Russia, a middling European power, rise within 40 years to take eastern Europe under their federal control and become one of the first global superpowers. (This image with caption: Josef Stalin, Vladimir Lenin, Leon Trotsky http://k32.kn3.net/738EDDACE.jpg)
+						%div
+							%h5 Downfall
+							%p The difficulty of lording over many culturally diverse nations, the economic pressure of challenging the United States for supremacy as a global superpower, and increasing demands for civil rights and the freedoms of the West, combined to bring about the dissolution of communist Russia seemingly overnight.
+						%div
+							%h5 Lessons Learned
+							%p Concentrated power and government control enabled the mechanization of powerful forces; closed, controlling society and over-reach of influence on a global level left communist Russia ripe for ignominious collapse.
 
-	.govtSlides
-		%nav.visualNav
-			%a.unslider-button.slide0{:href => "#"} Theocracy
-			%a.unslider-button.slide1{:href => "#"} Oligarchy
-			%a.unslider-button.slide2{:href => "#"} Feudalism
-			%a.unslider-button.slide3{:href => "#"} Absolute Monarchy
-			%a.unslider-button.slide4{:href => "#"} Parliamentary Monarchy
-			%a.unslider-button.slide5{:href => "#"} Single-Party State
-		#govtSlider.slider
-			%a.unslider-arrow.prev{:href => "#"}Prev
-			%a.unslider-arrow.next{:href => "#"}Next
-			%ul
-				%li
-					%h4 Theocracy
-					%p A deity was recognized as the official ruler and policy was set by officials who claimed divine guidance. These leaders largely came from privileged groups and families.
-					%div
-						%h5 Key Strength
-						%p Spiritual basis for rules and decisions encouraged compliance and minimized dissatisfaction.
-					%div
-						%h5 Crippling Weakness
-						%p Abstraction of divinity broke down quickly in the absence of clear religious hegemony.
-					%div
-						%h5 Historical Example
-						%p Chinese Shang Dynasty, 1600-1046 BCE. The emperor, descended from a continuous male line, was treated as God-like. Both a political and religious leader, his written declarations were considered as “directives from above” and the actions of the state as divinely influenced. (have this image with the caption King Tang of Shang http://en.wikipedia.org/wiki/File:King_Tang_of_Shang.jpg)
-					%div
-						%h5 Downfall
-						%p The Shang dynasty weakened over time. Debauched emperor Shang Di Xin poorly managed his holdings and lead his army to destruction, ushering in the Zhou dynasty, which maintained the Shang religious lineage.
-					%div
-						%h5 Lessons Learned
-						%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and--assuming reasonable civil rights--relative harmony.
-				%li
-					%h4 Oligarchy
-					%p Control was exercised by a small group of people whose authority was based on special status related to power, wealth, education, or family.
-					%div
-						%h5 Key Strength
-						%p Efficient application of power by a theoretically enlightened group.
-					%div
-						%h5 Crippling Weakness
-						%p Participation in governance was restricted to the anointed few.
-					%div
-						%h5 Historical Example
-						%p Ancient Sparta, 7th century to 4th century BCE. Twenty-eight men over 60 years of age, along with two kings, made up the “council of elders.” They formulated proposals for acceptance or rejection by all free males.
-					%div
-						%h5 Downfall
-						%p Wars killed citizens and weakened the Spartan geopolitical position. Spartan citizenship was inherited along family lines, so Spartans increasingly became a minority. By the time citizenship and wealth were spread to a broader base the decline was well underway.
-					%div
-						%h5 Lessons Learned
-						%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure--only a privileged and distinctly minority class were considered citizens--was the primary issue.
-				%li
-					%h4 Feudalism
-					%p Powerful regional families lorded over their territory and the people therein, with sovereignty a product of military might.
-					%div
-						%h5 Key Strength
-						%p Civilians had a high degree of social security and stability.
-					%div
-						%h5 Crippling Weakness
-						%p Rigid caste structure trapped most people into lives over which they had little control and may not have wanted.
-					%div
-						%h5 Historical Example
-						%p Medieval Japan, 12th century to 16th century BCE. While Japan was nominally ruled by a weak emperor, regional daimyo served as absolute rulers of their territorial holdings, passed down within the same family. This image http://en.wikipedia.org/wiki/File:Oda_Nobunaga-Portrait_by_Giovanni_NIcolao.jpg with caption Oda Nobunaga.
-					%div
-						%h5 Downfall
-						%p The period of “warring states” consolidated power to a strong emperor, breaking feudal decentralization for good.
-					%div
-						%h5 Lessons Learned
-						%p The combination of decentralization with perpetual military conflict between regional powers meant the emphasis of citizen effort was on subsistence and security. Quality of life, as well as progress in arts and sciences, was minimal.
-				%li
-					%h4 Absolute Monarchy
-					%p A single individual held most of the power over a nation-state.
-					%div
-						%h5 Key Strength
-						%p A single ruler was able to act decisively, set a vision, and execute it without compromise.
-					%div
-						%h5 Crippling Weakness
-						%p No checks and balances. If the monarch were weak or corrupt the nation and citizens could suffer terribly.
-					%div
-						%h5 Historical Example
-						%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe. Illustration of this image (http://www.biography.com/imported/images/Biography/Images/Profiles/L/Louis-XIV-9386885-2-sized.jpg) with the caption Louis XIV.
-					%div
-						%h5 Downfall
-						%p Indulgences by the nobility contrasted with the misery of the common people during a period where theories of civil and political rights transformed popular expectations. The result was the French Revolution which famously ended the millenium-long tradition of hereditary rule. 
-					%div
-						%h5 Lessons Learned
-						%p French contributions to humanity and the arts and sciences continue to reverberate, notably those originating in Louis XIV’s reign of so-called enlightened rule. However, the absolute rulers ultimately neglected their people to the point of their own destruction.
-				%li
-					%h4 Parliamentary Monarchy
-					%p A ruling monarch worked with a democratically elected parliament, all within a code of laws.
-					%div
-						%h5 Key Strength
-						%p Democratic nature of parliament represents the common person although the monarch retains many benefits and powers of an absolute ruler.
-					%div
-						%h5 Crippling Weakness
-						%p Dysfunction between the monarch and parliament can lead to gridlock; ineffectiveness on the part of either the monarch or parliament can unbalance the government.
-					%div
-						%h5 Historical Example
-						%p England/United Kingdom, 17th century CE to present. In the early days, a king or queen presided in conjunction with a parliament and prime minister. By the 20th century the monarch was reduced to a figurehead and the nation was functionally a democracy. (Image: http://upload.wikimedia.org/wikipedia/commons/e/e3/Queen_Victoria_by_Bassano.jpg Caption: Queen Victoria)
-					%div
-						%h5 Downfall
-						%p The United Kingdom remains the pre-eminent European power. The monarchy has evolved with the times, to the point where it has only token monarchical authority. When the monarchy was strong the U.K. became the largest empire in human history; since then, they have evolved with the times to remain one of a handful of leading nations of the modern world.
-					%div
-						%h5 Lessons Learned
-						%p The U.K. now functions as a monarchy in name only. During the reign of Queen Victoria it was the largest empire in history. Thanks to their flexibility the empire declined in a somewhat intentional and controlled way and today the U.K. is still one of the few leading world powers.
-				%li
-					%h4 Single-Party State
-					%p Most western dictatorships of the 20th century were established where a single political party took control of the government and, to varying degrees, independently made decisions relating to rulers and laws.
-					%div
-						%h5 Key Strength
-						%p Similar ideology and platform shared by those in control creates efficiency and sidesteps the friction inherent in multi-party systems.
-					%div
-						%h5 Crippling Weakness
-						%p Civil rights generally take a back seat to maintaining and expanding power, leading to a relatively closed society of a sort that has historically proved unsustainable.
-					%div
-						%h5 Historical Example
-						%p Communist Russia, 1918-1991. The bloody overthrow of the last Russian Tsar saw Russia, a middling European power, rise within 40 years to take eastern Europe under their federal control and become one of the first global superpowers. (This image with caption: Josef Stalin, Vladimir Lenin, Leon Trotsky http://k32.kn3.net/738EDDACE.jpg)
-					%div
-						%h5 Downfall
-						%p The difficulty of lording over many culturally diverse nations, the economic pressure of challenging the United States for supremacy as a global superpower, and increasing demands for civil rights and the freedoms of the West, combined to bring about the dissolution of communist Russia seemingly overnight.
-					%div
-						%h5 Lessons Learned
-						%p Concentrated power and government control enabled the mechanization of powerful forces; closed, controlling society and over-reach of influence on a global level left communist Russia ripe for ignominious collapse.
+	%section#section3
+		%h3 So, what form of government best fits now?
 
-	%h3 So, what form of government best fits now?
+		%p Over the last 3,000 years the developing world has tried hundreds of different systems of government, many of which fall under the archetypes presented here. It is valuable to consider them in thinking about how we can re-imagine our own governance. However, we live in a moment when human rights are of paramount importance, so governments that minimize citizen involvement in determining laws and leadership present a less attractive choice.
 
-	%p Over the last 3,000 years the developing world has tried hundreds of different systems of government, many of which fall under the archetypes presented here. It is valuable to consider them in thinking about how we can re-imagine our own governance. However, we live in a moment when human rights are of paramount importance, so governments that minimize citizen involvement in determining laws and leadership present a less attractive choice.
+		%p The reality is, at our current evolutionary stage, people must advocate for themselves. Time and time again we’ve learned that trusting someone or something else with our own well-being generally leads to its degrading. It is, after all, human nature to value one’s own needs over those of society at large. 
 
-	%p The reality is, at our current evolutionary stage, people must advocate for themselves. Time and time again we’ve learned that trusting someone or something else with our own well-being generally leads to its degrading. It is, after all, human nature to value one’s own needs over those of society at large. 
+		%p Each ring out from the center gets less of my care and interest. I am just one person who has an intricate life to manage, one that precludes me from impacting the world far beyond my own immediate interests. Extrapolate that to the leader of a nation-state needing to care for all citizens equally. It is a literal impossibility. At its extreme, such natural self-interest may manifest as corruption, but for most managing that self-interest is simply one of the challenges that leaders must face.
 
-	%p Each ring out from the center gets less of my care and interest. I am just one person who has an intricate life to manage, one that precludes me from impacting the world far beyond my own immediate interests. Extrapolate that to the leader of a nation-state needing to care for all citizens equally. It is a literal impossibility. At its extreme, such natural self-interest may manifest as corruption, but for most managing that self-interest is simply one of the challenges that leaders must face.
+		%p Given that people are naturally self-focused, and that human rights are an essential aspect to a modern government system, I will focus on redesigning democracy as opposed to changing to a different form of government. By giving citizens direct influence over their laws and leaders we give them the greatest degree of control over their own well-being. Perhaps our redesign of democracy can extend the degree of self-control and agency afforded by the US government of today. The question is, how can we move the government decisions that influence us closer to the centers of our own circles?
+	
+	%section#section4
+		%h3 Elements of a Better Democracy
 
-	%p Given that people are naturally self-focused, and that human rights are an essential aspect to a modern government system, I will focus on redesigning democracy as opposed to changing to a different form of government. By giving citizens direct influence over their laws and leaders we give them the greatest degree of control over their own well-being. Perhaps our redesign of democracy can extend the degree of self-control and agency afforded by the US government of today. The question is, how can we move the government decisions that influence us closer to the centers of our own circles?
+		%p One of the inherent flaws in modern democracies is the large size of contemporary nation-states. The bigger a group of people, the more removed those at the top will be from best serving some significant percentage of those at the bottom. There is too diverse a set of needs, values, beliefs, and affiliations for everyone to be properly taken care of. In the United States, this problem is exacerbated by a highly heterogeneous population. While there are many benefits to the “melting pot” --social, genetic, and philosophical, to name a few-- the very diversity that provides strength also makes it harder for each individual to be properly governed. In a perfect world our society would cater to each of us as a unique person with idiosyncratic needs, woven nicely into the larger social fabric. The reality of a nation with hundreds of millions of people is that the larger and more diverse it is, the less customized to individual needs and desires the experience of being a citizen will be.
 
-	%h3 Elements of a Better Democracy
+		%p <em>These ideas are built on four basic premises:</em>
 
-	%p One of the inherent flaws in modern democracies is the large size of contemporary nation-states. The bigger a group of people, the more removed those at the top will be from best serving some significant percentage of those at the bottom. There is too diverse a set of needs, values, beliefs, and affiliations for everyone to be properly taken care of. In the United States, this problem is exacerbated by a highly heterogeneous population. While there are many benefits to the “melting pot” --social, genetic, and philosophical, to name a few-- the very diversity that provides strength also makes it harder for each individual to be properly governed. In a perfect world our society would cater to each of us as a unique person with idiosyncratic needs, woven nicely into the larger social fabric. The reality of a nation with hundreds of millions of people is that the larger and more diverse it is, the less customized to individual needs and desires the experience of being a citizen will be.
+		%ol
+			%li 
+				%p Citizenship should provide major benefits and carry significant responsibilities. In the United States, the benefits of citizenship have never been more uncertain. We have the most extensive national security in the world, a clear benefit even if it is an order of magnitude larger than it needs to be. The recent adoption of “Obamacare” begins to move us closer to our first-world brethren from a health and wellness perspective. Social security and other social welfare programs are under threat both financially and legislatively, possibly removing a key personal security perk from our lives. US citizens enjoy benefits well beyond most of the world, but no better than the top half of first-world nations. Though some might argue that Athenian citizens had a more lavish lifestyle, relatively speaking, than most Americans do today, the cost of that lifestyle was borne by the majority of Athenian residents--all considered non-citizens. By contrast, even the vast majority of Americans who are not 1%’ers enjoy the status of citizenship regardless of gender, race, age, or place of origin, and can aspire to nearly all of the same privileges.
 
-	%p <em>These ideas are built on four basic premises:</em>
+				%p However, our nation asks very little of us in return. Other than pay taxes, which are among the lowest in the wealthy first world, and follow the laws, which are among the most liberal and individual-freedoms-friendly for a large nation-state in human history, we have little responsibility to our nation, state, community, or fellow citizens. All we need to do is be born and try not become a fringe part of the society, such as a felon. Those not born as United States citizens have a process to follow, but one that is barely more rigorous than simply moving here and living a good, normal life.
 
-	%ol
-		%li 
-			%p Citizenship should provide major benefits and carry significant responsibilities. In the United States, the benefits of citizenship have never been more uncertain. We have the most extensive national security in the world, a clear benefit even if it is an order of magnitude larger than it needs to be. The recent adoption of “Obamacare” begins to move us closer to our first-world brethren from a health and wellness perspective. Social security and other social welfare programs are under threat both financially and legislatively, possibly removing a key personal security perk from our lives. US citizens enjoy benefits well beyond most of the world, but no better than the top half of first-world nations. Though some might argue that Athenian citizens had a more lavish lifestyle, relatively speaking, than most Americans do today, the cost of that lifestyle was borne by the majority of Athenian residents--all considered non-citizens. By contrast, even the vast majority of Americans who are not 1%’ers enjoy the status of citizenship regardless of gender, race, age, or place of origin, and can aspire to nearly all of the same privileges.
+				%p Getting a lot for a little might seem like a good deal, but it is not good for our country nor for ourselves. From a pragmatic perspective, our low taxes contribute to what is now over $17 trillion in debt. Our general lack of other societal responsibilities not only contribute to that debt - we could be contributing time or effort in small ways that would find its way back would mitigate our collective debt) - they also give us a sense of entitlement. Feeling entitled can lead to selfish, lazy, and even anti-social behavior. These negatively impact health and well being, plus contribute to societal waste and personally motivated short-term thinking.
 
-			%p However, our nation asks very little of us in return. Other than pay taxes, which are among the lowest in the wealthy first world, and follow the laws, which are among the most liberal and individual-freedoms-friendly for a large nation-state in human history, we have little responsibility to our nation, state, community, or fellow citizens. All we need to do is be born and try not become a fringe part of the society, such as a felon. Those not born as United States citizens have a process to follow, but one that is barely more rigorous than simply moving here and living a good, normal life.
+				%p By injecting more citizen responsibility, or at least productive participation, into our democracy we can curb unhealthy individual and collective behaviors while increasing prosperity for everyone.
+			%li
+				%p We need unifying initiatives to guide our government. From a philosophical perspective we already have these: the Declaration of Independence, the Constitution, and the Bill of Rights. However, on an operational level we do not. Every four years there is a new presidential election. Every two years we elect our representatives, every six, our senators and state governors. By the time any of these civil servants gets comfortable in office there is little time to think broadly; before long they need to worry about earning future votes to win the next election and maintain their position.
 
-			%p Getting a lot for a little might seem like a good deal, but it is not good for our country nor for ourselves. From a pragmatic perspective, our low taxes contribute to what is now over $17 trillion in debt. Our general lack of other societal responsibilities not only contribute to that debt - we could be contributing time or effort in small ways that would find its way back would mitigate our collective debt) - they also give us a sense of entitlement. Feeling entitled can lead to selfish, lazy, and even anti-social behavior. These negatively impact health and well being, plus contribute to societal waste and personally motivated short-term thinking.
+				%p Each time there is a change it potentially stops and even reverses the initiatives instigated by the previous regime. In part this is good: it provides the checks-and-balances so essential to democratic law. However, it also creates significant inefficiency. The trillion-dollar initiative of the current Administration will be the first target for the opposition party if control changes hands after the next national election. If there were a list of initiatives that gave us mandates over longer periods of time, a decade, two decades, or even more, we could borrow some of the key executive benefits of monarchical or dictatorial regimes while maintaining a true democracy.
+			%li
+				%p Citizens should have a closer, more direct relationship with their leaders and laws. While the majority of residents of ancient Athens were likely not citizens, those who were had a direct relationship to the workings of their “national” government. This is an ideal that gives people the greatest input into their government’s functioning, necessarily putting the individual’s rights and perspectives close to the decisions being made for and about them. It means participation. 
+			%li
+				%p Laws and leadership should have a proper balance of long-term and short-term planning. China’s emphasis on long-term planning turned them into a global superpower around the turn of the 20th century. By contract, for decades the US government has pursued plans that are painfully overbalanced toward short-term thinking. This is reflected in everything from our financial position to our energy policy. While the reasons for this are complicated, one key aspect concerns politicians pandering to their voter base, advocating the knee-jerk whims of a limited constituency to the detriment of the nation as a whole. As well, there is the binary nature of compromise in an entrenched two-party system. How can we shift to a model that values long-term planning in ways more similar to our Chinese friends?
+	
+	%section#section5
+		%h3 Issues with the Legislature
 
-			%p By injecting more citizen responsibility, or at least productive participation, into our democracy we can curb unhealthy individual and collective behaviors while increasing prosperity for everyone.
-		%li
-			%p We need unifying initiatives to guide our government. From a philosophical perspective we already have these: the Declaration of Independence, the Constitution, and the Bill of Rights. However, on an operational level we do not. Every four years there is a new presidential election. Every two years we elect our representatives, every six, our senators and state governors. By the time any of these civil servants gets comfortable in office there is little time to think broadly; before long they need to worry about earning future votes to win the next election and maintain their position.
+		%p Our democratic system features a separation of powers on the national level, split between executive (the President), legislative (Senate and House of Representatives) and judicial (Supreme Court) branches.
 
-			%p Each time there is a change it potentially stops and even reverses the initiatives instigated by the previous regime. In part this is good: it provides the checks-and-balances so essential to democratic law. However, it also creates significant inefficiency. The trillion-dollar initiative of the current Administration will be the first target for the opposition party if control changes hands after the next national election. If there were a list of initiatives that gave us mandates over longer periods of time, a decade, two decades, or even more, we could borrow some of the key executive benefits of monarchical or dictatorial regimes while maintaining a true democracy.
-		%li
-			%p Citizens should have a closer, more direct relationship with their leaders and laws. While the majority of residents of ancient Athens were likely not citizens, those who were had a direct relationship to the workings of their “national” government. This is an ideal that gives people the greatest input into their government’s functioning, necessarily putting the individual’s rights and perspectives close to the decisions being made for and about them. It means participation. 
-		%li
-			%p Laws and leadership should have a proper balance of long-term and short-term planning. China’s emphasis on long-term planning turned them into a global superpower around the turn of the 20th century. By contract, for decades the US government has pursued plans that are painfully overbalanced toward short-term thinking. This is reflected in everything from our financial position to our energy policy. While the reasons for this are complicated, one key aspect concerns politicians pandering to their voter base, advocating the knee-jerk whims of a limited constituency to the detriment of the nation as a whole. As well, there is the binary nature of compromise in an entrenched two-party system. How can we shift to a model that values long-term planning in ways more similar to our Chinese friends?
+		%p A nation ultimately needs one empowered decision maker. While theoretically it could be a group of people instead of an individual, historically this “decision by committee” model has not worked well. The separation of powers is designed to allow the executive branch some appropriate degree of autonomous control. Each citizen votes individually on the President. The outcome of the vote is intended to represent the majority’s choice.
 
-	%h3 Issues with the Legislature
+		%p Appointees to the Supreme Court are nominated by the President, confirmed by the Senate, and serve for life. The idea of a Supreme Court and life appointment are sensible. While my broader ideas would impact this process somewhat the existence and role of the Supreme Court--determining the rule of law at the highest judicial level-- is an important foundational one. They can stay.
 
-	%p Our democratic system features a separation of powers on the national level, split between executive (the President), legislative (Senate and House of Representatives) and judicial (Supreme Court) branches.
+		%p Which brings us to the problem of this particular solution: the legislative branch. Each state is represented by two Senators and a variable number of State Representatives, ranging from 53 (California) to just one (six states). This configuration goes back to the original U.S. Constitution, some 227 years ago.
 
-	%p A nation ultimately needs one empowered decision maker. While theoretically it could be a group of people instead of an individual, historically this “decision by committee” model has not worked well. The separation of powers is designed to allow the executive branch some appropriate degree of autonomous control. Each citizen votes individually on the President. The outcome of the vote is intended to represent the majority’s choice.
+		%p <em>While the numerical structure of the legislature is problematic, there are bigger issues:</em>
 
-	%p Appointees to the Supreme Court are nominated by the President, confirmed by the Senate, and serve for life. The idea of a Supreme Court and life appointment are sensible. While my broader ideas would impact this process somewhat the existence and role of the Supreme Court--determining the rule of law at the highest judicial level-- is an important foundational one. They can stay.
+		%ol
+			%li 
+				%p Senators and Representatives are not necessarily qualified to participate in making laws. Their only qualification is having been picked by constituencies made up of people who, for the most part, know them only from advertising and marketing and what their local paper chooses to write. So, the lawmakers may have questionable qualifications and the people who choose them are largely ignorant as to their efficacy for the position.
+			%li 
+				%p Legislators are incentivized to focus their lawmaking efforts on decisions that will feed into their re-election. That means they may be rewarded to ignore questions of the whole for pandering to their few. While the few may need an advocate in the arena of the many, legislators must remain mindful of the bigger picture.
+			%li 
+				%p Legislators can put a great deal of space between the individual citizen and themselves. Remember the concentric circles I talked about? The random citizen is of very little practical concern to the legislator. They may genuinely intend to advocate for all of their people but it is only human nature that we privilege those to whom we have more connection. In the case of legislators, that can often be special interests and big companies as opposed to individual citizens.
 
-	%p Which brings us to the problem of this particular solution: the legislative branch. Each state is represented by two Senators and a variable number of State Representatives, ranging from 53 (California) to just one (six states). This configuration goes back to the original U.S. Constitution, some 227 years ago.
+		%p I’m actually sympathetic to much of government corruption. Are you going to try and get that big contract over to your friend, or to a stranger at your friend’s expense? Some certainly have the discipline to adjudicate these situations fairly, but they are the exceptional ones in acting contrary to human nature. Would you, truly, risk hurting people you know and care about in such a situation? So long as the legislators are representing tens of thousands of people some will be privileged to the detriment of others.
 
-	%p <em>While the numerical structure of the legislature is problematic, there are bigger issues:</em>
+		%p The bottom line is that this is no way for the legislative branch of our government to be organized. No other alternative seemed possible in the 18th century because there was no practical way for the average citizen to participate directly in government. 
 
-	%ol
-		%li Senators and Representatives are not necessarily qualified to participate in making laws. Their only qualification is having been picked by constituencies made up of people who, for the most part, know them only from advertising and marketing and what their local paper chooses to write. So, the lawmakers may have questionable qualifications and the people who choose them are largely ignorant as to their efficacy for the position.
-		%li Legislators are incentivized to focus their lawmaking efforts on decisions that will feed into their re-election. That means they may be rewarded to ignore questions of the whole for pandering to their few. While the few may need an advocate in the arena of the many, legislators must remain mindful of the bigger picture.
-		%li Legislators can put a great deal of space between the individual citizen and themselves. Remember the concentric circles I talked about? The random citizen is of very little practical concern to the legislator. They may genuinely intend to advocate for all of their people but it is only human nature that we privilege those to whom we have more connection. In the case of legislators, that can often be special interests and big companies as opposed to individual citizens.
+		%p Today, thanks to digital technology, that is no longer true.
+	
+	%section#section6
+		%h3 The Traditional Problem
 
-	%p I’m actually sympathetic to much of government corruption. Are you going to try and get that big contract over to your friend, or to a stranger at your friend’s expense? Some certainly have the discipline to adjudicate these situations fairly, but they are the exceptional ones in acting contrary to human nature. Would you, truly, risk hurting people you know and care about in such a situation? So long as the legislators are representing tens of thousands of people some will be privileged to the detriment of others.
+		%p Here is the basic model of the current legislature.
 
-	%p The bottom line is that this is no way for the legislative branch of our government to be organized. No other alternative seemed possible in the 18th century because there was no practical way for the average citizen to participate directly in government. 
+		%ul
+			%li
+				%p A few citizens in a voting district of thousands or millions of people compete to be elected as Representatives and Senators. There is a strong correlation between the amount of money a campaign spends on advertising and whether the candidate is able to win the election. At times national special interest groups spend tremendous amounts of money to control the outcome in local elections.
 
-	%p Today, thanks to digital technology, that is no longer true.
+			%li
+				%p All citizens in a voting district have the opportunity to choose their Senators and Representatives. Their choices are generally based on minimal information, primarily advertising and local media endorsements as well as the political party of the candidate. Less than 1% of voting citizens will ever meet these legislators, much less have an in-depth conversation with them.
 
-	%h3 The Traditional Problem
+			%li
+				%p Senators and Representatives write and vote on laws. They are influenced by their constituents, special interests, and lobbyists, as well as by other members of their political party who have little investment in the constituency of others. Over $3.3 billion dollars are spent on lobbying to influence policy in the United States each year. (Source: Center for Responsive Politics) And less than 10% of bills introduced in the 112th U.S. Congress--561 of 6,845--actually passed into law. (Source: Brookings)
 
-	%p Here is the basic model of the current legislature.
+			%li
+				%p Every six years (Senators) or two years (Representatives) the legislators are up for re-election. Since 1964 the House of Representatives has boasted a re-election rate of over 90%. While serving as Senators and Representatives, our legislators spend substantial time and effort attempting to get re-elected in lieu of performing their duties.
 
-	%ul
-		%li A few citizens in a voting district of thousands or millions of people compete to be elected as Representatives and Senators. There is a strong correlation between the amount of money a campaign spends on advertising and whether the candidate is able to win the election. At times national special interest groups spend tremendous amounts of money to control the outcome in local elections.
+		%p There’s a lot that is broken about this system, and that is only an overview that doesn’t get into its more limited but far darker underbelly of scandals and graft.
 
-		(Sidebar with appropriate images that says: National politicians routinely “carpetbag”: owning a residence in a district or state in which they do not reside in order to run for Congress or, particularly, the Senate. Prominent examples include Robert F. Kennedy (New York Senate, 1964); Rick Santorum (Pennsylvania 18th Congressional District, 1990); Hillary Rodham Clinton (New York Senate, 2000)
+	%section#section7
+		%h3 The Digital Solution
 
-		%li All citizens in a voting district have the opportunity to choose their Senators and Representatives. Their choices are generally based on minimal information, primarily advertising and local media endorsements as well as the political party of the candidate. Less than 1% of voting citizens will ever meet these legislators, much less have an in-depth conversation with them.
+		%p It all starts with the smartphone. This miraculous device gives us the power of a computer in our hand, pocket or purse at all times. It enables any citizen to receive information in and communicate out, both in real-time while running software applications far more powerful than those being run on desktop computers just a decade ago. The easy availability to such powerful, real-time technology empowers us to radically re-think each individual’s role in our collective governance. No longer is there a limitation of space and time to prevent our getting high-resolution information on our government and legislators. There is no barrier to our placing a secure, verified vote on a candidate or law from the comfort of our home. The majority of Americans now hold in our hand the power to do everything that our legislators do when they vote on a bill: read the text. Consider outside information. Engage in debate or conversation. Place the vote. It’s no different from a use case perspective than how we use Facebook. The difference is, rather than our time being spent on pleasant conveniences we are able to influence our nation as the self-representational government that democracy purports to be.
 
-		%li Senators and Representatives write and vote on laws. They are influenced by their constituents, special interests, and lobbyists, as well as by other members of their political party who have little investment in the constituency of others. Over $3.3 billion dollars are spent on lobbying to influence policy in the United States each year. (Source: Center for Responsive Politics) And less than 10% of bills introduced in the 112th U.S. Congress--561 of 6,845--actually passed into law. (Source: Brookings)
+		%p We’re not accustomed to thinking about having visibility into and knowledge of the inner workings of our nation, state, and locality, much less direct impact on decisions. But we can. And we should.  
 
-		%li Every six years (Senators) or two years (Representatives) the legislators are up for re-election. Since 1964 the House of Representatives has boasted a re-election rate of over 90%. While serving as Senators and Representatives, our legislators spend substantial time and effort attempting to get re-elected in lieu of performing their duties.
+		%p Given the unprecedented ability our citizens now have to be more actively and directly engaged in our government, here is my suggestion for reconceiving the legislature into one more reflective of the philosophies underpinning democracy:
 
-	%p There’s a lot that is broken about this system, and that is only an overview that doesn’t get into its more limited but far darker underbelly of scandals and graft.
+		%ol
+			%li 
+				%p The current senators and representatives would all be removed and replaced with exceptional individuals chosen for their potential to contribute to an enlightened government. Economists, physicists, biologists. Experts in well-being, personality, healthy communities. Labor leaders. Structural engineers. Agriculturists. Basically, if you look at every Presidential cabinet role, and all of the different aspects of life that bills under current consideration touch, experts that pertain to all of those things would be represented. So instead of the key qualification for participating being to influence voters and pacify lobbyists, our legislative branch would be filled with the brightest minds, the most insightful souls, and our leading experts. Yes, there would need to be some “politicians” among them--people who can build consensus and write legislative actions. But they should simply be one of the many roles being filled in this group of experts, not the vast majority of the chamber. While the initial group would need some kind of blanket appointment - nominated by the president, confirmed by popular vote? - eventually they would stay or go based on their statistics: are they contributing to successful legislation? If yes, then great. If not, then the executive branch would nominate new candidates who would be confirmed via the general voting system.
 
-	%h3 The Digital Solution
+				%p Similar to the legislators of old, these people would introduce ideas and work together to bring bills forward. However they would not be doing the voting: we, the people, would. And, they would be engaged in far more valuable long-term strategic planning. This collection of the best and brightest tasked with leading the future of the country would not be thinking about pacifying Joe Smith in Tuscaloosa. They would need to consider and care for all of our citizens, and lead us down a path that took care of Joe Smith in more indirect ways. They would impact our lives by moving us away from the immediate chatter and into systems and trajectories intended to make the most of our potential. So not only would we be replacing potentially unqualified people with supremely qualified people, their charter would change. They would be far more motivated by the greater and collective good than the politicians in Washington who, as of this writing, have a 10.8% approval rating. (Source: RealClearPolitics)
 
-	%p It all starts with the smartphone. This miraculous device gives us the power of a computer in our hand, pocket or purse at all times. It enables any citizen to receive information in and communicate out, both in real-time while running software applications far more powerful than those being run on desktop computers just a decade ago. The easy availability to such powerful, real-time technology empowers us to radically re-think each individual’s role in our collective governance. No longer is there a limitation of space and time to prevent our getting high-resolution information on our government and legislators. There is no barrier to our placing a secure, verified vote on a candidate or law from the comfort of our home. The majority of Americans now hold in our hand the power to do everything that our legislators do when they vote on a bill: read the text. Consider outside information. Engage in debate or conversation. Place the vote. It’s no different from a use case perspective than how we use Facebook. The difference is, rather than our time being spent on pleasant conveniences we are able to influence our nation as the self-representational government that democracy purports to be.
+			%li 
+				%p Independent of the government itself, a new profession of “analysts” would be required. Many of these would likely come from the current ranks of political commentators but would surely attract a new breed of personalities as well. Their role would be to represent a very specific position--it could be as narrow as “Protect the second amendment at all costs” or as broad as “Advocate for individual liberties.” They would review every bill, comment on it, and make a recommendation to vote for or against. Voters would “subscribe” to them. That subscription might be free, or the analyst might charge for it. But they, and whatever staff they developed, would be helping to guide people as to what bills deserve to be voted on or not, based on the beliefs and interests of each voter. Instead of blasting their platform out in a broadband way their platform would be taken for granted and they would be informing voters as to how they should vote based on their stated beliefs and interests.
 
-	%p We’re not accustomed to thinking about having visibility into and knowledge of the inner workings of our nation, state, and locality, much less direct impact on decisions. But we can. And we should.  
+				%p Now, it is unavoidable that the same lobbyists and special interests that infect our legislators and media now will also play a big role with the analysts, as well as the experts who are the actual legislators. This is unavoidable. However, experts who are already successful, recognized, and accomplished in their particular fields will be far less susceptible to lobbying influence than the random politicians who gets through the voting gauntlet. The editors are may be a different story, but the beauty is that the system as a whole comes back to the voters in a fully democratic way. It is responsive. Editors may be corrupted in all kinds of ways, but if the voters stop subscribing to them they will not be relevant anymore. It is far harder to invest in this kind of brittle resource than putting millions into a senator who, excepting a scandal, will be around for six years.
 
-	%p Given the unprecedented ability our citizens now have to be more actively and directly engaged in our government, here is my suggestion for reconceiving the legislature into one more reflective of the philosophies underpinning democracy:
+			%li 
+				%p Voting currently done by legislators would instead be conducted directly by citizens. People could choose to use their existing smartphone, or be issued a very basic device for just the purpose of democratic participation by the government. There would be small local voting centers also available in cases of lost or damaged voting devices. Each day, or week, or whatever the correct frequency is, citizens would receive a digital packet to review. Each bill would include a summary and the recommendation of all the analysts they subscribe to. Drilling in would let them see the entire bill with annotations from their analysts, or longer analysis about the bill from their analysts. Citizens would have, at their fingertips, everything required to vote on their own behalf.
 
-	%ol
-		%li 
-			%p The current senators and representatives would all be removed and replaced with exceptional individuals chosen for their potential to contribute to an enlightened government. Economists, physicists, biologists. Experts in well-being, personality, healthy communities. Labor leaders. Structural engineers. Agriculturists. Basically, if you look at every Presidential cabinet role, and all of the different aspects of life that bills under current consideration touch, experts that pertain to all of those things would be represented. So instead of the key qualification for participating being to influence voters and pacify lobbyists, our legislative branch would be filled with the brightest minds, the most insightful souls, and our leading experts. Yes, there would need to be some “politicians” among them--people who can build consensus and write legislative actions. But they should simply be one of the many roles being filled in this group of experts, not the vast majority of the chamber. While the initial group would need some kind of blanket appointment - nominated by the president, confirmed by popular vote? - eventually they would stay or go based on their statistics: are they contributing to successful legislation? If yes, then great. If not, then the executive branch would nominate new candidates who would be confirmed via the general voting system.
+		%p This is true democracy. The abstractions in the current process that leave us with professional politicians sporting a wide variety of qualifications are relics intended to make a proper democracy with checks-and-balances work in a pre-digital world. Well, thanks to digital technology, that system is redundant. We can share information in real time. We can provide a secure vote via our devices. We can easily evaluate success via an objective system and judge the actors in democratic rule with those metrics. It seems so radical, yet the only thing that is radical to me is why we aren’t already talking about it already.
 
-			%p Similar to the legislators of old, these people would introduce ideas and work together to bring bills forward. However they would not be doing the voting: we, the people, would. And, they would be engaged in far more valuable long-term strategic planning. This collection of the best and brightest tasked with leading the future of the country would not be thinking about pacifying Joe Smith in Tuscaloosa. They would need to consider and care for all of our citizens, and lead us down a path that took care of Joe Smith in more indirect ways. They would impact our lives by moving us away from the immediate chatter and into systems and trajectories intended to make the most of our potential. So not only would we be replacing potentially unqualified people with supremely qualified people, their charter would change. They would be far more motivated by the greater and collective good than the politicians in Washington who, as of this writing, have a 10.8% approval rating. (Source: RealClearPolitics)
+		%p The reason that an elite group of brilliant experts has historically been antithetical to democracy is that it amounts to an elite of the few ruling the many. This model is like that of Ancient Sparta, empowering wise and accomplished people to come together and chart the course that would be best for all of us collectively. Our current democracy also has an “elite” but they do not boast the sort of qualifications that the people leading a nation that often fashions itself as the greatest in the world really deserves. Our tech-accelerated conception makes this irrelevant. Citizens vote on the bills directly, and the elite only keep their positions in the legislature if they are contributing to good (read: acceptable to the majority, as a democracy should be) legislation.
 
-		%li 
-			%p Independent of the government itself, a new profession of “analysts” would be required. Many of these would likely come from the current ranks of political commentators but would surely attract a new breed of personalities as well. Their role would be to represent a very specific position--it could be as narrow as “Protect the second amendment at all costs” or as broad as “Advocate for individual liberties.” They would review every bill, comment on it, and make a recommendation to vote for or against. Voters would “subscribe” to them. That subscription might be free, or the analyst might charge for it. But they, and whatever staff they developed, would be helping to guide people as to what bills deserve to be voted on or not, based on the beliefs and interests of each voter. Instead of blasting their platform out in a broadband way their platform would be taken for granted and they would be informing voters as to how they should vote based on their stated beliefs and interests.
+		%p Now, for this solution to work would require some investments. 100% of all citizens who have the right to vote would need to be own smartphones. The government would then need to provide comparable devices that are capable of properly handling the information review and secure voting process for those citizens who do not provide such devices for themselves. Additionally, there would need to be small, central voting stations in some geographic frequency to enable those with accessibility issues for whom the smartphone would not work to vote. While these represent significant new costs we would be retiring a myriad of old costs that, while I have been unable to find all of the data to provide a total cost rollup, is well into the billions of dollars each year spent by cities, counties, states and the federal government. The barrier to making this happen is not the cost; it is the collective will of those with vested interests who would lose their personal advantages for making this happen.
 
-			%p Now, it is unavoidable that the same lobbyists and special interests that infect our legislators and media now will also play a big role with the analysts, as well as the experts who are the actual legislators. This is unavoidable. However, experts who are already successful, recognized, and accomplished in their particular fields will be far less susceptible to lobbying influence than the random politicians who gets through the voting gauntlet. The editors are may be a different story, but the beauty is that the system as a whole comes back to the voters in a fully democratic way. It is responsive. Editors may be corrupted in all kinds of ways, but if the voters stop subscribing to them they will not be relevant anymore. It is far harder to invest in this kind of brittle resource than putting millions into a senator who, excepting a scandal, will be around for six years.
+		%h3 Let’s make it together.
 
-		%li 
-			%p Voting currently done by legislators would instead be conducted directly by citizens. People could choose to use their existing smartphone, or be issued a very basic device for just the purpose of democratic participation by the government. There would be small local voting centers also available in cases of lost or damaged voting devices. Each day, or week, or whatever the correct frequency is, citizens would receive a digital packet to review. Each bill would include a summary and the recommendation of all the analysts they subscribe to. Drilling in would let them see the entire bill with annotations from their analysts, or longer analysis about the bill from their analysts. Citizens would have, at their fingertips, everything required to vote on their own behalf.
+		%p Like many radical ideas, it may be seductive to focus on some vulnerability in it and try to pull it apart. Go ahead. This probably isn’t the exact right idea. But it’s a start down the right path. The digital world is nothing like the world that came before it, and we deserve it to ourselves and the future to rethink everything. Regardless of any issues with this system, I challenge you to make the case that, in their respective totalities, the current system is better than what’s proposed here. It isn’t.
 
-	%p This is true democracy. The abstractions in the current process that leave us with professional politicians sporting a wide variety of qualifications are relics intended to make a proper democracy with checks-and-balances work in a pre-digital world. Well, thanks to digital technology, that system is redundant. We can share information in real time. We can provide a secure vote via our devices. We can easily evaluate success via an objective system and judge the actors in democratic rule with those metrics. It seems so radical, yet the only thing that is radical to me is why we aren’t already talking about it already.
+		%p Who wants to rethink democracy with me?
 
-	%p The reason that an elite group of brilliant experts has historically been antithetical to democracy is that it amounts to an elite of the few ruling the many. This model is like that of Ancient Sparta, empowering wise and accomplished people to come together and chart the course that would be best for all of us collectively. Our current democracy also has an “elite” but they do not boast the sort of qualifications that the people leading a nation that often fashions itself as the greatest in the world really deserves. Our tech-accelerated conception makes this irrelevant. Citizens vote on the bills directly, and the elite only keep their positions in the legislature if they are contributing to good (read: acceptable to the majority, as a democracy should be) legislation.
-
-	%p Now, for this solution to work would require some investments. 100% of all citizens who have the right to vote would need to be own smartphones. The government would then need to provide comparable devices that are capable of properly handling the information review and secure voting process for those citizens who do not provide such devices for themselves. Additionally, there would need to be small, central voting stations in some geographic frequency to enable those with accessibility issues for whom the smartphone would not work to vote. While these represent significant new costs we would be retiring a myriad of old costs that, while I have been unable to find all of the data to provide a total cost rollup, is well into the billions of dollars each year spent by cities, counties, states and the federal government. The barrier to making this happen is not the cost; it is the collective will of those with vested interests who would lose their personal advantages for making this happen.
-
-	%h3 Let’s make it together.
-
-	%p Like many radical ideas, it may be seductive to focus on some vulnerability in it and try to pull it apart. Go ahead. This probably isn’t the exact right idea. But it’s a start down the right path. The digital world is nothing like the world that came before it, and we deserve it to ourselves and the future to rethink everything. Regardless of any issues with this system, I challenge you to make the case that, in their respective totalities, the current system is better than what’s proposed here. It isn’t.
-
-	%p Who wants to rethink democracy with me?
-
-	.votingSlides
-		%nav.visualNav
-			%a.unslider-button.slide0{:href => "#"} Slide 1
-			%a.unslider-button.slide1{:href => "#"} Slide 2
-			%a.unslider-button.slide2{:href => "#"} Slide 3
-			%a.unslider-button.slide3{:href => "#"} Slide 4
-			%a.unslider-button.slide4{:href => "#"} Slide 5
-			%a.unslider-button.slide5{:href => "#"} Slide 6
-			%a.unslider-button.slide6{:href => "#"} Slide 7
-		#votingSlider.slider
-			%ul
-				%li
-					%div Slide 1
-				%li
-					%div Slide 2
-				%li
-					%div Slide 3
-				%li
-					%div Slide 4
-				%li
-					%div Slide 5
-				%li
-					%div Slide 6
-				%li
-					%div Slide 7
+		.votingSlides
+			%nav.visualNav
+				%a.unslider-button.slide0{:href => "#"} Slide 1
+				%a.unslider-button.slide1{:href => "#"} Slide 2
+				%a.unslider-button.slide2{:href => "#"} Slide 3
+				%a.unslider-button.slide3{:href => "#"} Slide 4
+				%a.unslider-button.slide4{:href => "#"} Slide 5
+				%a.unslider-button.slide5{:href => "#"} Slide 6
+				%a.unslider-button.slide6{:href => "#"} Slide 7
+			#votingSlider.slider
+				%ul
+					%li
+						%div Slide 1
+					%li
+						%div Slide 2
+					%li
+						%div Slide 3
+					%li
+						%div Slide 4
+					%li
+						%div Slide 5
+					%li
+						%div Slide 6
+					%li
+						%div Slide 7

@@ -1,5 +1,63 @@
 @import "../base/core";
 
+body {
+	color: #58504A;
+}
+
+section {
+	> h1, > h2, > h3, > h4, > h5, > h6, > p, > div p, > blockquote, > ol, > ul, > dl,  {
+		max-width: 70rem;
+		padding: 0 5rem;
+	}
+}
+
 #main-container {
 	margin-top: 55px;
+}
+
+.main-nav {
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	padding: 0 5rem;
+	background: #FFF;
+	@include clearfix();
+	a {
+		display: block;
+		height: 55px;
+		padding: 1.3rem 1.5rem 0 0;
+		font-size: 1.05em;
+		color: #58504A;
+		float: left;
+		transition: color 200ms ease;
+		&:after {
+			content: "";
+			display: block;
+			width: 18px;
+			border-bottom: 2px solid transparent;
+			transition: border-bottom 200ms ease;
+		}
+		&:hover, &.active {
+			color: #617E94;
+			&:after {
+				content: "";
+				display: block;
+				width: 18px;
+				border-bottom: 2px solid #617E94;
+			}
+		}
+		
+	}
+}
+
+article.government {
+	z-index: 0;
+	line-height: 1.25;
+}
+
+#section1 {
+	header {
+		padding: 40rem 5rem 0;
+		background-image: url();
+	}
 }
