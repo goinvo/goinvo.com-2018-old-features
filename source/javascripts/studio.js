@@ -33,19 +33,33 @@ function generateEventHTML( data ) {
 	var option = {day: "numeric", month: "short", year: "2-digit"};
     try {
     if(data.type == "twitter") {
-        if(data.media_url.length > 0) {
-            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+		var htmlContent = data.content;
+		var http = htmlContent.indexOf('http');
+		if(http != undefined && http >= 0) {
+			var sub = htmlContent.substring(http);
+			var http2 = sub.indexOf(' ');
+			if(http2 <= 0)
+				http2 = sub.length;
+			http = sub.substring(0, http2 + 1);
+			htmlContent = htmlContent.replace(http, '<a href = "' + http + '" target = "_blank">' + http + '</a>');
+		}
+		else {
+			htmlContent = data.content;	
+		}
+		console.log(htmlContent);
+        if(data.media_url != undefined && data.media_url.length > 0) {
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
         }
         else {
-            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "</p><div class = 'social-links'><img src = '../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
         }
     }
     else if(data.type == "flickr") {
-        temp = data.content_embed;
-        start = temp.indexOf("<img src=") +10;
-        temp = temp.substring(start);
-        stop = temp.indexOf("width") -2;
-        temp = temp.substring(0,stop); // Remove flickr's generated html so I can do my own
+		temp = data.content_embed;
+		start = temp.indexOf("<img src=") +10;
+		temp = temp.substring(start);
+		stop = temp.indexOf("width") -2;
+		temp = temp.substring(0,stop); // Remove flickr's generated html so I can do my own
         social += "<div class = 'social-card photo' data-link = '" + data.url + "' ><img class = 'flickr-photo' src = '" + temp + "' width = '100%' height = 'auto'><p class = 'caption'>" + data.content + "</p><div class = 'social-links'><img src = '../images/icon-flickr.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username  + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
     }
     else if(data.type == "github") {
@@ -57,6 +71,15 @@ function generateEventHTML( data ) {
     }
     catch(err){
         console.log("-------");
+		console.log("Error: " + err);
+		console.log("Date " + data.date);
+		console.log("URL: " + data.url);
+		console.log("Username: " + data.username);
+		console.log("User Avatar: " + data.user.avatar);
+		console.log("Content: " + data.content);
+		console.log("Content Embed: " + data.content_embed);
+		console.log("Media URL (Twitter): " + data.media_url);
+		
         console.log("Error: The following event object is throwing an error when trying to access its contents. The most likely cause is that the event was added to the event database before the event's user was added to the user database. (Note: just adding a user to the twitter list or zapier is not enough when adding a new employee. You must also add the user to the user database. If there are event objects that do not contain a user object, you must either delete the event object or add a user object following the same syntax as other events.");
         console.log(data);
         console.log("-------");
