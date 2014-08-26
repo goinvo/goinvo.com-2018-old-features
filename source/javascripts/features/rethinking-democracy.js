@@ -1,33 +1,35 @@
 $(document).ready(function(){
-	var govtSlider = $('#govtSlider').bxSlider({
-		adaptiveheight: true,
-		pager: false,
-		controls: false
+	var govtSlider = $('#govtSlider').slick({
+		prevArrow: null,
+		nextArrow: null,
+		draggable: false,
+		speed: 600
 	});
-	$('.unslider-arrow').click(function(event) {
+	$('.slider-arrow').click(function(event) {
 		event.preventDefault();
 		if ($(this).hasClass('next')) {
-			govtSlider.goToNextSlide();
+			govtSlider.slickNext();
 		} else {
-			govtSlider.goToPrevSlide();
+			govtSlider.slickPrev();
 		};
 	});
-	$('.govtSlides .visualNav .unslider-button').click(function(event) {
+	$('.govtSlides .visualNav .slider-button').click(function(event) {
 		event.preventDefault();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
-		govtSlider.goToSlide(parseInt(slideNumber));
+		govtSlider.slickGoTo(parseInt(slideNumber));
 	});
 
-	var voteSlider = $('#votingSlider').bxSlider({
-		adaptiveheight: true,
-		pager: false,
-		controls: false
+	var voteSlider = $('#votingSlider').slick({
+		prevArrow: null,
+		nextArrow: null,
+		draggable: false,
+		speed: 600
 	});
-	$('.votingSlides .visualNav .unslider-button').click(function(event) {
+	$('.votingSlides .visualNav .slider-button').click(function(event) {
 		event.preventDefault();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
-		voteSlider.goToSlide(parseInt(slideNumber));
+		voteSlider.slickGoTo(parseInt(slideNumber));
 	});
 });
