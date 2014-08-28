@@ -5,7 +5,7 @@ body {
 }
 
 section {
-	> h1, > h2, > h3, > h4, > h5, > h6, > p, > div p, > blockquote, > ol, > ul, > dl,  {
+	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline,  > p, > div p, > blockquote, > ol, > ul, > dl {
 		max-width: 60%;
 		padding: 0 5rem;
 	}
@@ -58,10 +58,16 @@ section {
 article.government {
 	z-index: 0;
 	line-height: 1.25;
+	hr {
+		margin: 2em 0;
+		width: 40px;
+		border-top: 5px solid #AAA;
+	}
 }
 
 #section1 {
 	header {
+		max-width: 100%;
 		padding: 30% 5rem 0;
 		margin-bottom: 4em;
 		background: url(../../images/features/democracy/hero.jpg) no-repeat;
@@ -175,19 +181,19 @@ article.government {
 				max-width: 100%;
 				padding: 0;
 			}
-			hr {
-				margin: 2em 0;
-				width: 40px;
-				border-top: 5px solid #AAA;
-			}
+			
 			.text, .image {
 				float: left;
 			}
 			.text {
 				width: 75%;
+				padding: 2em 2em 2em 8em;
 			}
 			.image {
 				width: 25%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 			.col {
 				float: left;
@@ -200,50 +206,66 @@ article.government {
 				}
 			}
 		}
-		.slick-slide .text {
-			padding: 2em 0 2em 8em ;
-		}
 		.theocracy {
+			border-top: 3px solid #bc743e;
+			border-bottom: 3px solid #bc743e;
 			hr {
 				border-color: #bc743e;
 			}
-			border-top: 3px solid #bc743e;
-			border-bottom: 3px solid #bc743e;
+			.image {
+				background-image: image-url('features/democracy/examples/king-tang.jpg');
+				background-position: center top;
+			}
 		}
 		.oligarchy {
+			border-top: 3px solid #d65f4d;
+			border-bottom: 3px solid #d65f4d;
 			hr {
 				border-color: #d65f4d;
 			}
-			border-top: 3px solid #d65f4d;
-			border-bottom: 3px solid #d65f4d;
+			.image {
+				background-image: image-url('features/democracy/examples/leonidas.jpg');
+			}
 		}
 		.feudalism {
+			border-top: 3px solid #9ec2b7;
+			border-bottom: 3px solid #9ec2b7;
 			hr {
 				border-color: #9ec2b7;
 			}
-			border-top: 3px solid #9ec2b7;
-			border-bottom: 3px solid #9ec2b7;
+			.image {
+				background-image: image-url('features/democracy/examples/oda-nobunaga.jpg');
+			}
 		}
 		.a-monarchy {
+			border-top: 3px solid #7f8732;
+			border-bottom: 3px solid #7f8732;
 			hr {
 				border-color: #7f8732;
 			}
-			border-top: 3px solid #7f8732;
-			border-bottom: 3px solid #7f8732;
+			.image {
+				background-image: image-url('features/democracy/examples/louie.jpg');
+			}
 		}
 		.p-monarchy {
+			border-top: 3px solid #51697b;
+			border-bottom: 3px solid #51697b;
 			hr {
 				border-color: #51697b;
 			}
-			border-top: 3px solid #51697b;
-			border-bottom: 3px solid #51697b;
+			.image {
+				background-image: image-url('features/democracy/examples/victoria.jpg');
+			}
 		}
 		.sps {
+			border-top: 3px solid #ddb40a;
+			border-bottom: 3px solid #ddb40a;
 			hr {
 				border-color: #ddb40a;
 			}
-			border-top: 3px solid #ddb40a;
-			border-bottom: 3px solid #ddb40a;
+			.image {
+				background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
+			}
 		}
 	}
 }
