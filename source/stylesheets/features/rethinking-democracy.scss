@@ -5,9 +5,23 @@ body {
 }
 
 section {
+	padding-bottom: 3em;
+	@include clearfix();
 	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline,  > p, > div p, > blockquote, > ol, > ul, > dl {
 		max-width: 60%;
 		padding: 0 5rem;
+	}
+	header.centered {
+		padding: 1.5em 0;
+		max-width: 100%;
+		text-align: center;
+		h3 {
+			font-size: 3em;
+			font-weight: 400;
+		}
+		hr {
+			margin: 2em auto;
+		}
 	}
 }
 
@@ -17,6 +31,36 @@ section {
 
 #main-header {
 	background-color: #000;
+}
+
+article.government {
+	z-index: 0;
+	line-height: 1.25;
+	margin: 0 auto;
+	hr {
+		margin: 2em 0;
+		width: 40px;
+		border-top: 5px solid #58504A;
+	}
+}
+
+.image {
+	&.inline {
+		margin: 3em 0;
+		img {
+			max-width: 75%;
+		}
+	}
+	&.aside {
+		width: 40%;
+		padding-right: 5em;
+		float: right;
+		p {
+			max-width: 100%;
+			border: 3px solid;
+			padding: 1.5em;
+		}
+	}
 }
 
 .main-nav {
@@ -55,16 +99,6 @@ section {
 	}
 }
 
-article.government {
-	z-index: 0;
-	line-height: 1.25;
-	hr {
-		margin: 2em 0;
-		width: 40px;
-		border-top: 5px solid #AAA;
-	}
-}
-
 #section1 {
 	header {
 		max-width: 100%;
@@ -93,6 +127,9 @@ article.government {
 			width: 60px;
 			margin: 0;
 		}
+	}
+	#greekInventions .caption {
+		border-color: #9ec2b7;
 	}
 }
 
@@ -166,7 +203,7 @@ article.government {
 		}
 	} 
 	#govtSlider {
-		margin-bottom: 2em;
+		margin-bottom: 0;
 		.slick-slide {
 			@include clearfix();
 			background-color: #F5F5F5;
