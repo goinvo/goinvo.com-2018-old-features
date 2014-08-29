@@ -3,6 +3,9 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/rethinking-democracy"
 	= stylesheet_link_tag "slick"
+	= javascript_include_tag "//use.typekit.net/imk3eze.js"
+	:javascript
+		try{Typekit.load();}catch(e){}
 	= javascript_include_tag "slick/slick"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
@@ -27,9 +30,9 @@
 		.image.inline
 			%img{:src => "../../images/features/democracy/population.jpg", :alt => "Population chart showing 25000 male citizens, 46500 menial laborers, 115000 slaves, and 129000 women and children that were living in ancient greece during the period in question."}/
 		
-		#greekInventions.image.aside
+		.image.aside.caption-bottom
 			%img{:src => "../../images/features/democracy/greek.jpg", :alt => "Some ancient greek technologies."}/
-			%p.caption Key technologies from ancient Greece: thermometers, coin money, and catapults.
+			%p.caption.teal Key technologies from ancient Greece: thermometers, coin money, and catapults.
 
 		%p Only the 25,000 male citizens of Athens could vote, meaning that fewer than 13% of the population had the privilege to choose their leaders. 
 
@@ -219,6 +222,33 @@
 
 		%p The reality is, at our current evolutionary stage, people must advocate for themselves. Time and time again we’ve learned that trusting someone or something else with our own well-being generally leads to its degrading. It is, after all, human nature to value one’s own needs over those of society at large. 
 
+		%p The wy we take care of our needs can be described by a series of concertric rings.
+
+		.image.inline
+			%img{:src => "../../images/features/democracy/circle.jpg", :alt => "Chart showing rings depicting 'Myself and family' at the center, followed by 'Friends', 'Those I share interests/beliefs/culture with', 'Those I share community with', 'Those I shre regional geographgy with', 'Those I share national identiy with', and finally 'All of humanity'."}/
+
+		.image.aside.caption-side
+			%img{:src => "../../images/features/democracy/winston.jpg", :alt => "A photograph of Winston Churchhill."}/
+			%p.caption.orange &ldquo;It has been said that democracy is the worst form of government except all the others that have been tried.&rdquo; <strong>&mdash; Sir Winston Churchill</strong>
+			:javascript
+				$(window).load(function(event) {
+					var boxHeight = $('.image.aside.caption-side img').height();
+					var pHeight = $('.image.aside.caption-side p').height();
+					var padding = ((boxHeight-(pHeight+6))/2);
+					$('.image.aside.caption-side p').css({
+						'padding-top': padding,
+						'padding-bottom': padding
+					});
+				});
+				$(window).resize(function(event) {
+					var boxHeight = $('.image.aside.caption-side img').height();
+					var pHeight = $('.image.aside.caption-side p').height();
+					var padding = ((boxHeight-(pHeight+6))/2);
+					$('.image.aside.caption-side p').css({
+						'padding-top': padding,
+						'padding-bottom': padding
+					});
+				});
 		%p Each ring out from the center gets less of my care and interest. I am just one person who has an intricate life to manage, one that precludes me from impacting the world far beyond my own immediate interests. Extrapolate that to the leader of a nation-state needing to care for all citizens equally. It is a literal impossibility. At its extreme, such natural self-interest may manifest as corruption, but for most managing that self-interest is simply one of the challenges that leaders must face.
 
 		%p Given that people are naturally self-focused, and that human rights are an essential aspect to a modern government system, I will focus on redesigning democracy as opposed to changing to a different form of government. By giving citizens direct influence over their laws and leaders we give them the greatest degree of control over their own well-being. Perhaps our redesign of democracy can extend the degree of self-control and agency afforded by the US government of today. The question is, how can we move the government decisions that influence us closer to the centers of our own circles?
@@ -231,6 +261,10 @@
 
 		%p <em>These ideas are built on four basic premises:</em>
 
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/hands.jpg", :alt => "A graphic of a heart being held by two hands."}/
+			%p.caption.yellow Other first-world nations with similar civil rights but higher well being and happiness than the United States have a mcuh healthier fiscal outlook. For example, their citizens may pay more than 50% of their income in taxes, or provide mandatory military service, or save significant proportions of their income instead of speading beyond their means. Meanwhile, citizens of the United States spend more minutes per data on average watching television than any other nation. Instead of excercising our right to watch the nost minutes of televison per citizen each day than any other nation, perhaps we could do more to give back to the country and system that provides our many liberties and benefits. Each dollar cotributed in taxes, or each hour spnt in some form of civil service, strengthens the nation as a whole. It creates a cycle of success.
+
 		%ol
 			%li 
 				%p Citizenship should provide major benefits and carry significant responsibilities. In the United States, the benefits of citizenship have never been more uncertain. We have the most extensive national security in the world, a clear benefit even if it is an order of magnitude larger than it needs to be. The recent adoption of “Obamacare” begins to move us closer to our first-world brethren from a health and wellness perspective. Social security and other social welfare programs are under threat both financially and legislatively, possibly removing a key personal security perk from our lives. US citizens enjoy benefits well beyond most of the world, but no better than the top half of first-world nations. Though some might argue that Athenian citizens had a more lavish lifestyle, relatively speaking, than most Americans do today, the cost of that lifestyle was borne by the majority of Athenian residents--all considered non-citizens. By contrast, even the vast majority of Americans who are not 1%’ers enjoy the status of citizenship regardless of gender, race, age, or place of origin, and can aspire to nearly all of the same privileges.
@@ -240,12 +274,27 @@
 				%p Getting a lot for a little might seem like a good deal, but it is not good for our country nor for ourselves. From a pragmatic perspective, our low taxes contribute to what is now over $17 trillion in debt. Our general lack of other societal responsibilities not only contribute to that debt - we could be contributing time or effort in small ways that would find its way back would mitigate our collective debt) - they also give us a sense of entitlement. Feeling entitled can lead to selfish, lazy, and even anti-social behavior. These negatively impact health and well being, plus contribute to societal waste and personally motivated short-term thinking.
 
 				%p By injecting more citizen responsibility, or at least productive participation, into our democracy we can curb unhealthy individual and collective behaviors while increasing prosperity for everyone.
+			
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/stalin.jpg", :alt => "Josef Stalin"}
+			%p.caption.blue Josef Stalin famously instituted five-year plans, a model that saw the Soviet Union centralize and modernize at a prodigious rate. Copied by Nazi Germany (successfully) as well as Communist China (less successfully) this set of strategies and tactics enabled rapid growth. While these successes were admittedly reached through brutality and civil rights abuses, it is indisputable that by setting a broad agenda that strategically brings together many disparate elements of a nation for single purpose, profound change can be achieved.
+
+		%ol{:start => 2}
 			%li
 				%p We need unifying initiatives to guide our government. From a philosophical perspective we already have these: the Declaration of Independence, the Constitution, and the Bill of Rights. However, on an operational level we do not. Every four years there is a new presidential election. Every two years we elect our representatives, every six, our senators and state governors. By the time any of these civil servants gets comfortable in office there is little time to think broadly; before long they need to worry about earning future votes to win the next election and maintain their position.
 
 				%p Each time there is a change it potentially stops and even reverses the initiatives instigated by the previous regime. In part this is good: it provides the checks-and-balances so essential to democratic law. However, it also creates significant inefficiency. The trillion-dollar initiative of the current Administration will be the first target for the opposition party if control changes hands after the next national election. If there were a list of initiatives that gave us mandates over longer periods of time, a decade, two decades, or even more, we could borrow some of the key executive benefits of monarchical or dictatorial regimes while maintaining a true democracy.
 			%li
 				%p Citizens should have a closer, more direct relationship with their leaders and laws. While the majority of residents of ancient Athens were likely not citizens, those who were had a direct relationship to the workings of their “national” government. This is an ideal that gives people the greatest input into their government’s functioning, necessarily putting the individual’s rights and perspectives close to the decisions being made for and about them. It means participation. 
+		
+		.image.inline
+			%img{:src => "../../images/features/democracy/citizens.jpg", :alt => "Chart depicting the ratio of citizens participating in government: one-half in Ancient Athens, 1 in ten-thousand in the 1790 United States, and 1 in three-hundred eighty-four thousand in the 2014 united states."}
+		
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/moon.jpg", :alt => "An austronaut on the moon, waving at the photographer."}
+			%p.caption.teal What if an amendment to the U.S. Constitution required an audacious, strategic long-term goal that we would commit to achieving regardless of whatever else might happen? President John F. Kennedy tried this on an ad hoc basis and - seemingly beyond the bounds of reason - we found ourselves on the moon less than a decade later.
+
+		%ol{:start => 4}
 			%li
 				%p Laws and leadership should have a proper balance of long-term and short-term planning. China’s emphasis on long-term planning turned them into a global superpower around the turn of the 20th century. By contract, for decades the US government has pursued plans that are painfully overbalanced toward short-term thinking. This is reflected in everything from our financial position to our energy policy. While the reasons for this are complicated, one key aspect concerns politicians pandering to their voter base, advocating the knee-jerk whims of a limited constituency to the detriment of the nation as a whole. As well, there is the binary nature of compromise in an entrenched two-party system. How can we shift to a model that values long-term planning in ways more similar to our Chinese friends?
 	
@@ -261,11 +310,29 @@
 
 		%p Which brings us to the problem of this particular solution: the legislative branch. Each state is represented by two Senators and a variable number of State Representatives, ranging from 53 (California) to just one (six states). This configuration goes back to the original U.S. Constitution, some 227 years ago.
 
-		%p <em>While the numerical structure of the legislature is problematic, there are bigger issues:</em>
+		.image.inline
+			%img{:src => "../../images/features/democracy/states-chart.jpg", :alt => "Chart showing states that have vastly different numbers of representatives: 1 each for Colorodo, North and South Dakota, Vermon, Delaware and Alaska, yet 53 reprentatives for the state of California. Caption: States have widly divergent representation and influence, far beyond what was envisioned by the founding fathers."}
+
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/bad-guys.jpg", :alt => "From left to right, images of Eliot Spitzer, John Edwards, and Charles Keating"}
+			%p.caption.red With legislators like Eliot Spitzer, John Edwards, and Charles Keating, who needs enemies?
+
+		%p.emphasized While the numerical structure of the legislature is problematic, there are bigger issues:
 
 		%ol
 			%li 
 				%p Senators and Representatives are not necessarily qualified to participate in making laws. Their only qualification is having been picked by constituencies made up of people who, for the most part, know them only from advertising and marketing and what their local paper chooses to write. So, the lawmakers may have questionable qualifications and the people who choose them are largely ignorant as to their efficacy for the position.
+		
+		#congressChart
+			.col1
+			.col2
+				%h4 Composition of 113<sup>th</sup> Congress
+
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/bad-guys.jpg", :alt => "From left to right, images of Eliot Spitzer, John Edwards, and Charles Keating"}
+			%p.caption.red With legislators like Eliot Spitzer, John Edwards, and Charles Keating, who needs enemies?
+
+		%ol{:start => 2}
 			%li 
 				%p Legislators are incentivized to focus their lawmaking efforts on decisions that will feed into their re-election. That means they may be rewarded to ignore questions of the whole for pandering to their few. While the few may need an advocate in the arena of the many, legislators must remain mindful of the bigger picture.
 			%li 

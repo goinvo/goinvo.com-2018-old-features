@@ -78,6 +78,16 @@ p {
 	}
 }
 
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
 ul {
 	list-style: square;
 }
@@ -91,13 +101,13 @@ ol {
 }
 
 .social-card a {
-		color: $navy;
+	color: $navy;
 }
 
 .social-card a:hover {
-		color:$blue;
+	color:$blue;
 }
 
 a {
-		 color: $blue;
+	color: $blue;
 }

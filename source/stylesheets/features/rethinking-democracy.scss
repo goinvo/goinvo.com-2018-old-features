@@ -1,14 +1,20 @@
 @import "../base/core";
 
+$orange: #bc743e;
+$red: #d65f4d;
+$teal: #9ec2b7;
+$green: #7f8732;
+$blue: #51697b;
+$yellow: #ddb40a;
+
 body {
 	color: #58504A;
 }
 
 section {
 	padding-bottom: 3em;
-	@include clearfix();
-	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline,  > p, > div p, > blockquote, > ol, > ul, > dl {
-		max-width: 60%;
+	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		max-width: 50%;
 		padding: 0 5rem;
 	}
 	header.centered {
@@ -35,12 +41,16 @@ section {
 
 article.government {
 	z-index: 0;
-	line-height: 1.25;
+	line-height: 1.8em;
 	margin: 0 auto;
 	hr {
 		margin: 2em 0;
 		width: 40px;
 		border-top: 5px solid #58504A;
+	}
+	p.emphasized {
+		font-size: 2em;
+		font-style: italic;
 	}
 }
 
@@ -51,15 +61,59 @@ article.government {
 			max-width: 75%;
 		}
 	}
+	p {
+		max-width: 100%;
+		padding: 1.5em;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		border: 3px solid;
+		margin: 0;
+		&.orange {
+			border-color: $orange;
+		}
+		&.red {
+			border-color: $red;
+		}
+		&.teal {
+			border-color: $teal;
+		}
+		&.green {
+			border-color: $green;
+		}
+		&.blue {
+			border-color: $blue;
+		}
+		&.yellow {
+			border-color: $yellow;
+		}
+	}
 	&.aside {
 		width: 40%;
 		padding-right: 5em;
 		float: right;
-		p {
-			max-width: 100%;
-			border: 3px solid;
-			padding: 1.5em;
+		&.caption-bottom {
+			p {
+				border-top: 0;
+			}
 		}
+		&.caption-side {
+			img {
+				float: left;
+				max-width: 35%;
+			}
+			p {
+				width: 65%;
+				float: left;
+				font-size: 1.5em;
+				border-left: 0;
+				padding: 0 1em;
+			}
+			strong {
+				padding-top: 0.5em;
+				display: block;
+			}
+		}
+		
 	}
 }
 
@@ -128,9 +182,6 @@ article.government {
 			margin: 0;
 		}
 	}
-	#greekInventions .caption {
-		border-color: #9ec2b7;
-	}
 }
 
 #section2 {
@@ -146,41 +197,24 @@ article.government {
 				font-size: 1.5em;
 				text-align: center;
 				float: left;
-				&.slide0 {
-					color: #AAA;
-					&:hover {
-						color: #bc743e;
-					}
+				color: #AAA;
+				&.slide0:hover {
+					color: $orange;
 				}
-				&.slide1 {
-					color: #AAA;
-					&:hover {
-						color: #d65f4d;
-					}
+				&.slide1:hover {
+					color: $red;
 				}
-				&.slide2 {
-					color: #AAA;
-					&:hover {
-						color: #9ec2b7;
-					}
+				&.slide2:hover {
+					color: $teal;
 				}
-				&.slide3 {
-					color: #AAA;
-					&:hover {
-						color: #7f8732;
-					}
+				&.slide3:hover {
+					color: $green;
 				}
-				&.slide4 {
-					color: #AAA;
-					&:hover {
-						color: #51697b;
-					}
+				&.slide4:hover {
+					color: $blue;
 				}
-				&.slide5 {
-					color: #AAA;
-					&:hover {
-						color: #ddb40a;
-					}
+				&.slide5:hover {
+					color: $yellow;
 				}
 			}
 		}
@@ -244,10 +278,10 @@ article.government {
 			}
 		}
 		.theocracy {
-			border-top: 3px solid #bc743e;
-			border-bottom: 3px solid #bc743e;
+			border-top: 3px solid $orange;
+			border-bottom: 3px solid $orange;
 			hr {
-				border-color: #bc743e;
+				border-color: $orange;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/king-tang.jpg');
@@ -255,50 +289,50 @@ article.government {
 			}
 		}
 		.oligarchy {
-			border-top: 3px solid #d65f4d;
-			border-bottom: 3px solid #d65f4d;
+			border-top: 3px solid $red;
+			border-bottom: 3px solid $red;
 			hr {
-				border-color: #d65f4d;
+				border-color: $red;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/leonidas.jpg');
 			}
 		}
 		.feudalism {
-			border-top: 3px solid #9ec2b7;
-			border-bottom: 3px solid #9ec2b7;
+			border-top: 3px solid $teal;
+			border-bottom: 3px solid $teal;
 			hr {
-				border-color: #9ec2b7;
+				border-color: $teal;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/oda-nobunaga.jpg');
 			}
 		}
 		.a-monarchy {
-			border-top: 3px solid #7f8732;
-			border-bottom: 3px solid #7f8732;
+			border-top: 3px solid $green;
+			border-bottom: 3px solid $green;
 			hr {
-				border-color: #7f8732;
+				border-color: $green;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/louie.jpg');
 			}
 		}
 		.p-monarchy {
-			border-top: 3px solid #51697b;
-			border-bottom: 3px solid #51697b;
+			border-top: 3px solid $blue;
+			border-bottom: 3px solid $blue;
 			hr {
-				border-color: #51697b;
+				border-color: $blue;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/victoria.jpg');
 			}
 		}
 		.sps {
-			border-top: 3px solid #ddb40a;
-			border-bottom: 3px solid #ddb40a;
+			border-top: 3px solid $yellow;
+			border-bottom: 3px solid $yellow;
 			hr {
-				border-color: #ddb40a;
+				border-color: $yellow;
 			}
 			.image {
 				background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
