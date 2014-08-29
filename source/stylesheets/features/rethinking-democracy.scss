@@ -6,29 +6,11 @@ $teal: #9ec2b7;
 $green: #7f8732;
 $blue: #51697b;
 $yellow: #ddb40a;
+$tan: #dfd6c3;
 
 body {
 	color: #58504A;
-}
-
-section {
-	padding-bottom: 3em;
-	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
-		max-width: 50%;
-		padding: 0 5rem;
-	}
-	header.centered {
-		padding: 1.5em 0;
-		max-width: 100%;
-		text-align: center;
-		h3 {
-			font-size: 3em;
-			font-weight: 400;
-		}
-		hr {
-			margin: 2em auto;
-		}
-	}
+	background: #EEE;
 }
 
 #main-container {
@@ -39,91 +21,19 @@ section {
 	background-color: #000;
 }
 
-article.government {
-	z-index: 0;
-	line-height: 1.8em;
-	margin: 0 auto;
-	hr {
-		margin: 2em 0;
-		width: 40px;
-		border-top: 5px solid #58504A;
-	}
-	p.emphasized {
-		font-size: 2em;
-		font-style: italic;
-	}
-}
-
-.image {
-	&.inline {
-		margin: 3em 0;
-		img {
-			max-width: 75%;
-		}
-	}
-	p {
-		max-width: 100%;
-		padding: 1.5em;
-		font-size: 1.1em;
-		line-height: 1.5em;
-		border: 3px solid;
-		margin: 0;
-		&.orange {
-			border-color: $orange;
-		}
-		&.red {
-			border-color: $red;
-		}
-		&.teal {
-			border-color: $teal;
-		}
-		&.green {
-			border-color: $green;
-		}
-		&.blue {
-			border-color: $blue;
-		}
-		&.yellow {
-			border-color: $yellow;
-		}
-	}
-	&.aside {
-		width: 40%;
-		padding-right: 5em;
-		float: right;
-		&.caption-bottom {
-			p {
-				border-top: 0;
-			}
-		}
-		&.caption-side {
-			img {
-				float: left;
-				max-width: 35%;
-			}
-			p {
-				width: 65%;
-				float: left;
-				font-size: 1.5em;
-				border-left: 0;
-				padding: 0 1em;
-			}
-			strong {
-				padding-top: 0.5em;
-				display: block;
-			}
-		}
-		
-	}
-}
-
-.main-nav {
+.govtNav {
+	background: #FFF;
 	position: fixed;
 	z-index: 20;
 	width: 100%;
-	padding: 0 5rem;
 	background: #FFF;
 	border-bottom: 2px solid #DDD;
+}
+
+.main-nav {
+	max-width: 1630px;
+	margin: 0 auto;
+	padding: 0 5rem;
 	@include clearfix();
 	a {
 		display: block;
@@ -150,6 +60,317 @@ article.government {
 			}
 		}
 		
+	}
+}
+
+article.government {
+	background: #FFF;
+	max-width: 1630px;
+	margin: 0 auto;
+	border-left: 2px solid #CCC;
+	border-right: 2px solid #CCC;
+	z-index: 0;
+	line-height: 1.8em;
+	overflow: hidden;
+	hr {
+		margin: 2em 0;
+		width: 40px;
+		border-top: 5px solid #58504A;
+	}
+	p.emphasized {
+		font-size: 2em;
+		&.i {
+			font-style: italic;
+		}
+	}
+}
+
+section {
+	margin-bottom: 3em;
+	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		max-width: 60%;
+		padding: 0 5rem;
+	}
+	header.centered {
+		padding: 1.5em 0;
+		max-width: 100%;
+		text-align: center;
+		h3 {
+			font-size: 3em;
+			font-weight: 400;
+		}
+		hr {
+			margin: 2em auto;
+		}
+	}
+	&#section6, &#section7 {
+		@include clearfix();
+	}
+}
+
+.image {
+	&.caption-side {
+		img {
+			float: left;
+		}
+		p {
+			float: left;
+			border-left: 0;
+		}
+	}
+	&.inline {
+		&.caption-side {
+			@include clearfix();
+			img {
+				max-width: 60%;
+			}
+			p {
+				width: 40%;
+				font-size: 1.1em;
+				line-height: 1.2em;
+				padding: 0 2em;
+			}
+		}
+		margin: 3em 0;
+		img {
+			max-width: 75%;
+		}
+	}
+	p {
+		max-width: 100%;
+		padding: 1.5em;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		border: 3px solid #e0e0e0;
+		margin: 0;
+		&.orange {
+			border-color: $orange;
+		}
+		&.red {
+			border-color: $red;
+		}
+		&.teal {
+			border-color: $teal;
+		}
+		&.green {
+			border-color: $green;
+		}
+		&.blue {
+			border-color: $blue;
+		}
+		&.yellow {
+			border-color: $yellow;
+		}
+		&.tan {
+			border-color: $tan;
+		}
+	}
+	&.caption-side {
+		img {
+			float: left;
+			max-width: 50%;
+		}
+		p {
+			width: 50%;
+			float: left;
+			border-left: 0;
+			font-size: 1em;
+			line-height: 1.2em;
+			padding: 0 2em;
+		}
+	}
+	&.aside {
+		width: 40%;
+		padding-right: 5em;
+		float: right;
+		&.caption-bottom {
+			p {
+				border-top: 0;
+			}
+		}
+		&.caption-side {
+			img {
+				max-width: 35%;
+			}
+			p {
+				width: 65%;
+				font-size: 1.5em;
+				line-height: 1.2em;
+				padding: 0 1em;
+			}
+			strong {
+				padding-top: 0.5em;
+				display: block;
+			}
+		}
+	}
+}
+
+#congressChart {
+	margin: 5em 0;
+	@include clearfix();
+	.col {
+		float: left;
+		width: 50%;
+		&.one {
+			padding-right: 2em;
+		}
+		&.two {
+			padding-left: 2em;
+		}
+	}
+	font-family: "rosario", Helvetica, Arial, sans-serif;
+	h4 {
+		margin-bottom: 1em;
+		padding: 0.35em 0 0.6em;
+		border: 2px solid #58504A;
+		font-weight: 400;
+		font-size: 1.7em;
+		text-align: center;
+		sup {
+			font-size: 0.6em;
+		}
+	}
+	small {
+		display: block;
+		font-size: 0.75em;
+		padding-top: 0.5em;
+		text-align: right;
+	}
+	table {
+		table-layout: fixed;
+		width: 100%;
+		tr {
+			&.one {
+				font-size: 1.5em;
+			}
+			&.two {
+				font-size: 1.3em;
+			}
+			&.three {
+				font-size: 1.18em;
+			}
+			&.four {
+				font-size: 1.1em;
+			}
+			&.five {
+				font-size: 0.8em;
+			}
+		}
+		td {
+			padding: 0.5em 0 0;
+			width: 100%;
+			border-bottom: 1px solid #AAA;
+			vertical-align: bottom;
+			&:nth-child(2) {
+				text-align: right;
+			}
+		}
+	}
+}
+
+#govtSlider {
+	margin-bottom: 0;
+	.slick-slide {
+		@include clearfix();
+		background-color: #F5F5F5;
+		header p {
+			margin: 0;
+		}
+		h4 {
+			line-height: 1;
+			font-weight: 400;
+			font-size: 4em;
+		}
+		p {
+			max-width: 100%;
+			padding: 0;
+		}
+		
+		.text, .image {
+			float: left;
+		}
+		.text {
+			width: 75%;
+			padding: 2em 2em 2em 8em;
+		}
+		.image {
+			width: 25%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.col {
+			float: left;
+			width: 50%;
+			&.one {
+				padding-right: 1em;
+			}
+			&.two {
+				padding-left: 1em;
+			}
+		}
+	}
+	.theocracy {
+		border-top: 3px solid $orange;
+		border-bottom: 3px solid $orange;
+		hr {
+			border-color: $orange;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/king-tang.jpg');
+			background-position: center top;
+		}
+	}
+	.oligarchy {
+		border-top: 3px solid $red;
+		border-bottom: 3px solid $red;
+		hr {
+			border-color: $red;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/leonidas.jpg');
+		}
+	}
+	.feudalism {
+		border-top: 3px solid $teal;
+		border-bottom: 3px solid $teal;
+		hr {
+			border-color: $teal;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/oda-nobunaga.jpg');
+		}
+	}
+	.a-monarchy {
+		border-top: 3px solid $green;
+		border-bottom: 3px solid $green;
+		hr {
+			border-color: $green;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/louie.jpg');
+		}
+	}
+	.p-monarchy {
+		border-top: 3px solid $blue;
+		border-bottom: 3px solid $blue;
+		hr {
+			border-color: $blue;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/victoria.jpg');
+		}
+	}
+	.sps {
+		border-top: 3px solid $yellow;
+		border-bottom: 3px solid $yellow;
+		hr {
+			border-color: $yellow;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
+		}
 	}
 }
 
@@ -236,107 +457,38 @@ article.government {
 			}
 		}
 	} 
-	#govtSlider {
-		margin-bottom: 0;
-		.slick-slide {
-			@include clearfix();
-			background-color: #F5F5F5;
-			header p {
-				margin: 0;
-			}
-			h4 {
-				font-weight: 400;
-				font-size: 4em;
-			}
-			p {
-				max-width: 100%;
-				padding: 0;
-			}
-			
-			.text, .image {
-				float: left;
-			}
-			.text {
-				width: 75%;
-				padding: 2em 2em 2em 8em;
-			}
-			.image {
-				width: 25%;
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-			}
-			.col {
-				float: left;
-				width: 50%;
-				&.one {
-					padding-right: 1em;
-				}
-				&.two {
-					padding-left: 1em;
-				}
-			}
+}
+
+#section6 {
+	padding: 3em 0;
+	border-top: 2px solid #d2d2d2;
+	border-bottom: 2px solid #d2d2d2;
+	background-color: #f5f5f5;
+	ul {
+		list-style: none;
+		li:before {
+			float: left;
+			margin-left: -1em;
+			font-size: 1.375em;
+			content: "\2022";
 		}
-		.theocracy {
-			border-top: 3px solid $orange;
-			border-bottom: 3px solid $orange;
-			hr {
-				border-color: $orange;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/king-tang.jpg');
-				background-position: center top;
-			}
-		}
-		.oligarchy {
-			border-top: 3px solid $red;
-			border-bottom: 3px solid $red;
-			hr {
-				border-color: $red;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/leonidas.jpg');
-			}
-		}
-		.feudalism {
-			border-top: 3px solid $teal;
-			border-bottom: 3px solid $teal;
-			hr {
-				border-color: $teal;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/oda-nobunaga.jpg');
-			}
-		}
-		.a-monarchy {
-			border-top: 3px solid $green;
-			border-bottom: 3px solid $green;
-			hr {
-				border-color: $green;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/louie.jpg');
-			}
-		}
-		.p-monarchy {
-			border-top: 3px solid $blue;
-			border-bottom: 3px solid $blue;
-			hr {
-				border-color: $blue;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/victoria.jpg');
-			}
-		}
-		.sps {
-			border-top: 3px solid $yellow;
-			border-bottom: 3px solid $yellow;
-			hr {
-				border-color: $yellow;
-			}
-			.image {
-				background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
-			}
-		}
+	}
+	.image.aside img:first-child {
+		padding-bottom: 1.5em;
+	}
+}
+
+#section7 {
+	.image.aside.bleed {
+		padding: 0;
+		margin-right: -5em;
+	}
+	ol {
+		list-style: upper-alpha;
+	}
+
+	h3 {
+		margin-top: 1.5em;
+		font-size: 3.5em;
 	}
 }

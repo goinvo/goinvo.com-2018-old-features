@@ -68,9 +68,34 @@ $(document).ready(function(){
 	});
 });
 
+$(window).load(function(event) {
+	var padding01 = (($('.image.aside.caption-side img').height()-($('.image.aside.caption-side p').height()+6))/2);
+	var padding02 = (($('.image.inline.caption-side img').height()-($('.image.inline.caption-side p').height()+6))/2);
+	$('.image.aside.caption-side p').css({
+		'padding-top': padding01,
+		'padding-bottom': padding01
+	});
+	$('.image.inline.caption-side p').css({
+		'padding-top': padding02,
+		'padding-bottom': padding02
+	});
+});
+
 $(window).resize(function(event){
 	var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
 	var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
 	$('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
 	$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+
+	// Images
+	var padding01 = (($('.image.aside.caption-side img').height()-($('.image.aside.caption-side p').height()+6))/2);
+	var padding02 = (($('.image.inline.caption-side img').height()-($('.image.inline.caption-side p').height()+6))/2);
+	$('.image.aside.caption-side p').css({
+		'padding-top': padding01,
+		'padding-bottom': padding01
+	});
+	$('.image.inline.caption-side p').css({
+		'padding-top': padding02,
+		'padding-bottom': padding02
+	});
 });

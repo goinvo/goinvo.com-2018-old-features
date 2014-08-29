@@ -9,14 +9,15 @@
 	= javascript_include_tag "slick/slick"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
-%nav.main-nav
-	%a.one{:href => "#section1"} Rethinking Democracy
-	%a.two{:href => "#section2"} Alternatvies to Democracy
-	%a.three{:href => "#section3"} So, What form of Government Best Fits Now?
-	%a.four{:href => "#section4"} Elements of a Better Democacy
-	%a.five{:href => "#section5"} Issues with the Legislature
-	%a.six{:href => "#section6"} The Tradditional Problem
-	%a.seven{:href => "#section7"} The Digital Solution
+%header.govtNav
+	%nav.main-nav
+		%a.one{:href => "#section1"} Rethinking Democracy
+		%a.two{:href => "#section2"} Alternatvies to Democracy
+		%a.three{:href => "#section3"} So, What form of Government Best Fits Now?
+		%a.four{:href => "#section4"} Elements of a Better Democacy
+		%a.five{:href => "#section5"} Issues with the Legislature
+		%a.six{:href => "#section6"} The Tradditional Problem
+		%a.seven{:href => "#section7"} The Digital Solution
 %article#feature-article.government
 	%section#section1
 		%header.section-header
@@ -81,7 +82,7 @@
 									%p The Shang dynasty weakened over time. Debauched emperor Shang Di Xin poorly managed his holdings and lead his army to destruction, ushering in the Zhou dynasty, which maintained the Shang religious lineage.
 								%div
 									%h5 Lessons Learned
-									%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and--assuming reasonable civil rights--relative harmony.
+									%p While a single-religion state seems impossible in the modern world, yoking the rule of state to spirituality in such a case can create stability and&mdash;assuming reasonable civil rights&mdash;relative harmony.
 					.image
 
 				%div.oligarchy
@@ -107,7 +108,7 @@
 									%p Wars killed citizens and weakened the Spartan geopolitical position. Spartan citizenship was inherited along family lines, so Spartans increasingly became a minority. By the time citizenship and wealth were spread to a broader base the decline was well underway.
 								%div
 									%h5 Lessons Learned
-									%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure--only a privileged and distinctly minority class were considered citizens--was the primary issue.
+									%p The Spartan oligarchy was generally an effective governing body. The underlying societal structure&mdash;only a privileged and distinctly minority class were considered citizens&mdash;was the primary issue.
 					.image
 
 				%div.feudalism
@@ -230,25 +231,7 @@
 		.image.aside.caption-side
 			%img{:src => "../../images/features/democracy/winston.jpg", :alt => "A photograph of Winston Churchhill."}/
 			%p.caption.orange &ldquo;It has been said that democracy is the worst form of government except all the others that have been tried.&rdquo; <strong>&mdash; Sir Winston Churchill</strong>
-			:javascript
-				$(window).load(function(event) {
-					var boxHeight = $('.image.aside.caption-side img').height();
-					var pHeight = $('.image.aside.caption-side p').height();
-					var padding = ((boxHeight-(pHeight+6))/2);
-					$('.image.aside.caption-side p').css({
-						'padding-top': padding,
-						'padding-bottom': padding
-					});
-				});
-				$(window).resize(function(event) {
-					var boxHeight = $('.image.aside.caption-side img').height();
-					var pHeight = $('.image.aside.caption-side p').height();
-					var padding = ((boxHeight-(pHeight+6))/2);
-					$('.image.aside.caption-side p').css({
-						'padding-top': padding,
-						'padding-bottom': padding
-					});
-				});
+			
 		%p Each ring out from the center gets less of my care and interest. I am just one person who has an intricate life to manage, one that precludes me from impacting the world far beyond my own immediate interests. Extrapolate that to the leader of a nation-state needing to care for all citizens equally. It is a literal impossibility. At its extreme, such natural self-interest may manifest as corruption, but for most managing that self-interest is simply one of the challenges that leaders must face.
 
 		%p Given that people are naturally self-focused, and that human rights are an essential aspect to a modern government system, I will focus on redesigning democracy as opposed to changing to a different form of government. By giving citizens direct influence over their laws and leaders we give them the greatest degree of control over their own well-being. Perhaps our redesign of democracy can extend the degree of self-control and agency afforded by the US government of today. The question is, how can we move the government decisions that influence us closer to the centers of our own circles?
@@ -257,7 +240,7 @@
 		%header
 			%h3 Elements of a Better Democracy
 			%hr
-		%p One of the inherent flaws in modern democracies is the large size of contemporary nation-states. The bigger a group of people, the more removed those at the top will be from best serving some significant percentage of those at the bottom. There is too diverse a set of needs, values, beliefs, and affiliations for everyone to be properly taken care of. In the United States, this problem is exacerbated by a highly heterogeneous population. While there are many benefits to the “melting pot” --social, genetic, and philosophical, to name a few-- the very diversity that provides strength also makes it harder for each individual to be properly governed. In a perfect world our society would cater to each of us as a unique person with idiosyncratic needs, woven nicely into the larger social fabric. The reality of a nation with hundreds of millions of people is that the larger and more diverse it is, the less customized to individual needs and desires the experience of being a citizen will be.
+		%p One of the inherent flaws in modern democracies is the large size of contemporary nation-states. The bigger a group of people, the more removed those at the top will be from best serving some significant percentage of those at the bottom. There is too diverse a set of needs, values, beliefs, and affiliations for everyone to be properly taken care of. In the United States, this problem is exacerbated by a highly heterogeneous population. While there are many benefits to the “melting pot” &mdash;social, genetic, and philosophical, to name a few&mdash; the very diversity that provides strength also makes it harder for each individual to be properly governed. In a perfect world our society would cater to each of us as a unique person with idiosyncratic needs, woven nicely into the larger social fabric. The reality of a nation with hundreds of millions of people is that the larger and more diverse it is, the less customized to individual needs and desires the experience of being a citizen will be.
 
 		%p <em>These ideas are built on four basic premises:</em>
 
@@ -267,7 +250,7 @@
 
 		%ol
 			%li 
-				%p Citizenship should provide major benefits and carry significant responsibilities. In the United States, the benefits of citizenship have never been more uncertain. We have the most extensive national security in the world, a clear benefit even if it is an order of magnitude larger than it needs to be. The recent adoption of “Obamacare” begins to move us closer to our first-world brethren from a health and wellness perspective. Social security and other social welfare programs are under threat both financially and legislatively, possibly removing a key personal security perk from our lives. US citizens enjoy benefits well beyond most of the world, but no better than the top half of first-world nations. Though some might argue that Athenian citizens had a more lavish lifestyle, relatively speaking, than most Americans do today, the cost of that lifestyle was borne by the majority of Athenian residents--all considered non-citizens. By contrast, even the vast majority of Americans who are not 1%’ers enjoy the status of citizenship regardless of gender, race, age, or place of origin, and can aspire to nearly all of the same privileges.
+				%p Citizenship should provide major benefits and carry significant responsibilities. In the United States, the benefits of citizenship have never been more uncertain. We have the most extensive national security in the world, a clear benefit even if it is an order of magnitude larger than it needs to be. The recent adoption of “Obamacare” begins to move us closer to our first-world brethren from a health and wellness perspective. Social security and other social welfare programs are under threat both financially and legislatively, possibly removing a key personal security perk from our lives. US citizens enjoy benefits well beyond most of the world, but no better than the top half of first-world nations. Though some might argue that Athenian citizens had a more lavish lifestyle, relatively speaking, than most Americans do today, the cost of that lifestyle was borne by the majority of Athenian residents&mdash;all considered non-citizens. By contrast, even the vast majority of Americans who are not 1%’ers enjoy the status of citizenship regardless of gender, race, age, or place of origin, and can aspire to nearly all of the same privileges.
 
 				%p However, our nation asks very little of us in return. Other than pay taxes, which are among the lowest in the wealthy first world, and follow the laws, which are among the most liberal and individual-freedoms-friendly for a large nation-state in human history, we have little responsibility to our nation, state, community, or fellow citizens. All we need to do is be born and try not become a fringe part of the society, such as a felon. Those not born as United States citizens have a process to follow, but one that is barely more rigorous than simply moving here and living a good, normal life.
 
@@ -288,7 +271,7 @@
 				%p Citizens should have a closer, more direct relationship with their leaders and laws. While the majority of residents of ancient Athens were likely not citizens, those who were had a direct relationship to the workings of their “national” government. This is an ideal that gives people the greatest input into their government’s functioning, necessarily putting the individual’s rights and perspectives close to the decisions being made for and about them. It means participation. 
 		
 		.image.inline
-			%img{:src => "../../images/features/democracy/citizens.jpg", :alt => "Chart depicting the ratio of citizens participating in government: one-half in Ancient Athens, 1 in ten-thousand in the 1790 United States, and 1 in three-hundred eighty-four thousand in the 2014 united states."}
+			%img{:src => "../../images/features/democracy/citizens.jpg", :alt => "Chart depicting the ratio of citizens participating in government: one-half in Ancient Athens, 1 in ten-thousand in the 1790 United States, and 1 in three-hundred eighty-four thousand in the 2014 United States."}
 		
 		.image.aside.caption-bottom
 			%img{:src => "../../images/features/democracy/moon.jpg", :alt => "An austronaut on the moon, waving at the photographer."}
@@ -306,7 +289,7 @@
 
 		%p A nation ultimately needs one empowered decision maker. While theoretically it could be a group of people instead of an individual, historically this “decision by committee” model has not worked well. The separation of powers is designed to allow the executive branch some appropriate degree of autonomous control. Each citizen votes individually on the President. The outcome of the vote is intended to represent the majority’s choice.
 
-		%p Appointees to the Supreme Court are nominated by the President, confirmed by the Senate, and serve for life. The idea of a Supreme Court and life appointment are sensible. While my broader ideas would impact this process somewhat the existence and role of the Supreme Court--determining the rule of law at the highest judicial level-- is an important foundational one. They can stay.
+		%p Appointees to the Supreme Court are nominated by the President, confirmed by the Senate, and serve for life. The idea of a Supreme Court and life appointment are sensible. While my broader ideas would impact this process somewhat the existence and role of the Supreme Court&mdash;determining the rule of law at the highest judicial level&mdash; is an important foundational one. They can stay.
 
 		%p Which brings us to the problem of this particular solution: the legislative branch. Each state is represented by two Senators and a variable number of State Representatives, ranging from 53 (California) to just one (six states). This configuration goes back to the original U.S. Constitution, some 227 years ago.
 
@@ -317,20 +300,85 @@
 			%img{:src => "../../images/features/democracy/bad-guys.jpg", :alt => "From left to right, images of Eliot Spitzer, John Edwards, and Charles Keating"}
 			%p.caption.red With legislators like Eliot Spitzer, John Edwards, and Charles Keating, who needs enemies?
 
-		%p.emphasized While the numerical structure of the legislature is problematic, there are bigger issues:
+		%p.emphasized.i While the numerical structure of the legislature is problematic, there are bigger issues:
 
 		%ol
 			%li 
 				%p Senators and Representatives are not necessarily qualified to participate in making laws. Their only qualification is having been picked by constituencies made up of people who, for the most part, know them only from advertising and marketing and what their local paper chooses to write. So, the lawmakers may have questionable qualifications and the people who choose them are largely ignorant as to their efficacy for the position.
 		
 		#congressChart
-			.col1
-			.col2
+			.col.one
+				%table
+					%tbody
+						%tr.one
+							%td Lawyers
+							%td 32.5%
+						%tr.one
+							%td Businesspeople
+							%td 24.4%
+						%tr.two
+							%td Career<br>Politicians/Government<br>Employees
+							%td 12.0%
+						%tr.three
+							%td Educators
+							%td 9.6%
+						%tr.four
+							%td Medical Professionals
+							%td 6.0%
+						%tr.five
+							%td Career Military/Law Enforcement
+							%td 4.1%
+						%tr.five
+							%td Farmers &amp; Ranchers
+							%td 2.8%
+						%tr.five
+							%td Nonprofit &amp; Community Workers
+							%td 2.6%
+						%tr.five
+							%td Entertainment &amp; Media
+							%td 1.9%
+						%tr.five
+							%td Accountants
+							%td 1.3%
+			.col.two
 				%h4 Composition of 113<sup>th</sup> Congress
+				%table
+					%tbody
+						%tr.five
+							%td Engineers
+							%td 0.6%
+						%tr.five
+							%td Social Workers
+							%td 0.6%
+						%tr.five
+							%td Clergy
+							%td 0.4%
+						%tr.five
+							%td Carpenter
+							%td 0.2%
+						%tr.five
+							%td Legal Secretary
+							%td 0.2%
+						%tr.five
+							%td Microbiologist
+							%td 0.2%
+						%tr.five
+							%td Mill Supervisor
+							%td 0.2%
+						%tr.five
+							%td Physicist
+							%td 0.2%
+						%tr.five
+							%td Union Rep
+							%td 0.2%
+						%tr.five
+							%td Youth Camp Director
+							%td 0.2%
+				%small *Source: Washington Post 
 
 		.image.aside.caption-bottom
-			%img{:src => "../../images/features/democracy/bad-guys.jpg", :alt => "From left to right, images of Eliot Spitzer, John Edwards, and Charles Keating"}
-			%p.caption.red With legislators like Eliot Spitzer, John Edwards, and Charles Keating, who needs enemies?
+			%img{:src => "../../images/features/democracy/boehner.jpg", :alt => "From left to right, images of Eliot Spitzer, John Edwards, and Charles Keating"}
+			%p.caption.blue As of Wednesday, March 19, 2014 House Majority Leader John Boehner had raised $5,408,271 toward his re-election from contributions outside the state of Ohio. This equates to a whopping 87.9% of his total contributions being from people and organizations other than those he is geographically elected to represent. Source: OpenSecrets.org
 
 		%ol{:start => 2}
 			%li 
@@ -340,15 +388,25 @@
 
 		%p I’m actually sympathetic to much of government corruption. Are you going to try and get that big contract over to your friend, or to a stranger at your friend’s expense? Some certainly have the discipline to adjudicate these situations fairly, but they are the exceptional ones in acting contrary to human nature. Would you, truly, risk hurting people you know and care about in such a situation? So long as the legislators are representing tens of thousands of people some will be privileged to the detriment of others.
 
+		.image.inline
+			%img{:src => "../../images/features/democracy/legislature.jpg", :alt => "Chart showing how special interest groups and big business can get in the way of citizens access to legislature and therefore overall democratization of the law-making process."}
+
 		%p The bottom line is that this is no way for the legislative branch of our government to be organized. No other alternative seemed possible in the 18th century because there was no practical way for the average citizen to participate directly in government. 
 
 		%p Today, thanks to digital technology, that is no longer true.
 	
 	%section#section6
-		%header
+		%header.centered
 			%h3 The Traditional Problem
 			%hr
-		%p Here is the basic model of the current legislature.
+
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/capitol.jpg", :alt => "US Capitol Building"}
+
+			%img{:src => "../../images/features/democracy/two-states.jpg", :alt => "Map that shows Robert F. Kenedy's home state vs. the state he was a senator in, ie. 'carpetbagging'."}
+			%p.caption.tan National politicians routinely “carpetbag”: owning a residence in a district or state in which they do not reside in order to run for Congress or, particularly, the Senate. Prominent examples include Robert F. Kennedy (New York Senate, 1964); Rick Santorum (Pennsylvania 18th Congressional District, 1990); Hillary Rodham Clinton (New York Senate, 2000) 
+
+		%p.emphasized Here is the basic model of the current legislature.
 
 		%ul
 			%li
@@ -358,7 +416,7 @@
 				%p All citizens in a voting district have the opportunity to choose their Senators and Representatives. Their choices are generally based on minimal information, primarily advertising and local media endorsements as well as the political party of the candidate. Less than 1% of voting citizens will ever meet these legislators, much less have an in-depth conversation with them.
 
 			%li
-				%p Senators and Representatives write and vote on laws. They are influenced by their constituents, special interests, and lobbyists, as well as by other members of their political party who have little investment in the constituency of others. Over $3.3 billion dollars are spent on lobbying to influence policy in the United States each year. (Source: Center for Responsive Politics) And less than 10% of bills introduced in the 112th U.S. Congress--561 of 6,845--actually passed into law. (Source: Brookings)
+				%p Senators and Representatives write and vote on laws. They are influenced by their constituents, special interests, and lobbyists, as well as by other members of their political party who have little investment in the constituency of others. Over $3.3 billion dollars are spent on lobbying to influence policy in the United States each year. (Source: Center for Responsive Politics) And less than 10% of bills introduced in the 112th U.S. Congress&mdash;561 of 6,845&mdash;actually passed into law. (Source: Brookings)
 
 			%li
 				%p Every six years (Senators) or two years (Representatives) the legislators are up for re-election. Since 1964 the House of Representatives has boasted a re-election rate of over 90%. While serving as Senators and Representatives, our legislators spend substantial time and effort attempting to get re-elected in lieu of performing their duties.
@@ -369,20 +427,31 @@
 		%header
 			%h3 The Digital Solution
 			%hr
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/phones.jpg", :alt => "Graphic of different smartphones fanned out."}
+			%p.caption.orange As of September 2013 55% of U.S. adults already own a smartphone.
+
 		%p It all starts with the smartphone. This miraculous device gives us the power of a computer in our hand, pocket or purse at all times. It enables any citizen to receive information in and communicate out, both in real-time while running software applications far more powerful than those being run on desktop computers just a decade ago. The easy availability to such powerful, real-time technology empowers us to radically re-think each individual’s role in our collective governance. No longer is there a limitation of space and time to prevent our getting high-resolution information on our government and legislators. There is no barrier to our placing a secure, verified vote on a candidate or law from the comfort of our home. The majority of Americans now hold in our hand the power to do everything that our legislators do when they vote on a bill: read the text. Consider outside information. Engage in debate or conversation. Place the vote. It’s no different from a use case perspective than how we use Facebook. The difference is, rather than our time being spent on pleasant conveniences we are able to influence our nation as the self-representational government that democracy purports to be.
 
 		%p We’re not accustomed to thinking about having visibility into and knowledge of the inner workings of our nation, state, and locality, much less direct impact on decisions. But we can. And we should.  
 
+		.image.inline.caption-side
+			%img{:src => "../../images/features/democracy/avb.jpg", :alt => "A screenshot of the Arlington Visual Budget."}
+			%p.caption.gray The award-winning Arlington Visual Budget, conceived and designed by Involution, is an exemplar of a progressive local community providing transparency into key aspects of their government.
+
 		%p Given the unprecedented ability our citizens now have to be more actively and directly engaged in our government, here is my suggestion for reconceiving the legislature into one more reflective of the philosophies underpinning democracy:
+
+		.image.aside.bleed.desktop
+			%img{:src => "../../images/features/democracy/flow-icons.jpg", :alt => "Flowchart showing how legislation could be voted on by being proposed by governments, but then being passed along to the citizens for voting through their handheld devices."}
 
 		%ol
 			%li 
-				%p The current senators and representatives would all be removed and replaced with exceptional individuals chosen for their potential to contribute to an enlightened government. Economists, physicists, biologists. Experts in well-being, personality, healthy communities. Labor leaders. Structural engineers. Agriculturists. Basically, if you look at every Presidential cabinet role, and all of the different aspects of life that bills under current consideration touch, experts that pertain to all of those things would be represented. So instead of the key qualification for participating being to influence voters and pacify lobbyists, our legislative branch would be filled with the brightest minds, the most insightful souls, and our leading experts. Yes, there would need to be some “politicians” among them--people who can build consensus and write legislative actions. But they should simply be one of the many roles being filled in this group of experts, not the vast majority of the chamber. While the initial group would need some kind of blanket appointment - nominated by the president, confirmed by popular vote? - eventually they would stay or go based on their statistics: are they contributing to successful legislation? If yes, then great. If not, then the executive branch would nominate new candidates who would be confirmed via the general voting system.
+				%p The current senators and representatives would all be removed and replaced with exceptional individuals chosen for their potential to contribute to an enlightened government. Economists, physicists, biologists. Experts in well-being, personality, healthy communities. Labor leaders. Structural engineers. Agriculturists. Basically, if you look at every Presidential cabinet role, and all of the different aspects of life that bills under current consideration touch, experts that pertain to all of those things would be represented. So instead of the key qualification for participating being to influence voters and pacify lobbyists, our legislative branch would be filled with the brightest minds, the most insightful souls, and our leading experts. Yes, there would need to be some “politicians” among them&mdash;people who can build consensus and write legislative actions. But they should simply be one of the many roles being filled in this group of experts, not the vast majority of the chamber. While the initial group would need some kind of blanket appointment - nominated by the president, confirmed by popular vote? - eventually they would stay or go based on their statistics: are they contributing to successful legislation? If yes, then great. If not, then the executive branch would nominate new candidates who would be confirmed via the general voting system.
 
 				%p Similar to the legislators of old, these people would introduce ideas and work together to bring bills forward. However they would not be doing the voting: we, the people, would. And, they would be engaged in far more valuable long-term strategic planning. This collection of the best and brightest tasked with leading the future of the country would not be thinking about pacifying Joe Smith in Tuscaloosa. They would need to consider and care for all of our citizens, and lead us down a path that took care of Joe Smith in more indirect ways. They would impact our lives by moving us away from the immediate chatter and into systems and trajectories intended to make the most of our potential. So not only would we be replacing potentially unqualified people with supremely qualified people, their charter would change. They would be far more motivated by the greater and collective good than the politicians in Washington who, as of this writing, have a 10.8% approval rating. (Source: RealClearPolitics)
 
 			%li 
-				%p Independent of the government itself, a new profession of “analysts” would be required. Many of these would likely come from the current ranks of political commentators but would surely attract a new breed of personalities as well. Their role would be to represent a very specific position--it could be as narrow as “Protect the second amendment at all costs” or as broad as “Advocate for individual liberties.” They would review every bill, comment on it, and make a recommendation to vote for or against. Voters would “subscribe” to them. That subscription might be free, or the analyst might charge for it. But they, and whatever staff they developed, would be helping to guide people as to what bills deserve to be voted on or not, based on the beliefs and interests of each voter. Instead of blasting their platform out in a broadband way their platform would be taken for granted and they would be informing voters as to how they should vote based on their stated beliefs and interests.
+				%p Independent of the government itself, a new profession of “analysts” would be required. Many of these would likely come from the current ranks of political commentators but would surely attract a new breed of personalities as well. Their role would be to represent a very specific position&mdash;it could be as narrow as “Protect the second amendment at all costs” or as broad as “Advocate for individual liberties.” They would review every bill, comment on it, and make a recommendation to vote for or against. Voters would “subscribe” to them. That subscription might be free, or the analyst might charge for it. But they, and whatever staff they developed, would be helping to guide people as to what bills deserve to be voted on or not, based on the beliefs and interests of each voter. Instead of blasting their platform out in a broadband way their platform would be taken for granted and they would be informing voters as to how they should vote based on their stated beliefs and interests.
 
 				%p Now, it is unavoidable that the same lobbyists and special interests that infect our legislators and media now will also play a big role with the analysts, as well as the experts who are the actual legislators. This is unavoidable. However, experts who are already successful, recognized, and accomplished in their particular fields will be far less susceptible to lobbying influence than the random politicians who gets through the voting gauntlet. The editors are may be a different story, but the beauty is that the system as a whole comes back to the voters in a fully democratic way. It is responsive. Editors may be corrupted in all kinds of ways, but if the voters stop subscribing to them they will not be relevant anymore. It is far harder to invest in this kind of brittle resource than putting millions into a senator who, excepting a scandal, will be around for six years.
 
@@ -391,11 +460,15 @@
 
 		%p This is true democracy. The abstractions in the current process that leave us with professional politicians sporting a wide variety of qualifications are relics intended to make a proper democracy with checks-and-balances work in a pre-digital world. Well, thanks to digital technology, that system is redundant. We can share information in real time. We can provide a secure vote via our devices. We can easily evaluate success via an objective system and judge the actors in democratic rule with those metrics. It seems so radical, yet the only thing that is radical to me is why we aren’t already talking about it already.
 
+		.image.aside.caption-bottom
+			%img{:src => "../../images/features/democracy/leaders.jpg", :alt => "Photographs of Stephen Hawking, Carl Sagan, Clara Barton, and Henery Ford."}
+			%p.caption.green Would our legislature have benefited from Stephen Hawking participating? Carl Sagan? Clara Barton? Henry Ford? We should empower leaders who actually lead.
+
 		%p The reason that an elite group of brilliant experts has historically been antithetical to democracy is that it amounts to an elite of the few ruling the many. This model is like that of Ancient Sparta, empowering wise and accomplished people to come together and chart the course that would be best for all of us collectively. Our current democracy also has an “elite” but they do not boast the sort of qualifications that the people leading a nation that often fashions itself as the greatest in the world really deserves. Our tech-accelerated conception makes this irrelevant. Citizens vote on the bills directly, and the elite only keep their positions in the legislature if they are contributing to good (read: acceptable to the majority, as a democracy should be) legislation.
 
 		%p Now, for this solution to work would require some investments. 100% of all citizens who have the right to vote would need to be own smartphones. The government would then need to provide comparable devices that are capable of properly handling the information review and secure voting process for those citizens who do not provide such devices for themselves. Additionally, there would need to be small, central voting stations in some geographic frequency to enable those with accessibility issues for whom the smartphone would not work to vote. While these represent significant new costs we would be retiring a myriad of old costs that, while I have been unable to find all of the data to provide a total cost rollup, is well into the billions of dollars each year spent by cities, counties, states and the federal government. The barrier to making this happen is not the cost; it is the collective will of those with vested interests who would lose their personal advantages for making this happen.
 
-		%h3 Let’s make it together.
+		%h3.bigLine Let’s make it together.
 
 		%p Like many radical ideas, it may be seductive to focus on some vulnerability in it and try to pull it apart. Go ahead. This probably isn’t the exact right idea. But it’s a start down the right path. The digital world is nothing like the world that came before it, and we deserve it to ourselves and the future to rethink everything. Regardless of any issues with this system, I challenge you to make the case that, in their respective totalities, the current system is better than what’s proposed here. It isn’t.
 
