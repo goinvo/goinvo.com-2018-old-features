@@ -471,6 +471,19 @@ section {
 	position: relative;
 	.slide {
 		padding: 12em 8em 8em;
+		@include clearfix();
+		.left {
+			float: left;
+			width: 65%;
+			padding-right: 3em;
+		}
+		.right {
+			float: right;
+			width: 35%;
+		}
+		p {
+			max-width: 100%;
+		}
 		&.one {
 			color: #FFF;
 			background-image: linear-gradient(to right, fade-out(#CE2A23, 0.20) 0%, fade-out(#CE2A23, 1) 75%, fade-out(#CE2A23, 0.40) 100%), image-url('features/democracy/voting/phone.jpg');
@@ -489,6 +502,9 @@ section {
 			p {
 				width: 48%;
 			}
+		}
+		&.two, &.three, &.four, &.five, &.six {
+			border-bottom: 3px solid $red;
 		}
 	}
 	h3 {
