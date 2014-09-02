@@ -49,7 +49,7 @@
 
 		.govtSlides
 			%nav.visualNav
-				%a.slider-button.slide0{:href => "#"} Theocracy
+				%a.slider-button.slide0.active{:href => "#"} Theocracy
 				%a.slider-button.slide1{:href => "#"} Oligarchy
 				%a.slider-button.slide2{:href => "#"} Feudalism
 				%a.slider-button.slide3{:href => "#"} Absolute Monarchy
@@ -475,21 +475,52 @@
 		%p Who wants to rethink democracy with me?
 
 		.votingSlides
-			%nav.visualNav
-				%a.slider-button.slide0{:href => "#"} Slide 1
-				%a.slider-button.slide1{:href => "#"} Slide 2
-				%a.slider-button.slide2{:href => "#"} Slide 3
-				%a.slider-button.slide3{:href => "#"} Slide 4
-				%a.slider-button.slide4{:href => "#"} Slide 5
-				%a.slider-button.slide5{:href => "#"} Slide 6
-				%a.slider-button.slide6{:href => "#"} Slide 7
 			#votingSlider.slider
-				%div Slide 1
-				%div Slide 2
-				%div Slide 3
-				%div Slide 4
-				%div Slide 5
-				%div Slide 6
-				%div Slide 7
+				%nav.visualNav
+					%a.slider-button.slide0.active{:href => "#"} Overview
+					%a.slider-button.slide1{:href => "#"} Bill Introduction
+					%a.slider-button.slide2{:href => "#"} Bill Overview
+					%a.slider-button.slide3{:href => "#"} Simplified Overview
+					%a.slider-button.slide4{:href => "#"} Vote on the Bill
+					%a.slider-button.slide5{:href => "#"} Analyst’s Response
+				.slide.one
+					%header
+						%h3 Handheld Voting System
+						%hr
+					.content
+						%h5 Overview
+						%p While a direct voting system is easily illustrated via the various screens that follow, the totality of the infrastructure would be immense. Such a system would likely fall under the auspices of the United States Department of Justice, incurring the bureaucratic trappings inherent in major government initiatives aimed at some 315 million people.
+				.slide.two
+					%header
+						%h3 <strong>1.</strong> Bill Introduction
+						%hr
+					.content
+						%p Citizens would periodically receive a bill to consider. Along with an overview of the bill, the first screen would display a graph showing the opinions of a personalized group of analysts, while “automagically” mapping each voter’s personal preferences to the content. While all voters would be encouraged to conduct their own research, the system would make it dead simple to see how the things they care about map to the specific legislation.
+						%p All information within the voting system would be available via written and audio means. Voters would have access to live helpers as well as brick-and-mortar voting centers for additional assistance.
+				.slide.three
+					%header
+						%h3 <strong>2.</strong> Bill Overview
+						%hr
+					.content
+						%p Protecting the integrity of the vote is a first-order priority, requiring the latest in identity recognition software. From a software development perspective, such security features would likely demand more ongoing investment than the entire rest of the system combined. This technology could also help customize the delivery and structure of information depending on its interpretation of a voter’s mood, attention, or other factors.
+				.slide.four
+					%header
+						%h3 <strong>3.</strong> Simplified Overview Based on Comprehension
+						%hr
+					.content
+						%p To further encourage voters’ critical thinking, the system would provide an interactive table of contents along with key statistics and graphs to aid understanding of essential aspects of the legislation.
+						%p The fine details of any national bill are bound to be complicated and potentially difficult to parse. A plain-language overview of the salient points would help citizens to understand what is at stake.
+				.slide.five
+					%header
+						%h3 <strong>4.</strong> Vote on the Bill
+						%hr
+					.content
+						%p Voting time! The citizens would input t heard. The democratic process, as close system, could be possible in a large, mo
+				.slide.six
+					%header
+						%h3 <strong>5.</strong> Analyst’s Response
+						%hr
+					.content
+						%p While most citizens might be unable to read the entirety of bills, support would come from a new breed of political analysts. These individuals and organizations would read, interpret, and make recommendations on legislation based on their specific platforms and interests and provide citizens with their unique perspectives and voting recommendations.
 - content_for(:worlds_end) do
 	= javascript_include_tag "features/rethinking-democracy.js"

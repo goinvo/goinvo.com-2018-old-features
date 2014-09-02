@@ -150,6 +150,9 @@ form {
 		cursor: pointer;
 		background-color: transparentize($navy, 0.0);
 		color: transparentize($white, 0.0);
+		//Fix for OSX Font Rendering on Dark BG's
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	input[type=submit] {

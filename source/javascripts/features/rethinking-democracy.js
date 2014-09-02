@@ -41,6 +41,8 @@ $(document).ready(function(){
 		event.preventDefault();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
+		$('.govtSlides .visualNav .slider-button.active').toggleClass('active');
+		$(this).toggleClass('active');
 		govtSlider.slickGoTo(parseInt(slideNumber));
 
 		// While that's happening, let's do something else, like reinit'ing the vars.
@@ -54,17 +56,39 @@ $(document).ready(function(){
 		});
 	});
 
-	var voteSlider = $('#votingSlider').slick({
+	// Init Voting Slider
+	var votingSlider = $('#votingSlider').slick({
 		prevArrow: null,
 		nextArrow: null,
 		draggable: false,
+		dots: false,
 		speed: animationSpeed
 	});
+
+	var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+	var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+	$('#votingSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
+	$('#votingSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+
+	// If you click a voting slider's buttons...
 	$('.votingSlides .visualNav .slider-button').click(function(event) {
+		//Get to the slide!
 		event.preventDefault();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
-		voteSlider.slickGoTo(parseInt(slideNumber));
+		$('.votingSlides .visualNav .slider-button.active').toggleClass('active');
+		$(this).toggleClass('active');
+		votingSlider.slickGoTo(parseInt(slideNumber));
+
+		// While that's happening, let's do something else, like reinit'ing the vars.
+		var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+		var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+		$('#votingSlider .slick-list').animate({
+			height: currentSlideTotalHeight + 'px'
+		}, animationSpeed);
+		$('#votingSlider .slick-active .image').animate({
+			height: currentSlideTextHeight + 'px'
+		});
 	});
 });
 
