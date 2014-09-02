@@ -11,7 +11,8 @@
 	%meta{:name => "keywords", :content => ""}/
 %header.govtNav
 	%nav.main-nav
-		%a.one{:href => "#section1"} Rethinking Democracy
+		%a.zero{:href => "#section0"} Introduction
+		%a.one{:href => "#section1"} The Origin of Democracy
 		%a.two{:href => "#section2"} Alternatvies to Democracy
 		%a.three{:href => "#section3"} So, What form of Government Best Fits Now?
 		%a.four{:href => "#section4"} Elements of a Better Democacy
@@ -19,11 +20,26 @@
 		%a.six{:href => "#section6"} The Tradditional Problem
 		%a.seven{:href => "#section7"} The Digital Solution
 %article#feature-article.government
-	%section#section1
-		%header.section-header
-			%h1 Rethinking Democracy
+	%header#article-header
+		%h1 Redesign Democracy
+		%hr
+		%h2 A Fresh Approach to a Venerable Institution
+	%section#section0
+		%header
+			%h3 Introduction
 			%hr
-			%h2 Today's U.S. government is built on principles and practices established more than 2,000 years ago. Can digital technology help us realize a better way?
+		%p Older generations seem to chronically lament that the world of the young is new, unprecedented, and terrible. Nostalgia and familiarity combine to create a “They don’t make ‘em like they used to...” mentality, one that ignores the fact preceding generations were saying exactly the same thing about them. The reality is that things are the way they are, each of us typically being more comfortable with and connected to that which we know the best and identify most closely with ourselves.
+
+		%p However, it is just possible that we are reaching the nadir of the existing democratic process in the United States, an environment of toxicity and partisanship that shows no sign of softening. Coincidentally we are also at a moment where technology enables the tantalizing potential to reconsider the way our government is structured.
+
+		%p Democracy in the United States has over 200 years of history behind it; democracy as a government system has more than 2,000 years of precedent. It may be the best system going but it sure doesn’t seem to be doing a very good job. It might even be obsolete in this world that looks so very different than the one which produced it.
+
+		%p This is the moment - our moment, together, yours and mine - to create a better system. So read on, see what I have in mind, and why. And if it sounds good to enough of us, maybe we can really change the world.
+	%section#section1
+		%header
+			%h3 The Origins of Democracy
+			%hr
+		%p Today's U.S. government is built on principles and practices established more than 2,000 years ago. Can digital technology help us realize a better way?
 		%p Democracy first took root around 508 BC in Athens, Greece, the cultural cradle of antiquity. From 508 to 146 BC Greece, particularly Athens, set the foundation upon which western civilization was to develop. Much of modern science, art, and architecture traces directly back to this place and time, building off of or reacting to the achievements of this period over the subsequent 2,160 years. This is certainly the case with modern democracy.
 
 		%p Of course, the Athenians had a very different conception than we do of who was eligible to rule, to say nothing of who could vote. According to A.W. Gomme, of the estimated 315,500 people in Athens during the height of their civilization, there were:
@@ -481,8 +497,8 @@
 					%a.slider-button.slide1{:href => "#"} Bill Introduction
 					%a.slider-button.slide2{:href => "#"} Bill Overview
 					%a.slider-button.slide3{:href => "#"} Simplified Overview
-					%a.slider-button.slide4{:href => "#"} Vote on the Bill
-					%a.slider-button.slide5{:href => "#"} Analyst’s Response
+					%a.slider-button.slide4{:href => "#"} Analyst’s Response
+					%a.slider-button.slide5{:href => "#"} Vote on the Bill
 				.slide.one
 					%header
 						%h3 Handheld Voting System
@@ -512,15 +528,38 @@
 						%p The fine details of any national bill are bound to be complicated and potentially difficult to parse. A plain-language overview of the salient points would help citizens to understand what is at stake.
 				.slide.five
 					%header
-						%h3 <strong>4.</strong> Vote on the Bill
-						%hr
-					.content
-						%p Voting time! The citizens would input t heard. The democratic process, as close system, could be possible in a large, mo
-				.slide.six
-					%header
 						%h3 <strong>5.</strong> Analyst’s Response
 						%hr
 					.content
 						%p While most citizens might be unable to read the entirety of bills, support would come from a new breed of political analysts. These individuals and organizations would read, interpret, and make recommendations on legislation based on their specific platforms and interests and provide citizens with their unique perspectives and voting recommendations.
+				.slide.six
+					%header
+						%h3 <strong>4.</strong> Vote on the Bill
+						%hr
+					.content
+						%p Voting time! The citizens would input t heard. The democratic process, as close system, could be possible in a large, mo
+	- # BEGIN Credits: Copy from this line.
+	#credits
+		.author
+			%img{:src => "../../images/people/dirk/dk_nofilter.jpg", :alt => ""}/
+			.author-content
+				.author-header
+					%h3 Author
+					%h2 Dirk Knemeyer
+				.author-bio
+					%p Dirk Knemeyer is a social futurist and a founder of Involution Studios. He has provided consulting, design, and technology to some of the best companies in the world including Apple, Microsoft, Oracle, PayPal, and Shutterfly. Dirk&rsquo;s writings have been published in places like Business Week and Core77. He has keynoted conferences in Europe and the U.S. and spoken at venues like TEDx, Transhumanism+, and South by Southwest. Dirk has participated on 15 boards in industries including healthcare, publishing, and education. He holds a Master of Arts in Popular Culture from Bowling Green State University and a Bachelor of Arts in English from The University of Toledo.
+		.contributors
+			%h3 Title
+			%p Person
+			%hr
+			%h3 Title
+			%p Person
+			%hr
+			%h3 Title
+			%p Person
+			%hr
+			%h3 Title
+			%p Person
+	- # END Credits. Copy to this line.
 - content_for(:worlds_end) do
 	= javascript_include_tag "features/rethinking-democracy.js"

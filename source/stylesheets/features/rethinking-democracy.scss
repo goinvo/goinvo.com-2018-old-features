@@ -24,7 +24,7 @@ body {
 .govtNav {
 	background: #FFF;
 	position: fixed;
-	z-index: 20;
+	z-index: 100;
 	width: 100%;
 	background: #FFF;
 	border-bottom: 2px solid #DDD;
@@ -33,7 +33,7 @@ body {
 .main-nav {
 	max-width: 1630px;
 	margin: 0 auto;
-	padding: 0 5rem;
+	padding: 0 1rem;
 	@include clearfix();
 	a {
 		display: block;
@@ -69,7 +69,7 @@ article.government {
 	margin: 0 auto;
 	border-left: 2px solid #CCC;
 	border-right: 2px solid #CCC;
-	z-index: 0;
+	z-index: 20;
 	line-height: 1.8em;
 	overflow: hidden;
 	hr {
@@ -448,6 +448,7 @@ section {
 }
 
 #votingSlider {
+	margin-top: 3em;
 	nav {
 		position: absolute;
 		width: 100%;
@@ -488,7 +489,6 @@ section {
 			p {
 				width: 48%;
 			}
-			
 		}
 	}
 	h3 {
@@ -502,34 +502,33 @@ section {
 	}
 }
 
-#section1 {
-	header {
-		max-width: 100%;
-		padding: 30% 5rem 0;
-		margin-bottom: 4em;
-		background: url(../../images/features/democracy/hero.jpg) no-repeat;
-		background-position: center;
-		background-size: cover;
-		color: #FFF;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		h1 {
-			margin-bottom: 0;
-			padding-bottom: 1rem;
-			letter-spacing: 1px;
-		}
-		h2 {
-			padding-top: 1.5rem;
-			padding-bottom: 2.5rem;
-			font-size: 1.375em;
-			font-weight: 400;
-			max-width: 540px;
-		}
-		hr {
-			border-top: 3px solid #FFF;
-			width: 60px;
-			margin: 0;
-		}
+header#article-header {
+	max-width: 100%;
+	margin-top: 50px;
+	padding: 30% 5rem 0;
+	margin-bottom: 4em;
+	background: url(../../images/features/democracy/hero.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #FFF;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	h1 {
+		margin-bottom: 0;
+		padding-bottom: 1rem;
+		letter-spacing: 1px;
+	}
+	h2 {
+		padding-top: 1.5rem;
+		padding-bottom: 2.5rem;
+		font-size: 1.375em;
+		font-weight: 400;
+		max-width: 540px;
+	}
+	hr {
+		border-top: 3px solid #FFF;
+		width: 60px;
+		margin: 0;
 	}
 }
 
@@ -586,3 +585,78 @@ section {
 		font-size: 3.5em;
 	}
 }
+
+#credits {
+	padding: 2em 8em 4em;
+	max-width: 900px;
+	max-width: 90rem;
+	margin: 0 auto;
+	@include clearfix();
+	.author, .contributors {
+		float: left;
+	}
+	h2 {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1em;
+		color: #888;
+		margin-bottom: 0;
+		padding-bottom: 0.25em;
+	}
+	p {
+		font-size: 20px;
+		line-height: 1.3em;
+	}
+	.author {
+		width: 65%;
+		padding-right: 3em;
+		color: #444;
+	}
+	.author-content {
+		position: relative;
+		margin-top: -25%;
+		background: $white;
+		padding: 2em;
+		border-color: $blue;
+		border-width: 0 3px 3px;
+		border-style: solid;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.contributors {
+		width: 35%;
+		padding: 2em;
+		border: 3px solid $red;
+		h3 {
+			font-size: 22px;
+			padding-bottom: 0.5em;
+		}
+		p {
+			font-size: 34px;
+			margin-bottom: 0;
+		}
+		hr {
+			width: 2em;
+			margin: 1.5em 0;
+			border-width: 5px;
+			border-color: $red;
+		}
+	}
+	@media only screen and (max-width: 978px) {
+		padding-left: 3em;
+		padding-right: 3em;
+		.author {
+			padding-right: 0;
+			margin-bottom: 2em;
+		}
+		.author, .contributors {
+			width: 100%;
+		}
+	}
+}
+// END Credits: Copy from this line.

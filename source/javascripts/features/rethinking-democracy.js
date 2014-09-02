@@ -19,6 +19,7 @@ $(document).ready(function(){
 	//If you click a slider's arrow...
 	$('.slider-arrow').click(function(event) {
 		event.preventDefault();
+		stop();
 		if ($(this).hasClass('next')) {
 			govtSlider.slickNext();
 		} else {
@@ -39,6 +40,7 @@ $(document).ready(function(){
 	$('.govtSlides .visualNav .slider-button').click(function(event) {
 		//Get to the slide!
 		event.preventDefault();
+		stop();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
 		$('.govtSlides .visualNav .slider-button.active').toggleClass('active');
@@ -74,6 +76,7 @@ $(document).ready(function(){
 	$('.votingSlides .visualNav .slider-button').click(function(event) {
 		//Get to the slide!
 		event.preventDefault();
+		stop();
 		buttonClass = $(this).attr('class');
 		slideNumber = buttonClass.replace( /^\D+/g, '');
 		$('.votingSlides .visualNav .slider-button.active').toggleClass('active');
