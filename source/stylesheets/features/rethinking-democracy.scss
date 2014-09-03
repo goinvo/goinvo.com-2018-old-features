@@ -471,15 +471,45 @@ section {
 	position: relative;
 	.slide {
 		padding: 12em 8em 8em;
-		@include clearfix();
-		.left {
-			float: left;
-			width: 65%;
-			padding-right: 3em;
-		}
-		.right {
-			float: right;
-			width: 35%;
+		// .left {
+		// 	float: left;
+		// 	width: 65%;
+		// 	padding-right: 3em;
+		// }
+		// .right {
+		// 	float: right;
+		// 	width: 35%;
+		// }
+		.bottom {
+			@include clearfix();
+			&.two {
+				.col {
+					width: 50%;
+					float: left;
+					&:first-child {
+						padding-right: 1em;
+					}
+					&:last-child {
+						padding-left: 1em;
+					}
+				}
+			}
+			&.three {
+				.col {
+					width: 33.333333333333%;
+					float: left;
+					padding-left: 0.5em;
+					padding-right: 0.5em;
+					&:first-child {
+						padding-left: 0;
+						padding-right: 1em;
+					}
+					&:last-child {
+						padding-left: 1em;
+						padding-right: 0;
+					}
+				}
+			}
 		}
 		p {
 			max-width: 100%;
