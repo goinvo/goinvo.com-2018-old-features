@@ -96,15 +96,13 @@ $(document).ready(function(){
 });
 
 $(window).load(function(event) {
-	var padding01 = (($('.image.aside.caption-side img').height()-($('.image.aside.caption-side p').height()+6))/2);
-	var padding02 = (($('.image.inline.caption-side img').height()-($('.image.inline.caption-side p').height()+6))/2);
-	$('.image.aside.caption-side p').css({
-		'padding-top': padding01,
-		'padding-bottom': padding01
+	var winston = $('.image.aside.caption-side p').outerHeight();
+	var avb = $('.image.inline.caption-side p').outerHeight();
+	$('.image.aside.caption-side .winston').css({
+		'height': winston
 	});
-	$('.image.inline.caption-side p').css({
-		'padding-top': padding02,
-		'padding-bottom': padding02
+	$('.image.inline.caption-side .avb').css({
+		'height': avb
 	});
 });
 
@@ -115,14 +113,12 @@ $(window).resize(function(event){
 	$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 
 	// Images
-	var padding01 = (($('.image.aside.caption-side img').height()-($('.image.aside.caption-side p').height()+6))/2);
-	var padding02 = (($('.image.inline.caption-side img').height()-($('.image.inline.caption-side p').height()+6))/2);
-	$('.image.aside.caption-side p').css({
-		'padding-top': padding01,
-		'padding-bottom': padding01
+	var winston = $('.image.aside.caption-side p').outerHeight();
+	var avb = $('.image.inline.caption-side p').outerHeight();
+	$('.image.aside.caption-side .winston').css({
+		'height': winston
 	});
-	$('.image.inline.caption-side p').css({
-		'padding-top': padding02,
-		'padding-bottom': padding02
+	$('.image.inline.caption-side .avb').css({
+		'height': avb
 	});
 });

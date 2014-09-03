@@ -110,30 +110,65 @@ section {
 
 .image {
 	&.caption-side {
-		img {
+		@include clearfix();
+		.image {
 			float: left;
+			font-size: 0;
+			background-size: cover;
+			background-position: center;
+			&.winston {
+				background-image: image-url('features/democracy/winston.jpg');
+			}
+			&.avb {
+				background-image: image-url('features/democracy/avb.jpg');
+			}
 		}
 		p {
+			width: 50%;
 			float: left;
 			border-left: 0;
+			font-size: 1em;
+			line-height: 1.5em;
+			padding: 2em;
 		}
 	}
 	&.inline {
 		&.caption-side {
-			@include clearfix();
-			img {
-				max-width: 60%;
+			.image {
+				width: 65%;
+				background-position: top left;
 			}
 			p {
-				width: 40%;
-				font-size: 1.1em;
-				line-height: 1.2em;
-				padding: 0 2em;
+				width: 35%;
 			}
 		}
 		margin: 3em 0;
 		img {
 			max-width: 75%;
+		}
+	}
+	&.aside {
+		width: 40%;
+		padding-right: 5em;
+		float: right;
+		&.caption-bottom {
+			p {
+				border-top: 0;
+			}
+		}
+		&.caption-side {
+			.image {
+				width: 35%;
+			}
+			p {
+				width: 65%;
+				font-size: 1.25em;
+				padding: 2.5em 1.5em;
+			}
+			strong {
+				padding-top: 0.5em;
+				display: block;
+			}
 		}
 	}
 	p {
@@ -163,45 +198,6 @@ section {
 		}
 		&.tan {
 			border-color: $tan;
-		}
-	}
-	&.caption-side {
-		img {
-			float: left;
-			max-width: 50%;
-		}
-		p {
-			width: 50%;
-			float: left;
-			border-left: 0;
-			font-size: 1em;
-			line-height: 1.2em;
-			padding: 0 2em;
-		}
-	}
-	&.aside {
-		width: 40%;
-		padding-right: 5em;
-		float: right;
-		&.caption-bottom {
-			p {
-				border-top: 0;
-			}
-		}
-		&.caption-side {
-			img {
-				max-width: 35%;
-			}
-			p {
-				width: 65%;
-				font-size: 1.5em;
-				line-height: 1.2em;
-				padding: 0 1em;
-			}
-			strong {
-				padding-top: 0.5em;
-				display: block;
-			}
 		}
 	}
 }
@@ -445,6 +441,11 @@ section {
 			background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
 		}
 	}
+}
+
+.flagGraphic {
+	padding: 0 5em;
+	display: none;
 }
 
 #votingSlider {
@@ -703,5 +704,20 @@ header#article-header {
 		.author, .contributors {
 			width: 100%;
 		}
+	}
+}
+
+@media only screen and (min-width: 1630px) {
+	article.government {
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+	.votingSlides .flagGraphic {
+		display: block;
+	}
+	#votingSlider {
+		display: none;
 	}
 }
