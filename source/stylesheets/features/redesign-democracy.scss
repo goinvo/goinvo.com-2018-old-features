@@ -35,18 +35,18 @@ body {
 	margin: 0 auto;
 	padding: 0 1rem;
 	@include clearfix();
+	text-align: center;
 	a {
-		display: block;
+		display: inline-block;
 		height: 55px;
-		padding: 1.3rem 1.5rem 0 0;
-		font-size: 1.05em;
+		padding: 1.3rem 1.25rem 0;
+		font-size: 1.2em;
 		color: #58504A;
-		float: left;
 		transition: color 200ms ease;
 		&:after {
 			content: "";
 			display: block;
-			width: 18px;
+			width: 14px;
 			border-bottom: 2px solid transparent;
 			transition: border-bottom 200ms ease;
 		}
@@ -55,7 +55,7 @@ body {
 			&:after {
 				content: "";
 				display: block;
-				width: 18px;
+				width: 14px;
 				border-bottom: 2px solid #617E94;
 			}
 		}
@@ -91,19 +91,31 @@ section {
 		max-width: 60%;
 		padding: 0 5rem;
 	}
-	header.centered {
-		padding: 1.5em 0;
-		max-width: 100%;
-		text-align: center;
-		h3 {
-			font-size: 3em;
-			font-weight: 400;
-		}
-		hr {
-			margin: 2em auto;
-		}
+	&#section1 hr {
+		border-color: $orange;
 	}
-	&#section6, &#section7 {
+	&#section2 hr {
+		border-color: $red;
+	}
+	&#section3 hr {
+		border-color: $teal;
+	}
+	&#section4 hr {
+		border-color: $green;
+	}
+	&#section5 hr {
+		border-color: $blue;
+	}
+	&#section6 hr {
+		border-color: $yellow;
+	}
+	&#section7 hr {
+		border-color: $orange;
+	}
+	&#section8 hr {
+		border-color: $red;
+	}
+	&#section7, &#section8 {
 		@include clearfix();
 	}
 }
@@ -276,64 +288,31 @@ section {
 			border-bottom: 10px solid transparent;
 			width: calc(100%/6);
 			font-size: 1.25em;
+			font-weight: 700;
 			text-align: center;
 			float: left;
-			color: #AAA;
-			transition: border-color 300ms ease;
-			&.slide0 {
-				&:hover {
-					color: $orange;
-				}
-				&.active {
-					border-color: $orange;
-					color: $orange;
-				}
+			color: #BBB;
+			transition: color 300ms ease;
+			&:hover, &.active {
+				color: #555;
 			}
-			&.slide1 {
-				&:hover {
-					color: $red;
-				}
-				&.active {
-					border-color: $red;
-					color: $red;
-				}
-			}
-			&.slide2 {
-				&:hover {
-					color: $teal;
-				}
-				&.active {
-					border-color: $teal;
-					color: $teal;
-				}
-			}
-			&.slide3 {
-				&:hover {
-					color: $green;
-				}
-				&.active {
-					border-color: $green;
-					color: $green;
-				}
-			}
-			&.slide4 {
-				&:hover {
-					color: $blue;
-				}
-				&.active {
-					border-color: $blue;
-					color: $blue;
-				}
-			}
-			&.slide5 {
-				&:hover {
-					color: $yellow;
-				}
-				&.active {
-					border-color: $yellow;
-					color: $yellow;
-				}
-			}
+		}
+	}
+	.buttonNav a {
+		position: absolute;
+		z-index: 10;
+		font-size: 0;
+		width: 41px;
+		height: 100px;
+		top: 22rem;
+		background: image-url("arrow.png") no-repeat;
+		background-size: 41px 100px;
+		&.prev {
+			left: 30px;
+			transform: scaleX(-1);
+		}
+		&.next {
+			right: 30px;
 		}
 	}
 }
@@ -355,7 +334,6 @@ section {
 			max-width: 100%;
 			padding: 0;
 		}
-		
 		.text, .image {
 			float: left;
 		}
@@ -450,6 +428,7 @@ section {
 
 #votingSlider {
 	margin-top: 3em;
+	position: relative;
 	nav {
 		position: absolute;
 		width: 100%;
@@ -469,7 +448,6 @@ section {
 			}
 		}
 	}
-	position: relative;
 	.slide {
 		padding: 12em 8em 8em;
 		@include clearfix();
@@ -477,32 +455,43 @@ section {
 			float: left;
 			width: 65%;
 			padding-right: 3em;
+			&.split {
+				width: 40%;
+			}
 		}
 		.right {
 			float: right;
 			width: 35%;
+			&.split {
+				width: 60%;
+			}
+			
+		}
+		.split {
+			.col {
+				@include clearfix();
+				width: 50%;
+				float: left;
+				&:first-child {
+					padding-right: 1em;
+				}
+				&:last-child {
+					padding-left: 1em;
+				}
+			}
 		}
 		&.six {
 			.left {
-				width: 54%;
+				width: 35%;
 			}
 			.right {
-				width: 46%;
+				width: 65%;
 			}
 		}
 		.bottom {
 			@include clearfix();
 			&.two {
-				.col {
-					width: 50%;
-					float: left;
-					&:first-child {
-						padding-right: 1em;
-					}
-					&:last-child {
-						padding-left: 1em;
-					}
-				}
+				
 			}
 		}
 		p {
@@ -572,27 +561,7 @@ header#article-header {
 	}
 }
 
-#section2 {
-	.buttonNav a {
-		position: absolute;
-		z-index: 10;
-		font-size: 0;
-		width: 41px;
-		height: 100px;
-		top: 45%;
-		background: image-url("arrow.png") no-repeat;
-		background-size: 41px 100px;
-		&.prev {
-			left: 30px;
-			transform: scaleX(-1);
-		}
-		&.next {
-			right: 30px;
-		}
-	}
-}
-
-#section6 {
+#section7 {
 	padding: 3em 0;
 	border-top: 2px solid #d2d2d2;
 	border-bottom: 2px solid #d2d2d2;
@@ -611,7 +580,7 @@ header#article-header {
 	}
 }
 
-#section7 {
+#section8 {
 	.image.aside.bleed {
 		padding: 0;
 		margin-right: -5em;
@@ -707,7 +676,7 @@ header#article-header {
 	}
 }
 
-@media only screen and (min-width: 1630px) {
+@media only screen and (max-width: 1630px) {
 	article.government {
 		border: none;
 	}
