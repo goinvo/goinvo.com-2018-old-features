@@ -471,15 +471,18 @@ section {
 	position: relative;
 	.slide {
 		padding: 12em 8em 8em;
-		// .left {
-		// 	float: left;
-		// 	width: 65%;
-		// 	padding-right: 3em;
-		// }
-		// .right {
-		// 	float: right;
-		// 	width: 35%;
-		// }
+		.top.two {
+			@include clearfix();
+			.left {
+				float: left;
+				width: 65%;
+				padding-right: 3em;
+			}
+			.right {
+				float: right;
+				width: 35%;
+			}
+		}
 		.bottom {
 			@include clearfix();
 			&.two {
