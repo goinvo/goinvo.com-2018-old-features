@@ -471,16 +471,22 @@ section {
 	position: relative;
 	.slide {
 		padding: 12em 8em 8em;
-		.top.two {
-			@include clearfix();
+		@include clearfix();
+		.left {
+			float: left;
+			width: 65%;
+			padding-right: 3em;
+		}
+		.right {
+			float: right;
+			width: 35%;
+		}
+		&.six {
 			.left {
-				float: left;
-				width: 65%;
-				padding-right: 3em;
+				width: 54%;
 			}
 			.right {
-				float: right;
-				width: 35%;
+				width: 46%;
 			}
 		}
 		.bottom {
@@ -494,22 +500,6 @@ section {
 					}
 					&:last-child {
 						padding-left: 1em;
-					}
-				}
-			}
-			&.three {
-				.col {
-					width: 33.333333333333%;
-					float: left;
-					padding-left: 0.5em;
-					padding-right: 0.5em;
-					&:first-child {
-						padding-left: 0;
-						padding-right: 1em;
-					}
-					&:last-child {
-						padding-left: 1em;
-						padding-right: 0;
 					}
 				}
 			}
@@ -660,6 +650,12 @@ header#article-header {
 		font-size: 20px;
 		line-height: 1.3em;
 	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $lightgray;
+		}
+	}
 	.author {
 		width: 65%;
 		padding-right: 3em;
@@ -687,6 +683,7 @@ header#article-header {
 		}
 		p {
 			font-size: 34px;
+			line-height: 1em;
 			margin-bottom: 0;
 		}
 		hr {
@@ -708,4 +705,3 @@ header#article-header {
 		}
 	}
 }
-// END Credits: Copy from this line.

@@ -1,7 +1,7 @@
 - content_for(:title) do
 	= "Rethinking Democracy"
 - content_for(:page_head) do
-	= stylesheet_link_tag "features/rethinking-democracy"
+	= stylesheet_link_tag "features/redesign-democracy"
 	= stylesheet_link_tag "slick"
 	= javascript_include_tag "//use.typekit.net/imk3eze.js"
 	:javascript
@@ -534,29 +534,43 @@
 						.col
 							= image_tag 'features/democracy/voting/screenshots/p2.2.jpg'
 				.slide.four
-					.top
-						.left
+					.left
+						.top
 							%header
 								%h3 <strong>3.</strong> Simplified Overview Based on Comprehension
 								%hr
 							.content
 								%p To further encourage voters’ critical thinking, the system would provide an interactive table of contents along with key statistics and graphs to aid understanding of essential aspects of the legislation.
 								%p The fine details of any national bill are bound to be complicated and potentially difficult to parse. A plain-language overview of the salient points would help citizens to understand what is at stake.
-						.right
-					.bottom
-						
+						.bottom.two
+							.col
+								= image_tag 'features/democracy/voting/screenshots/p3.1.jpg'
+							.col
+								= image_tag 'features/democracy/voting/screenshots/p3.2.jpg'
+					.right
+						= image_tag 'features/democracy/voting/face-detect.jpg'						
 				.slide.five
-					%header
-						%h3 <strong>4.</strong> Analyst’s Response
-						%hr
-					.content
-						%p While most citizens might be unable to read the entirety of bills, support would come from a new breed of political analysts. These individuals and organizations would read, interpret, and make recommendations on legislation based on their specific platforms and interests and provide citizens with their unique perspectives and voting recommendations.
+					.top
+						%header
+							%h3 <strong>4.</strong> Analyst’s Response
+							%hr
+						.content
+							%p While most citizens might be unable to read the entirety of bills, support would come from a new breed of political analysts. These individuals and organizations would read, interpret, and make recommendations on legislation based on their specific platforms and interests and provide citizens with their unique perspectives and voting recommendations.
+					.bottom.two
+						.col
+							= image_tag 'features/democracy/voting/screenshots/p4.1.jpg'
+						.col
+							= image_tag 'features/democracy/voting/screenshots/p4.2.jpg'
 				.slide.six
-					%header
-						%h3 <strong>5.</strong> Vote on the Bill
-						%hr
-					.content
-						%p Voting time! The citizens would input t heard. The democratic process, as close system, could be possible in a large, mo
+					.left
+						%header
+							%h3 <strong>5.</strong> Vote on the Bill
+							%hr
+						.content
+							%p Voting time! The citizens would input their votes and let their voices be heard. The democratic process, as close to the ideal intention of this system, could be possible in a large, modern nation-state.
+							= image_tag 'features/democracy/voting/p5.phone.jpg'
+					.right
+						= image_tag 'features/democracy/voting/p5.ui.jpg'
 	- # BEGIN Credits: Copy from this line.
 	#credits
 		.author
@@ -568,17 +582,20 @@
 				.author-bio
 					%p Dirk Knemeyer is a social futurist and a founder of Involution Studios. He has provided consulting, design, and technology to some of the best companies in the world including Apple, Microsoft, Oracle, PayPal, and Shutterfly. Dirk&rsquo;s writings have been published in places like Business Week and Core77. He has keynoted conferences in Europe and the U.S. and spoken at venues like TEDx, Transhumanism+, and South by Southwest. Dirk has participated on 15 boards in industries including healthcare, publishing, and education. He holds a Master of Arts in Popular Culture from Bowling Green State University and a Bachelor of Arts in English from The University of Toledo.
 		.contributors
-			%h3 Title
-			%p Person
+			%h3 Editor
+			%p Emily Twaddell
 			%hr
-			%h3 Title
-			%p Person
+			%h3 Design Team
+			%p Basecraft<br><small><a href="http://basecraft.com/">basecraft.com</a></small>
 			%hr
-			%h3 Title
-			%p Person
+			%h3 Voting System UIs
+			%p Juhan Sonin
 			%hr
-			%h3 Title
-			%p Person
+			%h3 Online Design
+			%p Noel Fort&eacute;
+			%hr
+			%h3 Print &amp; .epub Design
+			%p Brian Liston
 	- # END Credits. Copy to this line.
 - content_for(:worlds_end) do
-	= javascript_include_tag "features/rethinking-democracy.js"
+	= javascript_include_tag "features/redesign-democracy.js"

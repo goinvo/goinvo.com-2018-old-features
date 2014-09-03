@@ -310,7 +310,6 @@ section, #sec11 .content {
 	}
 }
 
-// BEGIN Credits: Copy from this line.
 #credits {
 	padding: 2em 8em 4em;
 	max-width: 900px;
@@ -336,6 +335,12 @@ section, #sec11 .content {
 		font-size: 20px;
 		line-height: 1.3em;
 	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $lightgray;
+		}
+	}
 	.author {
 		width: 65%;
 		padding-right: 3em;
@@ -346,7 +351,7 @@ section, #sec11 .content {
 		margin-top: -25%;
 		background: $white;
 		padding: 2em;
-		border-color: #888;
+		border-color: $blue;
 		border-width: 0 3px 3px;
 		border-style: solid;
 		p {
@@ -356,7 +361,7 @@ section, #sec11 .content {
 	.contributors {
 		width: 35%;
 		padding: 2em;
-		border: 3px solid #888;
+		border: 3px solid $red;
 		h3 {
 			font-size: 22px;
 			padding-bottom: 0.5em;
@@ -369,6 +374,7 @@ section, #sec11 .content {
 			width: 2em;
 			margin: 1.5em 0;
 			border-width: 5px;
+			border-color: $red;
 		}
 	}
 	@media only screen and (max-width: 978px) {
@@ -383,4 +389,3 @@ section, #sec11 .content {
 		}
 	}
 }
-// END Credits: Copy from this line.
