@@ -20,47 +20,64 @@ $(document).ready(function(){
 		nextArrow: null,
 		draggable: false,
 		dots: false,
-		speed: animationSpeed
+		speed: animationSpeed,
+		onAfterChange: function() {
+			ableToNavigate = true;
+		}
 	});
 
-	var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
-	var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
-	// $('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
-	$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+	var currentSlideHeight = $('#govtSlider .slick-list').height();
+	$('#govtSlider .image').css('height', currentSlideHeight + 'px');
 
-	//If you click a slider's arrow...
-	$('.slider-arrow').on('click', function(event) {
+	//If you click a government slider's arrow...
+	$('.govtSlides .buttonNav .slider-arrow').click(function(event) {
 		event.preventDefault();
-		var currentSlideIndex = govtSlider.slickCurrentSlide();
-		$('.govtSlides .visualNav .active').toggleClass('active');
-		if ($(this).hasClass('next')) {
-			govtSlider.slickNext();
-			if (currentSlideIndex === 5) {
-				$('.govtSlides .visualNav .active').toggleClass('active');
-				$('.govtSlides .visualNav .slide0').toggleClass('active');
+		currentSlideIndex = govtSlider.slickCurrentSlide();
+		if (ableToNavigate) {
+			ableToNavigate = false;
+			$('.govtSlides .visualNav .active').toggleClass('active');
+			if ($(this).hasClass('next')) {
+				govtSlider.slickNext();
+				if (currentSlideIndex === 5) {
+					$('.govtSlides .visualNav .slide0').toggleClass('active');
+					currentSlideIndex = 0;
+				} else {
+					$('.govtSlides .visualNav .slide' + (currentSlideIndex + 1)).toggleClass('active');
+					currentSlideIndex = currentSlideIndex + 1;
+				}
+
 			} else {
-				$('.govtSlides .visualNav .slide' + (currentSlideIndex + 1)).toggleClass('active');
+				govtSlider.slickPrev();
+				if (currentSlideIndex === 0) {
+					$('.govtSlides .visualNav .slide5').toggleClass('active');
+					currentSlideIndex = 5;
+				} else {
+					$('.govtSlides .visualNav .slide' + (currentSlideIndex - 1)).toggleClass('active');
+					currentSlideIndex = currentSlideIndex - 1;
+				}
 			}
-		} else {
-			govtSlider.slickPrev();
 			if (currentSlideIndex === 0) {
-				$('.govtSlides .visualNav .active').toggleClass('active');
-				$('.govtSlides .visualNav .slide5').toggleClass('active');
-			} else {
-				$('.govtSlides .visualNav .slide' + (currentSlideIndex - 1)).toggleClass('active');
+				var color = '#bc743e';
 			}
+			if (currentSlideIndex === 1) {
+				var color = '#d65f4d';
+			}
+			if (currentSlideIndex === 2) {
+				var color = '#9ec2b7';
+			}
+			if (currentSlideIndex === 3) {
+				var color =	'#7f8732';
+			}
+			if (currentSlideIndex === 4) {
+				var color = '#51697b';
+			}
+			if (currentSlideIndex === 5) {
+				var color = '#ddb40a';
+			}
+			$('#govtSlider .slick-list').css({
+				'border-color': color
+			});
 		}
-		
-		var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
-		var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
-		// $('#govtSlider .slick-list').animate({
-		// 	height: currentSlideTotalHeight + 'px'
-		// }, animationSpeed, function(){
-		// 	ableToNavigate = true;
-		// });
-		$('#govtSlider .slick-active .image').css({
-			height: currentSlideTextHeight + 'px'
-		});
 	});
 
 	// If you click a government slider's buttons...
@@ -77,9 +94,9 @@ $(document).ready(function(){
 			$(this).toggleClass('active');
 			govtSlider.slickGoTo(parseInt(slideNumber));
 
-			// // While that's happening, let's do something else, like reinit'ing the vars.
-			// var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
-			// var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
+			// While that's happening, let's do something else, like reinit'ing the vars.
+			var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
+			var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
 			$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 			// $('#govtSlider .slick-list').animate({
 			// 	height: currentSlideTotalHeight + 'px'
@@ -98,10 +115,10 @@ $(document).ready(function(){
 		speed: animationSpeed
 	});
 
-	// var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
-	// var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
-	// $('#votingSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
-	// $('#votingSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+	var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+	var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+	$('#votingSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
+	$('#votingSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 
 	// If you click a voting slider's buttons...
 	$('.votingSlides .visualNav .slider-button').on('click', function(event) {
@@ -114,14 +131,14 @@ $(document).ready(function(){
 			$(this).toggleClass('active');
 			votingSlider.slickGoTo(parseInt(slideNumber));
 
-			// // While that's happening, let's do something else, like reinit'ing the vars.
-			// var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
-			// var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
-			// $('#votingSlider .slick-list').animate({
-			// 	'height': currentSlideTotalHeight + 'px'
-			// }, animationSpeed, function(){
-			// 	ableToNavigate = true;
-			// });
+			// While that's happening, let's do something else, like reinit'ing the vars.
+			var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+			var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+			$('#votingSlider .slick-list').animate({
+				'height': currentSlideTotalHeight + 'px'
+			}, animationSpeed, function(){
+				ableToNavigate = true;
+			});
 		}
 	});
 });
@@ -177,14 +194,21 @@ $(window).load(function(event) {
 	}
 
 	// Header stuff for funsies.
-	if ($('body').outerWidth(false) > 480) {
-		var navHeight = $('.govtNav .main-nav').outerHeight();
-		$('.govtNav').css('visibility', 'visible');
+	var navHeight = $('.govtNav .main-nav').outerHeight();
+	$('.govtNav').css('visibility', 'visible');
+	var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55);
+	var scrollbarPosition = $('body').scrollTop();
+	if (scrollbarPosition > navCue) {
 		$('.main-nav').css({
-			'height': '0',
-			'overflow': 'hidden',
+			'border-right': '2px solid #CCC',
+			'border-left': '2px solid #CCC',
+			'border-bottom': '2px solid #DDD'
+			'top': '-' + navHeight;
 		});
-		var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55);
+		$('.main-nav').css('max-height', '1000px');
+	}
+	$(window).on('scroll', function(event){
+		var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55); // Exclude Margins
 		var scrollbarPosition = $('body').scrollTop();
 		if (scrollbarPosition > navCue) {
 			$('.main-nav').css({
@@ -192,65 +216,50 @@ $(window).load(function(event) {
 				'border-left': '2px solid #CCC',
 				'border-bottom': '2px solid #DDD'
 			});
-			$('.main-nav').animate({
-				'height': navHeight + 'px'
+		} else if (scrollbarPosition < navCue) {
+			$('.main-nav').css({
+				'border-bottom': '0px solid #DDD',
+				'max-height': '0px'
 			});
 		}
-		$(window).on('scroll', function(event){
-			var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55); // Exclude Margins
-			var scrollbarPosition = $('body').scrollTop();
-			if (scrollbarPosition > navCue) {
-				$('.main-nav').css({
-					'border-right': '2px solid #CCC',
-					'border-left': '2px solid #CCC',
-					'border-bottom': '2px solid #DDD',
-					'height': navHeight + 'px'
-				});
-			} else if (scrollbarPosition < navCue) {
-				$('.main-nav').css({
-					'border-bottom': '0px solid #DDD',
-					'height': '0px'
-				});
-			}
 
-			// Section positions
-			if (scrollbarPosition < section1loc) {
-				$('.main-nav a').removeClass('active');
-			}
-			if (scrollbarPosition > section1loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.one').toggleClass('active');
-			}
-			if (scrollbarPosition > section2loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.two').toggleClass('active');
-			}
-			if (scrollbarPosition > section3loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.three').toggleClass('active');
-			}
-			if (scrollbarPosition > section4loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.four').toggleClass('active');
-			}
-			if (scrollbarPosition > section5loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.five').toggleClass('active');
-			}
-			if (scrollbarPosition > section6loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.six').toggleClass('active');
-			}
-			if (scrollbarPosition > section7loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.seven').toggleClass('active');
-			}
-			if (scrollbarPosition > section8loc) {
-				$('.main-nav a').removeClass('active');
-				$('.main-nav a.eight').toggleClass('active');
-			}
-		});
-	}
+		// Section positions
+		if (scrollbarPosition < section1loc) {
+			$('.main-nav a').removeClass('active');
+		}
+		if (scrollbarPosition > section1loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.one').toggleClass('active');
+		}
+		if (scrollbarPosition > section2loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.two').toggleClass('active');
+		}
+		if (scrollbarPosition > section3loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.three').toggleClass('active');
+		}
+		if (scrollbarPosition > section4loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.four').toggleClass('active');
+		}
+		if (scrollbarPosition > section5loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.five').toggleClass('active');
+		}
+		if (scrollbarPosition > section6loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.six').toggleClass('active');
+		}
+		if (scrollbarPosition > section7loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.seven').toggleClass('active');
+		}
+		if (scrollbarPosition > section8loc) {
+			$('.main-nav a').removeClass('active');
+			$('.main-nav a.eight').toggleClass('active');
+		}
+	});
 	var winston = $('.image.aside.caption-side p').outerHeight();
 	var avb = $('.image.inline.caption-side p').outerHeight();
 	$('.image.aside.caption-side .winston').css({

@@ -26,16 +26,16 @@ body {
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
-	transition: border 400ms ease;
+	transition: top 400ms ease;
 	visibility: hidden;
 }
 
 .main-nav {
 	max-width: 1630px;
+	height: auto;
 	margin: 0 auto;
 	padding: 0 1rem;
 	background: #FFF;
-	transition: height 400ms ease;
 	@include clearfix();
 	a {
 		display: inline-block;
@@ -332,7 +332,6 @@ section {
 	margin-bottom: 0;
 	.slick-slide {
 		@include clearfix();
-		background-color: #F5F5F5;
 		header p {
 			margin: 0;
 		}
@@ -369,9 +368,12 @@ section {
 			}
 		}
 	}
-	.theocracy {
+	.slick-list {
+		background-color: #F5F5F5;
 		border-top: 3px solid $orange;
 		border-bottom: 3px solid $orange;
+	}
+	.theocracy {
 		hr {
 			border-color: $orange;
 		}
@@ -381,8 +383,6 @@ section {
 		}
 	}
 	.oligarchy {
-		border-top: 3px solid $red;
-		border-bottom: 3px solid $red;
 		hr {
 			border-color: $red;
 		}
@@ -391,8 +391,6 @@ section {
 		}
 	}
 	.feudalism {
-		border-top: 3px solid $teal;
-		border-bottom: 3px solid $teal;
 		hr {
 			border-color: $teal;
 		}
@@ -401,8 +399,6 @@ section {
 		}
 	}
 	.a-monarchy {
-		border-top: 3px solid $green;
-		border-bottom: 3px solid $green;
 		hr {
 			border-color: $green;
 		}
@@ -411,8 +407,6 @@ section {
 		}
 	}
 	.p-monarchy {
-		border-top: 3px solid $blue;
-		border-bottom: 3px solid $blue;
 		hr {
 			border-color: $blue;
 		}
@@ -421,8 +415,6 @@ section {
 		}
 	}
 	.sps {
-		border-top: 3px solid $yellow;
-		border-bottom: 3px solid $yellow;
 		hr {
 			border-color: $yellow;
 		}
@@ -566,28 +558,36 @@ article.government {
 
 header#article-header {
 	max-width: 100%;
-	padding: 30% 5rem 0;
+	padding: 30% 5rem 5%;
 	margin-bottom: 4em;
-	background: url(../../images/features/democracy/hero.jpg) no-repeat;
+	background: url(../../images/features/democracy/flag-hero.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
 	color: #FFF;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	.headline {
+		max-width: 480px;
+		padding: 1.5em;
+		border: 2px solid $blue;
+		background: #FFF;
+		color: $blue;
+	}
+	h1, h2 {
+		margin: 0;
+	}
 	h1 {
-		margin-bottom: 0;
 		padding-bottom: 1rem;
 		letter-spacing: 1px;
 	}
 	h2 {
 		padding-top: 1.5rem;
-		padding-bottom: 2.5rem;
 		font-size: 1.375em;
 		font-weight: 400;
 		max-width: 540px;
 	}
 	hr {
-		border-top: 3px solid #FFF;
+		border-top: 3px solid $blue;
 		width: 60px;
 		margin: 0;
 	}
