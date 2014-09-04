@@ -27,7 +27,9 @@ body {
 	z-index: 100;
 	width: 100%;
 	background: #FFF;
-	border-bottom: 2px solid #DDD;
+	border-bottom: 0;
+	transition: border 400ms ease;
+	visibility: hidden;
 }
 
 .main-nav {
@@ -36,6 +38,7 @@ body {
 	padding: 0 1rem;
 	@include clearfix();
 	text-align: center;
+	transition: height 400ms ease;
 	a, span {
 		display: inline-block;
 		height: 55px;
@@ -63,28 +66,6 @@ body {
 				width: 14px;
 				border-bottom: 2px solid #617E94;
 			}
-		}
-	}
-}
-
-article.government {
-	background: #FFF;
-	max-width: 1630px;
-	margin: 0 auto;
-	border-left: 2px solid #CCC;
-	border-right: 2px solid #CCC;
-	z-index: 20;
-	line-height: 1.8em;
-	overflow: hidden;
-	hr {
-		margin: 2em 0;
-		width: 40px;
-		border-top: 5px solid #58504A;
-	}
-	p.emphasized {
-		font-size: 2em;
-		&.i {
-			font-style: italic;
 		}
 	}
 }
@@ -557,9 +538,30 @@ section {
 	}
 }
 
+article.government {
+	background: #FFF;
+	max-width: 1630px;
+	margin: 0 auto;
+	border-left: 2px solid #CCC;
+	border-right: 2px solid #CCC;
+	z-index: 20;
+	line-height: 1.8em;
+	overflow: hidden;
+	hr {
+		margin: 2em 0;
+		width: 40px;
+		border-top: 5px solid #58504A;
+	}
+	p.emphasized {
+		font-size: 2em;
+		&.i {
+			font-style: italic;
+		}
+	}
+}
+
 header#article-header {
 	max-width: 100%;
-	margin-top: 50px;
 	padding: 30% 5rem 0;
 	margin-bottom: 4em;
 	background: url(../../images/features/democracy/hero.jpg) no-repeat;
