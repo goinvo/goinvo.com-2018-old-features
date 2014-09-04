@@ -203,9 +203,8 @@ $(window).load(function(event) {
 			'border-right': '2px solid #CCC',
 			'border-left': '2px solid #CCC',
 			'border-bottom': '2px solid #DDD'
-			'top': '-' + navHeight;
 		});
-		$('.main-nav').css('max-height', '1000px');
+		$('.main-nav').css('max-height', '500px');
 	}
 	$(window).on('scroll', function(event){
 		var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55); // Exclude Margins
