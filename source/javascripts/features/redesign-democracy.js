@@ -3,6 +3,17 @@ $(document).ready(function(){
 	var animationSpeed = 400; //(x 1ms)
 	var ableToNavigate = true;
 
+	// Menu Bar
+	$('.main-nav a').on('click', function(event){
+		event.preventDefault();
+		var section = $(this).attr('href');
+		var sectionLoc = ($(section).offset().top) - 115;
+		$(this).toggleClass('active');
+		$('body').animate({
+			scrollTop: sectionLoc + 5
+		});
+	});
+
 	// Init Governments Slider
 	var govtSlider = $('#govtSlider').slick({
 		prevArrow: null,
@@ -14,11 +25,11 @@ $(document).ready(function(){
 
 	var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
 	var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
-	$('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
+	// $('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
 	$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 
 	//If you click a slider's arrow...
-	$('.slider-arrow').click(function(event) {
+	$('.slider-arrow').on('click', function(event) {
 		event.preventDefault();
 		var currentSlideIndex = govtSlider.slickCurrentSlide();
 		$('.govtSlides .visualNav .active').toggleClass('active');
@@ -42,18 +53,18 @@ $(document).ready(function(){
 		
 		var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
 		var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
-		$('#govtSlider .slick-list').animate({
-			height: currentSlideTotalHeight + 'px'
-		}, animationSpeed, function(){
-			ableToNavigate = true;
-		});
+		// $('#govtSlider .slick-list').animate({
+		// 	height: currentSlideTotalHeight + 'px'
+		// }, animationSpeed, function(){
+		// 	ableToNavigate = true;
+		// });
 		$('#govtSlider .slick-active .image').css({
 			height: currentSlideTextHeight + 'px'
 		});
 	});
 
 	// If you click a government slider's buttons...
-	$('.govtSlides .visualNav .slider-button').click(function(event) {
+	$('.govtSlides .visualNav .slider-button').on('click', function(event) {
 		//Get to the slide!
 		event.preventDefault();
 		if (ableToNavigate) {
@@ -66,15 +77,15 @@ $(document).ready(function(){
 			$(this).toggleClass('active');
 			govtSlider.slickGoTo(parseInt(slideNumber));
 
-			// While that's happening, let's do something else, like reinit'ing the vars.
-			var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
-			var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
+			// // While that's happening, let's do something else, like reinit'ing the vars.
+			// var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
+			// var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
 			$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
-			$('#govtSlider .slick-list').animate({
-				height: currentSlideTotalHeight + 'px'
-			}, animationSpeed, function(){
-				ableToNavigate = true;
-			});
+			// $('#govtSlider .slick-list').animate({
+			// 	height: currentSlideTotalHeight + 'px'
+			// }, animationSpeed, function(){
+			// 	ableToNavigate = true;
+			// });
 		}
 	});
 
@@ -87,13 +98,13 @@ $(document).ready(function(){
 		speed: animationSpeed
 	});
 
-	var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
-	var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
-	$('#votingSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
-	$('#votingSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+	// var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+	// var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+	// $('#votingSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
+	// $('#votingSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 
 	// If you click a voting slider's buttons...
-	$('.votingSlides .visualNav .slider-button').click(function(event) {
+	$('.votingSlides .visualNav .slider-button').on('click', function(event) {
 		event.preventDefault();
 		if (ableToNavigate) {
 			ableToNavigate = false;
@@ -103,19 +114,68 @@ $(document).ready(function(){
 			$(this).toggleClass('active');
 			votingSlider.slickGoTo(parseInt(slideNumber));
 
-			// While that's happening, let's do something else, like reinit'ing the vars.
-			var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
-			var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
-			$('#votingSlider .slick-list').animate({
-				'height': currentSlideTotalHeight + 'px'
-			}, animationSpeed, function(){
-				ableToNavigate = true;
-			});
+			// // While that's happening, let's do something else, like reinit'ing the vars.
+			// var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+			// var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+			// $('#votingSlider .slick-list').animate({
+			// 	'height': currentSlideTotalHeight + 'px'
+			// }, animationSpeed, function(){
+			// 	ableToNavigate = true;
+			// });
 		}
 	});
 });
 
 $(window).load(function(event) {
+	// Section Locations
+	var scrollbarPosition = $('body').scrollTop();
+
+	var section0loc = ($('#article-header').offset().top) - 115;
+	var section1loc = ($('#section1').offset().top) - 115;
+	var section2loc = ($('#section2').offset().top) - 115;
+	var section3loc = ($('#section3').offset().top) - 115;
+	var section4loc = ($('#section4').offset().top) - 115;
+	var section5loc = ($('#section5').offset().top) - 115;
+	var section6loc = ($('#section6').offset().top) - 115;
+	var section7loc = ($('#section7').offset().top) - 115;
+	var section8loc = ($('#section8').offset().top) - 115;
+
+	if (scrollbarPosition < section1loc) {
+		$('.main-nav a').removeClass('active');
+	}
+	if (scrollbarPosition > section1loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.one').toggleClass('active');
+	}
+	if (scrollbarPosition > section2loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.two').toggleClass('active');
+	}
+	if (scrollbarPosition > section3loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.three').toggleClass('active');
+	}
+	if (scrollbarPosition > section4loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.four').toggleClass('active');
+	}
+	if (scrollbarPosition > section5loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.five').toggleClass('active');
+	}
+	if (scrollbarPosition > section6loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.six').toggleClass('active');
+	}
+	if (scrollbarPosition > section7loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.seven').toggleClass('active');
+	}
+	if (scrollbarPosition > section8loc) {
+		$('.main-nav a').removeClass('active');
+		$('.main-nav a.eight').toggleClass('active');
+	}
+
 	// Header stuff for funsies.
 	if ($('body').outerWidth(false) > 480) {
 		var navHeight = $('.govtNav .main-nav').outerHeight();
@@ -127,7 +187,11 @@ $(window).load(function(event) {
 		var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55);
 		var scrollbarPosition = $('body').scrollTop();
 		if (scrollbarPosition > navCue) {
-			$('.govtNav').css('border-bottom', '2px solid #DDD');
+			$('.main-nav').css({
+				'border-right': '2px solid #CCC',
+				'border-left': '2px solid #CCC',
+				'border-bottom': '2px solid #DDD'
+			});
 			$('.main-nav').animate({
 				'height': navHeight + 'px'
 			});
@@ -136,11 +200,54 @@ $(window).load(function(event) {
 			var navCue = (($('#article-header').offset().top) + ($('#article-header').outerHeight()) - 55); // Exclude Margins
 			var scrollbarPosition = $('body').scrollTop();
 			if (scrollbarPosition > navCue) {
-				$('.govtNav').css('border-bottom', '2px solid #DDD');
-				$('.main-nav').css('height', navHeight + 'px');
+				$('.main-nav').css({
+					'border-right': '2px solid #CCC',
+					'border-left': '2px solid #CCC',
+					'border-bottom': '2px solid #DDD',
+					'height': navHeight + 'px'
+				});
 			} else if (scrollbarPosition < navCue) {
-				$('.govtNav').css('border-bottom', '0px solid #DDD');
-				$('.main-nav').css('height', '0px');
+				$('.main-nav').css({
+					'border-bottom': '0px solid #DDD',
+					'height': '0px'
+				});
+			}
+
+			// Section positions
+			if (scrollbarPosition < section1loc) {
+				$('.main-nav a').removeClass('active');
+			}
+			if (scrollbarPosition > section1loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.one').toggleClass('active');
+			}
+			if (scrollbarPosition > section2loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.two').toggleClass('active');
+			}
+			if (scrollbarPosition > section3loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.three').toggleClass('active');
+			}
+			if (scrollbarPosition > section4loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.four').toggleClass('active');
+			}
+			if (scrollbarPosition > section5loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.five').toggleClass('active');
+			}
+			if (scrollbarPosition > section6loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.six').toggleClass('active');
+			}
+			if (scrollbarPosition > section7loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.seven').toggleClass('active');
+			}
+			if (scrollbarPosition > section8loc) {
+				$('.main-nav a').removeClass('active');
+				$('.main-nav a.eight').toggleClass('active');
 			}
 		});
 	}
@@ -155,10 +262,21 @@ $(window).load(function(event) {
 });
 
 $(window).resize(function(event){
-	var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
-	var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
-	$('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
-	$('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
+	// Article Section Positons Recalculations
+	var section0loc = ($('#article-header').offset().top) - 115;
+	var section1loc = ($('#section1').offset().top) - 115;
+	var section2loc = ($('#section2').offset().top) - 115;
+	var section3loc = ($('#section3').offset().top) - 115;
+	var section4loc = ($('#section4').offset().top) - 115;
+	var section5loc = ($('#section5').offset().top) - 115;
+	var section6loc = ($('#section6').offset().top) - 115;
+	var section7loc = ($('#section7').offset().top) - 115;
+	var section8loc = ($('#section8').offset().top) - 115;
+
+	// var currentSlideTotalHeight = $('#govtSlider .slick-active').outerHeight();
+	// var currentSlideTextHeight = $('#govtSlider .slick-active .text').outerHeight();
+	// $('#govtSlider .slick-list').css('height', currentSlideTotalHeight + 'px');
+	// $('#govtSlider .slick-active .image').css('height', currentSlideTextHeight + 'px');
 
 	// Images
 	var winston = $('.image.aside.caption-side p').outerHeight();

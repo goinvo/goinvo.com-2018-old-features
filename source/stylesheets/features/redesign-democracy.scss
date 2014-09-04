@@ -22,11 +22,9 @@ body {
 }
 
 .govtNav {
-	background: #FFF;
 	position: fixed;
 	z-index: 100;
 	width: 100%;
-	background: #FFF;
 	border-bottom: 0;
 	transition: border 400ms ease;
 	visibility: hidden;
@@ -36,20 +34,15 @@ body {
 	max-width: 1630px;
 	margin: 0 auto;
 	padding: 0 1rem;
-	@include clearfix();
-	text-align: center;
+	background: #FFF;
 	transition: height 400ms ease;
-	a, span {
+	@include clearfix();
+	a {
 		display: inline-block;
 		height: 55px;
-		padding: 1.3rem 0.5rem 0;
+		padding: 1.3rem 1rem 0;
 		font-size: 1.05em;
 		color: #58504A;
-	}
-	span {
-		font-size: 1.35em;
-	}
-	a {
 		transition: color 200ms ease;
 		&:after {
 			content: "";
@@ -67,10 +60,21 @@ body {
 				border-bottom: 2px solid #617E94;
 			}
 		}
+		&.zero {
+			font-size: 1.35em;
+			transition: none;
+			&.active {
+				color: #58504A;
+				&:after {
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
 	}
 }
 
 section {
+	padding-top: 1em;
 	margin-bottom: 3em;
 	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
 		max-width: 60%;
@@ -269,7 +273,7 @@ section {
 		display: table;
 		a {
 			display: table-cell;
-			padding: 1em 1em 0.5em;
+			padding: 1em;
 			width: calc(100%/6);
 			font-size: 1.25em;
 			font-weight: 700;
