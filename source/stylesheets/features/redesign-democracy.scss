@@ -26,20 +26,20 @@ body {
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
-	transition: top 400ms ease;
-	visibility: hidden;
 }
 
 .main-nav {
 	max-width: 1630px;
-	max-height: 0;
-	height: auto;
 	margin: 0 auto;
 	padding: 0 1rem;
+	border-right: 2px solid #CCC;
+	border-left: 2px solid #CCC;
 	background: #FFF;
+	transition: height 400ms ease;
 	@include clearfix();
 	a {
-		display: inline-block;
+		display: block;
+		float: left;
 		height: 55px;
 		padding: 1.3rem 1rem 0;
 		font-size: 1.05em;
@@ -267,6 +267,24 @@ section {
 	}
 }
 
+.buttonNav a {
+	position: absolute;
+	z-index: 10;
+	font-size: 0;
+	width: 41px;
+	height: 100px;
+	top: 22rem;
+	background: image-url("arrow.png") no-repeat;
+	background-size: 41px 100px;
+	&.prev {
+		left: 30px;
+		transform: scaleX(-1);
+	}
+	&.next {
+		right: 30px;
+	}
+}
+
 .govtSlides {
 	position: relative;
 	.visualNav {
@@ -308,23 +326,6 @@ section {
 					background-color: $yellow;
 				}
 			}
-		}
-	}
-	.buttonNav a {
-		position: absolute;
-		z-index: 10;
-		font-size: 0;
-		width: 41px;
-		height: 100px;
-		top: 22rem;
-		background: image-url("arrow.png") no-repeat;
-		background-size: 41px 100px;
-		&.prev {
-			left: 30px;
-			transform: scaleX(-1);
-		}
-		&.next {
-			right: 30px;
 		}
 	}
 }
@@ -373,6 +374,7 @@ section {
 		background-color: #F5F5F5;
 		border-top: 3px solid $orange;
 		border-bottom: 3px solid $orange;
+		transition: border-color 400ms ease;
 	}
 	.theocracy {
 		hr {
@@ -430,6 +432,13 @@ section {
 	display: none;
 }
 
+.votingSlides {
+	position: relative;
+	.buttonNav a {
+		top: 18rem;
+	}
+}
+
 #votingSlider {
 	margin-top: 3em;
 	position: relative;
@@ -447,6 +456,7 @@ section {
 			padding: 1.5em 0.5em;
 			color: #FFF;
 			background: fade-out(#610101, 0.25);
+			transition: background 400ms ease;
 			&.active {
 				background: #610101;
 			}
@@ -713,6 +723,29 @@ header#article-header {
 	article.government {
 		border: none;
 	}
+	.main-nav {
+		border-right: none;
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 1320px) {
+	.main-nav a {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 1175px) {
+	.main-nav {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (max-width: 1070px) {
+	.main-nav .zero {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 1060px) {
@@ -721,5 +754,12 @@ header#article-header {
 	}
 	#votingSlider {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.main-nav a {
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
 	}
 }

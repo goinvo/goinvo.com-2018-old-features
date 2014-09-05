@@ -1,5 +1,5 @@
 - content_for(:title) do
-	= "Rethinking Democracy"
+	= "Redesign Democracy"
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/redesign-democracy"
 	= stylesheet_link_tag "slick"
@@ -65,7 +65,7 @@
 			%hr
 		%p Systems of government are characterized by a broad and complicated range of characteristics. This complexity can make it difficult to consider new political systems. Let’s look at some familiar approaches to government that have gone out of fashion.
 
-		.govtSlides
+		.govtSlides.slider-wrapper
 			%nav.visualNav
 				%a.slider-button.slide0.active{:href => "#"} Theocracy
 				%a.slider-button.slide1{:href => "#"} Oligarchy
@@ -492,8 +492,11 @@
 
 		%p Who wants to rethink democracy with me?
 
-		.votingSlides
+		.votingSlides.slider-wrapper
 			%img.flagGraphic{:src => "../../images/features/democracy/flag.jpg", :alt => "A graphic of the American Flag made out of smartphones."}/
+			%nav.buttonNav
+				%a.slider-arrow.prev{:href => "#"} Previous Alternative
+				%a.slider-arrow.next{:href => "#"} Next Alternative
 			#votingSlider.slider
 				%nav.visualNav
 					%a.slider-button.slide0.active{:href => "#"} Overview
