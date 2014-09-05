@@ -271,8 +271,23 @@ $(window).load(function(event) {
 });
 
 $(window).resize(function(event){
-	$('.main-nav').css('height', 'auto');
-	setAll();
+	if ($(window).width() > 830) {
+		$('.main-nav').css('height', 'auto');
+		setAll();
+		$(window).on('scroll', function(event){
+			setNavCuePoint();
+			setScrollbarLoc();
+			setScrollbarRelations();
+			setSectionRelations();
+		});
+	} else {
+		$('.main-nav').css({
+			'height': '',
+			'border-bottom-width': '',
+			'border-bottom-style': '',
+			'border-bottom-color': ''
+		});
+	}
 	
 	// Images
 	setAsideImages();
