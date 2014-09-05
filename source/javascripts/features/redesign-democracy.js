@@ -265,7 +265,6 @@ $(window).load(function(event) {
 			setSectionRelations();
 		});
 	}
-	
 	// Header stuff for funsies.
 	setAsideImages();
 });
@@ -274,13 +273,7 @@ $(window).resize(function(event){
 	if ($(window).width() > 830) {
 		$('.main-nav').css('height', 'auto');
 		setAll();
-		$(window).on('scroll', function(event){
-			setNavCuePoint();
-			setScrollbarLoc();
-			setScrollbarRelations();
-			setSectionRelations();
-		});
-	} else {
+	} if ($(window).width() < 830) {
 		$('.main-nav').css({
 			'height': '',
 			'border-bottom-width': '',
