@@ -239,7 +239,6 @@ $(document).ready(function(){
 	govtSlider = govtSliderObj.slick({
 		prevArrow: null,
 		nextArrow: null,
-		draggable: false,
 		dots: false,
 		speed: animationSpeed,
 		onAfterChange: function() {

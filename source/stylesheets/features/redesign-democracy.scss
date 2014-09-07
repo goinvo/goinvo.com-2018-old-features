@@ -128,6 +128,9 @@ section {
 			background-image: image-url('features/democracy/avb.jpg');
 		}
 	}
+	&.no-desktop {
+		display: none;
+	}
 	&.caption-side {
 		@include clearfix();
 		p {
@@ -147,6 +150,11 @@ section {
 			}
 			p {
 				width: 35%;
+			}
+		}
+		&.no-desktop {
+			p {
+				line-height: 1.25em;
 			}
 		}
 		margin: 3em 0;
@@ -776,11 +784,39 @@ header#article-header {
 			}
 		}
 	}
+	.image {
+		&.no-desktop {
+			display: block;
+		}
+		&.desktop {
+			display: none;
+		}
+	}
+	section > .avb.image.inline {
+		max-width: 100%;
+	}
 }
 
 @media only screen and (max-width: 900px) {
 	.main-nav a {
 		padding: 1.3rem 0.25rem 0;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.image.aside {
+		width: 80%;
+		margin: 0 auto 2em;
+		padding-left: 5em;
+		float: none;
+	}
+	section {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+			max-width: 100%;
+		}
+		img {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -804,7 +840,7 @@ header#article-header {
 		}
 		a {
 			height: auto;
-			padding: 1rem 1.25rem;
+			padding: 0.75rem 1.25rem 0.5rem;
 			border-bottom: 2px solid #F0F0F0;
 			float: none;
 			&:last-child {
@@ -843,6 +879,43 @@ header#article-header {
 	}
 	#govtSlider .slick-slide .text {
 		padding: 2em;
+		h4 {
+			font-size: 2.8em;
+		}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.image.inline.no-desktop {
+		.image {
+			width: 45%;
+		}
+		p {
+			width: 55%;
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.image.aside {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	header#article-header {
+		padding: 40% 2em 2em;
+		.headline {
+			font-size: 0.75em;
+		}
+	}
+	.image.aside {
+		padding: 0 2em;
+	}
+	section {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+			padding: 0 2rem;
+		}
 	}
 }
 
@@ -852,16 +925,21 @@ header#article-header {
 			a {
 				display: none;
 			}
+			.hint {
+				display: block;
+				padding: 1.5em;
+				line-height: 1;
+				color: #AAA;
+				text-align: center;
+			}
+		}	
+	}
+	#govtSlider {
+		.slick-list {
+			border-color: #AAA;
 		}
-		.hint {
-			display: block;
-			padding: 1.5em;
-			line-height: 1;
-			color: #AAA;
-			text-align: center;
-		}
-	} 
-	#govtSlider .slick-slide .col {
-		width: 100%;
-	} 
+		.slick-slide .col {
+			width: 100%;
+		} 
+	}
 }
