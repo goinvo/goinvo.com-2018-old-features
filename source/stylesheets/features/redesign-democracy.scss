@@ -331,6 +331,9 @@ section {
 					background-color: $yellow;
 				}
 			}
+			span {
+				display: none;
+			}
 		}
 	}
 }
@@ -761,6 +764,20 @@ header#article-header {
 	}
 }
 
+@media only screen and (max-width: 1024px) {
+	#govtSlider {
+		.slick-slide {
+			.text {
+				width: 100%;
+				padding: 2em 8em;
+			}
+			.image {
+				width: 0;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	.main-nav a {
 		padding: 1.3rem 0.25rem 0;
@@ -802,4 +819,49 @@ header#article-header {
 			}
 		}
 	}
+}
+
+@media only screen and (max-width: 787px) {
+	.govtSlides {
+		.visualNav {
+			@include clearfix();
+			a {
+				display: block;
+				float: left;
+				width: calc(100%/2);
+				br {
+					display: none;
+				}
+				span.space {
+					display: inline;
+				}
+			}
+		}
+		.buttonNav {
+			display: none;
+		}
+	}
+	#govtSlider .slick-slide .text {
+		padding: 2em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.govtSlides {
+		.visualNav {
+			a {
+				display: none;
+			}
+		}
+		.hint {
+			display: block;
+			padding: 1.5em;
+			line-height: 1;
+			color: #AAA;
+			text-align: center;
+		}
+	} 
+	#govtSlider .slick-slide .col {
+		width: 100%;
+	} 
 }
