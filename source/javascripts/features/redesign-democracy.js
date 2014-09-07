@@ -29,7 +29,7 @@ var setAsideImages = function() {
 }
 
 var setNavHeight = function() {
-	navHeight = $('.govtNav .main-nav').outerHeight();
+	navHeight = $('.nav-wrapper .main-nav').outerHeight();
 }
 
 var setNavCuePoint = function() {
@@ -43,8 +43,7 @@ var setScrollbarLoc = function() {
 var setScrollbarRelations = function() {
 	if (scrollbarPosition > navCue) {
 		$('.main-nav').css({
-			'height': navHeight + 'px',
-			'border-bottom': '2px solid #DDD'
+			'height': navHeight + 'px'
 		});
 	} else if (scrollbarPosition < navCue) {
 		$('.main-nav').css({
@@ -106,11 +105,36 @@ var setSectionRelations = function() {
 	}
 }
 
+var scrollToSec = function(sectionLinkElement) {
+	event.preventDefault();
+	var section = $(sectionLinkElement).attr('href');
+	if ($(window).width() > 830) {
+		var sectionLoc = ($(section).offset().top) - 65 - navHeight;
+	} else if ($(window).width() < 830) {
+		var navHeight = $('.nav-wrapper .nav-button').outerHeight();
+		var sectionLoc = ($(section).offset().top) - 65 - navHeight;
+		$('.main-nav').toggleClass('open');
+	}
+	$('.main-nav a.active').removeClass('active');
+	$(sectionLinkElement).toggleClass('active');
+	$('body').animate({
+		scrollTop: sectionLoc + 5
+	});
+}
+
 var setAll = function() {
 	setNavHeight();
 	setNavCuePoint();
 	setScrollbarLoc();
 	setScrollbarRelations();
+	setSectionLocations();
+	setSectionRelations();
+}
+
+var setMobile = function() {
+	setNavHeight();
+	setAsideImages();
+	setScrollbarLoc();
 	setSectionLocations();
 	setSectionRelations();
 }
@@ -199,14 +223,11 @@ var colorChange = function(sliderObject) {
 $(document).ready(function(){
 	// Menu Bar
 	$('.main-nav a').on('click', function(event){
+		scrollToSec(this);
+	});
+	$('.nav-wrapper .nav-button').on('click', function(event){
 		event.preventDefault();
-		var section = $(this).attr('href');
-		var sectionLoc = ($(section).offset().top) - 65 - navHeight;
-		$('.main-nav a.active').removeClass('active');
-		$(this).toggleClass('active');
-		$('body').animate({
-			scrollTop: sectionLoc + 5
-		});
+		$('.main-nav').toggleClass('open');
 	});
 
 	// Init Governments Slider
@@ -264,6 +285,8 @@ $(window).load(function(event) {
 			setScrollbarRelations();
 			setSectionRelations();
 		});
+	} else if ($(window).width() < 830) {
+		setMobile();
 	}
 	// Header stuff for funsies.
 	setAsideImages();
@@ -273,7 +296,8 @@ $(window).resize(function(event){
 	if ($(window).width() > 830) {
 		$('.main-nav').css('height', 'auto');
 		setAll();
-	} if ($(window).width() < 830) {
+	} else if ($(window).width() < 830) {
+		setMobile();
 		$('.main-nav').css({
 			'height': '',
 			'border-bottom-width': '',

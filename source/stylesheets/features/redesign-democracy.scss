@@ -21,11 +21,14 @@ body {
 	background-color: #000;
 }
 
-.govtNav {
+.nav-wrapper {
 	position: fixed;
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
+	.nav-button {
+		display: none;
+	}
 }
 
 .main-nav {
@@ -34,6 +37,7 @@ body {
 	padding: 0 1rem;
 	border-right: 2px solid #CCC;
 	border-left: 2px solid #CCC;
+	border-bottom: 2px solid #DDD;
 	background: #FFF;
 	transition: height 400ms ease;
 	@include clearfix();
@@ -43,8 +47,9 @@ body {
 		height: 55px;
 		padding: 1.3rem 1rem 0;
 		font-size: 1.05em;
+		line-height: 1em;
 		color: #58504A;
-		transition: color 200ms ease;
+		transition: color 200ms ease, background-color 200ms ease;
 		&:after {
 			content: "";
 			display: block;
@@ -53,12 +58,12 @@ body {
 			transition: border-bottom 200ms ease;
 		}
 		&:hover, &.active {
-			color: #617E94;
+			color: $blue;
 			&:after {
 				content: "";
 				display: block;
 				width: 14px;
-				border-bottom: 2px solid #617E94;
+				border-bottom: 2px solid $blue;
 			}
 		}
 		&.zero {
@@ -731,8 +736,7 @@ header#article-header {
 
 @media only screen and (max-width: 1320px) {
 	.main-nav a {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+		padding: 1.3rem 0.5rem 0;
 	}
 }
 
@@ -752,14 +756,50 @@ header#article-header {
 	.votingSlides .flagGraphic {
 		display: block;
 	}
-	#votingSlider {
+	#votingSlider, .votingSlides .buttonNav {
 		display: none;
 	}
 }
 
 @media only screen and (max-width: 900px) {
 	.main-nav a {
-		padding-left: 0.25rem;
-		padding-right: 0.25rem;
+		padding: 1.3rem 0.25rem 0;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.nav-wrapper .nav-button {
+		display: block;
+		padding: 1rem 0 0.75rem;
+		color: #AAA;
+		font-size: 1.125em;
+		letter-spacing: 0;
+		text-align: center;
+		text-transform: uppercase;
+		background: #FFF;
+		border-bottom: 2px solid #DDD;
+	}
+	.main-nav {
+		display: none;
+		padding: 0;
+		&.open {
+			display: block;
+		}
+		a {
+			height: auto;
+			padding: 1rem 1.25rem;
+			border-bottom: 2px solid #F0F0F0;
+			float: none;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				color: #FFF;
+				background-color: $blue;
+				&:after {
+					border-color: transparent;
+				}
+			}
+		}
 	}
 }
