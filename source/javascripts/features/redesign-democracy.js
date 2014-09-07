@@ -18,12 +18,16 @@ var setImageHeight = function(container, image) {
 }
 
 var setAsideImages = function() {
-	var winston = $('.image.aside.caption-side p').outerHeight();
-	var avb = $('.image.inline.caption-side p').outerHeight();
-	$('.image.aside.caption-side .winston').css({
-		'height': winston
+	var winston_aside = $('.winston.image.aside.caption-side p').outerHeight();
+	var winston_inline = $('.winston.image.inline.caption-side p').outerHeight();
+	var avb = $('.avb.image.caption-side p').outerHeight();
+	$('.winston.image.aside.caption-side div').css({
+		'height': winston_aside
 	});
-	$('.image.inline.caption-side .avb').css({
+	$('.winston.image.inline.caption-side div').css({
+		'height': winston_inline
+	});
+	$('.avb.image.caption-side div').css({
 		'height': avb
 	});
 }
@@ -43,7 +47,8 @@ var setScrollbarLoc = function() {
 var setScrollbarRelations = function() {
 	if (scrollbarPosition > navCue) {
 		$('.main-nav').css({
-			'height': navHeight + 'px'
+			'height': navHeight + 'px',
+			'border-bottom': '2px solid #DDD'
 		});
 	} else if (scrollbarPosition < navCue) {
 		$('.main-nav').css({
@@ -288,7 +293,6 @@ $(window).load(function(event) {
 	} else if ($(window).width() < 830) {
 		setMobile();
 	}
-	// Header stuff for funsies.
 	setAsideImages();
 });
 

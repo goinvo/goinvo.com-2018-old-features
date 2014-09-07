@@ -116,20 +116,20 @@ section {
 }
 
 .image {
+	.image {
+		font-size: 0;
+		float: left;
+		background-size: cover;
+		background-position: center top;
+		&.winston {
+			background-image: image-url('features/democracy/winston.jpg');
+		}
+		&.avb {
+			background-image: image-url('features/democracy/avb.jpg');
+		}
+	}
 	&.caption-side {
 		@include clearfix();
-		.image {
-			float: left;
-			font-size: 0;
-			background-size: cover;
-			background-position: center;
-			&.winston {
-				background-image: image-url('features/democracy/winston.jpg');
-			}
-			&.avb {
-				background-image: image-url('features/democracy/avb.jpg');
-			}
-		}
 		p {
 			width: 50%;
 			float: left;
@@ -331,9 +331,9 @@ section {
 					background-color: $yellow;
 				}
 			}
-			span {
-				display: none;
-			}
+		}
+		span {
+			display: none;
 		}
 	}
 }
