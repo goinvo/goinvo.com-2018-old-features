@@ -16,162 +16,20 @@ a {
 
 #main-container {
 	margin-top: 55px;
-	@include clearfix();
 }
 
-.block {
-	display: block;
-	&.bar {
-		width: 100%;
-	}
-	&.floated.half {
-		float: left;
-		width: 50%;
-	}
+// Heros
+#democracy {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('features/democracy/flag-hero.jpg');
 }
 
-.homepage-header {
-	width: 100%;
-	position: relative;
-	&.one, &.two, &.three {
-		padding: 0 1em;
-		.title {
-			h2, h3, h4, h5 {
-				color: $white;
-				font-weight: 400;
-				margin-bottom: 0;
-				&.boxed {
-					display: inline-block;
-					margin-bottom: 1em;
-					text-transform: uppercase;
-					color: $white;
-				}
-			}
-			h5 {
-				font-size: 16px;
-				letter-spacing: 1px;
-			}
-			.light-button {
-				display: inline-block;
-				margin-top: 1.2em;
-				padding: 0.6em 1em 0.4em;
-				border: 1px solid #AAA;
-				border-radius: 5px;
-				background: $black;
-				background: rgba(0,0,0,0.25);
-				/* box-shadow: 0 0 3px $black, inset 0 0 3px $black; */
-				color: $white;
-				font-size: 22px;
-				text-shadow: 1px 1px 0 #444;
-			}
-		}
-	}
-	&.one {
-		background: linear-gradient(to bottom, rgba(2,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(../../images/features/democracy/hero.jpg);
-		background-size: cover;
-		background-position: center 30%;
-		.title {
-			position: relative;
-			top: 30%;
-			// @media only screen and (max-height: 920px) {
-			// 	top: 25%;
-			// 	h2 {
-			// 		font-size: 40px;
-			// 		font-size: 4rem;
-			// 		line-height: 40px;
-			// 		line-height: 4rem;
-			// 	}
-			// 	h3 {
-			// 		font-size: 25px;
-			// 		font-size: 2.5rem;
-			// 		line-height: 25px;
-			// 		line-height: 2.5rem;
-			// 	}
-			// }
-			// @media only screen and (max-height: 640px) {
-			// 	top: 20%;
-			// }
-			// @media only screen and (max-width: 1230px) {
-			// 	h2 {
-			// 		font-size: 40px;
-			// 		font-size: 4rem;
-			// 		line-height: 40px;
-			// 		line-height: 4rem;
-			// 	}
-			// 	h3 {
-			// 		font-size: 25px;
-			// 		font-size: 2.5rem;
-			// 		line-height: 25px;
-			// 		line-height: 2.5rem;
-			// 	}
-			// }
-			// @media only screen and (max-width: 1020px) {
-			// 	top: 0;
-			// 	padding: 10em 5em 5em;
-			// }
-		}
-	}
+#world-cup {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('features/world-cup/hero.jpg');
+}
 
-	&.two, &.three {
-		height: 50%;
-		background: #333;
-		float: left;
-		width: 50%;
-		.title {
-			position: relative;
-			top: 15%;
-			text-align: left;
-		}
-	}
-
-	&.two {
-		background-image: url(../../images/home/hgraph_large.png);
-		background-color: $white;
-		background-repeat: no-repeat;
-		background-position: center -90%;
-		transition: background-position 300ms ease;
-		&:hover {
-			background-position: center -100%;
-		}
-		.title {
-			h2, h3, h5 {
-				color: #444;
-			}
-			h3 {
-				font-size: 20px;
-				font-size: 2.0rem;
-				line-height: 20px;
-				line-height: 2.0rem;
-				font-weight: 400;
-			}
-			@media only screen and (max-width: 1470px) {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 14px;
-					font-size: 1.4rem;
-				}
-			}
-		}
-	}
-
-	&.three {
-		background-image: linear-gradient(to bottom, fade-out($black, 0.25) 0%, fade-out($black, 0.35) 100%), url('../../images/home/culture.jpg');
-		background-position: center;
-		background-size: cover;
-		.title {
-			h2 {
-				color: #EEE;
-			}
-		}
-	}
-
-	&#hot-swap {
-		background-position: center;
-		background-size: cover;
-		transition: none;
+#clients {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/hgraph_large.png');
+	&.hot-swap {
 		&.three-m {
 			background-image: url('../../images/home/3m.jpg');
 		}
@@ -181,34 +39,72 @@ a {
 		&.walgreens {
 			background-image: url('../../images/home/hgraph_ipad.jpg');
 		}
-		.container {
-			h2, h3 {
-				color: $white;
-			}
-		}
 	}
-
-	.title {
-		width: 100%;
-		padding: 0 5em;
-		h2 {
-			font-size: 55px;
-			font-size: 5.5rem;
-			line-height: 55px;
-			line-height: 5.5rem;
-			font-weight: 800;
-		}
-
-		h3 {
-			margin-top: -2px;
-			font-size: 3rem;
-			line-height: 3rem;
-			font-weight: 800;
-		}
-
-		h4 {
-			margin-top: 10px;
-		}
-	}
-
 }
+
+#culture {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/culture.jpg');
+}
+
+.double {
+	display: table;
+}
+
+.block {
+	display: block;
+	position: relative;
+	padding: 4em 3em;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 0 0 #000;
+	transition: box-shadow 400ms ease;
+	z-index: 0;
+	&:hover {
+		z-index: 20;
+		box-shadow: 0 0 20px #000;
+	}
+	//Layouts
+	&.bar {
+		width: 100%;
+	}
+	&.half {
+		display: table-cell;
+		width: 50%;
+	}
+	// Styling
+	.title {
+		color: $white;
+		text-shadow: 1px 1px #222;
+		h2, h3, h5 {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+		h2 {
+			font-size: 2.8em;
+			margin-bottom: 0.5em;
+		}
+		h3 {
+			font-size: 2em;
+			font-style: italic;
+		}
+		.tag, .button {
+			display: inline-block;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+			font-size: 1em;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.double {
+		display: block;
+	}
+	.block.half {
+		display: block;
+		width: 100%;
+	}
+}
+
