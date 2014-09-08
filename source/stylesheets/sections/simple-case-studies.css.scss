@@ -14,7 +14,10 @@
 		&.name {
 			text-transform: none;
 			margin-top: 0px;
-		}   
+		}
+		&.margin {
+			margin-bottom: 3em;
+		}
 	}
 	
 	img {
@@ -45,6 +48,9 @@
 	p.caption {
 		max-width: 75%;
 		margin-bottom: 3em;
+		&.no-margin {
+			margin-bottom: 0.25em;
+		}
 	}
 
 	p.caption, ul {
