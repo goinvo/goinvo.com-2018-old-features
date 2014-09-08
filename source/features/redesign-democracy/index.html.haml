@@ -35,6 +35,9 @@
 		%p Democracy in the United States has over 200 years of history behind it; democracy as a government system has more than 2,000 years of precedent. It may be the best system going but it sure doesn’t seem to be doing a very good job. It might even be obsolete in this world that looks so very different than the one which produced it.
 
 		%p This is the moment - our moment, together, yours and mine - to create a better system. So read on, see what I have in mind, and why. And if it sounds good to enough of us, maybe we can really change the world.
+	
+		%p Dirk Knemeyer<br>Granville, Ohio, U.S.<br>September 8, 2014
+
 	%section#section2
 		%header
 			%h3 The Origins of Democracy
@@ -230,7 +233,7 @@
 
 		%p The reality is, at our current evolutionary stage, people must advocate for themselves. Time and time again we’ve learned that trusting someone or something else with our own well-being generally leads to its degrading. It is, after all, human nature to value one’s own needs over those of society at large. 
 
-		%p The way we take care of our needs can be described by a series of concertric rings.
+		%p The way we take care of our needs can be described by a series of concentric rings.
 
 		.image.inline
 			%img{:src => "../../images/features/democracy/circle.jpg", :alt => "Chart showing rings depicting 'Myself and family' at the center, followed by 'Friends', 'Those I share interests/beliefs/culture with', 'Those I share community with', 'Those I shre regional geographgy with', 'Those I share national identiy with', and finally 'All of humanity'."}/
@@ -437,7 +440,7 @@
 			%hr
 		.image.aside.caption-bottom
 			%img{:src => "../../images/features/democracy/phones.jpg", :alt => "Graphic of different smartphones fanned out."}
-			%p.caption.orange As of September 2013 55% of U.S. adults already own a smartphone.
+			%p.caption.orange As of January 2014 58% of U.S. adults already own a smartphone.
 
 		%p It all starts with the smartphone. This miraculous device gives us the power of a computer in our hand, pocket or purse at all times. It enables any citizen to receive information in and communicate out, both in real-time while running software applications far more powerful than those being run on desktop computers just a decade ago. The easy availability to such powerful, real-time technology empowers us to radically re-think each individual’s role in our collective governance. No longer is there a limitation of space and time to prevent our getting high-resolution information on our government and legislators. There is no barrier to our placing a secure, verified vote on a candidate or law from the comfort of our home. The majority of Americans now hold in our hand the power to do everything that our legislators do when they vote on a bill: read the text. Consider outside information. Engage in debate or conversation. Place the vote. It’s no different from a use case perspective than how we use Facebook. The difference is, rather than our time being spent on pleasant conveniences we are able to influence our nation as the self-representational government that democracy purports to be.
 
@@ -481,10 +484,58 @@
 
 		%p Like many radical ideas, it may be seductive to focus on some vulnerability in it and try to pull it apart. Go ahead. This probably isn’t the exact right idea. But it’s a start down the right path. The digital world is nothing like the world that came before it, and we deserve it to ourselves and the future to rethink everything. Regardless of any issues with this system, I challenge you to make the case that, in their respective totalities, the current system is better than what’s proposed here. It isn’t.
 
-		%p Who wants to rethink democracy with me?
+		.votingSlides.mobile-layout
+			%header
+				%h3 Handheld Voting System
+				%hr
+			.content
+				%h5 Overview
+				%p While a direct voting system is easily illustrated via the various screens that follow, the totality of the infrastructure would be immense. Such a system would likely fall under the auspices of the United States Department of Justice, incurring the bureaucratic trappings inherent in major government initiatives aimed at some 315 million people.
+			%header
+				%h3 Bill Introduction
+				%hr
+			.content
+				%p Citizens would periodically receive a bill to consider. Along with an overview of the bill, the first screen would display a graph showing the opinions of a personalized group of analysts, while “automagically” mapping each voter’s personal preferences to the content. While all voters would be encouraged to conduct their own research, the system would make it dead simple to see how the things they care about map to the specific legislation.
+				%p All information within the voting system would be available via written and audio means. Voters would have access to live helpers as well as brick-and-mortar voting centers for additional assistance.
+				.image-group
+					= image_tag 'features/democracy/voting/screenshots/p1.1.jpg'
+					= image_tag 'features/democracy/voting/screenshots/p1.2.jpg'
+			%header
+				%h3 Bill Overview
+				%hr
+			.content
+				%p Protecting the integrity of the vote is a first-order priority, requiring the latest in identity recognition software. From a software development perspective, such security features would likely demand more ongoing investment than the entire rest of the system combined. This technology could also help customize the delivery and structure of information depending on its interpretation of a voter’s mood, attention, or other factors.
+				.image-group
+					= image_tag 'features/democracy/voting/screenshots/p2.1.jpg'
+					= image_tag 'features/democracy/voting/screenshots/p2.2.jpg'
+			%header
+				%h3 Simplified Overview Based on Comprehension
+				%hr
+			.content
+				%p To further encourage voters’ critical thinking, the system would provide an interactive table of contents along with key statistics and graphs to aid understanding of essential aspects of the legislation.
+				%p The fine details of any national bill are bound to be complicated and potentially difficult to parse. A plain-language overview of the salient points would help citizens to understand what is at stake.
+				.image-group.three
+					= image_tag 'features/democracy/voting/screenshots/p3.1.jpg'
+					= image_tag 'features/democracy/voting/screenshots/p3.2.jpg'
+					= image_tag 'features/democracy/voting/face-detect.jpg'
+			%header
+				%h3 Analyst’s Response
+				%hr
+			.content
+				%p While most citizens might be unable to read the entirety of bills, support would come from a new breed of political analysts. These individuals and organizations would read, interpret, and make recommendations on legislation based on their specific platforms and interests and provide citizens with their unique perspectives and voting recommendations.
+				.image-group
+					= image_tag 'features/democracy/voting/screenshots/p4.1.jpg'
+					= image_tag 'features/democracy/voting/screenshots/p4.2.jpg'
+			%header
+				%h3 Vote on the Bill
+				%hr
+			.content
+				%p Voting time! The citizens would input their votes and let their voices be heard. The democratic process, as close to the ideal intention of this system, could be possible in a large, modern nation-state.
+				.image-group
+					= image_tag 'features/democracy/voting/p5.ui.jpg'
+					= image_tag 'features/democracy/voting/p5.phone.jpg'
 
-		.votingSlides.slider-wrapper
-			%img.flagGraphic{:src => "../../images/features/democracy/flag.jpg", :alt => "A graphic of the American Flag made out of smartphones."}/
+		.votingSlides.slider-wrapper.desktop-layout
 			%nav.buttonNav
 				%a.slider-arrow.prev{:href => "#"} Previous Alternative
 				%a.slider-arrow.next{:href => "#"} Next Alternative
@@ -583,35 +634,35 @@
 					= image_tag 'features/democracy/contrib/emily.jpg'
 				.info
 					%h3 Editor
-					%p Emily Twaddell
+					%p Emily Twaddell<br><small><a href="http://twitter.com/mimitwaddell">@mimitwaddell</a></small>
 					%hr
 			.contributor
 				.image
 					= image_tag 'features/democracy/contrib/basecraft.jpg'
 				.info
 					%h3 Design Team
-					%p Basecraft<br><small><a href="http://basecraft.com/">basecraft.com</a></small>
+					%p Basecraft<br><small><a href="http://twitter.com/basecraftagency">@basecraftagency</a></small>
 					%hr
 			.contributor
 				.image
 					= image_tag 'features/democracy/contrib/juhan.jpg'
 				.info
 					%h3 Voting System UIs
-					%p Juhan Sonin
+					%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
 					%hr
 			.contributor
 				.image
 					= image_tag 'features/democracy/contrib/noel.jpg'
 				.info
 					%h3 Online Design
-					%p Noel Fort&eacute;
+					%p Noel Fort&eacute;<br><small><a href="http://twitter.com/thenoelforte">@thenoelforte</a></small>
 					%hr
 			.contributor
 				.image
 					= image_tag 'features/democracy/contrib/brian.jpg'
 				.info
 					%h3 Print &amp; .epub Design
-					%p Brian Liston
+					%p Brian Liston<br><small><a href="http://twitter.com/lliissttoonn">@lliissttoonn</a></small>
 	- # END Credits. Copy to this line.
 - content_for(:worlds_end) do
 	= javascript_include_tag "features/redesign-democracy.js"

@@ -443,13 +443,35 @@ a.block {
 	}
 }
 
-.flagGraphic {
-	padding: 0 5em;
-	display: none;
-}
-
-.votingSlides {
+#section5 .votingSlides {
 	position: relative;
+	&.mobile-layout {
+		padding-left: 5em;
+		padding-right: 5em;
+		display: none;
+		header {
+			padding-top: 2em;
+		}
+		hr {
+			border-color: #AAA;
+		}
+		p {
+			padding: 0;
+		}
+		.image-group {
+			@include clearfix();
+			img {
+				width: 50%;
+				float: left;
+				&:first-child {
+					padding-right: 0.5em;
+				}
+				&:last-child {
+					padding-left: 0.5em;
+				}
+			}
+		}
+	}
 	.buttonNav a {
 		top: 18rem;
 	}
@@ -675,6 +697,9 @@ header#article-header {
 		margin-bottom: 0;
 		padding-bottom: 0.25em;
 	}
+	small {
+		font-size: 20px;
+	}
 	p {
 		font-size: 20px;
 		line-height: 1.3em;
@@ -780,10 +805,10 @@ header#article-header {
 }
 
 @media only screen and (max-width: 1060px) {
-	.votingSlides .flagGraphic {
+	#section5 .votingSlides.mobile-layout {
 		display: block;
 	}
-	#votingSlider, .votingSlides .buttonNav {
+	#votingSlider, .votingSlides.desktop-layout {
 		display: none;
 	}
 }
@@ -916,6 +941,10 @@ header#article-header {
 	.image.aside {
 		width: 100%;
 	}
+	#section5 .votingSlides.mobile-layout .image-group img {
+		padding: 1em 0;
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 540px) {
@@ -929,7 +958,7 @@ header#article-header {
 		padding: 0 2em;
 	}
 	section {
-		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart, &#section5 .votingSlides.mobile-layout {
 			padding: 0 2rem;
 		}
 	}
