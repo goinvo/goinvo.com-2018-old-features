@@ -82,7 +82,7 @@ body {
 section {
 	padding-top: 1em;
 	margin-bottom: 3em;
-	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
 		max-width: 60%;
 		padding: 0 5rem;
 	}
@@ -100,18 +100,16 @@ section {
 	}
 	&#section5 hr {
 		border-color: $blue;
-	}
-	&#section6 hr {
-		border-color: $yellow;
-	}
-	&#section7 hr {
-		border-color: $orange;
-	}
-	&#section8 hr {
-		border-color: $red;
-	}
-	&#section7, &#section8 {
 		@include clearfix();
+	}
+}
+
+a.block {
+	color: #58504A;
+	span.hint {
+		line-height: 2em;
+		font-style: italic;
+		color: #AAA;
 	}
 }
 
@@ -299,7 +297,9 @@ section {
 }
 
 .govtSlides {
+	clear: both;
 	position: relative;
+	padding: 2em 0;
 	.visualNav {
 		width: 100%;
 		display: table;
@@ -347,7 +347,7 @@ section {
 }
 
 #govtSlider {
-	margin-bottom: 0;
+	margin: 0;
 	.slick-slide {
 		@include clearfix();
 		header p {
@@ -620,7 +620,7 @@ header#article-header {
 	}
 }
 
-#section7 {
+.faded {
 	padding: 3em 0;
 	border-top: 2px solid #d2d2d2;
 	border-bottom: 2px solid #d2d2d2;
@@ -639,7 +639,7 @@ header#article-header {
 	}
 }
 
-#section8 {
+#section6 {
 	.image.aside.bleed {
 		padding: 0;
 		margin-right: -5em;
@@ -721,6 +721,19 @@ header#article-header {
 			border-width: 5px;
 			border-color: $red;
 		}
+		.contributor {
+			@include clearfix();
+			.image, .info {
+				float: left;
+			}
+			.image {
+				width: 20%;
+			}
+			.info {
+				padding-left: 1em;
+				width: 80%;
+			}
+		}
 	}
 	@media only screen and (max-width: 978px) {
 		padding-left: 3em;
@@ -731,6 +744,9 @@ header#article-header {
 		}
 		.author, .contributors {
 			width: 100%;
+		}
+		.contributor {
+			margin-bottom: 1.5em;
 		}
 	}
 }
@@ -811,7 +827,7 @@ header#article-header {
 		float: none;
 	}
 	section {
-		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
 			max-width: 100%;
 		}
 		img {
@@ -913,7 +929,7 @@ header#article-header {
 		padding: 0 2em;
 	}
 	section {
-		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
 			padding: 0 2rem;
 		}
 	}
@@ -935,11 +951,10 @@ header#article-header {
 		}	
 	}
 	#govtSlider {
-		.slick-list {
-			border-color: #AAA;
-		}
 		.slick-slide .col {
 			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
 		} 
 	}
 }

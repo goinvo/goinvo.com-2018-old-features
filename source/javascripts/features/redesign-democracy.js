@@ -66,9 +66,6 @@ var setSectionLocations = function() {
 	section3loc = ($('#section3').offset().top) - 65 - navHeight;
 	section4loc = ($('#section4').offset().top) - 65 - navHeight;
 	section5loc = ($('#section5').offset().top) - 65 - navHeight;
-	section6loc = ($('#section6').offset().top) - 65 - navHeight;
-	section7loc = ($('#section7').offset().top) - 65 - navHeight;
-	section8loc = ($('#section8').offset().top) - 65 - navHeight;
 }
 
 // These relations use the locations defined above.
@@ -96,25 +93,16 @@ var setSectionRelations = function() {
 		$('.main-nav a').removeClass('active');
 		$('.main-nav a.five').toggleClass('active');
 	}
-	if (scrollbarPosition > section6loc) {
-		$('.main-nav a').removeClass('active');
-		$('.main-nav a.six').toggleClass('active');
-	}
-	if (scrollbarPosition > section7loc) {
-		$('.main-nav a').removeClass('active');
-		$('.main-nav a.seven').toggleClass('active');
-	}
-	if (scrollbarPosition > section8loc) {
-		$('.main-nav a').removeClass('active');
-		$('.main-nav a.eight').toggleClass('active');
-	}
 }
 
 var scrollToSec = function(sectionLinkElement) {
 	event.preventDefault();
 	var section = $(sectionLinkElement).attr('href');
+	console.log(section);
 	if ($(window).width() > 830) {
-		var sectionLoc = ($(section).offset().top) - 65 - navHeight;
+		var navHeight = $('.nav-wrapper .nav-button').outerHeight();
+		var sectionLoc = ($(section).offset().top) - 95 - navHeight;
+		console.log(sectionLoc);
 	} else if ($(window).width() < 830) {
 		var navHeight = $('.nav-wrapper .nav-button').outerHeight();
 		var sectionLoc = ($(section).offset().top) - 65 - navHeight;
@@ -204,6 +192,8 @@ var buttonClick = function(sliderObject, visualNavElement, buttonElement) {
 
 var colorChange = function(sliderObject) {
 	var currentSlideIndex = sliderObject.slickCurrentSlide();
+	$('.govtSlides .visualNav a').removeClass('active');
+	$('.govtSlides .visualNav .slide' + (currentSlideIndex)).toggleClass('active');
 	if (currentSlideIndex === 0) {
 		color = orange;
 	}
@@ -223,11 +213,13 @@ var colorChange = function(sliderObject) {
 		color = yellow;
 	}
 	$('#' + sliderObject.attr('id') + ' .slick-list').css('border-color', color);
+
 }
 
 $(document).ready(function(){
 	// Menu Bar
 	$('.main-nav a').on('click', function(event){
+		event.preventDefault();
 		scrollToSec(this);
 	});
 	$('.nav-wrapper .nav-button').on('click', function(event){
@@ -242,6 +234,7 @@ $(document).ready(function(){
 		dots: false,
 		speed: animationSpeed,
 		onAfterChange: function() {
+			colorChange(govtSlider);
 			ableToNavigate = true;
 		}
 	});

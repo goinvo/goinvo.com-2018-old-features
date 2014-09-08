@@ -48,12 +48,13 @@ a {
 
 .double {
 	display: table;
+	width: 100%;
 }
 
 .block {
 	display: block;
 	position: relative;
-	padding: 4em 3em;
+	padding: 8% 3em;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
