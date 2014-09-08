@@ -1,23 +1,32 @@
 @import "../base/core";
 
-html, body {
-	height: 100%;
-	@media only screen and (max-width: 1020px) {
-		height: auto;
-	}
-}
-
 body {
    background-color: #0d0d0d;
 }
 
-#site-header {
+.header-content {
 	max-width: 100%;
 }
 
 a {
-	&.one, &.two, &.three {
+	&.bar, &.left, &.right {
 		text-decoration: none;
+	}
+}
+
+#main-container {
+	margin-top: 55px;
+	@include clearfix();
+}
+
+.block {
+	display: block;
+	&.bar {
+		width: 100%;
+	}
+	&.floated.half {
+		float: left;
+		width: 50%;
 	}
 }
 
@@ -61,52 +70,45 @@ a {
 		background: linear-gradient(to bottom, rgba(2,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(../../images/features/democracy/hero.jpg);
 		background-size: cover;
 		background-position: center 30%;
-		height: 50%;
-		.container {
-			height: 100%;
-			@media only screen and (max-width: 1020px) {
-				height: auto;
-			}
-		}
 		.title {
 			position: relative;
 			top: 30%;
-			@media only screen and (max-height: 920px) {
-				top: 25%;
-				h2 {
-					font-size: 40px;
-					font-size: 4rem;
-					line-height: 40px;
-					line-height: 4rem;
-				}
-				h3 {
-					font-size: 25px;
-					font-size: 2.5rem;
-					line-height: 25px;
-					line-height: 2.5rem;
-				}
-			}
-			@media only screen and (max-height: 640px) {
-				top: 20%;
-			}
-			@media only screen and (max-width: 1230px) {
-				h2 {
-					font-size: 40px;
-					font-size: 4rem;
-					line-height: 40px;
-					line-height: 4rem;
-				}
-				h3 {
-					font-size: 25px;
-					font-size: 2.5rem;
-					line-height: 25px;
-					line-height: 2.5rem;
-				}
-			}
-			@media only screen and (max-width: 1020px) {
-				top: 0;
-				padding: 10em 5em 5em;
-			}
+			// @media only screen and (max-height: 920px) {
+			// 	top: 25%;
+			// 	h2 {
+			// 		font-size: 40px;
+			// 		font-size: 4rem;
+			// 		line-height: 40px;
+			// 		line-height: 4rem;
+			// 	}
+			// 	h3 {
+			// 		font-size: 25px;
+			// 		font-size: 2.5rem;
+			// 		line-height: 25px;
+			// 		line-height: 2.5rem;
+			// 	}
+			// }
+			// @media only screen and (max-height: 640px) {
+			// 	top: 20%;
+			// }
+			// @media only screen and (max-width: 1230px) {
+			// 	h2 {
+			// 		font-size: 40px;
+			// 		font-size: 4rem;
+			// 		line-height: 40px;
+			// 		line-height: 4rem;
+			// 	}
+			// 	h3 {
+			// 		font-size: 25px;
+			// 		font-size: 2.5rem;
+			// 		line-height: 25px;
+			// 		line-height: 2.5rem;
+			// 	}
+			// }
+			// @media only screen and (max-width: 1020px) {
+			// 	top: 0;
+			// 	padding: 10em 5em 5em;
+			// }
 		}
 	}
 
@@ -115,49 +117,10 @@ a {
 		background: #333;
 		float: left;
 		width: 50%;
-		.container {
-			height: 100%;
-			@media only screen and (max-width: 1020px) {
-				height: auto;
-			}
-		}
 		.title {
 			position: relative;
 			top: 15%;
 			text-align: left;
-			@media only screen and (max-height: 1024px) {
-				top: 10%;
-			}
-			h2 {
-				font-size: 24px;
-				font-size: 2.4rem;
-				font-weight: 400;
-				line-height: 1.1em;
-			}
-			@media only screen and (max-width: 1020px) {
-				top: 0;
-				padding: 5em;
-			}
-			@media screen and (max-height: 940px) {
-				h2 {
-					font-size: 22px;
-					font-size: 2.2rem;
-				}
-				h3 {
-					font-size: 14px;
-					font-size: 1.4rem;
-				}
-			}
-			@media only screen and (max-height: 680px) {
-				h2 {
-					font-size: 18px;
-					font-size: 1.8rem;
-				}
-				h3 {
-					font-size: 12px;
-					font-size: 1.2rem;
-				}
-			}
 		}
 	}
 
@@ -248,35 +211,4 @@ a {
 		}
 	}
 
-}
-
-#page-wrapper {
-	height: 100%;
-	@media only screen and (max-width: 1020px) {
-		height: auto;
-	}
-}
-
-#main-container {
-	@include clearfix();
-	height: 100%;
-	.container {
-		position: relative;
-		height: 100%;
-	}
-	@media only screen and (max-width: 1020px) {
-		height: auto;
-		.container {
-			height: auto;
-		}
-	}
-}
-
-#main-footer {
-	position: absolute;
-	bottom: 0;
-	background: fade-out($black, 0.1);
-	@media only screen and (max-width: 1020px) {
-		position: static;
-	}
 }
