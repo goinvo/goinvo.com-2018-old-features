@@ -1,30 +1,5 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage"
-	:javascript
-		$(document).ready(function(){
-			$('#clients').addClass('hot-swap');
-			function getRandomInt(min, max) {
-				return Math.floor(Math.random() * (max - min + 1)) + min;
-			}
-			var rand = getRandomInt(1, 2);
-			$('#clients h3').remove();
-			if (rand === 1) {
-				$('#clients').addClass('three-m');
-				$('a.two').attr('href', 'work/3m');
-				$('#clients h2').html('&ldquo;Invo designed our way to a $150M exit.&rdquo;');
-
-			}
-			/* else if (rand === 2) {
-				$('#clients').addClass('infobionic');
-				$('a.two').attr('href', 'work/infobionic');
-				$('#clients h2').html('&ldquo;With Invo, design wasn&rsquo;t just design. It impacted our IP portfolio. It changed our business.&rdquo;');
-			} */
-			else {
-				$('#clients').addClass('walgreens');
-				$('a.two').attr('href', 'work/hgraph');
-				$('#clients h2').html('&ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;');
-			}
-		});
 %a#democracy.block.bar{:href => "features/redesign-democracy"}
 	.title
 		%h5.tag September/October 2014 Feature
@@ -37,14 +12,23 @@
 / 		%h2 The 10 Best Nations in World Cup History
 / 		%h3 77 teams over 84 years
 
+%a#hgraph.block.bar{:href => "http://hgraph.org/"}
+	.title
+		%h2 HGraph
+		%h3 Your health in one picture
+
 .double
-	%a#clients.block.half{:href => "http://hgraph.org/"}
+	%a#three-m.block.half{:href => "http://work/3m"}
 		.title
-			%h5.tag Client Story
-			%h2 HGraph
-			%h3 Your health in one picture
+			%h5.tag Client Story: 3M
+			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
 
 	%a#culture.block.half{:href => "careers"}
 		.title
 			%h5.tag Our Culture
 			%h2 Radical transparency is just part of our story&hellip;
+
+%a#walgreens.block.bar{:href => "http://work/3m"}
+	.title
+		%h5.tag Client Story: Walgreens
+		%h2 &ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;

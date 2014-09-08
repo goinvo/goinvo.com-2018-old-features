@@ -27,19 +27,16 @@ a {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('features/world-cup/hero.jpg');
 }
 
-#clients {
+#hgraph {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/hgraph_large.png');
-	&.hot-swap {
-		&.three-m {
-			background-image: url('../../images/home/3m.jpg');
-		}
-		&.infobionic {
-			background-image: url('../../images/home/ib.jpg');
-		}
-		&.walgreens {
-			background-image: url('../../images/home/hgraph_ipad.jpg');
-		}
-	}
+}
+
+#walgreens {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/hgraph_ipad.jpg');
+}
+
+#three-m {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/3m.jpg');
 }
 
 #culture {
@@ -54,7 +51,7 @@ a {
 .block {
 	display: block;
 	position: relative;
-	padding: 8% 3em;
+	padding: 0 3em;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -77,6 +74,8 @@ a {
 	.title {
 		color: $white;
 		text-shadow: 1px 1px #222;
+		font-size: 1.25em;
+		padding: 4em 0;
 		h2, h3, h5 {
 			font-weight: 400;
 			margin-bottom: 0;
@@ -96,6 +95,12 @@ a {
 			font-size: 1em;
 			letter-spacing: 1px;
 		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.block .title {
+		font-size: 1em;
 	}
 }
 
