@@ -151,8 +151,11 @@ article#complex-case {
 		}
 
 		.center-graph-content {
-			padding: 3em 0;
+			padding: 3em;
 			position: relative;
+			img {
+				max-width: 90%;
+			}
 		}
 
 		.full-two-images {
