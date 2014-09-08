@@ -1,21 +1,39 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage"
+	:javascript
+		posts = [];
+		$.ajax({
+			url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('http://yes.goinvo.com/articles/rss.xml'),
+			dataType : 'json',
+			success  : function (data) {
+				if (data.responseData.feed && data.responseData.feed.entries) {
+					$.each(data.responseData.feed.entries, function (i, e) {
+						posts.push(e);
+					});
+				}	
+				// Code goes here
+				var currentString = posts[0].content;
+				var sIndex = currentString.lastIndexOf('<img');
+				currentString = currentString.substring(0, sIndex);
+				sIndex = currentString.lastIndexOf('<img');
+				currentString = currentString.substr(sIndex);
+				sIndex = currentString.indexOf('src=');
+				currentString = currentString.substr(sIndex+5);
+				sIndex = currentString.indexOf('"');
+				currentString = currentString.substring(0, sIndex);
+				console.log(currentString);
+
+				$('#walgreens').removeClass('bar').addClass('half');
+				$('.double.dynamic').append('<a id="blog" class="block half"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '<h2></div></a>');
+				$('#blog').css('background-image', 'url(' + currentString + ')');
+
+			}
+		});
 %a#democracy.block.bar{:href => "features/redesign-democracy"}
 	.title
 		%h5.tag September/October 2014 Feature
 		%h2 Redesign Democracy
 		%h3 A better solution for the digital era
-				
-/ %a#world-cup.block.bar{:href => "features/the-10-best-nations-in-world-cup-history/"}	
-/ 	.title
-/ 		%h5.tag July/August 2014 Feature
-/ 		%h2 The 10 Best Nations in World Cup History
-/ 		%h3 77 teams over 84 years
-
-%a#hgraph.block.bar{:href => "http://hgraph.org/"}
-	.title
-		%h2 HGraph
-		%h3 Your health in one picture
 
 .double
 	%a#three-m.block.half{:href => "http://work/3m"}
@@ -28,7 +46,14 @@
 			%h5.tag Our Culture
 			%h2 Radical transparency is just part of our story&hellip;
 
-%a#walgreens.block.bar{:href => "http://work/3m"}
+
+%a#hgraph.block.bar{:href => "http://hgraph.org/"}
 	.title
-		%h5.tag Client Story: Walgreens
-		%h2 &ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;
+		%h2 HGraph
+		%h3 Your health in one picture
+
+.double.dynamic
+	%a#walgreens.block.bar{:href => "http://work/3m"}
+		.title
+			%h5.tag Client Story: Walgreens
+			%h2 &ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;

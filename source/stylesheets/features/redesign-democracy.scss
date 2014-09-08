@@ -80,6 +80,35 @@ body {
 	}
 }
 
+.action {
+	padding: 3em 5em;
+	margin-bottom: 2em;
+	border-top: 3px solid #AAA;
+	border-bottom: 3px solid #AAA;
+	background: #EEE;
+	text-align: center;
+	.icons {
+		@include clearfix();
+		svg {
+			width: 72px;
+			height: 72px;
+			display: inline-block;
+			fill: #AAA;
+		}
+	}
+	.button {
+		line-height: 1;
+		padding: 1em 1.5em;
+		text-transform: uppercase;
+		background: $blue;
+		box-shadow: 0 1px 0 darken($blue, 12%), 0 2px 0 darken($blue, 12%), 0 3px 0 darken($blue, 12%),  0 4px 0 darken($blue, 12%),  0 5px 0 darken($blue, 12%), 0 5px 5px #000;
+		&:active {
+			transform: translateY(5px);
+			box-shadow: 0 -1px 0 darken($blue, 12%), 0 -2px 0 darken($blue, 12%), 0 -3px 0 darken($blue, 12%),  0 -4px 0 darken($blue, 12%),  0 -5px 0 darken($blue, 12%), inset 0 0 5px #000;
+		}
+	}
+}
+
 section {
 	padding-top: 1em;
 	margin-bottom: 3em;
