@@ -76,16 +76,19 @@ a {
 		text-shadow: 1px 1px #222;
 		font-size: 1.25em;
 		padding: 4em 0;
+		//Fix for OSX Font Rendering on Dark BG's
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		h2, h3, h5 {
 			font-weight: 400;
 			margin-bottom: 0;
 		}
 		h2 {
 			font-size: 2.8em;
-			margin-bottom: 0.5em;
+			margin-bottom: 0.25em;
 		}
 		h3 {
-			font-size: 2em;
+			font-size: 1.8em;
 			font-style: italic;
 		}
 		.tag, .button {
