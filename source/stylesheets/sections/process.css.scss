@@ -2,6 +2,9 @@
 
 #main-container {
 	padding-top: 75px;
+	@media only screen and (max-width: 768px) {
+		font-size: 0.85em;
+	}
 }
 
 .nav-menu {
@@ -12,7 +15,7 @@
 		text-align: center;
 	}
 	a {
-		line-height: 3em;
+		line-height: 1.5em;
 		margin: 10px;
 		color: #888;
 		padding: 5px 20px;
@@ -25,6 +28,10 @@
 			border-bottom: 5px solid #425f8e;
 		}
 	}
+}
+
+a.next {
+	display: block;
 }
 
 section {
@@ -91,6 +98,7 @@ section {
 		}
 	}
 	&.next-section {
+		width: 100%;
 		padding: 4em 2em;
 		background: #DDD;
 		h3, h1 {
@@ -100,14 +108,6 @@ section {
 			margin: 0 auto;
 			padding: 0;
 			color: #444;
-		}
-		h3 {
-			font-size: 3rem;
-			line-height: 3rem;
-		}
-		h1 {
-			font-size: 6rem;
-			line-height: 6rem;
 		}
 	}
 }
