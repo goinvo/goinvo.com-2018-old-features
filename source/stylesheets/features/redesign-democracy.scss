@@ -40,6 +40,7 @@ body {
 	border-bottom: 2px solid #DDD;
 	background: #FFF;
 	transition: height 400ms ease;
+	box-shadow: 0 8px 15px -10px #000;
 	@include clearfix();
 	a {
 		display: block;
@@ -508,7 +509,7 @@ a.block {
 }
 
 #votingSlider {
-	margin-top: 3em;
+	margin: 3em 0 0;
 	position: relative;
 	nav {
 		position: absolute;
@@ -597,9 +598,6 @@ a.block {
 			p {
 				width: 48%;
 			}
-		}
-		&.two, &.three, &.four, &.five, &.six {
-			border-bottom: 3px solid $red;
 		}
 	}
 	h3 {
@@ -691,7 +689,7 @@ header#article-header {
 	}
 }
 
-#section6 {
+#section5 {
 	.image.aside.bleed {
 		padding: 0;
 		margin-right: -5em;
@@ -704,6 +702,7 @@ header#article-header {
 		margin-top: 1.5em;
 		font-size: 3.5em;
 	}
+	margin-bottom: 0;
 }
 
 #credits {
@@ -863,7 +862,7 @@ header#article-header {
 			display: none;
 		}
 	}
-	section > .avb.image.inline {
+	section > a.block {
 		max-width: 100%;
 	}
 }
@@ -952,6 +951,17 @@ header#article-header {
 		padding: 2em;
 		h4 {
 			font-size: 2.8em;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section .avb.image.inline.caption-side {
+		.image {
+			width: 35%;
+		}
+		.caption {
+			width: 65%;
 		}
 	}
 }

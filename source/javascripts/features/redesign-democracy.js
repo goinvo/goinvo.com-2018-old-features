@@ -274,6 +274,12 @@ $(document).ready(function(){
 
 $(window).load(function(event) {
 	//Set everything up
+	var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
+	var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();
+	$('#votingSlider .slick-list').css({
+		'height': currentSlideTotalHeight + 'px'
+	});
+
 	if ($(window).width() > 830) {
 		setAll();
 		$(window).on('scroll', function(event){

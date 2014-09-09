@@ -23,8 +23,8 @@
 				currentString = currentString.substring(0, sIndex);
 				console.log(currentString);
 
-				$('#walgreens').removeClass('bar').addClass('half');
-				$('.double.dynamic').append('<a id="blog" class="block half"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '<h2></div></a>');
+				$('#oracle').removeClass('bar').addClass('half');
+				$('.double.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block half"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog').css('background-image', 'url(' + currentString + ')');
 
 			}
@@ -33,10 +33,10 @@
 	.title
 		%h5.tag September/October 2014 Feature
 		%h2 Redesign Democracy
-		%h3 A better solution for the digital era
+		%h3 A Better Solution for the Digital Era
 
 .double
-	%a#three-m.block.half{:href => "http://work/3m"}
+	%a#three-m.block.half{:href => "work/3m"}
 		.title
 			%h5.tag Client Story: 3M
 			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
@@ -49,11 +49,12 @@
 
 %a#hgraph.block.bar{:href => "http://hgraph.org/"}
 	.title
+		%h5.tag 
 		%h2 HGraph
 		%h3 Your health in one picture
 
 .double.dynamic
-	%a#walgreens.block.bar{:href => "http://work/3m"}
+	%a#oracle.block.bar{:href => "work/oracle"}
 		.title
-			%h5.tag Client Story: Walgreens
-			%h2 &ldquo;Invo beautifully helped shape our next generation clinician and patient experience.&rdquo;
+			%h5.tag Client Story: Oracle
+			%h2 &ldquo;We chose Involution to help us take our two user experience people and build an outstanding team.&rdquo;
