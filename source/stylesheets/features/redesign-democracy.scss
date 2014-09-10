@@ -7,6 +7,7 @@ $green: #7f8732;
 $blue: #51697b;
 $yellow: #ddb40a;
 $tan: #dfd6c3;
+$bluegray: mix($blue, $gray, 50%);
 
 body {
 	color: #58504A;
@@ -84,25 +85,37 @@ body {
 .action {
 	padding: 3em 5em;
 	margin-bottom: 2em;
-	border-top: 3px solid #AAA;
-	border-bottom: 3px solid #AAA;
-	background: #EEE;
+	color: #FFF;
+	background: linear-gradient(to bottom, fade-out($bluegray, 0.2) 0%, fade-out($bluegray, 0.2) 100%), image-url('features/democracy/ipad.jpg') center/cover no-repeat;
 	text-align: center;
+	box-shadow: inset 0 20px 20px -20px #000, inset 0 -20px 20px -20px #000;
+	p {
+		text-shadow: 0 1px 0 #AAA, 0 2px #AAA;
+	}
 	.icons {
-		@include clearfix();
 		svg {
 			width: 72px;
 			height: 72px;
 			display: inline-block;
-			fill: #AAA;
+			fill: #FFF;
 		}
 	}
 	.button {
+		display: block;
+		max-width: 240px;
+		margin: 0 auto;
 		line-height: 1;
 		padding: 1em 1.5em;
 		text-transform: uppercase;
 		background: $blue;
 		box-shadow: 0 1px 0 darken($blue, 12%), 0 2px 0 darken($blue, 12%), 0 3px 0 darken($blue, 12%),  0 4px 0 darken($blue, 12%),  0 5px 0 darken($blue, 12%), 0 5px 5px #000;
+		opacity: 1;
+		transition: height 400ms ease, padding-top 400ms ease, padding-bottom 400ms ease;
+		&.closed {
+			height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 		&:active {
 			transform: translateY(5px);
 			box-shadow: 0 -1px 0 darken($blue, 12%), 0 -2px 0 darken($blue, 12%), 0 -3px 0 darken($blue, 12%),  0 -4px 0 darken($blue, 12%),  0 -5px 0 darken($blue, 12%), inset 0 0 5px #000;
@@ -110,8 +123,17 @@ body {
 	}
 	iframe {
 		display: block;
-		width: 720px;
-		margin: 2em auto 0;
+		width: 100%;
+		max-width: 720px;
+		height: 275px;
+		max-height: 0;
+		margin: 0 auto;		
+		opacity: 0;
+		transition: max-height 400ms ease, opacity 200ms ease;
+		&.open {
+			max-height: 275px;
+			opacity: 1;
+		}
 	}
 }
 
@@ -980,6 +1002,9 @@ header#article-header {
 			width: 55%;
 		}
 	}
+	.action iframe.open {
+		height: 360px;
+	}
 }
 
 @media only screen and (max-width: 640px) {
@@ -1006,6 +1031,9 @@ header#article-header {
 		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart, &#section5 .votingSlides.mobile-layout {
 			padding: 0 2rem;
 		}
+	}
+	.action {
+		padding: 2em;
 	}
 }
 

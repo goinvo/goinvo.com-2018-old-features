@@ -280,6 +280,22 @@ $(window).load(function(event) {
 		'height': currentSlideTotalHeight + 'px'
 	});
 
+	//Action
+	$('.action .button').on('click', function(event){
+		event.preventDefault();
+		$(this).delay(200).animate({
+			opacity: 0
+		}, animationSpeed, function(){
+			$(this).addClass('closed');
+			$(this).siblings('.form').addClass('open');
+		});
+		window.setTimeout(
+		function() {
+			setAll();
+			console.log('Wheee!');
+		}, 800);
+	});
+
 	if ($(window).width() > 830) {
 		setAll();
 		$(window).on('scroll', function(event){
