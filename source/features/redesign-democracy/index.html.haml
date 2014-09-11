@@ -4,6 +4,7 @@
 	= stylesheet_link_tag "features/redesign-democracy"
 	= stylesheet_link_tag "slick"
 	= javascript_include_tag "//use.typekit.net/imk3eze.js"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	:javascript
 		try{Typekit.load();}catch(e){}
 	= javascript_include_tag "slick/slick"
@@ -25,6 +26,13 @@
 			%hr
 			%h2 A Better Solution for the Digital Era
 	%section#section1
+		.social-buttons
+			%p Share this article:
+			%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"} Facebook
+			%a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F&via=goinvo"} Twitter
+			%a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;"} Google+
+			%a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F&title=Rethinking%20Democracy", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;"} LinkedIn
+			%a.mail{:href => "mailto:?body=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F"} Mail
 		%header
 			%h3 Introduction
 			%hr
@@ -176,7 +184,7 @@
 									%p No checks and balances. If the monarch were weak or corrupt the nation and citizens could suffer terribly.
 								%div
 									%h5 Historical Example
-									%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe. Illustration of this image with the caption Louis XIV.
+									%p France, 8th century to 18th century BCE. Over 1,000 years just five powerful dynasties provided hereditary monarchs that led France to be the dominant power in continental Europe.
 							.col.two	
 								%div
 									%h5 Downfall
@@ -269,7 +277,7 @@
 
 		.image.aside.caption-bottom
 			%img{:src => "../../images/features/democracy/hands.jpg", :alt => "A graphic of a heart being held by two hands."}/
-			%p.caption.yellow Other first-world nations with similar civil rights but higher well being and happiness than the United States have a mcuh healthier fiscal outlook. For example, their citizens may pay more than 50% of their income in taxes, or provide mandatory military service, or save significant proportions of their income instead of speading beyond their means. Meanwhile, citizens of the United States spend more minutes per data on average watching television than any other nation. Instead of excercising our right to watch the nost minutes of televison per citizen each day than any other nation, perhaps we could do more to give back to the country and system that provides our many liberties and benefits. Each dollar cotributed in taxes, or each hour spnt in some form of civil service, strengthens the nation as a whole. It creates a cycle of success.
+			%p.caption.yellow Other first-world nations with similar civil rights but higher well being and happiness than the United States have a much healthier fiscal outlook. For example, their citizens may pay more than 50% of their income in taxes, or provide mandatory military service, or save significant proportions of their income instead of speading beyond their means. Meanwhile, citizens of the United States spend more minutes per data on average watching television than any other nation. Instead of excercising our right to watch the nost minutes of televison per citizen each day than any other nation, perhaps we could do more to give back to the country and system that provides our many liberties and benefits. Each dollar cotributed in taxes, or each hour spent in some form of civil service, strengthens the nation as a whole. It creates a cycle of success.
 
 		%ol
 			%li 
@@ -636,6 +644,13 @@
 		%p This article is also available as PDF, eBook, and spoken by the author free of charge.
 		%a.button{:href => "#"} Request a Copy
 		%iframe.form{:src => "http://yes.goinvo.com/redesign-democracy-download/", :frameborder => "0", :height => 271}
+	.social-buttons.centered
+		%p Share this article:
+		%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"} Facebook
+		%a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F&via=goinvo"} Twitter
+		%a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;"} Google+
+		%a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F&title=Rethinking%20Democracy", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;"} LinkedIn
+		%a.mail{:href => "mailto:?body=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F"} Mail
 	- # BEGIN Credits: Copy from this line.
 	#credits
 		.author

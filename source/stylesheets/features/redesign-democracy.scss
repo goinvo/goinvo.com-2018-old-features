@@ -137,6 +137,59 @@ body {
 	}
 }
 
+.social-buttons {
+	padding: 0 0 3em 5em;
+	p {
+		padding: 0;
+		margin-bottom: 0.5em;
+	}
+	a {
+		font-size: 1.2em;
+		padding: 0.5em 1em 0.4em;
+		color: #FFF;
+		&.fb {
+			background-color: #3b5998;
+			border-bottom: 3px solid darken(#3b5998, 15%);
+			&:hover {
+				background-color: darken(#3b5998, 5%);
+			}
+		}
+		&.twitter {
+			background-color: #00aced;
+			border-bottom: 3px solid darken(#00aced, 15%);
+			&:hover {
+				background-color: darken(#00aced, 5%);
+			}
+		}
+		&.plus {
+			background-color: #dd4b39;
+			border-bottom: 3px solid darken(#dd4b39, 15%);
+			&:hover {
+				background-color: darken(#dd4b39, 5%);
+			}
+		}
+		&.in {
+			background-color: #007bb6;
+			border-bottom: 3px solid darken(#007bb6, 15%);
+			&:hover {
+				background-color: darken(#007bb6, 5%);
+			}
+		}
+		&.mail {
+			color: #FFF;
+			background-color: #888888;
+			border-bottom: 3px solid darken(#888, 15%);
+			&:hover {
+				background-color: darken(#888888, 5%);
+			}
+		}
+	}
+	&.centered {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
 section {
 	padding-top: 1em;
 	margin-bottom: 3em;
@@ -663,7 +716,7 @@ article.government {
 header#article-header {
 	max-width: 100%;
 	padding: 30% 5rem 5%;
-	margin-bottom: 4em;
+	margin-bottom: 2em;
 	background: url(../../images/features/democracy/flag-hero.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -698,7 +751,7 @@ header#article-header {
 }
 
 .faded {
-	padding: 3em 0;
+	padding: 3em 0 4em;
 	border-top: 2px solid #d2d2d2;
 	border-bottom: 2px solid #d2d2d2;
 	background-color: #f5f5f5;
