@@ -64,7 +64,7 @@ end
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-	config.bucket                = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	config.bucket                = 'www.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
 	config.region                = 'us-east-1'     # The AWS region for your bucket.
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
