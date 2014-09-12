@@ -227,49 +227,8 @@ $(document).ready(function(){
 		$('.main-nav').toggleClass('open');
 	});
 
-	// Init Governments Slider
-	govtSlider = govtSliderObj.slick({
-		prevArrow: null,
-		nextArrow: null,
-		dots: false,
-		speed: animationSpeed,
-		onAfterChange: function() {
-			colorChange(govtSlider);
-			ableToNavigate = true;
-		}
-	});
-
-	// Init Voting Slider
-	votingSlider = votingSliderObj.slick({
-		prevArrow: null,
-		nextArrow: null,
-		draggable: false,
-		dots: false,
-		speed: animationSpeed
-	});
-
 	setImageHeight($('#govtSlider .slick-list'), $('#govtSlider .image'));
 	
-	$('.govtSlides .buttonNav .slider-arrow').on('click', function(event){
-		arrowClick(govtSlider, '.govtSlides .visualNav', this);
-		colorChange(govtSlider);
-	});
-
-	$('.govtSlides .visualNav .slider-button').on('click', function(event){
-		buttonClick(govtSlider, '.govtSlides .visualNav', this);
-		colorChange(govtSlider);
-	});
-
-	var currentSlideHeight = $('#votingSlider .slick-active').outerHeight();
-	$('#votingSlider .slick-list').css('height', currentSlideHeight + 'px');
-
-	$('.votingSlides .buttonNav .slider-arrow').on('click', function(event){
-		arrowClick(votingSlider, '.votingSlides .visualNav', this);
-	});
-
-	$('.votingSlides .visualNav .slider-button').on('click', function(event){
-		buttonClick(votingSlider, '.votingSlides .visualNav', this);
-	});
 });
 
 $(window).load(function(event) {
@@ -279,6 +238,47 @@ $(window).load(function(event) {
 	$('#votingSlider .slick-list').css({
 		'height': currentSlideTotalHeight + 'px'
 	});
+
+	// Init Governments Slider
+		govtSlider = govtSliderObj.slick({
+			prevArrow: null,
+			nextArrow: null,
+			dots: false,
+			speed: animationSpeed,
+			onAfterChange: function() {
+				colorChange(govtSlider);
+				ableToNavigate = true;
+			}
+		});
+
+		// Init Voting Slider
+		votingSlider = votingSliderObj.slick({
+			prevArrow: null,
+			nextArrow: null,
+			draggable: false,
+			dots: false,
+			speed: animationSpeed
+		});
+	$('.govtSlides .buttonNav .slider-arrow').on('click', function(event){
+			arrowClick(govtSlider, '.govtSlides .visualNav', this);
+			colorChange(govtSlider);
+		});
+
+		$('.govtSlides .visualNav .slider-button').on('click', function(event){
+			buttonClick(govtSlider, '.govtSlides .visualNav', this);
+			colorChange(govtSlider);
+		});
+
+		var currentSlideHeight = $('#votingSlider .slick-active').outerHeight();
+		$('#votingSlider .slick-list').css('height', currentSlideHeight + 'px');
+
+		$('.votingSlides .buttonNav .slider-arrow').on('click', function(event){
+			arrowClick(votingSlider, '.votingSlides .visualNav', this);
+		});
+
+		$('.votingSlides .visualNav .slider-button').on('click', function(event){
+			buttonClick(votingSlider, '.votingSlides .visualNav', this);
+		});
 
 	//Action
 	$('.action .button').on('click', function(event){
