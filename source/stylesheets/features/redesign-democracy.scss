@@ -190,6 +190,13 @@ body {
 	}
 }
 
+.comments {
+	margin: 0 auto;
+	padding: 0 8em;
+	max-width: 90rem;
+	text-align: center;
+}
+
 section {
 	padding-top: 1em;
 	margin-bottom: 3em;
@@ -1084,6 +1091,9 @@ header#article-header {
 		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart, &#section5 .votingSlides.mobile-layout {
 			padding: 0 2rem;
 		}
+	}
+	.comments {
+		padding: 0 2em;
 	}
 	.action {
 		padding: 2em;
