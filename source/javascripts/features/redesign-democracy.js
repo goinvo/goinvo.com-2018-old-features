@@ -218,6 +218,8 @@ var colorChange = function(sliderObject) {
 
 $(document).ready(function(){
 	// Menu Bar
+	$('.main-nav').css('visibility', 'hidden');
+
 	$('.main-nav a').on('click', function(event){
 		event.preventDefault();
 		scrollToSec(this);
@@ -232,6 +234,8 @@ $(document).ready(function(){
 });
 
 $(window).load(function(event) {
+	$('.main-nav').css('visibility', 'visible');
+
 	//Set everything up
 	var currentSlideTotalHeight = $('#votingSlider .slick-active').outerHeight();
 	var currentSlideTextHeight = $('#votingSlider .slick-active .text').outerHeight();

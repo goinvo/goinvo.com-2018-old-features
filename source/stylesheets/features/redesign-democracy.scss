@@ -89,9 +89,6 @@ body {
 	background: linear-gradient(to bottom, fade-out($bluegray, 0.2) 0%, fade-out($bluegray, 0.2) 100%), image-url('features/democracy/ipad.jpg') center/cover no-repeat;
 	text-align: center;
 	box-shadow: inset 0 20px 20px -20px #000, inset 0 -20px 20px -20px #000;
-	p {
-		text-shadow: 0 1px 0 #AAA, 0 2px #AAA;
-	}
 	.icons {
 		svg {
 			width: 72px;
