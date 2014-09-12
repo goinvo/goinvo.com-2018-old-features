@@ -228,9 +228,6 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.main-nav').toggleClass('open');
 	});
-
-	setImageHeight($('#govtSlider .slick-list'), $('#govtSlider .image'));
-	
 });
 
 $(window).load(function(event) {
@@ -244,25 +241,28 @@ $(window).load(function(event) {
 	});
 
 	// Init Governments Slider
-		govtSlider = govtSliderObj.slick({
-			prevArrow: null,
-			nextArrow: null,
-			dots: false,
-			speed: animationSpeed,
-			onAfterChange: function() {
-				colorChange(govtSlider);
-				ableToNavigate = true;
-			}
-		});
+	govtSlider = govtSliderObj.slick({
+		prevArrow: null,
+		nextArrow: null,
+		dots: false,
+		speed: animationSpeed,
+		onAfterChange: function() {
+			colorChange(govtSlider);
+			ableToNavigate = true;
+		}
+	});
 
-		// Init Voting Slider
-		votingSlider = votingSliderObj.slick({
-			prevArrow: null,
-			nextArrow: null,
-			draggable: false,
-			dots: false,
-			speed: animationSpeed
-		});
+	// Init Voting Slider
+	votingSlider = votingSliderObj.slick({
+		prevArrow: null,
+		nextArrow: null,
+		draggable: false,
+		dots: false,
+		speed: animationSpeed
+	});
+
+	setImageHeight($('#govtSlider .slick-list'), $('#govtSlider .image'));
+
 	$('.govtSlides .buttonNav .slider-arrow').on('click', function(event){
 			arrowClick(govtSlider, '.govtSlides .visualNav', this);
 			colorChange(govtSlider);
