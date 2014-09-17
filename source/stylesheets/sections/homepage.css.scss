@@ -1,11 +1,7 @@
 @import "../base/core";
 
 body {
-	background-color: #0d0d0d;
-	min-height: 640px;
-	@media only screen and (max-width: 1020px) {
-		min-height: 100%;
-	}
+   background-color: #0d0d0d;
 }
 
 .header-content {
@@ -86,7 +82,10 @@ a {
 	}
 	// Styling
 	.title {
+<<<<<<< HEAD
 		width: 100%;
+=======
+>>>>>>> rethink-demo-feature
 		padding: 4em 3em;
 		font-size: 1.25em;
 		color: $white;
