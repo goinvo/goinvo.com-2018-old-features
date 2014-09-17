@@ -11,6 +11,6 @@ gem "middleman-s3_redirect"
 
 require 'rbconfig'
 
-gem 'listen', '<= 2.4'
+gem 'listen'
 
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]

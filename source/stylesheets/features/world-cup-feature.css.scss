@@ -1,7 +1,7 @@
 @import "../base/core";
 
 header.hero {
-	background-image: linear-gradient(to bottom, fade-out($black, 0.25) 0%, fade-out($black, 0.45) 100%), url('../../images/soccer_dataviz.jpg');
+	background-image: linear-gradient(to bottom, fade-out($black, 0.25) 0%, fade-out($black, 0.45) 100%), url('../../images/features/world-cup/hero.jpg');
 	padding: 10em 0;
 	max-height: 100%;
 	min-height: 0;
@@ -312,73 +312,84 @@ section, #sec11 .content {
 			}
 		}
 	}
-	#credits {
-		padding: 2em 8em 4em;
-		max-width: 900px;
-		max-width: 90rem;
-		margin: 0 auto;
-		@include clearfix();
-		.author, .contributors {
-			float: left;
+}
+
+#credits {
+	padding: 2em 8em 4em;
+	max-width: 900px;
+	max-width: 90rem;
+	margin: 0 auto;
+	@include clearfix();
+	.author, .contributors {
+		float: left;
+	}
+	h2 {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1em;
+		color: #888;
+		margin-bottom: 0;
+		padding-bottom: 0.25em;
+	}
+	p {
+		font-size: 20px;
+		line-height: 1.3em;
+	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $lightgray;
 		}
-		h2 {
+	}
+	.author {
+		width: 65%;
+		padding-right: 3em;
+		color: #444;
+	}
+	.author-content {
+		position: relative;
+		margin-top: -25%;
+		background: $white;
+		padding: 2em;
+		border-color: $blue;
+		border-width: 0 3px 3px;
+		border-style: solid;
+		p {
 			margin-bottom: 0;
 		}
+	}
+	.contributors {
+		width: 35%;
+		padding: 2em;
+		border: 3px solid $red;
 		h3 {
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 1em;
-			color: #888;
-			margin-bottom: 0;
+			font-size: 22px;
+			padding-bottom: 0.5em;
 		}
 		p {
-			font-size: 20px;
-			line-height: 1.3em;
+			font-size: 34px;
+			margin-bottom: 0;
 		}
+		hr {
+			width: 2em;
+			margin: 1.5em 0;
+			border-width: 5px;
+			border-color: $red;
+		}
+	}
+	@media only screen and (max-width: 978px) {
+		padding-left: 3em;
+		padding-right: 3em;
 		.author {
-			width: 65%;
-			padding-right: 3em;
+			padding-right: 0;
+			margin-bottom: 2em;
 		}
-		.author-content {
-			position: relative;
-			margin-top: -25%;
-			background: $white;
-			padding: 2em;
-			border-color: #888;
-			border-width: 0 3px 3px;
-			border-style: solid;
-			p {
-				margin-bottom: 0;
-			}
-		}
-		.contributors {
-			width: 35%;
-			padding: 2em;
-			border: 3px solid #888;
-			h3 {
-				font-size: 22px;
-				padding-bottom: 0.5em;
-			}
-			p {
-				font-size: 34px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-			hr {
-				border-width: 2px;
-			}
-		}
-		@media only screen and (max-width: 978px) {
-			padding-left: 3em;
-			padding-right: 3em;
-			.author {
-				padding-right: 0;
-				margin-bottom: 2em;
-			}
-			.author, .contributors {
-				width: 100%;
-			}
+		.author, .contributors {
+			width: 100%;
 		}
 	}
 }

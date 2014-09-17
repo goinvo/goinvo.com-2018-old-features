@@ -27,10 +27,19 @@
 	- elsif currentPage.include? "contact"
 		- bodyClass = "contact"
 	%body{:class => bodyClass}
+		#fb-root
+		:javascript
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=564464970346249&version=v2.0";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 		#page-wrapper
 			#site-overlay
 				%header#main-header
-					%header#site-header
+					.header-content
 						%a{:href => asset_url('/'), :id => "site-title"}
 							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
 							%span.tag-line Crafting exceptional software for progressive companies

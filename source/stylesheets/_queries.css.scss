@@ -9,7 +9,7 @@
  ************************************/
 
 @media only screen and (max-width: 1130px) {
-	#site-header {
+	.header-content {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -42,7 +42,7 @@
 }
 
 @media only screen and (max-width: 1020px) {
-	#site-header .tag-line {
+	.header-content .tag-line {
 		display: none;
 	}
 
@@ -157,7 +157,7 @@
 	}
 }
 
-@media only screen and (max-width: 649px) {
+@media only screen and (max-width: 652px) {
 	//hide everything that should be hidden (some elements of class: mobile-hide)
 	div.sidebar.mobile-hide, section.timeline.mobile-hide {
 		display:none;
@@ -186,7 +186,7 @@
 	}
 
 	// Bring back that tagline
-	#site-header .tag-line {
+	.header-content .tag-line {
 		display: inline-block;
 	}
 	#main-container .homepage-header {
@@ -207,14 +207,14 @@
 	}
 }
 
-@media only screen and (min-width: 649px) {
-	#main-header #site-header #nav-buttons-mobile {
+@media only screen and (min-width: 652px) {
+	#main-header .header-content #nav-buttons-mobile {
 		display: none !important;
 	}
 }
 
 @media only screen and (max-width: 540px) {
-	#site-header .tag-line {
+	.header-content .tag-line {
 		display: none;
 	}
 	#main-footer p {

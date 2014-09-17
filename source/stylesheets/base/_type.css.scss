@@ -17,7 +17,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	margin-bottom: 0.5em;
-	line-height: 1em;
+	line-height: 1;
+	display: block;
 	&.name {
 		font-weight: 400;
 	}
@@ -79,8 +80,27 @@ p {
 	}
 }
 
+small {
+	line-height: 1;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
 ul {
 	list-style: square;
+}
+
+ol {
+	list-style: decimal;
 }
 
 ol {
@@ -88,13 +108,14 @@ ol {
 }
 
 .social-card a {
-		color: $navy;
+	color: $navy;
 }
 
 .social-card a:hover {
-		color:$blue;
+	color:$blue;
 }
 
 a {
-		 color: $blue;
+	display: inline-block;
+	color: $blue;
 }
