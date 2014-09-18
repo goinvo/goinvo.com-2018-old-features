@@ -41,7 +41,7 @@ var setNavCuePoint = function() {
 }
 
 var setScrollbarLoc = function() {
-	scrollbarPosition = $('body').scrollTop();
+	scrollbarPosition = $(window).scrollTop();
 }
 
 var setScrollbarRelations = function() {
@@ -110,7 +110,7 @@ var scrollToSec = function(event, sectionLinkElement) {
 	}
 	$('.main-nav a.active').removeClass('active');
 	$(sectionLinkElement).toggleClass('active');
-	$('body').animate({
+	$('body, html').animate({
 		scrollTop: sectionLoc + 5
 	});
 }
