@@ -95,7 +95,7 @@ var setSectionRelations = function() {
 	}
 }
 
-var scrollToSec = function(sectionLinkElement) {
+var scrollToSec = function(event, sectionLinkElement) {
 	event.preventDefault();
 	var section = $(sectionLinkElement).attr('href');
 	console.log(section);
@@ -132,7 +132,7 @@ var setMobile = function() {
 	setSectionRelations();
 }
 
-var arrowClick = function(sliderObject, visualNavElement, arrowElement) {
+var arrowClick = function(event, sliderObject, visualNavElement, arrowElement) {
 	event.preventDefault();
 	var currentSlideIndex = sliderObject.slickCurrentSlide();
 	if (ableToNavigate) {
@@ -169,7 +169,7 @@ var arrowClick = function(sliderObject, visualNavElement, arrowElement) {
 	}
 }
 
-var buttonClick = function(sliderObject, visualNavElement, buttonElement) {
+var buttonClick = function(event, sliderObject, visualNavElement, buttonElement) {
 	event.preventDefault();
 	if (ableToNavigate) {
 		ableToNavigate = false;
@@ -222,7 +222,7 @@ $(document).ready(function(){
 
 	$('.main-nav a').on('click', function(event){
 		event.preventDefault();
-		scrollToSec(this);
+		scrollToSec(event, this);
 	});
 	$('.nav-wrapper .nav-button').on('click', function(event){
 		event.preventDefault();
@@ -264,12 +264,12 @@ $(window).load(function(event) {
 	setImageHeight($('#govtSlider .slick-list'), $('#govtSlider .image'));
 
 	$('.govtSlides .buttonNav .slider-arrow').on('click', function(event){
-			arrowClick(govtSlider, '.govtSlides .visualNav', this);
+			arrowClick(event, govtSlider, '.govtSlides .visualNav', this);
 			colorChange(govtSlider);
 		});
 
 		$('.govtSlides .visualNav .slider-button').on('click', function(event){
-			buttonClick(govtSlider, '.govtSlides .visualNav', this);
+			buttonClick(event, govtSlider, '.govtSlides .visualNav', this);
 			colorChange(govtSlider);
 		});
 
@@ -277,11 +277,11 @@ $(window).load(function(event) {
 		$('#votingSlider .slick-list').css('height', currentSlideHeight + 'px');
 
 		$('.votingSlides .buttonNav .slider-arrow').on('click', function(event){
-			arrowClick(votingSlider, '.votingSlides .visualNav', this);
+			arrowClick(event, votingSlider, '.votingSlides .visualNav', this);
 		});
 
 		$('.votingSlides .visualNav .slider-button').on('click', function(event){
-			buttonClick(votingSlider, '.votingSlides .visualNav', this);
+			buttonClick(event, votingSlider, '.votingSlides .visualNav', this);
 		});
 
 	//Action
