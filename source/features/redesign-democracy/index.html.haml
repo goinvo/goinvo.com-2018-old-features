@@ -3,6 +3,7 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/redesign-democracy"
 	= stylesheet_link_tag "slick"
+	= stylesheet_link_tag "feature_links"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "slick/slick"
 	%meta{:name => "description", :content => ""}/
@@ -704,6 +705,10 @@
 					%h3 Audio Engineer
 					%p Michael Hermes<br><small><a href="https://twitter.com/hermbot">@hermbot</a></small>
 	- # END Credits. Copy to this line.
-
+%a#world-cup.block.bar{:href => "../the-10-best-nations-in-world-cup-history/"}	
+	.title
+		%h5.tag Previous Feature: September/October 2014
+		%h2 The 10 Best Nations in World Cup History
+		%h3 77 teams over 84 years
 - content_for(:worlds_end) do
 	= javascript_include_tag "features/redesign-democracy.js"

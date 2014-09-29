@@ -2,6 +2,7 @@
 	= "World Cup History Visualized"
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/world-cup-feature"
+	= stylesheet_link_tag "feature_links"
 	= javascript_include_tag "featurenav"
 	%meta{:name => "description", :content => "World Cup History Visualized"}/
 	%meta{:name => "keywords", :content => "world cup history, world cup visualized, world cup info viz"}/
@@ -952,3 +953,8 @@
 			%h3 Special Thanks:
 			%p Juhan Sonin
 	- # END Credits. Copy to this line.
+%a#democracy.block.bar{:href => "../redesign-democracy"}
+	.title
+		%h5.tag Next Feature: September/October 2014
+		%h2 Redesign Democracy
+		%h3 A better solution for the digital era
