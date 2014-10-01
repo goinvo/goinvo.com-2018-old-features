@@ -62,6 +62,8 @@ activate :s3_sync do |s3_sync|
 	s3_sync.version_bucket             = true
 end
 
+default_caching_policy max_age:(60 * 60 * 24 * 365)
+
 # Manage all them redirects
 activate :s3_redirect do |config|
 	config.bucket                = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
@@ -348,15 +350,18 @@ configure :build do
 
 	# Use relative URLs
 	activate :relative_assets
+	
+	activate :gzip
 
 	# Compress PNGs after build
 	# First: gem install middleman-smusher
 	# require "middleman-smusher"
-	#activate :smusher
+	activate :smusher
 
 	# Or use a different image path
 	# set :http_path, "image"
 end
+
 
 require 'lib/link_formatters'
 require 'lib/data_helper'
