@@ -95,6 +95,22 @@
   twitter_username: "jonfollett"
   github_username: "jonfollett"
   photo: jon_follett.jpg
+  
+- first_name: Beth
+  last_name: Herlin
+  title: Product Designer
+  bio: "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University."
+  twitter_username: "beth11herlin"
+  linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
+  photo: beth_herlin.jpg
+
+- first_name: Xinyu
+  last_name: Liu
+  title: Designer
+  bio: "Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design."
+  twitter_username: "beth11herlin"
+  linkedin_url: "https://www.linkedin.com/profile/view?id=229659322"
+  photo: xinyu_liu.jpg
 
 - first_name: Eli
   last_name: Rodriguez
@@ -108,12 +124,12 @@
 
 - first_name: Emily
   last_name: Twaddell
-  title: Studio Manager
+  title: Doyenne de l'Atelier
   bio: "Emily is a mentor and leader specializing in instructional design. Since joining Invo in 2013 as studio manager, Emily manages daily operations, writes for the blog, consults on design, and creates whimsical art installations. Emily holds degrees from Trinity College, Lesley University, and The Center for Digital Imaging Arts at Boston University."
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
   photo: emily_twaddell.jpg
-
+  
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
