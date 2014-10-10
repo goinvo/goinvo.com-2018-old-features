@@ -159,7 +159,7 @@ img.ebola-section {
 	margin: 0 auto;
 	@include clearfix();
 	.author, .contributors {
-		//float: left;
+		float: left;
 	}
 	h2 {
 		margin-bottom: 0;
@@ -190,7 +190,7 @@ img.ebola-section {
 		width: 65%;
 		padding-right: 3em;
 		color: #444;
-		margin: 0 auto;
+		//margin: 0 auto;
 	}
 	.author-content {
 		position: relative;
@@ -204,10 +204,14 @@ img.ebola-section {
 			margin-bottom: 0;
 		}
 	}
+	.contributors.download-links {
+		margin-top: 20px;
+		font-size: 24px;
+	}
 	.contributors {
 		width: 35%;
 		padding: 2em;
-		border: 3px solid $red;
+		border: 3px solid $blue;
 		h3 {
 			font-size: 22px;
 			padding-bottom: 0.5em;
@@ -221,7 +225,7 @@ img.ebola-section {
 			width: 2em;
 			margin: 1.5em 0;
 			border-width: 5px;
-			border-color: $red;
+			border-color: $blue;
 		}
 		.contributor {
 			@include clearfix();
@@ -253,11 +257,15 @@ img.ebola-section {
 	}
 }
 
-.container.content {
+.container.content, #page-wrapper {
 		background-color: #fff;
 }
 
 .fb-comments {
 		max-width: 1238px;
 	 margin: 0 auto;
+}
+
+#section8 {
+		margin-bottom: 100px;
 }

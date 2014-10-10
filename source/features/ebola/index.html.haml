@@ -32,8 +32,6 @@
 		%img.ebola-section{:src => "../images/features/ebola/Ebola-06.svg"}
 	%section#section7
 		%img.ebola-section{:src => "../images/features/ebola/Ebola-07.svg"}
-	%section#section8
-		%img.ebola-section{:src => "../images/features/ebola/Ebola-08.svg"}
 .social-buttons.centered
 	%p Share this article:
 	%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=www.goinvo.com/features/ebola", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"} Facebook
@@ -48,11 +46,32 @@
 		- # BEGIN Credits: Copy from this line.
 #credits
 	.author
-		%img{:src => "../../images/features/ebola/xinyu_liu.jpg", :alt => ""}/
+		%img{:src => "../../images/team_photos/xinyu_liu.jpg", :alt => ""}/
 		.author-content
 			.author-header
 				%h3 Author
 				%h2 Xinyu Liu
 			.author-bio
 				%p Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design.
-	- # END Credits. Copy to this %%%%%line.
+	.contributors
+		.contributor
+			.image
+				= image_tag 'features/democracy/contrib/emily.jpg'
+			.info
+				%h3 Editor
+				%p Emily Twaddell<br><small><a href="http://twitter.com/mimitwaddell">@mimitwaddell</a></small>
+				%hr
+		.contributor
+			.image
+				= image_tag 'features/democracy/contrib/juhan.jpg'
+			.info
+				%h3 Contributing Author
+				%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
+	.contributors.download-links
+		.contributor <a href = "ebola/files/Understanding_Ebola.pdf">Download PDF</a>
+		%hr
+		.contributor <a href = "ebola/files/Understanding_Ebola_ Reference.pdf">Download References PDF</a>
+- # END Credits. Copy to this %%%%%line.
+%article
+	%section#section8
+		%img.ebola-section{:src => "../images/features/ebola/Ebola-08.svg"}
