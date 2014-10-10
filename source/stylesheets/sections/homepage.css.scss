@@ -43,6 +43,12 @@ a {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/culture.jpg');
 }
 
+#ebola {
+	  padding-top: 75px;
+		paddning-bottom: 75px;
+			background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/ebola.jpg');
+}
+
 #blog .title:after {
 	z-index: -10;
 	content: "";
