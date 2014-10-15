@@ -34,7 +34,7 @@
 							%p.practice-areas
 								- x = 1
 								- practice_areas(project).each do |area|
-									= link_to area, "/v01/projects/#{area}"
+									= area
 									- total=practice_areas(project).count
 									- if x < total
 										= "+"
