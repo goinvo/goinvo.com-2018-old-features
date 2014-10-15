@@ -24,11 +24,16 @@
 				console.log(currentString);
 
 				$('#oracle').removeClass('bar').addClass('half');
-				$('.double.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block half"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
+				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog').css('background-image', 'url(' + currentString + ')');
 
 			}
 		});
+%a#homepage-hero.block.bar{:href => "work"}
+	.title
+		.actual-title Idea to Product
+		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-button How We Work
 %a#democracy.block.bar{:href => "features/redesign-democracy"}
 	.title
 		%h5.tag September/October 2014 Feature
@@ -50,15 +55,5 @@
 			%h5.tag Our Culture
 			%h2 Radical transparency is just part of our story&hellip;
 
-%a#hgraph.block.bar{:href => "work/hgraph"}
-	.title
-		%h5.tag 
-		%h2 hGraph
-		%h3 Your health in one picture
-
-.double.dynamic
-	%a#oracle.block.bar{:href => "work/oracle"}
-		.title
-			%h5.tag Client Story: Oracle
-			%h2 &ldquo;We chose Involution to help us take our two user experience people and build an outstanding team.&rdquo;
+.recent-blog-post.dynamic
 		
