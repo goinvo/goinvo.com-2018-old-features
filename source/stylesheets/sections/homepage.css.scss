@@ -20,7 +20,9 @@ a {
 
 // Heros
 #democracy {
-	background-image: image-url('home/democracy.png');
+	.photo-container {
+		background-image: image-url('home/democracy.png');	
+	}
 	
 	.title {
 		.tag {
@@ -35,30 +37,34 @@ a {
 	}
 }
 
-#world-cup {
+#world-cup .photo-container {
 	background-image: image-url('features/world-cup/hero.jpg');
 }
 
-#hgraph {
+#hgraph .photo-container{
 	background-image: image-url('home/hgraph_large.png');
 }
 
-#oracle {
+#oracle .photo-container{
 	background-image:  image-url('home/oracle.jpg');
 }
 
-#three-m {
+#three-m .photo-container{
 	background-image: image-url('home/3m.jpg');
 }
 
-#culture {
+#culture .photo-container {
 	background-image: image-url('home/culture.jpg');
 }
 
 #ebola {
-	  padding-top: 75px;
-		paddning-bottom: 75px;
-		background-image: image-url('home/ebola.png');
+	  //padding-top: 75px;
+		//padding-bottom: 75px;
+  
+    .photo-container {
+      background-image: image-url('home/ebola.png');
+    }
+  
 		.title {
 			.name {
 				color: #00C4E9;	
@@ -72,6 +78,7 @@ a {
 #blog .title {
 	width: 100%;
 	padding: 1em 3em;
+	background: rgba(0,0,0,.55);
 }
 #blog .title:after {
 	z-index: -10;
@@ -94,7 +101,12 @@ a {
 
 #homepage-hero {
 	min-height: 578px;
-	background-image: image-url('home/temp.jpg');
+	
+	.photo-container {
+			//background-image: image-url('home/hp-1.png');
+			min-height: 578px;
+	}
+	
 	
 	.actual-title {
 		font-size: 75px;	
@@ -103,7 +115,7 @@ a {
 	.actual-content {
 		font-size: 40px;
 		max-width: 593px;
-		margin-top: 25px;
+		margin-top: 5px;
 	}
 	
 	.actual-button {
@@ -112,6 +124,12 @@ a {
 		border-radius: 5px;
 		display: inline-block;
 		padding: 10px;
+		transition: 350ms;
+		
+		&:hover {
+			transform: scale(1.1,1.1);
+			background: rgba(0,0,0,.2);	
+		}
 	}
 }
 
@@ -124,20 +142,31 @@ a {
 }
 
 .block {
+	position: relative;
 	display: block;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 	box-shadow: 0 0 0px #000;
-	transition: box-shadow 400ms ease;
+	overflow: hidden;
 	z-index: 0;
   min-height: 472px;
 	border-bottom: 4px solid #ffffff;
 	
-	&:hover {
-		z-index: 20;
-		box-shadow: 0 0 20px #000;
+	.photo-container {
+		transition: transform 1000ms ease-in-out;
+		background-size: cover;
+		background-position: left center;
+		background-repeat: no-repeat;
+		width:100%;
+		min-height: 472px;
+		transform: scale(1, 1);	
+		
 	}
+	
+	&:hover {
+		.photo-container {
+			transform: scale(1.1, 1.1);	
+		}
+	}	
+	
 	//Layouts
 	&.bar {
 		width: 100%;
@@ -182,6 +211,9 @@ a {
 			font-size: 23px;
 			letter-spacing: 1px;
 		}
+    .tag {
+       margin-bottom: 10px; 
+    }
 	}
 }
 
@@ -198,6 +230,10 @@ a {
 	.block.half {
 		display: block;
 		width: 100%;
+	}
+	
+	.block, .block .photo-container {
+		min-height: 600px;	
 	}
 }
 
