@@ -24,41 +24,43 @@
 				console.log(currentString);
 
 				$('#oracle').removeClass('bar').addClass('half');
-				$('.double.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block half"><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
-				$('#blog').css('background-image', 'url(' + currentString + ')');
-
+				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
+				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+				var randNum = Math.ceil(Math.random()*3);
+				var imgURL = 'url("/images/home/hp-' + randNum + '.png")';
+				$('#homepage-hero .photo-container').css('background-image', imgURL);
 			}
 		});
+%a#homepage-hero.block.bar{:href => "work"}
+	.photo-container
+	.title
+		.actual-title Idea to Product
+		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-button See our work
 %a#democracy.block.bar{:href => "features/redesign-democracy"}
+	.photo-container
 	.title
 		%h5.tag September/October 2014 Feature
-		%h2 Redesign Democracy
-		%h3 A Better Solution for the Digital Era
+		%h2.name Redesign Democracy
+		%h3.sub-name A Better Solution for the Digital Era
 	
 %a#ebola.block.bar{:href => "features/ebola"}
+	.photo-container
 	.title
-		%h3 A Visual Guide
-		%h2 Understanding Ebola
+		%h3.sub-name A Visual Guide
+		%h2.name Understanding Ebola
 	
 .double
 	%a#three-m.block.half{:href => "work/3m"}
+		.photo-container
 		.title
 			%h5.tag Client Story: 3M
 			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
 	%a#culture.block.half{:href => "careers"}
+		.photo-container
 		.title
 			%h5.tag Our Culture
 			%h2 Radical transparency is just part of our story&hellip;
 
-%a#hgraph.block.bar{:href => "work/hgraph"}
-	.title
-		%h5.tag 
-		%h2 hGraph
-		%h3 Your health in one picture
-
-.double.dynamic
-	%a#oracle.block.bar{:href => "work/oracle"}
-		.title
-			%h5.tag Client Story: Oracle
-			%h2 &ldquo;We chose Involution to help us take our two user experience people and build an outstanding team.&rdquo;
+.recent-blog-post.dynamic
 		

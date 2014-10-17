@@ -20,35 +20,66 @@ a {
 
 // Heros
 #democracy {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('features/democracy/flag-hero.jpg');
+	.photo-container {
+		background-image: image-url('home/democracy.png');	
+	}
+	
+	.title {
+		.tag {
+			color: #9B9B9B;	
+		}
+		.name {
+			color: #D75F4E;	
+		}
+		.sub-name {
+			color: #6C8696;	
+		}
+	}
 }
 
-#world-cup {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('features/world-cup/hero.jpg');
+#world-cup .photo-container {
+	background-image: image-url('features/world-cup/hero.jpg');
 }
 
-#hgraph {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/hgraph_large.png');
+#hgraph .photo-container{
+	background-image: image-url('home/hgraph_large.png');
 }
 
-#oracle {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/oracle.jpg');
+#oracle .photo-container{
+	background-image:  image-url('home/oracle.jpg');
 }
 
-#three-m {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/3m.jpg');
+#three-m .photo-container{
+	background-image: image-url('home/3m.jpg');
 }
 
-#culture {
-	background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/culture.jpg');
+#culture .photo-container {
+	background-image: image-url('home/culture.jpg');
 }
 
 #ebola {
-	  padding-top: 75px;
-		paddning-bottom: 75px;
-			background-image: linear-gradient(to bottom, fade-out(#000, 0.5) 0%, fade-out(#000, 0.5) 100%), image-url('home/ebola.jpg');
+	  //padding-top: 75px;
+		//padding-bottom: 75px;
+  
+    .photo-container {
+      background-image: image-url('home/ebola.png');
+    }
+  
+		.title {
+			.name {
+				color: #00C4E9;	
+			}
+			.sub-name {
+				color: #A5DEF1;	
+			}
+	}
 }
 
+#blog .title {
+	width: 100%;
+	padding: 1em 3em;
+	background: rgba(0,0,0,.55);
+}
 #blog .title:after {
 	z-index: -10;
 	content: "";
@@ -58,29 +89,88 @@ a {
 	left: 0;
 	right: 0;
 	background: fade-out(#000, 0.5);
+	width:100%;
 }
 
 .double {
 	display: table;
 	width: 100%;
+	min-height: 309px;
+	position:relative;
+}
+
+#homepage-hero {
+	min-height: 578px;
+	
+	.photo-container {
+			//background-image: image-url('home/hp-1.png');
+			min-height: 578px;
+	}
+	
+	
+	.actual-title {
+		font-size: 75px;	
+	}
+	
+	.actual-content {
+		font-size: 40px;
+		max-width: 593px;
+		margin-top: 5px;
+	}
+	
+	.actual-button {
+		margin-top: 25px;
+		border: 1px solid #ffffff;
+		border-radius: 5px;
+		display: inline-block;
+		padding: 10px;
+		transition: 350ms;
+		
+		&:hover {
+			transform: scale(1.1,1.1);
+			background: rgba(0,0,0,.2);	
+		}
+	}
+}
+
+.recent-blog-post .block {
+	border-bottom-width: 0px;	
+}
+
+.double .block.half .title h2 {
+	max-width: calc(100% - 3em);	
 }
 
 .block {
-	display: block;
 	position: relative;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	display: block;
 	box-shadow: 0 0 0px #000;
-	transition: box-shadow 400ms ease;
+	overflow: hidden;
 	z-index: 0;
-	&:hover {
-		z-index: 20;
-		box-shadow: 0 0 20px #000;
+  min-height: 472px;
+	border-bottom: 4px solid #ffffff;
+	
+	.photo-container {
+		transition: transform 500ms ease-in-out;
+		background-size: cover;
+		background-position: left center;
+		background-repeat: no-repeat;
+		width:100%;
+		min-height: 472px;
+		transform: scale(1, 1);	
+		
 	}
+	
+	&:hover {
+		.photo-container {
+			transform: scale(1.03, 1.03);	
+		}
+	}	
+	
 	//Layouts
 	&.bar {
 		width: 100%;
+		position: relative;
 	}
 	&.half {
 		width: 50%;
@@ -88,10 +178,11 @@ a {
 	}
 	// Styling
 	.title {
-		padding: 4em 3em;
+		padding: 2em 3em;
 		font-size: 1.25em;
 		color: $white;
-		text-shadow: 1px 1px #222;
+		position:absolute;
+		bottom: 0;
 		//Fix for OSX Font Rendering on Dark BG's
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -99,8 +190,15 @@ a {
 			font-weight: 400;
 			margin-bottom: 0;
 		}
+		.name {
+			font-size:75px;	
+			margin-bottom:0px;
+		}
+		.sub-name {
+			font-size:40px;	
+		}
 		h2 {
-			font-size: 2.8em;
+			font-size: 40px;
 			margin-bottom: 0.2em;
 		}
 		h3 {
@@ -110,9 +208,12 @@ a {
 			display: inline-block;
 			margin-bottom: 1em;
 			text-transform: uppercase;
-			font-size: 1em;
+			font-size: 23px;
 			letter-spacing: 1px;
 		}
+    .tag {
+       margin-bottom: 10px; 
+    }
 	}
 }
 
@@ -129,6 +230,10 @@ a {
 	.block.half {
 		display: block;
 		width: 100%;
+	}
+	
+	.block, .block .photo-container {
+		min-height: 600px;	
 	}
 }
 
