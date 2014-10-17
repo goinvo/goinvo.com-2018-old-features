@@ -137,9 +137,7 @@ a {
 	border-bottom-width: 0px;	
 }
 
-.double .block.half .title h2 {
-	max-width: calc(100% - 3em);	
-}
+
 
 .block {
 	position: relative;
@@ -183,6 +181,7 @@ a {
 		color: $white;
 		position:absolute;
 		bottom: 0;
+		width: 100%;
 		//Fix for OSX Font Rendering on Dark BG's
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -236,4 +235,30 @@ a {
 		min-height: 600px;	
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	#homepage-hero {
+		.actual-content {
+			font-size: 26px;
+		}
+		.actual-title {
+			font-size: 60px;	
+		}
+	}
+	
+	.block {
+		.title {
+			.tag {
+				font-size: 14px;	
+			}
+			.name {
+				font-size: 60px;
+			}
+			.sub-name {
+				font-size: 26px;	
+			}
+		}		
+	}
+}
+
 
