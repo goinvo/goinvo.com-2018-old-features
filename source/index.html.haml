@@ -26,9 +26,8 @@
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
-				var randNum = Math.ceil(Math.random()*3 );
+				var randNum = Math.ceil(Math.random()*3);
 				var imgURL = 'url("/images/home/hp-' + randNum + '.png")';
-				console.log(imgURL)
 				$('#homepage-hero .photo-container').css('background-image', imgURL);
 			}
 		});

@@ -151,7 +151,7 @@ a {
 	border-bottom: 4px solid #ffffff;
 	
 	.photo-container {
-		transition: transform 1000ms ease-in-out;
+		transition: transform 500ms ease-in-out;
 		background-size: cover;
 		background-position: left center;
 		background-repeat: no-repeat;
@@ -163,7 +163,7 @@ a {
 	
 	&:hover {
 		.photo-container {
-			transform: scale(1.1, 1.1);	
+			transform: scale(1.03, 1.03);	
 		}
 	}	
 	
