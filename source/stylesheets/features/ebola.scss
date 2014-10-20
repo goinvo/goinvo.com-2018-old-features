@@ -241,6 +241,7 @@ img.ebola-section {
 			}
 		}
 	}
+	
 	@media only screen and (max-width: 978px) {
 		padding-left: 3em;
 		padding-right: 3em;
@@ -268,4 +269,10 @@ img.ebola-section {
 
 #section8 {
 		margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 640px) {
+	.nav-wrapper {
+		display: none;	
+	}
 }
