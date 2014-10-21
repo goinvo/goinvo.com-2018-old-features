@@ -25,7 +25,7 @@ To build a version of the site, which compiles all resources and consolidates al
 	$ bundle exec middleman build
 
 
-### Deploy `build` folder
+### Deploying `build` Folder
 
 ### AWS Setup
 
