@@ -25,7 +25,12 @@ To build a version of the site, which compiles all resources and consolidates al
 	$ bundle exec middleman build
 
 
-### Deploy
+### Deploy `build` folder
+
+### AWS Setup
+
+To deploy, you'll first need to add a `.s3_sync` file to the root directory. This file should contain the `aws_access_key_id` and `aws_secret_access_key` both of which a team member can provide, just ask. This file should be ignored. 
+
 
 #### Redirections
 
@@ -58,6 +63,10 @@ Then run
 -OR-
 
 	$ middleman s3_sync --force
+	
+-OR to build and deploy in one fell swoop-
+
+	$ bundle exec middleman build && middleman s3_sync
 
 
 #### Live Deployments
@@ -73,3 +82,7 @@ Then run
 -OR-
 
 	$ middleman s3_sync --force
+
+-OR to build and deploy in one fell swoop-
+
+	$ bundle exec middleman build && middleman s3_sync
