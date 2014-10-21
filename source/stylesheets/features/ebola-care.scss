@@ -78,6 +78,28 @@ header#article-header {
 	margin-top: 50px;
 	margin-bottom: 100px;
 	background-color: #3b5998;
+	a {
+		width: 100%;	
+	}
+	.ebola-care-download-div {
+		width: 100%;
+		padding-top: 360px;
+	}
+	.button {
+		margin: 0 auto;
+		max-width: 380px;
+		border: 1px solid $gray;
+		text-align: center;
+		padding: 25px 20px 20px 20px;
+		border-radius: 5px !important;
+		transition: 350ms;
+		color: $gray;
+		
+		&:hover {
+			transform: scale(1.1,1.1);
+			background: rgba(0,0,0,.2);	
+		}
+	}
 }
 
 .social-buttons {
