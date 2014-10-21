@@ -12,6 +12,7 @@ Then run
 	$ middleman
 	
 -OR-
+
 	$ middleman server
   
 Then visit `http://localhost:4567` in your favorite browser.
@@ -38,6 +39,7 @@ To modify and update redirect rules, append new rules to the `config.rb` file wi
 	`redirect '/path1', 'url or path'`
   
 Then run
+
 	$ `middleman s3_redirect`
 
 to apply generated objects to the server.
@@ -51,8 +53,10 @@ To deploy the build to the staging server, be sure the following lines are set a
 	`config.bucket                      = 'staging.goinvo.com'`
 
 Then run
+
 	$ `middleman s3_sync`
 -OR-
+
 	$ `middleman s3_sync --force`
 
 
@@ -64,6 +68,8 @@ To deploy the build to the live server, be sure the following lines are set as f
 	`config.bucket                      = 'www.goinvo.com'`
 
 Then run
+
 	$ `middleman s3_sync`
 -OR-
+
 	$ `middleman s3_sync --force`
