@@ -22,74 +22,100 @@ body {
 	background-color: #000;
 }
 
-.nav-wrapper {
-	position: fixed;
-	z-index: 100;
-	width: 100%;
-	border-bottom: 0;
-	.nav-button {
-		display: none;
+header#article-header {
+	border-bottom: 5px solid #2E2F32;
+	max-width: 100%;
+	padding: 30% 0rem 5%;
+	margin-bottom: 8em;
+	background: url(../../images/features/ebola-care-plan/haz_zoom.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	.badge-image {
+		position:absolute;
+		bottom: -75px;
+		right: 30px;
 	}
-}
-
-.main-nav {
-	max-width: 1630px;
-	margin: 0 auto;
-	padding: 0 1rem;
-	border-right: 2px solid #CCC;
-	border-left: 2px solid #CCC;
-	border-bottom: 2px solid #DDD;
-	background: #FFF;
-	transition: height 400ms ease;
-	box-shadow: 0 5px 15px -8px #000;
-	@include clearfix();
-	a {
-		display: block;
-		float: left;
-		height: 55px;
-		padding: 1.3rem 1rem 0;
-		font-size: 1.05em;
-		line-height: 1em;
-		color: #58504A;
-		transition: color 200ms ease, background-color 200ms ease;
-		&:after {
-			content: "";
-			display: block;
-			width: 14px;
-			border-bottom: 2px solid transparent;
-			transition: border-bottom 200ms ease;
-		}
-		&:hover, &.active {
-			color: $blue;
-			&:after {
-				content: "";
-				display: block;
-				width: 14px;
-				border-bottom: 2px solid $blue;
-			}
-		}
-		&.zero {
-			padding-top: 1.1rem;
-			font-size: 1.35em;
-			transition: none;
-			&.active {
-				color: #58504A;
-				&:after {
-					border-bottom: 2px solid transparent;
-				}
-			}
-		}
-	}
-}
-
-article.ebola {
-		background-color: #fff;
-		padding-top: 100px;
-}
-
-img.ebola-section {
+	.headline {
+		padding: 0px 1em;
+		max-width: 1238px;
 		margin: 0 auto;
-}	
+		.head-container {
+			width: 650px;
+			padding: 40px;
+			border: 3px solid $gray;
+			background-color: rgba(255,255,255, .7);
+		}
+	}
+	h1, h2 {
+		margin: 0;
+	}
+	h1 {
+		padding-bottom: 0rem;
+		letter-spacing: 1px;
+	}
+	h2 {
+		padding-top: .5rem;
+		font-size: 1.375em;
+		font-weight: 400;
+		max-width: 540px;
+	}
+	hr {
+		border-top: 3px solid $blue;
+		width: 60px;
+		margin: 0;
+	}
+}
+
+.intro {
+	max-width: 1238px;
+	margin: 0 auto;	
+	margin-top: 60px;
+	padding: 0px 1em;
+	p {
+		line-height: 1.4em;
+	}
+}
+
+#ebola-care-download {
+	width: 100%;
+	height: 460px;
+	margin-top: 100px;
+	margin-bottom: 150px;
+	overflow: hidden;
+	position:relative;
+	a {
+		width: 100%;	
+	}
+	.ebola-care-download-div {
+		width: 100%;
+		padding-top: 0px;
+		z-index: 10000;
+		position: absolute;
+		bottom: 45%;
+	}
+	.button {
+		margin: 0 auto;
+		max-width: 380px;
+		border: 1px solid $gray;
+		text-align: center;
+		padding: 25px 20px 20px 20px;
+		border-radius: 5px !important;
+		transition: 350ms;
+		color: $white;
+		
+		background: rgba(0,0,0,.8);	
+
+		
+		&:hover {
+			transform: scale(1.2,1.2);
+			background: rgba(0,0,0,.8);	
+			color: $white;
+		}
+	}
+}
 
 .social-buttons {
 	margin-top: 20px;
@@ -263,12 +289,12 @@ img.ebola-section {
 }
 
 .fb-comments {
-		max-width: 1238px;
+	 max-width: 1238px;
 	 margin: 0 auto;
 }
 
 #section8 {
-		margin-bottom: 0px;
+		margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -277,7 +303,9 @@ img.ebola-section {
 	}
 }
 
-// Health axioms bottom link
+
+
+// Health Axioms bottom link
 a.bottom-link {
 	width: 100%;
 	height: 300px;
@@ -339,5 +367,39 @@ a.bottom-link {
 				 line-height: 30px;
 			}
 		}
+	}
+}
+
+#ebola-care-download {
+	border: 5px solid #2E2F32;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	.photo-container {
+		width: 100%;
+		height: 460px;
+		background: url(../../images/features/ebola-care-plan/care_plan.png) no-repeat;
+  	background-size: cover;
+  	background-position: center;
+		transform: scale(1, 1);	
+		transition: transform 400ms ease-in-out;
+	}
+	&:hover {
+		.photo-container {
+			transform: scale(1.03, 1.03);	
+		}
+		.button {
+			transform: scale(1.3,1.3);
+			background: rgba(0,0,0,.8);	
+			color: $white;	
+			&:hover {
+			transform: scale(1.5,1.5);
+		}
+		}
+	}	
+}
+
+@media only screen and (max-width: 940px) {
+	.badge-image {
+		display: none;	
 	}
 }
