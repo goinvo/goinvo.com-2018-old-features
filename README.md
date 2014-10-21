@@ -8,7 +8,9 @@ To view this site via a local middleman server, open up your favorite shell, `cd
 	$ bundle install && bundle update
 
 Then run
+
 	$ middleman
+	
 -OR-
 	$ middleman server
   
