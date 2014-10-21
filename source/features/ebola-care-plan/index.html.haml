@@ -1,0 +1,59 @@
+- content_for(:title) do
+	= "Understanding Ebola: A Visual Guide"
+- content_for(:page_head) do
+	= stylesheet_link_tag "features/ebola-care"
+	= stylesheet_link_tag "feature_links"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => ""}/
+
+%article#feature-article.ebola-care
+	%header#article-header
+		.headline
+			%h1 Ebola Care Plan
+			%h2 A national 3 ward standard care plan for managing and treating Ebola patients while preventing further infection.
+		.badge-image
+			%img{:src => "../../images/features/ebola-care-plan/dry.png"}
+	%section#ebola-care-intro
+		.intro 
+			%p This is some information about the ebola careplan. This should be replaced. No one should ever see this text. This text is really only here for me, the developer (Adam), to see what a paragraph of text will look like here. Nothing more. Nothing less. If you're not me and youre seeing this... then something is wrong. I should update this. I'm sure I will at some point. Because this is very important and a lot of people will be seeing this. X2: This is some information about the ebola careplan. This should be replaced. No one should ever see this text. This text is really only here for me, the developer (Adam), to see what a paragraph of text will look like here. Nothing more. Nothing less. If you're not me and youre seeing this... then something is wrong. I should update this. I'm sure I will at some point. Because this is very important and a lot of people will be seeing this.
+	%section#ebola-care-download
+		%a{:href => "http://goinvo.com/features/ebola-care-plan/files/ebola-care-plan.pdf"}
+			.ebola-care-download-div
+
+.social-buttons.centered
+	%p Share this article:
+	%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=www.goinvo.com/features/ebola-care-plan", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"} Facebook
+	%a.twitter{:href => "https://twitter.com/home?status=www.goinvo.com/features/ebola-care-plan"} Twitter
+	%a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Febola-care-plan%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;"} Google+
+	%a.in{:href => "https://plus.google.com/share?url=www.goinvo.com/features/ebola-care-plan", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;"} LinkedIn
+	%a.mail{:href => "mailto:?body=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Febol-care-plana%2F"} Mail
+	.comments.centered
+.fb-comments
+	%p Comment on this article:
+	.fb-comments{:data => {:href => "http://goinvo.com/features/ebola-care-plan", :width => "100%", :numposts => "5", :colorscheme => "light"}}
+		- # BEGIN Credits: Copy from this line.
+#credits
+	.author
+		%img{:src => "../../images/team_photos/xinyu_liu.jpg", :alt => ""}/
+		.author-content
+			.author-header
+				%h3 Author
+				%h2 Xinyu Liu
+			.author-bio
+				%p Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design.
+	.contributors
+		.contributor
+			.image
+				= image_tag 'features/democracy/contrib/emily.jpg'
+			.info
+				%h3 Editor
+				%p Emily Twaddell<br><small><a href="http://twitter.com/mimitwaddell">@mimitwaddell</a></small>
+				%hr
+		.contributor
+			.image
+				= image_tag 'features/democracy/contrib/juhan.jpg'
+			.info
+				%h3 Contributing Author
+				%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
+- # END Credits. Copy to this %%%%%line.
