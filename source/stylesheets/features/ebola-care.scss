@@ -54,6 +54,7 @@ header#article-header {
 		margin: 0;
 	}
 	h1 {
+		min-width: 222px;
 		padding-bottom: 0rem;
 		letter-spacing: 1px;
 	}
@@ -97,18 +98,26 @@ header#article-header {
 		position: absolute;
 		bottom: 45%;
 	}
+	@media only screen and (max-width: 600px) {
+		.button {
+			font-size: 14px;	
+		}
+	}
 	.button {
 		margin: 0 auto;
 		max-width: 500px;
+		width: auto;
 		border: 1px solid $gray;
 		text-align: center;
-		padding: 36px 20px 30px 20px;
+		padding: 9px 10px 8px 10px;
 		border-radius: 5px !important;
 		transition: 350ms;
 		color: $white;
+		line-height: 1.4em;
+		height: auto;
 		
 		background: rgba(0,0,0,.8);	
-
+		
 		
 		&:hover {
 			transform: scale(1.2,1.2);
