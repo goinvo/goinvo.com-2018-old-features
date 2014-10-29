@@ -20,10 +20,6 @@
 		- bodyClass = "work"
 	- elsif currentPage.include? "studio"
 		- bodyClass = "studio"
-	- elsif currentPage.include? "team"
-		- bodyClass = "team"
-	- elsif currentPage.include? "careers"
-		- bodyClass = "careers"
 	- elsif currentPage.include? "contact"
 		- bodyClass = "contact"
 	%body{:class => bodyClass}
@@ -47,8 +43,6 @@
 							%a.nav-button.work{:href => asset_url('work')} Work
 							-# %a.nav-button{:href => asset_url('products')}
 							%a.nav-button.studio{:href => asset_url('studio')} Studio
-							%a.nav-button.team{:href => asset_url('team')} Team
-							%a.nav-button.careers{:href => asset_url('careers')} Careers
 							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')} Articles
 							%a.nav-button.contact{:href => asset_url('contact')} Contact
 					#mobile-hamburger
@@ -57,8 +51,6 @@
 						%a.nav-button.work{:href => asset_url('work')} Work
 						-# %a.nav-button{:href => asset_url('products')}
 						%a.nav-button.studio{:href => asset_url('studio')} Studio
-						%a.nav-button.team{:href => asset_url('team')} Team
-						%a.nav-button.careers{:href => asset_url('careers')} Careers
 						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
 						%a.nav-button.contact{:href => asset_url('contact')} Contact
 			#main-container
