@@ -1,0 +1,20 @@
+- content_for(:title) do
+	= "Understanding Ebola: A Visual Guide"
+- content_for(:page_head) do
+	= stylesheet_link_tag "features/ebola-care"
+	= stylesheet_link_tag "feature_links"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => ""}/
+
+%article#feature-article.ebola-care
+	%header#article-header
+		%h1.title hGraph: Your health in one picture
+		.button Read Case Study
+	.large-quote We make clinical strength software for high-test, high-stress environments for doctors, nurses, hospitals, and patients.
+	.projects-container
+		.projects-row
+		//Put some projects here
+	.very-large-quote 
+		.quote-content “Invo beautifully helped shape our next generation clinician and patient experience."
+		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
