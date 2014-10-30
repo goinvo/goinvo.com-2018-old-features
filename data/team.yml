@@ -56,15 +56,15 @@
   fitbit_username: "25WCYP"
   dropbox_username: "ben@goinvo.com"
   photo: ben_salinas.jpg
-
-- first_name: Roger
-  last_name: Zhu
-  title: Designer
-  bio: "Roger has a unique background of industrial design, user-centered research and design strategy. Experienced in bringing physical and digital products into people's life. Roger's focus is on complex medical and consumer healthcare solutions and data visualization. Roger has worked at Bosch Power Tool and MIT, and is a graduate of the Rhode Island School of Design."
-  mbti: INTJ
-  photo: roger_zhu.jpg
-  linkedin_url: "http://www.linkedin.com/pub/roger-zhu/16/660/528"
-  dropbox_username: "roger@goinvo.com"
+  
+- first_name: Ben
+  last_name: Listwon
+  title: Engineer
+  bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
+  linkedin_url: "http://www.linkedin.com/in/benjaminlistwon"
+  twitter_username: "benjaminlistwon"
+  github_username: "BenjaminListwon"
+  photo: ben_listwon.jpg
 
 - first_name: Sein
   last_name: Woo
@@ -80,7 +80,7 @@
 
 - first_name: Adam
   last_name: Pere
-  title: Engineer
+  title: "Engineer, Designer"
   bio: "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College with a degree in Computer Science and Visual Arts."
   linkedin_url: "http://www.linkedin.com/in/adampere"
   github_username: "apere"
@@ -95,6 +95,15 @@
   twitter_username: "jonfollett"
   github_username: "jonfollett"
   photo: jon_follett.jpg
+  
+- first_name: Michael
+  last_name: Bester
+  title: Engineer
+  bio: "Michael is a design-savvy software developer focussed on building humane user interfaces for screens of all shapes and sizes. Having worked with companies as diverse as Novartis, Warner Music and Playboy, he has been crafting code with Invo since 2011. A graduate of the University of Miami music school, Michael is also a guitarist who enjoys playing jazz, rock and more recently, classical repertoire."
+  flickr_username: "michaelbester"
+  twitter_username: "mibester"
+  github_username: "kimili"
+  photo: michael_bester.jpg
   
 - first_name: Beth
   last_name: Herlin
