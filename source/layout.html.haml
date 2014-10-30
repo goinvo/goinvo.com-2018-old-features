@@ -42,7 +42,7 @@
 						%nav#nav-buttons
 							%a.nav-button.work{:href => asset_url('work')} Work
 							-# %a.nav-button{:href => asset_url('products')}
-							%a.nav-button.studio{:href => asset_url('studio')} Studio
+							%a.nav-button.studio{:href => asset_url('studio/team')} Studio
 							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')} Articles
 							%a.nav-button.contact{:href => asset_url('contact')} Contact
 					#mobile-hamburger
@@ -50,18 +50,39 @@
 					%nav#nav-buttons-mobile
 						%a.nav-button.work{:href => asset_url('work')} Work
 						-# %a.nav-button{:href => asset_url('products')}
-						%a.nav-button.studio{:href => asset_url('studio')} Studio
+						%a.nav-button.studio{:href => asset_url('studio/team')} Studio
 						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
 						%a.nav-button.contact{:href => asset_url('contact')} Contact
 				- if currentPage.include? "studio"
 					%header#studio-header
 						.studio-head-container
-							.studio-head-item#team
-								.studio-title Team
-							.studio-head-item#careers
-								.studio-title Careers
-							.studio-head-item#live
-								.studio-title Live
+							%a{:href => "../studio/team"}
+								-if currentPage.include? "team"
+									.studio-head-item.active-studio#team
+										.image-box
+										.studio-title Team
+								-else
+									.studio-head-item#team
+										.image-box
+										.studio-title Team
+							%a{:href => "../studio/careers"}
+								-if currentPage.include? "careers"
+									.studio-head-item.active-studio#careers
+										.image-box
+										.studio-title Careers
+								-else
+									.studio-head-item#careers
+										.image-box
+										.studio-title Careers
+							%a{:href => "../studio/live"}
+								-if currentPage.include? "live"
+									.studio-head-item.active-studio#live
+										.image-box
+										.studio-title Live
+								-else
+									.studio-head-item#live
+										.image-box
+										.studio-title Live
 			#main-container
 				.container.content
 					= yield

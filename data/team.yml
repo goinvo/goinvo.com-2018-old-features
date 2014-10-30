@@ -61,7 +61,7 @@
   last_name: Listwon
   title: Engineer
   bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
-  linkedin_url: "http://www.linkedin.com/in/benjaminlistwon"
+  flickr_username: "nettles"
   twitter_username: "benjaminlistwon"
   github_username: "BenjaminListwon"
   photo: ben_listwon.jpg
@@ -86,6 +86,30 @@
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
   photo: "adam_pere.jpg"
+  
+- first_name: Beth
+  last_name: Herlin
+  title: Product Designer
+  bio: "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University."
+  twitter_username: "beth11herlin"
+  linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
+  photo: beth_herlin.jpg
+  
+- first_name: Michael
+  last_name: Bester
+  title: Engineer
+  bio: "Michael is a design-savvy software developer focussed on building humane user interfaces for screens of all shapes and sizes. Having worked with companies as diverse as Novartis, Warner Music and Playboy, he has been crafting code with Invo since 2011. A graduate of the University of Miami Frost School of Music, Michael is also a guitarist who enjoys playing jazz, rock and more recently, classical repertoire."
+  flickr_username: "michaelbester"
+  twitter_username: "mibester"
+  github_username: "kimili"
+  photo: michael_bester.jpg
+
+- first_name: Xinyu
+  last_name: Liu
+  title: Designer
+  bio: "Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design."
+  linkedin_url: "https://www.linkedin.com/profile/view?id=229659322"
+  photo: xinyu_liu.jpg
 
 - first_name: Jon
   last_name: Follett
@@ -95,30 +119,6 @@
   twitter_username: "jonfollett"
   github_username: "jonfollett"
   photo: jon_follett.jpg
-  
-- first_name: Michael
-  last_name: Bester
-  title: Engineer
-  bio: "Michael is a design-savvy software developer focussed on building humane user interfaces for screens of all shapes and sizes. Having worked with companies as diverse as Novartis, Warner Music and Playboy, he has been crafting code with Invo since 2011. A graduate of the University of Miami music school, Michael is also a guitarist who enjoys playing jazz, rock and more recently, classical repertoire."
-  flickr_username: "michaelbester"
-  twitter_username: "mibester"
-  github_username: "kimili"
-  photo: michael_bester.jpg
-  
-- first_name: Beth
-  last_name: Herlin
-  title: Product Designer
-  bio: "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University."
-  twitter_username: "beth11herlin"
-  linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
-  photo: beth_herlin.jpg
-
-- first_name: Xinyu
-  last_name: Liu
-  title: Designer
-  bio: "Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design."
-  linkedin_url: "https://www.linkedin.com/profile/view?id=229659322"
-  photo: xinyu_liu.jpg
 
 - first_name: Eli
   last_name: Rodriguez
@@ -141,7 +141,7 @@
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
-  bio: "Dirk is a social futurist and a founder of Involution Studios. He envisions new systems for organizational, social, and personal change, helping leaders to make radical transformation. Dirk is a frequent speaker who has shared his ideas at TEDx, Transhumanism+ and South by Southwest along with conference keynotes in Europe and the United States. He has been published in Business Week and participated on the 15 boards spanning industries like healthcare, publishing, and education."
+  bio: "Dirk is a social futurist and a founder of Involution Studios. He envisions new systems for organizational, social, and personal change, helping leaders to make radical transformation. Dirk is a frequent speaker who has shared his ideas at TEDx, Transhumanism+ and SXSW along with keynotes in Europe and the US. He has been published in Business Week and participated on the 15 boards spanning industries like healthcare, publishing, and education."
   linkedin_url: "https://www.linkedin.com/in/knemeyer"
   mbti: INFJ
   twitter_username: "dknemeyer"
