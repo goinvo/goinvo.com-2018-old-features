@@ -20,10 +20,6 @@
 		- bodyClass = "work"
 	- elsif currentPage.include? "studio"
 		- bodyClass = "studio"
-	- elsif currentPage.include? "team"
-		- bodyClass = "team"
-	- elsif currentPage.include? "careers"
-		- bodyClass = "careers"
 	- elsif currentPage.include? "contact"
 		- bodyClass = "contact"
 	%body{:class => bodyClass}
@@ -46,9 +42,7 @@
 						%nav#nav-buttons
 							%a.nav-button.work{:href => asset_url('work')} Work
 							-# %a.nav-button{:href => asset_url('products')}
-							%a.nav-button.studio{:href => asset_url('studio')} Studio
-							%a.nav-button.team{:href => asset_url('team')} Team
-							%a.nav-button.careers{:href => asset_url('careers')} Careers
+							%a.nav-button.studio{:href => asset_url('studio/team')} Studio
 							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')} Articles
 							%a.nav-button.contact{:href => asset_url('contact')} Contact
 					#mobile-hamburger
@@ -56,11 +50,39 @@
 					%nav#nav-buttons-mobile
 						%a.nav-button.work{:href => asset_url('work')} Work
 						-# %a.nav-button{:href => asset_url('products')}
-						%a.nav-button.studio{:href => asset_url('studio')} Studio
-						%a.nav-button.team{:href => asset_url('team')} Team
-						%a.nav-button.careers{:href => asset_url('careers')} Careers
+						%a.nav-button.studio{:href => asset_url('studio/team')} Studio
 						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
 						%a.nav-button.contact{:href => asset_url('contact')} Contact
+				- if currentPage.include? "studio"
+					%header#studio-header
+						.studio-head-container
+							%a{:href => "http://goinvo.com/studio/team"}
+								-if currentPage.include? "team"
+									.studio-head-item.active-studio#team
+										.image-box
+										.studio-title Team
+								-else
+									.studio-head-item#team
+										.image-box
+										.studio-title Team
+							%a{:href => "http://www.goinvo.com/studio/careers"}
+								-if currentPage.include? "careers"
+									.studio-head-item.active-studio#careers
+										.image-box
+										.studio-title Careers
+								-else
+									.studio-head-item#careers
+										.image-box
+										.studio-title Careers
+							%a{:href => "http://www.goinvo.com/studio/live"}
+								-if currentPage.include? "live"
+									.studio-head-item.active-studio#live
+										.image-box
+										.studio-title Live
+								-else
+									.studio-head-item#live
+										.image-box
+										.studio-title Live
 			#main-container
 				.container.content
 					= yield
