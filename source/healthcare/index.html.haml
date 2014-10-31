@@ -1,7 +1,7 @@
 - content_for(:title) do
-	= "Understanding Ebola: A Visual Guide"
+	= "Healthcare"
 - content_for(:page_head) do
-	= stylesheet_link_tag "healthcare"
+	= stylesheet_link_tag "sections/healthcare"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
@@ -9,11 +9,33 @@
 %article#healthcare
 	%header#article-header
 		%h1.title hGraph: Your health in one picture
-		.button Read Case Study
-	.large-quote We make clinical strength software for high-test, high-stress environments for doctors, nurses, hospitals, and patients.
-	.projects-container
-		.projects-row
-		//Put some projects here
+		%img.header-image{:src => '/images/healthcare/ipad_hero.png'}
+		%a{:href => "http://goinvo.com/work/hgraph/"}
+			.button-h Read Case Study
+	.small-quote We make clinical strength software for high-test, high-stress environments for doctors, nurses, hospitals, and patients.
+	.projects-row
+		%a{:href => "http://goinvo.com/work/3m"}
+			.project-item
+				.top-description Processing $4B/year
+				.image-wrapper
+					%img{:src => "/images/healthcare/3m_card.png"} 
+				.bottom-description How our skunkworks for an ambitious start-up led to a $150M exit.
+				.company-name CodeRyte (3M acquisition)
+		%a{:href => "http://goinvo.com/work/inspired-ehrs"}
+			.project-item
+				.top-description Influencing US Policy
+				.image-wrapper
+					%img{:src => "/images/healthcare/ehr_card.jpg"} 
+				.bottom-description Evidence-based and clinically relevant graphic techniques for medical records.
+				.company-name National Institute of Health and University of Missouri
+		%a{:href => "http://goinvo.com/work/3m"}
+			.project-item
+				.top-description Processing $4B/year
+				.image-wrapper
+					%img{:src => "/images/healthcare/3m_card.png"} 
+				.bottom-description How our skunkworks for an ambitious start-up led to a $150M exit.
+				.company-name CodeRyte (3M acquisition)
+					
 	.very-large-quote 
 		.quote-content “Invo beautifully helped shape our next generation clinician and patient experience."
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
