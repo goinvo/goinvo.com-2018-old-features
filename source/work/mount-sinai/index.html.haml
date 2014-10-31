@@ -1,0 +1,93 @@
+- content_for(:title) do
+	= "Design for genetic reporting and electronic consent for Mount Sinai and Sage Bionetworks"
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/complex-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Designed genetic reporting and electronic consent platform for Mount Sinai and Sage Bionetworks."}/
+	%meta{:name => "keywords", :content => "mount sinai, genomics, genetic reporting design, sage bionetworks, resilience project, electronic consent, user interface design, ui design"}/
+- client = client_for_name("Mount Sinai")
+
+%article#complex-case.mount-sinai
+	%header.hero
+		.title
+			%p <img src = "../../images/client_logos/mount-sinai-sm.png" width = auto height = auto>
+			%h2 A search for unexpected genetic heroes.
+			%h3 The Resilience Project was born at TED 2014. Invo crafted the genetic reporting and electronic consent service.
+	#mainContent
+		%h2 Big Data for Bigger Research.
+		%p <a href="http://en.wikipedia.org/wiki/Stephen_Friend">Stephen Friend</a> took to the TED 2014 stage to introduce <a href="http://resilienceproject.me/">"The Resilience Project"</a>, a joint Mount Sinai Hospital and Sage Bionetworks effort to sequence 100,000 entire human genomes in order to find the rare people whom genetically show a condition, such as cystic fibrosis, but exhibit none of the physical attributes. These individuals are genetic super heroes, and hold one critical clue in unlocking the complex puzzles of disease, it’s manifestations, and management.
+
+		.center-video-content.ted
+			<iframe src="https://embed-ssl.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes.html" width="854" height="480" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+		%p Just 4 months before the TED talk, the Invo team met with <a href="http://en.wikipedia.org/wiki/Eric_Schadt">Eric Schadt</a>, director and founder of the Icahn Institute for Genomics and multiscale Biology, at Mount Sinai Hospital in New York City. We were introduced by mutual friend <a href="https://www.linkedin.com/in/jasonbobe">Jason Bobe</a>, director of the Personal Genome Project.
+
+		%p Out of the gate, Eric had a handful of project ideas from genomic prediction modeling to genome/trait visualization to eConsent to dynamic genetic counseling software for patients and clinicians. Together with <a href="https://www.linkedin.com/pub/elissa-levin/4/888/aa">Elissa Levin</a> (assistant professor of Genetics and Genomic Sciences at Mount Sinai) and Eric, an open source platform for electronic consent was chosen as top priority. The service would allow patients to digitally decide if they (their data) want to participate in research studies or release their data to R&D organizations to allow clinicians to test and report on it. Across the planet, the current consent process is a paper-based. It’s cumbersome, requires enormous human effort from the clinical admin staff to patients to fill out, doesn’t scale, can’t be transferred or reused, and the process is most often abandoned leaving all parties in the lurch. A cloud-based, open source, saas (software as a service) framework would allow any hospital to transition from the current clumsy paper-based process to a hyper-personalized, analytics-driven consent. Note: it's a highly regulated space and Mount Sinai Hospital's IRB (institutional review board) was eager and remarkably friendly to be a leader in e-consent (which is often not the case with typically risk-adverse IRBs).
+
+		%p This open source eConsent would be a global coup for clinical research.
+
+		%p.bottom We began work on envisioning the ecosystem around eConsent, using genomics testing as our baseline. At Mount Sinai Hospital, genomics testing occurs frequently during the IVF process (in vitro fertilization). Not so coincidentally, right in mid-town Manhattan, Dr Alan Copperman runs one of the busiest and most <a href="http://rmany.com/our-practice/team-of-physicians/dr-alan-copperman">progressive IVF clinics</a> and <a href="http://www.nytimes.com/2014/02/26/health/fda-meeting-considers-controversial-fertility-procedure.html?_r=0">Alan in the NYTimes</a> this year. He was our early adopter, our clinical feedback loop... and educator.
+
+		%h2 The Relationship
+		%p.bottom We were connected to Eric Schadt, director and founder of the Icahn Institute of Genetics, via Jason Bobe of Harvard University and head of the Personal Genome Project. We also had met Elissa at a genomics/health conference in Boston in 2013, purely coincidentally.
+
+		%h2 We worked with:
+		%p <a href="http://en.wikipedia.org/wiki/Eric_Schadt">Eric Schadt, Director and Founder of the Icahn Institute for Genomics and Multiscale Biology, Professor</a> 
+		%p <a href="http://www.mountsinai.org/profiles/elissa-levin">Elissa Levin, Head of Genomics + Integrative Health Innovations, Assistant Professor</a>
+
+		%h2 The Odd Couple
+		%p To better understand IVF, Eric and I made an appointment with the mid-town clinic as parents wanting to have a child through IVF. We went through the preliminary process and training at RMA NY.
+
+		.center-image-content
+			<img src = "../../images/clients/mount-sinai/rma-ny-clinic-ivf-training.jpg" alt = "RMA NY Doctor preparing the classroom for people starting Day 1 of the IVF journey." width = 100% height = auto>
+			.caption RMA NY Doctor preparing the classroom for people starting Day 1 of the IVF journey.
+
+		%p.bottom The required paperwork, scheduling of nurse and doctor appointments, diet regime, and fertility drugs routines were staggeringly complex and painful to implement (from our discussions with current and past patients). Almost half of couples don’t get beyond the initial training seminar and paper-based consent. The IVF clinic nurses and administrators yearned for a digital consent service available on patients phones, tablets, and desktops to better help and track them through the process, drive up completion and efficiency rates, and ultimately provide a better experience with IVF. 
+
+		%h2 Genetics for Non-Geneticists
+		%p Elissa Levin, head of Genomics and Integrative Health Innovations at Mount Sinai, was the driving force for delivering a working eConsent service for The Resilience Project. As a former genetic counselor, she knew the difficulty in describing the complex lab results to doctors and patients. Those very personal results need to be easily digestible by patients, proxies, and doctors (because many docs aren't up on genomics).
+
+		%p Doctors and administrators have near zero insight into what patients have consent (it's mostly faxed), patients don't know what consents they've signed and where their data is/how it's being used... imagine having control of your data like the temperature in your house, a Nest for your health data. I can proxy Mt Sinai and Mass General Hospital to have my data for the next year, my primary care doctor has read/write privileges as long as they're under my care, retract my data from some research study, and maybe see how my data impacted someone's health.
+
+		.center-image-content.large
+			<img src = "../../images/clients/mount-sinai/ivf-genetic-report-full-feedback.jpg" alt = "Genetic experts marking up comps with their feedback." width = 100% height = auto>
+			%p.caption Early draft of genetic reporting for couples going through the IVF process.
+
+		.center-image-content
+			<img src = "../../images/clients/mount-sinai/ivf-genetic-report-feedback.jpg" alt = "Genetic experts marking up comps with their feedback." width = 100% height = auto>
+			%p.caption Genetic experts marking up printed comps with their feedback.
+
+		%p We had to take a system approach to designing consent and consider the initial introduction to IVF and the training materials, informational sign-up for couples, the spit kit delivery/usage/mailing, the silva/data processing, the reporting to clinicians and patients, next steps for each party, shepherding want-to-be parents through the long and tiresome process, employing just-in-time training for patients depending on their needs and frustrations (based on analytics and IVF clinic stats), etc.
+
+		%figure.full-two-images
+			<img src = "../../images/clients/mount-sinai/mount-sinai-caas-system-model.jpg" alt = "Genetic experts marking up comps with their feedback." width = 100% height = auto>
+			%figcaption System model of the CAAS (consent as a service) software.
+
+		%h2 A Push for Mobile Consent
+		%p.bottom John Halamka, BIDMC CIO and Meaningful Use co-author, proclaims, "<a href="http://www.washingtonpost.com/business/on-it/at-one-hospital-iphones-ipads-and-google-glass-become-key-medical-tools/2014/07/13/ce2657b0-0842-11e4-a0dd-f2b22a257353_story.html">the laptop is dead, the desktop is gone.</a>". More true for patients, where 60% of adults in the US have smart phones in their pockets. It's likely much higher for IVF patients. Thus the patient-facing e-consent had to be a mobile service. It also had to accommodate interactive educational lessons, different learning styles, adaptive learning content based on the patient's understanding and emotional response. We included voice user interface (VUI) for questions and listening (vs long-form reading), voice signature capabilities (since digital voice sigs, a form of biometric signatures, offer stronger authentication than hand-written signatures: <a href="http://groups.csail.mit.edu/mac/classes/6.805/student-papers/fall97-papers/fillingham-sig.html">A Comparison of Digital and Handwritten Sigantures</a>, <a href="http://en.wikipedia.org/wiki/Biometrics">Biometrics Wiki</a>). Also included was an expression comprehension service design, captured non-invasively via your phone's camera(s), to detect in near-realtime how you were or were not consuming the "lesson". The service would adjust the content based on your emotional and heart rate response to better match the material and your understanding level. Pretty rad, eh?
+
+		#quote
+			.testimonial-image.levin
+			%h2.quote &ldquo;Big hit here at TED!&rdquo;
+			%p.quote-author Elissa Levin, Head, Genomics and Integrative Health Innovations, Icahn School of Medicine at Mount Sinai
+
+		%h2.top.double Trial Run at TED
+		%p The CAAS (consent as a service) project dovetailed with Mount Sinai and Sage Bionetwork's <a href="http://www.resilienceproject.me/">The Resilience Project</a>. The mobile e-consent software would be the driving force in getting willing participants to sign up and allow their genomic data to be used for science. Stephen Friend, a co-Principal Investigator on The Resilience Project, took to the main TED stage in 2014 and showcased the hunt for unexpected heroes: <a href="http://www.ted.com/talks/2004">http://www.ted.com/talks/2004</a>. And outside the auditorium, Elissa and other Mt Sinai genomicists collected samples and dished out results, based on our report.
+
+		.center-image-content.large
+			<img src = "../../images/clients/mount-sinai/resilience-project-sample-genetic-report.jpg" alt = "Sample genetic report for The Resilience Project." width = 100% height = auto>
+			%figcaption Sample genetic report for The Resilience Project.
+
+		.center-image-content.large
+			<img src = "../../images/clients/mount-sinai/mountsinai-caas-patient-consent.jpg" alt = "Electronic consent workflow for The Resilience Project." width = 100% height = auto>
+			%figcaption.bottom Electronic consent workflow for The Resilience Project.
+
+		%h2.top Path Paved for Better Patient Consenting
+		%p.bottom The success and scale of The Resilience Project hinges on electronic consent. With the Mount Sinai team, together with Invo, we saw a solution to bypass the crazy, analog, and impossible-to-distribute consent process and ultimately give patients an easy-to-understand report on their basic genomic traits and how their genes could impact their potential offspring. The project is slated to launch in 2015.
+
+
+.row#next-project
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next

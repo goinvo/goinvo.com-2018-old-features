@@ -50,6 +50,10 @@
   primary_color: "#00A1F1"
   logo: "microsoft.jpg"
 
+- name: "Mount Sinai"
+  primary_color: "#d8288c"
+  logo: "mount-sinai.jpg"
+
 - name: "Numera"
   primary_color: "#2488C8"
   logo: "numera.jpg"
