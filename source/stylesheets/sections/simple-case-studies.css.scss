@@ -6,9 +6,8 @@
 	
 	h6.subheader {
 		margin-top: 40px;
-		font-size: 1em;
+		font-size: 1.375em;
 		font-weight: 400;
-		line-height: 1.1em;
 		text-transform: uppercase;
 		
 		&.name {
@@ -30,8 +29,6 @@
 		line-height: 1.36363636em;
 		letter-spacing: 0.025em;
 		&.quote {
-			font-size: 1.25em;
-			line-height: 1.1em;
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
 			text-indent: -0.3em;
@@ -47,15 +44,17 @@
 	
 	p.caption {
 		max-width: 75%;
-		margin-bottom: 3em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
 	}
 
-	p.caption, ul {
-		font-size: 1.1875em;
-		line-height: 1.1em;
+	p.caption {
+	}
+
+	ul {
+		font-size: 1.375em;
+		margin-bottom: 1em;
 	}
 	
 	li {
@@ -71,6 +70,9 @@
 	}
 	.projectData {
 		width: 25%;
+		p.caption {
+			max-width: 100%;
+		}
 	}
 	.projectDetails {
 		width: 75%;
@@ -81,15 +83,14 @@
 .similar-project-container {
 	h6.subheader {
 		text-transform: none;
-		font-size: 1.1875em;
-		line-height: 1em;
+		font-size: 1.375em;
 		margin: 0;
-		padding-bottom: 2em;
+		padding-bottom: .5em;
 	}
 	a.button.radius {
-		font-size: 1.25em;;
-		padding: 10px 20px;
-		padding-top: 12px;
+		font-size: 1.25em;
+		padding: 20px 20px;
+		padding-top: 22px;
 		background-color:rgb(235, 235, 235);
 		color: #aaa;
 		&:hover{
