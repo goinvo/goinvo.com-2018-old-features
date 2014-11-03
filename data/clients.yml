@@ -14,6 +14,10 @@
   primary_color: "#28bcd2"
   logo: "applause.jpg"
 
+- name: "Arlington Visual Budget"
+  primary_color: "#d63366"
+  logo: "arlington-visual-budget.jpg"
+
 - name: "Curl"
   primary_color: "#058386"
   logo: "curl.jpg"
