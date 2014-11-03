@@ -4,6 +4,7 @@
 	= stylesheet_link_tag "sections/healthcare"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "video.js"
+	= javascript_include_tag "fitvids.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
 
@@ -41,7 +42,6 @@
 		.quote-content “Invo beautifully helped shape our next generation clinician and patient experience."
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
 	.hero-video-container
-		.video-player
 		.video-banner#res-proj
 			.video-text
 				.video-title A search for unexpected genetic heroes.
@@ -50,3 +50,5 @@
 					%p Watch Stephen Friend at TED 2014 launch The Resilience Project. 
 			.video-control-button
 				.play{:datavideo => "res-proj"}
+			.video-background
+		.video-player
