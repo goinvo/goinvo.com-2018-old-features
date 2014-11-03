@@ -1,0 +1,82 @@
+- content_for(:title) do
+	= "Health Axioms put you in touch with habits to improve your health, life, and well-being"
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Health Axioms put you in touch with habits to improve your health, life, and well-being"}/
+	%meta{:name => "keywords", :content => "health axioms, design health, design healthcare, ux health, ui health"}/
+- client = client_for_name("Health Axioms")
+
+#content-area.caseStudyContent
+	.projectData
+		%h1.client{style: "color: #{client.primary_color}"} Health Axioms
+
+		%h6.subheader Results
+
+		%p.caption Mantras for patients to change themselves, their clinicians, and the new digital healthcare system.
+
+		%p.quote We need to prescribe these simple, beautiful recipes for health to our patients and our loved ones.
+		%h6.subheader.name Roni Zeiger, M.D., former Chief Health Strategist at Google, co-founder of Smart Patients
+
+		%p.quote People are thirsty for health advice. They read, search online, and wonder: Am I doing OK? Am I doing the right things for my health? What if, when someone asks the universe (read: the internet), for health advice, they got back a quick tip, backed by evidence?
+		%h6.subheader.name Susannah Fox, Digital Health Strategist
+
+		%h6.subheader Practice Areas
+		%p.caption Healthcare
+
+		%h6.subheader Project Type
+		%p.caption Research, Storytelling, Illustration, Product Design
+
+		%h6.subheader Process
+		%p.caption Learning, Envision, Blueprint, Craft, Build
+
+		%h6.subheader Price
+		%p.caption $100k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%div
+			%img{alt: "Health Axioms", src: "../../images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"}
+		%p Health Axioms put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible. This deck of cards will transform the way you think about yourself and what it means to be healthy.
+
+		%p There are 40 cards in our deck. On the front of each card is a beautiful illustration reminding you of a specific axiom that can move you in the direction of better health. On the back of each card, we give you essential insights, tips, and help in manifesting that axiom in your life.
+
+		%p <a href="http://healthaxioms.com">www.healthaxioms.com</a>
+
+		%div
+			%img{alt: "Health Axioms card Move More.", src: "../../images/clients/health-axioms/health-axioms-move-more-card.jpg"}/
+		%p.caption Health Axioms card Move More.
+
+		%div
+			%img{alt: "Health Axioms featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/health-axioms/psqh-publication-health-axioms.jpg"}/
+		%p.caption Health Axioms featured in <a href="http://psqh.com/news-health-axioms-turning-advice-into-lifestyle">Patient Safety &amp; Quality Healthcare</a>.
+
+		%div
+			%img{alt: "Health Axioms featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/health-axioms/health-axioms-clinic-installations.jpg"}/
+		%p.caption Possible Health Axioms installations inside clinics.
+
+		%div
+			%img{alt: "Grouping Health Axioms into specialized packs like managing diabetes or weight loss.", src: "../../images/clients/health-axioms/health-axioms-topic-packs.jpg"}/
+		%p.caption Grouping Health Axioms into specialized packs like managing diabetes or weight loss.
+
+		%div
+			%img{alt: "Sketching new axiom concepts before moving to digital illustrations.", src: "../../images/clients/health-axioms/health-axioms-sketches.jpg"}/
+		%p.caption Sketching new axiom concepts before creating the digital illustrations.
+
+		%p We are part of a global movement to shift the health care system to one of:
+
+		%ul 
+			%li Non-invasive personal diagnostics
+			%li Highly specialized clinicians that work closely with patients and their families
+			%li Self-monitoring, self-empowered patients
+
+		%p Getting there is equal parts smart technology, healthcare reform, and everyday common sense. We’re here to help with the last part of that equation while evangelizing for the entire system to evolve to better serve patients. We believe living the Health Axioms is better for our pocketbooks, smarter for our lives, and allows us to directly impact our health. It all starts with awareness. That’s where the Health Axioms come in.
+
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next
