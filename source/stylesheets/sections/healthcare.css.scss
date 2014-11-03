@@ -70,7 +70,7 @@
 	.very-large-quote {
 		width: auto;
 		margin: 0 auto;
-		max-width: 1030px;
+		max-width: 1100px;
 		text-align: center;
 		padding: 100px 10px;
 		margin-bottom: 40px;
@@ -170,6 +170,141 @@
 		
 }
 
+.mountsinai-container {
+	width: 100%;
+	background-color: #EBEBEB;
+	position: relative;
+	height: 450px;
+	
+	@media  only screen and (max-width: 760px) {
+		margin-top: 500px;	
+	}
+	
+	@media  only screen and (max-width: 730px) and (min-width: 630px) {
+			height: 500px;
+	}
+	
+	@media  only screen and (max-width: 630px) {
+			height: 530px;
+	}
+	
+	.left-content {
+		position: absolute;
+		width: 50%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		padding: 40px 20px 40px 60px;
+		
+		@media  only screen and (max-width: 730px) {
+			width: 100%;
+			z-index: 10;
+			
+		}
+		
+		.button {
+			font-size: 23px;
+			line-height: 28px;
+			border: 1px solid black;
+			border-radius: 3px;
+			width: auto;
+			display: inline-block;
+			padding: 5px 15px;
+			cursor: pointer;
+			transform: scale(1,1);
+			transition: 300ms ease-in-out;
+			margin-bottom: 20px;
+			color: black;
+			text-align: center;
+			
+			&:hover {
+				transform: scale(1.05, 1.05);	
+			}
+			
+			@media  only screen and (max-width: 960px) {
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+		
+		.medium-quote {
+				padding-top: 20px;
+				max-width: 85%;
+				.quote-author {
+					padding-top: 20px;	
+				}
+				
+		}
+	}
+	
+	.right-content {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 450px;
+		padding-top: 30px;
+		overflow: hidden;
+		
+		@media  only screen and (max-width: 730px) and (min-width: 630px){
+			width: 100%;
+			z-index: 1;
+			top: 250px;
+			height: 250px;
+		}
+		
+		@media  only screen and (max-width: 630px) {
+			width: 100%;
+			top: 280px;
+			z-index: 1;
+			top: 320px;
+			height: 210px;
+		}
+		
+		.image-container {
+			background-image: image-url('healthcare/res_proj.png');
+			background-size: cover;
+			height: 100%;
+			width: calc(100% - 40px);
+			padding-right: 40px;
+			margin-top: 0px;
+			
+			@media  only screen and (max-width: 960px) {
+				width: calc(100% - 10px);
+				padding-right: 10px;
+			}
+			
+			@media  only screen and (max-width: 630px) {
+				width:  calc(100% - 20px);
+				padding-right: 0px;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+.medium-quote {
+	.quote-content {
+		font-size: 32px;
+		line-height: 38px;
+		
+		@media  only screen and (max-width: 960px) {
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+	.quote-author {
+		font-size: 23px;
+		line-height: 28px;
+		
+		@media  only screen and (max-width: 960px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}
+
+
 
 .hero-video-container {
 	width: 100%;
@@ -255,7 +390,7 @@
 			transition: 300ms ease-in-out;
 			position: absolute;
 			left: 60%;
-			bottom: 175px;
+			bottom: 210px;
 			&:hover {
 				transform: scale(1.2, 1.2);	
 			}
