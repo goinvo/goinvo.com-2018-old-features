@@ -4,6 +4,11 @@ var videos = {
 		'source' : '<iframe src="https://embed-ssl.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes.html?autoplay=1" width="854" height="480" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
 		'width' : 854,
 		'height' : 400
+	},
+	"juhan-vid" : {
+		'source' : '<iframe src="//player.vimeo.com/video/41157184?autoplay=1" width="854" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		'width' : 854,
+		'height' : 480
 	}
 };
 
@@ -26,8 +31,8 @@ $( document ).ready(function() {
 			videoBanner.css('opacity', 0);
 		}
 		
-		
-		if(sWidth <= 894) {
+		console.log(sWidth);
+		if(sWidth <= videos[videoName]['width'] + 40) {
 			rw = videos[videoName]['width'];
 			rh = videos[videoName]['height'];
 			newWidth = sWidth - 40;
@@ -36,8 +41,8 @@ $( document ).ready(function() {
 			videoFrame.attr('width', newWidth + 'px');
 			videoFrame.attr('height', newHeight + 'px');
 		}
-		videoPlayer.fitVids();
 		setTimeout(function() {
+			//videoPlayer.fitVids();
 			if(sWidth >= 760){
 				videoBanner.css('display', 'none');
 			}

@@ -105,6 +105,14 @@
 		margin: 0 auto;
 		padding: 0px 5px;
 		max-width: 1280px;
+		
+		&.margin-bottom {
+			margin-bottom: 100px;
+			@media only screen and (max-width: 640px) {
+				margin-bottom: 0px;	
+			}
+		}
+		
 		a {
 			width: 33%;	
 			vertical-align: top;
@@ -343,8 +351,12 @@
 		}
 		
 		&#res-proj .video-background{
-				background-image: image-url('healthcare/res-video-image.png');	
-			}
+			background-image: image-url('healthcare/res-video-image.png');	
+		}
+		
+		&#juhan-vid .video-background {
+			background-image: image-url('healthcare/juhan_vid.png');	
+		}
 		
 		.video-text {
 			z-index: 20;
