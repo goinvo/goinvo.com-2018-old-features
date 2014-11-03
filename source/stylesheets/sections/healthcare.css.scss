@@ -43,6 +43,14 @@
 				transform: scale(1.05, 1.05);	
 				background-color: rgba(249, 249, 249, .6);
 			}
+			
+			@media only screen and (max-width: 600px) {
+				bottom: 20px;
+			}
+			
+			@media only screen and (max-width: 450px) {
+				bottom: 15px;
+			}
 		}
 	}
 	
@@ -53,8 +61,10 @@
 		text-align: center;
 		font-style: italic;
 		font-size: 32px;
-		padding-top: 75px;
-		padding-bottom: 75px;
+		padding: 75px 10px;
+		@media only screen and (max-width: 560px) {
+			font-size: 23px;
+		}
 	}
 	
 	.very-large-quote {
@@ -62,17 +72,29 @@
 		margin: 0 auto;
 		max-width: 1030px;
 		text-align: center;
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding: 100px 10px;
+		margin-bottom: 40px;
+		margin-top: 40px;
 		
 		.quote-content {
 			font-size: 55px;
 			font-weight: 600;
+			
+			@media only screen and (max-width: 900px) and (min-width: 560px) {
+				font-size: 45px;
+			}
+			
+			@media only screen and (max-width: 560px) {
+				font-size: 35px;
+			}
 		}
 		
 		.quote-author {
 			font-size: 23px;
 			margin-top: 10px;
+			@media only screen and (max-width: 560px) {
+				font-size: 18px;
+			}
 		}
 	}
 	
@@ -86,6 +108,12 @@
 		a {
 			width: 33%;	
 			vertical-align: top;
+			display: inline-block;
+			@media only screen and (max-width: 640px) {
+				display: block;
+				width: 100%;
+				margin-bottom: 45px;
+			}
 		}
 		.project-item {
 			width: auto;
@@ -99,6 +127,9 @@
 				font-size: 32px;
 				text-align: center;
 				padding-bottom: 10px;
+				@media only screen and (max-width: 860px) and (min-width: 640px) {
+					font-size: 23px;
+				}
 			}
 			
 			.image-wrapper {
@@ -119,6 +150,9 @@
 			.bottom-description, .company-name {
 				font-size: 23px;
 				padding: 5px 15px;
+				@media only screen and (max-width: 860px) and (min-width: 640px) {
+					font-size: 18px;
+				}
 			}
 			
 			.bottom-description {
