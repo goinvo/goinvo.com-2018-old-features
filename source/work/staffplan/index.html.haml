@@ -1,0 +1,67 @@
+- content_for(:title) do
+	= "Staffplan allows your staff and managers to plan, organize, and control their work programs."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Staffplan allows your staff and managers to plan, organize, and control their work programs."}/
+	%meta{:name => "keywords", :content => "staffplan, ux design, ui design, ui engineering, team planning, web software design"}/
+- client = client_for_name("StaffPlan")
+
+#content-area.caseStudyContent
+	.projectData
+		%h1.client{style: "color: #{client.primary_color}"} StaffPlan
+
+		%h6.subheader Results
+
+		%p.caption Manage your current and future work program.
+
+		%h6.subheader Practice Areas
+		%p.caption Enterprise
+
+		%h6.subheader Project Type
+		%p.caption UI Design, Engineering
+
+		%h6.subheader Process
+		%p.caption Learning, Envision, Blueprint, Craft, Build
+
+		%h6.subheader Price
+		%p.caption $100k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%div
+			%img{alt: "StaffPlan", src: "../../images/clients/staffplan/staffplan-personal-plan-sarah.jpg"}
+		%p Staffplan is a web-based service that allows your staff and managers to plan and organize and control their work programs.
+
+		%p Managers and project leaders often keep their staffing information in their own spreadsheet files, on sticky notes, and in their head. Managers would occasionally speak to each other individual and manually de-conflict staff commitments, but often discrepancies aren’t discovered until staff over or under bill a project.
+
+		%p Staff are left in the dark as to what they were working on often until the last minute. They don’t know what their manager has in store for them.
+
+		%h5 Changing your Business
+
+		%p There is a culture shift at both traditional and progressive companies: employees are being taught to think of themselves as individual CFOs. Staff plan is a service which encourages and facilitates that change.
+
+		%p Staffplan is available to everyone across your company. It provides transparency into your business. Staff will have a clearer view of what their managers have in store for them. Even more powerful, staff have a hand in the process.
+
+		%p Staff plan empowers individuals to drive their own career, allowing them to entire their own planning data. They can record what they would like to work on, leads they may have, and can indicate when to transition off a current project.
+
+		%p Now managers can spend more time on finding the best work for each staff, rather than simply keeping track of it. 
+
+		%p Staff plan gives managers and staff a standardized way to keep track of their staff’s plans. It provides one single access point to what all companies parties  are planning on, enabling shared awareness and self-synchronization.
+
+		%div
+			%img{alt: "Each staff has an individual page, where all stakeholders can enter plans for that staff member.", src: "../../images/clients/staffplan/staffplan-personal-plan-ben.jpg"}/
+		%p.caption Each staff has an individual page, where all stakeholders can enter plans for that staff member.
+
+		%div
+			%img{alt: "Manager pages supply at-a-glance summary data of all the staff in each department. Dashboards aggregate all staff across departments planning on charging particular projects.", src: "../../images/clients/staffplan/staffplan-project-plan.jpg"}/
+		%p.caption Manager pages supply at-a-glance summary data of all the staff in each department. Dashboards aggregate all staff across departments planning on charging particular projects.
+
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next

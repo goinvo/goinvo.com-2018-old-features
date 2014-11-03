@@ -78,6 +78,10 @@
   primary_color: "#d71844"
   logo: "ssi.jpg"
 
+- name: "StaffPlan"
+  primary_color: "#5e9b69"
+  logo: "staffplan.jpg"
+
 - name: "Telerik"
   primary_color: "#acd608"
   logo: "telerik.jpg"
