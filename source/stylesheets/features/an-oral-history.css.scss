@@ -1,0 +1,196 @@
+@import "../base/core";
+
+$orange: #bc743e;
+$red: #d65f4d;
+$teal: #9ec2b7;
+$green: #7f8732;
+$blue: #51697b;
+$yellow: #ddb40a;
+$tan: #dfd6c3;
+$bluegray: mix($blue, $gray, 50%);
+
+body {
+	color: #58504A;
+	background: #FFF;
+}
+
+#main-container {
+	margin-top: 55px;
+}
+
+#feature-article{
+	width: 100%;
+	
+	.overall-header {
+		width: 100%;
+		height: 188px;
+		color: #6d6e6a;
+		font-size: 62px;
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 65px;
+	}
+	
+	header {
+		width: 100%;
+		background-color: gray;
+		color: white;
+		height: 640px;
+		position: relative;
+		
+		.header-wrapper {
+			position: absolute;
+			bottom: 40px;
+			left: 120px;
+			width: calc(100% - 240px);
+		}
+		
+		.main-header-content {
+			display: inline-block;
+			width: calc(100% - 320px);
+			
+			.header-title {
+				font-size: 65px;	
+			}
+			.header-content {
+				padding-left: 0px;	
+				font-size: 22px;
+				line-height: 32px;
+			}
+		}
+		.right-header-content{
+			display: inline-block;
+			width: 300px;
+			border: none;
+			border-left: 2px dotted #fff;
+			padding-left: 20px;
+			padding-top: 20px;
+			
+			.two-images {
+				img {
+					display: inline-block;
+					width: 45%;
+					height: auto;
+					
+					&:first-child {
+						margin-right: 10px;	
+					}
+				}
+			}
+			
+			.content {
+				margin-top: .5em;
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+	}
+}
+
+#feature-article header.nav-wrapper {
+	background-color: white;
+	//position: fixed;
+	z-index: 100;
+	width: 100%;
+	border-bottom: 0;
+	font-size: 22px;
+	padding: 20px 60px;
+	border-bottom: 1px solid #000;
+	height: auto;
+	.nav-button {
+		display: none;
+	}
+	.title {
+		display: inline-block;	
+		color: rgb(109, 110, 106);
+		margin-right: 60px;
+	}
+	a {
+		color: rgb(166, 167, 162);	
+		font-weight: 100;
+		margin-right: 35px;
+		&.active {
+			text-decoration: underline;
+		}
+	}
+}
+
+#section1-origins {
+	margin-top: 63px;
+	padding-top: 30px;
+}
+
+
+.row {
+	vertical-align: top;
+	margin: 0 auto;
+	.sidebar {
+		display: inline-block;
+		width: 405px;	
+		line-height: initial;
+		padding: 0px;
+		color: #000;
+		
+		.sidebar-box {
+			padding: 40px 20px;
+			color: rgba(0, 0, 0, .45);
+			
+			p {
+				font-size: 18px;
+				line-height: 28px;	
+				margin-bottom: 0px;
+			}
+			
+			img {
+				margin: 0 auto;	
+			}
+			
+			&.solid {
+				background-color: rgb(249, 249, 248);	
+			}
+		}
+	}
+
+	.interview-wrapper {
+		width: calc(100% - 450px);
+		display: inline-block;
+		vertical-align: top;
+		padding: 0px 60px;
+		
+		.interview-content {
+			
+			.speaker-avatar, .speaker-speaks {
+				display: inline-block;	
+				vertical-align: top;
+			}
+			
+			.speaker-avatar {
+				width: 50px;
+				height: 50px;
+				margin-bottom: 50px;
+				
+				&.dirk {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.andrei {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				background-size: cover;
+			}
+			.speaker-speaks {
+				width: calc(100% - 70px);
+				padding-top: 20px;
+				margin-bottom: 50px;
+				color: rgb(119, 110, 106);
+				font-size: 22px;
+				line-height: 32px;
+				font-weight: 100;
+				.full-name {
+					font-weight: 700;
+				}	
+			}
+		}
+		
+	}
+	
+}

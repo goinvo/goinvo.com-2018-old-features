@@ -1,0 +1,50 @@
+- content_for(:title) do
+	= "An Oral History of Involution Studios"
+- content_for(:page_head) do
+	= stylesheet_link_tag "features/an-oral-history"
+	= stylesheet_link_tag "feature_links"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => ""}/
+
+%article#feature-article.oral-history
+	.overall-header 
+		%div An Oral History of Involution Studios
+	%header#article-header
+		.header-wrapper
+			.main-header-content
+				.header-title Origins
+				.header-content Ipiendi andipie nduciam, odic testem imus. Nat estiamet qui aligendae nimagnam etur, quae venimillo volorum que endipsa. Duciatur. Oluptatur acerspit latur, omniet il il minctae quiatur mollestibus et fugit aut facesec umquae nitinum debis amusam lat officit alibus voluptae il essim as nonsecum.
+			.right-header-content
+				.two-images
+					%img{:src => '../../images/features/an-oral-history/andrei-sqr.jpg'}
+					%img{:src => '../../images/features/an-oral-history/dirk-sqr.jpg'}
+				.content Andrei Herasimchuk and Dirk Knemeyer incorporated Involution Studios in Palo Alto, California, on June 29, 2004.
+	%header.nav-wrapper
+		%nav.main-nav
+			.title An Oral History of Involution Studios
+			%a.one{:href => "#section1-origins"} 1. Origins
+			%a.two{:href => "#section2-silicon"} 2. Silicon Valley
+			%a.three{:href => "#section3-transition"} 3. Transition
+			%a.four{:href => "#section4-boston"} 4. Boston
+			%a.five{:href => "#section5-nowlater"} 5. Now and Later
+	%section#section1-origins
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks 
+						%span.full-name Dirk Knemeyer: 
+						%span.speaker-text 
+							So it all started with a 
+							%a{:src => "http://boxesandarrows.com/information-design-the-understanding-discipline/"} Boxes and Arrows article.
+				.interview-content
+					.speaker-avatar.andrei
+					.speaker-speaks 
+						%span.full-name Andrei Herasimchuk: 
+						%span.speaker-text I haven’t read that article in a while, and re-reading my comments on it, I’m surprised at how much I still agree with my younger self! In fact, many of my concerns about titles, job descriptions, and confusion over design and the tech sector have come to fruition. Having said that, I know I come off as overly direct in the way I speak and write, but I really was attempting to be as diplomatic as I knew how in my comments to that article.
+			.sidebar
+				.sidebar-box.solid.boxes-and-arrows
+					%img{:src => "../../images/features/an-oral-history/boxes-and-arrows.png"}
+					%p The venerable Boxes & Arrows was one of the first online UX publications, a favourite of the early intelligentsia.
+					
