@@ -61,7 +61,7 @@
 		text-align: center;
 		font-style: italic;
 		font-size: 32px;
-		padding: 75px 10px;
+		padding: 125px 10px;
 		@media only screen and (max-width: 560px) {
 			font-size: 23px;
 		}
@@ -178,11 +178,26 @@
 		
 }
 
+.mountsinai-container:after {
+	position: absolute;
+	content: " ";
+	top: -33px;
+	left: 0px;
+	width: 100%;
+	height: 33px;
+	z-index: 300000;
+	border-top: 3px solid rgba(0,0,0,0);
+	border-right: 0;
+	border-bottom: 22px solid #EBEBEB;
+	border-left: 1015px solid rgba(0,0,0,0);	
+}
+
 .mountsinai-container {
 	width: 100%;
 	background-color: #EBEBEB;
 	position: relative;
 	height: 450px;
+	border-bottom: 1px solid #EBEBEB;
 	
 	@media  only screen and (max-width: 760px) {
 		margin-top: 500px;	
@@ -232,6 +247,7 @@
 			@media  only screen and (max-width: 960px) {
 				font-size: 18px;
 				line-height: 22px;
+				width: 80%;
 			}
 		}
 		
@@ -250,7 +266,7 @@
 		right: 0;
 		top: 0;
 		width: 50%;
-		height: 450px;
+		height: 449px;
 		padding-top: 30px;
 		overflow: hidden;
 		
@@ -265,7 +281,7 @@
 			width: 100%;
 			top: 280px;
 			z-index: 1;
-			top: 320px;
+			top: 319px;
 			height: 210px;
 		}
 		
@@ -468,7 +484,7 @@
 			.video-summary {
 				z-index: 20;
 				min-width: 329px;
-				max-width: 80%;	
+				max-width: 70%;	
 				p {
 					font-size: 22px;
 					line-height: 30px;	
