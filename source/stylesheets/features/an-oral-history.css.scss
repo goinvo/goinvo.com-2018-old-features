@@ -18,6 +18,10 @@ body {
 	margin-top: 55px;
 }
 
+.bold {
+	font-weight: 800;	
+}
+
 #feature-article{
 	width: 100%;
 	
@@ -156,7 +160,7 @@ section.interview-content {
 			}
 			
 			&.dotted {
-				border-left: 1.5px dotted rgb(157,195,182);	
+				border-left: 2px dotted rgb(157,195,182);	
 			}
 			
 			&.extra-top-margin {
@@ -197,6 +201,9 @@ section.interview-content {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
 				&.ben {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.uday {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
 				background-size: cover;
