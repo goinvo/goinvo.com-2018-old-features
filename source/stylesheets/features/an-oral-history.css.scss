@@ -62,7 +62,7 @@ body {
 			display: inline-block;
 			width: 300px;
 			border: none;
-			border-left: 2px dotted #fff;
+			border-left: 1.5px dotted #fff;
 			padding-left: 20px;
 			padding-top: 20px;
 			
@@ -93,8 +93,9 @@ body {
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
-	font-size: 22px;
-	padding: 20px 60px;
+	font-size: 18px;
+	padding: 18px 60px;
+	padding-bottom: 16px;
 	border-bottom: 1px solid #000;
 	height: auto;
 	.nav-button {
@@ -115,9 +116,13 @@ body {
 	}
 }
 
-#section1-origins {
+#section1-origins-content {
 	margin-top: 63px;
 	padding-top: 30px;
+}
+
+section.interview-content {
+	margin-bottom: 120px;	
 }
 
 
@@ -148,6 +153,18 @@ body {
 			&.solid {
 				background-color: rgb(249, 249, 248);	
 			}
+			
+			&.blank{
+				height: 300px;	
+			}
+			
+			&.dotted {
+				border-left: 1.5px dotted rgb(157,195,182);	
+			}
+			
+			&.extra-top-margin {
+				margin-top: 50px;	
+			}
 		}
 	}
 
@@ -167,7 +184,8 @@ body {
 			.speaker-avatar {
 				width: 50px;
 				height: 50px;
-				margin-bottom: 50px;
+				margin-bottom: 12px;
+				margin-right: 5px;
 				
 				&.dirk {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
@@ -175,15 +193,24 @@ body {
 				&.andrei {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
+				&.juhan {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.donna {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.ben {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
 				background-size: cover;
 			}
 			.speaker-speaks {
 				width: calc(100% - 70px);
-				padding-top: 20px;
-				margin-bottom: 50px;
+				padding-top: 15px;
+				margin-bottom: 12px;
 				color: rgb(119, 110, 106);
-				font-size: 22px;
-				line-height: 32px;
+				font-size: 18px;
+				line-height: 28px;
 				font-weight: 100;
 				.full-name {
 					font-weight: 700;
