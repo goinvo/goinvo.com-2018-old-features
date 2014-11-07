@@ -165,6 +165,9 @@ section.interview-content {
 			
 			&.extra-top-margin {
 				margin-top: 50px;	
+				&.double-top {
+					margin-top: 100px;	
+				}
 			}
 		}
 	}
@@ -204,6 +207,9 @@ section.interview-content {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
 				&.uday {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.eric {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
 				background-size: cover;
