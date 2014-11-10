@@ -40,19 +40,27 @@
 							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
 							%span.tag-line Crafting exceptional software for progressive companies
 						%nav#nav-buttons
-							%a.nav-button.work{:href => asset_url('work')} Work
+							%a.nav-button.work{:href => asset_url('work')} 
+								.nav-element Work
 							-# %a.nav-button{:href => asset_url('products')}
-							%a.nav-button.studio{:href => asset_url('studio/team')} Studio
-							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')} Articles
-							%a.nav-button.contact{:href => asset_url('contact')} Contact
+							%a.nav-button.studio{:href => asset_url('studio/team')}
+								.nav-element Studio
+							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')}
+								.nav-element Articles
+							%a.nav-button.contact{:href => asset_url('contact')}
+								.nav-element Contact
 					#mobile-hamburger
 						=image_tag('hamburger.svg');
 					%nav#nav-buttons-mobile
-						%a.nav-button.work{:href => asset_url('work')} Work
+						%a.nav-button.work{:href => asset_url('work')}
+							.nav-element Work
 						-# %a.nav-button{:href => asset_url('products')}
-						%a.nav-button.studio{:href => asset_url('studio/team')} Studio
-						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')} Articles
-						%a.nav-button.contact{:href => asset_url('contact')} Contact
+						%a.nav-button.studio{:href => asset_url('studio/team')}
+							.nav-element Studio
+						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')}
+							.nav-element Articles
+						%a.nav-button.contact{:href => asset_url('contact')}
+							.nav-element Contact
 				- if currentPage.include? "studio"
 					%header#studio-header
 						.studio-head-container
