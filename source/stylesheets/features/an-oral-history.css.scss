@@ -33,13 +33,27 @@ body {
 		text-align: center;
 		vertical-align: middle;
 		padding-top: 65px;
+		
+		@media only screen and (max-width: 910px) {
+			font-size: 50px;	
+			padding-top: 75px;
+		}
+		
+		@media only screen and (max-width: 740px) {
+			font-size: 40px;	
+			padding-top: 80px;
+		}
+		
+		@media only screen and (max-width: 590px) {	
+			padding-top: 60px;
+		}
 	}
 	
 	header {
 		width: 100%;
 		background-color: gray;
 		color: white;
-		height: 640px;
+		min-height: 640px;
 		position: relative;
 		
 		.header-wrapper {
@@ -47,19 +61,39 @@ body {
 			bottom: 40px;
 			left: 120px;
 			width: calc(100% - 240px);
+			max-width: 1280px;
+			@media only screen and (max-width: 960px) {
+				left: 0;
+				width: 100%;
+			}
 		}
 		
 		.main-header-content {
 			display: inline-block;
 			width: calc(100% - 320px);
+			min-width: 730px;
+			
+			@media only screen and (max-width: 960px) {
+				width: 100%;
+				padding-left: 10px;
+				padding-right: 10px;
+				min-width: 0px;
+			}
 			
 			.header-title {
 				font-size: 65px;	
+				@media only screen and (max-width: 560px) {
+					font-size: 45px;	
+				}
 			}
 			.header-content {
 				padding-left: 0px;	
 				font-size: 22px;
 				line-height: 32px;
+				@media only screen and (max-width: 560px) {
+					font-size: 18px;
+					line-height: 26px;
+				}
 			}
 		}
 		.right-header-content{
@@ -98,10 +132,15 @@ body {
 	width: 100%;
 	border-bottom: 0;
 	font-size: 18px;
-	padding: 18px 60px;
-	padding-bottom: 16px;
+	padding: 0px 60px;
 	border-bottom: 1px solid #000;
+	min-height: 0;
 	height: auto;
+	
+	@media only screen and (max-width: 1216px) {
+			
+	}
+	
 	.nav-button {
 		display: none;
 	}
@@ -109,14 +148,33 @@ body {
 		display: inline-block;	
 		color: rgb(109, 110, 106);
 		margin-right: 60px;
+		padding-top: 18px;
+		padding-bottom: 16px;
 	}
 	a {
+		padding-top: 18px;
+		padding-bottom: 16px;
 		color: rgb(166, 167, 162);	
 		font-weight: 100;
 		margin-right: 35px;
 		&.active {
 			text-decoration: underline;
 		}
+	}
+	
+	&.scroll-nav {
+		position: fixed;
+		top: 55px;
+		left: 0;
+		display: none;
+	}
+	
+	&.middle-nav {
+		display: none;
+		
+		@media only screen and (max-width: 750px) {
+			display: block;
+		}	
 	}
 }
 
@@ -130,12 +188,28 @@ section.interview-content {
 .row {
 	vertical-align: top;
 	margin: 0 auto;
+	max-width: 1280px;
 	.sidebar {
 		display: inline-block;
-		width: 405px;	
+		max-width: 350px;	
 		line-height: initial;
 		padding: 0px;
 		color: #000;
+		
+		@media only screen and (max-width: 1080px) {
+			max-width: 300px;	
+		}
+		@media only screen and (max-width: 900px) {
+			max-width: 250px;	
+		}
+		
+		@media only screen and (max-width: 750px) {
+			//max-width: 250px;	
+			display:block;
+			max-width: 100%;
+			width: 100%;
+			margin-bottom: 40px;
+		}
 		
 		.sidebar-box {
 			padding: 40px 20px;
@@ -173,16 +247,36 @@ section.interview-content {
 	}
 
 	.interview-wrapper {
-		width: calc(100% - 450px);
+		width: calc(100% - 360px);
 		display: inline-block;
 		vertical-align: top;
 		padding: 0px 60px;
+		
+		@media only screen and (max-width: 1080px) {
+			width: calc(100% - 330px);
+		}
+		
+		@media only screen and (max-width: 900px) {
+			width: calc(100% - 280px);
+		}
+		
+		@media only screen and (max-width: 750px) {
+			//max-width: 250px;	
+			width: 100%;
+			display: block;
+			padding: 0px 15px;
+			
+		}
 		
 		.interview-content {
 			
 			.speaker-avatar, .speaker-speaks {
 				display: inline-block;	
 				vertical-align: top;
+				
+				@media only screen and (max-width: 750px) {
+					display: block;	
+				}
 			}
 			
 			.speaker-avatar {
@@ -190,6 +284,10 @@ section.interview-content {
 				height: 40px;
 				margin-bottom: 10px;
 				margin-right: 10px;
+				
+				@media only screen and (max-width: 750px) {
+					margin-bottom: 0px;	
+				}
 				
 				&.dirk {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
@@ -215,6 +313,12 @@ section.interview-content {
 				&.jon {
 					background-image: image-url('features/an-oral-history/dirk-circ.png');	
 				}
+				&.sarah {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
+				&.jen {
+					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+				}
 				background-size: cover;
 			}
 			.speaker-speaks {
@@ -225,6 +329,12 @@ section.interview-content {
 				font-size: 18px;
 				line-height: 28px;
 				font-weight: 100;
+				
+				@media only screen and (max-width: 750px) {
+					width: 100%;	
+					margin-bottom: 30px;
+				}
+				
 				.full-name {
 					font-weight: 700;
 				}	

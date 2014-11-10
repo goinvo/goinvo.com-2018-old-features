@@ -4,6 +4,7 @@
 	= stylesheet_link_tag "features/an-oral-history"
 	= stylesheet_link_tag "feature_links"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "featurenav-scroll"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
 
@@ -20,7 +21,15 @@
 					%img{:src => '../../images/features/an-oral-history/andrei-sqr.jpg'}
 					%img{:src => '../../images/features/an-oral-history/dirk-sqr.jpg'}
 				.content Andrei Herasimchuk and Dirk Knemeyer incorporated Involution Studios in Palo Alto, California, on June 29, 2004.
-	%header.nav-wrapper
+	%header.nav-wrapper.stuck
+		%nav.main-nav
+			.title An Oral History of Involution Studios
+			%a.one{:href => "#section1-origins"} 1. Origins
+			%a.two{:href => "#section2-silicon"} 2. Rise, Silicon Valley
+			%a.three{:href => "#section3-interesting-times"} 3. Interesting Times
+			%a.four{:href => "#section4-boston"} 4. Rise, Boston
+			%a.five{:href => "#section5-nowlater"} 5. Now and Later
+	%header.nav-wrapper.scroll-nav
 		%nav.main-nav
 			.title An Oral History of Involution Studios
 			%a.one{:href => "#section1-origins"} 1. Origins
@@ -285,6 +294,14 @@
 			.main-header-content
 				.header-title Rise, Silicon Valley
 				.header-content Ipiendi andipie nduciam, odic testem imus. Nat estiamet qui aligendae nimagnam etur, quae venimillo volorum que endipsa. Duciatur. Oluptatur acerspit latur, omniet il il minctae quiatur mollestibus et fugit aut facesec umquae nitinum debis amusam lat officit alibus voluptae il essim as nonsecum.
+	%header.nav-wrapper.middle-nav
+		%nav.main-nav
+			.title An Oral History of Involution Studios
+			%a.one{:href => "#section1-origins"} 1. Origins
+			%a.two{:href => "#section2-silicon"} 2. Rise, Silicon Valley
+			%a.three{:href => "#section3-interesting-times"} 3. Interesting Times
+			%a.four{:href => "#section4-boston"} 4. Rise, Boston
+			%a.five{:href => "#section5-nowlater"} 5. Now and Later
 	%section#section2-silicon-content.interview-content
 		.row
 			.interview-wrapper
@@ -710,6 +727,14 @@
 			.main-header-content
 				.header-title Interesting Times
 				.header-content Ipiendi andipie nduciam, odic testem imus. Nat estiamet qui aligendae nimagnam etur, quae venimillo volorum que endipsa. Duciatur. Oluptatur acerspit latur, omniet il il minctae quiatur mollestibus et fugit aut facesec umquae nitinum debis amusam lat officit alibus voluptae il essim as nonsecum.
+	%header.nav-wrapper.middle-nav
+		%nav.main-nav
+			.title An Oral History of Involution Studios
+			%a.one{:href => "#section1-origins"} 1. Origins
+			%a.two{:href => "#section2-silicon"} 2. Rise, Silicon Valley
+			%a.three{:href => "#section3-interesting-times"} 3. Interesting Times
+			%a.four{:href => "#section4-boston"} 4. Rise, Boston
+			%a.five{:href => "#section5-nowlater"} 5. Now and Later
 	%section#section3-interesting-times-content.interview-content
 		.row
 			.interview-wrapper
@@ -1138,3 +1163,373 @@
 				.sidebar-box.solid.extra-top-margin.double-top
 					%img{:src => "../../images/features/ixda.png"}
 					%p The 2008 IxDA Boston Christmas Party brought Juhan and Jon together for the first time in a wince-inducing way.
+	%header#article-header#section4-boston
+		.header-wrapper
+			.main-header-content
+				.header-title Rise, Boston
+				.header-content Ipiendi andipie nduciam, odic testem imus. Nat estiamet qui aligendae nimagnam etur, quae venimillo volorum que endipsa. Duciatur. Oluptatur acerspit latur, omniet il il minctae quiatur mollestibus et fugit aut facesec umquae nitinum debis amusam lat officit alibus voluptae il essim as nonsecum.
+	%header.nav-wrapper.middle-nav
+		%nav.main-nav
+			.title An Oral History of Involution Studios
+			%a.one{:href => "#section1-origins"} 1. Origins
+			%a.two{:href => "#section2-silicon"} 2. Rise, Silicon Valley
+			%a.three{:href => "#section3-interesting-times"} 3. Interesting Times
+			%a.four{:href => "#section4-boston"} 4. Rise, Boston
+			%a.five{:href => "#section5-nowlater"} 5. Now and Later
+	%section#section4-boston-content.interview-content
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks 
+						%span.full-name Dirk Knemeyer:   
+						%span.speaker-text Jon, perhaps your first major contribution, which was a big part of our really getting back on the right trajectory with the PTC project.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks 
+						%span.full-name John Follett:  
+						%span.speaker-text Yeah, that’s right. I was doing a lot of teaching, these one-day seminars on web applications. Nancy from <a href = "http://www.ptc.com/">PTC</a> was in the group that came to see me one Saturday at <a href = "http://www.bentley.edu/">Bentley University</a>, and I’d been up the whole night before preparing for it. It was stupidest thing to do because I was so exhausted. She kept asking me questions, and I knew she was really enjoying the class, but I was just being tortured because I was so exhausted with my preparation.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text Later on we were at that <a href = "http://uxpaboston.org/">UXPA</a> conference, Eric Benoit and I, and talked with Nancy some more. I think that was how that really got started. After that you and Juhan went and pitched their executives. That project enabled us to hire a couple more designers and really get going.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text That made a huge difference.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks 
+						%span.full-name Juhan Sonin: 
+						%span.speaker-text The PTC project was Boston’s first big project, meaning three or four people full-time for over five months. It was a jumpstart for the studio. It allowed us to do lots of different things and go from having a few contractors to hiring people and building a stronger team. We helped PTC re-imagine what their next-generation CAD software was going to be. It’s a huge application, competing with <a href = "http://www.autodesk.com/">Autodesk</a> and <a href = "http://www.solidworks.com/">SolidWorks</a>. It had a massive number of screen states, and we had to come up with a strategy for how the UI was going to be implemented, and help their engineers and designers come up with a way to keep track of their own design. They had let it go for 20 years, just by adding parts and pieces. Eventually it was a year- and-a-half relationship and very good for the studio.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: It was an example, and this is so often the case, where it is a really strong person or team on the client side that makes for a strong engagement.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: I give Nancy a lot of credit, she was a fantastic advocate for us but also a good designer.
+				.interview-content
+					.speaker-avatar.sarah
+					.speaker-speaks 
+						%span.full-name Sarah Kaiser: 
+						%span.speaker-text I came onto PTC after the initial UI design work was complete, to create a framework for the icons. It was my first big client project and a hell of a primer, made easy only by lead designer Dawa Chung’s unrelenting work ethic and Juhan’s guidance.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text Conceptually, the goal was very simple: evaluate the existing suite, identify the most challenging areas, and unify the design in a style guide. But, as Juhan said, there was 20 years worth of platform back story to learn. Dawa persisted and worked nights sorting through documentation to find icon examples and stayed optimistic and driven with every reiteration they threw at us. Her attitude was infectious.
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text At the end of the day we delivered a great design to the client and PTC loved it. The big takeaway I got from that project was: At the end of the day, a resilient, positive attitude as a project lead is infectious in the best way. I also learned to identify personality stress points with client contacts, and strategize to avoid pressing them. We put together a style guide of the UI and icons in wiki format, an exercise that really helped the engineers and drilled some good lessons into me as a junior designer.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Jon, with <a href = "http://www.hotknifedesign.com/">Hot Knife Design</a> you were running the business, but you were also the lead designer. When you started at Invo you did jump into the sales, but you also were still on the design side as well.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks 
+						%span.speaker-text JF: Yeah. I was the lead designer for our early work with <a href = "https://www.surveysampling.com/">Survey Sampling International</a> (SSI). They’re still a client a few years later. That was interesting because we went down to Connecticut to meet their international team. There were guys who flew in from the Netherlands, from Hungary, and of course within the United States. Juhan very much wanted me to just lead that particular project soup to nuts, and in the beginning I wasn’t familiar with all of Invo’s architecture techniques. I was flying by the seat of my pants to keep up with all the requirements. Once we had mapped out the entire system, no one could tell what to do with it. It was that unwieldy. There were so many features and functions we ended up just dropping to try and get the UX in a healthy place.The intention was for us to redesign the admin panel but once we got into it and saw the whole picture we decided to focus on the user-facing parts instead. That’s when single-page applications were not the norm. There were so many nested popups and tabs all over the place. Anyplace you could have a tab, it had tabs.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks 
+						%span.speaker-text JS: There were similarities to Oracle in terms of its complexity, but also the way you had to get to things. I think, Jon, it had a similar click-to- performance ratio that we had with other services that were like that, where it was a mess. Jon, I think you probably depleted the number of clicks at least by half. Just that alone was a massive coup for them. It’s nice because you fostered that relationship with SSI and with David.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks 
+						%span.speaker-text JF: That’s one thing that I was always really good at for Hot Knife was getting repeat business. I had a bunch of clients who were with me for a good long time. I think you share that same attitude, Juhan, where people enjoy working with you and want to come back.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks 
+						%span.speaker-text JS: You had a little more formality around it, which I did not have, and probably still don’t have.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text I think it’s something you brought that was good for the studio; whereas, I’m a little more ad hoc and you have a little more structure around it, which we needed.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Maybe the most important project we’ve had here in Boston was <a href = "http://solutions.3m.com/wps/portal/3M/en_US/Health-Information-Systems/HIS/Products-and-Services/Products-List-A-Z/CodeRyte-CodeComplete/">CodeRyte</a> from the standpoint that it was big, it gave us a lot of business, but it also was a really wonderful project.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks 
+						%span.speaker-text JS: We had a few goals for where the studio should go. The biggest of those was and is health and healthcare. This has grown from my FFRCD days at MITRE, working for the government, working for the planet. Well, a MITRE executive who liked my work connected me with her husband who is sort of a serial COO who has led a number of startups to big exits. Now he’s got a startup in <a href = "http://en.wikipedia.org/wiki/Bethesda,_Maryland">Bethesda</a> and they need some help on a design, and to strategically rethink where they’re going in the company.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text They had a technology that was coming out of academia in natural language processing, <a href = "http://en.wikipedia.org/wiki/Natural_language_processing">NLP</a>, which is still growing and maturing but is at a point where we can get some real efficiency gains from implementing it in certain fields. They needed a way to have hospitals use NLP to dramatically change how they coded medical records.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text Eric Benoit led the project. It grew into a 4 FTE project over course of almost a year to design and develop a production system. The first customer was Memorial Hermann down in Houston, Texas. We worked very closely with their various users. Out of the gate it was processing $4 billion worth of claim data per year, which is enormous for a new production prototype. That alone changed the course of CodeRyte. It allowed us to shape a brand new product for a rising healthcare company.
+				.interview-content
+					.speaker-avatar.eric
+					.speaker-speaks 
+						%span.full-name Eric Benoit: 
+						%span.speaker-text I was really happy with the way the product turned out. CodeRyte gave us the time to get it done right. They had us on board as a true partner; nobody was counting time... just getting this new product delivered. This was also a good test for me. At this point, I hadn’t yet led software into production nor an engineering team. I learned a shit ton and it was really validating to see my design kick-ass in the real world.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text There were periods of time when CodeRyte was having trouble with the backend, handling all of these documents. But Invo was able to keep Memorial Hermann engaged with the project, because of the progress we could show on the front-end. They could click around, play with it, see its potential and how nice it was, despite the bugs. Our constant pushes to staging for Memorial Hermann to see weekly builds kept them vested in the product becoming great. That helped the design take another level.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks 
+						%span.speaker-text JF: That really changed the whole game of the studio. You gave a little insight on the creative side, but on the sales side, once <a href = "http://www.3m.com/">3M</a> bought CodeRyte, it made everything easier. There are times when groupthink and executive pressure can lead people to make bad decisions around timelines in software. I see it all the time on the sales side, “Oh, we want to get this done right away. We would start next week if we could. We want this project to be done in 3 months with solid production code.”
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text You know what? It doesn’t work that way. You’ll ship bad stuff, you’ll ship buggy stuff, you’ll ship poorly-designed stuff. You might make that goal because somebody in their head decided that was the goal, but you start to realize that human beings play a lot of weird games in their heads with software. What they do is compress timelines, they compress processes, they compress the right way to do things to match their own measures for success, whether it’s quarterly numbers, whether it’s to impress a boss, whether it’s to impress the shareholders.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text What that 3M/CodeRyte project gave was an example of, “Look we have done this before in an extremely complex space. If you want to work with us, we can help you get there; but let’s not screw around. Let’s be real about what we can do, and let’s make something great together.]
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks 
+						%span.speaker-text Let’s not just make up arbitrary deadlines and put pressure on each other, and make things hard because you guys just want to ship at this point or another.”
+				.interview-content
+					.speaker-avatar.eric
+					.speaker-speaks 
+						%span.speaker-text EB: The CodeRyte project also gave us street cred in handling <a href = "http://en.wikipedia.org/wiki/Protected_health_information">PHI</a>, working with large healthcare system and dealing with the pain it takes to build for healthcare systems.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks 
+						%span.speaker-text JS: It helps when you have George Moon, who is an executive there, know his stuff. This is an engineer who ran projects and actually could code. It was a rare combination of someone could handle executive-level demands and understands the 1s and 0s of a service. When you have that kind of ally on the client side, it brings the whole project together.
+			.sidebar
+				.sidebar-box.solid.ptc
+					%img{:src => "../../images/features/ptc-info.jpg"}
+					%p PTC’s Creo software, with a new UI by Involution, was released in June, 2011 to replace and supersede products formerly known as Pro/ENGINEER, CoCreate, and ProductView.
+				.sidebar-box.blank
+				.sidebar-box.solid.ssi
+					%img{:src => "../../images/features/ssi.jpg"}
+					%p Survey Sampling International (SSI) is the premier global provider of sampling, data collection and data analytic solutions for consumer and business-to-business survey research.
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Going back to the Silicon Valley days, one of the things that I was keen on was the idea of an apprentice program, the notion of having people join the studio as interns and evolve to apprentices, journeymen, and then masters; but we never fully implemented that. In Boston you’ve really expanded the vision and made that a reality Juhan.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: Regardless of how many years’ experience someone has, it’s always really hard to find very good people. It’s even tougher to find great designers who have got 10 years’ experience, 15 years’ experience, who want to join a studio. They often, at least in this day and age, want to found their own company, do their own startup, get an executive job, whatever it is. Design now has become very in vogue, and somewhat seasoned designers can get very prestigious jobs. Finding that kind of talent, and people also who design software, and the entire experience of using a product, again is also another rare attribute. The prototypical designer is going to have business savvy, they understand the technical underpinnings, and can be an artist on the design side. We find it easier to spot the talent while they are still in school and train them in this more holistic and complete approach to design. You’ve been talking about for a long time and that fit very well what I’ve done in the past, because I’ve been in lots of academic or R&D type environments where we thought PhDs or master’s students would be very good and we grew them over time.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text That kind of ethos has permeated here where we are very aggressive on finding fabulous students, sometimes early in their careers, like as freshmen, as sophomores...
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: ...even out of high school.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: Half the studio has been siphoned from that kind of process. It takes years. This is not something that happens overnight. It’s taken us years and years of vetting, of going through the job and career fairs at 7 or 8 different universities in order for us to cull just a couple people every year to come in. Maybe only one works out. We have six people now on staff that came from the academic university side over the past 6 years. 1 per year usually sticks around and grows and does something really fabulous for us.
+				.interview-content
+					.speaker-avatar.eric
+					.speaker-speaks   
+						%span.speaker-text EB: It’s great seeing students come in with various backgrounds. And it’s exciting to see the projects they come up with.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: As the upswing was really going, we also diversified a little bit to focus more on the art side, not art for the sake of client projects but art for the sake of our own creative ambitions and ideas for products. Bringing on <a href = "https://www.linkedin.com/pub/sarah-kaiser/27/bb1/315">Sarah Kaiser</a> was a big part of that.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: There was something about it that just oozed yumminess. I remember seeing her portfolio and loving it. There was something so good. We didn’t have an artist in residence. We didn’t have someone who could do these luscious graphic stories for us, which I thought we were missing and it was something that I yearned for a decade.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text We got together on Skype and there was this instant connection. We have similar gross minds, and similar artistic desirements for our life, and it was like this really snap connection. The second I mentioned the word “neuticle”, she didn’t know what it was, and in real-time I could see her typing. Then she just started laughing hysterically and says, “I’m buying a pair now.”
+				.interview-content
+					.speaker-avatar.sarah
+					.speaker-speaks   
+						%span.speaker-text SK: Like Juhan said, the neuticle thing was was probably what sold me. Out of college I’d gotten a number of offers and was very closely considering taking one in London, but advertising had never appealed to me. And I liked the work they were doing at Invo and the style of leadership that Juhan exuded. He believed a lot in personal growth and self-directed learning, and that was something I was really excited about too, but beside that I figured anyone who could comfortably use the word neutical in their first discussion with a new hire was a winner, and clearly someone I could get along with. Besides that, Boston is beautiful and his crew were great, funny and crazy talented people. I knew I was in good hands.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: At that point, things were starting to really hum and run. We were growing, we were expanding, adding people. The studio wasn’t just surviving, it was thriving.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: By 2011, lots of different projects, clients, efforts, were gurgling... that we had been slowly working on for several years had come together and braided nicely into one solid river. Whether it was our work with at the national policy level, where we were doing guidance on design for personal health records, or working on <a href = "http://cms.hhs.gov/">CMS</a> and <a href = "http://www.hhs.gov/">HHS</a> design work, and then trickling down all the way to big pharma work on massive conditions like diabetes, and hardware and software projects that were multimillion dollars in scale. And our open-source hGraph project was taking off.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text This is about the time we brought on <a href = "http://bsalinas.com/">Ben Salinas</a> and <a href = "https://www.linkedin.com/pub/reshma-mehta/8/ba2/73a">Reshma Mehta</a>. They are excellent examples of the triple threat I talked about before with the business, engineering, and art sides all coming together. Ben is a designer and engineer who owns an engineering company specializing in coffee roasting and brewing equipment; Reshma was trained as an electrical engineer but taught herself software design and owned her own consultancy.
+				.interview-content
+					.speaker-avatar.eric
+					.speaker-speaks   
+						%span.speaker-text EB: I really value Ben’s input. He can deconstruct things more methodically than me and pinpoint the root issue. Things come more from my gut, so bouncing problems off Ben helps break them down for me. Plus he understands the engineering space far better than me, so he is my resident translator when it comes to engineer-to-designer speak. Ben constantly comes up with ways to hack the software he uses to design and prototype... It’s always interesting to see the latest trick he cooks up. We didn’t give Ben a slow break-in period. We really threw him into the fire. I was about a year on CodeRyte and we had just started a slow rollout of the product. I was transitioning off the project, and we slotted Ben in to lead the remaining releases and our front-end team... for a product he knew nothing about. Not an easy task for a first project. And he did great. I wish Reshma could have hung around longer. She fit in great at the studio with her punchy attitude.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text Both Ben and Reshma contributed to our work for <a href = "https://www.dataxu.com/">DataXu</a>. DataXu is a programmatic marketing software company, who became one of those ideal clients for us. Aaron Kechley, SVP Product, brought us in to drive the future of their application. We provided vision on multiple areas of the product and then repeatedly honed in on individual concepts to bring into production. It’s 1.5 years since we started and we’re continuing to integrate the vision we first delivered.
+			.sidebar
+				.sidebar-box.dotted.sean-parker
+					%img{:src => "../../images/features/sean-parker.jpg"}
+					%p During the later days of the Silicon Valley studio, while there was no business from large companies, power playing VC’s like Sean Parker came to Involution for help on smaller initiatives.				
+				.sidebar-box.dotted.extra-top-margin.yang-dan
+					%img{:src => "../../images/features/yang-dan.jpg"}
+					%p Yang Dan graduated from our apprenticeship and later joined Microsoft as a UX Designer.
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks   
+						%span.speaker-text JF: It really is amazing to see the talented designers and engineers come in to the studio and develop their craft. I think <a href = "https://www.linkedin.com/pub/jennifer-patel/41/183/bb1">Jen Patel</a>, in particular, is emblematic of that growth. She’s become one of our lead designers in the healthcare space, in particular working with clients like <a href = "http://www.partners.org/">Partners HealthCare</a> to create some amazing UI for their enterprise-grade IRB software. She was also the Invo lead on a project we did on design patterns for electronic health records, <a href = "http://inspiredehrs.org/">Inspired EHRs</a> with the California HealthCare Foundation and <a href = "http://toomanyclicks.com/">Dr. Jeff Belden</a> from the <a href = "http://missouri.edu/">University of Missouri</a>.
+				.interview-content
+					.speaker-avatar.jen
+					.speaker-speaks 
+						%span.full-name Jen Patel: 
+						%span.speaker-text Inspired EHRs: Designing for Clinicians is one of our contributions to affecting health care on a national scale. Electronic health records are an important part of hospital systems but seriously lack in usability, leading to many gaps that could be the cause of injury, sickness, or, worse, death. In the book we worked on several key areas of electronic health records, helped to develop the foundations of each chapter, designed beautiful interfaces that are intuitive for physicians and support how they work on a daily basis. We built prototypes, integrated as interactive pieces in the ebook, to demonstrate how such interfaces could function, giving readers a chance to mess around with the tools we’ve designed. Inspired EHRs evolved into an open sourced, lightweight design policy for electronic health records.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: We were always focused on culture but as we started to thrive we made some unusual investments in culture. One of those was with <a href = "http://www.lindseywcollins.com/">Lindsey Witmer</a>.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks   
+						%span.speaker-text JF: That was a year-long experiment, and that was filled with both intentional outcomes and completely unintentional hilarious moments because Lindsey wanted us to be honest about who we were, and that led to a lot of bonding, and laughing. And of course we had <a href = "https://www.linkedin.com/pub/danny-hadley/9a/75a/47b">Danny Hadley</a> who was not into all of the special vegetable concoctions she came up with. Yes, so it was an interesting dichotomy there. The idea was that we were going to eat better and exercise more, and then we were going to understand how our lives were balanced or unbalanced, and then use that information to try to make incremental improvements. Before Lindsey, the refrigerator used to have snacks that <a href = "https://www.linkedin.com/pub/christian-hogan/10/267/914">Christian</a> was into, so we had a weekly order from <a href = "http://www.peapod.com/">Peapod</a> where it was the most foul developer/engineer midnight snacks like Ding- Dongs, Little Debbies, Rice Krispie Treats. Lindsey cleaned all of that out and started bringing in locally-grown vegetables, vegetables that no one had ever heard of before except Lindsey. She had these very lovely hand-written labels. Snacks were now all 900 different kinds of bird seed. It was kale chips. It was juices. The healthy eating aspect of that I think has continued in terms of when I look in the refrigerator now it’s closer to what Lindsey prescribed for us than what Christian did, intentionally or unintentionally.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: Human behavior takes a long time to change, and I think that’s why the experiment with her worked, because it forced us over time to rethink and relive how we eat. We just had lunch today all together in our kitchen. It’s a requirement for us. We cook together, we eat together, and we talk together. It’s a very important component of the studio. The kitchen really is another heart, other than the main studio space, to how we live together.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks   
+						%span.speaker-text JF: That is a very strong part of our culture. I do also remember working with Lindsey on the balanced, or imbalanced, parts of life, consciously trying to re-jigger my schedule so I would work in exercise without having to come back home at 9:00 p.m. At the time I was only getting 4 hours of sleep.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text It seems odd that you’d need somebody to point that out to you, that you should be sleeping more, but it really was a total ecosystem evaluation of all the things I was doing or not doing and trying to make some recommendations and changes.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: I can tell you I had been in health for about 8 years at that point, or health and health design. I had still struggled to lose; and struggle is the wrong word. I hadn’t really put much movement into it, even though I knew I should. I’d probably gained some weight at that point. I was 224 pounds for a 5’11 guy, not so good.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text Not just Lindsey, but the food, the mindset, it also bore out. Health Axioms started germinating. You can’t anticipate the consequences, like you said, Jon, of certain actions. When we do smart little bets like this, it will shift and move our thinking, move our bodies, and then it’ll have these good consequences.
+			.sidebar
+				.sidebar-box.solid.data-xu
+					%img{:src => "../../images/features/data-xu.jpg"}
+					%p Inc. magazine ranked DataXu, a provider of programmatic marketing solutions for brands and agencies, as the #1 fastest growing private company in the advertising and marketing industry and #5 overall on the 2013 Inc. 500.
+				.sidebar-box.dotted.extra-top-margin.double-top.inspired-ehr
+					%img{:src => "../../images/features/ehr-book.jpg"}
+					%p Inspired EHRs: Designing for Clinicians
+				.sidebar-box.dotted.extra-top-margin.double-top.lindsey-food
+					%img{:src => "../../images/features/lindsey-food.jpg"}
+					%p Lindsey’s work with Invo Boston helped us incorporate healthy eating and lifestyle habits into the studio culture.
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Juhan, this was about the time your MIT class started to integrate more with general life at the studio.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: After four or five years of teaching MIT’s 2.009 product design engineering class, Roger and Sarah said,“Hey, you know, can we sit in? How can we be involved?” They became mentors for some of the sections of the lab, and the class and fell in love with it.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text By 2014 <a href = "http://www.linkedin.com/pub/roger-zhu/16/660/528">Roger</a> is mentoring one session. He teaches two workshops. One’s a beautiful sketching class. Sarah teaches a Photoshop and Illustrator class and also has done the final graphics for some of the classes. We’ve injected Invo into the MIT community. It has also invaded our studio in a very good way for ideas, for projects, for education. <a href = "https://www.linkedin.com/pub/emily-twaddell/6/b75/a03">Emily</a> is a mentor as well.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: During this period, and after the collapse, I actually moved back to Ohio, the state than I’m from. I was pretty much wiped out financially, and I needed to be closer to family. I needed to rethink my life.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text Initially I was doing much less on Invo Boston. I raised money for and was growing a startup, <a href = "http://facio.com/">Facio</a>, for a couple of years. We also tried to get Invo Columbus up and running.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: With Facio, you were the titular head without any kind of executive or partner support.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: No help at the top, that’s right. I struggled through and suffered with that, and it really viscerally communicated to me the wisdom and importance of having at least one other person who is there all in with you.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text My ideas are typically about 10 years ahead of their time, and Facio proved to be another one of those cases. It taught me that maybe when I have ideas that I think are great I should pause a little bit before trying to put an investment of myself into them at the moment, because there’s a reasonable chance that it’s not the right time for the idea yet.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text The most important thing I learned is that I’m not cut out to be a salesperson, which I had done a lot of in the previous decade, but I’m really not even cut out to be a CEO, which had been my role in a number of companies at that point, successes and failures.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text In the process of working Facio, there were different moments where I was trying to bring other people in to help me at an executive level. One of them, <a href = "https://www.linkedin.com/pub/dave-burnett/1/72a/72">Dave Burnett</a>, wanted to be the CEO, and I was against that because I thought that I should be the CEO. But I don’t think that anymore. I wish I had realized that earlier because he would have been a star. I have high expectations for myself and the things that I involve my time in. I think I would be a better CEO than most people, but for an organization to achieve the kind of ambition and success I would have it achieve, I’m not the right person for that role. Learning that in my late 30s might have taken some time but is a lesson that has now allowed me to reframe how I’ll live the rest of my life.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: How much closer are you to your sweet spot?
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Much closer. As Facio wound down and we started to organically figure out how I could be of use to Involution again, a lot of that is now in really creative problem-solving and writing.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text There’s other adminitrivia and stuff that I might not like as much, but the meaty part of my time is spent doing what I enjoy, seeing something in the world and seeing how it can be improved, and doing a lot of research and communicating about it, stuff like that.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks   
+						%span.speaker-text JF: Another part of the Columbus story is with Invo Columbus.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: The idea with Invo Columbus was that, with me being out there already, working on Facio and having office space, if we could get someone in who was really high quality we could build a studio around them. It could organically grow out of the other investments that we were making in Columbus. It just so happened that in Columbus was <a href = "https://www.linkedin.com/in/erikdahl">Erik Dahl</a>, who is a real luminary in the user experience community.
+			.sidebar
+				.sidebar-box.dotted.media-lab-photos
+					%img{:src => "../../images/features/media-lab-photos.jpg"}
+					%p Invo Boston’s culture of learning is most evident in our tight integration with MIT’s product design and engineering class 2.009. Involution designers and engineers help teach and mentor students.
+		.row
+			.interview-wrapper
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text I approached Erik and courted him in a process similar to what you and I went through, Juhan. He agreed to come on board but there were a lot of differences. The biggest problem was that even though Erik and I were in the same space, I wasn’t in that business. I was focused on Facio. I mean, I would meet with Erik every week. He knew he had an open opportunity to engage me and I would make time for him. But I was focused and working on other things. It was up to him to come to me, and I think that made it hard because now he is in the same position I was in with Facio, as the single founder, the single executive who’s leading that thing. I think some of it is personality, too, where someone with a different personality type who might engaged me more, and Erik didn’t do that.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: I think there was an initial good bond between us which worked, and then it came time to actually institute the studio in Columbus. I was not putting my focus on Invo Columbus because
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text Dirk was doing Facio and that was his deal. I think I probably should have doubled or tripled my attention rate on it if we want to make it at all successful. It was like we’re dropping the baby bird out of the nest before they knew nature of flying. Erik is exceptional at doing the work. That was never a problem, but everything else about a running studio was something new to Erik that at least we could have given him a better scaffolding. Just like when you go and do your 12-step program as an alcoholic, you have your buddy who is your care team. We didn’t have a care team for Erik.
+				.interview-content
+					.speaker-avatar.jon
+					.speaker-speaks   
+						%span.speaker-text JF: There was a lot of good stuff that came out of Columbus. Erik really took the open studios concept and instantiated it very effectively in the Columbus area. Invo Columbus was a magnet for the UX community in Columbus for two years. They would have ridiculous amounts of people coming to the open studios. Sometimes the studio was full of visitors. People showed up with new products. Erik is a very good connector.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text What I learned from Erik was how he creates that space for collaboration. That’s really what he is very good at, and that’s why he’s on the <a href = "http://www.ixda.org/">IxDA</a> board right now.
+				.interview-content
+					.speaker-avatar.juhan
+					.speaker-speaks   
+						%span.speaker-text JS: There was also a bit of a different ethos going on. There are some leaders in the UX community like Erik, I would put <a href = "https://www.linkedin.com/in/lisadebettencourt">Lisa Caldwell</a> who was at the Boston studio for a while, and <a href = "http://davemalouf.com/">Dave Malouf</a> in this group as well. They are very oriented towards facilitation, towards bringing the anthropology and the research and the usability and the group grope of, “How are we evolving this idea?”
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text It’s a different take on design, that is sometimes the yin to our yang, where those of us who are sort of the Invo core past and present, we side more on the maker creation side, a little more entrepreneurial and driven by a strong creative vision. They’re just very different philosophical takes on how you produce. Maybe that was also one of the magnetic dipoling where we didn’t quite match with Erik because of our distinct differences in how we create.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text I think that different studios should take on different personalities, so didn’t think that would ultimately be the downfall for either one of us. But maybe the gap was just a little too much.
+				.interview-content
+					.speaker-avatar.dirk
+					.speaker-speaks   
+						%span.speaker-text DK: Invo Columbus just hobbled along for a while. Erik was probably with us for two-and-a-half years, initially as a resource doing projects for Boston and part of it trying to make Invo Columbus go on its own. It never really got wind behind it. We did have some good talent in Columbus. <a href = "https://www.linkedin.com/in/scottsullivanli">Scott Sullivan</a>, who is a hell of a guy, he’s now doing really wonderful things with <a href = "http://www.adaptivepath.com/">Adaptive Path</a>. We had <a href = "https://www.linkedin.com/pub/derek-briggs/55/3b0/83">Derek Briggs</a> there, too, who’s with <a href = "http://www.neo.com/">Neo</a> and very successful as well.
+				.interview-content
+					.speaker-avatar
+					.speaker-speaks   
+						%span.speaker-text One thing that has followed Invo around is we have been able to attract the best talent. We did that with Facio too, with <a href = "https://www.linkedin.com/in/travisthetechie">Travis Smith</a> and <a href = "https://www.linkedin.com/in/jaredfaris">Jared Faris</a>. It’s kind of humbling, actually, the kind of people who choose to work with us.
+				
