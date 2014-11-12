@@ -40,6 +40,8 @@
 							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
 							%span.tag-line Crafting exceptional software for progressive companies
 						%nav#nav-buttons
+							%a.nav-button.work{:href => asset_url('healthcare')} 
+								.nav-element Healthcare
 							%a.nav-button.work{:href => asset_url('work')} 
 								.nav-element Work
 							-# %a.nav-button{:href => asset_url('products')}
@@ -52,6 +54,8 @@
 					#mobile-hamburger
 						=image_tag('hamburger.svg');
 					%nav#nav-buttons-mobile
+						%a.nav-button.work{:href => asset_url('healthcare')} 
+							.nav-element Healthcare
 						%a.nav-button.work{:href => asset_url('work')}
 							.nav-element Work
 						-# %a.nav-button{:href => asset_url('products')}
