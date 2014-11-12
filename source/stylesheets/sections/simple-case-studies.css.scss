@@ -44,22 +44,16 @@
 	
 	p.caption {
 		max-width: 75%;
-		margin-bottom: 2em;
+		margin-bottom: 3em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
 	}
 
-<<<<<<< HEAD
-	ul {
-		font-size: 1.375em;
-		margin-bottom: 1em;
-=======
 	p.caption, ul {
 		font-size: 18px;
 		line-height: 22.7px;
 		color: $gray;
->>>>>>> master
 	}
 	
 	li {
