@@ -1,6 +1,30 @@
 @import "../base/core";
 
 article#complex-case {
+	
+	.no-top-margin {
+		margin-top: 0px !important;	
+	}
+	.no-bottom-margin {
+		margin-bottom: 0px !important;	
+	}
+	
+	.small-bottom-margin {
+		margin-bottom: 3em !important;	
+	}
+	
+	.small-top-margin {
+		margin-top: 5em !important;	
+	}
+	
+	.very-small-top-margin {
+		margin-top: 3.5em !important;	
+	}
+	
+	.large-bottom-margin {
+		margin-bottom: 8em !important;	
+	}
+	
 	&.three-m {
 		header.hero {
 			background-image: url('../../images/clients/3m/3m-user-interface-sketches-grid.jpg');
@@ -67,6 +91,14 @@ article#complex-case {
 
 	#mainContent {
 		padding-top: 60px;
+		
+		ul {
+			font-size: 1.375em;	
+			
+			li {
+				margin-bottom: .75em;	
+			}
+		}
 
 		p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
 			max-width: 640px;
@@ -74,6 +106,7 @@ article#complex-case {
 			margin-right: auto;
 			padding-left: 20px;
 			padding-right: 20px;
+			margin-top: 1.3em;
 		}
 
 		p, ul, ol, dl {
@@ -108,7 +141,8 @@ article#complex-case {
 			letter-spacing: 0.02em;
 			color: $gray;
 			margin-top: 7px;
-
+			margin-bottom: 5em;
+			
 			&.bottom {
 				margin-bottom:30px;
 			}

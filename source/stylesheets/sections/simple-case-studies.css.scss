@@ -33,12 +33,29 @@
 		margin-bottom: 140px;	
 	}
 	
+	.no-top-margin {
+		margin-top: 0px !important;
+	}
+	
+	.no-bottom-margin {
+		margin-bottom: 0px !important;
+	}
+	
+	.medium-bottom-margin {
+		margin-bottom: 60px;
+	}
+	
+	.small-bottom-margin {
+		margin-bottom: 2em !important;	
+	}
+	
 	p {
 		line-height: 1.36363636em;
 		letter-spacing: 0.025em;
 		&.quote {
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
+			margin-top: 2em;
 			text-indent: -0.3em;
 			&:before {
 				content: "\201C";
@@ -53,7 +70,7 @@
 	
 	p.caption {
 		max-width: 75%;
-		margin-bottom: 4em;
+		margin-bottom: 5em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
@@ -93,6 +110,10 @@
 		font-size: 18px;
 		line-height: 22.7px;
 		color: $gray;
+		
+		&.black {
+			color: #000;	
+		}
 	}
 }
 
