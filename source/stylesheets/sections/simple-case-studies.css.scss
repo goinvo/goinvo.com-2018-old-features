@@ -20,9 +20,17 @@
 	}
 	
 	img {
-		padding-bottom: 1.5em;
+		padding-bottom: 60px;
 		width: 100%;
 		height: auto;
+		
+		&.with-caption {
+			padding-bottom: 1em;	
+		}
+	}
+	
+	.bottom-margin {
+		margin-bottom: 140px;	
 	}
 	
 	p {
@@ -40,24 +48,27 @@
 				content: "\201D";
 			}
 		}
+		
 	}
 	
 	p.caption {
 		max-width: 75%;
-		margin-bottom: 3em;
+		margin-bottom: 4em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
 	}
-
-	p.caption, ul {
-		font-size: 18px;
-		line-height: 22.7px;
-		color: $gray;
+	
+	ul {
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 100px;
+		margin-top: 80px;
+		list-style: disc;
 	}
 	
 	li {
-		margin-top: 10px;
+		margin-top: 15px;
 	}
 }
 
@@ -76,6 +87,12 @@
 	.projectDetails {
 		width: 75%;
 		padding-left: 2em;
+	}
+	
+	p.caption {
+		font-size: 18px;
+		line-height: 22.7px;
+		color: $gray;
 	}
 }
 

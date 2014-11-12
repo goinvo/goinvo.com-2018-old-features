@@ -40,11 +40,15 @@
 
 - name: "hGraph"
   primary_color: "#97BE8C"
-  logo: "hgraph.jpg"
+  logo: #require
 
 - name: "Infobionic"
   primary_color: #require
   logo: #require
+  
+- name: "Inspired EHRs"
+  primary_color: "#000000"
+  logo: "hgraph.jpg"
 
 - name: "McAfee"
   primary_color: "#B51737"
