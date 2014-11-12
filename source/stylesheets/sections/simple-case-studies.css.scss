@@ -50,9 +50,16 @@
 		}
 	}
 
+<<<<<<< HEAD
 	ul {
 		font-size: 1.375em;
 		margin-bottom: 1em;
+=======
+	p.caption, ul {
+		font-size: 18px;
+		line-height: 22.7px;
+		color: $gray;
+>>>>>>> master
 	}
 	
 	li {

@@ -143,8 +143,8 @@ div.value {
 #site-overlay {
 	#studio-header {
 		height: 138px;
-		background-color: rgba(228, 228, 232, .9);
-		overflow-x: scroll;
+		background-color: rgba(9, 9, 9, .875);
+		overflow-x: auto;
 		transition: height 300ms ease-in-out;	
 		overflow-y: hidden;
 		&.hide-me {
@@ -170,7 +170,7 @@ div.value {
 				border-radius: 3px;
 				
 				&.active-studio {
-					border: 2px solid black;	
+					border: 2px solid white;	
 				}
 				
 				.image-box {
@@ -182,11 +182,8 @@ div.value {
 				}
 				
 				&:hover {
-					.image-box, .studio-title {
+					.image-box {
 						transform: scale(1.03, 1.03);
-					}
-					.studio-title {
-						color: #c1c0c0;
 					}
 				}	
 				
