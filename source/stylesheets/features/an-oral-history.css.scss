@@ -276,7 +276,19 @@ section.interview-content {
 			}
 			
 			img {
-				margin: 0 auto;	
+				width: 70%;
+				margin-bottom: 15px;
+				height: auto;
+				min-width: 216px;
+				
+				&.center {
+					margin: 0 auto;	
+					margin-bottom: 15px;
+				}
+				
+				&.small-size {
+					width: 50%;	
+				}
 			}
 			
 			&.solid {
