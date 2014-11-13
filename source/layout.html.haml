@@ -16,8 +16,12 @@
 			try{Typekit.load();}catch(e){ }
 		= yield_content :page_head
 	- currentPage = current_page.path
-	- if currentPage.include? "work"
-		- bodyClass = "work"
+	- if currentPage.include? "healthcare"
+		- bodyClass = "healthcare"
+	- elsif currentPage.include? "enterprise"
+		- bodyClass = "enterprise"
+	- elsif currentPage.include? "products"
+		- bodyClass = "products"
 	- elsif currentPage.include? "studio"
 		- bodyClass = "studio"
 	- elsif currentPage.include? "contact"
@@ -44,6 +48,8 @@
 								.nav-element Healthcare
 							%a.nav-button.work{:href => asset_url('enterprise')} 
 								.nav-element Enterprise
+							%a.nav-button.work{:href => asset_url('products')} 
+								.nav-element Products
 							-# %a.nav-button{:href => asset_url('products')}
 							%a.nav-button.studio{:href => asset_url('studio/team')}
 								.nav-element Studio
@@ -58,6 +64,8 @@
 							.nav-element Healthcare
 						%a.nav-button.work{:href => asset_url('enterprise')}
 							.nav-element Enterprise
+						%a.nav-button.work{:href => asset_url('products')} 
+							.nav-element Products
 						-# %a.nav-button{:href => asset_url('products')}
 						%a.nav-button.studio{:href => asset_url('studio/team')}
 							.nav-element Studio
