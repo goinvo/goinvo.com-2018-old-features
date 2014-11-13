@@ -108,6 +108,8 @@
 
 
 
+
+
 .projects-row {
 	max-width: 100%;
 	width: auto;
@@ -117,9 +119,13 @@
 	
 	
 	&.impact {
+		a {
+			cursor: default;	
+		}
+		
 		.project-item {
 			min-height: 204px;
-			
+			cursor: default;
 			
 			.top-row {
 				.arrow {
