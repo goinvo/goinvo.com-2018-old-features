@@ -481,6 +481,11 @@
 	
 	&.blue {
 		color: #A1BAD8;	
+
+		a, a:visited {
+			color: #A1BAD8;
+			text-decoration: underline;
+		}
 	}
 	
 	&.white {
