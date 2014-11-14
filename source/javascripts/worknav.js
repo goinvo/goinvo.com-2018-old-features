@@ -92,7 +92,7 @@ $( document ).ready(function() {
 	else if(current.indexOf("scsk") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("personal-genome-project") >= 0) {
 		index = 11;
 	}
 	else {
@@ -156,7 +156,7 @@ function getIndex() {
 	else if(current.indexOf("scsk") >= 0) {
 		index = 10;
 	}
-	else if(current.indexOf("personalgenomeproject") >= 0) {
+	else if(current.indexOf("personal-genome-project") >= 0) {
 		index = 11;
 	}
 	else {
