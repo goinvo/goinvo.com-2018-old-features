@@ -1,11 +1,11 @@
 - content_for(:title) do
-	= "Healthcare"
+	= "Designing Healthcare Software"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/workpages"
 	= javascript_include_tag "video.js"
 	= javascript_include_tag "fitvids.js"
-	%meta{:name => "description", :content => ""}/
-	%meta{:name => "keywords", :content => ""}/
+	%meta{:name => "description", :content => "We help healthcare organizations make clinical strength software for high-test, high stress environments."}/
+	%meta{:name => "keywords", :content => "healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems"}/
 
 %article#healthcare
 	%header#article-header
@@ -61,7 +61,7 @@
 			.image-container
 	.very-large-quote 
 		.quote-content “With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.”
-		.quote-author Serban Georgescu MD, Infobionic Director of Clinical Development
+		.quote-author Serban Georgescu MD, InfoBionic Director of Clinical Development
 	.projects-row.margin-bottom
 		%a{:href => "/healthcare/personal-genome-project/"}
 			.project-item
@@ -100,7 +100,10 @@
 			.video-text
 				.video-title Hacking Your Health
 				.video-summary
-					%p Watch Juhan walk through his health design journey at NextGen Health Conference in NYC.
+					%p Starting with a shockingly high number during a routine cholesterol check at work, Juhan realized that he knew nothing about his own health metrics. The experience led Juhan to develop a tool called HealthCard.
+
+					%p Watch Juhan Sonin (Chief Creative Officer at Invo) walk through his health design journey at NextGen Health Conference in NYC.
+
 			.video-control-button
 				.play{:datavideo => "juhan-vid"}
 			.video-background
