@@ -350,42 +350,45 @@ section.interview-content {
 				height: 40px;
 				margin-bottom: 10px;
 				margin-right: 10px;
+				border: 1px solid white;
+				border-radius: 40px;
+				
 				
 				@media only screen and (max-width: 750px) {
 					margin-bottom: 0px;	
 				}
 				
 				&.dirk {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-dirk.jpg');	
 				}
 				&.andrei {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-andrei.jpg');	
 				}
 				&.juhan {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-juhan.jpg');	
 				}
 				&.donna {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-donna.jpg');	
 				}
 				&.ben {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-ben.jpg');	
 				}
 				&.uday {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-uday.jpg');	
 				}
 				&.eric {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-eric.jpg');	
 				}
 				&.jon {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-jon.jpg');	
 				}
 				&.sarah {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-sarah.jpg');	
 				}
 				&.jen {
-					background-image: image-url('features/an-oral-history/dirk-circ.png');	
+					background-image: image-url('features/an-oral-history/icon-jen.jpg');	
 				}
-				background-size: cover;
+				background-size: 41px 41px;
 			}
 			.speaker-speaks {
 				width: calc(100% - 70px);
