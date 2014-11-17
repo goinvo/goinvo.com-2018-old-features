@@ -3,165 +3,194 @@
 
 $( document ).ready(function() {
 	var current = document.URL;
-	var projects = [
-		{
-			"title" : "3M",
-			"image" : "3m_main.jpg"
+	
+	var projects = {
+		"healthcare" : {
+			"hgraph" : {
+				"title" : "hGraph",
+				"url" : "/healthcare/hgraph/",
+				"image" : "hgraph.jpg",
+				"next-id" : "3m"
+				
+			},
+			"3m" : {
+				"title" : "3M",
+				"url" : "/healthcare/3m/",
+				"image" : "3m.jpg",
+				"next-id" : "inspired-ehrs"
+			},
+			"inspired-ehrs" : {
+				"title" : "Inspired EHRs: Designing for Clinicians",
+				"url" : "/healthcare/inspired-ehrs/",
+				"image" : "ehr.jpg",
+				"next-id" : "tabeeb"
+			},
+			"tabeeb" : {
+				"title" : "Tabeeb",
+				"url" : "/healthcare/tabeeb/",
+				"image" : "tabeeb.jpg",
+				"next-id" : "mount-sinai"
+			},
+			"mount-sinai" : {
+				"title" : "Mount Sinai: A search for unexpected genetic heroes.",
+				"url" : "/healthcare/mount-sinai/",
+				"image" : "mount-sinai.jpg",
+				"next-id" : "personal-genome-project"
+			},
+			"personal-genome-project" : {
+				"title" : "Personal Genome Project",
+				"url" : "/healthcare/personal-genome-project/",
+				"image" : "pgp.jpg",
+				"next-id" : "health-axioms"
+			},
+			"health-axioms" : {
+				"title" : "Health Axioms",
+				"url" : "/healthcare/health-axioms/",
+				"image" : "health-axioms.jpg",
+				"next-id" : "partners-gene-insight"
+			},
+			"partners-gene-insight" : {
+				"title" : "Partners Gene Insight",
+				"url" : "/healthcare/partners-gene-insight/",
+				"image" : "partners-gene-insight.jpg",
+				"next-id" : "numera"
+			},
+			"numera" : {
+				"title" : "Numera",
+				"url" : "/healthcare/numera/",
+				"image" : "numera.jpg",
+				"next-id" : "enterprise"
+			},
+			"healthcare" : {
+				"title" : "Healthcare",
+				"url" : "/healthcare/",
+				"image" : "hgraph.jpg",
+				"next-id" : "enterprise"
+			}
 		},
-		{
-			"title" : "hGraph",
-			"image" : "hgraph_ipad_physical.jpg"
-		},
-		{
-			"title" : "Affinnova",
-			"image" : "concept-studio-product-blueprint-stickies.jpg"
-		},
-		{
-			"title" : "DataXu",
-			"image" : "dataxu-campaign-dashboard-user-interface-tablet.jpg"
-		},
-		{
-			"title" : "DNC",
-			"image" : "democratic-national-committee-voter-registration-UI-design.jpg"
-		},
-		{
-			"title" : "McAfee",
-			"image" : "mcafee-total-protection-desktop-app-design.jpg"
-		},
-		{
-			"title" : "Oracle",
-			"image" : "oracle-agile-earlydesign-hero.jpg"
-		},
-		{
-			"title" : "Numera",
-			"image" :  "numera-whiteboard-ui-sketch.jpg"
-		},
-		{
-			"title" : "Microsoft",
-			"image" : "microsoft-expression-studio-redesign.jpg"
-		},
-		{
-			"title" : "SCSK Corporation",
-			"image" : "curl-gapminder-style-information-visualization-UI-design.jpg"
-		},
-		{
-			"title" : "Personal Genome Project",
-			"image" : "pgp-openhumans-ecosystem.jpg"
-		},
-		{
-			"title" : "Rue La La",
-			"image" : "ruelala-current-workflow-documentation.jpg"
+		"enterprise" : {
+			"affinnova" : {
+				"title" : "Affinova",
+				"url" : "/enterprise/affinnova/",
+				"image" : "affinnova.jpg",
+				"next-id" : "dnc"
+			},
+			"dnc" : {
+				"title" : "Democratic National Committee",
+				"url" : "/enterprise/dnc/",
+				"image" : "dnc.jpg",
+				"next-id" : "ruelala"
+			},
+			"ruelala" : {
+				"title" : "Rue La La",
+				"url" : "/enterprise/ruelala/",
+				"image" : "ruelala.jpg",
+				"next-id" : "dataxu"
+			},
+			"dataxu" : {
+				"title" : "DataXu",
+				"url" : "/enterprise/dataxu/",
+				"image" : "dataxu.jpg",
+				"next-id" : "microsoft"
+			},
+			"microsoft" : {
+				"title" : "Microsoft",
+				"url" : "/enterprise/microsoft/",
+				"image" : "microsoft.jpg",
+				"next-id" : "oracle"
+			},
+			"oracle" : {
+				"title" : "Oracle",
+				"url" : "/enterprise/oracle/",
+				"image" : "oracle.jpg",
+				"next-id" : "mcafee"
+			},
+			"mcafee" : {
+				"title" : "McAfee",
+				"url" : "/enterprise/mcafee/",
+				"image" : "mcafee.jpg",
+				"next-id" : "scskcorporation"
+			},
+			"scskcorporation" : {
+				"title" : "SCSKcorporation",
+				"url" : "/enterprise/scskcorporation/",
+				"image" : "scsk.jpg",
+				"next-id" : "healthcare"
+			},
+			"enterprise" : {
+				"title" : "Enterprise",
+				"url" : "/enterprise/",
+				"image" : "dataxu.jpg",
+				"next-id" : "healthcare"
+			}
 		}
-	];
-
+		
+	};
 
 	var next = $('#next-project');
 	var nextArea = $('div.next-title');
 	var nextTitle = $('div.next-title span');
 
-	var index = 0;
 	var imgURL = "";
-
-	if(current.indexOf("3m") >= 0) {
-		index = 1;
+	
+	var nextID = "";
+	var currentID = "";
+	var currentCat = "";
+	
+	if(current.indexOf('healthcare') >=0) {
+		currentCat = 'healthcare';
 	}
-	else if(current.indexOf("hgraph") >= 0) {
-		index = 2;
+	else if(current.indexOf('enterprise') >= 0) {
+		currentCat = 'enterprise';	
 	}
-	else if(current.indexOf("affinnova") >= 0) {
-	   index = 3;
-	}
-	else if(current.indexOf("dataxu") >= 0) {
-		index = 4;
-	}
-	else if(current.indexOf("dnc") >= 0) {
-		index = 5;
-	}
-	else if(current.indexOf("mcafee") >= 0) {
-		index = 6;
-	}
-	else if(current.indexOf("oracle") >= 0) {
-		index = 7;
-	}
-	else if(current.indexOf("numera") >= 0) {
-		index = 8;
-	}
-	else if(current.indexOf("microsoft") >= 0) {
-		index = 9;
-	}
-	else if(current.indexOf("scsk") >= 0) {
-		index = 10;
-	}
-	else if(current.indexOf("personal-genome-project") >= 0) {
-		index = 11;
-	}
-	else {
-		index = -1;
-	}
-
-	if(index > 0) {
-		imgURL = "../../images/clients/" + projects[index].title.replace(/ /g, '').toLowerCase() + "/" + projects[index].image;
+	
+	i = current.indexOf(currentCat + '/');
+	i = i + currentCat.length + 1;
+	currentID = current.substring(i);
+	
+	i = currentID.indexOf('/');
+	if(i >= 0)
+		currentID = currentID.substring(0, i);
+	
+	i = currentID.indexOf('#');
+	if(i >= 0)
+		currentID = currentID.substring(0, i);
+	
+	i = currentID.indexOf('?');
+	if(i >= 0)
+		currentID = currentID.substring(0,i);
+	
+	i = currentID.indexOf('~');
+	if(i >= 0)
+		currentID = currentID.substring(0,i);
+	
+	nextID = projects[currentCat][currentID]['next-id'];
+	
+	console.log(nextID);
+	
+	
+	if(nextID != "enterprise" && nextID != "healthcare") {
+		imgURL = "../../images/clients/next-case-study/" + projects[currentCat][nextID]['image'];
 
 		next.css({
 			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")"
 		})
 		next.on("click", function () {
-			   window.location.href =  '../../work/' + projects[index].title.replace(/ /g, '').toLowerCase();
+			   window.location.href =  '../..' + projects[currentCat][nextID]['url'] ;
 		});
-		nextTitle.html(projects[index].title);
+		nextTitle.html(projects[currentCat][nextID]['title']);
 	}
 	else {
 		next.on("click", function () {
-			   window.location.href = '../../work';
+			   window.location.href = '../..' + projects[nextID][nextID]['url'];
 		});
-		nextArea.html('Next: <span id="next">See more of our work</span>');
+		nextArea.html('<span id="next">See our work in ' + projects[nextID][nextID]['title'] + '</span>');
+		
+		imgURL = "../../images/clients/next-case-study/" + projects[nextID][nextID]['image'];
+		
 		next.css({
-			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(../../images/process/jpg/intro.jpg)"
+			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")"
 		})
 	}
 
 });
-
-function getIndex() {
-	var index2 = 0;
-	var current = document.URL;
-
-	if(current.indexOf("3m") >= 0) {
-		index = 1;
-	}
-	else if(current.indexOf("hgraph") >= 0) {
-		index = 2;
-	}
-	else if(current.indexOf("affinnova") >= 0) {
-	index = 3;
-	}
-	else if(current.indexOf("dataxu") >= 0) {
-		index = 4;
-	}
-	else if(current.indexOf("dnc") >= 0) {
-		index = 5;
-	}
-	else if(current.indexOf("mcafee") >= 0) {
-		index = 6;
-	}
-	else if(current.indexOf("oracle") >= 0) {
-		index = 7;
-	}
-	else if(current.indexOf("numera") >= 0) {
-		index = 8;
-	}
-	else if(current.indexOf("microsoft") >= 0) {
-		index = 9;
-	}
-	else if(current.indexOf("scsk") >= 0) {
-		index = 10;
-	}
-	else if(current.indexOf("personal-genome-project") >= 0) {
-		index = 11;
-	}
-	else {
-		index = -1;
-	}
-
-	return index2;
-}
