@@ -25,14 +25,26 @@
 - name: "DataXu"
   primary_color: "#0e4474"
   logo: "dataxu.jpg"
+ 
+- name: "The Digital Life"
+  primary_color: "#0e4474"
+  logo: "the-digital-life.jpg"
 
 - name: "DNC"
   primary_color: "#006AD8"
   logo: "dnc.jpg"
+  
+- name: "Design Axioms"
+  primary_color: "#006AD8"
+  logo: "design-axioms.jpg"
 
 - name: "Empirix"
   primary_color: "#83B63C"
   logo: "empirix.jpg"
+  
+- name: "Facio"
+  primary_color: "#83B63C"
+  logo: "facio.jpg"
 
 - name: "Health Axioms"
   primary_color: "#67B0BF"
@@ -69,6 +81,10 @@
 - name: "Oracle"
   primary_color: "#FF0000"
   logo: "oracle.jpg"
+  
+- name: "PainTrackr"
+  primary_color: "#FF0000"
+  logo: "paintrackr.jpg"
 
 - name: "Personal Genome Project"
   primary_color: "#006DC4"
@@ -77,6 +93,10 @@
 - name: "Rue La La"
   primary_color: "#ef164b"
   logo: "ruelala.jpg"
+
+- name: "Runnan"
+  primary_color: "#ef164b"
+  logo: "runnan.jpg"
 
 - name: "SegTerra"
   primary_color: "#87ca01"
@@ -101,6 +121,10 @@
 - name: "University of Missouri"
   primary_color: "#f1b82d"
   logo: "universityofmissouri.jpg"
+  
+- name: "Visual Budget"
+  primary_color: "#0D7EC9"
+  logo: "vivox.jpg"
 
 - name: "Vivox"
   primary_color: "#0D7EC9"

@@ -115,12 +115,75 @@ $( document ).ready(function() {
 				"title" : "SCSKcorporation",
 				"url" : "/enterprise/scskcorporation/",
 				"image" : "scsk.jpg",
-				"next-id" : "healthcare"
+				"next-id" : "products"
 			},
 			"enterprise" : {
 				"title" : "Enterprise",
 				"url" : "/enterprise/",
 				"image" : "dataxu.jpg",
+				"next-id" : "products"
+			}
+		},
+		"products" : {
+			"hgraph" : {
+				"title" : "hGraph",
+				"url" : "/products/hgraph/",
+				"image" : "hgraph.jpg",
+				"next-id" : "visual-budget"
+				
+			},
+			"visual-budget" : {
+				"title" : "Arlington Visual Budget",
+				"url" : "/products/visual-budget/",
+				"image" : "visual-budget.jpg",
+				"next-id" : "health-axioms"
+			},
+			"health-axioms" : {
+				"title" : "Health Axioms",
+				"url" : "/products/health-axioms/",
+				"image" : "health-axioms.jpg",
+				"next-id" : "the-digital-life"
+			},
+			"the-digital-life" : {
+				"title" : "The Digital Life",
+				"url" : "/products/the-digital-life/",
+				"image" : "digital-life.jpg",
+				"next-id" : "facio"
+			},
+			"facio" : {
+				"title" : "Facio",
+				"url" : "/products/facio/",
+				"image" : "facio.jpg",
+				"next-id" : "design-axioms"
+			},
+			"design-axioms" : {
+				"title" : "Design Axioms",
+				"url" : "/products/design-axioms/",
+				"image" : "facio.jpg",
+				"next-id" : "paintrackr"
+			},
+			"paintrackr" : {
+				"title" : "PainTrackr",
+				"url" : "/products/paintrackr/",
+				"image" : "paintrackr.jpg",
+				"next-id" : "staff-plan"
+			},
+			"staff-plan" : {
+				"title" : "StaffPlan",
+				"url" : "/products/staff-plan/",
+				"image" : "staffplan.jpg",
+				"next-id" : "runnan"
+			},
+			"runnan" : {
+				"title" : "Runnan",
+				"url" : "/products/runnan/",
+				"image" : "runnan.jpg",
+				"next-id" : "healthcare"
+			},
+			"products" : {
+				"title" : "Products",
+				"url" : "/products/",
+				"image" : "products.jpg",
 				"next-id" : "healthcare"
 			}
 		}
@@ -143,6 +206,9 @@ $( document ).ready(function() {
 	else if(current.indexOf('enterprise') >= 0) {
 		currentCat = 'enterprise';	
 	}
+	else if(current.indexOf('products') >= 0) {
+		currentCat = 'products';	
+	}
 	
 	i = current.indexOf(currentCat + '/');
 	i = i + currentCat.length + 1;
@@ -164,6 +230,9 @@ $( document ).ready(function() {
 	if(i >= 0)
 		currentID = currentID.substring(0,i);
 	
+	console.log(currentCat);
+	console.log(currentID);
+	console.log(projects[currentCat][currentID]);
 	nextID = projects[currentCat][currentID]['next-id'];
 	
 	console.log(nextID);
