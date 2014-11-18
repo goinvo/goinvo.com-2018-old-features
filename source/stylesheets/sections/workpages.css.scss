@@ -1,0 +1,677 @@
+@import "../base/core";
+
+
+	
+#article-header{
+	width: 100%;
+	height: auto;
+	background-color: #f9f9f9;
+	position: relative;
+
+	.header-image {
+		width:auto;
+		height: auto;
+		margin: 0 auto;
+
+	}
+
+	.title{
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 100px;
+		padding-bottom: 10px;
+	}
+	.title {
+		font-weight: 100;
+		font-size: 55px;
+
+		@media only screen and (max-width: 900px) {
+			font-size: 45px;	
+		}
+		@media only screen and (max-width: 630px) {
+			font-size: 40px;	
+		}
+	}
+	.button-h {
+		color: black;
+		position: absolute;
+		bottom: 40px;
+		left: calc(50% - 102px);
+		padding: 8px 20px 6px 20px;
+		height: auto;
+		display: inline-block;
+		font-size: 25px;
+		border-radius: 3px;
+		border: 1px solid black;
+		transform: scale(1,1);
+		transition: 300ms ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.05, 1.05);	
+			background-color: rgba(249, 249, 249, .6);
+		}
+
+		@media only screen and (max-width: 600px) {
+			bottom: 20px;
+		}
+
+		@media only screen and (max-width: 450px) {
+			bottom: 15px;
+		}
+	}
+}
+
+.small-quote {
+	width: auto;
+	max-width: 827px;
+	margin: 0 auto;
+	text-align: center;
+	font-style: italic;
+	font-size: 32px;
+	padding: 125px 10px;
+	@media only screen and (max-width: 560px) {
+		font-size: 23px;
+	}
+}
+
+.very-large-quote {
+	width: auto;
+	margin: 0 auto;
+	max-width: 1100px;
+	text-align: center;
+	padding: 100px 10px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+
+	.quote-content {
+		font-size: 55px;
+		font-weight: 600;
+
+		@media only screen and (max-width: 900px) and (min-width: 560px) {
+			font-size: 45px;
+		}
+
+		@media only screen and (max-width: 560px) {
+			font-size: 35px;
+		}
+	}
+
+	.quote-author {
+		font-size: 23px;
+		margin-top: 10px;
+		@media only screen and (max-width: 560px) {
+			font-size: 18px;
+		}
+	}
+}
+
+
+
+
+
+.projects-row {
+	max-width: 100%;
+	width: auto;
+	margin: 0 auto;
+	padding: 0px 5px;
+	max-width: 1280px;
+	
+	
+	&.impact {
+		a {
+			cursor: default;	
+		}
+		
+		.project-item {
+			min-height: 204px;
+			cursor: default;
+			
+			.top-row {
+				.arrow {
+					width: 20px;
+					height: 25px;
+					display: inline-block;
+					background-image: image-url('up-arrow.png');
+				}
+				.up-arrow {
+				}
+				
+				.down-arrow {
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					-o-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+				
+				.arrow-title {
+					font-size: 32px;	
+					display: inline-block;
+					width: calc(100% - 27px);
+					padding-left: 5px;
+				}
+			}
+			
+			.description {
+				font-size: 23px;
+				line-height: 33px;
+				padding-left: 30px;
+			}
+		}	
+	}
+
+	&.margin-bottom {
+		margin-bottom: 100px;
+		@media only screen and (max-width: 640px) {
+			margin-bottom: 0px;	
+		}
+		
+	}
+
+	a {
+		width: 33%;	
+		vertical-align: top;
+		display: inline-block;
+		@media only screen and (max-width: 640px) {
+			display: block;
+			width: 100%;
+			margin-bottom: 45px;
+		}
+	}
+	.project-item {
+		width: auto;
+		max-width: 410px;
+		padding: 0px 5px;
+		cursor: pointer;
+		color: black;
+		margin: 0 auto;
+
+		.top-description {
+			font-size: 32px;
+			text-align: center;
+			padding-bottom: 10px;
+			@media only screen and (max-width: 860px) and (min-width: 640px) {
+				font-size: 23px;
+			}
+		}
+
+		.image-wrapper {
+			height: auto;
+			max-height: 264px;
+			overflow: hidden;
+			&:hover {
+				img {
+					transform: scale(1.03, 1.03);	
+				}
+			}
+			img {
+				transform: scale(1,1);	
+				transition: 300ms ease-in-out;
+			}
+		}
+
+		.bottom-description, .company-name {
+			font-size: 23px;
+			padding: 5px 15px;
+			@media only screen and (max-width: 860px) and (min-width: 640px) {
+				font-size: 18px;
+			}
+		}
+
+		.bottom-description {
+			padding-top: 20px;	
+		}
+
+		.company-name {
+			color: #C8C8C8;	
+		}
+
+	}
+
+}
+	
+.bottom-margin {
+	margin-bottom: 4em;
+}
+
+.top-margin {
+	margin-top: 4em;	
+}
+
+.mountsinai-container:before {
+	position: absolute;
+	content: " ";
+	top: -22px;
+	left: 0px;
+	width: 100%;
+	height: 22px;
+	z-index: 300000;
+	background: -moz-linear-gradient(top,  rgba(2,0,0,0) 0%, rgba(235,235,235,0.99) 99%, rgba(235,235,235,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(2,0,0,0)), color-stop(99%,rgba(235,235,235,0.99)), color-stop(100%,rgba(235,235,235,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(2,0,0,0) 0%,rgba(235,235,235,0.99) 99%,rgba(235,235,235,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(2,0,0,0) 0%,rgba(235,235,235,0.99) 99%,rgba(235,235,235,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(2,0,0,0) 0%,rgba(235,235,235,0.99) 99%,rgba(235,235,235,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(2,0,0,0) 0%,rgba(235,235,235,0.99) 99%,rgba(235,235,235,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00020000', endColorstr='#ebebeb',GradientType=0 ); /* IE6-9 */
+}
+
+.dataxu-container {
+	width: 100%;
+	background-color: #A9CAE5;
+	border-bottom: 1px solid #A9CAE5;
+	height: 520px;
+	overflow: hidden;
+	
+	.dataxu-wrapper {
+		position:relative;
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+	
+	.left-content {
+		position: absolute;
+		width: calc(100% - 400px);
+		left: 0;
+		top: 0;
+		padding: 40px 20px 0px 60px;
+		
+		
+		.image-container {
+			height: 496px;
+			width: 100%;
+			max-width: 840px;
+			background-image: image-url('enterprise/dx-full.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			margin-top: -15px;
+		}
+	}
+	
+	.right-content {
+		position: absolute;
+		right:0;
+		top: 0;
+		width: 400px;
+		padding: 40px 20px 40px 0px;
+		
+		.quote-content {
+			line-height: 36px;
+			margin-bottom: 15px;
+		}
+		
+		.button {
+			font-size: 23px;
+			line-height: 28px;
+			border: 1px solid black;
+			border-radius: 3px;
+			width: auto;
+			display: inline-block;
+			padding: 5px 15px;
+			cursor: pointer;
+			transform: scale(1,1);
+			transition: 300ms ease-in-out;
+			margin-bottom: 10px;
+			margin-top: 30px;
+			color: black;
+			text-align: center;
+			
+			&:hover {
+				transform: scale(1.05, 1.05);	
+			}
+			
+			@media  only screen and (max-width: 960px) {
+				font-size: 18px;
+				line-height: 22px;
+				width: 80%;
+			}
+		}
+	}
+	
+	.logo {
+		width: 126px;
+		height: 28px;
+		background-image: image-url('enterprise/partners/dataxu.png');
+		margin-bottom: 15px;
+	}
+
+}
+
+.mountsinai-container {
+	width: 100%;
+	background-color: #EBEBEB;
+	position: relative;
+	height: 450px;
+	border-bottom: 1px solid #EBEBEB;
+	
+	@media  only screen and (max-width: 760px) {
+		margin-top: 500px;	
+	}
+	
+	@media  only screen and (max-width: 730px) and (min-width: 630px) {
+			height: 500px;
+	}
+	
+	@media  only screen and (max-width: 630px) {
+			height: 530px;
+	}
+	
+	.left-content {
+		position: absolute;
+		width: 50%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		padding: 40px 20px 40px 60px;
+		
+		@media  only screen and (max-width: 730px) {
+			width: 100%;
+			z-index: 10;
+			
+		}
+		
+		.button {
+			font-size: 23px;
+			line-height: 28px;
+			border: 1px solid black;
+			border-radius: 3px;
+			width: auto;
+			display: inline-block;
+			padding: 5px 15px;
+			cursor: pointer;
+			transform: scale(1,1);
+			transition: 300ms ease-in-out;
+			margin-bottom: 20px;
+			color: black;
+			text-align: center;
+			
+			&:hover {
+				transform: scale(1.05, 1.05);	
+			}
+			
+			@media  only screen and (max-width: 960px) {
+				font-size: 18px;
+				line-height: 22px;
+				width: 80%;
+			}
+		}
+		
+		.medium-quote {
+				padding-top: 20px;
+				max-width: 85%;
+				.quote-author {
+					padding-top: 20px;	
+				}
+				
+		}
+	}
+	
+	.right-content {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 449px;
+		padding-top: 30px;
+		overflow: hidden;
+		
+		@media  only screen and (max-width: 730px) and (min-width: 630px){
+			width: 100%;
+			z-index: 1;
+			top: 250px;
+			height: 250px;
+		}
+		
+		@media  only screen and (max-width: 630px) {
+			width: 100%;
+			top: 280px;
+			z-index: 1;
+			top: 319px;
+			height: 210px;
+		}
+		
+		.image-container {
+			background-image: image-url('healthcare/res_proj.png');
+			background-size: cover;
+			height: 100%;
+			width: calc(100% - 40px);
+			padding-right: 40px;
+			margin-top: 0px;
+			
+			@media  only screen and (max-width: 960px) {
+				width: calc(100% - 10px);
+				padding-right: 10px;
+			}
+			
+			@media  only screen and (max-width: 630px) {
+				width:  calc(100% - 20px);
+				padding-right: 0px;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+.medium-quote {
+	.quote-content {
+		font-size: 32px;
+		line-height: 38px;
+		
+		@media  only screen and (max-width: 960px) {
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+	.quote-author {
+		font-size: 23px;
+		line-height: 28px;
+		
+		@media  only screen and (max-width: 960px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}
+
+.small-title {
+	font-size: 32px;
+	line-height: 38px;
+	text-align: center;
+	
+	&.blue {
+		color: #A1BAD8;	
+
+		a, a:visited {
+			color: #A1BAD8;
+			text-decoration: underline;
+		}
+	}
+	
+	&.white {
+		color: #FFFFFF;	
+	}
+}
+
+.partners {
+	background-color: #F9F9F9;
+	text-align: center;
+	padding-bottom: 30px; 
+	
+	@media  only screen and (max-width: 760px) {
+		margin-top: 500px;
+	}
+	
+	.small-title {
+		color: #9B9B9B;
+		margin-bottom: 30px;
+		padding-top: 60px;
+	}
+	
+	table.non-mobile {
+		width: 100%;
+		
+		@media  only screen and (max-width: 500px) {
+			display: none !important;
+		}
+		
+		tbody {
+			tr {
+				td {
+					text-align: center;
+					padding: 25px 15px;
+					vertical-align: middle;
+					img {
+						margin: 0 auto;	
+					}
+				}
+			}
+		}
+	}
+	
+	ul.mobile {
+		display: none;
+		list-style: none;
+		width: auto;
+		margin: 0 auto;
+		
+		@media  only screen and (max-width: 500px) {
+			display: inline-block !important;
+		}
+		
+		li {
+			margin: 0 auto;
+	        width: 100%;
+			margin-bottom: 40px;
+			text-align: center;
+			img {
+				margin: 0 auto;	
+			}
+		}
+	}
+	
+}
+
+
+.office-hours {
+	width: 100%;
+	background-color: #3B6FA8;
+	text-align: center;
+	padding: 35px 10px;
+	
+	.small-title {
+		font-weight: 100;	
+	}
+}
+
+
+.hero-video-container {
+	width: 100%;
+	background-color: black;
+	position: relative;
+	.video-player {
+		margin: 0 auto;	
+		width: 894px;
+		display: none;
+		padding: 20px 20px;
+	}
+	.video-banner {
+		width: 100%;
+		min-height: 520px;
+		position: relative;
+		opacity: 1;
+		transition: opacity 300ms ease-in-out;
+		
+		.video-background {
+			background-size: cover;
+			width: 100%;
+			min-height: 520px;		
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			
+			@media only screen and (max-width: 760px) {
+				top: 500px;
+				background-position-x: center;
+			}
+			
+			@media only screen and (min-width: 1780px) {
+				background-position-y: center;
+			}
+		}
+		
+		&#res-proj .video-background{
+			background-image: image-url('healthcare/res-video-image.png');	
+		}
+		
+		&#juhan-vid .video-background {
+			background-image: image-url('healthcare/juhan_vid.png');	
+		}
+		
+		.video-text {
+			z-index: 20;
+			color: white;
+			max-width: 40%;	
+			position: absolute;
+			left: 60px;
+			top: 40px;
+			
+			@media only screen and (max-width: 760px) {
+				max-width: calc(100% - 60px);	
+			}
+			
+			.video-title {
+				z-index: 20;
+				font-size: 50px;
+				line-height: 55px;
+				min-width: 460px;
+				margin-bottom: 20px;
+				@media only screen and (max-width: 760px) {
+					min-width: 0px;	
+					padding-right: 20px;
+				}
+			}
+			.video-summary {
+				z-index: 20;
+				min-width: 329px;
+				max-width: 70%;	
+				p {
+					font-size: 22px;
+					line-height: 30px;	
+					font-weight: 100;
+				}
+			}
+		}
+		
+		.video-control-button {
+			z-index: 10;
+			width: 100px;
+			height: 100px;
+			cursor: pointer;
+			transform: scale(1,1);
+			transition: 300ms ease-in-out;
+			position: absolute;
+			left: 60%;
+			bottom: 210px;
+			&:hover {
+				transform: scale(1.2, 1.2);	
+			}
+			
+			@media only screen and (max-width: 940px) {
+				left: 75%;
+			}
+			
+			@media only screen and (max-width: 760px) {
+				left: calc(50% - 50px);
+				bottom: -250px;
+			}
+			
+			.play {
+				width: 100%;
+				height: 100%;
+				background: image-url('play_button.png');
+			}
+		}
+	}
+}

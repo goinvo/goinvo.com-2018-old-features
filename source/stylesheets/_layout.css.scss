@@ -144,7 +144,7 @@ div.value {
 	#studio-header {
 		height: 138px;
 		background-color: rgba(9, 9, 9, .875);
-		overflow-x: scroll;
+		overflow-x: auto;
 		transition: height 300ms ease-in-out;	
 		overflow-y: hidden;
 		&.hide-me {

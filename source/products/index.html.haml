@@ -1,45 +1,186 @@
 - content_for(:title) do
-	= "Products by Involution Studios"
-- content_for(:worlds_end) do
-	= javascript_include_tag "projects"
+	= "Enterprise"
 - content_for(:page_head) do
-	= stylesheet_link_tag "sections/work"
-	%meta{:name => "description", :content => "Involution Studios is a user interface and software design firm located in Boston. We create great user experiences for deskop, mobile, and web applications."}/
-	%meta{:name => "keywords", :content => "boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design"}/
-#projects
-	%header.hero.work
-		.title
-			%h2 Our Products
-			%h3 Some tagline that reminds us we&rsquo;re not on the &ldquo;Work&rdquo; page.
-	.row
-		.medium-2.small-12.columns
-			%select{name: "practice_area"}
-				%option{value: ""} All Practice Areas
-				- data.practice_areas.each do |practice_area|
-					%option{value: practice_area}= practice_area
-				
-		.medium-2.small-12.columns
-			%select{name: "budget"}
-				- [["All Budgets",""], ['$500k+','500000,2000000'], ['$200-499k','200000,499999'], ['$100-199k', '100000,199999'], ['$50-99k', '50000,99999'], ['$20-49k', '20000,49999']].each do |text_and_value|
-					%option{value: text_and_value[1]}= text_and_value[0]
-		.medium-6.small-12.columns
-				 
-	.row.no-projects-match
-		.medium-12.column
-			%h3 No projects match your filters :-(
-	.row		
-		- data.projects.each_slice(3).each do |projects|
-			-projects.each do |project|
-				- next if project.hide_in_layout or project.phases.blank?
-				.medium-4.small-12.columns.project{data: {project: true, project_budget: project.budget, project_url: "./../clients/#{project.client.downcase}", project_duration: project.duration, project_practice_areas: project.practice_area_names.split(',').map(&:strip).to_json}}
-					.project-image{id:"client#{project.client}", style: "background-image:url(./../images/clients/#{project.client.downcase}/#{project.main_image});"}
-					%h3= project.client
-					%p.practice-areas
-						- x = 1
-						- practice_areas(project).each do |area|
-							= link_to area, "/v01/projects/#{area}"
-							- total=practice_areas(project).count
-							- if x < total
-								= "+"
-							- x = x + 1
-					%p.description= project.description
+	= stylesheet_link_tag "sections/workpages"
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => ""}/
+
+%article#enterprise
+	%header#article-header
+		%h1.title We’ve designed massive bottom line impact for our clients.
+		.projects-row.impact.top-margin
+			%a
+				.project-item
+					.top-row
+						.arrow.up-arrow
+						.arrow-title Productivity
+					.description Oracle saw a 50% drop in time to complete core tasks.
+			%a
+				.project-item
+					.top-row
+						.arrow.up-arrow
+						.arrow-title Buyout
+					.description CodeRyte was bought by 3M for $150M for its breakthrough ICD coding software and NLP tech.
+			%a
+				.project-item
+					.top-row
+						.arrow.up-arrow
+						.arrow-title Funding
+					.description InfoBionic raised an additional $17M based on our patented designs.
+		.projects-row.impact.bottom-margin
+			%a
+				.project-item
+					.top-row
+						.arrow.up-arrow
+						.arrow-title Reputation
+					.description For McAfee, 85M people trusted and installed the new Total Protection Suite.
+			%a
+				.project-item
+					.top-row
+						.arrow.down-arrow
+						.arrow-title Complexity
+					.description ...
+			%a
+				.project-item
+					.top-row
+						.arrow.up-arrow
+						.arrow-title Return on Investment
+					.description In 8 months, a single customer’s use returned the $800k project design budget.
+		%a{:href => "/enterprise/"}
+			.button-h Read Case Study
+	.small-quote We’ve designed mission critical software.
+	.projects-row
+		%a{:href => "/enterprise/affinnova"}
+			.project-item
+				.top-description Optimized Marketing
+				.image-wrapper
+					%img{:src => "/images/enterprise/affinova.png"} 
+				.bottom-description How our brand-driven product provided explosive growth for Affinnova.
+				.company-name Affinnova
+		%a{:href => "/enterprise/dnc/"}
+			.project-item
+				.top-description Voice of the Nation
+				.image-wrapper
+					%img{:src => "/images/enterprise/dnc.png"} 
+				.bottom-description Citizens found an easier path to driving the nation’s future through their vote.
+				.company-name Democratic National Committee
+		%a{:href => "/enterprise/ruelala/"}
+			.project-item
+				.top-description Orchestrating Business Process
+				.image-wrapper
+					%img{:src => "/images/enterprise/ruelala.png"} 
+				.bottom-description Streamlining fashion from $250M to $2B.
+				.company-name RueLaLa	
+	.very-large-quote 
+		.quote-content “Concept Studio is likely to transform our business in fundamental ways.”
+		.quote-author Steve Lamoureux, Chief Product Officer, Affinnova
+	.dataxu-container
+		.dataxu-wrapper
+			.left-content
+				.image-container
+			.right-content
+				.medium-quote
+					.logo
+					.quote-content “Our team is managing hundreds of different campaigns, so how we use our time is critical. With this new console, DataXu has made a huge leap forward for programmatic ease of use.”
+					.quote-author Joel Nierman
+					.quote-author VP, media and digital strategy, Liquidus
+				%a{:href => "/enterprise/dataxu"}
+					.button Read Case Study
+	.very-large-quote 
+		.quote-content “Involution was much more than our redesign partner. They helped us re-think our product development process. They were as strong technically as they were with the design. ”
+		.quote-author Brian Trombley
+		.quote-author McAfee Director, Consumer Product Management
+	.projects-row.margin-bottom
+		%a{:href => "/enterprise/microsoft/"}
+			.project-item
+				.top-description Goliath Challenging Goliath
+				.image-wrapper
+					%img{:src => "/images/enterprise/microsoft.png"} 
+				.bottom-description Key SuperPreview feature with an eye to a new system design.
+				.company-name Microsoft
+		%a{:href => "/enterprise/oracle/"}
+			.project-item
+				.top-description Day to Day Product Lifecycle
+				.image-wrapper
+					%img{:src => "/images/enterprise/agile.png"} 
+				.bottom-description Users take 50% less time to complete core tasks after the Involution redesign.
+				.company-name Agile (Oracle acquisition)
+		%a{:href => "/enterprise/mcafee/"}
+			.project-item
+				.top-description Protecting 80M Digital Lives
+				.image-wrapper
+					%img{:src => "/images/enterprise/mcafee.png"} 
+				.bottom-description The Total Protection UX, traditionally the product’s Achilles heel, was hailed by the media and led to increased market share - 24% in the first year and double-digits every year since.
+				.company-name McAfee
+	.projects-row.bottom-margin
+		%a{:href => "/enterprise/scskcorporation/"}
+			.project-item
+				.top-description Powerful Sales Tool
+				.image-wrapper
+					%img{:src => "/images/enterprise/scsk.png"} 
+				.bottom-description A showcase for next generation technology.
+				.company-name SCSK Corporation
+		
+		%a{:href => "#"}
+			.project-item	
+		%a{:href => "#"}
+			.project-item
+	.partners
+		.small-title A Few of Our Healthcare Partners
+		%ul.mobile
+			%li
+				%img{:src => "/images/enterprise/partners/applause.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/curl.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/dataxu.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/lithium.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/mcafee.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/microsoft.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/oracle.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/paypal.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/ptc.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/shutterfly.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/ssi.png"}
+			%li
+				%img{:src => "/images/enterprise/partners/yahoo.png"}
+		%table.non-mobile
+			%tbody
+				%tr
+					%td
+						%img{:src => "/images/enterprise/partners/applause.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/curl.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/dataxu.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/lithium.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/mcafee.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/microsoft.png"}
+				%tr
+					%td
+						%img{:src => "/images/enterprise/partners/oracle.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/paypal.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/ptc.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/shutterfly.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/ssi.png"}
+					%td
+						%img{:src => "/images/enterprise/partners/yahoo.png"}
+	.office-hours
+		.small-title.white Want honest design feedback on your product?
+		.small-title.blue Sign up for our Open Office hours every Thursday 4-6p.
+			

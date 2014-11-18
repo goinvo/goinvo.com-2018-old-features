@@ -19,26 +19,40 @@ $(document).ready(function(){
 var currentURL = 'http://www.goinvo.com/';
 
 //binds keys to navigation links in the header using the Mousetrap library
-Mousetrap.bind('w', function () {
-	window.location.href = currentURL + 'work';
+Mousetrap.bind('h', function () {
+	window.location.href = currentURL + 'healthcare';
+});
+
+//binds keys to navigation links in the header using the Mousetrap library
+Mousetrap.bind('e', function () {
+	window.location.href = currentURL + 'Enterprise';
+});
+
+//binds keys to navigation links in the header using the Mousetrap library
+Mousetrap.bind('p', function () {
+	window.location.href = currentURL + 'products';
 });
 
 Mousetrap.bind('s', function () {
 	window.location.href = currentURL + 'studio';
 });
 
+Mousetrap.bind('l', function () {
+	window.location.href = currentURL + 'studio/live';
+});
+
 Mousetrap.bind('t', function () {
-	window.location.href = currentURL + 'team';
+	window.location.href = currentURL + 'studio/team';
 });
 
 Mousetrap.bind('a', function () {
-	window.location.href = currentURL + '#';
+	window.location.href = "http://yes.goinvo.com/articles";
 });
 
 Mousetrap.bind('c', function () {
 	window.location.href = currentURL + 'contact';
 });
 
-Mousetrap.bind('a c', function () {
-	window.location.href = currentURL + 'careers';
+Mousetrap.bind('s c', function () {
+	window.location.href = currentURL + 'studio/careers';
 });

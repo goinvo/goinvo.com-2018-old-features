@@ -6,9 +6,8 @@
 	
 	h6.subheader {
 		margin-top: 40px;
-		font-size: 1em;
+		font-size: 1.375em;
 		font-weight: 400;
-		line-height: 1.1em;
 		text-transform: uppercase;
 		
 		&.name {
@@ -21,19 +20,42 @@
 	}
 	
 	img {
-		padding-bottom: 1.5em;
+		padding-bottom: 60px;
 		width: 100%;
 		height: auto;
+		
+		&.with-caption {
+			padding-bottom: 1em;	
+		}
+	}
+	
+	.bottom-margin {
+		margin-bottom: 140px;	
+	}
+	
+	.no-top-margin {
+		margin-top: 0px !important;
+	}
+	
+	.no-bottom-margin {
+		margin-bottom: 0px !important;
+	}
+	
+	.medium-bottom-margin {
+		margin-bottom: 60px;
+	}
+	
+	.small-bottom-margin {
+		margin-bottom: 2em !important;	
 	}
 	
 	p {
 		line-height: 1.36363636em;
 		letter-spacing: 0.025em;
 		&.quote {
-			font-size: 1.25em;
-			line-height: 1.1em;
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
+			margin-top: 2em;
 			text-indent: -0.3em;
 			&:before {
 				content: "\201C";
@@ -43,6 +65,7 @@
 				content: "\201D";
 			}
 		}
+		
 	}
 	
 	p.caption {
@@ -52,14 +75,17 @@
 			margin-bottom: 0.25em;
 		}
 	}
-
-	p.caption, ul {
-		font-size: 1.1875em;
-		line-height: 1.1em;
+	
+	ul {
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 1em;
+		margin-top: 20px;
+		list-style: disc;
 	}
 	
 	li {
-		margin-top: 10px;
+		margin-top: 15px;
 	}
 }
 
@@ -71,25 +97,40 @@
 	}
 	.projectData {
 		width: 25%;
+		p.caption {
+			max-width: 100%;
+		}
+		p a {
+			display: inline;
+		}
 	}
 	.projectDetails {
 		width: 75%;
 		padding-left: 2em;
+	}
+	
+	p.caption {
+		font-size: 18px;
+		line-height: 22.7px;
+		color: $gray;
+		
+		&.black {
+			color: #000;	
+		}
 	}
 }
 
 .similar-project-container {
 	h6.subheader {
 		text-transform: none;
-		font-size: 1.1875em;
-		line-height: 1em;
+		font-size: 1.375em;
 		margin: 0;
-		padding-bottom: 2em;
+		padding-bottom: .5em;
 	}
 	a.button.radius {
-		font-size: 1.25em;;
-		padding: 10px 20px;
-		padding-top: 12px;
+		font-size: 1.25em;
+		padding: 20px 20px;
+		padding-top: 22px;
 		background-color:rgb(235, 235, 235);
 		color: #aaa;
 		&:hover{

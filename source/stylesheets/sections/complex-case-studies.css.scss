@@ -1,9 +1,38 @@
 @import "../base/core";
 
 article#complex-case {
+	
+	.no-top-margin {
+		margin-top: 0px !important;	
+	}
+	.no-bottom-margin {
+		margin-bottom: 0px !important;	
+	}
+	
+	.small-bottom-margin {
+		margin-bottom: 3em !important;	
+	}
+	
+	.small-top-margin {
+		margin-top: 5em !important;	
+	}
+	
+	.very-small-top-margin {
+		margin-top: 3.5em !important;	
+	}
+	
+	.large-bottom-margin {
+		margin-bottom: 8em !important;	
+	}
+	
 	&.three-m {
 		header.hero {
 			background-image: url('../../images/clients/3m/3m-user-interface-sketches-grid.jpg');
+		}
+	}
+	&.mount-sinai {
+		header.hero {
+			background-image: url('../../images/clients/mount-sinai/stephen-friend-ted-project-resilience.jpg');
 		}
 	}
 	&.hgraph {
@@ -13,7 +42,7 @@ article#complex-case {
 	}
 	&.pgp {
 		header.hero {
-			background-image: url('../../images/clients/personalgenomeproject/pgp-openhumans-ecosystem-dark.jpg');
+			background-image: url('../../images/clients/personal-genome-project/pgp-openhumans-ecosystem-dark.jpg');
 		}
 	}
 	&.oracle {
@@ -62,6 +91,14 @@ article#complex-case {
 
 	#mainContent {
 		padding-top: 60px;
+		
+		ul {
+			font-size: 1.375em;	
+			
+			li {
+				margin-bottom: .75em;	
+			}
+		}
 
 		p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
 			max-width: 640px;
@@ -69,6 +106,7 @@ article#complex-case {
 			margin-right: auto;
 			padding-left: 20px;
 			padding-right: 20px;
+			margin-top: 1.3em;
 		}
 
 		p, ul, ol, dl {
@@ -103,7 +141,8 @@ article#complex-case {
 			letter-spacing: 0.02em;
 			color: $gray;
 			margin-top: 7px;
-
+			margin-bottom: 5em;
+			
 			&.bottom {
 				margin-bottom:30px;
 			}
@@ -112,6 +151,13 @@ article#complex-case {
 		.center-video-content {
 			max-width: 780px;
 			margin: 0 auto;
+
+			&.ted {
+				background: $black;
+				margin: 0 0 30px;
+				max-width: 100%;
+				text-align: center;
+			}
 		}
 
 		.center-image-content, .center-graph-content, .full-two-images {
@@ -124,8 +170,8 @@ article#complex-case {
 
 		figure, figure.center-image.content, .center-image-content {
 			margin: 2em auto;
-			padding-left: 20px;
-			padding-right: 20px; 
+			padding-left: 10px;
+			padding-right: 10px; 
 			position: relative;
 			display: table;
 			max-width: 640px;
@@ -195,14 +241,21 @@ article#complex-case {
 		background-color: lighten($gray, 25%);
 		padding: 60px 9%;
 
-		div.moon-image {
-			background-image: url('../../images/clients/3m/george-moon-vp-product.jpg');
+		div.testimonial-image {
 			width: 200px;
 			height:200px;
 			background-size: cover;
 			border-radius:150px;
 			margin:0 auto;
 			margin-bottom:20px;
+
+			&.moon {
+				background-image: url('../../images/clients/3m/george-moon-vp-product.jpg');
+			}
+
+			&.levin {
+				background-image: url('../../images/clients/mount-sinai/elissa-levin-mount-sinai.jpg');
+			}
 		}
 
 		h2.quote{
