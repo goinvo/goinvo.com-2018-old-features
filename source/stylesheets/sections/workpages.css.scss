@@ -682,3 +682,94 @@
 		}
 	}
 }
+
+
+#products {
+	#article-header {
+		height: 800px;
+		background-image: image-url('products/hero.png');
+		background-size: cover;
+		background-repeat:none;
+		
+		
+		
+		h1.title {
+			width: 700px;
+			margin:0px;
+			margin-left: 60px;
+			margin-top: 40px;
+			text-align: left;
+			color: $white;
+			line-height: 1.2em;
+		}
+		
+		.button-h {
+			color: $white;
+			border-color: $white;
+			display: inline-block;
+			position: static;
+			margin-left: 60px;
+			margin-top: 30px;
+		}
+		
+		
+		@media only screen and (max-width: 1170px) {
+			height: 700px;
+			h1.title {
+				width: 500px;	
+				font-size: 50px;
+			}
+		}
+		
+		@media only screen and (max-width: 950px) {
+			height: 550px;
+			h1.title {
+				width: 400px;	
+				font-size: 45px;
+			}
+		}
+		
+		@media only screen and (max-width: 530px) {
+			h1.title {
+				width: 100%;	
+				padding-right: 20px;
+				padding-left: 20px;
+				margin-left: 0px;
+				margin: 0 auto;
+				font-size: 45px;
+			}
+			.button-h {
+				margin-left:0px;
+				width: 90%;
+				margin:0 auto;
+				margin-top: 30px;
+				margin-left: 5%;
+				text-align: center;
+			}
+		}
+	}
+	
+	.design-med-wrapper {
+		width: 100%;
+		padding: 40px;
+		background-image: image-url('products/design-med.png');
+		background-size: cover;
+		background-position: top;
+		margin-bottom: 80px;
+		.content {
+			width: 30%;	
+			color: $white;
+			margin-bottom: 40px;
+			min-height: 400px;
+			
+			p {
+				width:87%;	
+			}
+			
+			@media only screen and (max-width: 700px) {
+				width: 100%;
+			}
+		}
+	}
+	
+}
