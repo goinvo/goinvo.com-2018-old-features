@@ -14,6 +14,10 @@ body {
 	background: #FFF;
 }
 
+a {
+	display: inline;	
+}
+
 #main-container {
 	margin-top: 55px;
 }
@@ -59,26 +63,24 @@ body {
 		color: white;
 		min-height: 640px;
 		position: relative;
-		
+		background-size: cover;
+			background-position: center;
 		&#section1-origins {
-			background-image: image-url('features/an-oral-history/hero-part_1.jpg');		
-			background-size: cover;
+			background-image: image-url('features/an-oral-history/hero-part_1.jpg');	
 		}
 		&#section2-silicon {
 			background-image: image-url('features/an-oral-history/hero-part_2.jpg');		
-			background-size: cover;
 		}
 		&#section3-interesting-times {
-			background-image: image-url('features/an-oral-history/hero-part_3.jpg');		
-			background-size: cover;
+			background-image: image-url('features/an-oral-history/hero-part_3.jpg');	
+			background-position: top;
 		}
 		&#section4-boston {
 			background-image: image-url('features/an-oral-history/hero-part_4.jpg');		
-			background-size: cover;
 		}
 		&#section5-todaytomorrow {
 			background-image: image-url('features/an-oral-history/hero-part_5.jpg');		
-			background-size: cover;
+			background-position: top;
 		}
 		
 		.header-wrapper {
@@ -266,7 +268,7 @@ section.interview-content {
 	max-width: 1280px;
 	.sidebar {
 		display: inline-block;
-		max-width: 350px;	
+		max-width: 325px;	
 		line-height: initial;
 		padding: 0px;
 		color: #000;
@@ -290,6 +292,7 @@ section.interview-content {
 			padding: 40px 20px;
 			color: rgba(0, 0, 0, .45);
 			
+			
 			p {
 				font-size: 18px;
 				line-height: 28px;	
@@ -297,7 +300,7 @@ section.interview-content {
 			}
 			
 			img {
-				width: 70%;
+				width: 100%;
 				margin-bottom: 15px;
 				height: auto;
 				min-width: 216px;
@@ -334,6 +337,7 @@ section.interview-content {
 			
 			&.dotted {
 				border-left: 2px dotted rgb(157,195,182);	
+				padding: 20px 20px;	
 			}
 			
 			&.extra-top-margin {
@@ -346,7 +350,7 @@ section.interview-content {
 	}
 
 	.interview-wrapper {
-		width: calc(100% - 360px);
+		width: calc(100% - 340px);
 		display: inline-block;
 		vertical-align: top;
 		padding: 0px 60px;
