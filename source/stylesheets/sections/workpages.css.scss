@@ -73,6 +73,13 @@
 	@media only screen and (max-width: 560px) {
 		font-size: 23px;
 	}
+	
+	&.small-bottom-padding {
+		padding-bottom: 2em;		
+	}
+	&.no-top-padding {
+		padding-top: 0px;	
+	}
 }
 
 .very-large-quote {

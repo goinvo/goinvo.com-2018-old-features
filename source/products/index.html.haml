@@ -1,185 +1,93 @@
 - content_for(:title) do
-	= "Enterprise"
+	= "Products"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/workpages"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
 
-%article#enterprise
+%article#products
 	%header#article-header
-		%h1.title We’ve designed massive bottom line impact for our clients.
-		.projects-row.impact.top-margin
-			%a
-				.project-item
-					.top-row
-						.arrow.up-arrow
-						.arrow-title Productivity
-					.description Oracle saw a 50% drop in time to complete core tasks.
-			%a
-				.project-item
-					.top-row
-						.arrow.up-arrow
-						.arrow-title Buyout
-					.description CodeRyte was bought by 3M for $150M for its breakthrough ICD coding software and NLP tech.
-			%a
-				.project-item
-					.top-row
-						.arrow.up-arrow
-						.arrow-title Funding
-					.description InfoBionic raised an additional $17M based on our patented designs.
-		.projects-row.impact.bottom-margin
-			%a
-				.project-item
-					.top-row
-						.arrow.up-arrow
-						.arrow-title Reputation
-					.description For McAfee, 85M people trusted and installed the new Total Protection Suite.
-			%a
-				.project-item
-					.top-row
-						.arrow.down-arrow
-						.arrow-title Complexity
-					.description ...
-			%a
-				.project-item
-					.top-row
-						.arrow.up-arrow
-						.arrow-title Return on Investment
-					.description In 8 months, a single customer’s use returned the $800k project design budget.
-		%a{:href => "/enterprise/"}
-			.button-h Read Case Study
-	.small-quote We’ve designed mission critical software.
+		%h1.title Understanding the entire product lifecycle… because we own products.
+		.button-h Preview our upcoming book
+	.small-quote.small-bottom-padding We have funded, designed, built, marketed, managed, sold, and revised our own products. We know that pain, the struggle, the intensity.
+	.small-quote.no-top-padding It’s a tough sell unless you’ve been there.
 	.projects-row
-		%a{:href => "/enterprise/affinnova"}
+		%a{:href => "/products/hgraph"}
 			.project-item
-				.top-description Optimized Marketing
+				.top-description Your Health in One Picture
 				.image-wrapper
-					%img{:src => "/images/enterprise/affinova.png"} 
-				.bottom-description How our brand-driven product provided explosive growth for Affinnova.
-				.company-name Affinnova
-		%a{:href => "/enterprise/dnc/"}
+					%img{:src => "/images/products/hgraph.png"} 
+				.bottom-description hGraph is a visual representation of a patient's health status, designed to increase awareness of the individual's factors that can affect overall health.
+				.company-name hGraph
+		%a{:href => "/products/visual-budget/"}
 			.project-item
-				.top-description Voice of the Nation
+				.top-description Government Transparency
 				.image-wrapper
-					%img{:src => "/images/enterprise/dnc.png"} 
-				.bottom-description Citizens found an easier path to driving the nation’s future through their vote.
-				.company-name Democratic National Committee
-		%a{:href => "/enterprise/ruelala/"}
+					%img{:src => "/images/products/visual-budget.png"} 
+				.bottom-description Government budgets can be tough to understand, but now the Town of Arlington, Massachusetts is providing the next generation of accessibility in financial information that allows citizens to view, engage with, and discuss.
+				.company-name Arlington Visual Budget
+		%a{:href => "/products/health-axioms"}
 			.project-item
-				.top-description Orchestrating Business Process
+				.top-description Healthy Habits
 				.image-wrapper
-					%img{:src => "/images/enterprise/ruelala.png"} 
-				.bottom-description Streamlining fashion from $250M to $2B.
-				.company-name RueLaLa	
+					%img{:src => "/images/products/health-axioms.png"} 
+				.bottom-description Health Axioms put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible. 
+				.company-name Health Axioms
 	.very-large-quote 
-		.quote-content “Concept Studio is likely to transform our business in fundamental ways.”
-		.quote-author Steve Lamoureux, Chief Product Officer, Affinnova
-	.dataxu-container
-		.dataxu-wrapper
-			.left-content
-				.image-container
-			.right-content
-				.medium-quote
-					.logo
-					.quote-content “Our team is managing hundreds of different campaigns, so how we use our time is critical. With this new console, DataXu has made a huge leap forward for programmatic ease of use.”
-					.quote-author Joel Nierman
-					.quote-author VP, media and digital strategy, Liquidus
-				%a{:href => "/enterprise/dataxu"}
-					.button Read Case Study
-	.very-large-quote 
-		.quote-content “Involution was much more than our redesign partner. They helped us re-think our product development process. They were as strong technically as they were with the design. ”
-		.quote-author Brian Trombley
-		.quote-author McAfee Director, Consumer Product Management
+		.quote-content “I wanted to reach out and say how fun the Health Axioms cards you sent over were, merging simplicity of presentation and complex data representation.”
+		.quote-author Mirar Bristol, MA. Director, Special Projects, Department of Medicine, Massachusetts General Hospital 
+	.design-med-wrapper
+		.content
+			%h1 Design is Medicine
+			%p It's time to design products to capture life and physiologic signs invisibly… usually through non-invasive sensors that don't require a single drop of blood, but just whiffs and sniffs. And when it is visible, it must be designed to feel wonderful.
+			%p Listen to Juhan Sonin discuss where patient health visits is heading in 20 years.  
+		.audio-wrapper
+			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110751754&color=475e8a&show_artwork=false"></iframe>
 	.projects-row.margin-bottom
-		%a{:href => "/enterprise/microsoft/"}
+		%a{:href => "/products/the-digital-life"}
 			.project-item
-				.top-description Goliath Challenging Goliath
+				.top-description Podcast on Digital Tech
 				.image-wrapper
-					%img{:src => "/images/enterprise/microsoft.png"} 
-				.bottom-description Key SuperPreview feature with an eye to a new system design.
-				.company-name Microsoft
+					%img{:src => "/images/products/the-digital-life.png"} 
+				.bottom-descriptionThe Digital Life is an online radio show that explores important, timely topics in the world of digital design and technology.
+				.company-name The Digital Life
 		%a{:href => "/enterprise/oracle/"}
 			.project-item
-				.top-description Day to Day Product Lifecycle
+				.top-description Measuring Team Dynamics
 				.image-wrapper
-					%img{:src => "/images/enterprise/agile.png"} 
-				.bottom-description Users take 50% less time to complete core tasks after the Involution redesign.
-				.company-name Agile (Oracle acquisition)
-		%a{:href => "/enterprise/mcafee/"}
+					%img{:src => "/images/products/facio.png"} 
+				.bottom-description Facio makes it dead simple for individuals and groups to engage in professional development, along with relationship and team building.
+				.company-name Facio
+		%a{:href => "/products/design-axioms"}
 			.project-item
-				.top-description Protecting 80M Digital Lives
+				.top-description Design Edu in a Box
 				.image-wrapper
-					%img{:src => "/images/enterprise/mcafee.png"} 
-				.bottom-description The Total Protection UX, traditionally the product’s Achilles heel, was hailed by the media and led to increased market share - 24% in the first year and double-digits every year since.
-				.company-name McAfee
+					%img{:src => "/images/products/design-axioms.png"} 
+				.bottom-description The Design Axioms describe the minimal rule set for designing interfaces: the 16 foundational concepts that are required knowledge for engineers and designers to create usable and elegant interfaces.
+				.company-name Design Axioms
 	.projects-row.bottom-margin
-		%a{:href => "/enterprise/scskcorporation/"}
+		%a{:href => "/products/paintrackr/"}
 			.project-item
-				.top-description Powerful Sales Tool
+				.top-description Monitor Physical Pain
 				.image-wrapper
-					%img{:src => "/images/enterprise/scsk.png"} 
-				.bottom-description A showcase for next generation technology.
-				.company-name SCSK Corporation
-		
-		%a{:href => "#"}
-			.project-item	
-		%a{:href => "#"}
+					%img{:src => "/images/products/pain-trackr.png"} 
+				.bottom-description PainTrackr seeks to make logging pain more intuitive, while eliminating the hassle of imputing information via pen and paper. 
+				.company-name PainTrackr
+		%a{:href => "/products/staff-plan/"}
 			.project-item
-	.partners
-		.small-title A Few of Our Healthcare Partners
-		%ul.mobile
-			%li
-				%img{:src => "/images/enterprise/partners/applause.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/curl.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/dataxu.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/lithium.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/mcafee.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/microsoft.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/oracle.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/paypal.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/ptc.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/shutterfly.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/ssi.png"}
-			%li
-				%img{:src => "/images/enterprise/partners/yahoo.png"}
-		%table.non-mobile
-			%tbody
-				%tr
-					%td
-						%img{:src => "/images/enterprise/partners/applause.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/curl.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/dataxu.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/lithium.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/mcafee.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/microsoft.png"}
-				%tr
-					%td
-						%img{:src => "/images/enterprise/partners/oracle.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/paypal.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/ptc.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/shutterfly.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/ssi.png"}
-					%td
-						%img{:src => "/images/enterprise/partners/yahoo.png"}
+				.top-description Staff Planning
+				.image-wrapper
+					%img{:src => "/images/products/staff-plan.png"} 
+				.bottom-description Our internal tool for project planning. 
+				.company-name StaffPlan
+		%a{:href => "/products/runnan/"}
+			.project-item
+				.top-description Warhol meets Sidescroller
+				.image-wrapper
+					%img{:src => "/images/products/staff-plan.png"} 
+				.bottom-description A fun game of a jumping carrot trying to navigate a world of wacky burgers, pickles, and lollipops.
+				.company-name Runnan
+		
 	.office-hours
 		.small-title.white Want honest design feedback on your product?
 		.small-title.blue Sign up for our Open Office hours every Thursday 4-6p.
