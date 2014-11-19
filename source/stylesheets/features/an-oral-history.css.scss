@@ -552,40 +552,37 @@ section.interview-content {
 			color: $lightgray;
 		}
 	}
-	.author {
-		width: 65%;
-		padding-right: 3em;
-		color: #444;
-		//margin: 0 auto;
-	}
-	.author-content {
-		position: relative;
-		//margin-top: -25%;
-		background: $white;
-		padding: 2em;
-		border-color: rgba(0, 0, 0, 0.495);
-		border-width: 0 3px 3px;
-		border-style: solid;
-		p {
-			margin-bottom: 0;
-		}
-	}
+	
 	.contributors.download-links {
 		margin-top: 20px;
 		font-size: 24px;
 	}
 	.contributors {
-		width: 35%;
+		width: 100%;
 		padding: 2em;
 		border: 3px solid rgba(0, 0, 0, 0.495);
 		background: #fff;
+		@media only screen and(max-width: 1170px) {
+			max-width: 375px;
+			width: auto;
+			margin: 0 auto;
+			float: none;
+		}
+		.cont-wrapper {
+			width: 906px;
+			margin: 0 auto;
+			
+			@media only screen and(max-width: 1170px) {
+				width: 305px;
+			}
+		}
 		h3 {
-			font-size: 22px;
-			padding-bottom: 0.5em;
+			font-size: 18px;
+			padding-bottom: 0.2em;
 		}
 		p {
-			font-size: 34px;
-			line-height: 1em;
+			font-size: 24px;
+			line-height: 22px;
 			margin-bottom: 0;
 		}
 		hr {
@@ -594,17 +591,28 @@ section.interview-content {
 			border-width: 5px;
 			border-color: $blue;
 		}
+		small {
+			font-size: 18px;
+			padding-top: 0px;
+			margin-top: 0px;
+		}
 		.contributor {
-			@include clearfix();
+			display: inline-block;
+			width: 300px;
+			@media only screen and(max-width: 1170px) {
+				display: block;
+				height: 100px;
+			}
 			.image, .info {
 				float: left;
 			}
 			.image {
-				width: 20%;
+				width: 75px;
+				height: auto;
 			}
 			.info {
 				padding-left: 1em;
-				width: 80%;
+				width: 225px;
 			}
 		}
 	}
@@ -618,9 +626,6 @@ section.interview-content {
 		}
 		.author, .contributors {
 			width: 100%;
-		}
-		.contributor {
-			margin-bottom: 1.5em;
 		}
 	}
 }
