@@ -516,7 +516,7 @@ section.interview-content {
 .credit-wrapper {
 	background-color: rgba(0,0,0,.03);
 	padding: 60px 0px;
-	border-top: 3px solid rgba(0, 0, 0, 0.295);
+	border-top: 3px solid rgba(0, 0, 0, 0.4);
 }
 
 #credits {
@@ -611,6 +611,7 @@ section.interview-content {
 				}
 				
 				p {
+					padding-top: 5px;
 					color: rgba(0,0,0,.6);	
 				}
 			}
@@ -627,7 +628,7 @@ section.interview-content {
 	.contributors {
 		width: 100%;
 		padding: 2em;
-		border: 3px solid rgba(0, 0, 0, 0.495);
+		border: 2px solid rgba(0, 0, 0, 0.4);
 		background: #fff;
 		@media only screen and(max-width: 1170px) {
 			max-width: 375px;
@@ -675,6 +676,7 @@ section.interview-content {
 			font-size: 18px;
 			padding-top: 0px;
 			margin-top: 0px;
+			font-weight: 100;
 		}
 		.contributor {
 			display: inline-block;
