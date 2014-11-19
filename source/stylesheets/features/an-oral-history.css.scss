@@ -387,9 +387,10 @@ section.interview-content {
 				height: 40px;
 				margin-bottom: 10px;
 				margin-right: 10px;
-				border: 1px solid white;
-				border-radius: 40px;
-				
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+			
 				
 				@media only screen and (max-width: 750px) {
 					margin-bottom: 0px;	
@@ -553,6 +554,72 @@ section.interview-content {
 		}
 	}
 	
+	
+	.authors {
+		margin-bottom: 50px;
+		
+		h1 {
+			font-weight: 100;
+			font-size:65px;
+			line-height: 75px;
+			color: rgba(0,0,0,.6);
+			
+			@media only screen and(max-width: 620px) {
+				font-size: 55px;
+				line-height: 65px;
+			}
+			@media only screen and(max-width: 542px) {
+				font-size: 50px;
+				line-height: 55px;
+				margin-bottom: 1em;
+			}
+		}
+		
+		.person {
+			margin-bottom: 50px;
+			
+			.image, .content  {
+				display: inline-block;	
+				vertical-align: top;
+			}
+			
+			.image {
+				width: 150px;
+				height: auto;
+				@media only screen and(max-width: 1170px) {
+					width: 125px;
+				}
+			}
+			.content {
+				padding-left: 15px;
+				width: calc(100% - 155px);	
+				
+				@media only screen and(max-width: 1170px) {
+					width: calc(100% - 135px);	
+				}
+				
+				h2 {
+					color: rgba(0,0,0,.6);
+					
+					@media only screen and(max-width: 680px) {
+						font-size: 35px;
+					}
+					
+					@media only screen and(max-width: 597px) {
+						font-size: 30px;
+					}
+				}
+				
+				p {
+					color: rgba(0,0,0,.6);	
+				}
+			}
+				
+		}
+		
+	}
+	
+	
 	.contributors.download-links {
 		margin-top: 20px;
 		font-size: 24px;
@@ -572,18 +639,31 @@ section.interview-content {
 			width: 906px;
 			margin: 0 auto;
 			
+			h2 {
+				text-align: center;	
+				font-size: 28px;
+				line-height: 22px;
+				width: 100%;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				color: rgba(0,0,0,.6);
+			}
+			
 			@media only screen and(max-width: 1170px) {
-				width: 305px;
+				max-width: 305px;
+				width: 100%;
 			}
 		}
 		h3 {
 			font-size: 18px;
-			padding-bottom: 0.2em;
+			padding-bottom: 0.4em;
+			font-weight: 100;
 		}
 		p {
 			font-size: 24px;
-			line-height: 22px;
+			line-height: 26px;
 			margin-bottom: 0;
+			color: rgba(0,0,0,.6);
 		}
 		hr {
 			width: 2em;
