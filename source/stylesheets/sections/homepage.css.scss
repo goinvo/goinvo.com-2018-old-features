@@ -37,6 +37,24 @@ a {
 	}
 }
 
+#oral-history{
+	.photo-container {
+		background-image: image-url('home/oral-history.jpg');	
+	}
+	
+	.title {
+		.tag {
+			color: #f9f9f9;	
+		}
+		.name {
+			color: #f9f9f9;	
+		}
+		.sub-name {
+			color: #f9f9f9;	
+		}
+	}
+}
+
 #world-cup .photo-container {
 	background-image: image-url('features/world-cup/hero.jpg');
 }
