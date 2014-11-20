@@ -6,6 +6,7 @@
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "featurenav-scroll"
 	= javascript_include_tag "invo-time-feature"
+	= javascript_include_tag "vendor/responsiveslides.min.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
 
@@ -517,6 +518,66 @@
 					.speaker-avatar.uday
 					.speaker-speaks 
 						%span.speaker-text UG: I remember really enjoying that Kifer Road space for its amazing high ceilings and that warehouse-studio feel. It was quite echo-y, though. Definitely needed some nice bamboo flooring ;-) The upper area was really nicely decked out. Loved that wooden exotic furniture, it was a style that I saw at some design studios in Australia, too!
+			.sidebar
+				.sidebar-box.solid.extra-top-margin.agile-software
+					%img.center{:src => "../../images/features/an-oral-history/1-agile_logo.png"}
+					%p Agile Software Corporation was a San Jose, California-based provider of Product Lifecycle Management (PLM) software.
+				.sidebar-box.dotted.raj-nav.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/2-raj_bhargava_joel_nave.png"}
+					%p Executive leader Raj Bhargava and UX leader Joel Nave worked together to get Agile to invest in a complete redesign of their massive PLM suite.
+				.sidebar-box.dotted.extra-top-margin.tiffany-altieri
+					%img{:src => "../../images/features/an-oral-history/4-tiffany_altieri.jpg"}
+					%p The talented and hard-working Tiffany Altieri was the first young creative to start and grow up at Involution, part of the Silicon Valley studio through its rise. A prototypical designer-engineer, Tiffany gravitated to the engineering side and today is a Silicon Valley veteran.
+				.sidebar-box.dotted.stairwell.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/3-invo_first_studio.jpg"}
+					%p Involution’s first studio, in a residential condo complex that was converted from old industrial space at 1777 Lafayette St. in Santa Clara, California shared characteristics with all subsequent Invo locations: high ceilings, open spaces, and a spirit of creativity.
+				.sidebar-box.dotted.whiteboards.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/5-invo_whiteboard.jpg"}
+					%p As handy with physical tools as he was with digital, Ben provided low-cost furniture and collaboration tools in that first studio.
+				.sidebar-box.solid.wine.extra-top-margin
+					%img.center{:src => "../../images/features/an-oral-history/6-wine.jpg"}
+					%p A joy in wine was shared by the Invo SV team, with most of us traveling up to wine country from time to time.
+				.sidebar-box.solid.oracle.extra-top-margin
+					%img.center{:src => "../../images/features/an-oral-history/7-oracle_logo.png"}
+					%p In May 2007 Oracle acquired Agile for $495M.
+				.sidebar-box.dotted.agile-team.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/agile-team.jpg"}
+					%p The Agile team was emblematic of the talented and dedicated client-side partners that enable Involution to work.
+				.sidebar-box.dotted.uday-gajendar.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/8-uday_gajendar.jpg"}
+					%p A senior designer with a philosophical bent, Uday Gajendar joined Invo from frog design at the beginning of 2007. He has worked for many top enterprise software companies, including Oracle, Citrix, and BEA. Today he is on the Design Council for VC Kleiner Perkins Caufield & Byers and the Director of UX for CloudPhysics.
+				.sidebar-box.dotted.box-ex.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/9-box_exercise.jpg"}
+					%p “The Box Exercise” was Andrei’s name for Involution’s unique approach to product architecture.
+				.sidebar-box.solid.uday-pdf.extra-top-margin
+					%p In 2008, Uday published a paper on The Box Exercise. <a href = "../../images/features/an-oral-history/10-the_box_exercise.pdf">Download the PDF</a>.
+				.sidebar-box.dotted.box-ex.extra-top-margin.double-top
+					%img{:src => "../../images/features/an-oral-history/11-stokes.jpg"}
+					%p A fresh-faced young designer/ developer when working with Invo, the irreverent Noah Stokes is now the owner of <a href = "http://hellobold.com/">Bold</a>.
+				.sidebar-box.dotted.spivot.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/12-spivot.jpg"}
+					%p Spivot was Instagram three years early and before the iPad made that style of content consumption more of a living room (as opposed to office) activity.
+				.sidebar-box.dotted.sunnyvale.extra-top-margin
+					%img{:src => "../../images/features/an-oral-history/13-kifer_studio.jpg"}
+					%p The office condos at 1294 Kifer Rd. in Sunnyvale, California featured Class A office space in the front and warehouse space in the back. We turned our warehouse into a studio.
+		.row
+			.rslides-container
+				%ul.rslides#slideshow
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/a.jpg'}	
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/b.jpg'}	
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/c.jpg'}	
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/d.jpg'}	
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/e.jpg'}	
+					%li
+						%img{:src => '../../images/features/an-oral-history/slides/f.jpg'}	
+				.caption This is some blank temporary text describing the photos in the slideshow
+		.row
+			.interview-wrapper
 				.interview-content
 					.speaker-avatar.dirk
 					.speaker-speaks 
@@ -626,47 +687,6 @@
 					.speaker-speaks 
 						%span.speaker-text DK: Toward the middle of 2008 was when you said you were leaving, Ben. That was my saddest day at Invo. The idea of having the company without you being a part of it was just incomprehensible to me.
 			.sidebar
-				.sidebar-box.solid.extra-top-margin.agile-software
-					%img.center{:src => "../../images/features/an-oral-history/1-agile_logo.png"}
-					%p Agile Software Corporation was a San Jose, California-based provider of Product Lifecycle Management (PLM) software.
-				.sidebar-box.dotted.raj-nav.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/2-raj_bhargava_joel_nave.png"}
-					%p Executive leader Raj Bhargava and UX leader Joel Nave worked together to get Agile to invest in a complete redesign of their massive PLM suite.
-				.sidebar-box.dotted.extra-top-margin.tiffany-altieri
-					%img{:src => "../../images/features/an-oral-history/4-tiffany_altieri.jpg"}
-					%p The talented and hard-working Tiffany Altieri was the first young creative to start and grow up at Involution, part of the Silicon Valley studio through its rise. A prototypical designer-engineer, Tiffany gravitated to the engineering side and today is a Silicon Valley veteran.
-				.sidebar-box.dotted.stairwell.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/3-invo_first_studio.jpg"}
-					%p Involution’s first studio, in a residential condo complex that was converted from old industrial space at 1777 Lafayette St. in Santa Clara, California shared characteristics with all subsequent Invo locations: high ceilings, open spaces, and a spirit of creativity.
-				.sidebar-box.dotted.whiteboards.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/5-invo_whiteboard.jpg"}
-					%p As handy with physical tools as he was with digital, Ben provided low-cost furniture and collaboration tools in that first studio.
-				.sidebar-box.solid.wine.extra-top-margin
-					%img.center{:src => "../../images/features/an-oral-history/6-wine.jpg"}
-					%p A joy in wine was shared by the Invo SV team, with most of us traveling up to wine country from time to time.
-				.sidebar-box.solid.oracle.extra-top-margin
-					%img.center{:src => "../../images/features/an-oral-history/7-oracle_logo.png"}
-					%p In May 2007 Oracle acquired Agile for $495M.
-				.sidebar-box.dotted.agile-team.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/agile-team.jpg"}
-					%p The Agile team was emblematic of the talented and dedicated client-side partners that enable Involution to work.
-				.sidebar-box.dotted.uday-gajendar.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/8-uday_gajendar.jpg"}
-					%p A senior designer with a philosophical bent, Uday Gajendar joined Invo from frog design at the beginning of 2007. He has worked for many top enterprise software companies, including Oracle, Citrix, and BEA. Today he is on the Design Council for VC Kleiner Perkins Caufield & Byers and the Director of UX for CloudPhysics.
-				.sidebar-box.dotted.box-ex.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/9-box_exercise.jpg"}
-					%p “The Box Exercise” was Andrei’s name for Involution’s unique approach to product architecture.
-				.sidebar-box.solid.uday-pdf.extra-top-margin
-					%p In 2008, Uday published a paper on The Box Exercise. <a href = "../../images/features/an-oral-history/10-the_box_exercise.pdf">Download the PDF</a>.
-				.sidebar-box.dotted.box-ex.extra-top-margin.double-top
-					%img{:src => "../../images/features/an-oral-history/11-stokes.jpg"}
-					%p A fresh-faced young designer/ developer when working with Invo, the irreverent Noah Stokes is now the owner of <a href = "http://hellobold.com/">Bold</a>.
-				.sidebar-box.dotted.spivot.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/12-spivot.jpg"}
-					%p Spivot was Instagram three years early and before the iPad made that style of content consumption more of a living room (as opposed to office) activity.
-				.sidebar-box.dotted.sunnyvale.extra-top-margin
-					%img{:src => "../../images/features/an-oral-history/13-kifer_studio.jpg"}
-					%p The office condos at 1294 Kifer Rd. in Sunnyvale, California featured Class A office space in the front and warehouse space in the back. We turned our warehouse into a studio.
 				.sidebar-box.dotted.steel-sign.extra-top-margin
 					%img{:src => "../../images/features/an-oral-history/15-invo_lobby.jpg"}
 					%p Hanging with distinction in the Kifer Rd. lobby.
