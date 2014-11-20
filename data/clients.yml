@@ -85,6 +85,10 @@
 - name: "PainTrackr"
   primary_color: "#FF0000"
   logo: "paintrackr.jpg"
+  
+- name: "Partners GeneInsight"
+  primary_color: "#D77E48"
+  logo: "PartnersGeneInsight.jpg"
 
 - name: "Personal Genome Project"
   primary_color: "#006DC4"
@@ -109,6 +113,10 @@
 - name: "StaffPlan"
   primary_color: "#5e9b69"
   logo: "staffplan.jpg"
+  
+- name: "Tabeeb"
+  primary_color: "#4BACD9"
+  logo: "PartnersGeneInsight.jpg"
 
 - name: "Telerik"
   primary_color: "#acd608"
