@@ -17,7 +17,10 @@ body.work #main-header #nav-buttons .work,
 body.studio #main-header #nav-buttons .studio,
 body.team #main-header #nav-buttons .team,
 body.careers #main-header #nav-buttons .careers,
-body.contact #main-header #nav-buttons .contact, {
+body.contact #main-header #nav-buttons .contact, 
+body.healthcare #main-header #nav-buttons .healthcare,
+body.enterprise #main-header #nav-buttons .enterprise,
+body.products #main-header #nav-buttons .products{
 	color: $white;
 	&:hover {
 		color: #C9C9C9;
