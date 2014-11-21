@@ -95,7 +95,7 @@ a {
 	position: absolute;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	top: calc(50% - 18px);
-	left: 70px;
+	left: 25px;
 	z-index: 99;
 	opacity: 0.8;
 	text-indent: -9999px;
@@ -106,6 +106,10 @@ a {
 	background: transparent image-url("features/an-oral-history/slides/arrows.gif") no-repeat left center;
 	margin-top: -45px;	
 	border-radius: 50%;
+	
+	@media only screen and (max-width: 400px) {
+		visibility: hidden;	
+	}
 }
 
 a.rslides1_nav.prev {
@@ -115,7 +119,7 @@ a.rslides1_nav.prev {
 a.rslides1_nav.next {
 	left: auto;
 	background-position: right center;
-	right: 40px;
+	right: 25px;
 }
 
 .rslides1_nav:active {
@@ -384,6 +388,11 @@ section.interview-content {
 			padding: 40px 20px;
 			color: rgba(0, 0, 0, .45);
 			
+			&.mobile-hide {
+				@media only screen and (max-width: 750px) {
+					display: none;	
+				}
+			}
 			
 			p {
 				font-size: 18px;
@@ -430,6 +439,9 @@ section.interview-content {
 			&.dotted {
 				border-left: 2px dotted rgb(157,195,182);	
 				padding: 20px 20px;	
+				@media only screen and (max-width: 750px) {
+					border-left: none;	
+				}
 			}
 			
 			&.extra-top-margin {
@@ -486,6 +498,9 @@ section.interview-content {
 				
 				@media only screen and (max-width: 750px) {
 					margin-bottom: 0px;	
+					float: left;
+					width: 0px;
+					height: 0px;
 				}
 				
 				&.dirk {
@@ -518,7 +533,14 @@ section.interview-content {
 				&.jen {
 					background-image: image-url('features/an-oral-history/icon-jen.jpg');	
 				}
-				background-size: 41px 41px;
+				background-size: 51px 51px;
+
+				&.dirk, &.andrei, &.juhan, &.donna, &.ben, &.uday, &.eric, &.jon, &.sarah, &.jen {
+					@media only screen and (max-width: 750px) {
+						width: 50px;
+						height: 50px;
+					}
+				}
 			}
 			.speaker-speaks {
 				width: calc(100% - 70px);
@@ -532,6 +554,7 @@ section.interview-content {
 				@media only screen and (max-width: 750px) {
 					width: 100%;	
 					margin-bottom: 30px;
+					padding-top: 0px;
 				}
 				
 				.full-name {
@@ -682,6 +705,14 @@ section.interview-content {
 					width: 125px;
 				}
 			}
+			p.mobile {
+					padding-top: 10px;
+					color: rgba(0,0,0,.6);	
+					display: none;
+					@media only screen and (max-width: 750px) {
+						display: block;	
+					}
+			}
 			.content {
 				padding-left: 15px;
 				width: calc(100% - 155px);	
@@ -705,6 +736,16 @@ section.interview-content {
 				p {
 					padding-top: 5px;
 					color: rgba(0,0,0,.6);	
+					@media only screen and (max-width: 750px) {
+						display: none;	
+					}
+				}
+				
+				small {
+					@media only screen and(max-width: 1170px) {
+						display: block;
+						margin-top: 5px;
+					}
 				}
 			}
 				
@@ -731,6 +772,9 @@ section.interview-content {
 		.cont-wrapper {
 			width: 906px;
 			margin: 0 auto;
+			@media only screen and (max-width: 400px) {
+				padding-left: calc(50% - 80px);	
+			}
 			
 			h2 {
 				text-align: center;	
@@ -740,6 +784,9 @@ section.interview-content {
 				margin: 0 auto;
 				margin-bottom: 30px;
 				color: rgba(0,0,0,.6);
+				@media only screen and (max-width: 750px) {
+					text-align: left;	
+				}
 			}
 			
 			@media only screen and(max-width: 1170px) {
@@ -777,16 +824,32 @@ section.interview-content {
 				display: block;
 				height: 100px;
 			}
+			@media only screen and (max-width: 400px) {
+				height: auto;	
+			}
 			.image, .info {
 				float: left;
+				@media only screen and (max-width: 400px) {
+					float: none;	
+					display: block;
+				}
 			}
 			.image {
 				width: 75px;
 				height: auto;
+				@media only screen and (max-width: 400px) {
+					width: 90px;	
+				}
 			}
 			.info {
 				padding-left: 1em;
 				width: 225px;
+				@media only screen and (max-width: 400px) {
+					padding-left: 0;
+					width: 100%;
+					padding: 10px 0px 25px 0px;
+					max-width: 100%;	
+				}
 			}
 		}
 	}
