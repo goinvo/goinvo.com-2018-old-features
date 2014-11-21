@@ -50,7 +50,7 @@ activate :cache_buster
 
 # S3 Sync
 activate :s3_sync do |s3_sync|
-	s3_sync.bucket                     = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	s3_sync.bucket                     = 'www.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
 	s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
 	s3_sync.delete                     = true # We delete stray files by default.
 	s3_sync.after_build                = false # We do not chain after the build step by default.
@@ -66,7 +66,7 @@ default_caching_policy max_age:(60 * 60 * 24 * 365)
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-	config.bucket                = 'staging.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	config.bucket                = 'www..goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
 	config.region                = 'us-east-1'     # The AWS region for your bucket.
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
@@ -74,15 +74,31 @@ end
 redirect '/studio/', '/studio/team/'
 redirect '/team/', '/studio/team/'
 redirect '/careers/', '/studio/careers/'
-redirect '/about/', '/team/'
-redirect '/about/code-of-ethics/', '/team/'
+redirect '/about/', '/studio/team/'
+redirect '/work/', '/healthcare/'
+redirect '/about/code-of-ethics/', '/studio/team/'
 redirect '/about/techtalks/', '/'
-redirect '/careers/studio-life/', '/careers/'
-redirect '/careers/internships-apprenticeships/', '/careers/'
-redirect '/practice-area/enterprise/', '/work/'
-redirect '/practice-area/healthcare/', '/work/'
-redirect '/practice-area/big-data-infovis/', '/work/'
-redirect '/practice-area/social-software/', '/work/'
+redirect '/careers/studio-life/', '/studio/careers/'
+redirect '/careers/internships-apprenticeships/', '/studio/careers/'
+redirect '/practice-area/enterprise/', '/enterprise/'
+redirect '/practice-area/healthcare/', '/healthcare/'
+redirect '/practice-area/big-data-infovis/', '/'
+redirect '/practice-area/social-software/', '/'
+redirect '/work/3m/', '/enterprise/3m/'
+redirect '/work/mcafee/', '/enterprise/mcafee/'
+redirect '/work/oracle/', '/enterprise/oracle'
+redirect '/work/microsoft/', '/enterprise/microsoft'
+redirect '/work/affinnova/', '/enterprise/affinnova/'
+redirect '/work/hgraph/', '/healthcare/hgraph'
+redirect '/work/raptr-gaming-platform-ui-design/', '/work/'
+redirect '/work/yahoo-site-solution-ui-design/', '/work/'
+redirect '/work/dnc/', '/enterprise/dnc/'
+redirect '/work/personalgenomeproject/', '/healthcare/personalgenomeproject/'
+redirect '/work/scskcorporation/', '/enterprise/scskcorporation/'
+redirect '/work/shutterfly-studio-photo-management-ui-design/', '/work/'
+redirect '/work/lithium-social-crm-ui-design/', '/work/'
+redirect '/work/numera/', '/health/numera/'
+redirect '/work/nomee-social-network-aggregator-ui-design/', '/work/'
 redirect '/work/3m-natural-language-processing-application/', '/work/3m/'
 redirect '/work/mcafee-total-protection-ui-design-and-development/', '/work/mcafee/'
 redirect '/work/oracle-agile-plm-ui-design-and-development/', '/work/oracle/'
