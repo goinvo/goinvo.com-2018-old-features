@@ -1,0 +1,81 @@
+- content_for(:title) do
+	= "Inspired EHRs is an open-sourced ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Inspired EHRs is an open-sourced ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."}/
+	%meta{:name => "keywords", :content => "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"}/
+- client = client_for_name("Inspired EHRs")
+
+#content-area.caseStudyContent
+	.projectData
+		%h1.client.title-with-sub{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Inspired EHRs:
+		%h5.client.title-with-sub{style: "color: #{client.primary_color}; font-weight: 100;"} Designing for Clinicians
+
+		%h6.subheader Results
+		%p An <a href="http://inspiredehrs.org">open-sourced ebook</a> full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies.
+		
+		%h6.subheader Details
+		%p Inspirational design on the usability and functionality of electronic health records.
+		
+		%ul.details
+			%li Provided usability, technical, and software design expertise
+			%li Co-authored and produced HTML5- based ebook
+			%li Lead workshops to hone key ideas and techniques outlined in the book
+			%li Designed illustrations and interface examples
+			%li Prototyped interactive examples of designs
+			%li 1 year of design and code
+		
+		%h6.subheader Practice Areas
+		%p Healthcare IT, Open Source
+
+		%h6.subheader Project Type
+		%p Policy, UI Design, Engineering
+
+		%h6.subheader Process
+		%p Learning, Envision, Blueprint, Craft, Build
+
+		%h6.subheader Price
+		%p $100k &ndash; $200k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%div
+			%img{alt: "Health Axioms", src: "../../images/clients/ehr/interactive_chart.png"}
+		%p EHRs (electronic health records) today are notorious for being difficult to use, but have been responsible for what little rise there has been in efficiency of providing health care. With EHRs woefully lacking in intuitive interfaces, usable processes, and readability, there’s an opportunity to encourage a more rapid evolution of EHR design, informed by health care processes, human factors principles, and usability design. Jeff Belden’s idea was to provide an accessible collection of inspirational material and insight into how physicians and nurses operate in hospitals and clinics to jumpstart EHR design on a national level. With support from the California Healthcare Foundation and the SHARP-C Project of the Office of the National Coordinator for Health IT, a team was put together consisting of physicians, humans factors and usability experts, including Involution Studios.
+
+		%p With Involution’s years of EHR design chops, as members of the CCHIT PHR Workgroup in 2007-2008, HIMSS EHR Usability Taskforce 2009-2012, and leading the HIMSS Mobile Design Taskforce in 2011- 2012, we provided more than software design expertise. We outlined usability and HCI guidelines, and defined design principles. Involution led workshops where, together with the team, select physicians, and members from EHR vendors, we helped to craft and define core concepts on various aspects of EHRs which served as foundations for the book’s chapters. We contributed further to those chapters, primarily sharing our experience with software design in the design principles chapter, as well as adding thoughts and sculpting the other chapters for the best reading experience and also to fit the team’s vision for the future of EHR design.
+
+
+		%p By working closely with the team, Involution designed examples for an EHR application, modeled for care provider workflows to aid in the decision making process which evolved into prototypes integrated into the ebook. The result was an interactive experience for readers, giving them a taste for what an EHR can be capable of. The ebook, exposing how software design and national standards collide, can be consumed as a lightweight design policy for electronic health records.
+
+		%div
+			%img.with-caption{alt: "Involution helped lead workshops.", src: "../../images/clients/ehr/ux-design-workshop.jpg"}/
+		%p.caption Involution helped lead workshops that were instrumental in defining the key ideas and techniques laying the groundwork for the topics in the book.
+		
+		%div
+			%img.with-caption{alt: "EHR Medication Guideline", src: "../../images/clients/ehr/interactive-medications-table.jpg"}/
+		%p.caption The medication list is designed to be scanned quickly, but is also searchable and sortable to get to more detailed information.
+		
+		%div
+			%img.with-caption{alt: "EHR Medication Timeline", src: "../../images/clients/ehr/interactive-medication-timeline.jpg"}/
+		%p.caption Our medication timeline allows physicians to track a patient’s medications over time to see how their condition has evolved.
+		
+		%div
+			%img.with-caption{alt: "EHR Medication Prototype", src: "../../images/clients/ehr/ehr-medication-prototype.png"}/
+		%p.caption We prototyped the medication list and medication timeline early on to evolve our concepts farther and more rapidly.
+		
+		%div
+			%img.with-caption{alt: "EHR eBook", src: "../../images/clients/ehr/electronic-health-record-book.png"}/
+		%p.caption The ebook is available on the web, built on HTML5 and CSS3, and also as a printable PDF.
+
+
+
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next

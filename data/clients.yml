@@ -14,6 +14,10 @@
   primary_color: "#28bcd2"
   logo: "applause.jpg"
 
+- name: "Arlington Visual Budget"
+  primary_color: "#d63366"
+  logo: "arlington-visual-budget.jpg"
+
 - name: "Curl"
   primary_color: "#058386"
   logo: "curl.jpg"
@@ -21,14 +25,26 @@
 - name: "DataXu"
   primary_color: "#0e4474"
   logo: "dataxu.jpg"
+ 
+- name: "The Digital Life"
+  primary_color: "#0e4474"
+  logo: "the-digital-life.jpg"
 
 - name: "DNC"
   primary_color: "#006AD8"
   logo: "dnc.jpg"
+  
+- name: "Design Axioms"
+  primary_color: "#006AD8"
+  logo: "design-axioms.jpg"
 
 - name: "Empirix"
   primary_color: "#83B63C"
   logo: "empirix.jpg"
+  
+- name: "Facio"
+  primary_color: "#83B63C"
+  logo: "facio.jpg"
 
 - name: "Health Axioms"
   primary_color: "#67B0BF"
@@ -36,11 +52,15 @@
 
 - name: "hGraph"
   primary_color: "#97BE8C"
-  logo: "hgraph.jpg"
+  logo: #require
 
 - name: "Infobionic"
   primary_color: #require
   logo: #require
+  
+- name: "Inspired EHRs"
+  primary_color: "#000000"
+  logo: "hgraph.jpg"
 
 - name: "McAfee"
   primary_color: "#B51737"
@@ -50,6 +70,10 @@
   primary_color: "#00A1F1"
   logo: "microsoft.jpg"
 
+- name: "Mount Sinai"
+  primary_color: "#d8288c"
+  logo: "mount-sinai.jpg"
+
 - name: "Numera"
   primary_color: "#2488C8"
   logo: "numera.jpg"
@@ -57,6 +81,14 @@
 - name: "Oracle"
   primary_color: "#FF0000"
   logo: "oracle.jpg"
+  
+- name: "PainTrackr"
+  primary_color: "#FF0000"
+  logo: "paintrackr.jpg"
+  
+- name: "Partners GeneInsight"
+  primary_color: "#D77E48"
+  logo: "PartnersGeneInsight.jpg"
 
 - name: "Personal Genome Project"
   primary_color: "#006DC4"
@@ -66,6 +98,10 @@
   primary_color: "#ef164b"
   logo: "ruelala.jpg"
 
+- name: "Runnan"
+  primary_color: "#ef164b"
+  logo: "runnan.jpg"
+
 - name: "SegTerra"
   primary_color: "#87ca01"
   logo: "segterra.jpg"
@@ -73,6 +109,14 @@
 - name: "SSI"
   primary_color: "#d71844"
   logo: "ssi.jpg"
+
+- name: "StaffPlan"
+  primary_color: "#5e9b69"
+  logo: "staffplan.jpg"
+  
+- name: "Tabeeb"
+  primary_color: "#4BACD9"
+  logo: "PartnersGeneInsight.jpg"
 
 - name: "Telerik"
   primary_color: "#acd608"
@@ -85,6 +129,10 @@
 - name: "University of Missouri"
   primary_color: "#f1b82d"
   logo: "universityofmissouri.jpg"
+  
+- name: "Visual Budget"
+  primary_color: "#0D7EC9"
+  logo: "vivox.jpg"
 
 - name: "Vivox"
   primary_color: "#0D7EC9"

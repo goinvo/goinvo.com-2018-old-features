@@ -1,0 +1,64 @@
+- content_for(:title) do
+	= "Arligton Visual Budget is a tool for financial transparency at local governments."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Arligton Visual Budget is a tool for transparent and accessibile town budgeting."}/
+	%meta{:name => "keywords", :content => "government budget tool, open source design, ux design, ui design, government financial tool, ui engineering, town budget tool"}/
+- client = client_for_name("Arlington Visual Budget")
+
+#content-area.caseStudyContent
+	.projectData
+		%h1.client{style: "color: #{client.primary_color}"} Arlington Visual Budget
+
+		%h6.subheader Results
+
+		%p Bringing financial transparency to local governments, one city at a time.
+
+		%p.quote Increasing transparency and accessibility to financial information has long been a goal for the Town. We hope this new feature will encourage users to learn more about Town finances and be more engaged in the annual budget discourse.
+		%p.caption Adam Chapdelaine, Arlington Town Manager
+
+		%h6.subheader Practice Areas
+		%p Civic Tech, Open Source
+
+		%h6.subheader Project Type
+		%p Research, UI Design, Engineering
+
+		%h6.subheader Process
+		%p Learning, Envision, Blueprint, Craft, Build
+
+		%h6.subheader Price
+		%p $50k &ndash; $100k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%div
+			%img{alt: "Arlington Visual Budget", src: "../../images/clients/arlington-visual-budget/arlington-visual-budget-funds-reserves.jpg"}
+		%p Government employees and elected officials understand that budgets are the road maps they must follow. Insiders live and breathe the budget. They wade through 300-page PDFs and toss around terms like “enterprise fund” and “capital outlay” with aplomb But most community residents have little insight into municipal finances.
+
+		%p This is why Invo, along side Annie LaCourt and Alan Jones, created the open source Visual Budget (licensed under Apache) – a tool for deepening the conversation between government and citizens about how taxpayer dollars are being spent, and why. It lets citizens understand budget priorities at a glance, see how their own tax dollars are spent, and understand the context for financial decisions, without devoting a week to reading spreadsheets.
+
+		%p The Visual Budget gives citizens the information they need to have informed conversations with municipal officials about values and priorities, enriching the experience for all.
+
+		%p <a href="http://www.arlingtonvisualbudget.org/">www.arlingtonvisualbudget.org</a>
+
+		%div
+			%img.with-caption{alt: "Expenses for the Town of Arlington.", src: "../../images/clients/arlington-visual-budget/arlington-visual-budget-ux-design-expenses.jpg"}/
+		%p.caption Expenses for the Town of Arlington.
+
+		%div
+			%img.with-caption{alt: "Expenses for", src: "../../images/clients/arlington-visual-budget/arlington-visual-budget-prototype-demo.jpg"}/
+		%p.caption Feedback session on the latest prototype.
+
+		%div
+			%img.with-caption{alt: "Revenue for the Town of Arlington.", src: "../../images/clients/arlington-visual-budget/arlington-visual-budget-ux-design-revenue.jpg"}/
+		%p.caption Revenue for the Town of Arlington.
+
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next

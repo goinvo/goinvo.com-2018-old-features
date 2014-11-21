@@ -1,0 +1,57 @@
+- content_for(:title) do
+	= "Reimagining a path to grow from a $250MM to a $2B company."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	%meta{:name => "description", :content => "Reimagining a path to grow from a $250MM to a $2B company."}/
+	%meta{:name => "keywords", :content => "product strategy, systemic design, ui design, ux design, research"}/
+- client = client_for_name("Rue La La")
+		
+#content-area.caseStudyContent
+	.projectData
+		%h1.client{style: "color: #{client.primary_color}"} Rue La La
+		
+		%h6.subheader Results
+		
+		%p Rue La La's vision was to grow from a $250MM to a $2B company. Invo reimagined how they orchestrate their business, providing the platform for such audacious growth. 
+		
+		%h6.subheader Details
+		%ul
+			%li Ethnographic research to understand Rue La La&rsquo;s high margin customer
+			%li Conceptualizing a software experience that emphasizes exclusivity
+			%li Total design of the Rue La La system, with UX support through production and launch
+			%li Over 6 months for the core research and design, followed up by months of support
+		
+		%h6.subheader Practice Areas
+		%p Product Lifecycle Management (PLM)
+
+		%h6.subheader Project Type
+		%p UX Strategy, UI Design 
+
+		%h6.subheader Process
+		%p Learning, Envision, Blueprint, Craft
+
+		%h6.subheader Price
+		%p $100k &ndash; $200k
+		
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+		
+	.projectDetails
+		%img.with-caption{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-user-interface.jpg"}
+		%p.caption The dashboard provides analysts, event coordinators, and merchandise planners a shared decision space to coordinate, schedule, and produce campaigns.
+		%div
+			%img.with-caption{alt: "", src: "../../images/clients/ruelala/ruelala-current-workflow-documentation.jpg"}
+		%p.caption Invo delivered the first true picture of the production pipeline to the organization. It showed the entire organization - for the first time - what it truly took to produce an online shopping experience: from finding the clothing line on a runway show in Milan to launching the sale on Rue La La. 
+		%div
+			%img.with-caption{alt: "", src: "../../images/clients/ruelala/ruelala-storemanager-user-experience-workflow.jpg"}
+		%p.caption Invo became Rue La La's business process expert, understanding the details that drove production. We used large-scale posters to document complex workflows, feedback loops, and designs that drove buy-in, directed implementation, and architected the software.
+		%div
+			%img.with-caption{alt: "", src: "../../images/clients/ruelala/ruelala-calendar-info-visualization.jpg"}
+		%p.caption Invo worked with Rue La La analysts to identify key performance indicators (KPIs) and design the data display and level of information that corresponds best to different business roles, simplifying decisions and leading better outcomes.
+.row#next-project
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project: 
+			%span#next
