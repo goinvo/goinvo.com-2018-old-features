@@ -883,5 +883,13 @@
 		margin-bottom: 100px;
 	}
 	
+	.projects-row .project-item {
+		.top-description {
+			@media only screen and (max-width: 1194px) and (min-width: 930px) {
+				min-height: 74px;	
+			}
+		}
+	}
+	
 }
 
