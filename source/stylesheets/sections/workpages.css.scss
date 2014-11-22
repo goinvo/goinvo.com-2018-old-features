@@ -885,8 +885,11 @@
 	
 	.projects-row .project-item {
 		.top-description {
-			@media only screen and (max-width: 1194px) and (min-width: 930px) {
+			@media only screen and (max-width: 1194px) and (min-width: 654px) {
 				min-height: 74px;	
+			}
+			@media only screen and (max-width: 654px) and (min-width: 640px) {
+				min-height: 79px;	
 			}
 		}
 	}
