@@ -32,7 +32,16 @@ a {
 
 .scroll-nav {
 	box-shadow: 0 5px 15px -8px #000
-}	
+}
+
+h4.intro-quote {
+	margin: 0 auto;
+	margin-bottom: 2.5em;	
+	color: #776e6a;
+	text-align: center;
+	max-width: 1080px;
+	padding: 0px 10px;
+}
 
 
 .rslides {
@@ -322,12 +331,12 @@ a.rslides1_nav.next {
 		display: inline-block;	
 		color: rgb(109, 110, 106);
 		margin-right: 60px;
-		padding-top: 18px;
-		padding-bottom: 16px;
+		padding-top: 10px;
+		padding-bottom: 8px;
 	}
 	a {
-		padding-top: 18px;
-		padding-bottom: 16px;
+		padding-top: 10px;
+		padding-bottom: 8px;
 		color: rgb(166, 167, 162);	
 		font-weight: 100;
 		margin-right: 30px;
@@ -511,7 +520,8 @@ section.interview-content {
 				}
 				
 				&.dirk {
-					background-image: image-url('features/an-oral-history/icon-dirk.jpg');	
+					background-image: image-url('features/an-oral-history/icon-dirk.jpg');
+					background-size: 42px 42px;
 				}
 				&.andrei {
 					background-image: image-url('features/an-oral-history/icon-andrei.jpg');	
@@ -540,12 +550,13 @@ section.interview-content {
 				&.jen {
 					background-image: image-url('features/an-oral-history/icon-jen.jpg');	
 				}
-				background-size: 51px 51px;
+				background-size: 41px 41px;
 
 				&.dirk, &.andrei, &.juhan, &.donna, &.ben, &.uday, &.eric, &.jon, &.sarah, &.jen {
 					@media only screen and (max-width: 750px) {
 						width: 50px;
 						height: 50px;
+						background-size: 51px 51px;
 					}
 				}
 			}
@@ -751,7 +762,7 @@ section.interview-content {
 				small {
 					@media only screen and(max-width: 1170px) {
 						display: block;
-						margin-top: 5px;
+						margin-top: 3px;
 					}
 				}
 			}
