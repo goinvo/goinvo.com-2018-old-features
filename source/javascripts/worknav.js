@@ -23,38 +23,39 @@ $( document ).ready(function() {
 				"title" : "Inspired EHRs: Designing for Clinicians",
 				"url" : "/healthcare/inspired-ehrs/",
 				"image" : "ehr.jpg",
-				"next-id" : "tabeeb"
+				"next-id" : "personal-genome-project"
 			},
-			"tabeeb" : {
-				"title" : "Tabeeb",
-				"url" : "/healthcare/tabeeb/",
-				"image" : "tabeeb.jpg",
+//			"tabeeb" : {
+//				"title" : "Tabeeb",
+//				"url" : "/healthcare/tabeeb/",
+//				"image" : "tabeeb.jpg",
+//				"next-id" : "mount-sinai"
+//			},
+			"personal-genome-project" : {
+				"title" : "Personal Genome Project",
+				"url" : "/healthcare/personal-genome-project/",
+				"image" : "pgp.jpg",
 				"next-id" : "mount-sinai"
 			},
 			"mount-sinai" : {
 				"title" : "Mount Sinai: A search for unexpected genetic heroes.",
 				"url" : "/healthcare/mount-sinai/",
 				"image" : "mount-sinai.jpg",
-				"next-id" : "personal-genome-project"
-			},
-			"personal-genome-project" : {
-				"title" : "Personal Genome Project",
-				"url" : "/healthcare/personal-genome-project/",
-				"image" : "pgp.jpg",
 				"next-id" : "health-axioms"
 			},
+			
 			"health-axioms" : {
 				"title" : "Health Axioms",
 				"url" : "/healthcare/health-axioms/",
 				"image" : "health-axioms.jpg",
-				"next-id" : "partners-gene-insight"
-			},
-			"partners-gene-insight" : {
-				"title" : "Partners Gene Insight",
-				"url" : "/healthcare/partners-gene-insight/",
-				"image" : "partners-gene-insight.jpg",
 				"next-id" : "numera"
 			},
+//			"partners-gene-insight" : {
+//				"title" : "Partners Gene Insight",
+//				"url" : "/healthcare/partners-gene-insight/",
+//				"image" : "partners-gene-insight.jpg",
+//				"next-id" : "numera"
+//			},
 			"numera" : {
 				"title" : "Numera",
 				"url" : "/healthcare/numera/",
@@ -115,7 +116,7 @@ $( document ).ready(function() {
 				"title" : "SCSKcorporation",
 				"url" : "/enterprise/scskcorporation/",
 				"image" : "scsk.jpg",
-				"next-id" : "products"
+				"next-id" : "healthcare"
 			},
 			"enterprise" : {
 				"title" : "Enterprise",
