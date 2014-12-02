@@ -22,3 +22,11 @@
 # Ignore s3 Keys
 .s3_sync
 
+
+source/videos/beth-live.webmhd.webm
+
+*.mp4
+
+*.haml
+
+*.webm
