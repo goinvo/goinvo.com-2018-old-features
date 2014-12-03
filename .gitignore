@@ -22,3 +22,7 @@
 # Ignore s3 Keys
 .s3_sync
 
+
+*.mp4
+
+*.webm
