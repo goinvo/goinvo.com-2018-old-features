@@ -20,8 +20,18 @@ $( document ).ready(function() {
 		parentContainer = $(playT.parents('.hero-video-container')[0]);
 		var videoPlayer = $(parentContainer.children('.video-player')[0]);
 		var videoBanner = $(parentContainer.children('.video-banner')[0]);
+		var videoText = $(parentContainer.children('.video-text')[0]);
 		var videoBackground = $(videoBanner.children('.video-background')[0]);
 		var videoButtons = $(videoBanner.children('.video-control-button')[0]);
+		var theID = videoBanner.prop('id');
+		
+		if(theID.indexOf('res-proj') >= 0) {
+			setTimeout(function(){$('.mountsinai-container').css('margin-top', 0);}, 300);
+				
+		}
+		else if(theID.indexOf('juhan-vid') >= 0) {
+			setTimeout(function(){$('.partners').css('margin-top', 0);}, 300);
+		}
 
 		videoPlayer.html(videos[videoName]['source']);
 		var videoFrame = $(videoPlayer.children('iframe')[0]);
@@ -30,8 +40,11 @@ $( document ).ready(function() {
 		if(sWidth >= 760) {
 			videoBanner.css('opacity', 0);
 		}
+		else {
+			console.log(videoText);
+			videoBanner.css('min-height', 750);	
+		}
 		
-		console.log(sWidth);
 		if(sWidth <= videos[videoName]['width'] + 40) {
 			rw = videos[videoName]['width'];
 			rh = videos[videoName]['height'];

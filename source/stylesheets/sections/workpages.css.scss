@@ -12,6 +12,10 @@
 		width:auto;
 		height: auto;
 		margin: 0 auto;
+		
+		@media only screen and (max-width: 750px) {
+			margin-bottom: 15px;
+		}
 
 	}
 
@@ -56,11 +60,59 @@
 		}
 
 		@media only screen and (max-width: 600px) {
-			bottom: 20px;
+			bottom: 25px;
+		}
+		@media only screen and (max-width: 400px) {
+			bottom: 15px;
 		}
 
-		@media only screen and (max-width: 450px) {
-			bottom: 15px;
+	}
+	
+	.projects-row {
+		padding-left:12px;	
+	}
+	
+	.projects-row a {
+		@media only screen and (max-width: 640px) {
+			padding: 0px 5px;
+			margin-bottom: 10px;
+		}
+	}
+	
+	.projects-row .project-item {
+		padding: 30px !important;
+		margin-right: 5px;
+		margin-left: 0px;
+		
+		@media only screen and (max-width: 1120px) {
+			min-height: 223px;	
+		}
+		@media only screen and (max-width: 975px) {
+			//min-height: 289px;	
+			padding:15px !important;
+		}
+		@media only screen and (max-width: 890px) {
+			min-height: 250px;	
+			padding:15px !important;
+		}
+		@media only screen and (max-width: 773px) {
+			min-height: 300px;	
+			//padding: 15px !important;	
+		}
+		
+		@media only screen and (max-width: 640px) {
+			min-height: 204px;
+			margin-left:0px;
+			margin-right:0px;
+			margin: 0 auto;
+			padding: 30px !important;
+		}
+		
+		&:nth-child(1) {
+			//margin-left:0px;
+		}
+		&:nth-child(3) {
+			//margin-right: 0px;	
 		}
 	}
 }
@@ -72,7 +124,7 @@
 	text-align: center;
 	font-style: italic;
 	font-size: 32px;
-	padding: 125px 10px;
+	padding: 150px 10px;
 	@media only screen and (max-width: 560px) {
 		font-size: 23px;
 	}
@@ -90,7 +142,7 @@
 	margin: 0 auto;
 	max-width: 1100px;
 	text-align: center;
-	padding: 100px 10px;
+	padding: 150px 10px;
 	margin-bottom: 40px;
 	margin-top: 40px;
 
@@ -203,7 +255,8 @@
 			font-size: 32px;
 			text-align: center;
 			padding-bottom: 10px;
-			@media only screen and (max-width: 860px) and (min-width: 640px) {
+			vertical-align: text-bottom;
+			@media only screen and (max-width: 925px) and (min-width: 640px) {
 				font-size: 23px;
 			}
 		}
@@ -385,7 +438,7 @@
 	}
 	
 	@media  only screen and (max-width: 630px) {
-			height: 530px;
+			height: 510px;
 	}
 	
 	.left-content {
@@ -399,7 +452,7 @@
 		@media  only screen and (max-width: 730px) {
 			width: 100%;
 			z-index: 10;
-			
+			padding-left: 20px;
 		}
 		
 		.button {
@@ -425,12 +478,22 @@
 				font-size: 18px;
 				line-height: 22px;
 				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+			
+			@media only screen and (max-width: 750px) {
+				width: 100%;	
 			}
 		}
 		
 		.medium-quote {
 				padding-top: 20px;
 				max-width: 85%;
+				@media only screen and (max-width: 750px) {
+					margin: 0 auto;	
+					max-width: 100%;
+				}
 				.quote-author {
 					padding-top: 20px;	
 				}
@@ -456,7 +519,7 @@
 		
 		@media  only screen and (max-width: 630px) {
 			width: 100%;
-			top: 280px;
+			top: 300px !important;
 			z-index: 1;
 			top: 319px;
 			height: 210px;
@@ -592,7 +655,20 @@
 	
 	.small-title {
 		font-weight: 100;	
+		@media only screen and (max-width: 615px) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		@media only screen and (max-width: 520px) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+		@media only screen and (max-width: 449px) {
+			font-size: 22px;
+			line-height: 28px;
+		}
 	}
+	
 }
 
 
@@ -605,6 +681,9 @@
 		width: 894px;
 		display: none;
 		padding: 20px 20px;
+		@media only screen and (max-width: 894px) {
+			width: auto;	
+		}
 	}
 	.video-banner {
 		width: 100%;
@@ -666,7 +745,11 @@
 			.video-summary {
 				z-index: 20;
 				min-width: 329px;
-				max-width: 70%;	
+				width: 70%;	
+				@media only screen and (max-width: 750px) {
+					width: calc(100% - 50px);
+					min-width: 0px;
+				}
 				p {
 					font-size: 22px;
 					line-height: 30px;	
@@ -695,7 +778,7 @@
 			
 			@media only screen and (max-width: 760px) {
 				left: calc(50% - 50px);
-				bottom: -250px;
+				bottom: -375px;
 			}
 			
 			.play {
@@ -807,5 +890,26 @@
 		margin-bottom: 100px;
 	}
 	
+	.projects-row .project-item {
+		.top-description {
+			@media only screen and (max-width: 1194px) and (min-width: 654px) {
+				min-height: 74px;	
+			}
+			@media only screen and (max-width: 654px) and (min-width: 640px) {
+				min-height: 79px;	
+			}
+		}
+	}
+	
+}
+
+#healthcare {
+	.projects-row .project-item {
+		.top-description {
+			@media only screen and (max-width: 674px) and (min-width: 640px) {
+				min-height: 56px !important;	
+			}
+		}
+	}
 }
 
