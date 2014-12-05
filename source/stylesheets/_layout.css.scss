@@ -142,7 +142,7 @@ div.value {
 
 #site-overlay {
 	#studio-header {
-		height: 138px;
+		height: 85px;
 		background-color: rgba(9, 9, 9, .875);
 		overflow-x: auto;
 		transition: height 300ms ease-in-out;	
@@ -154,13 +154,13 @@ div.value {
 		.studio-head-container {
 			width: auto;
 			min-width: 985px; //change this number if we add more items to the nav
-			height: 138px;
+			height: 60px;
 			padding: 15px 3.125em;
 			position: relative;
 			border-radius: 3px;
 			
 			.studio-head-item {
-				height: 107px;
+				height: 50px;
 				width: 277px;
 				margin-right: 15px;
 				display: inline-block;
@@ -189,19 +189,22 @@ div.value {
 				
 				&#team .image-box{
 					background-image: image-url('studio-nav/team.png');
+					background-position-y: -38px;
 				}
 				
 				&#careers .image-box{
 					background-image: image-url('studio-nav/careers.png');
+					background-position-y: -40px;
 				}
 				
 				&#live .image-box{
 					background-image: image-url('studio-nav/live.png');
+					background-position-y: -39px;
 				}
 				
 				.studio-title {
 					position: absolute;
-					bottom: 15px;
+					bottom: 5px;
 					left: 25px;
 					font-size: 1.3em;
 					color: #fdfdfd;

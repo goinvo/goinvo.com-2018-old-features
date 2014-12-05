@@ -23,6 +23,15 @@
 .s3_sync
 
 
+<<<<<<< HEAD
+source/videos/beth-live.webmhd.webm
+
 *.mp4
 
+*.haml
+
+=======
+*.mp4
+
+>>>>>>> master
 *.webm

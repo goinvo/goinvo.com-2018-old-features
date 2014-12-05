@@ -74,7 +74,7 @@
 				- if currentPage.include? "studio"
 					%header#studio-header
 						.studio-head-container
-							%a{:href => "http://goinvo.com/studio/team"}
+							%a{:href => "/studio/team"}
 								-if currentPage.include? "team"
 									.studio-head-item.active-studio#team
 										.image-box
@@ -83,7 +83,7 @@
 									.studio-head-item#team
 										.image-box
 										.studio-title Team
-							%a{:href => "http://www.goinvo.com/studio/careers"}
+							%a{:href => "/studio/careers"}
 								-if currentPage.include? "careers"
 									.studio-head-item.active-studio#careers
 										.image-box
@@ -92,7 +92,7 @@
 									.studio-head-item#careers
 										.image-box
 										.studio-title Careers
-							%a{:href => "http://www.goinvo.com/studio/live"}
+							%a{:href => "/studio/live"}
 								-if currentPage.include? "live"
 									.studio-head-item.active-studio#live
 										.image-box
