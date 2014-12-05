@@ -1,96 +1,63 @@
 - content_for(:title) do
-	= "StaffPlan..."
+	= "Staffplan - Lightweight, informative management of your team’s work."
 - content_for(:page_head) do
-	= stylesheet_link_tag "sections/simple-case-studies"
+	= stylesheet_link_tag "sections/complex-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "StaffPlan..."}/
+	%meta{:name => "description", :content => "Staffplan - Lightweight, informative management of your team’s work."}/
 	%meta{:name => "keywords", :content => "staffplan"}/
-- client = client_for_name("Health Axioms")
+- client = client_for_name("Staffplan")
 
-#content-area.caseStudyContent
-	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} StaffPlan
+%article#complex-case.staffplan
+	%header.hero
+		.row
+			.medium-6.small-12.small-centered.columns
+				.title
+					%h2 StaffPlan:
+					%h3 Lightweight, informative management of your team’s work
+	.row#mainContent
+		.medium-6.small-12.small-centered.columns
+			%p StaffPlan is a web-based service that allows employees quick data entry of how they plan to spend their time, and how they actually spend their time. With these inputs StaffPlan provides a variety of reports and visualizations to help:
+			%ul
+				%li Employees can suggest projects they would like to work on, creating a bi-directional flow of making and taking assignments
+				%li Employees structure their work and stay accountable to themselves
+				%li Managers understand their teams’ plans and assignments
+				%li Managers see what actually happened
+				%li Resource managers see the future availability of resources for long-term planning
+			%p StaffPlan is a lightweight, fast-to-use tool that provides meaty data and information in a transparent and open way for the modest time investment of its simple use.
 
-		%h6.subheader Results
+			%h2 Creation
+			%p As a digital design consultancy, Involution Studios has a staff of creative and technology professionals who work with one client for a period of time, then later moving on to work with another. Initially, to manage this, we used the kind of tools that many managers deploy on an ad hoc basis in these cases: spreadsheets, sticky notes, or in their head. We could not find a software tool that helped us to plan around, manage, and optimize the workflow of our team that was also featherweight in order to avoid being intrusive or time-consuming. So, we decided to build it.
+			
+			.center-image-content.large
+				%img.small-top-margin{:src => "../../images/clients/staffplan/staffplan_ss_personal.png", :alt => "Each staff has an individual page, where all stakeholders can enter plans for that staff member."}
+				.caption Each staff has an individual page, where all stakeholders can enter plans for that staff member.
+			
+			%p StaffPlan answers essential questions that project managers have, like:
+			%ul 
+				%li Who needs work and when do they need it?
+				%li What is my organization's work program over the next 3 months? Over the next fiscal year?
+				%li Do I have the talent necessary to execute my project?
+				%li Is my project front-end loaded? Backend loaded?
+				%li Do I have an agreement between staff and me on the level of effort?
+				%li Who is available for high value tasks?
+				%li How good are my staff at managing their own work programs?
+			
+			.center-image-content.large
+				%img.small-top-margin{:src => "../../images/clients/staffplan/staffplan_ss_rollup.png", :alt => "Manager pages supply at-a-glance summary data of all the staff in each department. "}
+				.caption Manager pages supply at-a-glance summary data of all the staff in each department. 
 
-		%p Mantras for patients, their clinicians, and the new digital healthcare system to make wonderful change.
+			%p.bottom Involution’s leadership, along with creative director Eric Benoit and Ruby developer Rob Sterner, created requirements and made the StaffPlan system. The goal was to help leadership plan and manage resources better while giving staff a view into the future work that is coming for them, along with tools for planning and taking ownership of their own time.
 
-		%p.quote We need to prescribe these simple, beautiful recipes for health to our patients and our loved ones.
-		%p.caption.no-bottom-margin Roni Zeiger, M.D., former Chief Health Strategist at Google, co-founder of Smart Patients
+			%h2.no-bottom-margin Philosophy
+			%h5 Managing your future.
+			%p We believe that processes and systems that are part of the creationary process need to be lightweight, or we shouldn’t have them at all. Both our internal work and that we do with our clients is punctuated by tools that provide a flexible, lean exoskeleton. We also teach employees to think of themselves as entrepreneurs and, where StaffPlan is concerned, help them think like their own personal CFO’s with regard to their work and impact on the company. This reflects the way that we run a small business but also how we believe creative people and projects should be managed. We brought that ethos to our work on StaffPlan, and the way it works is supportive of that kind of more modern and adaptable process.
+			%p Another benefit of creating StaffPlan is letting our team dabble in new technologies and use the creationary process as part of their education as individuals, as well as our growth as a team. The more of these things - and different types of things - that we do, the better we all get.
+			
+			%h2 Outcome
+			%p As open source acolytes, we quietly released StaffPlan into the wild. It’s freely available on <a href = "https://github.com/rescuedcode/staffplan/">GitHub</a> via an Apache 2 license (the refactored version with knockout.js is currently being built: <a href = "https://github.com/rescuedcode/staffplan_redux">https://github.com/rescuedcode/staffplan_redux</a>). A handful of companies discovered and are using it. For our own internal studio management, StaffPlan has proven invaluable in providing management with information and tools to better manage the firm while giving employees a simple structure for adding guidance to their work. Our leadership can spend time crafting the best fit between staff and assignment instead of trying to get on top of basic organization. As a small investment of time and money to this point we are content with StaffPlan largely being a tool for our own internal use. Depending on the future development we may attempt to market it for broader adoption and use.
+			%p.bottom To try StaffPlan for yourself visit <a href = "http://www.staffplan.com">www.staffplan.com</a>.
 
-		%p.quote People are thirsty for health advice. They read, search online, and wonder: Am I doing OK? Am I doing the right things for my health? What if, when someone asks the universe (read: the internet), for health advice, they got back a quick tip, backed by evidence?
-		%p.caption Susannah Fox, Digital Health Strategist
-
-		%h6.subheader Recognition
-
-		%p.no-bottom-margin <a href="http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss">If A Picture's Worth 1,000 Words, Could It Help You Floss?</a>
-		%p.caption Nancy Shute, NPR.org
-
-		%p.no-bottom-margin <a href="http://psqh.com/news-health-axioms-turning-advice-into-lifestyle">Health Axioms: Turning Advice into Lifestyle</a>
-		%p.caption Patient Safety &amp; Quality Healthcare
-
-		%h6.subheader Practice Areas
-		%p.small-bottom-margin Consumer Health, Open Source
-
-		%h6.subheader Project Type
-		%p.small-bottom-margin Research, Storytelling, Illustration, Product Design
-
-		%h6.subheader Process
-		%p.small-bottom-margin Learning, Envision, Blueprint, Craft, Build
-
-		%h6.subheader Price
-		%p $25k &ndash; $50k
-
-		.similar-project-container
-			%h6.subheader Have a similar project?
-			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
-
-	.projectDetails
-		%div
-			%img{alt: "Health Axioms", src: "../../images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"}
-
-		%h4 Overview
-		%p Health Axioms gives you habits to improve your health and well-being, literally changing your life. There are 40 cards. On the front of each is a beautiful illustration reminding you of a specific, healthful axiom. On the back are essential insights and tips that help you bring the axiom into your everyday life.
-
-		%h4 Creation
-		%p Our Chief Creative Officer, Juhan Sonin, was trying to live healthier. While he discovered an abundance of tips and resources on the Internet they were far-flung and temporal. While his doctor offered sage advice that also proved impermanent after the doctor’s visit and within the pace of everyday life. He needed something to take healthful tips and inject them in a more lasting way.
-
-		%h4 Philosophy
-		%p We are part of a global movement to shift the healthcare system to:
-		%ul
-			%li Non-invasive personal diagnostics
-			%li Highly specialized clinicians that work closely with patients
-			%li Self-monitoring, self-empowered patients
-
-		%p Realizing these ideals is equal parts smart technology, healthcare reform, and everyday common sense. Living the Health Axioms focuses on the common sense part, taking easy-to-understand and realistic-to-implement practices that can become part of our lives in a sustainable way. The outcome directly impacts our health, is smarter for our lives, and is even better for our pocketbooks.
-
-		%p It all starts with awareness. That’s where the Health Axioms come in.
-
-		%p Released to little fanfare, the Health Axioms quickly took off and enjoyed viral success. Featured in media outlets like National Public Radio and talked about by healthcare thought leaders, Health Axioms are in use at a variety of hospital settings including in the clinics in San Mateo, CA, New York City, and Boston, MA. Along with requests for other form factors like a digital app and large, wall-sized installations, the Health Axioms in their current papyrus form are being enjoyed by healthcare organizations, clinicians, patients, and just everyday people around the world.
-
-		%p <a href="http://healthaxioms.com">www.healthaxioms.com</a>
-
-		%div
-			%img.with-caption{alt: "Health Axioms card Move More.", src: "../../images/clients/health-axioms/health-axioms-move-more-card.jpg"}/
-		%p.caption Easy-to-use, to take, to share.
-
-		%div
-			%img.with-caption{alt: "Health Axioms featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/health-axioms/health-axioms-clinic-installations.jpg"}/
-		%p.caption Possible Health Axioms installations inside clinics.
-
-		%div
-			%img.with-caption{alt: "Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.", src: "../../images/clients/health-axioms/health-axioms-holding-card.jpg"}/
-		%p.caption Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.
-
-		%div
-			%img.with-caption{alt: "Grouping Health Axioms into specialized packs like managing diabetes or weight loss.", src: "../../images/clients/health-axioms/health-axioms-topic-packs.jpg"}/
-		%p.caption Grouping Health Axioms into specialized packs like managing diabetes or weight loss.
-
-		%div
-			%img.with-caption{alt: "Sketching new axiom concepts before moving to digital illustrations.", src: "../../images/clients/health-axioms/health-axioms-sketches.jpg"}/
-		%p.caption Sketching new axiom concepts before creating the digital illustrations.
-
-#next-project.row
+.row#next-project
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
