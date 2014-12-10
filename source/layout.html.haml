@@ -20,8 +20,6 @@
 		- bodyClass = "healthcare"
 	- elsif currentPage.include? "enterprise"
 		- bodyClass = "enterprise"
-	- elsif currentPage.include? "products"
-		- bodyClass = "products"
 	- elsif currentPage.include? "studio"
 		- bodyClass = "studio"
 	- elsif currentPage.include? "contact"
@@ -48,8 +46,6 @@
 								.nav-element Healthcare
 							%a.nav-button.enterprise{:href => asset_url('enterprise')} 
 								.nav-element Enterprise
-							%a.nav-button.products{:href => asset_url('products')} 
-								.nav-element Products
 							%a.nav-button.studio{:href => asset_url('studio/team')}
 								.nav-element Studio
 							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')}
