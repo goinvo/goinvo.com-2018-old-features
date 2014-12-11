@@ -101,7 +101,7 @@ header.hero {
 	}
 }
 
-section, #visuals .content {
+section, #sec11 .content {
 	max-width: 480px;
 	max-width: 48rem;
 	margin: 4em auto 0;
@@ -114,18 +114,18 @@ section, #visuals .content {
 		display: none;
 		opacity: 0;
 	}
-	&#visuals {
+	&#sec11 {
 		margin-top: 0;
 		padding: 0;
 		max-width: 100%;
 	}
 }
 
-#visuals > .row {
+#sec11 > .row {
 	margin: 1em auto 0;
 }
 
-#visuals .ranking-explanation {
+#sec11 .ranking-explanation {
 	list-style-type:decimal;
 }
 
