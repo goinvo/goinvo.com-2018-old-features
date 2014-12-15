@@ -9,10 +9,7 @@ div.loading {
 #the-studio {
 	.hero {
 		background-image: url('../../images/studio/studio2.jpg');
-		padding: 33.33% 1em 1% !important;
-        @media only screen and (max-width: 610px) {
-          padding: 60% 1em 1% !important;
-      }
+		
 	}
 
 	.content {

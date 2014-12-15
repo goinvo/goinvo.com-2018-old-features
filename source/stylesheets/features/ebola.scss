@@ -284,16 +284,23 @@ a.bottom-link {
 	position: relative;
 	overflow: hidden;
 	margin-bottom: -5px;
+	border-top: 5px solid #373D3D;
+	
+	.photo-container {
+		
+	}
+	
 	.photo-container {
 		width: 100%;
 		height:305px;
-		background: url(../../images/features/ebola/health_ax.jpg) no-repeat;
-  	background-size: cover;
-  	background-position: center;
+		background-image: image-url('features/ebola-care-guideline/haz_zoom_bg.png');
+		background-position: 85% 20%;
+		background-color: rgb(229, 245, 245);
+  		background-size: cover;
 		transform: scale(1, 1);	
 		transition: transform 400ms ease-in-out;
 		
-	}
+	}	
 	
 	&:hover {
 		.photo-container {
@@ -310,11 +317,16 @@ a.bottom-link {
 		bottom: 60px;
 		left: 60px;
 		color: $white;
-		width: 33%;
+		width: 66%;
 		min-width: 500px;
 		transition: 400ms ease-in-out;
 		h2 {
 			margin-bottom: 0.25em;	
+			color: #373D3D;
+		}
+		
+		h4 {
+			color: rgb(85, 93, 98);
 		}
 
 		h2, h4 {
