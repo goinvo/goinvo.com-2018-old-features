@@ -153,6 +153,7 @@ form {
 		//Fix for OSX Font Rendering on Dark BG's
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		transition: 500ms ease-in-out;
 	}
 
 	input[type=submit] {
@@ -162,6 +163,7 @@ form {
 	button:hover, input[type=submit]:hover {
 		background-color: transparentize($navy, 0.2);
 		color: transparentize($white, 0.0);
+		transform: scale(1.1, 1.1);
 	}
 
 	button.attachb {
@@ -173,6 +175,7 @@ form {
 	button.attach:hover {
 		background-color: transparentize($gray, .5);
 		color: transparentize($gray, 0);
+		transform: scale(1.1, 1.1);
 	}
 }
 
