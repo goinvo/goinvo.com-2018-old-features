@@ -197,6 +197,10 @@ section {
 		max-width: 60%;
 		padding: 0 5rem;
 	}
+	> a.block {
+		padding-right: 0px;	
+		padding-left: 0px;
+	}
 	&#section1 hr {
 		border-color: $orange;
 	}
@@ -209,9 +213,14 @@ section {
 	&#section4 hr {
 		border-color: $green;
 	}
-	&#section5 hr {
-		border-color: $blue;
-		@include clearfix();
+	&#section5 {
+		hr {
+			border-color: $blue;
+			@include clearfix();
+		}
+		h3 {
+			margin-top: 1em;	
+		}
 	}
 }
 

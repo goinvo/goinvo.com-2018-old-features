@@ -32,6 +32,10 @@ function generateEventHTML( data ) {
     var stop = 0;
 	var option = {day: "numeric", month: "short", year: "2-digit"};
     try {
+	var username = data.user.avatar;
+	if(username.indexOf("http://www.health2con.com/hxr/files/2014/03/involutionstudios1.png") >=0) {
+		username = "http://www.goinvo.com/images/invo_logo.jpg";	
+	}
     if(data.type == "twitter") {
 		var htmlContent = data.content;
 		var http = htmlContent.indexOf('http');
@@ -46,12 +50,12 @@ function generateEventHTML( data ) {
 		else {
 			htmlContent = data.content;	
 		}
-		console.log(htmlContent);
+		//console.log(htmlContent);
         if(data.media_url != undefined && data.media_url.length > 0) {
-            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "<a href = '" + data.url + "'><img class = 'twitter-photo' src = '" + data.media_url + "'></a></p><div class = 'social-links'><img src = '../../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + username + ")'></div></a></div>";
         }
         else {
-            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "</p><div class = 'social-links'><img src = '../../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+            social += "<div class = 'social-card tweet' data-link = '" + data.url + "'> <p class = 'contents'>" + htmlContent + "</p><div class = 'social-links'><img src = '../../images/icon-twitter.svg'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>" + "&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + username + ")'></div></a></div>";
         }
     }
     else if(data.type == "flickr") {
@@ -60,29 +64,29 @@ function generateEventHTML( data ) {
 		temp = temp.substring(start);
 		stop = temp.indexOf("width") -2;
 		temp = temp.substring(0,stop); // Remove flickr's generated html so I can do my own
-        social += "<div class = 'social-card photo' data-link = '" + data.url + "' ><img class = 'flickr-photo' src = '" + temp + "' width = '100%' height = 'auto'><p class = 'caption'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-flickr.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username  + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+        social += "<div class = 'social-card photo' data-link = '" + data.url + "' ><img class = 'flickr-photo' src = '" + temp + "' width = '100%' height = 'auto'><p class = 'caption'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-flickr.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username  + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + username + ")'></div></a></div>";
     }
     else if(data.type == "github") {
-        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-github.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+        social += "<div class = 'social-card github' data-link = '" + data.url + "'> <p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-github.svg' width = '25px' height = 'auto'></div> <a href = '" + data.url + "' target = '_blank' class = 'social-handle'>&#64;" + data.username + "<br>" +  new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".")  + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + username + ")'></div></a></div>";
     }
     else if(data.type == "soundcloud") {
-        social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-soundcloud.svg' width = '35px' height = 'auto'></div><a href = '" + data.url + "' class = 'social-handle'>" + data.username + "<br>" + new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + data.user.avatar + ")'></div></a></div>";
+        social += "<div class = 'social-card soundcloud' >" + data.content_embed + "<p class = 'contents'>" + data.content + "</p><div class = 'social-links'><img src = '../../images/icon-soundcloud.svg' width = '35px' height = 'auto'></div><a href = '" + data.url + "' class = 'social-handle'>" + data.username + "<br>" + new Date(data.date).toLocaleDateString("en-GB", option).split(" ").join(".") + "</a><a href ='" + data.url + "'><div class = 'avatar' style = 'background-image:url(" + username + ")'></div></a></div>";
     }
     }
     catch(err){
-        console.log("-------");
-		console.log("Error: " + err);
-		console.log("Date " + data.date);
-		console.log("URL: " + data.url);
-		console.log("Username: " + data.username);
-		console.log("User Avatar: " + data.user.avatar);
-		console.log("Content: " + data.content);
-		console.log("Content Embed: " + data.content_embed);
-		console.log("Media URL (Twitter): " + data.media_url);
-		
-        console.log("Error: The following event object is throwing an error when trying to access its contents. The most likely cause is that the event was added to the event database before the event's user was added to the user database. (Note: just adding a user to the twitter list or zapier is not enough when adding a new employee. You must also add the user to the user database. If there are event objects that do not contain a user object, you must either delete the event object or add a user object following the same syntax as other events.");
-        console.log(data);
-        console.log("-------");
+//        console.log("-------");
+//		console.log("Error: " + err);
+//		console.log("Date " + data.date);
+//		console.log("URL: " + data.url);
+//		console.log("Username: " + data.username);
+//		console.log("User Avatar: " + username);
+//		console.log("Content: " + data.content);
+//		console.log("Content Embed: " + data.content_embed);
+//		console.log("Media URL (Twitter): " + data.media_url);
+//		
+//        console.log("Error: The following event object is throwing an error when trying to access its contents. The most likely cause is that the event was added to the event database before the event's user was added to the user database. (Note: just adding a user to the twitter list or zapier is not enough when adding a new employee. You must also add the user to the user database. If there are event objects that do not contain a user object, you must either delete the event object or add a user object following the same syntax as other events.");
+//        console.log(data);
+//        console.log("-------");
     }
     return social;
 }

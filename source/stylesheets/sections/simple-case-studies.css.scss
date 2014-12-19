@@ -51,7 +51,6 @@
 	
 	p {
 		line-height: 1.36363636em;
-		letter-spacing: 0.025em;
 		&.quote {
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
@@ -86,6 +85,7 @@
 	
 	li {
 		margin-top: 15px;
+		line-height: 1.36363636em;
 	}
 }
 

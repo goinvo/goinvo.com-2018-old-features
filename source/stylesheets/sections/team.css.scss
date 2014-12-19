@@ -28,6 +28,12 @@ div.team {
 
 #team-design-button, #team-button {
 	cursor: pointer;
+	transition: 500ms ease-in-out;
+	
+	&:hover {
+		transform: scale(1.1, 1.1);	
+		background-color: rgba(255, 255, 255, 0.2);
+	}
 }
 
 .team-cards, .sidebar {
@@ -69,7 +75,7 @@ div.team {
 	.bio {
 		margin-top: 40px;
 		width: 50%;
-		line-height: 1.36363636em;
+		line-height: 1.25em;
 	}
 	
 	.careerButton, {

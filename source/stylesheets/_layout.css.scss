@@ -9,6 +9,11 @@ html {
 	background: $black;
 }
 
+html, html a {
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);	
+}
+
 body {
 	background: $white;
 }
@@ -84,8 +89,7 @@ body {
     
     p.caption, .video h3.quote, .photo h3.quote {
         font-size: 1.1em;
-        line-height: 1.1em;
-        letter-spacing: 1px; 
+        line-height: 1.3em;
     }
 
 	.photo, .video {

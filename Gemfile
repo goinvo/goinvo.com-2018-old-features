@@ -1,12 +1,12 @@
 source "https://rubygems.org"
-
+gem 'colorize','0.7.2'
 gem "middleman"
-gem "middleman-livereload",   "3.2.1"
+gem "middleman-livereload"
 gem "middleman-smusher"
 gem "haml"
 gem "compass"
 gem "middleman-autoprefixer"
-gem "middleman-s3_sync"
+gem "middleman-s3_sync","3.0.35"
 gem "middleman-s3_redirect"
 
 require 'rbconfig'
