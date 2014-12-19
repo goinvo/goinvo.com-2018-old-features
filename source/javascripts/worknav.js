@@ -118,6 +118,12 @@ $( document ).ready(function() {
 				"image" : "scsk.jpg",
 				"next-id" : "healthcare"
 			},
+			"telerik" : {
+				"title" : "Telerik",
+				"url" : "/enterprise/telerik/",
+				"image" : "telerik.jpg",
+				"next-id" : "healthcare"
+			},
 			"enterprise" : {
 				"title" : "Enterprise",
 				"url" : "/enterprise/",
@@ -160,7 +166,7 @@ $( document ).ready(function() {
 			"design-axioms" : {
 				"title" : "Design Axioms",
 				"url" : "/products/design-axioms/",
-				"image" : "facio.jpg",
+				"image" : "design-axioms.jpg",
 				"next-id" : "staff-plan"
 			},
 //			"paintrackr" : {
