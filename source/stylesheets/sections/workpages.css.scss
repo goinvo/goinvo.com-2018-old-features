@@ -108,13 +108,6 @@
 			margin: 0 auto;
 			padding: 30px !important;
 		}
-		
-		&:nth-child(1) {
-			//margin-left:0px;
-		}
-		&:nth-child(3) {
-			//margin-right: 0px;	
-		}
 	}
 }
 
@@ -176,7 +169,6 @@
 
 
 .projects-row {
-	max-width: 100%;
 	width: auto;
 	margin: 0 auto;
 	padding: 0px 5px;
@@ -901,5 +893,157 @@
 			width: 100%;
 		}
 	}
+}
+
+.open-source-projects {
+	width: 100%;
+	padding: 40px 0px;
+	padding-top: 50px;
+	margin: 40px 0px;
+	margin-bottom: 190px;
+	background-color: #F0F0F0;
+	
+	.open-row {
+		width: auto;
+		margin: 0 auto;
+		padding: 0px 5px;
+		max-width: 1280px;	
+		padding-top: 40px;
+		
+		&:nth-of-type(1) {
+			padding-top: 0px;	
+		}
+		
+		
+		@media only screen and (max-width: 740px) {
+			padding-top: 0px;	
+		}
+		
+		h1 {
+			padding-left: 5px;
+			@media only screen and (max-width: 740px) {
+				text-align: center;
+				margin-bottom: 1em;
+			}
+		}
+		
+		
+		.item {
+			width: 33%;
+			vertical-align: top;
+			display: inline-block;
+			max-width: 410px;
+			padding: 0px 5px;
+			padding-right: 20px;
+			height: 150px; 
+			
+			@media only screen and (max-width: 1230px) {
+				height: 170px;
+			}
+			
+			@media only screen and (max-width: 1030px) {
+				//height: 220px;
+			}
+			
+			@media only screen and (max-width: 990px) {
+				height: 235px;
+			}
+			
+			@media only screen and (max-width: 790px) {
+				//height: 325px;
+			}
+			
+
+			@media only screen and (max-width: 740px) {
+				display: block;
+				padding: 0px 5px;
+				width: 100%;
+				margin: 0 auto;
+				height: 150px;
+				margin-bottom: 20px;
+			}
+			
+			
+			.icon, .info {
+				display: inline-block;
+				vertical-align: top;
+			}
+			.icon {
+				width: 100px;
+				height: 100px;
+				background-color: gray;
+				border-radius: 100px;
+				
+				@media only screen and (max-width: 960px) {
+					width: 75px;
+					height: 75px;
+					border-radius: 75px;
+				}
+				
+				@media only screen and (max-width: 790px) {
+					width: 50px;
+					height: 50px;
+					border-radius: 50px;
+				}
+				@media only screen and (max-width: 740px) {
+					width: 100px;
+					height: 100px;
+					border-radius: 100px;
+				}
+			}
+			.info {
+				width: calc(100% - 105px);
+				padding-left: 15px;
+				
+				@media only screen and (max-width: 960px) {
+					width: calc(100% - 80px);
+				}
+				@media only screen and (max-width: 790px) {
+					width: calc(100% - 55px);
+				}
+				@media only screen and (max-width: 740px) {
+					width: calc(100% - 105px);
+				}
+				
+				.title {
+					font-size: 2em;
+				}
+				
+				.website, .demo, .github, .ios {
+					display: inline-block;
+					margin-bottom: 5px;
+					margin-top: 2px;
+					a {
+						margin-right: 5px;
+						&:last-of-type {
+							margin-right: 0px;	
+						}
+						.icon {
+							width: 20px;
+							height: 20px;
+							display: inline-block;
+						}
+					}
+				}
+				.ios {
+					
+				}
+				.website {
+					
+				}
+				.demo {
+
+				}
+				.github {
+
+				}
+				.description {
+					margin-top: 2px;
+				}
+			}
+			
+		}
 	}
+	
+}
 

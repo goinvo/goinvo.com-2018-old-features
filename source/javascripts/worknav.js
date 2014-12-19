@@ -116,7 +116,7 @@ $( document ).ready(function() {
 				"title" : "SCSKcorporation",
 				"url" : "/enterprise/scskcorporation/",
 				"image" : "scsk.jpg",
-				"next-id" : "healthcare"
+				"next-id" : "telerik"
 			},
 			"telerik" : {
 				"title" : "Telerik",
