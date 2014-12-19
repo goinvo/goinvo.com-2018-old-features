@@ -143,7 +143,7 @@ $( document ).ready(function() {
 				"title" : "Health Axioms",
 				"url" : "/products/health-axioms/",
 				"image" : "health-axioms.jpg",
-				"next-id" : "staff-plan"
+				"next-id" : "design-axioms"
 			},
 //			"the-digital-life" : {
 //				"title" : "The Digital Life",
@@ -157,12 +157,12 @@ $( document ).ready(function() {
 //				"image" : "facio.jpg",
 //				"next-id" : "design-axioms"
 //			},
-//			"design-axioms" : {
-//				"title" : "Design Axioms",
-//				"url" : "/products/design-axioms/",
-//				"image" : "facio.jpg",
-//				"next-id" : "paintrackr"
-//			},
+			"design-axioms" : {
+				"title" : "Design Axioms",
+				"url" : "/products/design-axioms/",
+				"image" : "facio.jpg",
+				"next-id" : "staff-plan"
+			},
 //			"paintrackr" : {
 //				"title" : "PainTrackr",
 //				"url" : "/products/paintrackr/",

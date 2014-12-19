@@ -1,36 +1,22 @@
 - content_for(:title) do
-	= "Design Axioms..."
+	= "Design Axioms - The Design Axioms describe the minimal rule set for designing interfaces."
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "Design Axioms..."}/
-	%meta{:name => "keywords", :content => "design axioms, design"}/
+	%meta{:name => "description", :content => "The Design Axioms describe the minimal rule set for designing interfaces."}/
+	%meta{:name => "keywords", :content => "design axioms, design, ruleset, cards, axiom"}/
 - client = client_for_name("Design Axioms")
 
 #content-area.caseStudyContent
 	.projectData
 		%h1.client{style: "color: #{client.primary_color}"} Design Axioms
 
-		%h6.subheader Results
-
-		%p Mantras for patients, their clinicians, and the new digital healthcare system to make wonderful change.
-
-		%p.quote We need to prescribe these simple, beautiful recipes for health to our patients and our loved ones.
-		%p.caption.no-bottom-margin Roni Zeiger, M.D., former Chief Health Strategist at Google, co-founder of Smart Patients
-
-		%p.quote People are thirsty for health advice. They read, search online, and wonder: Am I doing OK? Am I doing the right things for my health? What if, when someone asks the universe (read: the internet), for health advice, they got back a quick tip, backed by evidence?
-		%p.caption Susannah Fox, Digital Health Strategist
-
 		%h6.subheader Recognition
-
-		%p.no-bottom-margin <a href="http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss">If A Picture's Worth 1,000 Words, Could It Help You Floss?</a>
-		%p.caption Nancy Shute, NPR.org
-
-		%p.no-bottom-margin <a href="http://psqh.com/news-health-axioms-turning-advice-into-lifestyle">Health Axioms: Turning Advice into Lifestyle</a>
-		%p.caption Patient Safety &amp; Quality Healthcare
-
+		%p.quote.no-top-margin.no-top-padding Overall, Design Axioms is an excellent reference deck for the beginning interface designer and provides a good set of principles to start building an educational foundation upon.
+		%p.caption Dominic Flask, Editor at Designers Review of Books
+		
 		%h6.subheader Practice Areas
-		%p.small-bottom-margin Consumer Health, Open Source
+		%p.small-bottom-margin UX Strategy, Open Source
 
 		%h6.subheader Project Type
 		%p.small-bottom-margin Research, Storytelling, Illustration, Product Design
@@ -47,48 +33,50 @@
 
 	.projectDetails
 		%div
-			%img{alt: "Health Axioms", src: "../../images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"}
+			%img.with-caption{alt: "Design Axioms", src: "../../images/clients/design-axioms/all_cards.jpg"}/
+		%p.caption The Design Axioms set of 21 cards is a framework for design problem solving.
 
 		%h4 Overview
-		%p Health Axioms gives you habits to improve your health and well-being, literally changing your life. There are 40 cards. On the front of each is a beautiful illustration reminding you of a specific, healthful axiom. On the back are essential insights and tips that help you bring the axiom into your everyday life.
-
-		%h4 Creation
-		%p Our Chief Creative Officer, Juhan Sonin, was trying to live healthier. While he discovered an abundance of tips and resources on the Internet they were far-flung and temporal. While his doctor offered sage advice that also proved impermanent after the doctor’s visit and within the pace of everyday life. He needed something to take healthful tips and inject them in a more lasting way.
-
-		%h4 Philosophy
-		%p We are part of a global movement to shift the healthcare system to:
-		%ul
-			%li Non-invasive personal diagnostics
-			%li Highly specialized clinicians that work closely with patients
-			%li Self-monitoring, self-empowered patients
-
-		%p Realizing these ideals is equal parts smart technology, healthcare reform, and everyday common sense. Living the Health Axioms focuses on the common sense part, taking easy-to-understand and realistic-to-implement practices that can become part of our lives in a sustainable way. The outcome directly impacts our health, is smarter for our lives, and is even better for our pocketbooks.
-
-		%p It all starts with awareness. That’s where the Health Axioms come in.
-
-		%p Released to little fanfare, the Health Axioms quickly took off and enjoyed viral success. Featured in media outlets like National Public Radio and talked about by healthcare thought leaders, Health Axioms are in use at a variety of hospital settings including in the clinics in San Mateo, CA, New York City, and Boston, MA. Along with requests for other form factors like a digital app and large, wall-sized installations, the Health Axioms in their current papyrus form are being enjoyed by healthcare organizations, clinicians, patients, and just everyday people around the world.
-
-		%p <a href="http://healthaxioms.com">www.healthaxioms.com</a>
-
+		%p Four years in the making, the card set has been published as a physical deck, available via Amazon, and as digital art on designaxioms.com. The initial deck, which includes 21 beautiful cards illustrated by Sarah Kaiser, provides a simple but powerful reference set to inspire and excite UI designers and engineers. Perfect for use during brainstorming sessions, design critiques, or as a day-to-day reference, Design Axioms is the fun gift that UI and UX practitioners will want to give themselves. It is not only a fantastic design education, but a piece of artwork as well. Best of all, the content is open source and ready for anyone to creatively remix, share, hack, and make these ideas better. The Design Axioms content from illustrations to words to concepts are licensed under Creative Commons Attribution 3.0.
+		
 		%div
-			%img.with-caption{alt: "Health Axioms card Move More.", src: "../../images/clients/health-axioms/health-axioms-move-more-card.jpg"}/
-		%p.caption Easy-to-use, to take, to share.
+			%img.with-caption{alt: "Health Axioms card Move More.",  src: "../../images/clients/design-axioms/make_things.jpg"}/
+		
+		%h4.top-margin What problems does Design Axioms solve?
+		%p There are hundreds of design books on usability, HCI principles, design research, user interface patterns, and graphic design. However, there is a dearth of concise interface design advice for the craftsman, for the lone engineer trying to be the interface designer, and for IT teams struggling to develop elegant services. Design Axioms is the analog for The Elements of Style by Strunk and White on user interface that encompasses layout, interaction, visual design, and prototyping tenets. The designer reading these tenets should think, “This is the essence of what I should do” and they will refer to the axioms as a reference and constant reminder of good interface design practices.
 
+		%div.top-margin
+			%img.with-caption{alt: "Health Axioms card Move More.",  src: "../../images/clients/design-axioms/design_box.jpg"}/
+		
+		%h4.top-margin What are you going to get out of Design Axioms?
+		%p.no-bottom-margin
+			%em It's a framework for design problem solving.
+		%p Don’t tell me the answer, tell me how to think about the problem.
+		
+		%p.no-bottom-margin
+			%em It's a multi-disciplinary attack on interface design
+		%p Interface designers need a spectrum of skills — not just wireframing or usability analysis — to craft elegant designs. Fluency in graphic design, human-computer interaction, human factors, type setting, and many other skills are required.
+		
+		%p.no-bottom-margin
+			%em It will fit in your pocket.
+		%p It’s not a 500-page tome that describes how to use checkboxes versus pull-down menus. Concept-based mantras based on visual stories rather than pages of description allow people to quickly grok the notion and implement. Reading about visual design is counter intuitive; you need to see it … and consume and retain the ideas. 500 page text-filled bibles miss the mark. And who reads anymore?
+		
+		%p.no-bottom-margin
+			%em It makes us feel good to design compelling experiences.
+		%p As product designers, we make design choices because it’s good for users and us (the designers). The designer behind the MacBook Pro’s auto-hiding magnetic lid hook most likely felt great about the final product: it’s a spectacularly elegant design. This is why we sweat over pixels and typography: we want to love and be proud of our work.
+		
+		%h4.top-margin Philosophy
+		%p Architects are expected to have a handle on civil, material, and mechanical engineering, landscape architecture, building contracting and city codes, aesthetics, interior design, manipulating light, home energy consumption, and how people engage with buildings and each other.
+		%p Interface designers require a similarly broad spectrum of skills from typography to layout and graphic design to interaction design to storytelling.
+		%p And there is an impedance mismatch with the design community (and with company cultures) on these skills and practices required for designing software interfaces.
+		%p Design Axioms is the bromide for design disorientation. Rather than concentrate on a single discipline within interface design (such as interaction or usability), Design Axioms takes a holistic approach to describing the key concepts of the entire act of creating an interface from prototyping to using real data to visual design and layout to interaction patterns.
+		
+		%p
+			%a{href: "http://www.amazon.com/gp/product/B006GGHQ3G/"}
 		%div
-			%img.with-caption{alt: "Health Axioms featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/health-axioms/health-axioms-clinic-installations.jpg"}/
-		%p.caption Possible Health Axioms installations inside clinics.
-
-		%div
-			%img.with-caption{alt: "Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.", src: "../../images/clients/health-axioms/health-axioms-holding-card.jpg"}/
-		%p.caption Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.
-
-		%div
-			%img.with-caption{alt: "Grouping Health Axioms into specialized packs like managing diabetes or weight loss.", src: "../../images/clients/health-axioms/health-axioms-topic-packs.jpg"}/
-		%p.caption Grouping Health Axioms into specialized packs like managing diabetes or weight loss.
-
-		%div
-			%img.with-caption{alt: "Sketching new axiom concepts before moving to digital illustrations.", src: "../../images/clients/health-axioms/health-axioms-sketches.jpg"}/
-		%p.caption Sketching new axiom concepts before creating the digital illustrations.
+			%img.with-caption{alt: "Design Axioms", src: "../../images/clients/design-axioms/ipad.jpg"}/
+		%p.caption Also available for free download on <a href = "https://itunes.apple.com/app/designaxioms/id576445408?mt=8">iTunes</a>.
+		
 
 #next-project.row
 	.medium-6.small-12.small-centered.columns
