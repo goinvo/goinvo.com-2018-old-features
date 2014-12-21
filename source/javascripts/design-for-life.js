@@ -1,0 +1,31 @@
+var animationSpeed = 400; //(x 1ms)
+
+$(document).ready(function(event){
+	// Init Objects
+	var timelineObj = $('#timeline .slider-contents');
+	var datesObj = $('#dates .slider-contents');
+
+	// Init Sliders
+	$('#timeline-slider-controller').slider({
+		value: -10000,
+		max: 2050,
+		min: -10200,
+		step: 50
+	});
+
+	var timeline = timelineObj.slick({
+		arrows: false,
+		infinite: false,
+		draggable: false
+	});
+	var dates = datesObj.slick({
+		arrows: false,
+		infinite: false,
+		draggable: false
+	});
+
+	$('#timeline-slider-controller').on('slidechange', function(event){
+		console.log($('#timeline-slider-controller').slider('value'));
+	});
+
+});
