@@ -23,6 +23,5 @@
 .s3_sync
 
 # Ignore video files.
-*.haml
 *.mp4
 *.webm
