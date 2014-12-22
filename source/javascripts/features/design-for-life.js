@@ -24,6 +24,8 @@ $(document).ready(function(event){
 		draggable: false
 	});
 
+	var dates = ['10000 BC', '4000 BC', '3000 BC', '400 BC', '1920', '1960', '2018', '2019'];
+
 	$('#timeline-slider-controller').on('slidechange', function(event){
 		console.log($('#timeline-slider-controller').slider('value'));
 	});
