@@ -118,7 +118,7 @@ article.design-for-life {
 		width: 25%;
 		float: left;
 	}
-	.video, .slider-content {
+	.video, {
 		width: 65%;
 		float: right;
 	}
@@ -126,6 +126,23 @@ article.design-for-life {
 		height: 500px;
 		background: url(http://placehold.it/800x800&text=Video) center/cover;
 	}
+}
+
+.expanded-graphic {
+	position: relative;
+	max-width: 950px;
+	margin: 0 auto;
+	img {
+		margin: 0;
+	}	
+	.seamless {
+		margin-bottom: 0;
+	}
+}
+
+#dates.slider .slider-contents {
+	width: 65%;
+	float: right;
 }
 
 .media-block {

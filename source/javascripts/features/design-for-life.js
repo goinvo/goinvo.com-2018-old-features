@@ -28,4 +28,19 @@ $(document).ready(function(event){
 		console.log($('#timeline-slider-controller').slider('value'));
 	});
 
+	$('#dates .slider-aside .date-1985').on('click', function(event){
+		event.preventDefault();
+		dates.slickGoTo(0);
+	});
+
+	$('#dates .slider-aside .date-2015').on('click', function(event){
+		event.preventDefault();
+		dates.slickGoTo(1);
+	});
+
+	$('#dates .slider-aside .date-2025').on('click', function(event){
+		event.preventDefault();
+		dates.slickGoTo(2);
+	});
+
 });
