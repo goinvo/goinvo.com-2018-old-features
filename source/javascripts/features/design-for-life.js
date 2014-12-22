@@ -1,4 +1,5 @@
 var animationSpeed = 400; //(x 1ms)
+var lastSlideIndex = 0;
 
 $(document).ready(function(event){
 	// Init Objects
@@ -60,15 +61,46 @@ $(document).ready(function(event){
 	];
 
 	$('#timeline-slider-controller').on('slide', function(event, ui){
-		for (i=0;i<dates.length;i++) {
+		for (var i=0; i<dates.length; i++) {
 			// Init vars
 			var current = dates[i];
-			if (i > 0) {
-				var past = dates[i-1];
-			} elseif (i < dates.length-1){
-				var future = dates[i+1];
+			var past = dates[i-1];
+			var future = dates[i+1];
+			
+			if(i == 0) {
+				temp = current.index + (future.index - current.index)/2;
+				if(parseInt(current.index) == ui.value || (ui.value < temp && ui.value >= current.index)) {
+					lastSlideIndex = current.index;
+				}
 			}
+			else if(i == dates.length-1) {
+				temp = current.index - (current.index - past.index)/2;
+				if(parseInt(current.index) == ui.value || (ui.value > temp && ui.value <= current.index)) {
+					// go yo this slide	
+					lastSlideIndex = current.index;
+				}
+				
+			}
+			else {
+				//Regular Case
+				temp = current.index - (current.index - past.index)/2;
+				temp2 = current.index + (future.index - current.index)/2;
+				if(parseInt(current.index) == ui.value || (ui.value < temp && ui.value >= current.index) || (ui.value > temp && ui.value <= current.index) ) {
+					// go yo this slide	
+					lastSlideIndex = current.index;
+				}
+			}
+			
+			
+			
 		}
+	});
+	
+	$('#timeline-slider-controller').slider({
+	  stop: function( event, ui ) {
+		  console.log(lastSlideIndex);
+	  	$( "#timeline-slider-controller" ).slider( "value", lastSlideIndex );
+	  }
 	});
 
 	$('#dates .slider-aside .date-1985').on('click', function(event){
