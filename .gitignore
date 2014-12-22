@@ -22,16 +22,7 @@
 # Ignore s3 Keys
 .s3_sync
 
-
-<<<<<<< HEAD
-source/videos/beth-live.webmhd.webm
-
+# Ignore large video files
 *.mp4
-
 *.haml
-
-=======
-*.mp4
-
->>>>>>> master
 *.webm
