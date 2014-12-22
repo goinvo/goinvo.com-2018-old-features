@@ -1,15 +1,49 @@
 var animationSpeed = 400; //(x 1ms)
 var lastSlideIndex = 0;
 
+var timelineValues = [
+	0, // 10000 BC
+	31.7, // 4000 BC
+	37.6, // 3000 BC
+	53.8, // 400 BC
+	72.2, // 1920
+	73.9, // 1926
+	91, // 2018
+	92 // 2019
+];
+
+switchSlide = function(percentage, slickObj){
+	if (percentage > (timelineValues[7] * 10)) {
+		slickObj.slickGoTo(7);
+	} else if (percentage > (timelineValues[6] * 10)) {
+		slickObj.slickGoTo(6);
+	} else if (percentage > (timelineValues[5] * 10)) {
+		slickObj.slickGoTo(5);
+	} else if (percentage > (timelineValues[4] * 10)) {
+		slickObj.slickGoTo(4);
+	} else if (percentage > (timelineValues[3] * 10)) {
+		slickObj.slickGoTo(3);
+	} else if (percentage > (timelineValues[2] * 10)) {
+		slickObj.slickGoTo(2);
+	} else if (percentage > (timelineValues[1] * 10)) {
+		slickObj.slickGoTo(1);
+	} else if (percentage > (timelineValues[0] * 10)) {
+		slickObj.slickGoTo(0);
+	}
+}
+
 $(document).ready(function(event){
 	// Init Objects
 	var timelineObj = $('#timeline .slider-contents');
 	var datesObj = $('#dates .slider-contents');
 
+	// Slide
+	switchSlide(0);
+
 	// Init Sliders
 	$('#timeline-slider-controller').slider({
 		value: 0,
-		max: 100,
+		max: 1000,
 		min: 0,
 		step: 1
 	});
@@ -25,82 +59,10 @@ $(document).ready(function(event){
 		draggable: false
 	});
 
-	var dates = [
-		{
-			'date': '10000 BC',
-			'index': 3.9
-		},
-		{
-			'date': '4000 BC',
-			'index': 31.7
-		}, 
-		{
-			'date': '3000 BC',
-			'index': 37.6
-		}, 
-		{
-			'date': '400 BC',
-			'index': 53.8
-		}, 
-		{
-			'date': '1920',
-			'index': 72.2
-		}, 
-		{
-			'date': '1960',
-			'index': 73.9
-		}, 
-		{
-			'date': '2018',
-			'index': 91
-		}, 
-		{
-			'date': '2019',
-			'index': 91.1
-		}
-	];
+
 
 	$('#timeline-slider-controller').on('slide', function(event, ui){
-		for (var i=0; i<dates.length; i++) {
-			// Init vars
-			var current = dates[i];
-			var past = dates[i-1];
-			var future = dates[i+1];
-			
-			if(i == 0) {
-				temp = current.index + (future.index - current.index)/2;
-				if(parseInt(current.index) == ui.value || (ui.value < temp && ui.value >= current.index)) {
-					lastSlideIndex = current.index;
-				}
-			}
-			else if(i == dates.length-1) {
-				temp = current.index - (current.index - past.index)/2;
-				if(parseInt(current.index) == ui.value || (ui.value > temp && ui.value <= current.index)) {
-					// go yo this slide	
-					lastSlideIndex = current.index;
-				}
-				
-			}
-			else {
-				//Regular Case
-				temp = current.index - (current.index - past.index)/2;
-				temp2 = current.index + (future.index - current.index)/2;
-				if(parseInt(current.index) == ui.value || (ui.value < temp && ui.value >= current.index) || (ui.value > temp && ui.value <= current.index) ) {
-					// go yo this slide	
-					lastSlideIndex = current.index;
-				}
-			}
-			
-			
-			
-		}
-	});
-	
-	$('#timeline-slider-controller').slider({
-	  stop: function( event, ui ) {
-		  console.log(lastSlideIndex);
-	  	$( "#timeline-slider-controller" ).slider( "value", lastSlideIndex );
-	  }
+		switchSlide(ui.value, timelineObj);
 	});
 
 	$('#dates .slider-aside .date-1985').on('click', function(event){
