@@ -1,0 +1,246 @@
+- content_for(:title) do
+	= "Design For Life"
+- content_for(:page_head) do
+	= stylesheet_link_tag "features/design-for-life"
+	= stylesheet_link_tag "slick"
+	= stylesheet_link_tag "feature-elements"
+	= javascript_include_tag "features/design-for-life"
+	= javascript_include_tag "slick/slick"
+	= javascript_include_tag "//use.typekit.net/xpn8aww.js"
+	= javascript_include_tag "vide"
+	:javascript
+		try{Typekit.load();}catch(e){}
+	%meta{:name => "description", :content => ""}/
+	%meta{:name => "keywords", :content => "tags"}/
+
+%article#feature-article.design-for-life
+	%header.main-header{"data-vide-bg" => "../../videos/dfl/header"}
+		.header-contents
+			%h1 Design For Life
+			%h2.byline By Juhan Sonin
+			%p.email juhan@goinvo.com
+			.social-buttons
+				%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/design-for-life", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
+					%svg{:version => "1.1", :viewBox => "240 0 480 480"}
+						%path{:d => "M1251.9,388.7h-44.2c-15.4,0-21.1,9.6-21.1,21.1V452h65.3l-7.7,73h-57.6v205.4h-86.4V525h-44.2v-73h44.2 v-42.2c0-49.9,17.3-88.3,86.4-90.2h65.3L1251.9,388.7L1251.9,388.7z", :transform => "translate(-674.000000, -285.000000)"}
+				%a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fdesign-for-life%2F&hashtags=designforlife&via=goinvo", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizeable=yes,scrollbars=yes,height=400,width=600');return false;", :title => "Share on Twitter"}
+					%svg{:version => "1.1", :viewBox => "-467 230 25 21"}
+						%path{:d => "M-444.9,233.3c1.1-0.7,1.9-1.7,2.3-2.9 c-1,0.6-2.1,1-3.3,1.3c-0.9-1-2.3-1.7-3.7-1.7c-2.8,0-5.1,2.4-5.1,5.3c0,0.4,0,0.8,0.1,1.2c-4.3-0.2-8-2.3-10.6-5.5 c-0.4,0.8-0.7,1.7-0.7,2.7c0,1.8,0.9,3.5,2.3,4.4c-0.8,0-1.6-0.3-2.3-0.7c0,0,0,0,0,0.1c0,2.6,1.8,4.7,4.1,5.2 c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.1,2.5,3.6,4.8,3.7c-1.8,1.4-4,2.3-6.4,2.3c-0.4,0-0.8,0-1.2-0.1 c2.3,1.5,5,2.4,7.9,2.4c9.4,0,14.6-8.1,14.6-15c0-0.2,0-0.5,0-0.7c1-0.7,1.9-1.7,2.6-2.7C-442.9,232.9-443.9,233.2-444.9,233.3z"}
+				%a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fredesign-democracy%2F&title=Redesign%20Democracy", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Share On LinkedIn"}
+					%svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
+						%rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
+						%path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
+						%path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
+				%a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fdesign-for-life%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;", :title => "Share on Google Plus"}
+					%svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
+						%polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
+						%path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}
+	%section.article-section.one
+		%header.sec-header
+			.title
+				%h3.sec-title Bloodletting to bloodless.
+				%h4.sub-title Technological and societal trends are converging and pushing design to the forefront of health.
+			.number
+				%span 1
+		.section-content
+			%p Health, as an experience and idea, is undergoing an epic shift. For millennia, humans have treated health as the rare spike that requires intervention. At a very basic level, when it comes to health, we humans experience our physical condition today much as our more furry ancestors did. We roam around. We eat mostly green stuff with the occasional indulgence in a tasty snack of fresh-killed meat. We drink water— well, some of us hydrate—and have sex and procreate. We stick with our tribe and try to steer clear of hostile marauders.
+			#timechart.expanded-graphic.seamless
+				= image_tag "features/design-for-life/svg/timeline.svg"
+			#timeline-slider-controller
+			#timeline.slider
+				%span.byline Illustration By Sarah Kaiser
+				.slider-contents
+					.slide.one
+						.slide-content
+							%p 10,000 B.C.: The transition to agriculture was made necessary by gradually increasing population pressures due to the success of Homo sapiens' prior hunting and gathering way of life. Also, at about the time population pressures were increasing, the last Ice Age ended, and many species of large game became extinct. Wild grasses and cereals began flourishing, making them prime candidates for the staple foods to be domesticated, given our previous familiarity with them.
+							%p.source Resource: <a href="http://www.beyondveg.com/nicholson-w/hb/hb-interview1c.shtml">http://www.beyondveg.com/nicholson-w/hb/hb-interview1c.shtml</a>
+					.slide.two
+						.slide-content
+							%p 4000 B.C.: Environmental opportunities and challenges led to the formation of human groups. Sharing food, caring for infants, and building social networks helped our ancestors meet the daily challenges of their environments.
+							%p.source Resource: <a href="http://www2.sunysuffolk.edu/westn/humangroups.html">http://www2.sunysuffolk.edu/westn/humangroups.html</a>
+					.slide.three
+						.slide-content
+							%p 3000 B.C.: The earliest reports of surgical suture date back to 3000 BC in ancient Egypt, where physicians used stitches to close injuries, incisions and mummies.
+							%p.source Resource: <a href="http://en.wikipedia.org/wiki/Surgical_suture">http://en.wikipedia.org/wiki/Surgical_suture</a>
+					.slide.four
+						.slide-content
+							%p 400 B.C.: Hippocrates emphasizes the importance of water quality to health and recommends boiling and straining water.
+							%p.source Resource: <a href="http://dec.alaska.gov/eh/dw/publications/historic.html">http://dec.alaska.gov/eh/dw/publications/historic.html</a>
+					.slide.five
+						.slide-content
+							%h6.bold-title 1920: Modern medicine begins
+							%p Physicians no longer needed to ask permission of the church before starting their practice or performing surgery. Finally, reliable prescription drugs, and penicillin began to curb sickness before surgery or other last resorts were necessary. Modern surgery was coming of age. The last lobotomy to treat schizophrenia was done in 1970.
+							%p.source Resource: <a href="http://blog.soliant.com/careers-in-healthcare/the-history-of-physicians-doctors/">http://blog.soliant.com/careers-in-healthcare/the-history-of-physicians-doctors/</a>
+					.slide.six
+						.slide-content
+							%h6.bold-title The modern doctor
+							%p To be sure, modern medicine is all the things people expect when they visit a hospital, but a modern doctor in the developed world is as much of a super hero or science fiction character as friendly sawbones. The &ldquo;utility belt&rdquo; of tools at a modern doctor&rsquo;s disposal includes surgical lasers and robots, high-powered magnetic imagers and networked data streams.
+							%p.source Resource: <a href="http://blog.soliant.com/careers-in-healthcare/the-history-of-physicians-doctors/">http://blog.soliant.com/careers-in-healthcare/the-history-of-physicians-doctors/</a>
+					.slide.seven
+						.slide-content
+							%p 2018: EHR data on subdermal chip (standard care plan option).
+							%p.source Design For Life: Next 25 years of Healthcare
+					.slide.eight
+						.slide-content
+							%p 2019: Bathroom becomes Healthroom
+							%p.source Design For Life: Next 25 years of Healthcare
+			%p And as long as we&rsquo;re feeling okay, we think we&rsquo;re okay. Generally, that&rsquo;s true. Then health happens, usually when we least want or expect it. We stumble on the trail or travel far from home and come back with dysentery. One of these health happenings prompts a visit, so you go to a tribal elder who sets bones or you seek out the town doc to ease your intestinal disturbance or, after catching your son flying off the living room couch, you get an MRI to reveal a bicep tendon rupture.
+			%p What we call health is made up of these episodic issues and interventions. Even periodic exams are events that we bathe and dress up for. In fact, we are most conscious of our health during these moments. For the average person—one without chronic pain or illness—health is conceived of and managed as an exception.
+			%p Few would deny that health is the single most important factor for any human, at any age, living anywhere on Spaceship Earth. The potential impact of a health setback on a person&rsquo;s life may reach into all other areas of his life—work, finances, love, and hobbies—and even affect the community. The stakes of dealing with health are significantly high. For example, a high school math teacher with a kidney stone calls in sick, the principal hires a per diem substitute teacher, and the learning of 20 high school kids dwindles. In our era, the complexity of health has surged dramatically. Remarkable things have transpired over the past 100 years, the past 40 years, and the past 5. In 1909, for example, hospitals treated third-degree burn patients with opiates, frequent application of moist antiseptic dressings, and sometimes baths1; today, clinics spray-paint new skin based on the burn victim&rsquo;s cells.2 The jump in technology and our understanding of biology and the health sciences is startling, which has ratcheted up both the system complexity and awareness of it. What's good for one patient may not be quite right for the patient in the next bed over.
+			%p Yet, same as 1,000 years ago, humans don&rsquo;t want to think about health until health happens—or a health event happens. This state of denial is evidenced by the declining health rankings of the United States compared to 33 other wealthy nations. From 1990 to 2010, although Americans&rsquo; life expectancy increased, our health rank decreased notably across six key health measures.3 While there may be social and cultural forces at play in these disheartening statistics, the continued decline of the health of the U.S. population suggests that we&rsquo;re still stuck in the land of episodic medical care, in not only treatment but also thinking, engineering, and designing for health.
+			%p There is a way out of this, and the remedy is not just a pill, diet, or implant. To illustrate the possibilities available to us right now, I propose a quickie thought experiment:
+			%p Suppose your data are simply and automatically collected—all of your numbers surrounding your existence from the financial (which we&rsquo;re nearly doing today) to travel (again, captured today) to habits to eating to exercise to examining your daily biome. It&rsquo;s captured. It just happens, in the background.
+			%p And your captured data are visible: you can see the data points, see the trends, and even see the data of your close friends and family so you can help them make decisions and make change.
+			.aside-media
+				.caption
+					%p.light hGraph: Your health in one picture. It&rsquo;s an open source, standardized visual representation of a patient&rsquo;s health status, designed to increase awareness of the individual factors that can affect one&rsquo;s overall health.
+					%p.light hGraph users can easily identify which metrics exist in a normal range versus those that may be too high or low. It effectively conveys important data at sizes both large and small, and enables people to recognize patterns.
+				#hgraph.video{"data-vide-bg" => "../../videos/dfl/hgraph"}
+			%p The foundations of this new paradigm are in place. The structure is ours to make.
+			%p Our thought experiment provides a stark contrast to the current state of design thinking on life, on health, and on data. We have minimal transparency into key health metrics. For the data we do have, the overhead required to collect it is enormous. People have a hard enough time changing their Facebook privacy settings or figuring out mortgage refinancing. The systems we deal with are increasingly complex, and the user interfaces are more puzzles than designs. And as decision-makers, we are swamped with conflicting data.
+			%p As designers and engineers, our work is increasingly multi-dimensional (not a flat- decision space), and linear-thinking human beings are not good at non-linear thinking. Seeing every variable and doing the mental calculus to orchestrate better decision-making is not our species' forte. We fly by the seat of our pants until we get tired and land, thump, not always in the right or best place. One major variable in the everyday behavior change game is sensors... invisible sensors.
+	%section.article-section.two
+		%header.sec-header
+			.title
+				%h3.sec-title The surveillance invasion.
+				%h4.sub-title Wearable sensors impressively track personal health metrics, but the bands are still as easy to take off as they are to put on.
+			.number 
+				%span 2
+		.section-content
+			#eye-tracking.full{"data-vide-bg" => "../../videos/dfl/blade_runner"}
+				%p.caption These days, my thoughts turn pretty frequently to the image of the Voight-Kampff interrogation machine in the movie Blade Runner (1982). It was a tabletop apparatus with a mechanical eye that peered into a human (or robot) eye to non- invasively determine his/her/its &ldquo;health&rdquo; status. It&rsquo;s either really creepy or really practical.
+			%p The current confluence of sensor tech, data analytics maturity, hardware durability, miniaturization, and industrial evolution create a perfect storm for capturing biologic metrics and determining trends. In a year, we'll have a good first cut at a human prediction model that is personally meaningful and changes behavior (and is only 5% wrong).
+			%p In the <a href="http://goinvo.com/">Involution Studios design studio</a>, I count a half- dozen different wearable health devices on the limbs of our staff, from a Basis watch to Fitbit pedometer to a BodyMedia band to a Jawbone up to a Philips pedometer. Digital scales, AliveCor EKG iPhone cases, cameras that detect blood pressure through your face—we&rsquo;re not only surrounded by sensors, we&rsquo;re adorned with them.
+			%p One problem with the current batch of wearables is just that: they&rsquo;re wearable, and engaging with them requires a ton of mental overhead. For example, take the very cool Withings Pulse. It tracks steps, general activity, sleep, and heart rate on demand. It has a touch screen, solid form factor, and decent contrast UI/screen. Yet I forget to put it in my running shorts pocket only to realize later that I&rsquo;m device-less and data- less.
+			%p The biggest beef with all the micro-wearables is that most users are not wearing their sensors 24/7. Sticking them in your pocket is easy, but it requires pants; when I'm at home, I'm often pantless. Furthermore, I don't wear it at night. The switch to turn it to &ldquo;night-time&rdquo; mode, which then requires a flip back to daytime usage, is one switch too many for me. Even my BodyMedia armband isn&rsquo;t set-it-and-forget-it. I have to take it off when I shower and when the device needs charging. So even slick new devices like the Misfit Shine—a wireless, wearable activity tracker—all suffer from the same issue: they&rsquo;re a branch of devices called the &ldquo;non-forgettables.&rdquo;
+			%p Now for the flip argument: from a wellness point of view, do &ldquo;off times&rdquo; really matter?
+			.media-block.inline
+				= image_tag "features/design-for-life/inlines/lineup.png"
+				%p.caption My device lineup includes the BodyMedia armband, the Jawbone Up, Fitbit, and the Withings Pulse.
+			%p I often forget to wear devices. During the first few months wearing a new health monitor, I&rsquo;m exposed to new data. Once I understand the patterns, the hardware becomes less and less useful (other than to have a bead on those metrics). I want the little health plug to strap on when sickness is coming that reduces symptoms and duration by 70%. Now that&rsquo;s a helpful micro device.
+			%p Form factor isn't really The Question because no form factor really hits it on the head. Maybe it's the implant. Or the invisible.
+			%p Hardware is the gateway drug to services and data. (If you're planning to get into health hardware, you're too late.) The current device line-up has little to do with the commodity of hardware—it&rsquo;s all about your information and decision-making.
+	%section.article-section.three
+		%header.sec-header
+			.title
+				%h3.sec-title Life first. Health a distant second.
+				%h4.sub-title The next challenges for designers and engineers in healthcare involve data&hellip; collected invisibly.
+			.number
+				%span 3
+		.section-content
+			%p Designers and engineers have demonstrated that they can make cool sensors. Next, we are going to re-design those products and create new ones that capture data beautifully, and usually that will mean invisibly. Picture this: As I walk around my house, stand at my desk at work, and go pee, all of that physiological data will be snagged to do DSP analysis that signals &ldquo;getting worse&rdquo; or &ldquo;getting better&rdquo; on a defined timeline (based on known prior results). This is where machine learning, big data, and design crash together.
+			#dates.slider
+				.slider-aside.caption
+					%p Sensors are exploding. They&rsquo;re everywhere and proliferating in my house. The DARPA line from the 1980s is catching up: smart dust is all around us.
+					.slider-controls
+						%a.slide-button.slide0.active{:href => ""} 
+							%span.button
+							%span 1985
+						%a.slide-button.slide1{:href => ""}
+							%span.button
+							%span 2015
+						%a.slide-button.slide2{:href => ""}
+							%span.button
+							%span 2025
+				.slider-contents
+					.slide.one 
+						= image_tag "features/design-for-life/dates/1985.png"
+					.slide.two 
+						= image_tag "features/design-for-life/dates/2015.png"
+					.slide.three 
+						= image_tag "features/design-for-life/dates/2025.png"
+			%p What we learn from the design of personal wearable sensors will ultimately be applied to in-hospital devices.
+			%p There are still massive amounts of pain and mistakes in institutional and corporate healthcare:
+			%ul
+				%li Patient safety is a monster issue. There are 180,000 deaths by accident per year in US hospitals. That&rsquo;s 500 deaths per day.
+				%li There are scores of classic examples like anesthesia gone wrong during surgery and known allergies overlooked. Go to the ECRI Institute website if you want to deep dive into improving patient safety and quality.
+				%li Cullen Care was sued over a claim that the pharmacy made a dosing error, dispensing 150mg of morphine for a kid, which is 10 times the required dose. Their mistake came down to human error, inputting 150 instead of the prescribed 15mg. Sadly, this type of human error happens daily.
+			%p More people die annually from overdosing by prescription drugs like oxycontin than car accidents. Humans and machines need to be points in the same loop, each checking and amplifying each other's work and output, because both, especially humans, make mistakes. One way to audit and be exposed to near-real-time care data analysis is a natural extension of Hal 2000: the recording of all procedures within the walls of hospitals. Every injection, every surgery, every patient-clinician encounter will be on camera, microphoned, and recorded. Clinicians wearing Google-glass-esque monitors that automagically capture the patient&rsquo;s mood, tiny facial triggers pointing to emotional state and potential conditions, and other metrics, will be whispered hints and diagnosis by the cloud-based Dr. Watson. Longer-term hospital visits will require patients to wear individual trackers. Then when conflicts occur, or right before a tragic maneuver, the hospital and patient trackers will run &ldquo;interference.&rdquo;
+			%p Machines and humans are about to synchronize in a whole new way at home. Let's talk about... the bathroom.
+			%p Your bathroom will be an invisible sensor haven.
+			%p Consider what that room collects and how it could be assessed, sooner rather than later. Hair follicles collected in the shower drain. GI samples and urinalysis from the toilet. Your biome sloughing off into the sink. Weight, heart rate, blood flow, and facial expressions recorded automatically. It just happens, with regular feedback loops but no mental or physical overhead. It isn&rsquo;t the bathroom anymore; it&rsquo;s the health room.
+			.caption
+				%p How do you get a pulse on key health metrics without a single tear? Your bathroom will turn into a healthroom, complete with non-invasive diagnostics for early detection of chronic diseases.
+				%p The Healthrooms will proliferate and scale as they turn into ready-made, all-in-one, drop-in units. Illustration by Quentin Stipp.
+			#crane.video.full{"data-vide-bg" => "../../videos/dfl/crane"}
+			%p Hospitals are rolling out patient portals and insurance companies are experimenting with electronic health records, but the usefulness of those repositories is limited to patients. More critical are teachable moments in data that signal potential outcomes and prompt micro behavior shifts that in turn will offer feedback and affirm new behaviors or nudge new ones.
+			%p In the bathroom and, eventually, in other environments like the hospital room, the majority of your physiologic signs will be snagged non-invasively, through sensors that passively sniff you. No blood draws. No awkward stool sample cards. Just whiffs and sniffs and the occasional photograph. All of this must be designed to feel wonderful, so that you think more about LIFE and less about &ldquo;health&rdquo; and &ldquo;security.&rdquo; Background, automatic health sensing will let us focus our consciousness on the dream life we want to live.
+			.aside-media
+				.caption
+					%p Talking about passive sensors, I always picture the orgasmatron from Woody Allen's movie, Sleeper (1973), which was set in the year 2173. This fictional device, a cylinder large enough to contain one or two people, rapidly induced orgasms. A character would walk in, have a blast, and walk out only seconds later. That&rsquo;s how I want healthcare delivered. That's where engineering and design can really have impact.
+					%p Sign me up.
+					%p.light Image from Woody Allen&rsquo;s movie, Sleeper, 1973
+				.video{"data-vide-bg" => "../../videos/dfl/sleeper"}
+	%section.article-section.four
+		%header.sec-header
+			.title
+				%h3.sec-title Stage Zero Detection.
+				%h4.sub-title Continuous assessments make real-time adjustments not only possible but desirable and doable.
+			.number
+				%span 4
+		.section-content
+			%p We get biome analysis, emotional analysis, breath evaluation, and voice analysis. Bots (some with cameras) are in our stomachs and blood streams, churning through our bodies and molecules, gathering intelligence. We are able to detect disease and conditions as they erupt at the cellular level, and not have to wait until they physically manifest so our eyes and bodies can &ldquo;see&rdquo; them. (By the time we can see it with our own eyes, it's too goddamn late.)
+			.media-block.inline
+				= image_tag "features/design-for-life/inlines/aging.jpg"
+			%p That&rsquo;s the future, and it is near. If health is beautifully integrated into our daily life, so that we&rsquo;re getting continuous assessments, we&rsquo;ll be able to adjust in near-real time.
+			%p Next, here&rsquo;s what&rsquo;s on the horizon:
+			%ul
+				%li Scanadu, a hockey-puck-sized, 10-major-metric, non-invasive data collector;
+				%li Make-my-pill (based on my dynamic careplan, biology, conditions, geo, etc) vending machine by Walgreens;
+				%li Adamant, a breath sensor out of Penn State that detects differing signatures in 25 variables of your breath; and
+				%li One-nanometer resolution spectrometers, priced at $20, for instant food analysis at the molecular level. &ldquo;Does this food have any peanuts in it?&rdquo; Check it with a smartphone.
+			#locations.full
+				.slider-graphic
+					%img{:src => "http://placehold.it/2000x500&text=Locations+Graphic", :alt => ""}/
+				.slider-controls
+					%a.slide-button.slide0.active{:href => ""} Market
+					%a.slide-button.slide1{:href => ""} Bathroom
+					%a.slide-button.slide2{:href => ""} Bedroom
+					%a.slide-button.slide3{:href => ""} Dining Room
+					%a.slide-button.slide4{:href => ""} Living Room
+					%a.slide-button.slide5{:href => ""} Work
+				.slider-contents
+					.one
+						%img{:src => "http://placehold.it/2000x1200&text=Market", :alt => ""}/
+					.two
+						%img{:src => "http://placehold.it/2000x1200&text=Bathroom", :alt => ""}/
+					.three
+						%img{:src => "http://placehold.it/2000x1200&text=Bedroom", :alt => ""}/
+					.four
+						%img{:src => "http://placehold.it/2000x1200&text=Dining Room", :alt => ""}/
+					.five
+						%img{:src => "http://placehold.it/2000x1200&text=Living Room", :alt => ""}/
+					.six
+						%img{:src => "http://placehold.it/2000x1200&text=Work", :alt => ""}/
+			%p These are neat. Designers and engineers, we can do more, and we should. It won&rsquo;t be until our digital health &ldquo;guards&rdquo;—the digital services that pound on those massive data sets and prior patterns in order to keep us healthier—can identify trends and thereby exponentially reduce our sickness rates that we&rsquo;ll reach Phase Two. My health and my family's health will be actively guarded. The technology is already widely used. For instance, for $10 per month I subscribe to CitiBank&rsquo;s so-called fraud security net, which monitors any transaction that didn't appear to come from me or my family, across the planet. If there is any suspicious action, the bot notifies me immediately, and together we deconflict the issue in near-real time. An analogous (and currently fictitious) product service is LifeLock®, a Netflix-type model where I pay $10, $20, or $30 per month for the service to look over and protect my data, know who is touching it, predict behaviors, and tease me to change my behaviors. This cloud guard will auto-detect and alert me to the make-my-pill vending machine getting hacked = protecting all the trains of trust.
+			%p In the future, we'll eat our medicine and lookout bots. They will monitor and command seek-and-destroy missions at the cellular level in conjunction with external readings and decision-support tools. We won't feel or notice a thing.
+			%p I&rsquo;ll be notified that my biome composition has shifted and that a cold is coming on in a day. My day-treat—concocted specifically for me based on my genomic and personal data set—can be ready in 60 minutes at my local pharmacy. The Skittle®- sized gel tab, a living set of custom organisms ready to swim into my blood stream, is taken orally, melts away immediately, and within several dozen minutes I am back to my unique, diverse, healthy biome. No stuffy head, no aching muscles, no fever, no sign of &ldquo;health,&rdquo; good or bad. I simply am.
+			%p This design space needs to chew on the massive volume of data and massive volume of human factors and their interrelationships. I mean taking every connecting piece of information from what we&rsquo;re eating, how we&rsquo;re moving (or not), how we work, and what makes up our genome, and expanding that out to the entire system- picture of a human living on planet earth. All of that interconnecting and interlocked information tissue needs to be condensed into a single decision space that's not a data dump but a highly personalized, insight crystal ball.
+			%p That insight service is getting close on the research and science side.
+			%p Sound scary? It is&hellip; a little.
+	%section.article-section.five
+		%header.sec-header
+			.title
+				%h3.sec-title From protein to pixel to policy.
+				%h4.sub-title Design-for-health possibilities and responsibilities are immense.
+			.number
+				%span 5
+		.section-content
+			%p Our medical records, our life records, will be available for computational use like we currently have with social data on Facebook and Google. Machine learning and prediction will vastly improve our ability to live life, to see conditions at their earliest manifestation as we get fabulous, personalized, medical diagnostics and advice.
+			%p This sensor cloud will monitor my physical activity and my online activity too. It will observe, for example, that 90% of my bandwidth is porn and propose that the erectile dysfunction I experience when faced with a live boyfriend is correlated with online activity. (Note: data are starting to trickle in on this, even though the researchers are having a hard time finding a control group.)
+			%p The power of the data and tools is impressive. The implications are daunting to the same degree. Designers and engineers will need to deliver products that are functional and invisible, but also make designs that are inviting not intimidating, reassuring and not anxiety-producing. We want to improve humanity, not put it under house arrest.
+			%p What Orbitz did to travel agents, medical technology, design, and culture shifts will do to doctors and the traditional practice of episodic medicine.
+			%p As a designer, I want my fingers, hands, and eyes on all the moving parts of a product, no matter how small or big. I want to influence the world from protein, to policy, to pixels. That means expanding our skills and knowledge to have impact at levels of science and society as well as design and engineering. That degree of immersion into problem solving and the holistic context of my clients enables our design studio to make extraordinary impact, at a level that transcends the important issues of our clients but get into issues of meaning and the longer future.
+			%p And at some point in our careers, designers and engineers need to be involved in policy... in the crafting, in the designing or development of guidelines or law that drive how we as a people, operate together (or not). Some efforts are grassroots, like the open source Inspired EHR Guide (inspiredehrs.org), which starts with just a few people. This is attacking at the fringe, from the outside in. Data standards and policy-making and advising mafia (like HL7 or HIMSS) need good engineers and designers to participate. This is not super-sexy work. While the pace of sculpting governance is enormously slow (these kinds of efforts take years and are often frustrating experiences), the ultimate outcome and impact can be long-lasting. And making this kind of change is why I&rsquo;m in business.
+	%section.article-section.six
+		%header.sec-header
+			.title
+				%h3.sec-title Final Thoughts
+			.number
+				%span 6
+		.section-content
+			%p Data let us live aware of our health. For example, when we are messaged that ice cream is high in fat, high in sugar, and high in cow&rsquo;s milk, we process that as "Okay, that's bad, but so what?" As soon as it that message becomes quantified, and not by keeping annoying food diaries and looking up the nutrition content of every bite or sip, we get religion. Data take us by the shoulders and shake. We notice that eating this way, and continuing to do so, has taken days, or even a few years, off our precious life expectancy. That is when the entire world changes. But not before.
+			%p It&rsquo;s up to us.
+		.media-block.full
+			= image_tag "features/design-for-life/svg/mirror.svg"
+		
