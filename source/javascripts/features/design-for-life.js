@@ -1,5 +1,6 @@
 var animationSpeed = 400; //(x 1ms)
 var lastSlideIndex = 0;
+var ableToNavigate = true;
 
 var timelineValues = [
 	0, // 10000 BC
@@ -32,10 +33,23 @@ switchSlide = function(percentage, slickObj){
 	}
 }
 
+buttonSwitch = function(event, slickObj, navElementSelector, navButton) {
+	event.preventDefault();
+	if (ableToNavigate) {
+		ableToNavigate = false;
+		navButtonClass = $(navButton).attr('class');
+		slideNumber = navButtonClass.replace( /^\D+/g, '');
+		$(navElementSelector + ' .slide-button.active').toggleClass('active');
+		$(navButton).toggleClass('active');
+		slickObj.slickGoTo(parseInt(slideNumber));
+	}
+}
+
 $(document).ready(function(event){
 	// Init Objects
 	var timelineObj = $('#timeline .slider-contents');
 	var datesObj = $('#dates .slider-contents');
+	var locationsObj = $('#locations .slider-contents');
 
 	// Slide
 	switchSlide(0);
@@ -51,39 +65,40 @@ $(document).ready(function(event){
 	var timeline = timelineObj.slick({
 		arrows: false,
 		infinite: false,
-		draggable: false
+		draggable: false,
+		onAfterChange: function() {
+			ableToNavigate = true;
+		}
 	});
 	var dates = datesObj.slick({
 		arrows: false,
 		infinite: false,
-		draggable: false
+		draggable: false,
+		onAfterChange: function() {
+			ableToNavigate = true;
+		}
 	});
-
-
+	var locations = locationsObj.slick({
+		arrows: false,
+		infinite: false,
+		draggable: false,
+		onAfterChange: function() {
+			ableToNavigate = true;
+		}
+	});
 
 	$('#timeline-slider-controller').on('slide', function(event, ui){
 		switchSlide(ui.value, timelineObj);
 	});
 
-	$('#dates .slider-aside .date-1985').on('click', function(event){
+	$('#dates .slider-aside .slide-button').on('click', function(event){
 		event.preventDefault();
-		$('#dates .slider-aside a').removeClass('active');
-		$(this).addClass('active');
-		dates.slickGoTo(0);
+		buttonSwitch(event, datesObj, '#dates .slider-controls', this);
 	});
 
-	$('#dates .slider-aside .date-2015').on('click', function(event){
+	$('#locations .slider-controls .slide-button').on('click', function(event){
 		event.preventDefault();
-		$('#dates .slider-aside a').removeClass('active');
-		$(this).addClass('active');
-		dates.slickGoTo(1);
-	});
-
-	$('#dates .slider-aside .date-2025').on('click', function(event){
-		event.preventDefault();
-		$('#dates .slider-aside a').removeClass('active');
-		$(this).addClass('active');
-		dates.slickGoTo(2);
+		buttonSwitch(event, locationsObj, '#locations .slider-controls', this);
 	});
 
 });

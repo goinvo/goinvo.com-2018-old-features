@@ -43,8 +43,8 @@
 				%span 1
 		.section-content
 			%p Health, as an experience and idea, is undergoing an epic shift. For millennia, humans have treated health as the rare spike that requires intervention. At a very basic level, when it comes to health, we humans experience our physical condition today much as our more furry ancestors did. We roam around. We eat mostly green stuff with the occasional indulgence in a tasty snack of fresh-killed meat. We drink water— well, some of us hydrate—and have sex and procreate. We stick with our tribe and try to steer clear of hostile marauders.
-			.expanded-graphic.seamless
-				%img{:src => "http://placehold.it/1000x500&text=Timescale+Graphic", :alt => ""}/
+			#timechart.expanded-graphic.seamless
+				= image_tag "features/design-for-life/svg/timeline.svg"
 			#timeline-slider-controller
 			#timeline.slider
 				%span.byline Illustration By Sarah Kaiser
@@ -114,7 +114,7 @@
 			%p The biggest beef with all the micro-wearables is that most users are not wearing their sensors 24/7. Sticking them in your pocket is easy, but it requires pants; when I'm at home, I'm often pantless. Furthermore, I don't wear it at night. The switch to turn it to &ldquo;night-time&rdquo; mode, which then requires a flip back to daytime usage, is one switch too many for me. Even my BodyMedia armband isn&rsquo;t set-it-and-forget-it. I have to take it off when I shower and when the device needs charging. So even slick new devices like the Misfit Shine—a wireless, wearable activity tracker—all suffer from the same issue: they&rsquo;re a branch of devices called the &ldquo;non-forgettables.&rdquo;
 			%p Now for the flip argument: from a wellness point of view, do &ldquo;off times&rdquo; really matter?
 			.media-block.inline
-				%img{:src => "http://placehold.it/2000x500&text=Device Lineup", :alt => ""}/
+				= image_tag "features/design-for-life/inlines/lineup.png"
 				%p.caption My device lineup includes the BodyMedia armband, the Jawbone Up, Fitbit, and the Withings Pulse.
 			%p I often forget to wear devices. During the first few months wearing a new health monitor, I&rsquo;m exposed to new data. Once I understand the patterns, the hardware becomes less and less useful (other than to have a bead on those metrics). I want the little health plug to strap on when sickness is coming that reduces symptoms and duration by 70%. Now that&rsquo;s a helpful micro device.
 			%p Form factor isn't really The Question because no form factor really hits it on the head. Maybe it's the implant. Or the invisible.
@@ -129,25 +129,25 @@
 		.section-content
 			%p Designers and engineers have demonstrated that they can make cool sensors. Next, we are going to re-design those products and create new ones that capture data beautifully, and usually that will mean invisibly. Picture this: As I walk around my house, stand at my desk at work, and go pee, all of that physiological data will be snagged to do DSP analysis that signals &ldquo;getting worse&rdquo; or &ldquo;getting better&rdquo; on a defined timeline (based on known prior results). This is where machine learning, big data, and design crash together.
 			#dates.slider
-				.slider-aside
+				.slider-aside.caption
 					%p Sensors are exploding. They&rsquo;re everywhere and proliferating in my house. The DARPA line from the 1980s is catching up: smart dust is all around us.
 					.slider-controls
-						%a.date-1985.active{:href => ""} 
+						%a.slide-button.slide0.active{:href => ""} 
 							%span.button
 							%span 1985
-						%a.date-2015{:href => ""}
+						%a.slide-button.slide1{:href => ""}
 							%span.button
 							%span 2015
-						%a.date-2025{:href => ""}
+						%a.slide-button.slide2{:href => ""}
 							%span.button
 							%span 2025
 				.slider-contents
 					.slide.one 
-						%img{:src => "http://placehold.it/600x500&text=1985", :alt => ""}/
+						= image_tag "features/design-for-life/dates/1985.png"
 					.slide.two 
-						%img{:src => "http://placehold.it/600x500&text=2015", :alt => ""}/
+						= image_tag "features/design-for-life/dates/2015.png"
 					.slide.three 
-						%img{:src => "http://placehold.it/600x500&text=2025", :alt => ""}/
+						= image_tag "features/design-for-life/dates/2025.png"
 			%p What we learn from the design of personal wearable sensors will ultimately be applied to in-hospital devices.
 			%p There are still massive amounts of pain and mistakes in institutional and corporate healthcare:
 			%ul
@@ -180,7 +180,7 @@
 		.section-content
 			%p We get biome analysis, emotional analysis, breath evaluation, and voice analysis. Bots (some with cameras) are in our stomachs and blood streams, churning through our bodies and molecules, gathering intelligence. We are able to detect disease and conditions as they erupt at the cellular level, and not have to wait until they physically manifest so our eyes and bodies can &ldquo;see&rdquo; them. (By the time we can see it with our own eyes, it's too goddamn late.)
 			.media-block.inline
-				%img{:src => "http://placehold.it/1000x500&text=Aging+Cycle+Video", :alt => ""}/
+				= image_tag "features/design-for-life/inlines/aging.jpg"
 			%p That&rsquo;s the future, and it is near. If health is beautifully integrated into our daily life, so that we&rsquo;re getting continuous assessments, we&rsquo;ll be able to adjust in near-real time.
 			%p Next, here&rsquo;s what&rsquo;s on the horizon:
 			%ul
@@ -188,7 +188,29 @@
 				%li Make-my-pill (based on my dynamic careplan, biology, conditions, geo, etc) vending machine by Walgreens;
 				%li Adamant, a breath sensor out of Penn State that detects differing signatures in 25 variables of your breath; and
 				%li One-nanometer resolution spectrometers, priced at $20, for instant food analysis at the molecular level. &ldquo;Does this food have any peanuts in it?&rdquo; Check it with a smartphone.
-			%img.full{:src => "http://placehold.it/2000x1200&text=Infographic", :alt => ""}/
+			#locations.full
+				.slider-graphic
+					%img{:src => "http://placehold.it/2000x500&text=Locations+Graphic", :alt => ""}/
+				.slider-controls
+					%a.slide-button.slide0.active{:href => ""} Market
+					%a.slide-button.slide1{:href => ""} Bathroom
+					%a.slide-button.slide2{:href => ""} Bedroom
+					%a.slide-button.slide3{:href => ""} Dining Room
+					%a.slide-button.slide4{:href => ""} Living Room
+					%a.slide-button.slide5{:href => ""} Work
+				.slider-contents
+					.one
+						%img{:src => "http://placehold.it/2000x1200&text=Market", :alt => ""}/
+					.two
+						%img{:src => "http://placehold.it/2000x1200&text=Bathroom", :alt => ""}/
+					.three
+						%img{:src => "http://placehold.it/2000x1200&text=Bedroom", :alt => ""}/
+					.four
+						%img{:src => "http://placehold.it/2000x1200&text=Dining Room", :alt => ""}/
+					.five
+						%img{:src => "http://placehold.it/2000x1200&text=Living Room", :alt => ""}/
+					.six
+						%img{:src => "http://placehold.it/2000x1200&text=Work", :alt => ""}/
 			%p These are neat. Designers and engineers, we can do more, and we should. It won&rsquo;t be until our digital health &ldquo;guards&rdquo;—the digital services that pound on those massive data sets and prior patterns in order to keep us healthier—can identify trends and thereby exponentially reduce our sickness rates that we&rsquo;ll reach Phase Two. My health and my family's health will be actively guarded. The technology is already widely used. For instance, for $10 per month I subscribe to CitiBank&rsquo;s so-called fraud security net, which monitors any transaction that didn't appear to come from me or my family, across the planet. If there is any suspicious action, the bot notifies me immediately, and together we deconflict the issue in near-real time. An analogous (and currently fictitious) product service is LifeLock®, a Netflix-type model where I pay $10, $20, or $30 per month for the service to look over and protect my data, know who is touching it, predict behaviors, and tease me to change my behaviors. This cloud guard will auto-detect and alert me to the make-my-pill vending machine getting hacked = protecting all the trains of trust.
 			%p In the future, we'll eat our medicine and lookout bots. They will monitor and command seek-and-destroy missions at the cellular level in conjunction with external readings and decision-support tools. We won't feel or notice a thing.
 			%p I&rsquo;ll be notified that my biome composition has shifted and that a cold is coming on in a day. My day-treat—concocted specifically for me based on my genomic and personal data set—can be ready in 60 minutes at my local pharmacy. The Skittle®- sized gel tab, a living set of custom organisms ready to swim into my blood stream, is taken orally, melts away immediately, and within several dozen minutes I am back to my unique, diverse, healthy biome. No stuffy head, no aching muscles, no fever, no sign of &ldquo;health,&rdquo; good or bad. I simply am.
@@ -218,6 +240,6 @@
 		.section-content
 			%p Data let us live aware of our health. For example, when we are messaged that ice cream is high in fat, high in sugar, and high in cow&rsquo;s milk, we process that as "Okay, that's bad, but so what?" As soon as it that message becomes quantified, and not by keeping annoying food diaries and looking up the nutrition content of every bite or sip, we get religion. Data take us by the shoulders and shake. We notice that eating this way, and continuing to do so, has taken days, or even a few years, off our precious life expectancy. That is when the entire world changes. But not before.
 			%p It&rsquo;s up to us.
-			.media-block.inline
-				%img{:src => "http://placehold.it/1000x1200&text=Mirror+Graphic", :alt => ""}/
+		.media-block.full
+			= image_tag "features/design-for-life/svg/mirror.svg"
 		
