@@ -7,13 +7,14 @@
 	= javascript_include_tag "features/design-for-life"
 	= javascript_include_tag "slick/slick"
 	= javascript_include_tag "//use.typekit.net/xpn8aww.js"
+	= javascript_include_tag "vide"
 	:javascript
 		try{Typekit.load();}catch(e){}
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => "tags"}/
 
 %article#feature-article.design-for-life
-	%header.main-header
+	%header.main-header{"data-vide-bg" => "../../videos/dfl/header"}
 		.header-contents
 			%h1 Design For Life
 			%h2.byline By Juhan Sonin
@@ -94,7 +95,7 @@
 				.caption
 					%p.light hGraph: Your health in one picture. It&rsquo;s an open source, standardized visual representation of a patient&rsquo;s health status, designed to increase awareness of the individual factors that can affect one&rsquo;s overall health.
 					%p.light hGraph users can easily identify which metrics exist in a normal range versus those that may be too high or low. It effectively conveys important data at sizes both large and small, and enables people to recognize patterns.
-				#hgraph.video
+				#hgraph.video{"data-vide-bg" => "../../videos/dfl/hgraph"}
 			%p The foundations of this new paradigm are in place. The structure is ours to make.
 			%p Our thought experiment provides a stark contrast to the current state of design thinking on life, on health, and on data. We have minimal transparency into key health metrics. For the data we do have, the overhead required to collect it is enormous. People have a hard enough time changing their Facebook privacy settings or figuring out mortgage refinancing. The systems we deal with are increasingly complex, and the user interfaces are more puzzles than designs. And as decision-makers, we are swamped with conflicting data.
 			%p As designers and engineers, our work is increasingly multi-dimensional (not a flat- decision space), and linear-thinking human beings are not good at non-linear thinking. Seeing every variable and doing the mental calculus to orchestrate better decision-making is not our species' forte. We fly by the seat of our pants until we get tired and land, thump, not always in the right or best place. One major variable in the everyday behavior change game is sensors... invisible sensors.
@@ -106,7 +107,7 @@
 			.number 
 				%span 2
 		.section-content
-			#eye-tracking.full
+			#eye-tracking.full{"data-vide-bg" => "../../videos/dfl/blade_runner"}
 				%p.caption These days, my thoughts turn pretty frequently to the image of the Voight-Kampff interrogation machine in the movie Blade Runner (1982). It was a tabletop apparatus with a mechanical eye that peered into a human (or robot) eye to non- invasively determine his/her/its &ldquo;health&rdquo; status. It&rsquo;s either really creepy or really practical.
 			%p The current confluence of sensor tech, data analytics maturity, hardware durability, miniaturization, and industrial evolution create a perfect storm for capturing biologic metrics and determining trends. In a year, we'll have a good first cut at a human prediction model that is personally meaningful and changes behavior (and is only 5% wrong).
 			%p In the <a href="http://goinvo.com/">Involution Studios design studio</a>, I count a half- dozen different wearable health devices on the limbs of our staff, from a Basis watch to Fitbit pedometer to a BodyMedia band to a Jawbone up to a Philips pedometer. Digital scales, AliveCor EKG iPhone cases, cameras that detect blood pressure through your face—we&rsquo;re not only surrounded by sensors, we&rsquo;re adorned with them.
@@ -161,7 +162,7 @@
 			.caption
 				%p How do you get a pulse on key health metrics without a single tear? Your bathroom will turn into a healthroom, complete with non-invasive diagnostics for early detection of chronic diseases.
 				%p The Healthrooms will proliferate and scale as they turn into ready-made, all-in-one, drop-in units. Illustration by Quentin Stipp.
-			#crane.video.full
+			#crane.video.full{"data-vide-bg" => "../../videos/dfl/crane"}
 			%p Hospitals are rolling out patient portals and insurance companies are experimenting with electronic health records, but the usefulness of those repositories is limited to patients. More critical are teachable moments in data that signal potential outcomes and prompt micro behavior shifts that in turn will offer feedback and affirm new behaviors or nudge new ones.
 			%p In the bathroom and, eventually, in other environments like the hospital room, the majority of your physiologic signs will be snagged non-invasively, through sensors that passively sniff you. No blood draws. No awkward stool sample cards. Just whiffs and sniffs and the occasional photograph. All of this must be designed to feel wonderful, so that you think more about LIFE and less about &ldquo;health&rdquo; and &ldquo;security.&rdquo; Background, automatic health sensing will let us focus our consciousness on the dream life we want to live.
 			.aside-media
@@ -169,7 +170,7 @@
 					%p Talking about passive sensors, I always picture the orgasmatron from Woody Allen's movie, Sleeper (1973), which was set in the year 2173. This fictional device, a cylinder large enough to contain one or two people, rapidly induced orgasms. A character would walk in, have a blast, and walk out only seconds later. That&rsquo;s how I want healthcare delivered. That's where engineering and design can really have impact.
 					%p Sign me up.
 					%p.light Image from Woody Allen&rsquo;s movie, Sleeper, 1973
-				.video
+				.video{"data-vide-bg" => "../../videos/dfl/sleeper"}
 	%section.article-section.four
 		%header.sec-header
 			.title
