@@ -14,17 +14,12 @@
 /.sass-cache
 
 .rvmrc
-
-.rvmrc
 .ruby-version
 .cache
 
 # Ignore s3 Keys
 .s3_sync
 
-<<<<<<< HEAD
-=======
 # Ignore video files.
->>>>>>> design-for-life-fixed
 *.mp4
 *.webm
