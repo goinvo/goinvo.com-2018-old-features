@@ -3,6 +3,7 @@
 $gray: #939598;
 $lightgray: lighten($gray, 35%);
 $offwhite: #F2F2F2;
+$gold: #F4D37B;
 
 article.design-for-life {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -82,6 +83,9 @@ article.design-for-life {
 	}
 	&.two .sec-header {
 		margin-bottom: 0;
+	}
+	&.six .sec-header .title {
+		padding-top: 0.5em;
 	}
 }
 
@@ -301,6 +305,35 @@ article.design-for-life {
 		max-width: 250px;
 		margin: 0;
 		color: $offwhite;
+	}
+}
+
+#dates {
+	.slider-aside {
+		.slider-controls {
+			position: relative;
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			a {
+				display: table-cell;
+				text-align: center;
+				color: #000;
+				.button {
+					position: relative;
+					display: block;
+					width: 18px;
+					height: 18px;
+					border: 2px solid #000;
+					border-radius: 50%;
+					margin: 0 auto 5px;
+					transition: background-color 300ms ease;
+				}
+				&.active .button {
+					background-color: $gold;
+				}
+			}
+		}
 	}
 }
 

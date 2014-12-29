@@ -67,16 +67,22 @@ $(document).ready(function(event){
 
 	$('#dates .slider-aside .date-1985').on('click', function(event){
 		event.preventDefault();
+		$('#dates .slider-aside a').removeClass('active');
+		$(this).addClass('active');
 		dates.slickGoTo(0);
 	});
 
 	$('#dates .slider-aside .date-2015').on('click', function(event){
 		event.preventDefault();
+		$('#dates .slider-aside a').removeClass('active');
+		$(this).addClass('active');
 		dates.slickGoTo(1);
 	});
 
 	$('#dates .slider-aside .date-2025').on('click', function(event){
 		event.preventDefault();
+		$('#dates .slider-aside a').removeClass('active');
+		$(this).addClass('active');
 		dates.slickGoTo(2);
 	});
 
