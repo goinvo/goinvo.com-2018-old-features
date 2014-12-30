@@ -6,7 +6,7 @@ gem "middleman-smusher"
 gem "haml"
 gem "compass"
 gem "middleman-autoprefixer"
-gem "middleman-s3_sync","3.0.35"
+gem "middleman-s3_sync","3.0.32"
 gem "middleman-s3_redirect"
 
 require 'rbconfig'
