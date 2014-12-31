@@ -1069,6 +1069,51 @@
 				margin-bottom: 20px;
 			}
 			
+			&#open-pophealth {
+				> .icon {
+					background-image: image-url('products/open-source/pop_health.svg');	
+					background-size: 130%;
+					background-position-x: -15px;
+					background-position-y: 0px;
+					background-color: white;
+				}
+			}
+			
+			&#open-ehr {
+				> .icon {
+					background-image: image-url('products/open-source/ehr.svg');	
+					background-size: 130%;
+					background-position-x: -15px;
+					background-position-y: -15px;
+					background-color: white;
+				}
+			}
+			
+			&#open-town-budget {
+				> .icon {
+					background-image: image-url('products/open-source/visual_budget.svg');	
+					background-size: 130%;
+					background-position-x: -15px;
+					background-position-y: -15px;
+				}
+			}
+			
+			&#open-hmixer {
+				> .icon {
+					background-image: image-url('products/open-source/hmixer.svg');	
+					background-size: contain;
+				}
+			}
+			
+			&#open-hgraph {
+				> .icon {
+					background-image: image-url('products/open-source/hgraph.svg');	
+					background-size: contain;
+				}
+			}
+			
+			
+			
 			
 			.icon, .info {
 				display: inline-block;
@@ -1077,7 +1122,7 @@
 			.icon {
 				width: 100px;
 				height: 100px;
-				background-color: gray;
+				background-color: none;
 				border-radius: 100px;
 				
 				@media only screen and (max-width: 960px) {
