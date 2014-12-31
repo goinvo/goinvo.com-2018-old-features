@@ -133,6 +133,54 @@
 	}
 }
 
+.large-quote {
+	width: auto;
+	max-width: 827px;
+	margin: 0 auto;
+	font-style: italic;
+	font-size: 36px;
+	padding: 0px 10px;
+	padding-top: 0px;
+	line-height: 46px;
+	position: relative;
+	
+	@media only screen and (max-width: 1060px) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	
+	@media only screen and (max-width: 946px) {
+		font-size: 26px;
+		line-height: 36px;
+	}
+	
+	@media only screen and (max-width: 846px) {
+		font-size: 22px;
+		line-height: 32px;
+	}
+	
+	&:before {
+		content: open-quote;
+		position: absolute;
+		left: -2px;
+		top: 0;
+	}
+	
+	.quote-author {
+		font-size: 23px;
+		line-height: 30px;
+		
+		@media only screen and (max-width: 946px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		margin-top: 10px;
+		@media only screen and (max-width: 560px) {
+			font-size: 18px;
+		}
+	}
+}
+
 .very-large-quote {
 	width: auto;
 	margin: 0 auto;
@@ -383,7 +431,7 @@
 				transform: scale(1.05, 1.05);	
 			}
 			
-			@media  only screen and (max-width: 960px) {
+			@media  only screen and (max-width: 1000px) {
 				font-size: 18px;
 				line-height: 22px;
 				width: 80%;
@@ -402,20 +450,31 @@
 
 .mountsinai-container {
 	width: 100%;
-	background-color: #000;
+	background-color: #F6F7F6;
 	position: relative;
 	height: 575px;
-	color: #fff;
+	cursor: pointer;
 	
-	
-	@media  only screen and (max-width: 760px) {
-			height: 640px;
+	&:hover {
+		.left-content .button, .ted-container {
+			transform: scale(1.1, 1.1);	
+		}
 	}
 	
 	
-	@media only screen and (max-width: 520px) {
-			height: 700px;
-		}
+	
+	@media  only screen and (max-width: 1100px) {
+			height: 500px;
+	}
+	
+	@media  only screen and (max-width: 860px) {
+			height: 460px;
+	}
+	
+	@media only screen and (max-width: 730px) {
+			height: 500px;	
+	}
+	
 	
 	.left-content {
 		position: absolute;
@@ -423,13 +482,19 @@
 		left: 0;
 		top: 0;
 		height: 100%;
-		padding: 40px 20px 40px 60px;
+		padding: 140px 20px 40px 60px;
+		
+		@media  only screen and (max-width: 1100px) {
+			padding-top: 90px;
+		}
 		
 		@media  only screen and (max-width: 730px) {
 			width: 100%;
 			z-index: 10;
 			padding-left: 30px;
+			padding-top: 30px;
 		}
+		
 		
 		.section-title {
 			font-size: 50px;
@@ -454,10 +519,10 @@
 		}
 		
 		.button {
-			color: #fff;
+			color: black;
 			font-size: 23px;
 			line-height: 28px;
-			border: 1px solid white;
+			border: 1px solid black;
 			border-radius: 3px;
 			width: auto;
 			display: inline-block;
@@ -465,17 +530,17 @@
 			cursor: pointer;
 			transform: scale(1,1);
 			transition: 300ms ease-in-out;
-			margin-top: 20px;
+			margin-top: 50px;
 			text-align: center;
 			
 			&:hover {
-				transform: scale(1.05, 1.05);	
+				transform: scale(1.15, 1.15);		
 			}
 			
 			@media  only screen and (max-width: 960px) {
 				font-size: 18px;
 				line-height: 22px;
-				width: 80%;
+				width: 90%;
 				margin: 20px auto;
 			}
 			
@@ -503,22 +568,28 @@
 	.right-content {
 		position: absolute;
 		right: 0;
-		top: 0;
+		bottom: 0;
 		width: 50%;
 		height: 570px;
 		padding-top: 30px;
 		overflow: hidden;
 		
+		@media  only screen and (max-width: 1100px) {
+			height: 500px;
+		}
+		
+		@media  only screen and (max-width: 860px) {
+			height: 460px;
+		}
+		
+		
 		@media  only screen and (max-width: 730px) {
 			width: 100%;
 			z-index: 1;
-			top: 385px;
+			bottom: 0;
 			height: 250px;
 		}
-		
-		@media only screen and (max-width: 520px) {
-			top: 440px;	
-		}
+
 		
 		
 		
@@ -541,16 +612,25 @@
 				padding-right: 0px;
 				margin-left: 15px;
 			}
-			
-			&:after {
-				content: " ";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 100%;
-				height: 30px;
-				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(2,0,0,0.95) 100%);
+		}
+		.ted-container {
+			bottom: 0;
+			right: 0;
+			width: 90%; 
+			height: 100px;
+			transition: 300ms ease-in-out;
+			position: absolute;
+			@media only screen and (max-width: 730px) {
+				width: 60%;	
 			}
+			img {
+				width: 100%;
+				height: auto;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+			}
+			
 		}
 	}
 }
