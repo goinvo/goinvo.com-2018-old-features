@@ -162,7 +162,7 @@ div.value {
 		
 		.studio-head-container {
 			width: auto;
-			min-width: 985px; //change this number if we add more items to the nav
+			min-width: 1285px; //change this number if we add more items to the nav
 			height: 60px;
 			padding: 15px 3.125em;
 			position: relative;
@@ -209,6 +209,12 @@ div.value {
 				&#live .image-box{
 					background-image: image-url('studio-nav/live.png');
 					background-position-y: -39px;
+				}
+				
+				&#history .image-box{
+					background-image: image-url('studio-nav/history.png');
+					background-size: cover;
+					background-position-y: -49px;
 				}
 				
 				.studio-title {

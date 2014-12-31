@@ -101,6 +101,15 @@
 									.studio-head-item#live
 										.image-box
 										.studio-title Live
+							%a{:href => "/studio/history"}
+								-if currentPage.include? "history"
+									.studio-head-item.active-studio#history
+										.image-box
+										.studio-title History
+								-else
+									.studio-head-item#history
+										.image-box
+										.studio-title History
 			#main-container
 				.container.content
 					= yield
