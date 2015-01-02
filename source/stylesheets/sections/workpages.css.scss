@@ -893,10 +893,14 @@
 			width: 700px;
 			margin:0px;
 			margin-left: 60px;
-			margin-top: 40px;
+			padding-top: 140px;
+			margin-top: 0px;
 			text-align: left;
 			color: $white;
 			line-height: 1.2em;
+		}
+		a {
+			width: 90%;	
 		}
 		
 		.button-h {
@@ -912,7 +916,7 @@
 		@media only screen and (max-width: 1170px) {
 			height: 700px;
 			h1.title {
-				width: 500px;	
+				width: 600px;	
 				font-size: 50px;
 			}
 		}
@@ -920,12 +924,11 @@
 		@media only screen and (max-width: 950px) {
 			height: 550px;
 			h1.title {
-				width: 400px;	
 				font-size: 45px;
 			}
 		}
 		
-		@media only screen and (max-width: 530px) {
+		@media only screen and (max-width: 650px) {
 			h1.title {
 				width: 100%;	
 				padding-right: 20px;
@@ -933,10 +936,14 @@
 				margin-left: 0px;
 				margin: 0 auto;
 				font-size: 45px;
+				padding-top: 350px;
+			}
+			a {
+				width: 80%;	
 			}
 			.button-h {
 				margin-left:0px;
-				width: 90%;
+				width: 100%;
 				margin:0 auto;
 				margin-top: 30px;
 				margin-left: 5%;
@@ -1154,7 +1161,12 @@
 				}
 			}
 			
-			
+			> a .icon {
+				&:hover {
+					-webkit-animation: breathing 5s ease-out infinite normal;
+					animation: breathing 5s ease-out infinite normal;
+				}
+			}
 			
 			
 			.icon, .info {
@@ -1226,26 +1238,31 @@
 							background-size: contain;
 							background-repeat: no-repeat;
 							box-shadow: none;
+							transition: 200ms ease-in-out;
+							
+							&:hover {
+								transform: scale(1.075,1.075);
+							}
 						}
 					}
 				}
 				
 				.ios .icon {
-					background: image-url('products/open-source/icons/itunes.png');
+					background: image-url('products/open-source/icons/itunes.svg');
 					background-size: 80% !important;
 					background-position: 2px 0px;
 					
 				}
 				.website .icon {
-					background: image-url('products/open-source/icons/web.png');
+					background: image-url('products/open-source/icons/web.svg');
 					background-position-y: 1px;
 				}
 				.demo .icon {
-					background: image-url('products/open-source/icons/demo.png');
+					background: image-url('products/open-source/icons/demo.svg');
 					background-position-y: 2px;
 				}
 				.github .icon {
-					background: image-url('products/open-source/icons/github.png');
+					background: image-url('products/open-source/icons/github.svg');
 				}
 				.description {
 					margin-top: 2px;
@@ -1257,3 +1274,50 @@
 	
 }
 
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  60% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  60% {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+
+  100% {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
