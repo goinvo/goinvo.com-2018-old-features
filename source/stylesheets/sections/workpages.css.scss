@@ -1069,13 +1069,30 @@
 				margin-bottom: 20px;
 			}
 			
+			&#open-pain-trackr{
+				> .icon {
+					background-image: image-url('products/open-source/paintrackr.png');	
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: 0px;
+				}
+			}
+			
+			&#open-runnan{
+				> .icon {
+					background-image: image-url('products/open-source/runnan.png');	
+					background-size: 113%;
+					background-repeat: no-repeat;
+					background-position: -4px -10px;
+				}
+			}
+			
 			&#open-pophealth {
 				> .icon {
 					background-image: image-url('products/open-source/pop_health.svg');	
-					background-size: 130%;
-					background-position-x: -15px;
-					background-position-y: 0px;
-					background-color: white;
+					background-size: 137%;
+					background-repeat: no-repeat;
+					background-position: -18px -3px;
 				}
 			}
 			
@@ -1101,14 +1118,15 @@
 			&#open-hmixer {
 				> .icon {
 					background-image: image-url('products/open-source/hmixer.svg');	
-					background-size: contain;
+					background-size: 102%;
 				}
 			}
 			
 			&#open-hgraph {
 				> .icon {
 					background-image: image-url('products/open-source/hgraph.svg');	
-					background-size: contain;
+					background-size: 115%;
+					background-position: -7px -5px;
 				}
 			}
 			
@@ -1124,6 +1142,7 @@
 				height: 100px;
 				background-color: none;
 				border-radius: 100px;
+				box-shadow: 0px 2px 5px #888888;
 				
 				@media only screen and (max-width: 960px) {
 					width: 75px;
@@ -1164,6 +1183,7 @@
 					display: inline-block;
 					margin-bottom: 5px;
 					margin-top: 2px;
+					
 					a {
 						margin-right: 5px;
 						&:last-of-type {
@@ -1173,20 +1193,28 @@
 							width: 20px;
 							height: 20px;
 							display: inline-block;
+							background-size: contain;
+							background-repeat: no-repeat;
+							box-shadow: none;
 						}
 					}
 				}
-				.ios {
+				.ios .icon {
+					background: image-url('products/open-source/icons/itunes.png');
+					background-size: 80% !important;
+					background-position: 2px 0px;
 					
 				}
-				.website {
-					
+				.website .icon {
+					background: image-url('products/open-source/icons/web.png');
+					background-position-y: 1px;
 				}
-				.demo {
-
+				.demo .icon {
+					background: image-url('products/open-source/icons/demo.png');
+					background-position-y: 2px;
 				}
-				.github {
-
+				.github .icon {
+					background: image-url('products/open-source/icons/github.png');
 				}
 				.description {
 					margin-top: 2px;
