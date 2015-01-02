@@ -456,7 +456,7 @@
 	cursor: pointer;
 	
 	&:hover {
-		.left-content .button, .ted-container {
+		.left-content .button {
 			transform: scale(1.1, 1.1);	
 		}
 	}
@@ -1034,8 +1034,8 @@
 		
 		h1 {
 			padding-left: 5px;
+			text-align: center;
 			@media only screen and (max-width: 740px) {
-				text-align: center;
 				margin-bottom: 1em;
 			}
 		}
@@ -1161,10 +1161,25 @@
 				}
 			}
 			
+			&#open-health-axioms {
+				> a .icon {
+					background-image: image-url('products/open-source/health.png');	
+					background-size: contain;
+				}
+			}
+			
+			&#open-design-axioms {
+				> a .icon {
+					background-image: image-url('products/open-source/design.png');	
+					background-size: 174%;
+					background-position-y: 35%;
+					background-position-x: 18%;
+				}
+			}
+			
 			> a .icon {
 				&:hover {
-					-webkit-animation: breathing 5s ease-out infinite normal;
-					animation: breathing 5s ease-out infinite normal;
+					transform: scale(1.2, 1.2);
 				}
 			}
 			
@@ -1253,13 +1268,9 @@
 					background-position: 2px 0px;
 					
 				}
-				.website .icon {
+				.website .icon, .demo .icon {
 					background: image-url('products/open-source/icons/web.svg');
 					background-position-y: 1px;
-				}
-				.demo .icon {
-					background: image-url('products/open-source/icons/demo.svg');
-					background-position-y: 2px;
 				}
 				.github .icon {
 					background: image-url('products/open-source/icons/github.svg');
@@ -1274,50 +1285,119 @@
 	
 }
 
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-  }
+.runnan-video {
+	width: 100%;
+	height: 450px;
+	position: relative;
+	cursor: pointer;
+	
+	@media only screen and (min-width: 1600px) {
+		height: 750px;	
+		video {
+			top: 60px !important;	
+		}
+	}
+	
+	@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+		height: 650px;
+	}
+	
+	@media only screen and (min-width: 1040px) and (max-width: 1280px) {
+		height: 550px;
+	}
+	
+	@media only screen and (min-width: 760px) and (max-width: 1040px) {
+		height: 450px;
+	}
+	
+	@media only screen and (min-width: 490px) and (max-width: 760px) {
+		height: 350px;
+	}
+	
+	@media only screen and (max-width: 490px) {
+		height: 350px;
+	}
+	
+	.button {
+		position: absolute;
+		bottom: 10%;
+		left: 5%;
+		
+		@media only screen and (max-width: 1280px) {
+			top: 10%;
+			bottom: auto;
+		}
+		
+		@media only screen and (max-width: 742px) and (min-width: 626px) {
+			left: calc(50% - 180px);	
+		}
+		
+		@media only screen and (max-width: 626px) and (min-width: 538px) {
+			left: calc(50% - 155px);	
+		}
+		
+		@media only screen and (max-width: 538px) and (min-width: 0px) {
+			left: calc(50% - 25%);	
+		}
+		
+		z-index:10;
+		max-width: 50%;
+		font-size: 30px;
+		line-height: 36px;
 
-  25% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
+		border: 1px solid black;
+		border-radius: 3px;
+		width: auto;
+		display: inline-block;
+		padding: 5px 15px;
+		cursor: pointer;
+		transform: scale(1,1);
+		transition: 300ms ease-in-out;
+		color: black;
+		text-align: center;
+		background-color: rgba(255,255,255,.4);
 
-  60% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-  }
+		&:hover {
+			transform: scale(1.2, 1.2);
+			background-color: rgba(255,255,255,.6);
+		}
+	}
+	
+	//Video
+	#video-bg {
+	  position: absolute;
+	  top: 0; right: 0; bottom: 0; left: 0;
+	  overflow: hidden;
+		z-index: 5;	
+	}
+	#video-bg > video {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+	/* 1. No object-fit support: */
+	@media (min-aspect-ratio: 16/9) {
+	  #video-bg > video { height: 300%; top: -100%; }
+	}
+	@media (max-aspect-ratio: 16/9) {
+	  #video-bg > video { width: 300%; left: -100%; }
+	}
+	/* 2. If supporting object-fit, overriding (1): */
+	@supports (object-fit: cover) {
+	  #video-bg > video {
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		object-fit: cover;
+	  }
+	}
 
-  100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-  }
-
-  25% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  60% {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-  }
-
-  100% {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-  }
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		#video-bg > video {
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+	  }
+	}
 }
