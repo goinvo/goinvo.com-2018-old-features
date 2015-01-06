@@ -1,0 +1,12 @@
+- content_for(:title) do
+	= "The History of Involution Studios"
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/history"
+	= javascript_include_tag 'http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js'
+	%meta{:name => "description", :content => "A timeline of the history of Involution Studios."}/
+	%meta{:name => "keywords", :content => ""}/
+.team
+	.time-wrapper
+		#timeline-embed
+
+= javascript_include_tag 'timeline'

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="263.417px" height="263px" viewBox="0 0 263.417 263" style="enable-background:new 0 0 263.417 263;" xml:space="preserve"
+	>
+<rect x="-25.791" y="-20.667" style="fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;" width="183.333" height="343.333"/>
+<g>
+	<g>
+		<g>
+			<defs>
+				<circle id="SVGID_1_" cx="131.916" cy="130.833" r="130.5"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<path style="clip-path:url(#SVGID_2_);fill:none;stroke:#6C6E6D;stroke-width:3;stroke-miterlimit:10;" d="M-1104.584-218.167
+				c0,0.276-0.224,0.5-0.5,0.5l0,0c-0.276,0-0.5-0.224-0.5-0.5v-1c0-0.276,0.224-0.5,0.5-0.5l0,0c0.276,0,0.5,0.224,0.5,0.5
+				V-218.167z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<circle id="SVGID_3_" cx="131.916" cy="130.833" r="130.5"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_4_);">
+				<polygon style="fill:#97BE8C;" points="248.416,237.333 193.916,288.833 133.416,264.333 133.916,-36.167 251.416,-3.167 
+					294.916,83.833 281.416,173.333 				"/>
+				<g>
+					<g>
+						
+							<line style="fill:none;stroke:#6C6E6D;stroke-width:5;stroke-miterlimit:10;" x1="223.417" y1="24.001" x2="223.417" y2="27.501"/>
+						
+							<line style="fill:none;stroke:#6C6E6D;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:6.7836,9.6909;" x1="223.417" y1="37.192" x2="223.416" y2="262.991"/>
+						
+							<line style="fill:none;stroke:#6C6E6D;stroke-width:5;stroke-miterlimit:10;" x1="223.416" y1="267.836" x2="223.416" y2="271.336"/>
+					</g>
+				</g>
+				<polyline style="fill:none;stroke:#6C6E6D;stroke-width:5;stroke-miterlimit:10;" points="-30.917,120.169 133.416,67.333 
+					257.25,6.002 				"/>
+				<path style="fill:#FFFFFF;stroke:#6C6E6D;stroke-width:3.2682;stroke-miterlimit:10;" d="M249.751,274.501
+					c0,2.761-7.924,33.333-11.336,31.833l-36.5,1.5c-3.276,0-20.5-2.239-20.5-5v-70.5c0-2.761,2.656-5,5.935-5h48.956
+					c3.277,0,23.779-1.261,23.779,1.5L249.751,274.501z"/>
+				<g>
+					<g>
+						
+							<image style="overflow:visible;opacity:0.82;" width="244" height="244" xlink:href="F6EA4483D3F2321F.png"  transform="matrix(0.24 0 0 0.24 104.541 91.458)">
+						</image>
+						<g>
+							<g>
+								<g>
+									<circle style="fill:#FFFFFF;" cx="133.791" cy="120.708" r="23.25"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<circle style="fill:#80994F;" cx="133.791" cy="120.708" r="12.5"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

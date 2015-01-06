@@ -1,0 +1,392 @@
+@import "../base/core";
+
+$gray: #939598;
+$lightgray: lighten($gray, 35%);
+$offwhite: #F2F2F2;
+$gold: #F4D37B;
+
+article.design-for-life {
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+}
+
+.main-header {
+	padding-top: 55px;
+	padding-bottom: 24em;
+	z-index: 0;
+	.header-contents {
+		padding: 4em 6em 0;
+		h1 {
+			font-size: 3em;
+			margin-bottom: 0;
+			padding-bottom: 0.4em;
+		}
+		h2, .email {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		h2 {
+			margin-bottom: 0.25em;
+		}
+		.email {
+			margin-bottom: 0.75em;
+		}
+	}
+	.social-buttons {
+		svg {
+			width: 28px;
+			height: 28px;
+			background: #474751;
+			padding: 6px;
+			fill: $offwhite;
+		}
+	}
+}
+
+.sec-header {
+	margin: 5em 0;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+	padding: 2em 0em 2em 6em;
+	background: $offwhite;
+	z-index: 1;
+	@include clearfix();
+	.title {
+		float: left;
+		h3, h4 {
+			font-weight: 500;
+		}
+		h3 {
+			font-size: 1.8em;
+			margin-bottom: 0.2em;
+		}
+		h4 {
+			font-size: 1em;
+			margin-bottom: 0;
+			color: $gray;
+		}
+	}
+	.number {
+		float: right;
+		width: 100px;
+		font-weight: 900;
+		font-size: 3em;
+	}
+}
+
+.article-section {
+	&.one .sec-header {
+		margin-top: 0;
+	}
+	&.two .sec-header {
+		margin-bottom: 0;
+	}
+	&.six .sec-header .title {
+		padding-top: 0.5em;
+	}
+}
+
+.section-content {
+	h1, h2, h3, h4, h5, h6, p, ul, ol, .div {
+		max-width: 800px;
+		margin: 0 auto 1em;
+	}
+	p, ul, ol {
+		font-size: 1.1em;
+		line-height: 1.3em;
+	}
+	ul, ol {
+		li {
+			margin-bottom: 0.5em;
+		}
+	}
+	.full {
+		width: 100%;
+		margin: 2em 0;
+	}
+	.caption {
+		font-size: 85%;
+		color: $gray;
+	}
+}
+
+.aside-media, .slider {
+	max-width: 950px;
+	margin: 3em auto;
+	@include clearfix();
+	.caption, .slider-aside {
+		margin-top: 3em;
+		width: 25%;
+		float: left;
+	}
+	.video, {
+		width: 65%;
+		height: 30em;
+		float: right;
+		z-index: 1;
+	}
+}
+
+.expanded-graphic {
+	position: relative;
+	max-width: 950px;
+	margin: 0 auto;
+	img {
+		margin: 0;
+	}	
+	.seamless {
+		margin-bottom: 0;
+	}
+}
+
+#dates.slider .slider-contents {
+	width: 65%;
+	float: right;
+}
+
+.media-block {
+	&.inline {
+		max-width: 800px;
+		margin: 0 auto 2em;
+		img {
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+#timeline-slider-controller {
+	max-width: 930px;
+	margin: 0 auto;
+	left: -10px;
+	position: relative;
+	height: 10px;
+	top: -10px;
+	z-index: 100;
+	span {
+		display: block;
+		position: absolute;
+		height: 20px;
+		width: 20px;
+		top: -5px;
+		border: 3px solid #000;
+		border-radius: 20px;
+		background: #f04e52;
+		cursor: pointer;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+#timechart {
+	max-width: 978px;
+	img {
+		position: relative;
+		left: 3px;
+	}
+	&:after {
+		display: block;
+		height: 10px;
+		content: "";
+		border: 3px solid #000;
+		border-top-width: 2px;
+		margin: 0 14px;
+	}
+}
+
+
+
+#timeline {
+	position: relative;
+	margin-top: -10px;
+	.byline {
+		position: absolute;
+		bottom: 2.5em;
+		left: 2.5em;
+		color: $gray;
+	}
+	.slick-slider {
+		margin-bottom: 0;
+	}
+	.slide {
+		height: 25em;
+		position: relative;
+		border: 3px solid #000;
+		border-top: 0;
+		border-radius: 0 0 10px 10px;
+		background-color: $lightgray;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		.slide-content {
+			position: absolute;
+			font-size: 0.7em;
+			line-height: 0.75em;
+			h6 {
+				margin-bottom: 0;
+				font-size: 1.2em;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			.source {
+				color: $gray;
+				a {
+					color: $gray;
+				}
+			}
+		}
+		&.one {
+			background-image: image-url('features/design-for-life/timeline/slide1.png');
+			.slide-content {
+				bottom: 4%;
+				right: 2%;
+				width: 58%;
+			}
+		}
+		&.two {
+			background-image: image-url('features/design-for-life/timeline/slide2.png');
+			.slide-content {
+				bottom: 8%;
+				left: 4%;
+				width: 60%;
+			}
+		}
+		&.three {
+			background-image: image-url('features/design-for-life/timeline/slide3.png');
+			.slide-content {
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				bottom: 8%;
+				width: 60%;
+			}
+		}
+		&.four {
+			background-image: image-url('features/design-for-life/timeline/slide4.png');
+			.slide-content {
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				bottom: 8%;
+				width: 60%;
+			}
+		}
+		&.five {
+			background-image: image-url('features/design-for-life/timeline/slide5.png');
+			.slide-content {
+				margin-top: 15%;
+				width: 50%;
+				left: 8%;
+			}
+		}
+		&.six {
+			background-image: image-url('features/design-for-life/timeline/slide6.png');
+			.slide-content {
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				bottom: 2.5em;
+				width: 60%;
+			}
+		}
+		&.seven {
+			background-image: image-url('features/design-for-life/timeline/slide7.png');
+			.slide-content {
+				top: 70%;
+				left: 12%;
+			}
+		}
+		&.eight {
+			background-image: image-url('features/design-for-life/timeline/slide8.png');
+			.slide-content {
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				bottom: 10%;
+				width: 26%;
+			}
+		}
+	}
+}
+
+#eye-tracking {
+	margin-top: 0;
+	padding: 6em;
+	z-index: 1;
+	p {
+		max-width: 250px;
+		margin: 0;
+		color: $offwhite;
+	}
+}
+
+#dates {
+	.slider-aside {
+		.slider-controls {
+			position: relative;
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			a {
+				display: table-cell;
+				text-align: center;
+				color: #000;
+				.button {
+					position: relative;
+					display: block;
+					width: 18px;
+					height: 18px;
+					border: 2px solid #000;
+					border-radius: 50%;
+					margin: 0 auto 5px;
+					transition: background-color 300ms ease;
+				}
+				&.active .button {
+					background-color: $gold;
+				}
+			}
+		}
+	}
+}
+
+#crane {
+	height: 1500px;
+	z-index: 1;
+}
+
+#locations {
+	.slider-controls {
+		@include clearfix();
+		a {
+			display: block;
+			float: left;
+			margin: 4px 0;
+			padding: 4px;
+			color: #000;
+			text-align: center;
+			text-transform: uppercase;
+			border-right: 2px solid #000;
+			transition: background 300ms ease;
+			&:last-child {
+				border-right: 0;
+			}
+			&.slide0, &.slide1 {
+				width: 12%;
+			}
+			&.slide2, &.slide3, &.slide4 {
+				width: 18%;
+			}
+			&.slide5 {
+				width: 22%;
+			}
+			&.active {
+				background: $gold;
+			}
+		}
+	}
+		
+}
