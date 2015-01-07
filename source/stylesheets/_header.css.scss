@@ -27,6 +27,19 @@ body.products #main-header #nav-buttons .products{
 	}
 }
 
+// Javascript disabled -- need to make the font-size smaller because georgia is super large
+html.no-js {
+	#main-header {
+		#nav-buttons, #nav-buttons-mobile {
+			font-size: 1em;
+			
+			position: absolute;
+			top: 19px;
+			right: 20px;
+		}
+	}
+}
+
 #main-header {
 	height: 55px;
 	background: rgba(18,18,18,.92);
