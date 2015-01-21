@@ -133,6 +133,13 @@
   linkedin_url: "http://www.linkedin.com/in/craigmcginley"
   github_username: "craigmcginley"
   photo: craig_mcginley.jpg 
+- first_name: Brian
+  last_name: Liston
+  title: "Designer"
+  bio: "Brian is a designer and visual artist with a background in graphic design, film and art history. He specializes in time-based media design and strives to create beautiful things in every medium available to him. Brian is a graduate of Columbus College of Art & Design."
+  linkedin_url: "https://www.linkedin.com/pub/brian-liston/6/28a/9b8"
+  twitter_username: lliissttoonn
+  photo: brian_liston.jpg 
   
 - first_name: Dirk
   last_name: Knemeyer
