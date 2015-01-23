@@ -7,6 +7,39 @@ $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
+.navigation {
+	position: fixed;
+	top: 55px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: white;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+	box-shadow: 0px -2px 7px;
+	
+	ul, ol {
+		max-width: 1200px;
+		margin: 0 auto;
+		li {
+			display: inline-block;
+			white-space: nowrap;
+			padding: 7px;
+			min-width: calc((100%) / 7);
+			font-size: .9em;
+			
+			a {
+				color: black;	
+				transition: all 250ms ease-in-out;	
+				&:hover {
+					color: gray;
+					text-decoration: underline;	
+				}
+			}
+		}
+	}
+}
+
 .container.content {
     background-color: $bodyBackground;   
 }
