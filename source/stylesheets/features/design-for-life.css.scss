@@ -4,18 +4,30 @@ $gray: #939598;
 $lightgray: lighten($gray, 35%);
 $offwhite: #F2F2F2;
 $gold: #F4D37B;
+$contentBorder: rgba(0,0,0, .21);
+$bodyBackground: rgba(0,0,0, .01);
+
+.container.content {
+    background-color: $bodyBackground;   
+}
 
 article.design-for-life {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
 	max-width: 1200px;
 	margin: 0 auto;
-	border-left: 3px solid #000;
-	border-right: 3px solid #000;
+	border-left: 1px solid $contentBorder;
+	border-right: 1px solid $contentBorder;
+    background-color: white;
 }
 
 .main-header {
 	padding-top: 55px;
-	padding-bottom: 24em;
+	padding-bottom: calc(24em - 10px);
+    
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 19em;   
+    }
+    
 	z-index: 0;
 	.header-contents {
 		padding: 4em 6em 0;
@@ -48,8 +60,8 @@ article.design-for-life {
 
 .sec-header {
 	margin: 5em 0;
-	border-top: 3px solid #000;
-	border-bottom: 3px solid #000;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
 	padding: 2em 0em 2em 6em;
 	background: $offwhite;
 	z-index: 1;
@@ -155,9 +167,19 @@ article.design-for-life {
 			margin-bottom: 0.5em;
 		}
 	}
+    
+    &.wide {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 2em;
+        img {
+            margin-bottom: 3em;
+            margin-top: 3em;
+        }   
+    }
 }
 
-#timeline-slider-controller {
+#timeline-slider-controller, #timeline-dates {
 	max-width: 930px;
 	margin: 0 auto;
 	left: -10px;
@@ -178,7 +200,33 @@ article.design-for-life {
 		&:focus {
 			outline: none;
 		}
+        
+        position: relative;
+        
+        &:after {
+            content: " ";
+            position: relative; 
+            background-color: rgb(163, 12, 41);
+            width: 60%;
+            height: 60%;
+            border-radius: 100%;
+            left: 20%;
+            top: 20%;
+        }
 	}
+}
+
+#timeline-dates {
+    //insert code here
+    position: relative;
+	background-color: transparent;
+	top: 10px;
+	height: 1px;
+    div {
+        position: absolute;
+        top: 0;
+		font-size: 10px;
+    }
 }
 
 #timechart {
@@ -208,15 +256,20 @@ article.design-for-life {
 		left: 2.5em;
 		color: $gray;
 	}
+    .slick-list {
+        border: 3px solid #000;
+        border-top: 0;
+        border-radius: 0 0 10px 10px;   
+    }
 	.slick-slider {
 		margin-bottom: 0;
 	}
 	.slide {
 		height: 25em;
 		position: relative;
-		border: 3px solid #000;
+		//border: 3px solid #000;
 		border-top: 0;
-		border-radius: 0 0 10px 10px;
+		border-radius: 0 0 7px 7px;
 		background-color: $lightgray;
 		background-position: center;
 		background-size: contain;
@@ -325,7 +378,23 @@ article.design-for-life {
 }
 
 #dates {
+    
+    .slick-slide {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+        &.slick-active {
+            opacity: 1;   
+        }
+    }
+    
 	.slider-aside {
+        width: 30%;
+        
+        p {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+        
 		.slider-controls {
 			position: relative;
 			display: table;
@@ -335,6 +404,9 @@ article.design-for-life {
 				display: table-cell;
 				text-align: center;
 				color: #000;
+                span {
+                    z-index: 10;
+                }   
 				.button {
 					position: relative;
 					display: block;
@@ -343,18 +415,30 @@ article.design-for-life {
 					border: 2px solid #000;
 					border-radius: 50%;
 					margin: 0 auto 5px;
+                    background-color: white;
 					transition: background-color 300ms ease;
 				}
 				&.active .button {
 					background-color: $gold;
 				}
 			}
+            
+            &:after {
+                content: "";
+                position: absolute;
+                top: calc(25% - 2px);
+                height: 1px;
+                width: 50%;
+                left: 13%;
+                border-top: 3px dotted black;
+                z-index: 5;
+            }
 		}
 	}
 }
 
 #crane {
-	height: 1500px;
+	height: 650px;
 	z-index: 1;
 }
 

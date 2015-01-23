@@ -335,21 +335,42 @@
             // get wrapper size
             wrapperHeight = this.$wrapper.height(),
             wrapperWidth = this.$wrapper.width();
+        
+            var windowWidth = $(document).width();
+        
+        if(windowWidth >= 1200) {
+            if (wrapperWidth / videoWidth > wrapperHeight / videoHeight) {
+                this.$video.css({
+                    "width": "100%",
 
-        if (wrapperWidth / videoWidth > wrapperHeight / videoHeight) {
-            this.$video.css({
-                "width": wrapperWidth + 2,
+                    // +2 pixels to prevent empty space after transformation
+                    "height": "auto"
+                });
+            } else {
+                this.$video.css({
+                    "width": "100%",
 
-                // +2 pixels to prevent empty space after transformation
-                "height": "auto"
-            });
-        } else {
-            this.$video.css({
-                "width": "auto",
+                    // +2 pixels to prevent empty space after transformation
+                    "height": "auto"
+                });
+            }
+        }
+        else {
+            if (wrapperWidth / videoWidth > wrapperHeight / videoHeight) {
+                this.$video.css({
+                    "width": wrapperWidth + 2,
 
-                // +2 pixels to prevent empty space after transformation
-                "height": wrapperHeight + 2
-            });
+                    // +2 pixels to prevent empty space after transformation
+                    "height": "auto"
+                });
+            } else {
+                this.$video.css({
+                    "width": "auto",
+
+                    // +2 pixels to prevent empty space after transformation
+                    "height": wrapperHeight + 2
+                });
+            }
         }
     };
 
