@@ -1,5 +1,5 @@
 - content_for(:title) do
-	= "Design For Life"
+	= "From Bathroom to Healthroom"
 - content_for(:page_head) do
 	= stylesheet_link_tag "features/from-bathroom-to-healthroom"
 	= stylesheet_link_tag "slick"
@@ -18,8 +18,8 @@
 		.header-contents
 			%h1 From Bathroom to Healthroom
 			%h2.byline How magical technology will revolutionize human health
-			%h2.byline By Juhan Sonin
-			%p.email juhan@goinvo.com
+			%p.author By Juhan Sonin
+			%p.email <a href = "mailto:juhan@goinvo.com">juhan@goinvo.com</a>
 			.social-buttons
 				%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/design-for-life", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
 					%svg{:version => "1.1", :viewBox => "240 0 480 480"}
