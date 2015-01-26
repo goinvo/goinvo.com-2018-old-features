@@ -49,63 +49,42 @@ var timelinePercents = [
 ];
 
 switchSlide = function(percentage, slickObj){
-//	if (percentage > timelineValues[7] - ((timelineValues[7] - timelineValues[6])/2)) {
-//		slickObj.slickGoTo(7);
-//	} else if (percentage > timelineValues[6] - ((timelineValues[6] - timelineValues[5])/2)) {
-//		slickObj.slickGoTo(6);
-//	} else if (percentage > timelineValues[5] - ((timelineValues[5] - timelineValues[4])/2)) {
-//		slickObj.slickGoTo(5);
-//	} else if (percentage > timelineValues[4] - ((timelineValues[4] - timelineValues[3])/2) ){
-//		slickObj.slickGoTo(4);
-//	} else if (percentage > timelineValues[3] - ((timelineValues[3] - timelineValues[2])/2)) {
-//		slickObj.slickGoTo(3);
-//	} else if (percentage > timelineValues[2] - ((timelineValues[2] - timelineValues[1])/2)) {
-//		slickObj.slickGoTo(2);
-//	} else if (percentage > timelineValues[1] - ((timelineValues[1] - timelineValues[0])/2) ){
-//		slickObj.slickGoTo(1);
-//	} else if (percentage > (timelineValues[0])) {
-//		slickObj.slickGoTo(0);
-//	}
-//	return;
+
 }
 
 switchSlideAfter = function(percentage, slickObj, slidingObject){
 	if (percentage > timelineValues[7] - ((timelineValues[7] - timelineValues[6])/2)) {
 		slickObj.slickGoTo(7);
         slidingObject.slider('value', timelineValues[7]);
-		console.log(7);
 	} else if (percentage > timelineValues[6] - ((timelineValues[6] - timelineValues[5])/2)) {
 		slickObj.slickGoTo(6);
         slidingObject.slider('value', timelineValues[6]);
-		console.log(6);
 	} else if (percentage > timelineValues[5] - ((timelineValues[5] - timelineValues[4])/2)) {
 		slickObj.slickGoTo(5);
         slidingObject.slider('value', timelineValues[5]);
-		console.log(5);
 	} else if (percentage > timelineValues[4] - ((timelineValues[4] - timelineValues[3])/2) ){
 		slickObj.slickGoTo(4);
         slidingObject.slider('value', timelineValues[4]);
-		console.log(4);
 	} else if (percentage > timelineValues[3] - ((timelineValues[3] - timelineValues[2])/2)) {
 		slickObj.slickGoTo(3);
         slidingObject.slider('value', timelineValues[3]);
-		console.log(3);
 	} else if (percentage > timelineValues[2] - ((timelineValues[2] - timelineValues[1])/2)) {
 		slickObj.slickGoTo(2);
         slidingObject.slider('value', timelineValues[2]);
-		console.log(2);
 	} else if (percentage > timelineValues[1] - ((timelineValues[1] - timelineValues[0])/2) ){
 		slickObj.slickGoTo(1);
         slidingObject.slider('value', timelineValues[1]);
-		console.log(1);
 	} else if (percentage > (timelineValues[0])) {
 		slickObj.slickGoTo(0);
         slidingObject.slider('value', timelineValues[0]);
-		console.log(0);
 	}
 	return;
 }
 
+moveSlider = function(slide, slidingObject){
+	slidingObject.slider('value', timelineValues[slide]);
+	return;
+}
 
 
 buttonSwitch = function(event, slickObj, navElementSelector, navButton) {
@@ -150,6 +129,8 @@ $(document).ready(function(event){
 		draggable: false,
 		onAfterChange: function() {
 			ableToNavigate = true;
+			var currentSlide = timeline.slickCurrentSlide();
+			moveSlider(currentSlide, $('#timeline-slider-controller'));
 		}
 	});
 	var dates = datesObj.slick({
