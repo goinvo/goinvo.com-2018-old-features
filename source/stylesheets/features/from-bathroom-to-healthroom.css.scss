@@ -655,4 +655,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		max-width: 1199px;
 		z-index: 1000;	
 	}
+	
+	.scroll-empty {
+		height: 0;
+		transition: height 10ms ease-in-out;
+	}
+	
+	.video.full {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
 }

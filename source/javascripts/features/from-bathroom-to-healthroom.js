@@ -99,6 +99,10 @@ buttonSwitch = function(event, slickObj, navElementSelector, navButton) {
 	}
 }
 
+window.onload = function() {
+		$('body').animate({ scrollTop: 0 });
+}
+
 $(document).ready(function(event){
 	// Init Objects
 	var timelineObj = $('#timeline .slider-contents');
@@ -168,22 +172,32 @@ $(document).ready(function(event){
 		buttonSwitch(event, locationsObj, '#locations .slider-controls', this);
 	});
 	
-	var scrollToShrink = $('.scroll-wrapper');
-	var initialHeight = scrollToShrink.height();
+	var fixedElems = [
+		{
+			'scrollToShrink' : 	$('#blade-runner-wrapper'),
+			'initialHeight' : $('#blade-runner-wrapper').height(),
+			'initialPos' : parseInt($('#blade-runner-wrapper').position().top),
+			'scrollText' : $('#blade-margin'),
+			'scrollEmpty' : $('#blade-empty')
+		},
+		{
+			'scrollToShrink' : 	$('#crane-wrapper'),
+			'initialHeight' : $('#crane-wrapper').height(),
+			'initialPos' : parseInt($('#crane-wrapper').position().top),
+			'scrollText' : $('#crane-margin'),
+			'scrollEmpty' : $('#crane-empty')
+		},
+		{
+			'scrollToShrink' : 	$('#aging-wrapper'),
+			'initialHeight' : $('#aging-wrapper').height(),
+			'initialPos' : parseInt($('#aging-wrapper').position().top),
+			'scrollText' : $('#aging-margin'),
+			'scrollEmpty' : $('#aging-empty')
+		}
+	];
 	
 	var pastScrollTop = $(window).scrollTop();
 	
-	var initialPos = parseInt(scrollToShrink.position().top);
-	var scrollText = $('#blade-margin');
-	
-	var fixedElems = [
-		{
-			'scrollToShrink' : 	$('.scroll-wrapper'),
-			'initialHeight' : $('.scroll-wrapper').height(),
-			'initialPos' : parseInt($('.scroll-wrapper').position().top),
-			'scrollText' : $('#blade-margin')
-		}
-	];
 	
 	$(window).scroll(function(event) {
 		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
@@ -192,22 +206,22 @@ $(document).ready(function(event){
 		for(var i = 0; i < fixedElems.length; i++) {
 			var scrollPosition = parseInt(fixedElems[i].scrollToShrink.position().top) - navHeight; // unique to each elemet in the loop
 			var currentHeight = fixedElems[i].scrollToShrink.height();	 // unique to each elemet in the loop
-			
+
 			// add or removed the class fix-me
 			if(currentScroll + navHeight >= fixedElems[i].initialPos && !fixedElems[i].scrollToShrink.hasClass('fix-me')) {
 				fixedElems[i].scrollToShrink.toggleClass('fix-me', true);	
 				fixedElems[i].scrollToShrink.css('top', navHeight)
-				fixedElems[i].scrollText.css('margin-top', (parseInt(fixedElems[i].scrollToShrink.outerHeight()) + 37) + 'px');
+				fixedElems[i].scrollEmpty.css('height', fixedElems[i].scrollToShrink.outerHeight() + 36);
 			} else if (currentScroll + navHeight < fixedElems[i].initialPos && fixedElems[i].scrollToShrink.hasClass('fix-me')) {
 				fixedElems[i].scrollToShrink.toggleClass('fix-me', false);
-				fixedElems[i].scrollText.css('margin-top', 0);
+				fixedElems[i].scrollEmpty.css('height', '0');
 			}
-
+			
 			if(currentScroll > pastScrollTop && fixedElems[i].scrollToShrink.height() > 0) {
 				if(currentScroll >= scrollPosition) {
 					fixedElems[i].scrollToShrink.height(currentHeight - (currentScroll - pastScrollTop));	
 				}
-			} else if(currentScroll < pastScrollTop && currentScroll < (fixedElems[i].initialPos + fixedElems[i].initialHeight) && fixedElems[i].scrollToShrink.height() < fixedElems[i].initialHeight) {
+			} else if(currentScroll < pastScrollTop && currentScroll < (fixedElems[i].initialPos + fixedElems[i].initialHeight)  && fixedElems[i].scrollToShrink.height() < fixedElems[i].initialHeight && currentScroll + navHeight  < fixedElems[i].scrollText.position().top - 36) {
 				fixedElems[i].scrollToShrink.height(currentHeight + (pastScrollTop - currentScroll));
 			}
 			
