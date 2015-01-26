@@ -100,7 +100,7 @@ buttonSwitch = function(event, slickObj, navElementSelector, navButton) {
 }
 
 window.onload = function() {
-		$('body').animate({ scrollTop: 0 });
+	$('body').animate({ scrollTop: 0 });
 }
 
 $(document).ready(function(event){
