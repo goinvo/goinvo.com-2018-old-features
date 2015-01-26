@@ -259,7 +259,7 @@
 		.media-block.full
 			= image_tag "features/design-for-life/svg/mirror.svg"
 .contributions
-	.social-row
+	.cont-wrapper
 		.social-buttons.right-align
 			%a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/design-for-life", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
 				%svg{:version => "1.1", :viewBox => "240 0 480 480"}
@@ -292,7 +292,7 @@
 						%table.column
 							%tbody
 								%tr
-									%td.label Designer
+									%td.label Designer:
 									%td.person Xinyu Liu
 								%tr
 									%td.label Illustrator:
@@ -309,3 +309,7 @@
 								%tr
 									%td.label
 									%td.person 	Noel Forte
+		.footer-logo
+			.logo
+				= image_tag "logo_blue.png"
+			%a{:href => "http://www.goinvo.com"} goinvo.com

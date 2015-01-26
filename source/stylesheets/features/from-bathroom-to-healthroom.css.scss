@@ -102,18 +102,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			margin-bottom: 0.75em;
 		}
 	}
-	.social-buttons {
-		svg {
-			width: 28px;
-			height: 28px;
-			background: #474751;
-			padding: 6px;
-			fill: $offwhite;
-			transition: background 250ms ease-in-out;
-			&:hover {
-				background:#83838E;	
-			}
+}
+
+.social-buttons {
+	svg {
+		width: 28px;
+		height: 28px;
+		background: #474751;
+		padding: 6px;
+		fill: $offwhite;
+		transition: background 250ms ease-in-out;
+		&:hover {
+			background:#83838E;	
 		}
+	}
+	
+	&.right-align {
+		float: right;
+		margin-right: 9%;
 	}
 }
 
@@ -484,8 +490,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
         width: 30%;
         
         p {
-            padding-left: 32px;
-            padding-right: 32px;
+            padding-left: 22px;
+			padding-right: 89px;
         }
         
 		.slider-controls {
@@ -570,5 +576,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 
 
 .contributions {
-	width: 100%;	
+	width: 100%;
+	background-color: #2a2d33;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	.cont-wrapper {
+		font-family: "Lato", Helvetica, Arial, sans-serif;
+		max-width: 1200px;
+		margin: 0 auto;	
+	}
+	
+	table {
+		margin: 0 auto;
+		width: 100%;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		
+		tbody tr td {
+			table.column {
+				width: 32.5%;	
+				
+				td {
+					&.label {
+						color: #7a7b7e;	
+						text-align: left;
+						padding-right: 10px;
+					}
+					&.person {
+						color: #ffffff;	
+						text-align: left;
+						white-space: nowrap;
+					}
+					
+					padding-top: 3px;
+					padding-bottom: 3px;
+				}
+			}
+		}
+	}
+	
+	.footer-logo {
+		width: 100%;
+		padding-left: 9%;
+		
+		.logo, a {
+			display: inline-block;	
+		}
+		
+		.logo {
+			margin-right: 25px;	
+		}
+		
+		a {
+			color: #fff;	
+			transition: color 250ms ease-in-out;
+			
+			&:hover {
+				color: #dbdbdb;	
+			}
+		}
+	}
 }
