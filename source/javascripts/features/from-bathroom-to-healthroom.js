@@ -15,7 +15,7 @@ var timelineValues = [
 
 var timelinePercents = [
     {
-        "left" : "0%",
+        "left" : "1%",
         "year" : "10000 BC"
     },
     {
@@ -35,7 +35,7 @@ var timelinePercents = [
         "year" : "1920"
     },
     {
-        "left" : "73.9%",
+        "left" : "75.5%",
         "year" : "1926"
     },
     {
@@ -43,7 +43,7 @@ var timelinePercents = [
         "year" : "2018"
     },
     {
-        "left" : "92.0%",
+        "left" : "94.0%",
         "year" : "2019"
     }
 ];

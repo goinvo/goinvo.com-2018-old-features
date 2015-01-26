@@ -63,7 +63,7 @@ article.design-for-life {
     
 	z-index: 0;
 	.header-contents {
-		padding: 4em 6em 0;
+		padding: 5.5em 6em 0;
 		background: -moz-linear-gradient(top, rgba(255,255,255,0.8) 47%, rgba(255,255,255,0.8) 81%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(47%,rgba(255,255,255,0.8)), color-stop(81%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, rgba(255,255,255,0.8) 47%,rgba(255,255,255,0.8) 81%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -533,4 +533,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		}
 	}
 		
+}
+
+.contributions {
+	width: 100%;
+	
 }
