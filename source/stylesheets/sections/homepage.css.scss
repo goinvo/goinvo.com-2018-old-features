@@ -55,6 +55,19 @@ a {
 	}
 }
 
+#from-bathroom-to-healthroom {
+	background-color: rgba(0,0,0,.5);
+	.photo-container {
+		background:rgba(0, 0, 0, 0.5) image-url('home/bathroom.jpg');
+		background-size: cover;
+	}
+	
+	.title {
+		color: white;
+		text-shadow: 1px 0px 2px black;
+	}
+}
+
 #world-cup .photo-container {
 	background-image: image-url('features/world-cup/hero.jpg');
 }
@@ -212,6 +225,7 @@ a {
 		font-size: 1.25em;
 		color: $white;
 		position:absolute;
+		text-shadow: 1px 0px 2px black;
 		bottom: 0;
 		width: 100%;
 		//Fix for OSX Font Rendering on Dark BG's
