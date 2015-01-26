@@ -167,5 +167,53 @@ $(document).ready(function(event){
 		event.preventDefault();
 		buttonSwitch(event, locationsObj, '#locations .slider-controls', this);
 	});
+	
+	var scrollToShrink = $('.scroll-wrapper');
+	var initialHeight = scrollToShrink.height();
+	
+	var pastScrollTop = $(window).scrollTop();
+	
+	var initialPos = parseInt(scrollToShrink.position().top);
+	var scrollText = $('#blade-margin');
+	
+	var fixedElems = [
+		{
+			'scrollToShrink' : 	$('.scroll-wrapper'),
+			'initialHeight' : $('.scroll-wrapper').height(),
+			'initialPos' : parseInt($('.scroll-wrapper').position().top),
+			'scrollText' : $('#blade-margin')
+		}
+	];
+	
+	$(window).scroll(function(event) {
+		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
+		var currentScroll = $(window).scrollTop();
+		
+		for(var i = 0; i < fixedElems.length; i++) {
+			var scrollPosition = parseInt(fixedElems[i].scrollToShrink.position().top) - navHeight; // unique to each elemet in the loop
+			var currentHeight = fixedElems[i].scrollToShrink.height();	 // unique to each elemet in the loop
+			
+			// add or removed the class fix-me
+			if(currentScroll + navHeight >= fixedElems[i].initialPos && !fixedElems[i].scrollToShrink.hasClass('fix-me')) {
+				fixedElems[i].scrollToShrink.toggleClass('fix-me', true);	
+				fixedElems[i].scrollToShrink.css('top', navHeight)
+				fixedElems[i].scrollText.css('margin-top', (parseInt(fixedElems[i].scrollToShrink.outerHeight()) + 37) + 'px');
+			} else if (currentScroll + navHeight < fixedElems[i].initialPos && fixedElems[i].scrollToShrink.hasClass('fix-me')) {
+				fixedElems[i].scrollToShrink.toggleClass('fix-me', false);
+				fixedElems[i].scrollText.css('margin-top', 0);
+			}
+
+			if(currentScroll > pastScrollTop && fixedElems[i].scrollToShrink.height() > 0) {
+				if(currentScroll >= scrollPosition) {
+					fixedElems[i].scrollToShrink.height(currentHeight - (currentScroll - pastScrollTop));	
+				}
+			} else if(currentScroll < pastScrollTop && currentScroll < (fixedElems[i].initialPos + fixedElems[i].initialHeight) && fixedElems[i].scrollToShrink.height() < fixedElems[i].initialHeight) {
+				fixedElems[i].scrollToShrink.height(currentHeight + (pastScrollTop - currentScroll));
+			}
+			
+		}
+		
+		pastScrollTop = currentScroll; // used to determine the scroll direction
+	});
 
 });

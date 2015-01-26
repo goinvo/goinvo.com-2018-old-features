@@ -7,6 +7,8 @@ $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
+
+
 .navigation {
 	position: fixed;
 	top: 55px;
@@ -625,7 +627,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		}
 		
 		.logo {
-			margin-right: 25px;	
+			margin-right: 2F5px;	
 		}
 		
 		a {
@@ -636,5 +638,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 				color: #dbdbdb;	
 			}
 		}
+	}
+}
+
+.scroll-wrapper {
+	overflow: hidden;
+	margin-bottom: 2em;
+	transition: height 10ms ease-in-out;
+	.full {
+		margin-bottom: 0px;	
+	}
+	
+	&.fix-me {
+		position: fixed;
+		width: 100%;
+		max-width: 1199px;
+		z-index: 1000;	
 	}
 }
