@@ -661,7 +661,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		transition: height 10ms ease-in-out;
 	}
 	
-	.video.full {
+	.video.full, img, div, .media-block.wide {
 		margin-top: 0px;
 		margin-bottom: 0px;
 	}
