@@ -2,6 +2,13 @@ var animationSpeed = 400; //(x 1ms)
 var lastSlideIndex = 0;
 var ableToNavigate = true;
 
+var videos = [ 
+		'#hgraph video',
+		'#eye-tracking video',
+		'#crane video',
+		'#sleeper-video video'
+	];
+
 var timelineValues = [
 	0, // 10000 BC
 	317, // 4000 BC
@@ -47,6 +54,7 @@ var timelinePercents = [
         "year" : "2019"
     }
 ];
+
 
 switchSlide = function(percentage, slickObj){
 
@@ -97,10 +105,6 @@ buttonSwitch = function(event, slickObj, navElementSelector, navButton) {
 		$(navButton).toggleClass('active');
 		slickObj.slickGoTo(parseInt(slideNumber));
 	}
-}
-
-window.onload = function() {
-	$('body').animate({ scrollTop: 0 });
 }
 
 $(document).ready(function(event){
@@ -202,32 +206,60 @@ $(document).ready(function(event){
 	$(window).scroll(function(event) {
 		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
 		var currentScroll = $(window).scrollTop();
+		var l = fixedElems.length;
 		
-		for(var i = 0; i < fixedElems.length; i++) {
-			var scrollPosition = parseInt(fixedElems[i].scrollToShrink.position().top) - navHeight; // unique to each elemet in the loop
-			var currentHeight = fixedElems[i].scrollToShrink.height();	 // unique to each elemet in the loop
+		// Loop over the array of HTML Elements that we want to scroll over
+		for(var i = 0; i < l; i++) {
+			
+			var elemObject = fixedElems[i];
+			var iPos = elemObject.initialPos;
+			var iHei = elemObject.initialHeight;
+			var elem = elemObject.scrollToShrink
+			
+			var scrollPosition = parseInt(elem.position().top) - navHeight;
+			var currentHeight = elem.height();	 
+			
 
-			// add or removed the class fix-me
-			if(currentScroll + navHeight >= fixedElems[i].initialPos && !fixedElems[i].scrollToShrink.hasClass('fix-me')) {
-				fixedElems[i].scrollToShrink.toggleClass('fix-me', true);	
-				fixedElems[i].scrollToShrink.css('top', navHeight)
-				fixedElems[i].scrollEmpty.css('height', fixedElems[i].scrollToShrink.outerHeight() + 36);
-			} else if (currentScroll + navHeight < fixedElems[i].initialPos && fixedElems[i].scrollToShrink.hasClass('fix-me')) {
-				fixedElems[i].scrollToShrink.toggleClass('fix-me', false);
-				fixedElems[i].scrollEmpty.css('height', '0');
+			// Is the top of our scroll currently overlapping the element &  it hasn't been fixed yet? Then fix it
+			if(currentScroll + navHeight >= iPos && !elem.hasClass('fix-me') && currentScroll + navHeight < iPos + iHei) {
+				elem.toggleClass('fix-me', true);	
+				elem.css('top', navHeight)
+				elemObject.scrollEmpty.css('height', elem.outerHeight() + 36);
+			} else if (currentScroll + navHeight < iPos && elem.hasClass('fix-me')) {
+				elem.toggleClass('fix-me', false);
+				elemObject.scrollEmpty.css('height', '0');
 			}
 			
-			if(currentScroll > pastScrollTop && fixedElems[i].scrollToShrink.height() > 0) {
+			// Closing or opening
+			if(currentScroll > pastScrollTop && currentHeight > 0) {
 				if(currentScroll >= scrollPosition) {
-					fixedElems[i].scrollToShrink.height(currentHeight - (currentScroll - pastScrollTop));	
+					elem.height(currentHeight - (currentScroll - pastScrollTop));	
 				}
-			} else if(currentScroll < pastScrollTop && currentScroll < (fixedElems[i].initialPos + fixedElems[i].initialHeight)  && fixedElems[i].scrollToShrink.height() < fixedElems[i].initialHeight && currentScroll + navHeight  < fixedElems[i].scrollText.position().top - 36) {
-				fixedElems[i].scrollToShrink.height(currentHeight + (pastScrollTop - currentScroll));
+			} else if(currentScroll < pastScrollTop && currentScroll < (iPos + iHei)  && elem.height() < iHei && currentScroll + navHeight  < elemObject.scrollText.position().top - 36) {
+				elem.height(currentHeight + (pastScrollTop - currentScroll));
 			}
 			
 		}
 		
 		pastScrollTop = currentScroll; // used to determine the scroll direction
+		
+		var vl = videos.length;
+		
+		for(var j=0; j < vl; j++) {
+			var vElem = $(videos[j]);
+			var pos = vElem.position().top;
+			var ht = vElem.height();
+			
+			if(currentScroll >= pos - ht && currentScroll <= pos + ht) {
+				vElem.get(0).play();
+			}
+		}
+		
 	});
 
+});
+
+
+$(window).load(function(){
+	$('.main-header video').get(0).play();
 });
