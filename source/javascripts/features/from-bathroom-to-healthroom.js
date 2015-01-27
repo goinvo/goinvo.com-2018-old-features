@@ -181,6 +181,48 @@ $(document).ready(function(event){
 			scrollTop: sTop
 		  }, 500); 
 	});
+	
+	moveCard = function(button, card) {
+			var left = button.position().left;
+			var top = $('#locations .slider-graphic').outerHeight() + $('#locations .slider-controls').outerHeight() - 5;
+			var allCards = $('.calendar-graphics div'); 
+		
+			allCards.toggleClass('active', false);
+			allCards.css('left', '-300px');
+			allCards.css('top', top);
+		
+			card.toggleClass('active', true);
+			card.css('left', left);
+	};
+	
+	$('#locations .slide-button').click( function() {
+		var index = $(this).attr('class');
+		var i = index.indexOf(' slide');
+		index = index.substring(i+6, i + 7);
+		index = parseInt(index);
+		switch(index) {
+			case 0:
+					moveCard($(this), $('.calendar-graphics .one'));
+					break;
+			case 1:
+					moveCard($(this), $('.calendar-graphics .two'));
+					break;
+			case 2:
+					moveCard($(this), $('.calendar-graphics .three'));
+					break;
+			case 3:
+					moveCard($(this), $('.calendar-graphics .four'));
+					break;
+			case 4:
+					moveCard($(this), $('.calendar-graphics .five'));
+					break;
+			case 5:
+					moveCard($(this), $('.calendar-graphics .six'));
+					break;
+			default: 
+					break;
+		}
+	});
     
     $('#timeline-slider-controller').on( "slidestop", function( event, ui ) {
         switchSlideAfter(ui.value, timelineObj, $('#timeline-slider-controller'));
@@ -195,6 +237,8 @@ $(document).ready(function(event){
 		event.preventDefault();
 		buttonSwitch(event, locationsObj, '#locations .slider-controls', this);
 	});
+	
+	
 	
 	var fixedElems = [
 		{
@@ -220,12 +264,14 @@ $(document).ready(function(event){
 		}
 	];
 	
-	var pastScrollTop = $(window).scrollTop();
+	moveCard($('#locations .slide-button.slide0'), $('.calendar-graphics .one'));
 	
+	var pastScrollTop = $(window).scrollTop();
 	
 	$(window).scroll(function(event) {
 		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
 		var currentScroll = $(window).scrollTop();
+		var totalNavHeight = currentScroll + navHeight;
 		var l = fixedElems.length;
 		
 		// Loop over the array of HTML Elements that we want to scroll over
@@ -234,20 +280,23 @@ $(document).ready(function(event){
 			var elemObject = fixedElems[i];
 			var iPos = elemObject.initialPos;
 			var iHei = elemObject.initialHeight;
-			var elem = elemObject.scrollToShrink
+			var elem = elemObject.scrollToShrink;
+			var empty = elemObject.scrollEmpty;
 			
+			// initial position + initial height
+			var iPosHei = iPos + iHei;  
 			var scrollPosition = parseInt(elem.position().top) - navHeight;
 			var currentHeight = elem.height();	 
-			
+			var hasClass = elem.hasClass('fix-me');
 
 			// Is the top of our scroll currently overlapping the element &  it hasn't been fixed yet? Then fix it
-			if(currentScroll + navHeight >= iPos && !elem.hasClass('fix-me') && currentScroll + navHeight < iPos + iHei) {
+			if(totalNavHeight >= iPos && !hasClass && totalNavHeight < iPosHei) {
+				empty.css('height', elem.outerHeight() + 36);
 				elem.toggleClass('fix-me', true);	
 				elem.css('top', navHeight)
-				elemObject.scrollEmpty.css('height', elem.outerHeight() + 36);
-			} else if (currentScroll + navHeight < iPos && elem.hasClass('fix-me')) {
+			} else if (totalNavHeight < iPos && hasClass) {
 				elem.toggleClass('fix-me', false);
-				elemObject.scrollEmpty.css('height', '0');
+				empty.css('height', '0');
 			}
 			
 			// Closing or opening
@@ -255,7 +304,7 @@ $(document).ready(function(event){
 				if(currentScroll >= scrollPosition) {
 					elem.height(currentHeight - (currentScroll - pastScrollTop));	
 				}
-			} else if(currentScroll < pastScrollTop && currentScroll < (iPos + iHei)  && elem.height() < iHei && currentScroll + navHeight  < elemObject.scrollText.position().top - 36) {
+			} else if(currentScroll < pastScrollTop && currentScroll < (iPosHei)  && currentHeight < iHei && totalNavHeight  < elemObject.scrollText.position().top - 36) {
 				elem.height(currentHeight + (pastScrollTop - currentScroll));
 			}
 			

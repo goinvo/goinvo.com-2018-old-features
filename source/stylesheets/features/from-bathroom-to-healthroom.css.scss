@@ -8,7 +8,9 @@ $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
 
-
+.header-contents, .sec-header {
+	font-family: 'adobe-jenson-pro', serif;	
+}
 .navigation {
 	position: fixed;
 	top: 55px;
@@ -65,6 +67,10 @@ article.design-for-life {
     }
     
 	z-index: 0;
+	
+	.byline {
+		color: #939598	;
+	}
 	.header-contents {
 		padding: 5.5em 6em 0;
 		background: -moz-linear-gradient(top, rgba(255,255,255,0.8) 47%, rgba(255,255,255,0.8) 81%, rgba(255,255,255,0) 100%); /* FF3.6+ */
@@ -581,6 +587,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 }
 
 #locations {
+	position: relative;
+	
+	.calendar-graphics {
+		div {
+			max-width: 200px;
+			position: absolute;
+			left: -200px;
+			top: 20px;
+			z-index: 900;
+			opacity: 0;
+			transition: all 250ms ease-in-out;
+			
+			&.one {
+				max-width: 195px;
+			}
+			&.two {
+				max-width: 170px;
+			}
+			&.three {
+				max-width: 263px;
+			}
+			&.four {
+				max-width: 263px;
+			}
+			&.five {
+				max-width: 0px;
+			}
+			&.six {
+				max-width: 264px;
+			}
+			
+			&.active {
+				opacity: 1;	
+				
+			}
+		}
+	}
+	
 	.slider-controls {
 		@include clearfix();
 		a {
