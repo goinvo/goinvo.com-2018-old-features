@@ -33,6 +33,7 @@ $bodyBackground: rgba(0,0,0, .01);
 			a {
 				color: black;	
 				transition: all 250ms ease-in-out;	
+				cursor: pointer;
 				&:hover {
 					color: gray;
 					text-decoration: underline;	
