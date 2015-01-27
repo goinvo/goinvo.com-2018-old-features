@@ -193,6 +193,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	}
 }
 
+.aside-media {
+	.caption{
+		transition: margin-left 550ms ease-in-out;
+		margin-left: 0px;
+
+		&.initial-margin {
+			margin-left: 50%;
+		}
+	}
+	
+	.video {
+		transition: all 550ms ease-in-out;
+		opacity: 1;
+		&.initial-hide {
+			opacity: 0;
+			width: 0 !Important;
+		}
+	}
+}
+
+
 .aside-media, .slider {
 	max-width: 950px;
 	margin: 3em auto;
@@ -228,6 +249,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 }
 
 .media-block {
+	p, ul, ol {
+		font-size: 1.1em;
+		line-height: 1.3em;	
+	}
+	
 	&.inline {
 		max-width: 800px;
 		margin: 0 auto 2em;

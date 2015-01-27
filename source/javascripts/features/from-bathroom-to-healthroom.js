@@ -3,10 +3,8 @@ var lastSlideIndex = 0;
 var ableToNavigate = true;
 
 var videos = [ 
-		'#hgraph video',
-		'#eye-tracking video',
-		'#crane video',
-		'#sleeper-video video'
+		'#eye-tracking',
+		'#crane'
 	];
 
 var timelineValues = [
@@ -112,6 +110,17 @@ $(document).ready(function(event){
 	var timelineObj = $('#timeline .slider-contents');
 	var datesObj = $('#dates .slider-contents');
 	var locationsObj = $('#locations .slider-contents');
+	
+	var videoTransitions = [
+		{
+			'caption' : $('#hgraphCaption')	,
+			'video' : $('#hgraph')
+		},
+		{
+			'caption' : $('#sleeper-caption')	,
+			'video' : $('#sleeper-video')
+		}
+	];
 
 	// Slide
 	switchSlide(0);
@@ -141,6 +150,7 @@ $(document).ready(function(event){
 			moveSlider(currentSlide, $('#timeline-slider-controller'));
 		}
 	});
+	
 	var dates = datesObj.slick({
 		arrows: false,
 		infinite: false,
@@ -160,6 +170,16 @@ $(document).ready(function(event){
 
 	$('#timeline-slider-controller').on('slide', function(event, ui){
 		switchSlide(ui.value, timelineObj);
+	});
+	
+	$('.navigation ol li a').click(function() {
+		elm = $(this).data('click');
+		var sTop = $(elm).position().top - 120;
+		sTop = sTop + 'px';
+		
+		$( 'body' ).animate({
+			scrollTop: sTop
+		  }, 500); 
 	});
     
     $('#timeline-slider-controller').on( "slidestop", function( event, ui ) {
@@ -248,10 +268,23 @@ $(document).ready(function(event){
 		for(var j=0; j < vl; j++) {
 			var vElem = $(videos[j]);
 			var pos = vElem.position().top;
-			var ht = vElem.height();
+			var ht = vElem.height();			
 			
-			if(currentScroll >= pos - ht && currentScroll <= pos + ht) {
-				vElem.get(0).play();
+			if(currentScroll >= pos - 300 && currentScroll <= pos + (ht * 2)) {
+				vElem.find('video').get(0).play();
+			}
+		}
+		
+		var tl = videoTransitions.length;
+		
+		for(var k=-0; k < tl; k++) {
+			var tElem = videoTransitions[k];
+			var tPos = tElem.caption.position().top;
+			
+			if(currentScroll >= tPos - 450 && tElem.caption.hasClass('initial-margin')) {
+				tElem.caption.toggleClass('initial-margin', false);
+				tElem.video.toggleClass('initial-hide', false);
+				tElem.video.find('video').get(0).play()
 			}
 		}
 		
@@ -263,3 +296,4 @@ $(document).ready(function(event){
 $(window).load(function(){
 	$('.main-header video').get(0).play();
 });
+

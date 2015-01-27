@@ -15,17 +15,17 @@
 .navigation
 	%ol
 		%li
-			%a{:href => "#section-one", :title => "Bloodletting to bloodless"} 1. Bloodletting to bloodless.
+			%a{:data => {:click => "#section-one"}, :title => "Bloodletting to bloodless"} 1. Bloodletting to bloodless.
 		%li
-			%a{:href => "#section-two", :title => "The surveillance invasion."} 2. The surveillance invasion.
+			%a{:data => {:click => "#section-two"}, :title => "The surveillance invasion."} 2. The surveillance invasion.
 		%li
-			%a{:href => "#section-three", :title => "Life first. Health a distant second."} 3. Life first. Health a distant second.
+			%a{:data => {:click => "#section-three"}, :title => "Life first. Health a distant second."} 3. Life first. Health a distant second.
 		%li
-			%a{:href => "#section-four", :title => "Life first. Health a distant second."} 4. Stage Zero Detection.
+			%a{:data => {:click => "#section-four"}, :title => "Life first. Health a distant second."} 4. Stage Zero Detection.
 		%li
-			%a{:href => "#section-five", :title => "Life first. Health a distant second."} 5. From protein to pixel to policy.
+			%a{:data => {:click => "#section-five"}, :title => "Life first. Health a distant second."} 5. From protein to pixel to policy.
 		%li
-			%a{:href => "#section-six", :title => "Life first. Health a distant second."} 6. Final Thoughts
+			%a{:data => {:click => "#section-six"}, :title => "Life first. Health a distant second."} 6. Final Thoughts
 %article#feature-article.design-for-life
 	%header.video.main-header{"data-vide-bg" => "../../videos/dfl/header"}
 		.header-contents
@@ -107,10 +107,10 @@
 			%p Suppose your data are simply and automatically collected—all of your numbers surrounding your existence from the financial (which we&rsquo;re nearly doing today) to travel (again, captured today) to habits to eating to exercise to examining your daily biome. It&rsquo;s captured. It just happens, in the background.
 			%p And your captured data are visible: you can see the data points, see the trends, and even see the data of your close friends and family so you can help them make decisions and make change.
 			.aside-media
-				.caption
+				.caption.initial-margin#hgraphCaption
 					%p.light hGraph: Your health in one picture. It&rsquo;s an open source, standardized visual representation of a patient&rsquo;s health status, designed to increase awareness of the individual factors that can affect one&rsquo;s overall health.
 					%p.light hGraph users can easily identify which metrics exist in a normal range versus those that may be too high or low. It effectively conveys important data at sizes both large and small, and enables people to recognize patterns.
-				#hgraph.video{"data-vide-bg" => "../../videos/dfl/hgraph"}
+				#hgraph.video.initial-hide{"data-vide-bg" => "../../videos/dfl/hgraph"}
 			%p The foundations of this new paradigm are in place. The structure is ours to make.
 			%p Our thought experiment provides a stark contrast to the current state of design thinking on life, on health, and on data. We have minimal transparency into key health metrics. For the data we do have, the overhead required to collect it is enormous. People have a hard enough time changing their Facebook privacy settings or figuring out mortgage refinancing. The systems we deal with are increasingly complex, and the user interfaces are more puzzles than designs. And as decision-makers, we are swamped with conflicting data.
 			%p As designers and engineers, our work is increasingly multi-dimensional (not a flat- decision space), and linear-thinking human beings are not good at non-linear thinking. Seeing every variable and doing the mental calculus to orchestrate better decision-making is not our species' forte. We fly by the seat of our pants until we get tired and land, thump, not always in the right or best place. One major variable in the everyday behavior change game is sensors... invisible sensors.
@@ -185,11 +185,11 @@
 			%p#crane-margin Hospitals are rolling out patient portals and insurance companies are experimenting with electronic health records, but the usefulness of those repositories is limited to patients. More critical are teachable moments in data that signal potential outcomes and prompt micro behavior shifts that in turn will offer feedback and affirm new behaviors or nudge new ones.
 			%p In the bathroom and, eventually, in other environments like the hospital room, the majority of your physiologic signs will be snagged non-invasively, through sensors that passively sniff you. No blood draws. No awkward stool sample cards. Just whiffs and sniffs and the occasional photograph. All of this must be designed to feel wonderful, so that you think more about LIFE and less about &ldquo;health&rdquo; and &ldquo;security.&rdquo; Background, automatic health sensing will let us focus our consciousness on the dream life we want to live.
 			.aside-media
-				.caption
+				.caption.initial-margin#sleeper-caption
 					%p Talking about passive sensors, I always picture the orgasmatron from Woody Allen's movie, Sleeper (1973), which was set in the year 2173. This fictional device, a cylinder large enough to contain one or two people, rapidly induced orgasms. A character would walk in, have a blast, and walk out only seconds later. That&rsquo;s how I want healthcare delivered. That's where engineering and design can really have impact.
 					%p Sign me up.
 					%p.light Image from Woody Allen&rsquo;s movie, Sleeper, 1973
-				.video#sleeper-video{"data-vide-bg" => "../../videos/dfl/sleeper"}
+				.video#sleeper-video.initial-hide{"data-vide-bg" => "../../videos/dfl/sleeper"}
 	%section.article-section.four#section-four
 		%header.sec-header
 			.title
