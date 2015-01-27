@@ -272,6 +272,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
             margin-top: 3em;
         }   
     }
+	
+	&.relative {
+		position: relative;
+		
+		.axiom-link {
+			position: absolute;
+			left: 10px;
+			bottom: 20px;
+		}
+	}
 }
 
 #timeline-slider-controller, #timeline-dates {
