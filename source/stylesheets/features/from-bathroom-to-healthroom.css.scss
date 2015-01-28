@@ -376,9 +376,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		background-image: image-url('arrow.png');
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 40px;
-		height: 60px;
-		top: calc(50% - 30px);
+		width: 20px;
+		height: 40px;
+		top: calc(50% - 20px);
 		opacity: .65 !important;
 		transition: opacity 250ms ease-in-out;
 		
