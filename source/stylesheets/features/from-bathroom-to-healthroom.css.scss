@@ -204,18 +204,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	.caption{
 		transition: margin-left 550ms ease-in-out;
 		margin-left: 0px;
-
+		@media only screen and (max-width: 450px) {
+			float: none !important;
+			width: 100% !important;
+		}
+		
 		&.initial-margin {
 			margin-left: 50%;
+			@media only screen and (max-width: 450px) {
+				margin-left: 0%;	
+			}
 		}
 	}
 	
 	.video {
 		transition: all 550ms ease-in-out;
 		opacity: 1;
+		
+		@media only screen and (max-width: 450px) {
+			width: 90% !important;	
+		}
+		
 		&.initial-hide {
 			opacity: 0;
 			width: 0 !Important;
+			@media only screen and (max-width: 450px) {
+				width: auto !Important;
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -762,12 +778,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	}
 	
 	.main-header {
-		padding-top: 220px;
 		padding-bottom: 4em;
 		.header-contents {
 			padding-bottom: 62px;
 			padding-right: 20px;
 			padding-left: 20px;
+			padding-top: calc(5.5em + 220px);
 			h1 {
 				font-size: 2em;	
 			}
@@ -805,8 +821,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		}
 	}
 	
-	#timechar {
+	#timechart {
 		padding: 0px 10px;	
+		padding-right: 7px;
+		img {
+			left: 0px;	
+		}
 	}
 	
 	#locations, #crane-wrapper, #crane-empty , .scrol-empty, #timeline-slider-controller, #timeline-dates {
@@ -869,7 +889,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		
 		.logo {
 			max-width: 100px;
-			font-size: 0.8em;
+		}
+		
+		a {
+			font-size: 0.8em;	
 		}
 	}
 }
