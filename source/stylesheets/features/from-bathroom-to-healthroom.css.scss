@@ -627,6 +627,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	
 	.slider-controls {
 		@include clearfix();
+		border: 2px solid black;
+		border-left: 0px;
+		border-right: 0px;
 		a {
 			display: block;
 			float: left;
@@ -869,4 +872,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			font-size: 0.8em;
 		}
 	}
+}
+
+p.margin-bottom {
+	margin-bottom: 4em;	
 }

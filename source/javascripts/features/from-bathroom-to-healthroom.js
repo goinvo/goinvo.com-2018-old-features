@@ -186,7 +186,7 @@ $(document).ready(function(event){
 			var left = button.position().left;
 			var top = $('#locations .slider-graphic').outerHeight() + $('#locations .slider-controls').outerHeight() - 5;
 			var allCards = $('.calendar-graphics div'); 
-		
+			console.log(allCards);
 			allCards.toggleClass('active', false);
 			allCards.css('left', '-300px');
 			allCards.css('top', top);
