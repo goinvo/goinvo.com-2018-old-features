@@ -708,7 +708,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		}
 		
 		.logo {
-			margin-right: 2F5px;	
+			margin-right: 25px;	
 		}
 		
 		a {
@@ -745,5 +745,128 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	.video.full, img, div, .media-block.wide img{
 		margin-top: 0px;
 		margin-bottom: 0px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.navigation {
+		display: none;	
+	}
+	
+	.section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
+		font-size: .8em;
+		padding: 0px 20px;
+	}
+	
+	.main-header {
+		padding-top: 220px;
+		padding-bottom: 4em;
+		.header-contents {
+			padding-bottom: 62px;
+			padding-right: 20px;
+			padding-left: 20px;
+			h1 {
+				font-size: 2em;	
+			}
+			
+			h2 {
+				font-size: 1.25em;	
+			}
+			
+			.email, .author {
+				font-size: 1em;	
+			}
+		}
+	}
+	
+	.sec-header {
+		padding-left: 20px;	
+	}
+	
+	#eye-tracking {
+		padding: 6em 0;	
+	}
+	
+	#aging-wrapper {
+		margin-top: 20px;	
+	}
+	
+	#timeline {
+		padding-right: 14px;
+		padding-left: 14px;
+		
+		.byline {
+			bottom: 2em;
+			left: 4em;	
+			font-size: 0.45em;
+		}
+	}
+	
+	#timechar {
+		padding: 0px 10px;	
+	}
+	
+	#locations, #crane-wrapper, #crane-empty , .scrol-empty, #timeline-slider-controller, #timeline-dates {
+		display: none;	
+	}
+	
+	.aside-media .video, .slider .video {
+		margin-right: 20px;	
+	}
+	
+	.aside-media .caption, .aside-media .slider-aside, .slider .caption, .slider .slider-aside {
+		width: 27%;	
+	}
+	
+	#dates.slider {
+		max-width: 100%;
+		margin: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+		float: none;
+		margin-bottom: 20px;
+	}
+	
+	#dates .slider-aside {
+		width: 100%;	
+	}
+	
+	#dates .slider-aside .slider-controls {
+		width: 300px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		margin-left: 26px;
+ 
+	}
+	
+	#dates .slider-aside {
+		float: none;
+		p {
+			padding: 0px 65px;
+			margin-bottom: 10px;	
+		}
+	}
+	
+	#dates.slider .slider-contents {
+		width: 100%; 
+		float: none;
+		
+	}
+	
+	.media-block.relative .axiom-link {
+		font-size: .65em;	
+	}
+	
+	.contributions table td {
+		font-size: 0.725em;	
+	}
+	
+	.contributions .footer-logo {
+		padding: 0px 20px;
+		
+		.logo {
+			max-width: 100px;
+			font-size: 0.8em;
+		}
 	}
 }

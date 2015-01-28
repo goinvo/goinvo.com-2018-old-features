@@ -272,44 +272,46 @@ $(document).ready(function(event){
 		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
 		var currentScroll = $(window).scrollTop();
 		var totalNavHeight = currentScroll + navHeight;
-		var l = fixedElems.length;
-		
-		// Loop over the array of HTML Elements that we want to scroll over
-		for(var i = 0; i < l; i++) {
-			
-			var elemObject = fixedElems[i];
-			var iPos = elemObject.initialPos;
-			var iHei = elemObject.initialHeight;
-			var elem = elemObject.scrollToShrink;
-			var empty = elemObject.scrollEmpty;
-			
-			// initial position + initial height
-			var iPosHei = iPos + iHei;  
-			var scrollPosition = parseInt(elem.position().top) - navHeight;
-			var currentHeight = elem.height();	 
-			var hasClass = elem.hasClass('fix-me');
+		var windowWidth = $(window).width();
+		if(windowWidth > 1000){
+			var l = fixedElems.length;
 
-			// Is the top of our scroll currently overlapping the element &  it hasn't been fixed yet? Then fix it
-			if(totalNavHeight >= iPos && !hasClass && totalNavHeight < iPosHei) {
-				empty.css('height', elem.outerHeight() + 36);
-				elem.toggleClass('fix-me', true);	
-				elem.css('top', navHeight)
-			} else if (totalNavHeight < iPos && hasClass) {
-				elem.toggleClass('fix-me', false);
-				empty.css('height', '0');
-			}
-			
-			// Closing or opening
-			if(currentScroll > pastScrollTop && currentHeight > 0) {
-				if(currentScroll >= scrollPosition) {
-					elem.height(currentHeight - (currentScroll - pastScrollTop));	
+			// Loop over the array of HTML Elements that we want to scroll over
+			for(var i = 0; i < l; i++) {
+
+				var elemObject = fixedElems[i];
+				var iPos = elemObject.initialPos;
+				var iHei = elemObject.initialHeight;
+				var elem = elemObject.scrollToShrink;
+				var empty = elemObject.scrollEmpty;
+
+				// initial position + initial height
+				var iPosHei = iPos + iHei;  
+				var scrollPosition = parseInt(elem.position().top) - navHeight;
+				var currentHeight = elem.height();	 
+				var hasClass = elem.hasClass('fix-me');
+
+				// Is the top of our scroll currently overlapping the element &  it hasn't been fixed yet? Then fix it
+				if(totalNavHeight >= iPos && !hasClass && totalNavHeight < iPosHei) {
+					empty.css('height', elem.outerHeight() + 36);
+					elem.toggleClass('fix-me', true);	
+					elem.css('top', navHeight)
+				} else if (totalNavHeight < iPos && hasClass) {
+					elem.toggleClass('fix-me', false);
+					empty.css('height', '0');
 				}
-			} else if(currentScroll < pastScrollTop && currentScroll < (iPosHei)  && currentHeight < iHei && totalNavHeight  < elemObject.scrollText.position().top - 36) {
-				elem.height(currentHeight + (pastScrollTop - currentScroll));
+
+				// Closing or opening
+				if(currentScroll > pastScrollTop && currentHeight > 0) {
+					if(currentScroll >= scrollPosition) {
+						elem.height(currentHeight - (currentScroll - pastScrollTop));	
+					}
+				} else if(currentScroll < pastScrollTop && currentScroll < (iPosHei)  && currentHeight < iHei && totalNavHeight  < elemObject.scrollText.position().top - 36) {
+					elem.height(currentHeight + (pastScrollTop - currentScroll));
+				}
+
 			}
-			
 		}
-		
 		pastScrollTop = currentScroll; // used to determine the scroll direction
 		
 		var vl = videos.length;
