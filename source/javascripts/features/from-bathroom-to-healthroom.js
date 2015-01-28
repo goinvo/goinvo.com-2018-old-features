@@ -272,7 +272,10 @@ $(document).ready(function(event){
 		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
 		var currentScroll = $(window).scrollTop();
 		var totalNavHeight = currentScroll + navHeight;
-		var windowWidth = $(window).width();
+		var win = $(window);
+		var windowWidth = win.width();
+		var windowHeight = win.height();
+		console.log(windowHeight);
 		if(windowWidth > 1000){
 			var l = fixedElems.length;
 
@@ -321,7 +324,7 @@ $(document).ready(function(event){
 			var pos = vElem.position().top;
 			var ht = vElem.height();			
 			
-			if(currentScroll >= pos - 300 && currentScroll <= pos + (ht * 2)) {
+			if(currentScroll >= pos - windowHeight && currentScroll <= pos + (ht * 2)) {
 				vElem.find('video').get(0).play();
 			}
 		}
@@ -332,7 +335,7 @@ $(document).ready(function(event){
 			var tElem = videoTransitions[k];
 			var tPos = tElem.caption.position().top;
 			
-			if(currentScroll >= tPos - 450 && tElem.caption.hasClass('initial-margin')) {
+			if(currentScroll >= tPos - windowHeight && tElem.caption.hasClass('initial-margin')) {
 				tElem.caption.toggleClass('initial-margin', false);
 				tElem.video.toggleClass('initial-hide', false);
 				tElem.video.find('video').get(0).play()
