@@ -10,8 +10,21 @@
 	= javascript_include_tag "vide"
 	:javascript
 		try{Typekit.load();}catch(e){}
+- content_for(:worlds_end) do
+	= javascript_include_tag "//platform.twitter.com/oct.js"
+	:javascript
+		twttr.conversion.trackPid('l5gav');
+	<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5gav&p_id=Twitter" /> 
+	<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5gav&p_id=Twitter" />
 	%meta{:name => "description", :content => ""}/
-	%meta{:name => "keywords", :content => "tags"}/
+	%meta{:name => "keywords", :content => "design for life bathroom healthroom future technology medical health"}/
+	%meta{:name => "twitter:card", :content => "summary_large_image"}/
+	%meta{:name => "twitter:site", :content => "@goinvo"}/
+	%meta{:name => "twitter:creator", :content => "@goinvo"}/
+	%meta{:name => "twitter:title", :content => "From Bathroom to Healthroom: How Magical Technology Will Revolutionize Human Health"}/
+	%meta{:name => "twitter:description", :content => "Health, as an experience and idea, is undergoing an epic shift. For millennia, humans have treated health as the rare spike that requires intervention. At a very basic level, when it comes to health, we humans experience our physical condition today much as our more furry ancestors did. We roam around. We eat mostly green stuff with the occasional indulgence in a tasty snack of fresh-killed meat. We drink water— well, some of us hydrate—and have sex and procreate. We stick with our tribe and try to steer clear of hostile marauders."}/
+	%meta{:name => "twitter:image:src", :content => "http://www.goinvo.com/videos/dfl/header.gif"}/
+	
 .navigation
 	%ol
 		%li
@@ -199,10 +212,8 @@
 				%span 4
 		.section-content
 			%p.margin-bottom We get biome analysis, emotional analysis, breath evaluation, and voice analysis. Bots (some with cameras) are in our stomachs and blood streams, churning through our bodies and molecules, gathering intelligence. We are able to detect disease and conditions as they erupt at the cellular level, and not have to wait until they physically manifest so our eyes and bodies can &ldquo;see&rdquo; them. (By the time we can see it with our own eyes, it's too goddamn late.)
-			.scroll-wrapper#aging-wrapper
-				.media-block.wide
-					= image_tag "features/design-for-life/inlines/aging.jpg"
-			.scroll-empty#aging-empty
+			.media-block.wide
+				= image_tag "features/design-for-life/inlines/aging.jpg"
 			%p#aging-margin That&rsquo;s the future, and it is near. If health is beautifully integrated into our daily life, so that we&rsquo;re getting continuous assessments, we&rsquo;ll be able to adjust in near-real time.
 			%p Next, here&rsquo;s what&rsquo;s on the horizon:
 			%ul

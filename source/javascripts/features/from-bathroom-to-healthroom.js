@@ -54,10 +54,6 @@ var timelinePercents = [
 ];
 
 
-switchSlide = function(percentage, slickObj){
-
-}
-
 switchSlideAfter = function(percentage, slickObj, slidingObject){
 	if (percentage > timelineValues[7] - ((timelineValues[7] - timelineValues[6])/2)) {
 		slickObj.slickGoTo(7);
@@ -122,9 +118,6 @@ $(document).ready(function(event){
 		}
 	];
 
-	// Slide
-	switchSlide(0);
-
 	// Init Sliders
 	$('#timeline-slider-controller').slider({
 		value: 0,
@@ -167,10 +160,6 @@ $(document).ready(function(event){
 			ableToNavigate = true;
 		}
 	});
-
-	$('#timeline-slider-controller').on('slide', function(event, ui){
-		switchSlide(ui.value, timelineObj);
-	});
 	
 	$('.navigation ol li a').click(function() {
 		elm = $(this).data('click');
@@ -186,7 +175,7 @@ $(document).ready(function(event){
 			var left = button.position().left;
 			var top = $('#locations .slider-graphic').outerHeight() + $('#locations .slider-controls').outerHeight() - 5;
 			var allCards = $('.calendar-graphics div'); 
-			console.log(allCards);
+		
 			allCards.toggleClass('active', false);
 			allCards.css('left', '-300px');
 			allCards.css('top', top);
@@ -254,13 +243,6 @@ $(document).ready(function(event){
 			'initialPos' : parseInt($('#crane-wrapper').position().top),
 			'scrollText' : $('#crane-margin'),
 			'scrollEmpty' : $('#crane-empty')
-		},
-		{
-			'scrollToShrink' : 	$('#aging-wrapper'),
-			'initialHeight' : $('#aging-wrapper').height(),
-			'initialPos' : parseInt($('#aging-wrapper').position().top),
-			'scrollText' : $('#aging-margin'),
-			'scrollEmpty' : $('#aging-empty')
 		}
 	];
 	
@@ -275,7 +257,7 @@ $(document).ready(function(event){
 		var win = $(window);
 		var windowWidth = win.width();
 		var windowHeight = win.height();
-		console.log(windowHeight);
+		
 		if(windowWidth > 1000){
 			var l = fixedElems.length;
 

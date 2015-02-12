@@ -71,6 +71,7 @@ activate :s3_redirect do |config|
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
 
+redirect '/features/design-for-life/', '/features/from-bathroom-to-healthroom/'
 redirect '/studio/', '/studio/team/'
 redirect '/team/', '/studio/team/'
 redirect '/careers/', '/studio/careers/'
