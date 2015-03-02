@@ -7,15 +7,25 @@ $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
+$animateSpeed: 500ms;
+$gridWidth: 80%;
+$gridLeft: 10%;
+$gridTop: 0;
+
 #grid-area {
   position: relative;
   margin-bottom: 5em;
+  background-color: gray;
   #grid-container {
     position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    background-color: gray;
+    top: $gridTop;
+    left: $gridLeft;
+    width: $gridWidth;
+    -webkit-transition: opacity $animateSpeed;
+    -moz-transition: opacity $animateSpeed;
+    -o-transition: opacity $animateSpeed;
+    -ms-transition: opacity $animateSpeed;
+    transition: opacity $animateSpeed;
     .grid-panel {
       position: absolute;
       -moz-box-sizing: border-box;
@@ -23,39 +33,93 @@ $bodyBackground: rgba(0,0,0, .01);
       -ms-box-sizing: border-box;
       box-sizing: border-box;
       border: 1px solid black;
-      -webkit-transition: opacity 500ms;
-      -moz-transition: opacity 500ms;
-      -o-transition: opacity 500ms;
-      -ms-transition: opacity 500ms;
-      transition: opacity 500ms;
+      background-repeat: no-repeat;
+      background-size: cover;
       &:hover {
         border: 1px solid red;
+      }
+      &[data-tech="genomics"] {
+        background-image: image-url("features/disrupt/genomics1.jpg");
+      }
+      &[data-tech="robotics"] {
+        background-image: image-url("features/disrupt/robotics1.jpg");
       }
     }
   }
   #slideshow-positioned-container {
     position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
+    top: $gridTop;
+    left: $gridLeft;
+    width: $gridWidth;
     pointer-events: none;
-    #slideshow-container {
+    #slideshow-window {
       position: absolute;
-      left: 0;
-      top: 0;
-      background-color: blue;
+      overflow: hidden;
       opacity: 0;
+      -webkit-transition: opacity $animateSpeed;
+      -moz-transition: opacity $animateSpeed;
+      -o-transition: opacity $animateSpeed;
+      -ms-transition: opacity $animateSpeed;
+      transition: opacity $animateSpeed;
       pointer-events: none;
-      -webkit-transition: opacity 500ms;
-      -moz-transition: opacity 500ms;
-      -o-transition: opacity 500ms;
-      -ms-transition: opacity 500ms;
-      transition: opacity 500ms;
-      #slides-container {
-        .slide {
-          width: 100%;
-          height: 100%;
-          border: 1px solid black;
+      #slideshow-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: blue;
+        .prev, .next {
+          position: absolute;
+          top: 45%;
+          width: 20px;
+          height: 40px;
+          opacity: .65 !important;
+          background-image: image-url('arrow.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          z-index: 50000;
+          transition: opacity 250ms ease-in-out;
+          &:hover {
+            opacity: 1 !important;
+            cursor: pointer;
+          }
+          &:after, &:before {
+            content: "";  
+          }
+        }
+        .prev {
+          left: 20px;
+          transform: rotate(180deg);
+        }
+        .next {
+          right: 20px;
+        }
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          width: 5px;
+          height: 5px;
+          z-index: 50000;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        #slides-container {
+          .slide {
+            .image {
+              background-repeat: no-repeat;
+            }
+            &[data-tech="genomics"] {
+              .image {
+                background-image: image-url("features/disrupt/genomics1.jpg");
+              }
+            }
+            &[data-tech="robotics"] {
+              .image {
+                background-image: image-url("features/disrupt/robotics1.jpg");
+              }
+            }
+          }
         }
       }
     }

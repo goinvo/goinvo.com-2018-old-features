@@ -1,8 +1,3 @@
-function getPanelCoords(panelId) {
-  var panel = $('#grid-container .grid-panel[data-slideindex=' + panelId +']');
-  return panel.position();
-}
-
 function getCoords(element) {
   return element.position();
 }
@@ -36,22 +31,22 @@ function layoutGrid(panels, grid) {
   });
 }
 
-$(window).resize(function() {
-  var panels = $('#grid-container .grid-panel');
-  var grid = $('#grid-container');
-  var slideShowContainer = $('#slideshow-container');
-  var gridArea = $('#grid-area');
-  layoutGrid(panels, grid);
-  var gridWidth = grid.outerWidth();
-  var gridHeight = grid.outerHeight();
-  slideShowContainer.css({width: gridWidth, height: gridHeight });
-  gridArea.css({height: gridHeight });
-});
+function layoutSlides(slideShow) {
+  var slides = slideShow.find('.slide');
+  var totalWidth = slideShow.outerWidth();
+  var margin = totalWidth / 5;
+  var imageWidth = totalWidth - (margin * 2);
+
+  slides.each(function() {
+    $(this).find('.image').css({width: imageWidth, height: imageWidth, 'margin-left': margin });
+  })
+}
 
 $(document).ready(function(event){
   var gridArea = $('#grid-area');
   var slideshowPositionedContainer = $('#slideshow-positioned-container');
-  var slideShowContainer = $('#slideshow-container');
+  var slideshowWindow = $('#slideshow-window');
+  var slideshowContainer = $('#slideshow-container');
   var slideShow = $('#slides-container');
   var grid = $('#grid-container');
   var panels = $('#grid-container .grid-panel');
@@ -64,27 +59,41 @@ $(document).ready(function(event){
   var gridWidth = grid.outerWidth();
   var gridHeight = grid.outerHeight();
 
-  slideShowContainer.css({width: gridWidth, height: gridHeight });
-
+  slideshowWindow.css({width: gridWidth, height: gridHeight });
+  slideshowContainer.css({width: gridWidth, height: gridHeight });
   gridArea.css({height: gridHeight });
 
-  slideShow.slick();
+  layoutSlides(slideShow);
 
+  slideShow.slick({
+    arrows: false
+  });
+
+  // Resize event
+  $(window).resize(function() {
+    layoutGrid(panels, grid);
+    layoutSlides(slideShow);
+    gridWidth = grid.outerWidth();
+    gridHeight = grid.outerHeight();
+    slideshowWindow.css({width: gridWidth, height: gridHeight });
+    slideshowContainer.css({width: gridWidth, height: gridHeight });
+    gridArea.css({height: gridHeight });
+  });
+
+  // Open slideshow transition
   panels.click(function() {
     var clickedPanel = $(this);
     var index = clickedPanel.attr('data-slideindex');
     var panelOriginals = {
       width: clickedPanel.outerWidth(),
       height: clickedPanel.outerHeight(),
-      position: getPanelCoords(index)
+      position: getCoords(clickedPanel)
     };
     var slideShowOriginals = {
-      width: slideShowContainer.outerWidth(),
-      height: slideShowContainer.outerHeight(),
-      position: getCoords(slideShowContainer)
+      width: slideshowContainer.outerWidth(),
+      height: slideshowContainer.outerHeight(),
+      position: getCoords(slideshowContainer)
     };
-   
-    panels.css({'opacity': '0', 'pointer-events' : 'none'});
 
     clickedPanel.animate({
       width: slideShowOriginals.width,
@@ -101,19 +110,20 @@ $(document).ready(function(event){
           left: panelOriginals.position.left,
           top: panelOriginals.position.top
         });
+        layoutGrid(panels, grid);
       }
     });
  
     slideShow.slickGoTo(index, true);
 
-    slideShowContainer.css({
+    slideshowWindow.css({
       width: panelOriginals.width,
       height: panelOriginals.height,
       left: panelOriginals.position.left,
       top: panelOriginals.position.top
     });
 
-    slideShowContainer.animate({
+    slideshowWindow.animate({
       width: slideShowOriginals.width,
       height: slideShowOriginals.height,
       left: slideShowOriginals.position.left,
@@ -122,31 +132,31 @@ $(document).ready(function(event){
       duration: 500,
       queue: false,
       complete: function() {
-        
+        layoutSlides(slideShow);
       }
     });
 
-    slideShowContainer.css({'opacity': '1', 'pointer-events' : 'auto'});
-    panels.css({'opacity': '0', 'pointer-events' : 'none'});
-
-    layoutGrid(panels, grid);
+    slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
+    grid.css({'opacity': '0', 'pointer-events' : 'none'});
   });
 
+  // Close slideshow transition
   closeSlideShow.click(function() {
     var index = slideShow.slickCurrentSlide();
     var panel = $('#grid-container .grid-panel[data-slideindex="' + index + '"]');
+
     var panelOriginals = {
       width: panel.outerWidth(),
       height: panel.outerHeight(),
-      position: getPanelCoords(index)
+      position: getCoords(panel)
     };
     var slideShowOriginals = {
-      width: slideShowContainer.outerWidth(),
-      height: slideShowContainer.outerHeight(),
-      position: getCoords(slideShowContainer)
+      width: slideshowContainer.outerWidth(),
+      height: slideshowContainer.outerHeight(),
+      position: getCoords(slideshowContainer)
     };
 
-    slideShowContainer.animate({
+    slideshowWindow.animate({
       width: panelOriginals.width,
       height: panelOriginals.height,
       left: panelOriginals.position.left,
@@ -184,10 +194,11 @@ $(document).ready(function(event){
       }
     });
 
-    panels.css({'opacity': '1', 'pointer-events' : 'auto'});
-    slideShowContainer.css({'opacity': '0', 'pointer-events' : 'none'});
+    grid.css({'opacity': '1', 'pointer-events' : 'auto'});
+    slideshowWindow.css({'opacity': '0', 'pointer-events' : 'none'});
   });
 
+  // Prev / Next slide buttons
   prevButton.click(function() {
     slideShow.slickPrev();
   });

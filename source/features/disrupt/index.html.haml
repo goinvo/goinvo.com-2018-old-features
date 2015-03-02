@@ -73,10 +73,9 @@
     .section-content.grid
       #grid-area
         #grid-container
-          .grid-panel{data: {slideIndex: 0}}
+          .grid-panel{data: {slideIndex: 0, tech: 'genomics'}}
             .title Genomics
-          .grid-panel{data: {slideIndex: 1}}
-            .title Robotics
+          .grid-panel{data: {slideIndex: 1}} I'm panel 2
           .grid-panel{data: {slideIndex: 2}} I'm panel 3
           .grid-panel{data: {slideIndex: 3}} I'm panel 4
           .grid-panel{data: {slideIndex: 4}} I'm panel 5
@@ -88,7 +87,8 @@
           .grid-panel{data: {slideIndex: 10}} I'm panel 11
           .grid-panel{data: {slideIndex: 11}} I'm panel 12
           .grid-panel{data: {slideIndex: 12}} I'm panel 13
-          .grid-panel{data: {slideIndex: 13}} I'm panel 14
+          .grid-panel{data: {slideIndex: 13, tech: 'robotics'}}
+            .title Robotics
           .grid-panel{data: {slideIndex: 14}} I'm panel 15
           .grid-panel{data: {slideIndex: 15}} I'm panel 16
           .grid-panel{data: {slideIndex: 16}} I'm panel 17
@@ -96,52 +96,55 @@
           .grid-panel{data: {slideIndex: 18}} I'm panel 19
           .grid-panel{data: {slideIndex: 19}} I'm panel 20
         #slideshow-positioned-container
-          #slideshow-container
-            .prev <
-            .close X
-            .next >
-            #slides-container
-              .slide{data: {slideIndex: 0}}
-                %p Genomics
-              .slide{data: {slideIndex: 1}}
-                
-                %p Robotics
-              .slide{data: {slideIndex: 2}}
-                %p Three
-              .slide{data: {slideIndex: 3}}
-                %p Four
-              .slide{data: {slideIndex: 4}}
-                %p Five
-              .slide{data: {slideIndex: 5}}
-                %p Six
-              .slide{data: {slideIndex: 6}}
-                %p Seven
-              .slide{data: {slideIndex: 7}}
-                %p Eight
-              .slide{data: {slideIndex: 8}}
-                %p Nine
-              .slide{data: {slideIndex: 9}}
-                %p Ten
-              .slide{data: {slideIndex: 10}}
-                %p Eleven
-              .slide{data: {slideIndex: 11}}
-                %p Twelve
-              .slide{data: {slideIndex: 12}}
-                %p Thirteen
-              .slide{data: {slideIndex: 13}}
-                %p Fourteen
-              .slide{data: {slideIndex: 14}}
-                %p Fifteen
-              .slide{data: {slideIndex: 15}}
-                %p Sixteen
-              .slide{data: {slideIndex: 16}}
-                %p Seventeen
-              .slide{data: {slideIndex: 17}}
-                %p Eighteen
-              .slide{data: {slideIndex: 18}}
-                %p Nineteen
-              .slide{data: {slideIndex: 19}}
-                %p Twenty
+          #slideshow-window
+            #slideshow-container
+              .prev
+              .close X
+              .next
+              #slides-container
+                .slide{data: {slideIndex: 0, tech: 'genomics'}}
+                  .image
+                  %p Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here.
+                .slide{data: {slideIndex: 1}}
+                  .image
+                  %p Robotics
+                .slide{data: {slideIndex: 2}}
+                  %p Three
+                .slide{data: {slideIndex: 3}}
+                  %p Four
+                .slide{data: {slideIndex: 4}}
+                  %p Five
+                .slide{data: {slideIndex: 5}}
+                  %p Six
+                .slide{data: {slideIndex: 6}}
+                  %p Seven
+                .slide{data: {slideIndex: 7}}
+                  %p Eight
+                .slide{data: {slideIndex: 8}}
+                  %p Nine
+                .slide{data: {slideIndex: 9}}
+                  %p Ten
+                .slide{data: {slideIndex: 10}}
+                  %p Eleven
+                .slide{data: {slideIndex: 11}}
+                  %p Twelve
+                .slide{data: {slideIndex: 12}}
+                  %p Thirteen
+                .slide{data: {slideIndex: 13, tech: 'robotics'}}
+                  .image
+                  %p Fourteen
+                .slide{data: {slideIndex: 14}}
+                  %p Fifteen
+                .slide{data: {slideIndex: 15}}
+                  %p Sixteen
+                .slide{data: {slideIndex: 16}}
+                  %p Seventeen
+                .slide{data: {slideIndex: 17}}
+                  %p Eighteen
+                .slide{data: {slideIndex: 18}}
+                  %p Nineteen
+                .slide{data: {slideIndex: 19}}
+                  %p Twenty
      
 .contributions
   .cont-wrapper
