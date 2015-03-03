@@ -9,7 +9,7 @@ function layoutGrid(panels, grid) {
   var left = 0;
   var row = 0;
   var interval = 0;
-  var numOfCols = 5;
+  var numOfCols = 6;
 
   var totalWidth = grid.width();
 
@@ -19,7 +19,7 @@ function layoutGrid(panels, grid) {
     var height = width; // Panel should always be square
     top = height * row;
     left = width * interval;
-    panel.css({height: height, width: width, top: top, left: left});
+    panel.css({height: height, width: width, top: top, left: left, 'z-index': 0, 'font-size': 1 + 'em'});
 
     interval += 1;
     if (interval !== 0 && interval % numOfCols === 0) {
@@ -31,15 +31,23 @@ function layoutGrid(panels, grid) {
   });
 }
 
-function layoutSlides(slideShow) {
-  var slides = slideShow.find('.slide');
-  var totalWidth = slideShow.outerWidth();
-  var margin = totalWidth / 5;
-  var imageWidth = totalWidth - (margin * 2);
+function layoutSlides(slideshowContainer) {
+  var slides = slideshowContainer.find('.slide');
+  var imageWidth = slides.find('.column.right').width();
 
   slides.each(function() {
-    $(this).find('.image').css({width: imageWidth, height: imageWidth, 'margin-left': margin });
+    $(this).find('.container').find('.image').css({width: imageWidth, height: imageWidth});
   })
+}
+
+function animateEntrance(elements) {
+  elements.each(function(i) {
+    var div = $(this);
+
+    setTimeout(function() {
+      div.fadeIn();
+    }, i*100);
+  });
 }
 
 $(document).ready(function(event){
@@ -53,8 +61,21 @@ $(document).ready(function(event){
   var closeSlideShow = $('#slideshow-container .close');
   var prevButton = $('#slideshow-container .prev');
   var nextButton = $('#slideshow-container .next');
+  var transitioning = false;
+  var slideshowOpen = false;
 
   layoutGrid(panels, grid);
+
+  if ($(window).width() >= 800) {
+    panels.hide();
+    layoutGrid(panels, grid);
+    animateEntrance(panels);
+  } else {
+    grid.hide();
+    slideshowContainer.find('.close').hide();
+    slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
+    slideshowOpen = true;
+  }
 
   var gridWidth = grid.outerWidth();
   var gridHeight = grid.outerHeight();
@@ -63,7 +84,7 @@ $(document).ready(function(event){
   slideshowContainer.css({width: gridWidth, height: gridHeight });
   gridArea.css({height: gridHeight });
 
-  layoutSlides(slideShow);
+  layoutSlides(slideshowContainer);
 
   slideShow.slick({
     arrows: false
@@ -72,16 +93,49 @@ $(document).ready(function(event){
   // Resize event
   $(window).resize(function() {
     layoutGrid(panels, grid);
-    layoutSlides(slideShow);
     gridWidth = grid.outerWidth();
     gridHeight = grid.outerHeight();
     slideshowWindow.css({width: gridWidth, height: gridHeight });
     slideshowContainer.css({width: gridWidth, height: gridHeight });
     gridArea.css({height: gridHeight });
+    layoutSlides(slideshowContainer);
+    if ($(window).width() >= 800) {
+      if(!slideshowOpen) {
+        grid.show();
+      } else {
+        grid.show();
+        grid.css({'opacity': '0', 'pointer-events' : 'none'});
+      }
+      slideshowContainer.find('.close').show();
+    } else {
+      grid.hide();
+      slideshowContainer.find('.close').hide();
+      if (!slideshowOpen) {
+        slideShow.slickGoTo(0, true);
+      }
+      slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
+      slideshowOpen = true;
+    }
   });
+
+  // Grid panels hover states
+  function mouseIn() {
+    $(this).addClass('hover');
+  }
+  function mouseOut() {
+    if (transitioning) {
+      setTimeout(function() {
+        $(this).removeClass('hover');
+      }, 750);
+    } else {
+      $(this).removeClass('hover');
+    }
+  }
+  panels.hover(mouseIn, mouseOut);
 
   // Open slideshow transition
   panels.click(function() {
+    transitioning = true;
     var clickedPanel = $(this);
     var index = clickedPanel.attr('data-slideindex');
     var panelOriginals = {
@@ -95,49 +149,38 @@ $(document).ready(function(event){
       position: getCoords(slideshowContainer)
     };
 
+    clickedPanel.addClass('no-transition');
+    clickedPanel.css({'z-index': 999});
+
     clickedPanel.animate({
       width: slideShowOriginals.width,
       height: slideShowOriginals.height,
       left: slideShowOriginals.position.left,
-      top: slideShowOriginals.position.top
+      top: slideShowOriginals.position.top,
+      'font-size': '4em'
     }, {
       duration: 500,
       queue: false,
       complete: function() {
-        $(this).css({
-          width: panelOriginals.width,
-          height: panelOriginals.height,
-          left: panelOriginals.position.left,
-          top: panelOriginals.position.top
-        });
-        layoutGrid(panels, grid);
+        layoutSlides(slideshowContainer);
+        slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
+        grid.css({'opacity': '0', 'pointer-events' : 'none'});
+        transitioning = false;
+        setTimeout(function() {
+          $(this).css({
+            width: panelOriginals.width,
+            height: panelOriginals.height,
+            left: panelOriginals.position.left,
+            top: panelOriginals.position.top
+          });
+          layoutGrid(panels, grid);
+          panels.removeClass('hover');
+          panels.removeClass('no-transition');
+        }, 500);
       }
     });
- 
+    slideshowOpen = true;
     slideShow.slickGoTo(index, true);
-
-    slideshowWindow.css({
-      width: panelOriginals.width,
-      height: panelOriginals.height,
-      left: panelOriginals.position.left,
-      top: panelOriginals.position.top
-    });
-
-    slideshowWindow.animate({
-      width: slideShowOriginals.width,
-      height: slideShowOriginals.height,
-      left: slideShowOriginals.position.left,
-      top: slideShowOriginals.position.top
-    }, {
-      duration: 500,
-      queue: false,
-      complete: function() {
-        layoutSlides(slideShow);
-      }
-    });
-
-    slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
-    grid.css({'opacity': '0', 'pointer-events' : 'none'});
   });
 
   // Close slideshow transition
@@ -156,36 +199,21 @@ $(document).ready(function(event){
       position: getCoords(slideshowContainer)
     };
 
-    slideshowWindow.animate({
-      width: panelOriginals.width,
-      height: panelOriginals.height,
-      left: panelOriginals.position.left,
-      top: panelOriginals.position.top
-    }, {
-      duration: 500,
-      queue: false,
-      complete: function() {
-        $(this).css({
-          width: slideShowOriginals.width,
-          height: slideShowOriginals.height,
-          left: slideShowOriginals.position.left,
-          top: slideShowOriginals.position.top
-        });
-      }
-    });
-
     panel.css({
       width: slideShowOriginals.width,
       height: slideShowOriginals.height,
       left: slideShowOriginals.position.left,
-      top: slideShowOriginals.position.top
+      top: slideShowOriginals.position.top,
+      'z-index': 999,
+      'font-size': '4em'
     });
 
     panel.animate({
       width: panelOriginals.width,
       height: panelOriginals.height,
       left: panelOriginals.position.left,
-      top: panelOriginals.position.top
+      top: panelOriginals.position.top,
+      'font-size': '1em'
     }, {
       duration: 500,
       queue: false,
@@ -196,6 +224,7 @@ $(document).ready(function(event){
 
     grid.css({'opacity': '1', 'pointer-events' : 'auto'});
     slideshowWindow.css({'opacity': '0', 'pointer-events' : 'none'});
+    slideshowOpen = false;
   });
 
   // Prev / Next slide buttons

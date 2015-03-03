@@ -74,77 +74,396 @@
       #grid-area
         #grid-container
           .grid-panel{data: {slideIndex: 0, tech: 'genomics'}}
+            .bg
+            .overlay
             .title Genomics
-          .grid-panel{data: {slideIndex: 1}} I'm panel 2
-          .grid-panel{data: {slideIndex: 2}} I'm panel 3
-          .grid-panel{data: {slideIndex: 3}} I'm panel 4
-          .grid-panel{data: {slideIndex: 4}} I'm panel 5
-          .grid-panel{data: {slideIndex: 5}} I'm panel 6
-          .grid-panel{data: {slideIndex: 6}} I'm panel 7
-          .grid-panel{data: {slideIndex: 7}} I'm panel 8
-          .grid-panel{data: {slideIndex: 8}} I'm panel 9
-          .grid-panel{data: {slideIndex: 9}} I'm panel 10
-          .grid-panel{data: {slideIndex: 10}} I'm panel 11
-          .grid-panel{data: {slideIndex: 11}} I'm panel 12
-          .grid-panel{data: {slideIndex: 12}} I'm panel 13
-          .grid-panel{data: {slideIndex: 13, tech: 'robotics'}}
+          .grid-panel{data: {slideIndex: 1}}
+            .bg
+            .overlay
+            .title I'm panel 2
+          .grid-panel{data: {slideIndex: 2}}
+            .bg
+            .overlay
+            .title I'm panel 3
+          .grid-panel{data: {slideIndex: 3}}
+            .bg
+            .overlay
+            .title I'm panel 4
+          .grid-panel{data: {slideIndex: 4}}
+            .bg
+            .overlay
+            .title I'm panel 5
+          .grid-panel{data: {slideIndex: 5}}
+            .bg
+            .overlay
+            .title I'm panel 6
+          .grid-panel{data: {slideIndex: 6}}
+            .bg
+            .overlay
+            .title I'm panel 7
+          .grid-panel{data: {slideIndex: 7}}
+            .bg
+            .overlay
+            .title I'm panel 8
+          .grid-panel{data: {slideIndex: 8}}
+            .bg
+            .overlay
+            .title I'm panel 9
+          .grid-panel{data: {slideIndex: 9}}
+            .bg
+            .overlay
+            .title I'm panel 10
+          .grid-panel{data: {slideIndex: 10}}
+            .bg
+            .overlay
+            .title I'm panel 11
+          .grid-panel{data: {slideIndex: 11}}
+            .bg
+            .overlay
+            .title I'm panel 12
+          .grid-panel{data: {slideIndex: 12, tech: 'robotics1'}}
+            .bg
+            .overlay
             .title Robotics
-          .grid-panel{data: {slideIndex: 14}} I'm panel 15
-          .grid-panel{data: {slideIndex: 15}} I'm panel 16
-          .grid-panel{data: {slideIndex: 16}} I'm panel 17
-          .grid-panel{data: {slideIndex: 17}} I'm panel 18
-          .grid-panel{data: {slideIndex: 18}} I'm panel 19
-          .grid-panel{data: {slideIndex: 19}} I'm panel 20
+          .grid-panel{data: {slideIndex: 13, tech: 'robotics2'}}
+            .bg
+            .overlay
+            .title Big Dog
+          .grid-panel{data: {slideIndex: 14, tech: 'robotics3'}}
+            .bg
+            .overlay
+            .title Military
+          .grid-panel{data: {slideIndex: 15, tech: 'robotics4'}}
+            .bg
+            .overlay
+            .title Power Suits
+          .grid-panel{data: {slideIndex: 16, tech: 'robotics5'}}
+            .bg
+            .overlay
+            .title Androids
+          .grid-panel{data: {slideIndex: 17}}
+            .bg
+            .overlay
+            .title I'm panel 18
+          .grid-panel{data: {slideIndex: 18}}
+            .bg
+            .overlay
+            .title I'm panel 19
+          .grid-panel{data: {slideIndex: 19}}
+            .bg
+            .overlay
+            .title I'm panel 20
+          .grid-panel{data: {slideIndex: 20}}
+            .bg
+            .overlay
+            .title I'm panel 21
+          .grid-panel{data: {slideIndex: 21}}
+            .bg
+            .overlay
+            .title I'm panel 22
+          .grid-panel{data: {slideIndex: 22}}
+            .bg
+            .overlay
+            .title I'm panel 23
+          .grid-panel{data: {slideIndex: 23}}
+            .bg
+            .overlay
+            .title I'm panel 24
         #slideshow-positioned-container
           #slideshow-window
             #slideshow-container
-              .prev
+              .nav-button.prev
               .close X
-              .next
+              .nav-button.next
               #slides-container
                 .slide{data: {slideIndex: 0, tech: 'genomics'}}
-                  .image
-                  %p Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here. Genomics are pretty cool. They let you do cool stuff. Lorem epsom salt. Great stuff here.
+                  .container
+                    .column.left
+                      .title GENOMICS
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image
                 .slide{data: {slideIndex: 1}}
-                  .image
-                  %p Robotics
+                  .container
+                    .column.left
+                      .title NUMBER 2
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image
                 .slide{data: {slideIndex: 2}}
-                  %p Three
+                  .container
+                    .column.left
+                      .title NUMBER 3
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image
                 .slide{data: {slideIndex: 3}}
-                  %p Four
+                  .container
+                    .column.left
+                      .title NUMBER 4
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image
                 .slide{data: {slideIndex: 4}}
-                  %p Five
+                  .container
+                    .column.left
+                      .title NUMBER 5
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 5}}
-                  %p Six
+                  .container
+                    .column.left
+                      .title NUMBER 6
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image  
                 .slide{data: {slideIndex: 6}}
-                  %p Seven
+                  .container
+                    .column.left
+                      .title NUMBER 7
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 7}}
-                  %p Eight
+                  .container
+                    .column.left
+                      .title NUMBER 8
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 8}}
-                  %p Nine
+                  .container
+                    .column.left
+                      .title NUMBER 9
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image  
                 .slide{data: {slideIndex: 9}}
-                  %p Ten
+                  .container
+                    .column.left
+                      .title NUMBER 10
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image  
                 .slide{data: {slideIndex: 10}}
-                  %p Eleven
+                  .container
+                    .column.left
+                      .title NUMBER 11
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 11}}
-                  %p Twelve
-                .slide{data: {slideIndex: 12}}
-                  %p Thirteen
-                .slide{data: {slideIndex: 13, tech: 'robotics'}}
-                  .image
-                  %p Fourteen
-                .slide{data: {slideIndex: 14}}
-                  %p Fifteen
-                .slide{data: {slideIndex: 15}}
-                  %p Sixteen
-                .slide{data: {slideIndex: 16}}
-                  %p Seventeen
+                  .container
+                    .column.left
+                      .title NUMBER 12
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 12, tech: 'robotics1'}}
+                  .container
+                    .column.left
+                      .title ROBOTICS
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 13, tech: 'robotics2'}}
+                  .container
+                    .column.left
+                      .title BIG DOG
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 14, tech: 'robotics3'}}
+                  .container
+                    .column.left
+                      .title MILITARY
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 15, tech: 'robotics4'}}
+                  .container
+                    .column.left
+                      .title POWER SUITS
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 16, tech: 'robotics5'}}
+                  .container
+                    .column.left
+                      .title ANDROIDS
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 17}}
-                  %p Eighteen
+                  .container
+                    .column.left
+                      .title NUMBER 18
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 18}}
-                  %p Nineteen
+                  .container
+                    .column.left
+                      .title NUMBER 19
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
                 .slide{data: {slideIndex: 19}}
-                  %p Twenty
+                  .container
+                    .column.left
+                      .title NUMBER 20
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 20}}
+                  .container
+                    .column.left
+                      .title NUMBER 21
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 21}}
+                  .container
+                    .column.left
+                      .title NUMBER 22
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 22}}
+                  .container
+                    .column.left
+                      .title NUMBER 23
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
+                .slide{data: {slideIndex: 23}}
+                  .container
+                    .column.left
+                      .title NUMBER 24
+                      .description
+                        %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                      .links
+                        %ul
+                          %li www.example.com
+                          %li www.example.org
+                    .column.right
+                      .image 
      
 .contributions
   .cont-wrapper
