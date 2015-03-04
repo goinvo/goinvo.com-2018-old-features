@@ -52,7 +52,6 @@ function animateEntrance(elements) {
 
 $(document).ready(function(event){
   var gridArea = $('#grid-area');
-  var slideshowPositionedContainer = $('#slideshow-positioned-container');
   var slideshowWindow = $('#slideshow-window');
   var slideshowContainer = $('#slideshow-container');
   var slideShow = $('#slides-container');
@@ -73,7 +72,7 @@ $(document).ready(function(event){
   } else {
     grid.hide();
     slideshowContainer.find('.close').hide();
-    slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
+    slideshowWindow.css({'opacity': '1', 'pointer-events': 'auto'});
     slideshowOpen = true;
   }
 
@@ -199,6 +198,7 @@ $(document).ready(function(event){
       position: getCoords(slideshowContainer)
     };
 
+    panel.addClass('no-transition');
     panel.css({
       width: slideShowOriginals.width,
       height: slideShowOriginals.height,
@@ -218,6 +218,7 @@ $(document).ready(function(event){
       duration: 500,
       queue: false,
       complete: function() {
+        panel.removeClass('no-transition');
         layoutGrid(panels, grid);
       }
     });
@@ -235,4 +236,14 @@ $(document).ready(function(event){
   nextButton.click(function() {
     slideShow.slickNext();
   });
+
+  // Video Hover Controls
+  function unmute() {
+    $(this).children("video")[0].muted = false;
+  }
+
+  function mute() {
+    $(this).children("video")[0].muted = true;
+  }
+  $('.video-container').hover(unmute, mute);
 });
