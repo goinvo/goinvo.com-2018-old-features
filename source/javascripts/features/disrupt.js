@@ -2,7 +2,7 @@ function getCoords(element) {
   return element.position();
 }
 
-function layoutGrid(panels, grid) {
+function layout(panels, grid, slideshowContainer, slideshowWindow) {
   // Square each panel, and determine their position
   // based on their sizes
   var top = 0;
@@ -12,26 +12,38 @@ function layoutGrid(panels, grid) {
   var numOfCols = 6;
 
   var totalWidth = grid.width();
+  var offset = totalWidth % numOfCols;
+  var panelwidth;
+
+  var margin = offset / 2;
+  var panelWidth = (totalWidth - offset) / numOfCols;
+  var panelHeight = panelWidth;
+
+  grid.css({margin: margin});
 
   panels.each(function(i) {
     var panel = $(this);
-    var width = totalWidth / numOfCols;
-    var height = width; // Panel should always be square
-    top = height * row;
-    left = width * interval;
-    panel.css({height: height, width: width, top: top, left: left, 'z-index': 0, 'font-size': 1 + 'em'});
+    // var width = parseFloat((totalWidth / numOfCols).toFixed(3));
+    // var height = width; // Panel should always be square
+    top = panelHeight * row;
+    left = panelWidth * interval;
+    panel.css({height: panelHeight, width: panelWidth, top: top, left: left, 'z-index': 0, 'font-size': 1 + 'em'});
 
     interval += 1;
     if (interval !== 0 && interval % numOfCols === 0) {
       interval = 0;
       row += 1;
     }
-    // Set the height of their parent container
-    $('#grid-container').height(row * height);
   });
-}
 
-function layoutSlides(slideshowContainer) {
+  var gridWidth = panelWidth * numOfCols;
+  var gridHeight = panelHeight * row;
+
+  grid.width(gridWidth);
+  grid.height(gridHeight);
+  slideshowContainer.css({width: gridWidth, height: gridHeight});
+  slideshowWindow.css({width: gridWidth, height: gridHeight});
+
   var slides = slideshowContainer.find('.slide');
   var imageWidth = slides.find('.column.right').width();
 
@@ -63,11 +75,10 @@ $(document).ready(function(event){
   var transitioning = false;
   var slideshowOpen = false;
 
-  layoutGrid(panels, grid);
+  layout(panels, grid, slideshowContainer, slideshowWindow);
 
   if ($(window).width() >= 800) {
     panels.hide();
-    layoutGrid(panels, grid);
     animateEntrance(panels);
   } else {
     grid.hide();
@@ -76,14 +87,12 @@ $(document).ready(function(event){
     slideshowOpen = true;
   }
 
-  var gridWidth = grid.outerWidth();
-  var gridHeight = grid.outerHeight();
+  var gridWidth = grid.innerWidth();
+  var gridHeight = grid.innerHeight();
 
   slideshowWindow.css({width: gridWidth, height: gridHeight });
   slideshowContainer.css({width: gridWidth, height: gridHeight });
   gridArea.css({height: gridHeight });
-
-  layoutSlides(slideshowContainer);
 
   slideShow.slick({
     arrows: false
@@ -91,13 +100,12 @@ $(document).ready(function(event){
 
   // Resize event
   $(window).resize(function() {
-    layoutGrid(panels, grid);
-    gridWidth = grid.outerWidth();
-    gridHeight = grid.outerHeight();
+    layout(panels, grid, slideshowContainer, slideshowWindow);
+    gridWidth = grid.width();
+    gridHeight = grid.height();
     slideshowWindow.css({width: gridWidth, height: gridHeight });
     slideshowContainer.css({width: gridWidth, height: gridHeight });
     gridArea.css({height: gridHeight });
-    layoutSlides(slideshowContainer);
     if ($(window).width() >= 800) {
       if(!slideshowOpen) {
         grid.show();
@@ -143,8 +151,8 @@ $(document).ready(function(event){
       position: getCoords(clickedPanel)
     };
     var slideShowOriginals = {
-      width: slideshowContainer.outerWidth(),
-      height: slideshowContainer.outerHeight(),
+      width: slideshowContainer.width(),
+      height: slideshowContainer.height(),
       position: getCoords(slideshowContainer)
     };
 
@@ -161,7 +169,6 @@ $(document).ready(function(event){
       duration: 500,
       queue: false,
       complete: function() {
-        layoutSlides(slideshowContainer);
         slideshowWindow.css({'opacity': '1', 'pointer-events' : 'auto'});
         grid.css({'opacity': '0', 'pointer-events' : 'none'});
         transitioning = false;
@@ -172,7 +179,7 @@ $(document).ready(function(event){
             left: panelOriginals.position.left,
             top: panelOriginals.position.top
           });
-          layoutGrid(panels, grid);
+          layout(panels, grid, slideshowContainer, slideshowWindow);
           panels.removeClass('hover');
           panels.removeClass('no-transition');
         }, 500);
@@ -219,7 +226,7 @@ $(document).ready(function(event){
       queue: false,
       complete: function() {
         panel.removeClass('no-transition');
-        layoutGrid(panels, grid);
+        layout(panels, grid, slideshowContainer, slideshowWindow);
       }
     });
 

@@ -18,6 +18,7 @@ $gridTop: 0;
 #grid-area {
   position: relative;
   margin-bottom: 5em;
+  width: 100%;
   #grid-container {
     position: absolute;
     top: $gridTop;
@@ -36,6 +37,7 @@ $gridTop: 0;
       box-sizing: border-box;
       border: 1px solid black;
       overflow: hidden;
+      background-color: gray;
       &.no-transition {
         -webkit-transition: none !important;
         -moz-transition: none !important;
@@ -65,11 +67,10 @@ $gridTop: 0;
           transform: scale(1, 1);
         }
         .overlay {
-          background-color: rgba(92,153,214,0.5);
+          opacity: 0.5;
         }
         .title {
-          font-size: 1.2em;
-          transform: translate(0, -65%);
+          transform: scale(1.2) translate(0, -65%);
         }
       }
       &[data-tech="genomics"] {
@@ -123,10 +124,11 @@ $gridTop: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.0);
-        -webkit-transition: background-color $animateSpeed ease-in-out;
-        -moz-transition: background-color $animateSpeed ease-in-out;
-        transition: background-color $animateSpeed ease-in-out;
+        background-color: rgb(92,153,214);
+        opacity: 0;
+        -webkit-transition: opacity $animateSpeed ease-in-out;
+        -moz-transition: opacity $animateSpeed ease-in-out;
+        transition: opacity $animateSpeed ease-in-out;
       }
       .title {
         position: absolute;
