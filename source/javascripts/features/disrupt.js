@@ -77,6 +77,10 @@ $(document).ready(function(event){
 
 
   // ===== Initialization =====
+  $("video").each(function() {
+    this.volume = 0.5;
+  });
+
   layout(panels, grid, gridArea, slideshowContainer);
   var gridHeight = grid.height();
   gridArea.css({height: gridHeight});
@@ -102,11 +106,13 @@ $(document).ready(function(event){
     var gridHeight = grid.height();
     gridArea.css({height: gridHeight });
     if ($(window).width() >= 800) {
-      if(!slideshowOpen) {
+      if (slideshowOpen) {
         grid.show();
-      } else {
-        grid.show();
-        grid.css({'opacity': '0', 'pointer-events' : 'none'});
+        panels.hide();
+        animateEntrance(panels);
+        slideshowContainer.css({'opacity': '0', 'pointer-events' : 'none'});
+        slideshowContainer.find('.close').show();
+        slideshowOpen = false;
       }
       slideshowContainer.find('.close').show();
     } else {
