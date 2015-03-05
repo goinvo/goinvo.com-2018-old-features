@@ -19,6 +19,7 @@ $gridTop: 0;
   position: relative;
   margin-bottom: 5em;
   width: 100%;
+  background-color: black;
   #grid-container {
     position: absolute;
     top: $gridTop;
@@ -37,6 +38,8 @@ $gridTop: 0;
       box-sizing: border-box;
       border: 1px solid black;
       overflow: hidden;
+      z-index: 0;
+      font-size: 1em;
       background-color: gray;
       &.no-transition {
         -webkit-transition: none !important;
@@ -145,150 +148,141 @@ $gridTop: 0;
       }
     }
   }
-  #slideshow-positioned-container {
+  #slideshow-container {
     position: absolute;
     top: $gridTop;
     left: $gridLeft;
     width: $gridWidth;
+    border: 1px solid black;
+    opacity: 0;
     pointer-events: none;
-    #slideshow-window {
+    -webkit-transition: opacity $animateSpeed;
+    -moz-transition: opacity $animateSpeed;
+    -o-transition: opacity $animateSpeed;
+    -ms-transition: opacity $animateSpeed;
+    transition: opacity $animateSpeed;
+    .nav-button {
       position: absolute;
-      overflow: hidden;
-      opacity: 0;
-      -webkit-transition: opacity $animateSpeed;
-      -moz-transition: opacity $animateSpeed;
-      -o-transition: opacity $animateSpeed;
-      -ms-transition: opacity $animateSpeed;
-      transition: opacity $animateSpeed;
-      pointer-events: none;
-      #slideshow-container {
-        position: relative;
-        left: 0;
-        top: 0;
-        border: 1px solid black;
-        .nav-button {
-          position: absolute;
-          top: calc(50% - 20px);
-          width: 20px;
-          height: 40px;
-          opacity: .65 !important;
-          background-image: image-url('arrow.png');
-          background-size: contain;
-          background-repeat: no-repeat;
-          z-index: 999;
-          transition: opacity 250ms ease-in-out;
-          &:hover {
-            opacity: 1 !important;
-            cursor: pointer;
-          }
-          &:after, &:before {
-            content: "";
-          }
-          &.prev {
-            left: 15px;
-            transform: rotate(180deg);
-            @media only screen and (max-width: 650px) {
-              left: 5px;
+      top: calc(50% - 20px);
+      width: 20px;
+      height: 40px;
+      opacity: .65 !important;
+      background-image: image-url('arrow.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 999;
+      transition: opacity 250ms ease-in-out;
+      &:hover {
+        opacity: 1 !important;
+        cursor: pointer;
+      }
+      &:after, &:before {
+        content: "";
+      }
+      &.prev {
+        left: 15px;
+        transform: rotate(180deg);
+        @media only screen and (max-width: 650px) {
+          left: 5px;
+        }
+      }
+      &.next {
+        right: 15px;
+        @media only screen and (max-width: 650px) {
+          right: 5px;
+        }
+      }
+    }
+    .close {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      width: 5px;
+      height: 5px;
+      z-index: 999;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    #slides-container {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      .slide {
+        width: 100%;
+        .container {
+          width: 88%;
+          margin: 6%;
+          vertical-align: middle;
+          .column {
+            display: inline-block;
+            vertical-align: top;
+            &.left {
+              width: 60%;
             }
-          }
-          &.next {
-            right: 15px;
-            @media only screen and (max-width: 650px) {
-              right: 5px;
+            &.right {
+              float: right;
+              width: 35%;
+              margin-left: 5%;
+            }
+            .title {
+              font-size: 3em;
+              border-top: 1px solid black;
+              border-bottom: 1px solid black;
+              text-align: center;
+              margin-bottom: 5%;
+              @media only screen and (max-width: 650px) {
+                font-size: 2em;
+              }
+            }
+            .description {
+              @media only screen and (max-width: 425px) {
+                font-size: 0.8em;
+              }
+            }
+            .links {
+              @media only screen and (max-width: 425px) {
+                font-size: 0.8em;
+              }
+              ul {
+                list-style: none;
+              }
+            }
+            .image {
+              background-repeat: no-repeat;
+              background-size: cover;
+              margin: 0;
             }
           }
         }
-        .close {
-          position: absolute;
-          top: 2%;
-          right: 2%;
-          width: 5px;
-          height: 5px;
-          z-index: 999;
-          &:hover {
-            cursor: pointer;
+        &[data-tech="genomics"] {
+          .image {
+            background-image: image-url("features/disrupt/genomics1.jpg");
           }
         }
-        #slides-container {
-          width: 100%;
-          height: 100%;
-          .slide {
-            width: 100%;
-            .container {
-              width: 88%;
-              margin: 6%;
-              vertical-align: middle;
-              .column {
-                display: inline-block;
-                vertical-align: top;
-                &.left {
-                  width: 60%;
-                }
-                &.right {
-                  float: right;
-                  width: 35%;
-                  margin-left: 5%;
-                }
-                .title {
-                  font-size: 3em;
-                  border-top: 1px solid black;
-                  border-bottom: 1px solid black;
-                  text-align: center;
-                  margin-bottom: 5%;
-                  @media only screen and (max-width: 650px) {
-                    font-size: 2em;
-                  }
-                }
-                .description {
-                  @media only screen and (max-width: 425px) {
-                    font-size: 0.8em;
-                  }
-                }
-                .links {
-                  @media only screen and (max-width: 425px) {
-                    font-size: 0.8em;
-                  }
-                  ul {
-                    list-style: none;
-                  }
-                }
-                .image {
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                  margin: 0;
-                }
-              }
-            }
-            &[data-tech="genomics"] {
-              .image {
-                background-image: image-url("features/disrupt/genomics1.jpg");
-              }
-            }
-            &[data-tech="robotics1"] {
-              .image {
-                background-image: image-url("features/disrupt/robotics1.jpg");
-              }
-            }
-            &[data-tech="robotics2"] {
-              .image {
-                background-image: image-url("features/disrupt/robotics2.jpg");
-              }
-            }
-            &[data-tech="robotics3"] {
-              .image {
-                background-image: image-url("features/disrupt/robotics3.jpg");
-              }
-            }
-            &[data-tech="robotics4"] {
-              .image {
-                background-image: image-url("features/disrupt/robotics4.jpg");
-              }
-            }
-            &[data-tech="robotics5"] {
-              .image {
-                background-image: image-url("features/disrupt/robotics5.jpg");
-              }
-            }
+        &[data-tech="robotics1"] {
+          .image {
+            background-image: image-url("features/disrupt/robotics1.jpg");
+          }
+        }
+        &[data-tech="robotics2"] {
+          .image {
+            background-image: image-url("features/disrupt/robotics2.jpg");
+          }
+        }
+        &[data-tech="robotics3"] {
+          .image {
+            background-image: image-url("features/disrupt/robotics3.jpg");
+          }
+        }
+        &[data-tech="robotics4"] {
+          .image {
+            background-image: image-url("features/disrupt/robotics4.jpg");
+          }
+        }
+        &[data-tech="robotics5"] {
+          .image {
+            background-image: image-url("features/disrupt/robotics5.jpg");
           }
         }
       }
@@ -360,7 +354,6 @@ article {
   header {
     .header-contents {
       padding: 6em 6em 0;
-      background-color: pink;
     }
   }
   #section-one {
@@ -370,12 +363,10 @@ article {
     .video-container {
       position: relative;
       width: 100%;
-      height: 600px;
       overflow: hidden;
-      .video {
-        position: absolute;
-        z-index: 0;
+      video {
         width: 100%;
+        height: auto;
       }
     }
   }
