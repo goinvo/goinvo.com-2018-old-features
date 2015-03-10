@@ -7,6 +7,12 @@ $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
+$orange: #d98340;
+$cyan: #2678ad;
+$magenta: #ca285a;
+$purple: #795d88;
+$teal: #238e9a;
+
 $animateSpeed: 500ms;
 $gridWidth: 100%;
 $gridLeft: 0;
@@ -293,9 +299,6 @@ $gridTop: 0;
 
 /* ===== Headers ===== */
 
-.header-contents, .sec-header {
-  font-family: 'adobe-jenson-pro', serif;
-}
 .navigation {
   position: fixed;
   top: 55px;
@@ -307,7 +310,6 @@ $gridTop: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   box-shadow: 0px -2px 7px;
   padding: 0px 26px;
-
   ul, ol {
     margin: 0 auto;
     li {
@@ -331,48 +333,145 @@ $gridTop: 0;
 }
 
 
+/* ===== Videos ===== */
+
+.video-container {
+  width: 100%;
+  overflow: hidden;
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 /* ===== Article ===== */
 
 .container.content {
-    background-color: $bodyBackground;
+    background-color: white;
+    .navigation {
+      background-color: rgba(37,141,153,0.95);
+      ol {
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
 }
 
 article.disrupt {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "adobe-jenson-pro", serif;
   max-width: 1200px;
   margin: 0 auto;
-  border-left: 1px solid $contentBorder;
-  border-right: 1px solid $contentBorder;
   background-color: white;
 }
 
-.article-section {
-  margin-bottom: 5em;
-}
-
-article {
-  header {
-    .header-contents {
-      padding: 6em 6em 0;
+header {
+  font-family: "proxima-nova", sans-serif;
+  h3 {
+    font-family: "proxima-nova", sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-size: 2.8vw;
+    letter-spacing: 0.3em;
+    padding-left: 0.3em;
+    color: $orange;
+    text-transform: uppercase;
+    @media only screen and (min-width: 1200px) {
+      font-size: 2em;
     }
   }
-  #section-one {
-    .sec-header {
-      background-color: orange;
-    }
-    .video-container {
+  &.article-header {
+    .header-contents {
       position: relative;
-      width: 100%;
-      overflow: hidden;
-      video {
+      padding-top: 5.3em;
+      .title-container {
+        position: absolute;
         width: 100%;
-        height: auto;
+        bottom: 6%;
+        text-align: center;
+        h1 {
+          font-family: "proxima-nova", sans-serif;
+          font-size: 6em;
+          font-size: 8vw;
+          color: white;
+          letter-spacing: 0.7em;
+          margin: 0;
+          padding-left: 0.5em;
+          text-align: center;
+          text-transform: uppercase;
+        }
       }
     }
   }
-  #section-two {
-    .sec-header {
-      background-color: teal;
+  &.sec-header {
+      position: relative;
+      font-family: "proxima-nova", sans-serif;
+      .title-container {
+        position: absolute;
+        left: 0;
+        bottom: 6%;
+        width: 100%;
+        color: white;
+        text-align: center;
+        h3 {
+          margin: 1% 0%;
+          width: 100%;
+          font-size: 3em;
+          font-size: 4vw;
+          letter-spacing: 0.5em;
+          padding-left: 0.5em;
+          color: white;
+          text-transform: uppercase;
+        }
+        h4 {
+          margin: 0.5% 0%;
+          width: 100%;
+          font-size: 2em;
+          font-size: 2vw;
+          letter-spacing: 0.3em;
+          padding-left: 0.3em;
+          text-transform: uppercase;
+        }
+      }
+    }
+}
+article {
+  .article-section {
+    margin: 8em 0 10em 0;
+    @media only screen and (max-width: 800px) {
+      margin: 1.5em 0 3em 0;
+    }
+    &#section-one {
+      .sub-sec {
+        h3 {
+          color: $cyan;
+        }
+      }
+    }
+    &#section-two {
+      .sub-sec {
+        h3 {
+          color: $magenta;
+        }
+      }
+    }
+    &#section-three {
+      .sub-sec {
+        h3 {
+          color: $purple;
+        }
+      }
+    }
+    &#section-four {
+      .sub-sec {
+        h3 {
+          color: $teal;
+        }
+      }
     }
   }
 }
@@ -397,29 +496,76 @@ article {
 }
 
 .section-content {
-  h1, h2, h3, h4, h5, h6, p, ul, ol, .div {
-    max-width: 800px;
-    margin: 0 auto 1em;
+  margin: 1% 1% 0% 10%;
+  width: 89%;
+  &.grid {
+    margin: 0;
+    width: 100%;
   }
   p, ul, ol {
-    font-size: 1.1em;
-    line-height: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
   ul, ol {
     li {
       margin-bottom: 0.5em;
     }
   }
+  .content {
+    display: inline-block;
+    vertical-align: top;
+    width: 73%;
+    margin: 0 2% 0 0;
+    .sub-sec {
+      margin: 2em 0;
+      &:last-of-type {
+        margin: 2em 0 0 0;
+      }
+      &:first-of-type {
+        margin: 0 0 2em 0;
+      }
+      h3 {
+        font-family: "proxima-nova", sans-serif;
+        font-size: 2em;
+        font-size: 3vw;
+        letter-spacing: 0.3em;
+        margin-bottom: 0.3em;
+        text-transform: uppercase;
+        @media only screen and (min-width: 1200px) {
+          font-size: 2em;
+        }
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .right-side {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+  }
   .full {
     width: 100%;
     margin: 2em 0;
   }
-  .caption {
-    font-size: 85%;
-    color: $gray;
-  }
   .grid {
     background-color: gray;
+  }
+}
+
+
+/* ===== Right Side Images ===== */
+
+.right-side {
+  .image-container {
+    width: 100%;
+    height: auto;
+    .caption {
+      margin-top: 5px;
+      font-size: 85%;
+      color: $gray;
+    }
   }
 }
 
@@ -428,7 +574,7 @@ article {
 
 .contributions {
   width: 100%;
-  background-color: #2a2d33;
+  background-color: $purple;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -450,7 +596,7 @@ article {
 
         td {
           &.label {
-            color: #7a7b7e;
+            color: white;
             text-align: left;
             padding-right: 10px;
           }
@@ -522,8 +668,11 @@ article {
   }
 
   .section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
-    font-size: .8em;
+    font-size: 1.2em;
     padding: 0px 20px;
+    @media only screen and (max-width: 600px) {
+      font-size: 0.8em
+    }
   }
 
   .main-header {
@@ -546,11 +695,6 @@ article {
       }
     }
   }
-
-  .sec-header {
-    padding-left: 20px;
-  }
-
 
   .aside-media .video, .slider .video {
     margin-right: 20px;

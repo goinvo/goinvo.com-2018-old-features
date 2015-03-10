@@ -6,7 +6,7 @@
   = stylesheet_link_tag "feature-elements"
   = javascript_include_tag "features/disrupt.js"
   = javascript_include_tag "slick/slick"
-  = javascript_include_tag "//use.typekit.net/xpn8aww.js"
+  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
   = javascript_include_tag "vide"
   :javascript
     try{Typekit.load();}catch(e){}
@@ -17,7 +17,7 @@
   <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5gav&p_id=Twitter" />
   <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5gav&p_id=Twitter" />
   %meta{:name => "description", :content => ""}/
-  %meta{:name => "keywords", :content => "design for life future emerging tech technology disrupt"}/
+  %meta{:name => "keywords", :content => "future emerging tech technology disrupt"}/
   %meta{:name => "twitter:card", :content => "summary_large_image"}/
   %meta{:name => "twitter:site", :content => "@goinvo"}/
   %meta{:name => "twitter:creator", :content => "@goinvo"}/
@@ -28,16 +28,22 @@
 .navigation
   %ol
     %li
-      %a{:data => {:click => "#section-one"}, :title => "Section One"} 1. Section One
+      %a{:data => {:click => "#section-one"}, :title => "Intro"} 1. Intro
     %li
-      %a{:data => {:click => "#section-two"}, :title => "Section Two"} 2. Section Two
-%article#feature-article.disrupt
-  %header
-    .header-contents
-      %h1 Disrupt
-      %h2.byline Emerging Tech
-      %p.author By Jonathan Follett
-      %p.email <a href = "mailto:jon@goinvo.com">jon@goinvo.com</a>
+      %a{:data => {:click => "#section-two"}, :title => "Our Future"} 2. Our Future
+    %li
+      %a{:data => {:click => "#section-three"}, :title => "The Next 20 Years"} 3. The Next 20 Years
+    %li
+      %a{:data => {:click => "#section-four"}, :title => "Designing At All Levels"} 4. Designing At All Levels
+%header.article-header
+  .header-contents#article-header
+    .video-container#header-video
+      %video{autoplay: true, muted: true, loop: true}
+        %source{src: '../../videos/disrupt/article-header.mp4', type: 'video/mp4'}
+        / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
+        / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+    .title-container
+      %h1 Disrupt!
       .social-buttons
         %a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/design-for-life", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
           %svg{:version => "1.1", :viewBox => "240 0 480 480"}
@@ -54,21 +60,77 @@
           %svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
             %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
             %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}
-  %section.article-section#section-one
-    %header.sec-header
-      .title
-        %h3.sec-title
-        %h4.sub-title
-      .number
-        %span
+%article#feature-article.disrupt
+  %section.article-section#description
+    %header
+      %h3 Designing for Emerging Technologies
     .section-content
-      %p
-      .video-container
-        %video{autoplay: true, muted: true, loop: true}
-          %source{src: '../../videos/disrupt/printer.mp4', type: 'video/mp4'}
-          %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
-          %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+      .content
+        %p What does it mean to create products and services that have the potential to disrupt our society and our economy?
+        %p Rethinking and remaking our interactions, our infrastructure, and maybe even our institutions.
+        %p Will we have "super powers"? In the next 25 years we have the opportunity to redefine what it means to be human.
+      .right-side
+        .image-container
+          = image_tag "features/disrupt/emerging-tech-book.jpg"
+          .caption This is some fake text. Pretty cool stuff here.
+%header.sec-header
+  .video-container
+    %video{autoplay: true, muted: true, loop: true}
+      %source{src: '../../videos/disrupt/globalwarming-gradient.mp4', type: 'video/mp4'}
+      / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
+      / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+  .title-container
+    %h3 Intro
+%article#feature-article.disrupt
+  %section.article-section#section-one
+    .section-content
+      .content
+        .sub-sec
+          %h3 Super Human Strength
+          %p This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc.
+      .right-side
+%header.sec-header
+  .video-container
+    %video{autoplay: true, muted: true, loop: true}
+      %source{src: '../../videos/disrupt/forest-gradient.mp4', type: 'video/mp4'}
+      / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
+      / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+  .title-container
+    %h3 Our Future
+    %h4 To Envision Our Future We Must
+    %h4 Understand Our Past
+%article#feature-article.disrupt
   %section.article-section#section-two
+    .section-content
+      .content
+        .sub-sec
+          %h3 Something
+          %p This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc.
+        .sub-sec
+          %h3 Something
+          %p This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc.
+      .right-side
+        .image-container
+          = image_tag "features/disrupt/automobile.jpg"
+          .caption This is some fake text. Pretty cool stuff here.
+        .image-container
+          = image_tag "features/disrupt/telephone.jpg"
+          .caption This is some fake text. Pretty cool stuff here.
+        .image-container
+          = image_tag "features/disrupt/vaudeville.jpg"
+          .caption This is some fake text. Pretty cool stuff here.
+%header.sec-header
+  .video-container
+    %video{autoplay: true, muted: true, loop: true}
+      %source{src: '../../videos/disrupt/ocean-gradient.mp4', type: 'video/mp4'}
+      / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
+      / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+  .title-container
+    %h3 The Next 20 Years
+    %h4 What Kind of Disruption Are
+    %h4 We Talking About?
+%article#feature-article.disrupt
+  %section.article-section#section-three
     .section-content.grid
       #grid-area
         #grid-container
@@ -176,7 +238,7 @@
             .slide{data: {slideIndex: 0, tech: 'genomics'}}
               .container
                 .column.left
-                  .title GENOMICS
+                  .title Genomics
                   .description
                     %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
                   .links
@@ -461,15 +523,26 @@
                       %li www.example.org
                 .column.right
                   .image
-  %section.article-section#section-two
-    %header.sec-header
-      .title
-        %h3.sec-title
-        %h4.sub-title
-      .number
-        %span
+%header.sec-header
+  .video-container
+    %video{autoplay: true, muted: true, loop: true}
+      %source{src: '../../videos/disrupt/highway-gradient.mp4', type: 'video/mp4'}
+      / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
+      / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+  .title-container
+    %h3 Designing at All Levels
+    %h4 Natural and Human Made Disasters
+%article#feature-article.disrupt
+  %section.article-section#section-four
     .section-content
-      %p
+      .content
+        .sub-sec
+          %h3 Something
+          %p This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc.
+        .sub-sec
+          %h3 Something
+          %p This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc. This is some content text etc.
+      .right-side
 
 .contributions
   .cont-wrapper

@@ -12,14 +12,14 @@ function animateEntrance(elements) {
   });
 }
 
-function unmute() {
-  $(this).children("video")[0].muted = false;
+function play() {
+  $(this).parent().find("video")[0].play();
 }
 
-function mute() {
-  $(this).children("video")[0].muted = true;
+function pause() {
+  $(this).parent().find("video")[0].pause();
 }
-
+ 
 // Square each panel, and determine their position
 // based on their sizes
 // Then layout the rest of the grid components
@@ -276,5 +276,5 @@ $(document).ready(function(event){
 
 
   // ===== Video Hover Controls =====
-  $('.video-container').hover(unmute, mute);
+  $('.sec-header .title-container').hover(unmute, mute);
 });
