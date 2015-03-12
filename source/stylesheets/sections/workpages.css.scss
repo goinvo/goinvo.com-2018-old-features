@@ -1,6 +1,5 @@
 @import "../base/core";
 
-
 	
 #article-header{
 	width: 100%;
@@ -1403,5 +1402,42 @@
 			width: 100%; height: 100%;
 			object-fit: cover;
 	  }
+	}
+}
+
+.micro-hs-form {
+	background: #232323;
+	width: auto;
+	margin: 0 auto;
+	padding: 30px 30px;
+	text-align: center;
+
+	h4 {
+		color: white;
+	}
+
+	.hs-button.primary.large {
+		margin-top: 0;
+		width: 25%;
+		min-width: 250px;
+	}
+}
+
+.hbspt-form {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+#hsForm_7ed4769c-d25a-4da4-b741-5c77055470ec {
+
+	fieldset {
+		max-width: none;
+	}
+
+	.hs-input {
+		border: 2px solid #a3a3a4;
+	}
+
+	.hs-button {
 	}
 }
