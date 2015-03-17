@@ -60,6 +60,12 @@ $( document ).ready(function() {
 				"title" : "Numera",
 				"url" : "/healthcare/numera/",
 				"image" : "numera.jpg",
+				"next-id" : "segterra"
+			},
+			"segterra" : {
+				"title" : "InsideTracker",
+				"url" : "/healthcare/segterra/",
+				"image" : "segterra.png",
 				"next-id" : "enterprise"
 			},
 			"healthcare" : {
