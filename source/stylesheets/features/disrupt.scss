@@ -338,6 +338,7 @@ $gridTop: 0;
 .video-container {
   width: 100%;
   overflow: hidden;
+  margin-bottom: -3px;
   video {
     width: 100%;
     height: auto;
@@ -364,8 +365,8 @@ $gridTop: 0;
 article.disrupt {
   font-family: "adobe-jenson-pro", serif;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: white;
+  margin: 0 auto 0 8%;
+  background-color: transparent;
 }
 
 header {
@@ -373,15 +374,14 @@ header {
   h3 {
     font-family: "proxima-nova", sans-serif;
     width: 100%;
-    text-align: center;
-    font-size: 2em;
-    font-size: 2.8vw;
+    font-size: 1.7em;
+    font-size: 2.0vw;
     letter-spacing: 0.3em;
-    padding-left: 0.3em;
+    padding-left: 0;
     color: $orange;
     text-transform: uppercase;
     @media only screen and (min-width: 1200px) {
-      font-size: 2em;
+      font-size: 1.7em;
     }
   }
   &.article-header {
@@ -418,7 +418,7 @@ header {
         color: white;
         text-align: center;
         h3 {
-          margin: 1% 0%;
+          margin: 0;
           width: 100%;
           font-size: 3em;
           font-size: 4vw;
@@ -496,7 +496,7 @@ article {
 }
 
 .section-content {
-  margin: 1% 1% 0% 10%;
+  margin: 1% 0;
   width: 89%;
   &.grid {
     margin: 0;
@@ -537,7 +537,7 @@ article {
       }
     }
     p {
-      margin: 0;
+      margin: 0 0 2em 0;
     }
   }
   .right-side {
@@ -571,6 +571,37 @@ article {
 
 
 /* ===== Footer ===== */
+
+#bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 50000;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  .text-container {
+    float: right;
+    margin-right: 20px;
+    .next-part {
+      text-transform: uppercase;
+    }
+    .title {
+      text-transform: uppercase;
+    }
+  }
+  .arrow {
+    float: right;
+    width: 30px;
+    height: 50px;
+    background-color: blue;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 .contributions {
   width: 100%;
