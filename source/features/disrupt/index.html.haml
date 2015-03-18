@@ -4,34 +4,12 @@
   = stylesheet_link_tag "features/disrupt"
   = stylesheet_link_tag "slick"
   = stylesheet_link_tag "feature-elements"
+  :javascript
+    var page = 0;
   = javascript_include_tag "features/disrupt.js"
   = javascript_include_tag "slick/slick"
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "vide"
   = javascript_include_tag "jquery.colorscroll.min.js"
-  :javascript
-    $(document).ready(function(event){
-      $('.container.content').colorScroll({
-        colors: [
-          {
-            color: '#1c97aa',
-            position: '0%'
-          },
-          {
-            color: '#ffffff',
-            position: '20%'
-          },
-          {
-            color: '#ffffff',
-            position: '80%'
-          },
-          {
-            color: '#e88c35',
-            position: '100%'
-          }
-        ]
-      });
-    });
   :javascript
     try{Typekit.load();}catch(e){}
 - content_for(:worlds_end) do
