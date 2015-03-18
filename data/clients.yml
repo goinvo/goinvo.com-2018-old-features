@@ -54,10 +54,10 @@
   primary_color: "#97BE8C"
   logo: #require
 
-- name: "Infobionic"
-  primary_color: #require
-  logo: #require
-  
+- name: "InfoBionic"
+  primary_color: "#00aaee"
+  logo: infobionic.jpg
+
 - name: "Inspired EHRs"
   primary_color: "#000000"
   logo: "hgraph.jpg"
