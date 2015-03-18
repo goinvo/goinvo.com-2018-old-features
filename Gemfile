@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'colorize','0.7.2'
+gem 'colorize','0.7.4'
 gem "middleman"
 gem "middleman-livereload"
 gem "middleman-smusher"
