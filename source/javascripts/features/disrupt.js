@@ -204,7 +204,7 @@ $(document).ready(function(event){
       },
       {
         color: '#ffffff',
-        position: secondVideoTop - (windowHeight - (windowHeight*0.05))
+        position: secondVideoTop - (windowHeight + (windowHeight*0.05))
       },
       {
         color: colors[page].bottom,
