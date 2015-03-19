@@ -56,7 +56,7 @@
 
 - name: "InfoBionic"
   primary_color: "#00aaee"
-  logo: infobionic.jpg
+  logo: "infobionic.jpg"
 
 - name: "Inspired EHRs"
   primary_color: "#000000"
