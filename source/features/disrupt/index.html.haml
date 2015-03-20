@@ -6,10 +6,9 @@
   = stylesheet_link_tag "feature-elements"
   :javascript
     var page = 0;
-  = javascript_include_tag "features/disrupt.js"
-  = javascript_include_tag "slick/slick"
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
   = javascript_include_tag "jquery.colorscroll.min.js"
+  = javascript_include_tag "features/disrupt.js"
   :javascript
     try{Typekit.load();}catch(e){}
 - content_for(:worlds_end) do
@@ -42,7 +41,7 @@
     %li
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.article-header
-  .header-contents#article-header
+  .header-contents#article-header#top
     .video-container#header-video
       %video{autoplay: true, muted: true, loop: true}
         %source{src: '../../videos/disrupt/article-header.mp4', type: 'video/mp4'}
@@ -67,16 +66,17 @@
             %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
             %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}
 %article#feature-article.disrupt
-  %section.article-section#description
+  %section.article-section
     %header
       %h3 Emerging Tech & the Future of Design
     .section-content
       .content
-        %p Over the next 30 years, there is little that humans can dream that we won't be able to do — from hacking our DNA, to embedding computers in our bodies, to printing replacement organs. The fantastic visions of our science fiction today will become the reality of tomorrow,as we redefine what it means to be human. This period of technological advancement will alter the way we live our lives in nearly every way — much like the Second Industrial Revolution in America established the modern age at the turn of the 20th century, when inventions from electric power to the automobile first became prominent and experienced widespread adoption.
-        %p Today, emerging technologies from robotics to synthetic biology to the Internet of Things are already opening up new possibilities for extending our reach, enabling us to become seemingly superhuman. As one example of this, the FORTIS exoskeleton from Lockheed Martin gives its user tremendous strength — allowing an operator to lift and use heavy tools as if the objects were weightless by transferring the weight loads through the exoskeleton to the ground. E. chromi — the Grand Prize winner at the 2009 International Genetically Engineered Machine Competition (iGEM) by Alexandra Daisy Ginsberg and her collaborators — advances the existing relationship we have with our microbiome, the microorganisms living on and inside us. The genetically altered e. chromi bacteria can serve a early warning system for disease, changing the color of human waste to indicate the presence of a dangerous toxin or pathogen. For instance, if drinking water were tainted, fecal matter could be colored a brilliant red. In the future, a variety of day-glo colors might indicate a dangerous array of contaminants from malaria to the swine flu. Perhaps not what we all had in mind for a super power, but amazing nonetheless.
-        %p What does it mean to create products and services that have the potential to disrupt our society and our economy? We will need to rethink and remake our interactions, our infrastructure, and maybe even our institutions. As we face a future where what it means to be human could be inexorably changed, we desperately need experience design to help frame our interactions with emerging technologies that are already racing ahead of our ability to process and manage them on an emotional, ethical, and societal level. Whether we're struggling with fear and loathing in reaction to genetically altered foods, the moral issues of changing a child's traits to suit a parent's preferences, the ethics guiding battlefield robots, or the societal implications of a 150-year extended lifetime, it's abundantly clear that the future of experience design will be to envision humanity's relationship to technology and each other. 
-        %p The coming wave of technological change will make the tumult and disruption of the past decade’s digital and mobile revolutions look like a minor blip by comparison. As we look beyond the screen to the rich world of interactions and experiences that need to be designed, we need to define new areas of practice. Experience design will be a critical to tie the technology to human use and benefit. For those asking "How can we do this?" we must counter, "Why and for whose benefit?". 
-%header.sec-header
+        .sub-sec
+          %p Over the next 30 years, there is little that humans can dream that we won't be able to do — from hacking our DNA, to embedding computers in our bodies, to printing replacement organs. The fantastic visions of our science fiction today will become the reality of tomorrow,as we redefine what it means to be human. This period of technological advancement will alter the way we live our lives in nearly every way — much like the Second Industrial Revolution in America established the modern age at the turn of the 20th century, when inventions from electric power to the automobile first became prominent and experienced widespread adoption.
+          %p Today, emerging technologies from robotics to synthetic biology to the Internet of Things are already opening up new possibilities for extending our reach, enabling us to become seemingly superhuman. As one example of this, the FORTIS exoskeleton from Lockheed Martin gives its user tremendous strength — allowing an operator to lift and use heavy tools as if the objects were weightless by transferring the weight loads through the exoskeleton to the ground. E. chromi — the Grand Prize winner at the 2009 International Genetically Engineered Machine Competition (iGEM) by Alexandra Daisy Ginsberg and her collaborators — advances the existing relationship we have with our microbiome, the microorganisms living on and inside us. The genetically altered e. chromi bacteria can serve a early warning system for disease, changing the color of human waste to indicate the presence of a dangerous toxin or pathogen. For instance, if drinking water were tainted, fecal matter could be colored a brilliant red. In the future, a variety of day-glo colors might indicate a dangerous array of contaminants from malaria to the swine flu. Perhaps not what we all had in mind for a super power, but amazing nonetheless.
+          %p What does it mean to create products and services that have the potential to disrupt our society and our economy? We will need to rethink and remake our interactions, our infrastructure, and maybe even our institutions. As we face a future where what it means to be human could be inexorably changed, we desperately need experience design to help frame our interactions with emerging technologies that are already racing ahead of our ability to process and manage them on an emotional, ethical, and societal level. Whether we're struggling with fear and loathing in reaction to genetically altered foods, the moral issues of changing a child's traits to suit a parent's preferences, the ethics guiding battlefield robots, or the societal implications of a 150-year extended lifetime, it's abundantly clear that the future of experience design will be to envision humanity's relationship to technology and each other. 
+          %p The coming wave of technological change will make the tumult and disruption of the past decade’s digital and mobile revolutions look like a minor blip by comparison. As we look beyond the screen to the rich world of interactions and experiences that need to be designed, we need to define new areas of practice. Experience design will be a critical to tie the technology to human use and benefit. For those asking "How can we do this?" we must counter, "Why and for whose benefit?". 
+%header.sec-header#bottom
   .video-container
     %video{autoplay: true, muted: true, loop: true}
       %source{src: '../../videos/disrupt/globalwarming-gradient.mp4', type: 'video/mp4'}
@@ -87,4 +87,4 @@
     =link_to "", "/features/disrupt/part-2.html"
   .text-container
     .next-part next part
-    .title fukushima and fragility
+    .title from horse to horsepower
