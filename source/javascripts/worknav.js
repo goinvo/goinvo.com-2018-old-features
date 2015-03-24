@@ -66,12 +66,6 @@ $( document ).ready(function() {
 				"title" : "InsideTracker",
 				"url" : "/healthcare/segterra/",
 				"image" : "segterra.png",
-				"next-id" : "infobionic"
-			},
-			"infobionic" : {
-				"title" : "InfoBionic",
-				"url" : "/healthcare/infobionic/",
-				"image" : "infobionic.jpg",
 				"next-id" : "enterprise"
 			},
 			"healthcare" : {
