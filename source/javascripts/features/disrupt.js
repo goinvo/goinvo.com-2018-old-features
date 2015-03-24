@@ -80,12 +80,12 @@ $(document).ready(function(event){
 
   // Color scroll fading
   var colors = [
-    {top: '#1c97aa', bottom: '#e88c35'},
-    {top: '#1c97aa', bottom: '#e88c35'},
-    {top: '#1c97aa', bottom: '#e88c35'},
-    {top: '#1c97aa', bottom: '#e88c35'},
-    {top: '#1c97aa', bottom: '#e88c35'},
-    {top: '#1c97aa', bottom: '#e88c35'}
+    {top: '#0282C1', bottom: '#E68B35'},
+    {top: '#E68B35', bottom: '#DD2E64'},
+    {top: '#DD2E64', bottom: '#82659B'},
+    {top: '#82659B', bottom: '#0282C1'},
+    {top: '#0282C1', bottom: '#0396AA'},
+    {top: '#0396AA', bottom: '#82659B'}
   ];
 
   $('.container.content').colorScroll({
@@ -108,6 +108,8 @@ $(document).ready(function(event){
       }
     ]
   });
+
+  $('#bottom-nav .title').css("color", colors[page].bottom);
 
   // ===== Video Hover Controls =====
   // $('.sec-header .title-container').hover(pause, play);

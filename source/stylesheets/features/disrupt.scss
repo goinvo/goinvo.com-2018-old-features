@@ -6,12 +6,13 @@ $offwhite: #F2F2F2;
 $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
+$lightgray: #93969a;
 
-$orange: #d98340;
-$cyan: #2678ad;
-$magenta: #ca285a;
-$purple: #795d88;
-$teal: #238e9a;
+$orange: #E68B35;
+$blue: #0282C1;
+$pink: #DD2E64;
+$purple: #82659B;
+$teal: #0396AA;
 
 $animateSpeed: 500ms;
 $gridWidth: 100%;
@@ -365,7 +366,7 @@ $gridTop: 0;
 article.disrupt {
   font-family: "adobe-jenson-pro", serif;
   max-width: 1200px;
-  margin: 0 auto 0 8%;
+  margin: 0 auto;
   background-color: transparent;
 }
 
@@ -387,7 +388,7 @@ header {
   &.article-header {
     .header-contents {
       position: relative;
-      padding-top: 7.2em;
+      padding-top: 7.1em;
       .title-container {
         position: absolute;
         width: 100%;
@@ -446,31 +447,23 @@ article {
       margin: 1.5em 0 3em 0;
     }
     &#section-one {
-      .sub-sec {
-        h3 {
-          color: $cyan;
-        }
-      }
-    }
-    &#section-two {
-      .sub-sec {
-        h3 {
-          color: $magenta;
-        }
+      h3 {
+        color: $blue;
       }
     }
     &#section-three {
-      .sub-sec {
-        h3 {
-          color: $purple;
-        }
+      h3 {
+        color: $pink;
       }
     }
-    &#section-four {
-      .sub-sec {
-        h3 {
-          color: $teal;
-        }
+    &#section-five {
+      h3 {
+        color: $teal;
+      }
+    }
+    &#section-six {
+      h3 {
+        color: $blue;
       }
     }
   }
@@ -497,7 +490,7 @@ article {
 
 .section-content {
   margin: 1% 0;
-  width: 89%;
+  width: 100%;
   &.grid {
     margin: 0 1% 0 0;
     width: 90%; // this shit needs to change
@@ -514,8 +507,8 @@ article {
   .content {
     display: inline-block;
     vertical-align: top;
-    width: 73%;
-    margin: 0 2% 0 0;
+    width: 90%;
+    margin: 0 5%;
     .sub-sec {
       margin: 2em 0;
       &:last-of-type {
@@ -537,7 +530,31 @@ article {
       }
     }
     p {
-      margin: 0 0 2em 0;
+      margin: 0 16% 2em 0;
+      &.no-margin {
+        margin: 0 16% 0 0;
+      }
+    }
+    .images {
+      &.center {
+        width: 100%;
+        img {
+          width: 80%;
+        }
+      }
+      &.right {
+        float: right;
+        width: 40%;
+        height: auto;
+        margin-left: 2%;
+      }
+      .caption {
+        text-transform: uppercase;
+        font-family: "proxima-nova", sans-serif;
+        font-size: 0.9em;
+        letter-spacing: 0.4em;
+        color: $lightgray;
+      }
     }
   }
   .right-side {
@@ -576,7 +593,7 @@ article {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   z-index: 50000;
   background-color: white;
   opacity: 0;
@@ -584,17 +601,25 @@ article {
   .text-container {
     float: right;
     margin-right: 20px;
+    font-family: "proxima-nova", sans-serif;
+    text-transform: uppercase;
+    padding-top: 0.9em;
     .next-part {
-      text-transform: uppercase;
+      font-size: 0.8em;
+      text-align: right;
+      letter-spacing: 0.3em;
+      color: $lightgray;
+      padding-right: 0.5em;
     }
     .title {
-      text-transform: uppercase;
+      font-size: 1.3em;
+      letter-spacing: 0.5em;
     }
   }
   .arrow {
     float: right;
     width: 30px;
-    height: 50px;
+    height: 60px;
     background-color: blue;
     a {
       width: 100%;
