@@ -263,12 +263,11 @@ DEPENDENCIES
   colorize (= 0.7.4)
   compass
   haml
-  listen (= 2.7.11)
+  listen
   middleman
   middleman-autoprefixer
   middleman-livereload
   middleman-s3_redirect
   middleman-s3_sync
   middleman-smusher
-  sass
   wdm (~> 0.1.0)

@@ -31,7 +31,7 @@
     %li
       =link_to "1. Emerging Tech and the Future of Design", "/features/disrupt/index.html"
     %li
-      =link_to "2. From Horse to HorsePower", "/features/disrupt/part-2.html"
+      =link_to "2. From Horse to Horsepower", "/features/disrupt/part-2.html"
     %li
       =link_to "3. Considering the Coming Disruption", "/features/disrupt/part-3.html"
     %li
@@ -58,9 +58,20 @@
         .sub-sec
           %h3 Living
           %p The places in which we live, work, and play, will be created, connected, and controlled in new ways — from the architecture of buildings to the composition of public and private spaces, to the infrastructure that binds it all together. Our relationship with these places will change as well. Already, our cities are being made “smarter” by the connected sensors of the Internet of Things (IoT). These systems can help save precious resources by reorienting our day-to-day activities through the optimization and coordination of elements like traffic flow — reducing congestion, saving commuters time and fuel, and helping to limit pollution — and municipal services such as police dispatch, snow removal, and public works, to adjust to evolving patterns. The IoT also has the potential to put us into more substantial contact with our surroundings, whether it be at work, in transit, or at home, by adding a digital layer to our physical infrastructure. One beautiful example of this increased awareness can be seen in the Light Reeds project, created by New York design firm Pensa, which provide viewers with a greater connection to the water and waterways that flow around and through our cities. Powered by an underwater turbine, the Light Reeds themselves rely on the motion of the water for power; their glow is dim or bright based on the degree of activity, while their color can indicate water quality.
-          %p Or consider the potential of our parks and open spaces to be lit by light-emitting trees with a bioluminescent coating instead of electric lights, illustrated beautifully in this visualization by designers from Studio Roosegaarde, as seen on HYPERLINK "http:// www.dezeen.com/ 2014/03/24/ movie-sxsw -daan-roosegarde -glow- in- dark- trees/" Dezeen.com. This might seem far fetched, but glowing plants such as these are already being created through synthetic biology.
-          // Bioluminsecent images
-          %p Buildings of the future may be partially or entirely 3D printed. Today, additive fabrication is already changing architecture and construction. In April 2014, HYPERLINK "http://www.bbc.com/news /blogs-news-from -elsewhere -27156775" WinSun, a Chinese engineering company, reported that it could construct 10 single-story homes in a day by using a specialized 3D printing technology that creates the main structure and walls using an inexpensive combination of concrete and construction waste materials.
+          %p.no-margin Or consider the potential of our parks and open spaces to be lit by light-emitting trees with a bioluminescent coating instead of electric lights, illustrated beautifully in this visualization by designers from Studio Roosegaarde, as seen on #{link_to "Dezeen.com", "http://www.dezeen.com/2014/03/24/movie-sxsw-daan-roosegarde-glow-in-dark-trees", target: "_blank"}.
+          .images.right
+            .image
+              = image_tag "../../images/features/disrupt/light-reed-1.png"
+            .image
+              = image_tag "../../images/features/disrupt/light-reed-2.png"
+              .caption Light Reeds by Pensa
+            .image
+              = image_tag "../../images/features/disrupt/bio-tree-1.png"
+            .image
+              = image_tag "../../images/features/disrupt/bio-tree-2.png"
+              .caption Bioluminescent Trees by Studio Roosegaarde
+          %p This might seem far fetched, but glowing plants such as these are already being created through synthetic biology.
+          %p Buildings of the future may be partially or entirely 3D printed. Today, additive fabrication is already changing architecture and construction. In April 2014, #{link_to "WinSun", "http://www.bbc.com/news/blogs-news-from-elsewhere-27156775", target: "_blank"}, a Chinese engineering company, reported that it could construct 10 single-story homes in a day by using a specialized 3D printing technology that creates the main structure and walls using an inexpensive combination of concrete and construction waste materials.
         .sub-sec
           %h3 Eating
           %p There’s nothing more demonstrative of our connection to the greater world around us than the food we put inside our bodies. Genetically modified organisms (GMO) are prevalent throughout the United States. Some studies suggest that up to 80% of the US food supply has genetically modified ingredients (Link to source). Foods can be genetically altered for a variety of reasons — to resist pesticides, enhance shelf life, and even improve appearance or introduce novel variants.
@@ -77,7 +88,7 @@
       / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
       / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
 #bottom-nav
-  .arrow
+  .arrow#three
     =link_to "", "/features/disrupt/part-4.html"
   .text-container
     .next-part next part

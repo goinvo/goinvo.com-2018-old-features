@@ -96,15 +96,15 @@ $(document).ready(function(event){
       },
       {
         color: '#ffffff',
-        position: firstVideoBottom + (firstVideoBottom*0.2)
+        position: firstVideoBottom
       },
       {
         color: '#ffffff',
-        position: secondVideoTop - (windowHeight + (windowHeight*0.05))
+        position: secondVideoTop - windowHeight
       },
       {
         color: colors[page].bottom,
-        position: documentHeight - windowHeight
+        position: documentHeight - windowHeight - (secondVideo.height()/2)
       }
     ]
   });

@@ -306,8 +306,8 @@ $gridTop: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: white;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background-color: rgba(37,141,153,0.95);
+  font-family: "adobe-jenson-pro", serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   box-shadow: 0px -2px 7px;
   padding: 0px 26px;
@@ -318,15 +318,13 @@ $gridTop: 0;
       white-space: nowrap;
       padding: 8px;
       padding-right: 20px;
-      font-size: .8em;
-
+      font-size: 1em;
       a {
-        color: black;
+        color: rgba(255,255,255,0.8);
         transition: all 250ms ease-in-out;
         cursor: pointer;
-        text-transform: uppercase;
         &:hover {
-          color: gray;
+          color: white;
         }
       }
     }
@@ -338,6 +336,7 @@ $gridTop: 0;
 
 .video-container {
   width: 100%;
+  height: auto;
   overflow: hidden;
   margin-bottom: -3px;
   video {
@@ -346,21 +345,10 @@ $gridTop: 0;
   }
 }
 
-
 /* ===== Article ===== */
 
 .container.content {
-    background-color: white;
-    .navigation {
-      background-color: rgba(37,141,153,0.95);
-      ol {
-        li {
-          a {
-            color: white;
-          }
-        }
-      }
-    }
+  background-color: white;
 }
 
 article.disrupt {
@@ -388,7 +376,7 @@ header {
   &.article-header {
     .header-contents {
       position: relative;
-      padding-top: 7.1em;
+      margin-top: 7.1em;
       .title-container {
         position: absolute;
         width: 100%;
@@ -411,6 +399,9 @@ header {
   &.sec-header {
       position: relative;
       font-family: "proxima-nova", sans-serif;
+      &#top {
+        margin-top: 7.1em;
+      }
       .title-container {
         position: absolute;
         left: 0;
@@ -446,25 +437,28 @@ article {
     @media only screen and (max-width: 800px) {
       margin: 1.5em 0 3em 0;
     }
-    &#section-one {
+    &#section-1 {
       h3 {
         color: $blue;
       }
     }
-    &#section-three {
+    &#section-3 {
       h3 {
         color: $pink;
       }
     }
-    &#section-five {
+    &#section-5 {
       h3 {
         color: $teal;
       }
     }
-    &#section-six {
+    &#section-6 {
       h3 {
         color: $blue;
       }
+    }
+    header {
+      margin-left: 5%;
     }
   }
 }
@@ -548,12 +542,16 @@ article {
         height: auto;
         margin-left: 2%;
       }
-      .caption {
-        text-transform: uppercase;
-        font-family: "proxima-nova", sans-serif;
-        font-size: 0.9em;
-        letter-spacing: 0.4em;
-        color: $lightgray;
+      .image {
+        margin-bottom: 1.5em;
+        .caption {
+          text-transform: uppercase;
+          font-family: "proxima-nova", sans-serif;
+          font-size: 0.9em;
+          letter-spacing: 0.4em;
+          color: $lightgray;
+          margin: 0.4em;
+        }
       }
     }
   }
@@ -600,7 +598,6 @@ article {
   pointer-events: none;
   .text-container {
     float: right;
-    margin-right: 20px;
     font-family: "proxima-nova", sans-serif;
     text-transform: uppercase;
     padding-top: 0.9em;
@@ -618,9 +615,25 @@ article {
   }
   .arrow {
     float: right;
-    width: 30px;
+    width: 60px;
     height: 60px;
-    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &#one {
+      background-image: image-url("../../images/features/disrupt/buttons/next-orange.png");
+    }
+    &#two {
+      background-image: image-url("../../images/features/disrupt/buttons/next-pink.png");
+    }
+    &#three {
+      background-image: image-url("../../images/features/disrupt/buttons/next-purple.png");
+    }
+    &#four {
+      background-image: image-url("../../images/features/disrupt/buttons/next-blue.png");
+    }
+    &#five {
+      background-image: image-url("../../images/features/disrupt/buttons/next-teal.png");
+    }
     a {
       width: 100%;
       height: 100%;
