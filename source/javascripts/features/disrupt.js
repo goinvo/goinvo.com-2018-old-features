@@ -20,6 +20,9 @@ $(document).ready(function(event){
   var secondVideoTop = secondVideo.offset().top;
 
   firstVideo.css("margin-top", articleNav.height());
+  var firstTitle = firstVideo.find('h1'); // H1 only on first page of article
+  firstTitle.hide();
+  firstTitle.delay(2000).fadeIn(12000);
 
   // ===== Initialization =====
   $("video").each(function() {
