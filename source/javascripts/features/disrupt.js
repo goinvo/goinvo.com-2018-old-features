@@ -11,6 +11,7 @@ $(document).ready(function(event){
 
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
+  var articleNav = $('#article-nav');
 
   // Vars for scroll fades
   var firstVideo = $('#top');
@@ -18,9 +19,17 @@ $(document).ready(function(event){
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
 
+  firstVideo.css("margin-top", articleNav.height());
+
   // ===== Initialization =====
   $("video").each(function() {
     this.volume = 0.5;
+  });
+
+  $(window).load(function() {
+    firstVideoBottom = firstVideo.offset().top + firstVideo.height();
+    secondVideoTop = secondVideo.offset().top;
+    documentHeight = $(document).height();
   });
 
   // ===== Resize event =====
@@ -30,17 +39,21 @@ $(document).ready(function(event){
     documentHeight = $(document).height();
     firstVideoBottom = firstVideo.offset().top + firstVideo.height();
     secondVideoTop = secondVideo.offset().top;
+    firstVideo.css("margin-top", articleNav.height());
   });
 
   // ===== Scroll event =====
   $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
     var windowBottom = scrollTop + windowHeight;
+    documentHeight = $(document).height();
+    firstVideoBottom = firstVideo.offset().top + firstVideo.height();
+    secondVideoTop = secondVideo.offset().top;
     var firstVideoCalc = ((firstVideoBottom - scrollTop) / firstVideoBottom);
     var secondVideoCalc = ((windowBottom-secondVideoTop) / (documentHeight - secondVideoTop));
 
     //Bottom nav animation
-    if (scrollTop + windowHeight > documentHeight - 50) {
+    if (windowBottom > documentHeight - 50) {
       if (bottomNavState === 'closed') {
         $('#bottom-nav').animate({
           opacity: 1,
@@ -55,7 +68,7 @@ $(document).ready(function(event){
       }
     }
 
-    if (scrollTop + windowHeight < documentHeight - 100) {
+    if (windowBottom < documentHeight - 100) {
       $('#bottom-nav').animate({
         opacity: 0,
         bottom: "0px"
@@ -69,11 +82,11 @@ $(document).ready(function(event){
     }
 
     // Fade videos
-    if ( firstVideoCalc >= 0 ) {
+    if ( firstVideoCalc >= 0.2 ) {
       firstVideo.css({'opacity': firstVideoCalc });
     }
 
-    if ( secondVideoCalc >= 0 ) {
+    if ( secondVideoCalc >= 0.2 ) {
       secondVideo.css({'opacity': secondVideoCalc });
     }
   });
@@ -100,15 +113,16 @@ $(document).ready(function(event){
       },
       {
         color: '#ffffff',
-        position: secondVideoTop - windowHeight
+        position: secondVideoTop - windowHeight - (secondVideo.height() / 2)
       },
       {
         color: colors[page].bottom,
-        position: documentHeight - windowHeight - (secondVideo.height()/2)
+        position: documentHeight - windowHeight - secondVideo.height()
       }
     ]
   });
 
+  // Set the title color of the "next part" nav
   $('#bottom-nav .title').css("color", colors[page].bottom);
 
   // ===== Video Hover Controls =====
