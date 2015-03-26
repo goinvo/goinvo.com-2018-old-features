@@ -590,32 +590,39 @@ article {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 70px;
   z-index: 50000;
   background-color: white;
   opacity: 0;
   pointer-events: none;
+  .link-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
   .text-container {
     float: right;
     font-family: "proxima-nova", sans-serif;
     text-transform: uppercase;
-    padding-top: 0.9em;
+    padding-top: 1.1em;
     .next-part {
       font-size: 0.8em;
+      letter-spacing: 0.6em;
+      padding-right: 0.8em;
       text-align: right;
-      letter-spacing: 0.3em;
       color: $lightgray;
-      padding-right: 0.5em;
     }
     .title {
       font-size: 1.3em;
-      letter-spacing: 0.5em;
+      letter-spacing: 0.8em;
     }
   }
   .arrow {
     float: right;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-repeat: no-repeat;
     background-size: contain;
     &#one {
@@ -633,9 +640,33 @@ article {
     &#five {
       background-image: image-url("../../images/features/disrupt/buttons/next-teal.png");
     }
-    a {
-      width: 100%;
-      height: 100%;
+  }
+  @media only screen and (max-width: 850px) {
+    .text-container {
+      padding-top: 1.4em;
+      .next-part {
+        font-size: 0.5em;
+        letter-spacing: 0.3em;
+        padding-right: 0.5em;
+      }
+      .title {
+        font-size: 1em;
+        letter-spacing: 0.5em;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .text-container {
+      padding-top: 1.7em;
+      .next-part {
+        font-size: 0.2em;
+        letter-spacing: 0.1em;
+        padding-right: 0.2em;
+      }
+      .title {
+        font-size: 0.7em;
+        letter-spacing: 0.3em;
+      }
     }
   }
 }

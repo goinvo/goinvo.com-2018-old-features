@@ -7,8 +7,6 @@
 // }
 
 $(document).ready(function(event){
-  var bottomNavState = 'closed';
-
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
   var articleNav = $('#article-nav');
@@ -18,6 +16,18 @@ $(document).ready(function(event){
   var secondVideo = $('#bottom');
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
+
+  // Color scroll fading
+  var colors = [
+    {top: '#0282C1', bottom: '#E68B35'},
+    {top: '#E68B35', bottom: '#DD2E64'},
+    {top: '#DD2E64', bottom: '#82659B'},
+    {top: '#82659B', bottom: '#0282C1'},
+    {top: '#0282C1', bottom: '#0396AA'},
+    {top: '#0396AA', bottom: '#82659B'}
+  ];
+
+  $('.container.content').css("background-color", colors[page].top);
 
   firstVideo.css("margin-top", articleNav.height());
   var firstTitle = firstVideo.find('h1'); // H1 only on first page of article
@@ -29,20 +39,53 @@ $(document).ready(function(event){
     this.volume = 0.5;
   });
 
-  $(window).load(function() {
-    firstVideoBottom = firstVideo.offset().top + firstVideo.height();
-    secondVideoTop = secondVideo.offset().top;
-    documentHeight = $(document).height();
-  });
+  var vid1 = document.getElementById('top').getElementsByTagName('video')[0];
+  var vid2 = document.getElementById('bottom').getElementsByTagName('video')[0];
+
+  (function videosLoaded() {
+    if (vid1.readyState === 4 && vid2.readyState === 4) {
+      firstVideoBottom = firstVideo.offset().top + firstVideo.height();
+      secondVideoTop = secondVideo.offset().top;
+      documentHeight = $(document).height();
+
+      $('.container.content').colorScroll({
+        colors: [
+          {
+            color: colors[page].top,
+            position: '0'
+          },
+          {
+            color: '#ffffff',
+            position: firstVideoBottom
+          },
+          {
+            color: '#ffffff',
+            position: secondVideoTop - windowHeight
+          },
+          {
+            color: colors[page].bottom,
+            position: documentHeight - windowHeight
+          }
+        ]
+      });
+    } else {
+      setTimeout(videosLoaded, 100);
+    }
+  }());
 
   // ===== Resize event =====
   $(window).resize(function() {
+    if (articleNav.is(":visible")) {
+      firstVideo.css("margin-top", articleNav.height());
+    } else {
+      firstVideo.css("margin-top", 0);
+    }
+
     // Recalc for scroll fades
     windowHeight = $(window).height();
     documentHeight = $(document).height();
     firstVideoBottom = firstVideo.offset().top + firstVideo.height();
     secondVideoTop = secondVideo.offset().top;
-    firstVideo.css("margin-top", articleNav.height());
   });
 
   // ===== Scroll event =====
@@ -57,72 +100,38 @@ $(document).ready(function(event){
 
     //Bottom nav animation
     if (windowBottom > documentHeight - 50) {
-      if (bottomNavState === 'closed') {
-        $('#bottom-nav').animate({
-          opacity: 1,
-          bottom: "50px"
-        }, {
-          duration: 500,
-          complete: function() {
-            bottomNavState = 'open';
-            $(this).css('pointer-events', 'auto');
-          }
-        });
-      }
-    }
-
-    if (windowBottom < documentHeight - 100) {
       $('#bottom-nav').animate({
-        opacity: 0,
-        bottom: "0px"
+        opacity: 1,
+        bottom: "50px"
       }, {
-        duration: 0,
+        duration: 500,
         complete: function() {
-          bottomNavState = 'closed';
-          $(this).css('pointer-events', 'none');
+          $(this).css('pointer-events', 'auto');
         }
       });
     }
 
+    // if (windowBottom < documentHeight - 100) {
+    //   $('#bottom-nav').animate({
+    //     opacity: 0,
+    //     bottom: "0px"
+    //   }, {
+    //     duration: 0,
+    //     complete: function() {
+    //       bottomNavState = 'closed';
+    //       $(this).css('pointer-events', 'none');
+    //     }
+    //   });
+    // }
+
     // Fade videos
-    if ( firstVideoCalc >= 0.2 ) {
+    if ( firstVideoCalc >= 0 ) {
       firstVideo.css({'opacity': firstVideoCalc });
     }
 
-    if ( secondVideoCalc >= 0.2 ) {
+    if ( secondVideoCalc >= 0 ) {
       secondVideo.css({'opacity': secondVideoCalc });
     }
-  });
-
-  // Color scroll fading
-  var colors = [
-    {top: '#0282C1', bottom: '#E68B35'},
-    {top: '#E68B35', bottom: '#DD2E64'},
-    {top: '#DD2E64', bottom: '#82659B'},
-    {top: '#82659B', bottom: '#0282C1'},
-    {top: '#0282C1', bottom: '#0396AA'},
-    {top: '#0396AA', bottom: '#82659B'}
-  ];
-
-  $('.container.content').colorScroll({
-    colors: [
-      {
-        color: colors[page].top,
-        position: '0'
-      },
-      {
-        color: '#ffffff',
-        position: firstVideoBottom
-      },
-      {
-        color: '#ffffff',
-        position: secondVideoTop - windowHeight - (secondVideo.height() / 2)
-      },
-      {
-        color: colors[page].bottom,
-        position: documentHeight - windowHeight - secondVideo.height()
-      }
-    ]
   });
 
   // Set the title color of the "next part" nav
