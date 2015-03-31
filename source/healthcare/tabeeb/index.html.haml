@@ -1,44 +1,43 @@
 - content_for(:title) do
-	= "Tabeeb..."
+	= "Tabeeb: Rural clinics meet crowdsourced diagnostics."
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "Tabeeb..."}/
-	%meta{:name => "keywords", :content => "tabeeb, healthcare"}/
+	%meta{:name => "description", :content => "Tabeeb: Bringing global medical specialists to rural communities with the flick of a finger."}/
+	%meta{:name => "keywords", :content => "tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user eperience"}/
 - client = client_for_name("Tabeeb")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Tabeeb
+		%h1.client{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Tabeeb:
+		%h5.client.title-with-sub{style: "color: #{client.primary_color}; font-weight: 100;"} Rural clinics meet crowdsourced diagnostics
+
 		%h6.subheader Results
 
-		%p Mantras for patients, their clinicians, and the new digital healthcare system to make wonderful change.
+		%p Bringing global medical specialists to rural communities with the flick of a finger.
 
-		%p.quote We need to prescribe these simple, beautiful recipes for health to our patients and our loved ones.
-		%p.caption.no-bottom-margin Roni Zeiger, M.D., former Chief Health Strategist at Google, co-founder of Smart Patients
+		%h6.subheader Details
 
-		%p.quote People are thirsty for health advice. They read, search online, and wonder: Am I doing OK? Am I doing the right things for my health? What if, when someone asks the universe (read: the internet), for health advice, they got back a quick tip, backed by evidence?
-		%p.caption Susannah Fox, Digital Health Strategist
+		%p Our Design Acceleration&reg; consulting turned Tabeeb's vision into an innovative and scalable product
 
-		%h6.subheader Recognition
-
-		%p.no-bottom-margin <a href="http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss">If A Picture's Worth 1,000 Words, Could It Help You Floss?</a>
-		%p.caption Nancy Shute, NPR.org
-
-		%p.no-bottom-margin <a href="http://psqh.com/news-health-axioms-turning-advice-into-lifestyle">Health Axioms: Turning Advice into Lifestyle</a>
-		%p.caption Patient Safety &amp; Quality Healthcare
+		%ul
+			%li Created concepts and prototypes, tested them with clinicians
+			%li Architected a reward and ranking system for participating doctors
+			%li Provided Design Swarms&reg; in support of Tabeeb’s internal product development
+			%li Created a multi-year vision and evolutionary plan for the service
+			%li Helped Tabeeb go from nothing to their v1 release in eight months
 
 		%h6.subheader Practice Areas
-		%p.small-bottom-margin Consumer Health, Open Source
+		%p.small-bottom-margin Healthcare, Cross-Platform
 
 		%h6.subheader Project Type
-		%p.small-bottom-margin Research, Storytelling, Illustration, Product Design
+		%p.small-bottom-margin Design Acceleration, Strategic Consulting, Design Direction
 
 		%h6.subheader Process
-		%p.small-bottom-margin Learning, Envision, Blueprint, Craft, Build
+		%p.small-bottom-margin Learn, Envision, Blueprint, Craft, Prototype
 
 		%h6.subheader Price
-		%p $25k &ndash; $50k
+		%p $100k &ndash; $200k
 
 		.similar-project-container
 			%h6.subheader Have a similar project?
@@ -46,48 +45,21 @@
 
 	.projectDetails
 		%div
-			%img{alt: "Health Axioms", src: "../../images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"}
+			%img{alt: "Health Axioms", src: "../../images/clients/tabeeb/tabeeb-open-case-ux-design.png"}
 
-		%h4 Overview
-		%p Health Axioms gives you habits to improve your health and well-being, literally changing your life. There are 40 cards. On the front of each is a beautiful illustration reminding you of a specific, healthful axiom. On the back are essential insights and tips that help you bring the axiom into your everyday life.
+		%p The smartphone is the doctor's bag for the 21st century. Its ability as a diagnostic tool, information repository, and rich, real-time communication device is unprecedented in the history of medicine. At the same time, healthcare for people in rural and remote areas actually has a larger gap compared to wealthy, urban areas than the early days of modern medicine. Identifying these trends, Tabeeb saw an opportunity to create software with an optimal mobile interface that not only gives doctors everywhere more power and capability, but takes those fruits and harvests them for the benefit of those who are under-served and traditionally more difficult to serve.
 
-		%h4 Creation
-		%p Our Chief Creative Officer, Juhan Sonin, was trying to live healthier. While he discovered an abundance of tips and resources on the Internet they were far-flung and temporal. While his doctor offered sage advice that also proved impermanent after the doctor’s visit and within the pace of everyday life. He needed something to take healthful tips and inject them in a more lasting way.
+		%p Needing an expert in healthcare software Tabeeb asked Involution to help. We came in when the product was just an idea with a mandate to help them take that idea and turn it into exceptional software. Already experienced in making software for doctors and clinical settings we were immediately able to help Tabeeb catalyze a practical vision and then rapidly turn it into articulated concepts. Rapid testing with clinicians led into an iterative rapid prototyping phase. Thanks to our experience in these spaces and the speed and quality of our healthcare design studio we were able to save months compared to a typical research, design, and testing process. Tabeeb's internal team then took the comprehensive architecture we provided and crafted the core design and engineering in-house. During this process they periodically engaged Involution for our Design Swarm&reg; services, where a team of our product, design, and engineering professionals spend a few days providing a comprehensive review of the team's output.
 
-		%h4 Philosophy
-		%p We are part of a global movement to shift the healthcare system to:
-		%ul
-			%li Non-invasive personal diagnostics
-			%li Highly specialized clinicians that work closely with patients
-			%li Self-monitoring, self-empowered patients
-
-		%p Realizing these ideals is equal parts smart technology, healthcare reform, and everyday common sense. Living the Health Axioms focuses on the common sense part, taking easy-to-understand and realistic-to-implement practices that can become part of our lives in a sustainable way. The outcome directly impacts our health, is smarter for our lives, and is even better for our pocketbooks.
-
-		%p It all starts with awareness. That’s where the Health Axioms come in.
-
-		%p Released to little fanfare, the Health Axioms quickly took off and enjoyed viral success. Featured in media outlets like National Public Radio and talked about by healthcare thought leaders, Health Axioms are in use at a variety of hospital settings including in the clinics in San Mateo, CA, New York City, and Boston, MA. Along with requests for other form factors like a digital app and large, wall-sized installations, the Health Axioms in their current papyrus form are being enjoyed by healthcare organizations, clinicians, patients, and just everyday people around the world.
-
-		%p <a href="http://healthaxioms.com">www.healthaxioms.com</a>
+		%p Even though Tabeeb was invested in their internal product organization they needed two things that they could not get from it: blazing speed, and truly exceptional quality. With Involution they got both. On the speed front, our team has been working together and exploring channels of innovation manifest in research, design, and engineering every day. We were well into the process when a less practiced team would still be ramping up. Combined with our experience in healthcare and specifically with Tabeeb's target customers we were better-suited for this work than most internal teams can hope to be. On the quality front, the designs speak for themselves. The time and money saved by Tabeeb in the process of getting an exceptional product thus enabled increased velocity and opportunities for success in other parts of the business.
 
 		%div
-			%img.with-caption{alt: "Health Axioms card Move More.", src: "../../images/clients/health-axioms/health-axioms-move-more-card.jpg"}/
-		%p.caption Easy-to-use, to take, to share.
+			%img.with-caption{alt: "Concept sketches for telemedicine application.", src: "../../images/clients/tabeeb/tabeeb-concept-sketch.png"}/
+		%p.caption Concept sketches for crowdsourcing a diagnosis.
 
 		%div
-			%img.with-caption{alt: "Health Axioms featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/health-axioms/health-axioms-clinic-installations.jpg"}/
-		%p.caption Possible Health Axioms installations inside clinics.
-
-		%div
-			%img.with-caption{alt: "Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.", src: "../../images/clients/health-axioms/health-axioms-holding-card.jpg"}/
-		%p.caption Similar to a standard deck of cards, Health Axioms fit into your pocket - and your life.
-
-		%div
-			%img.with-caption{alt: "Grouping Health Axioms into specialized packs like managing diabetes or weight loss.", src: "../../images/clients/health-axioms/health-axioms-topic-packs.jpg"}/
-		%p.caption Grouping Health Axioms into specialized packs like managing diabetes or weight loss.
-
-		%div
-			%img.with-caption{alt: "Sketching new axiom concepts before moving to digital illustrations.", src: "../../images/clients/health-axioms/health-axioms-sketches.jpg"}/
-		%p.caption Sketching new axiom concepts before creating the digital illustrations.
+			%img.with-caption{alt: "User experience workflow setting up a patient case.", src: "../../images/clients/tabeeb/tabeeb-workflow-map.png"}/
+		%p.caption Lightweight workflow for setting up a patient case.
 
 #next-project.row
 	.medium-6.small-12.small-centered.columns
