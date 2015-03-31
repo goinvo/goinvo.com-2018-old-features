@@ -9,8 +9,8 @@
   = javascript_include_tag "slick/slick"
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
   = javascript_include_tag "jquery.colorscroll.min.js"
-  = javascript_include_tag "features/disrupt.js"
   = javascript_include_tag "features/disrupt_grid.js"
+  = javascript_include_tag "features/disrupt.js"
   :javascript
     try{Typekit.load();}catch(e){}
 - content_for(:worlds_end) do
@@ -60,334 +60,338 @@
           // Three robots image
           %p As a part of this, technology integration has become as important as invention, and is another source of ongoing innovation in emerging tech fields. For instance, new products and services for the IoT will be driven in part by designers and engineers prototyping new interactive objects with Arduino and Raspberry Pi controllers and inexpensive sensors and 3D printed components.
           %p How this diffuse and decentralized system — fueled by a culture of sharing and openness — advances emerging tech in areas as varied as genomics, robotics, and the IoT, remains to be seen.
-    .section-content.grid
-      #grid-area
-        #grid-container
-          .grid-panel{data: {slideIndex: 0, tech: 'genomics'}}
+#grid-section-container
+  #grid-section
+    #grid-area
+      #grid-container
+        .grid-panel.row-one{data: {slideIndex: 0, tech: 'artificial-intelligence'}}
+          .bg-container
             .bg
-            .overlay
-            .title Genomics
-          .grid-panel{data: {slideIndex: 1}}
+          .overlay
+          / .title Artificial Intelligence
+        .grid-panel.row-one{data: {slideIndex: 1, tech: 'connected-environments'}}
+          .bg-container
             .bg
-            .overlay
-            .title I'm panel 2
-          .grid-panel{data: {slideIndex: 2}}
-            .bg
-            .overlay
-            .title I'm panel 3
-          .grid-panel{data: {slideIndex: 3}}
-            .bg
-            .overlay
-            .title I'm panel 4
-          .grid-panel{data: {slideIndex: 4}}
-            .bg
-            .overlay
-            .title I'm panel 5
-          .grid-panel{data: {slideIndex: 5}}
-            .bg
-            .overlay
-            .title I'm panel 6
-          .grid-panel{data: {slideIndex: 6}}
-            .bg
-            .overlay
-            .title I'm panel 7
-          .grid-panel{data: {slideIndex: 7}}
-            .bg
-            .overlay
-            .title I'm panel 8
-          .grid-panel{data: {slideIndex: 8}}
-            .bg
-            .overlay
-            .title I'm panel 9
-          .grid-panel{data: {slideIndex: 9}}
-            .bg
-            .overlay
-            .title I'm panel 10
-          .grid-panel{data: {slideIndex: 10}}
-            .bg
-            .overlay
-            .title I'm panel 11
-          .grid-panel{data: {slideIndex: 11}}
-            .bg
-            .overlay
-            .title I'm panel 12
-          .grid-panel{data: {slideIndex: 12, tech: 'robotics1'}}
-            .bg
-            .overlay
-            .title Robotics
-          .grid-panel{data: {slideIndex: 13, tech: 'robotics2'}}
-            .bg
-            .overlay
-            .title Big Dog
-          .grid-panel{data: {slideIndex: 14, tech: 'robotics3'}}
-            .bg
-            .overlay
-            .title Military
-          .grid-panel{data: {slideIndex: 15, tech: 'robotics4'}}
-            .bg
-            .overlay
-            .title Power Suits
-          .grid-panel{data: {slideIndex: 16, tech: 'robotics5'}}
-            .bg
-            .overlay
-            .title Androids
-          .grid-panel{data: {slideIndex: 17}}
-            .bg
-            .overlay
-            .title I'm panel 18
-          .grid-panel{data: {slideIndex: 18}}
-            .bg
-            .overlay
-            .title I'm panel 19
-          .grid-panel{data: {slideIndex: 19}}
-            .bg
-            .overlay
-            .title I'm panel 20
-        #slideshow-container
-          .nav-button.prev
-          .close X
-          .nav-button.next
-          #slides-container
-            .slide{data: {slideIndex: 0, tech: 'genomics'}}
-              .container
-                .column.left
-                  .title Genomics
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 1}}
-              .container
-                .column.left
-                  .title NUMBER 2
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 2}}
-              .container
-                .column.left
-                  .title NUMBER 3
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 3}}
-              .container
-                .column.left
-                  .title NUMBER 4
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 4}}
-              .container
-                .column.left
-                  .title NUMBER 5
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 5}}
-              .container
-                .column.left
-                  .title NUMBER 6
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 6}}
-              .container
-                .column.left
-                  .title NUMBER 7
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 7}}
-              .container
-                .column.left
-                  .title NUMBER 8
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 8}}
-              .container
-                .column.left
-                  .title NUMBER 9
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 9}}
-              .container
-                .column.left
-                  .title NUMBER 10
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 10}}
-              .container
-                .column.left
-                  .title NUMBER 11
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 11}}
-              .container
-                .column.left
-                  .title NUMBER 12
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 12, tech: 'robotics1'}}
-              .container
-                .column.left
-                  .title ROBOTICS
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 13, tech: 'robotics2'}}
-              .container
-                .column.left
-                  .title BIG DOG
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 14, tech: 'robotics3'}}
-              .container
-                .column.left
-                  .title MILITARY
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 15, tech: 'robotics4'}}
-              .container
-                .column.left
-                  .title POWER SUITS
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 16, tech: 'robotics5'}}
-              .container
-                .column.left
-                  .title ANDROIDS
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 17}}
-              .container
-                .column.left
-                  .title NUMBER 18
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 18}}
-              .container
-                .column.left
-                  .title NUMBER 19
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
-            .slide{data: {slideIndex: 19}}
-              .container
-                .column.left
-                  .title NUMBER 20
-                  .description
-                    %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
-                  .links
-                    %ul
-                      %li www.example.com
-                      %li www.example.org
-                .column.right
-                  .image
+          .overlay
+          .title Connected Environments
+        .grid-panel.row-one{data: {slideIndex: 2, tech: 'genomics'}}
+          .bg
+          .overlay
+          .title Genomics
+        .grid-panel.row-one{data: {slideIndex: 3, tech: 'internet-of-things'}}
+          .bg
+          .overlay
+          .title The Internet of Things
+        .grid-panel.row-one{data: {slideIndex: 4, tech: 'brain-computer-interfaces'}}
+          .bg
+          .overlay
+          .title Brain-Computer Interfaces
+        .grid-panel.row-two{data: {slideIndex: 5, tech: 'materials-science'}}
+          .bg
+          .overlay
+          .title Materials Science
+        .grid-panel.row-two{data: {slideIndex: 6, tech: 'nanotech'}}
+          .bg
+          .overlay
+          .title Nanotech
+        .grid-panel.row-two{data: {slideIndex: 7, tech: 'personalized-medicine'}}
+          .bg
+          .overlay
+          .title Personalized Medicine
+        .grid-panel.row-two{data: {slideIndex: 8, tech: 'robotics'}}
+          .bg
+          .overlay
+          .title Robotics
+        .grid-panel.row-two{data: {slideIndex: 9, tech: 'augmented-reality'}}
+          .bg
+          .overlay
+          .title Augmented Reality
+        .grid-panel.row-three{data: {slideIndex: 10, tech: 'smart-cities'}}
+          .bg
+          .overlay
+          .title Smart Cities
+        .grid-panel.row-three{data: {slideIndex: 11, tech: 'smart-clothing'}}
+          .bg
+          .overlay
+          .title Smart Clothing
+        .grid-panel.row-three{data: {slideIndex: 12, tech: 'synthetic-biology'}}
+          .bg
+          .overlay
+          .title Synthetic Biology
+        .grid-panel.row-three{data: {slideIndex: 13, tech: 'wearables'}}
+          .bg
+          .overlay
+          .title Wearables
+        .grid-panel.row-three{data: {slideIndex: 14, tech: 'vertical-farming'}}
+          .bg
+          .overlay
+          .title Vertical Farming
+        .grid-panel.row-four{data: {slideIndex: 15, tech: 'bionic-implants'}}
+          .bg
+          .overlay
+          .title Bionic Implants
+        .grid-panel.row-four{data: {slideIndex: 16, tech: 'medical-nanobots'}}
+          .bg
+          .overlay
+          .title Medical Nanobots
+        .grid-panel.row-four{data: {slideIndex: 17, tech: 'artificial-organs'}}
+          .bg
+          .overlay
+          .title Artificial Organs
+        .grid-panel.row-four{data: {slideIndex: 18, tech: 'climate-engineering'}}
+          .bg
+          .overlay
+          .title Climate Engineering
+        .grid-panel.row-four{data: {slideIndex: 19, tech: 'crypto-currencies'}}
+          .bg
+          .overlay
+          .title Crypto-Currencies
+      #slideshow-container
+        .nav-button.prev
+        .close X
+        .nav-button.next
+        #slides-container
+          .slide.row-one{data: {slideIndex: 0, tech: 'artificial-intelligence'}}
+            .container
+              .column.left
+                .title Artificial Intelligence
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-one{data: {slideIndex: 1, tech: 'connected-environments'}}
+            .container
+              .column.left
+                .title Connected Environments
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-one{data: {slideIndex: 2, tech: 'genomics'}}
+            .container
+              .column.left
+                .title Genomics
+                .description
+                  %p What if you could run a “spelling” check on your genes? Not just the genes in your 23 chromosome pairs, but your entire genome: all of your genes, gene-modifying sequences, and everything  in between. Then, what if you could compare your findings to those of millions of others?
+                  %p You would be participating in genomics research, which aims to identify the function of genes and what regulates them. Perhaps your data would help find genome-based strategies for detecting, diagnosing, and treating diseases. Or it might help reveal the significance of the tiny, individual variations in people’s DNA, and how our DNA interacts with our environments. Maybe your genetic map will contribute to discovering what makes some people resilient even when they carry potentially devastating genes. Genomic research has the potential to revolutionize the practice of health care. But not without ethical, legal, and social issues that must be addressed to prevent misuse of new genetic technologies and information.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-one{data: {slideIndex: 3, tech: 'internet-of-things'}}
+            .container
+              .column.left
+                .title The Internet of Things
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-one{data: {slideIndex: 4, tech: 'brain-computer-interfaces'}}
+            .container
+              .column.left
+                .title Brain-Computer Interfaces
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-two{data: {slideIndex: 5, tech: 'materials-science'}}
+            .container
+              .column.left
+                .title Materials Science
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-two{data: {slideIndex: 6, tech: 'nanotech'}}
+            .container
+              .column.left
+                .title Nanotech
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-two{data: {slideIndex: 7, tech: 'personalized-medicine'}}
+            .container
+              .column.left
+                .title Personalized Medicine
+                .description
+                  %p Two or three generations ago, “personalized” medicine might have meant that your doctor made house calls. Today, technologies like molecular diagnostics enable doctors to identify genetic markers for disease—before symptoms occur—and to focus on prevention or early intervention instead of reactive treatment. Pharmacogenomics makes it possible to determine the best drug protocol, reduce trial-and-error prescribing, and avoid adverse drug reactions or ineffective treatment. Complex genetic screening even allows doctors, in some cases, to identify cancer patients who are most likely to benefit from chemotherapy. Bringing new efficiencies to health care, personalized medicine increases quality of care, quality of life, accessibility, and affordability.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-two{data: {slideIndex: 8, tech: 'robotics'}}
+            .container
+              .column.left
+                .title Robotics
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-two{data: {slideIndex: 9, tech: 'augmented-reality'}}
+            .container
+              .column.left
+                .title Augmented Reality
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-three{data: {slideIndex: 10, tech: 'smart-cities'}}
+            .container
+              .column.left
+                .title Smart Cities
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-three{data: {slideIndex: 11, tech: 'smart-clothing'}}
+            .container
+              .column.left
+                .title Smart Clothing
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-three{data: {slideIndex: 12, tech: 'synthetic-biology'}}
+            .container
+              .column.left
+                .title Synthetic Biology
+                .description
+                  %p In the field of synthetic biology, we apply engineering principles to the complex domains of nature and biology, making living systems themselves become possible material for design. Scientists can now create custom-built DNA from standardized parts that can be used to gain insights about how life works—sort of like building machines with Legos. This potentially transformative science could produce life-saving drugs made from chemicals produced by cells engineered for that purpose, or biodegradable clothing that we grow ourselves and which can adapt to the environment or monitor our health. With implications for use in architecture, medicine, environmental remediation, agriculture, and more, synthetic biology also raises concerns about bioethics, safety, security, and environmental health and sustainability. Synbio is truly science fiction coming—literally—to life. 
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-three{data: {slideIndex: 13, tech: 'wearables'}}
+            .container
+              .column.left
+                .title Wearables
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-three{data: {slideIndex: 14, tech: 'vertical-farming'}}
+            .container
+              .column.left
+                .title Vertical Farming
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-four{data: {slideIndex: 15, tech: 'bionic-implants'}}
+            .container
+              .column.left
+                .title Bionic Implants
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-four{data: {slideIndex: 16, tech: 'medical-nanobots'}}
+            .container
+              .column.left
+                .title Medical Nanobots
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-four{data: {slideIndex: 17, tech: 'artificial-organs'}}
+            .container
+              .column.left
+                .title Artificial Organs
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-four{data: {slideIndex: 18, tech: 'climate-engineering'}}
+            .container
+              .column.left
+                .title Climate Engineering
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
+          .slide.row-four{data: {slideIndex: 19, tech: 'crypto-currencies'}}
+            .container
+              .column.left
+                .title Crypto-Currencies
+                .description
+                  %p Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt. Lorem epsom salt.
+                .links
+                  %ul
+                    %li www.example.com
+                    %li www.example.org
+              .column.right
+                .image
 %header.sec-header#bottom
   .video-container
     %video{autoplay: true, muted: true, loop: true}

@@ -13,6 +13,7 @@ $blue: #0282C1;
 $pink: #DD2E64;
 $purple: #82659B;
 $teal: #0396AA;
+$gridgray: #f2f1f1;
 
 $animateSpeed: 500ms;
 $gridWidth: 100%;
@@ -22,11 +23,20 @@ $gridTop: 0;
 
 /* ===== Grid ===== */
 
+#grid-section-container {
+  width: 100%;
+  background-color: $gridgray !important;
+  #grid-section {
+    width: 80%;
+    margin: 0 10%;
+    padding: 2em 0;
+  }
+}
+
 #grid-area {
   position: relative;
-  margin-bottom: 5em;
   width: 100%;
-  background-color: black;
+  background-color: $gridgray;
   #grid-container {
     position: absolute;
     top: $gridTop;
@@ -37,17 +47,47 @@ $gridTop: 0;
     -o-transition: opacity $animateSpeed;
     -ms-transition: opacity $animateSpeed;
     transition: opacity $animateSpeed;
+    background-color: $gridgray;
     .grid-panel {
       position: absolute;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       -ms-box-sizing: border-box;
       box-sizing: border-box;
-      border: 1px solid black;
       overflow: hidden;
       z-index: 0;
       font-size: 1em;
-      background-color: gray;
+      background-color: transparent;
+      &.row-one {
+        &:before {
+          border-color: $teal;
+        }
+      }
+      &.row-two {
+        &:before {
+          border-color: $purple;
+        }
+      }
+      &.row-three {
+        &:before {
+          border-color: $blue;
+        }
+      }
+      &.row-four {
+        &:before {
+          border-color: $pink; 
+        }
+      }
+      &:before {
+        content: " ";
+        position: absolute;
+        z-index: 500000;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        border: 4px solid;
+      }
       &.no-transition {
         -webkit-transition: none !important;
         -moz-transition: none !important;
@@ -70,11 +110,16 @@ $gridTop: 0;
       }
       &.hover {
         cursor: pointer;
-        .bg {
-          -webkit-transform: scale(1, 1);
-          -moz-transform: scale(1, 1);
-          -ms-transform: scale(1, 1);
-          transform: scale(1, 1);
+        &:before {
+          border-color: $orange;
+        }
+        .bg-container {
+          .bg {
+            -webkit-transform: scale(1.2, 1.2);
+            -moz-transform: scale(1.2, 1.2);
+            -ms-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+          }
         }
         .overlay {
           opacity: 0.5;
@@ -83,52 +128,41 @@ $gridTop: 0;
           transform: scale(1.2) translate(0, -65%);
         }
       }
-      &[data-tech="genomics"] {
+      &[data-tech="artificial-intelligence"] {
         .bg {
-          background-image: image-url("features/disrupt/genomics1.jpg");
+          background-image: image-url("../../images/features/disrupt/grid/panels/augmented-reality.png")
         }
       }
-      &[data-tech="robotics1"] {
+      &[data-tech="connected-environments"] {
         .bg {
-          background-image: image-url("features/disrupt/robotics1.jpg");
+          background-image: image-url("../../images/features/disrupt/grid/panels/augmented-reality-no-text.png")
         }
       }
-      &[data-tech="robotics2"] {
+      .bg-container {
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 4px;
+        bottom: 4px;
+        overflow: hidden;
         .bg {
-          background-image: image-url("features/disrupt/robotics2.jpg");
-        }
-      }
-      &[data-tech="robotics3"] {
-        .bg {
-          background-image: image-url("features/disrupt/robotics3.jpg");
-        }
-      }
-      &[data-tech="robotics4"] {
-        .bg {
-          background-image: image-url("features/disrupt/robotics4.jpg");
-        }
-      }
-      &[data-tech="robotics5"] {
-        .bg {
-          background-image: image-url("features/disrupt/robotics5.jpg");
-        }
-      }
-      .bg {
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
 
-        -webkit-transform: scale(1.1, 1.1);
-        -moz-transform: scale(1.1, 1.1);
-        -ms-transform: scale(1.1, 1.1);
-        transform: scale(1.1, 1.1);
+          -webkit-transform: scale(1.1, 1.1);
+          -moz-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 
-        -webkit-transition: -webkit-transform $animateSpeed ease-in-out;
-        -moz-transition: -moz-transform $animateSpeed ease-in-out;
-        transition: transform $animateSpeed ease-in-out;
+          -webkit-transition: -webkit-transform $animateSpeed ease-in-out;
+          -moz-transition: -moz-transform $animateSpeed ease-in-out;
+          transition: transform $animateSpeed ease-in-out;
+        }
       }
       .overlay {
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -142,11 +176,11 @@ $gridTop: 0;
       }
       .title {
         position: absolute;
-        top: 50%;
+        bottom: 5%;
         left: 0;
         right: 0;
         transform: translate(0, -50%);
-        color: white;
+        color: $orange;
         font-size: 1em;
         text-align: center;
         -webkit-transition: all $animateSpeed ease-in-out;
@@ -217,6 +251,8 @@ $gridTop: 0;
       background-color: white;
       .slide {
         width: 100%;
+        height: 100%;
+        border: 4px solid;
         .container {
           width: 88%;
           margin: 6%;
@@ -264,33 +300,20 @@ $gridTop: 0;
         }
         &[data-tech="genomics"] {
           .image {
-            background-image: image-url("features/disrupt/genomics1.jpg");
+
           }
         }
-        &[data-tech="robotics1"] {
-          .image {
-            background-image: image-url("features/disrupt/robotics1.jpg");
-          }
+        &.row-one {
+          border-color: $teal;
         }
-        &[data-tech="robotics2"] {
-          .image {
-            background-image: image-url("features/disrupt/robotics2.jpg");
-          }
+        &.row-two {
+          border-color: $purple;
         }
-        &[data-tech="robotics3"] {
-          .image {
-            background-image: image-url("features/disrupt/robotics3.jpg");
-          }
+        &.row-three {
+          border-color: $blue;
         }
-        &[data-tech="robotics4"] {
-          .image {
-            background-image: image-url("features/disrupt/robotics4.jpg");
-          }
-        }
-        &[data-tech="robotics5"] {
-          .image {
-            background-image: image-url("features/disrupt/robotics5.jpg");
-          }
+        &.row-four {
+          border-color: $pink;
         }
       }
     }
@@ -484,10 +507,6 @@ article {
 .section-content {
   margin: 1% 0;
   width: 100%;
-  &.grid {
-    margin: 0 1% 0 0;
-    width: 90%; // this shit needs to change
-  }
   p, ul, ol {
     font-size: 1.5em;
     line-height: 1.5em;
