@@ -11,7 +11,6 @@ $( document ).ready(function() {
 				"url" : "/healthcare/hgraph/",
 				"image" : "hgraph.jpg",
 				"next-id" : "3m"
-				
 			},
 			"3m" : {
 				"title" : "3M",
@@ -25,12 +24,6 @@ $( document ).ready(function() {
 				"image" : "ehr.jpg",
 				"next-id" : "personal-genome-project"
 			},
-//			"tabeeb" : {
-//				"title" : "Tabeeb",
-//				"url" : "/healthcare/tabeeb/",
-//				"image" : "tabeeb.jpg",
-//				"next-id" : "mount-sinai"
-//			},
 			"personal-genome-project" : {
 				"title" : "Personal Genome Project",
 				"url" : "/healthcare/personal-genome-project/",
@@ -43,29 +36,34 @@ $( document ).ready(function() {
 				"image" : "mount-sinai.jpg",
 				"next-id" : "health-axioms"
 			},
-			
-			"health-axioms" : {
-				"title" : "Health Axioms",
-				"url" : "/healthcare/health-axioms/",
-				"image" : "health-axioms.jpg",
-				"next-id" : "partners-gene-insight"
-			},
 			"partners-gene-insight" : {
 				"title" : "Partners Gene Insight",
 				"url" : "/healthcare/partners-gene-insight/",
 				"image" : "pgi.png",
-				"next-id" : "numera"
-			},
-			"numera" : {
-				"title" : "Numera",
-				"url" : "/healthcare/numera/",
-				"image" : "numera.jpg",
 				"next-id" : "segterra"
 			},
 			"segterra" : {
 				"title" : "InsideTracker",
 				"url" : "/healthcare/segterra/",
 				"image" : "segterra.png",
+				"next-id" : "numera"
+			},
+			"numera" : {
+				"title" : "Numera",
+				"url" : "/healthcare/numera/",
+				"image" : "numera.jpg",
+				"next-id" : "tabeeb"
+			},
+			"tabeeb" : {
+				"title" : "Tabeeb",
+				"url" : "/healthcare/tabeeb/",
+				"image" : "tabeeb.jpg",
+				"next-id" : "health-axioms"
+			},
+			"health-axioms" : {
+				"title" : "Health Axioms",
+				"url" : "/healthcare/health-axioms/",
+				"image" : "health-axioms.jpg",
 				"next-id" : "enterprise"
 			},
 			"healthcare" : {
