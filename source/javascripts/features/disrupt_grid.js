@@ -12,6 +12,13 @@ function animateEntrance(elements) {
   });
 }
 
+// Set the color of the slide buttons
+// Depending on the slide we're on
+function setSlideButtons(rowNum) {
+  $('#slideshow-container .nav-button').attr("data-row", rowNum);
+  $('#slideshow-container .close').attr("data-row", rowNum);
+}
+
 // Square each panel, and determine their position
 // based on their sizes
 // Then layout the rest of the grid components
@@ -89,6 +96,9 @@ $(document).ready(function(event){
     slideshowOpen = true;
   }
 
+  var slickList = $('.slick-list');
+  var slickContainer = slickList.parent();
+  slickList.height(slickContainer.height());
 
   // ===== Resize event =====
   $(window).resize(function() {
@@ -96,24 +106,18 @@ $(document).ready(function(event){
     var gridHeight = grid.height();
     gridArea.css({height: gridHeight });
     if ($(window).width() >= 800) {
-      if (slideshowOpen) {
-        grid.show();
-        panels.hide();
-        animateEntrance(panels);
-        slideshowContainer.css({'opacity': '0', 'pointer-events' : 'none'});
-        slideshowContainer.find('.close').show();
-        slideshowOpen = false;
-      }
       slideshowContainer.find('.close').show();
     } else {
       grid.hide();
       slideshowContainer.find('.close').hide();
       if (!slideshowOpen) {
         slideShow.slickGoTo(0, true);
+        setSlideButtons(1);
       }
       slideshowContainer.css({'opacity': '1', 'pointer-events' : 'auto'});
       slideshowOpen = true;
     }
+    slickList.height(slickContainer.height());
   });
 
   // ===== Grid panels hover states =====
@@ -139,6 +143,8 @@ $(document).ready(function(event){
     var index = clickedPanel.attr('data-slideindex');
     var title = clickedPanel.find('.title');
 
+    setSlideButtons(clickedPanel.attr("data-row"));
+
     var panelOriginals = {
       width: clickedPanel.outerWidth(),
       height: clickedPanel.outerHeight(),
@@ -149,6 +155,14 @@ $(document).ready(function(event){
       height: slideshowContainer.outerHeight(),
       position: getCoords(slideshowContainer)
     };
+
+    // var panelBg = clickedPanel.find(".bg");
+    // panelBg.animate({
+    //   zoom: 0.8
+    // }, {
+    //   duration: 500,
+    //   queue: false
+    // });
 
     clickedPanel.addClass('no-transition');
     clickedPanel.css({'z-index': 999});
@@ -201,6 +215,7 @@ $(document).ready(function(event){
     var index = slideShow.slickCurrentSlide();
     var panel = $('#grid-container .grid-panel[data-slideindex="' + index + '"]');
     var title = panel.find('.title');
+    grid.show();
 
     var panelOriginals = {
       width: panel.outerWidth(),
@@ -257,10 +272,16 @@ $(document).ready(function(event){
   // ===== Prev / Next slide buttons =====
   prevButton.click(function() {
     slideShow.slickPrev();
+    var index = slideShow.slickCurrentSlide();
+    var slide = $('#slideshow-container .slide[data-slideIndex="' + index + '"]');
+    setSlideButtons(slide.attr("data-row"));
   });
 
   nextButton.click(function() {
     slideShow.slickNext();
+    var index = slideShow.slickCurrentSlide();
+    var slide = $('#slideshow-container .slide[data-slideIndex="' + index + '"]');
+    setSlideButtons(slide.attr("data-row"));
   });
 
 });

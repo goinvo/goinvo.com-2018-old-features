@@ -64,94 +64,72 @@
   #grid-section
     #grid-area
       #grid-container
-        .grid-panel.row-one{data: {slideIndex: 0, tech: 'artificial-intelligence'}}
+        .grid-panel{data: {slideIndex: 0, tech: 'artificial-intelligence', row: "1"}}
           .bg-container
             .bg
-          .overlay
-          / .title Artificial Intelligence
-        .grid-panel.row-one{data: {slideIndex: 1, tech: 'connected-environments'}}
+        .grid-panel{data: {slideIndex: 1, tech: 'connected-environments', row: "1"}}
           .bg-container
             .bg
-          .overlay
-          .title Connected Environments
-        .grid-panel.row-one{data: {slideIndex: 2, tech: 'genomics'}}
-          .bg
-          .overlay
-          .title Genomics
-        .grid-panel.row-one{data: {slideIndex: 3, tech: 'internet-of-things'}}
-          .bg
-          .overlay
-          .title The Internet of Things
-        .grid-panel.row-one{data: {slideIndex: 4, tech: 'brain-computer-interfaces'}}
-          .bg
-          .overlay
-          .title Brain-Computer Interfaces
-        .grid-panel.row-two{data: {slideIndex: 5, tech: 'materials-science'}}
-          .bg
-          .overlay
-          .title Materials Science
-        .grid-panel.row-two{data: {slideIndex: 6, tech: 'nanotech'}}
-          .bg
-          .overlay
-          .title Nanotech
-        .grid-panel.row-two{data: {slideIndex: 7, tech: 'personalized-medicine'}}
-          .bg
-          .overlay
-          .title Personalized Medicine
-        .grid-panel.row-two{data: {slideIndex: 8, tech: 'robotics'}}
-          .bg
-          .overlay
-          .title Robotics
-        .grid-panel.row-two{data: {slideIndex: 9, tech: 'augmented-reality'}}
-          .bg
-          .overlay
-          .title Augmented Reality
-        .grid-panel.row-three{data: {slideIndex: 10, tech: 'smart-cities'}}
-          .bg
-          .overlay
-          .title Smart Cities
-        .grid-panel.row-three{data: {slideIndex: 11, tech: 'smart-clothing'}}
-          .bg
-          .overlay
-          .title Smart Clothing
-        .grid-panel.row-three{data: {slideIndex: 12, tech: 'synthetic-biology'}}
-          .bg
-          .overlay
-          .title Synthetic Biology
-        .grid-panel.row-three{data: {slideIndex: 13, tech: 'wearables'}}
-          .bg
-          .overlay
-          .title Wearables
-        .grid-panel.row-three{data: {slideIndex: 14, tech: 'vertical-farming'}}
-          .bg
-          .overlay
-          .title Vertical Farming
-        .grid-panel.row-four{data: {slideIndex: 15, tech: 'bionic-implants'}}
-          .bg
-          .overlay
-          .title Bionic Implants
-        .grid-panel.row-four{data: {slideIndex: 16, tech: 'medical-nanobots'}}
-          .bg
-          .overlay
-          .title Medical Nanobots
-        .grid-panel.row-four{data: {slideIndex: 17, tech: 'artificial-organs'}}
-          .bg
-          .overlay
-          .title Artificial Organs
-        .grid-panel.row-four{data: {slideIndex: 18, tech: 'climate-engineering'}}
-          .bg
-          .overlay
-          .title Climate Engineering
-        .grid-panel.row-four{data: {slideIndex: 19, tech: 'crypto-currencies'}}
-          .bg
-          .overlay
-          .title Crypto-Currencies
+        .grid-panel{data: {slideIndex: 2, tech: 'genomics', row: "1"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 3, tech: 'internet-of-things', row: "1"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 4, tech: 'brain-computer-interfaces', row: "1"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 5, tech: 'materials-science', row: "2"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 6, tech: 'nanotech', row: "2"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 7, tech: 'personalized-medicine', row: "2"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 8, tech: 'robotics', row: "2"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 9, tech: 'augmented-reality', row: "2"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 10, tech: 'smart-cities', row: "3"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 11, tech: 'smart-clothing', row: "3"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 12, tech: 'synthetic-biology', row: "3"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 13, tech: 'wearables', row: "3"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 14, tech: 'vertical-farming', row: "3"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 15, tech: 'bionic-implants', row: "4"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 16, tech: 'medical-nanobots', row: "4"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 17, tech: 'artificial-organs', row: "4"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 18, tech: 'climate-engineering', row: "4"}}
+          .bg-container
+            .bg
+        .grid-panel{data: {slideIndex: 19, tech: 'crypto-currencies', row: "4"}}
+          .bg-container
+            .bg
       #slideshow-container
-        .nav-button.prev
-        .close X
-        .nav-button.next
+        %img.nav-button.prev
+        %img.close
+        %img.nav-button.next
         #slides-container
-          .slide.row-one{data: {slideIndex: 0, tech: 'artificial-intelligence'}}
+          .slide{data: {slideIndex: 0, tech: 'artificial-intelligence', row: "1"}}
             .container
               .column.left
                 .title Artificial Intelligence
@@ -163,7 +141,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-one{data: {slideIndex: 1, tech: 'connected-environments'}}
+          .slide{data: {slideIndex: 1, tech: 'connected-environments', row: "1"}}
             .container
               .column.left
                 .title Connected Environments
@@ -175,7 +153,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-one{data: {slideIndex: 2, tech: 'genomics'}}
+          .slide{data: {slideIndex: 2, tech: 'genomics', row: "1"}}
             .container
               .column.left
                 .title Genomics
@@ -188,7 +166,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-one{data: {slideIndex: 3, tech: 'internet-of-things'}}
+          .slide{data: {slideIndex: 3, tech: 'internet-of-things', row: "1"}}
             .container
               .column.left
                 .title The Internet of Things
@@ -200,7 +178,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-one{data: {slideIndex: 4, tech: 'brain-computer-interfaces'}}
+          .slide{data: {slideIndex: 4, tech: 'brain-computer-interfaces', row: "1"}}
             .container
               .column.left
                 .title Brain-Computer Interfaces
@@ -212,7 +190,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-two{data: {slideIndex: 5, tech: 'materials-science'}}
+          .slide{data: {slideIndex: 5, tech: 'materials-science', row: "2"}}
             .container
               .column.left
                 .title Materials Science
@@ -224,7 +202,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-two{data: {slideIndex: 6, tech: 'nanotech'}}
+          .slide{data: {slideIndex: 6, tech: 'nanotech', row: "2"}}
             .container
               .column.left
                 .title Nanotech
@@ -236,7 +214,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-two{data: {slideIndex: 7, tech: 'personalized-medicine'}}
+          .slide{data: {slideIndex: 7, tech: 'personalized-medicine', row: "2"}}
             .container
               .column.left
                 .title Personalized Medicine
@@ -248,7 +226,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-two{data: {slideIndex: 8, tech: 'robotics'}}
+          .slide{data: {slideIndex: 8, tech: 'robotics', row: "2"}}
             .container
               .column.left
                 .title Robotics
@@ -260,7 +238,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-two{data: {slideIndex: 9, tech: 'augmented-reality'}}
+          .slide{data: {slideIndex: 9, tech: 'augmented-reality', row: "2"}}
             .container
               .column.left
                 .title Augmented Reality
@@ -272,7 +250,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-three{data: {slideIndex: 10, tech: 'smart-cities'}}
+          .slide{data: {slideIndex: 10, tech: 'smart-cities', row: "3"}}
             .container
               .column.left
                 .title Smart Cities
@@ -284,7 +262,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-three{data: {slideIndex: 11, tech: 'smart-clothing'}}
+          .slide{data: {slideIndex: 11, tech: 'smart-clothing', row: "3"}}
             .container
               .column.left
                 .title Smart Clothing
@@ -296,7 +274,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-three{data: {slideIndex: 12, tech: 'synthetic-biology'}}
+          .slide{data: {slideIndex: 12, tech: 'synthetic-biology', row: "3"}}
             .container
               .column.left
                 .title Synthetic Biology
@@ -308,7 +286,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-three{data: {slideIndex: 13, tech: 'wearables'}}
+          .slide{data: {slideIndex: 13, tech: 'wearables', row: "3"}}
             .container
               .column.left
                 .title Wearables
@@ -320,7 +298,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-three{data: {slideIndex: 14, tech: 'vertical-farming'}}
+          .slide{data: {slideIndex: 14, tech: 'vertical-farming', row: "3"}}
             .container
               .column.left
                 .title Vertical Farming
@@ -332,7 +310,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-four{data: {slideIndex: 15, tech: 'bionic-implants'}}
+          .slide{data: {slideIndex: 15, tech: 'bionic-implants', row: "4"}}
             .container
               .column.left
                 .title Bionic Implants
@@ -344,7 +322,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-four{data: {slideIndex: 16, tech: 'medical-nanobots'}}
+          .slide{data: {slideIndex: 16, tech: 'medical-nanobots', row: "4"}}
             .container
               .column.left
                 .title Medical Nanobots
@@ -356,7 +334,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-four{data: {slideIndex: 17, tech: 'artificial-organs'}}
+          .slide{data: {slideIndex: 17, tech: 'artificial-organs', row: "4"}}
             .container
               .column.left
                 .title Artificial Organs
@@ -368,7 +346,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-four{data: {slideIndex: 18, tech: 'climate-engineering'}}
+          .slide{data: {slideIndex: 18, tech: 'climate-engineering', row: "4"}}
             .container
               .column.left
                 .title Climate Engineering
@@ -380,7 +358,7 @@
                     %li www.example.org
               .column.right
                 .image
-          .slide.row-four{data: {slideIndex: 19, tech: 'crypto-currencies'}}
+          .slide{data: {slideIndex: 19, tech: 'crypto-currencies', row: "4"}}
             .container
               .column.left
                 .title Crypto-Currencies
