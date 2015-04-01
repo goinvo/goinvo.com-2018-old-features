@@ -523,6 +523,14 @@ article {
   }
 }
 
+.disqus-container {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
 .social-buttons {
   svg {
     width: 28px;
