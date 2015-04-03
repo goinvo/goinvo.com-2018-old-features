@@ -156,14 +156,6 @@ $(document).ready(function(event){
       position: getCoords(slideshowContainer)
     };
 
-    // var panelBg = clickedPanel.find(".bg");
-    // panelBg.animate({
-    //   zoom: 0.8
-    // }, {
-    //   duration: 500,
-    //   queue: false
-    // });
-
     clickedPanel.addClass('no-transition');
     clickedPanel.css({'z-index': 999});
 
