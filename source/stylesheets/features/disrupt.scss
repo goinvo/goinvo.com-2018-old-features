@@ -90,26 +90,27 @@ $gridTop: 0;
         bottom: 2px;
         border: 4px solid;
       }
+      &.transition {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        transition: none !important;
+        .bg-container {
+          .grid-bg {
+            width: 80%;
+            margin: auto;
+          }
+        }
+      }
       &.no-transition {
         -webkit-transition: none !important;
         -moz-transition: none !important;
         transition: none !important;
         .bg-container {
-          .bg {
+          .grid-bg {
             -webkit-transition: none !important;
             -moz-transition: none !important;
             transition: none !important;
           }
-        }
-        .overlay {
-          -webkit-transition: none !important;
-          -moz-transition: none !important;
-          transition: none !important;
-        }
-        .title {
-          -webkit-transition: none !important;
-          -moz-transition: none !important;
-          transition: none !important;
         }
       }
       &.hover {
@@ -124,12 +125,6 @@ $gridTop: 0;
             -ms-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
           }
-        }
-        .overlay {
-          opacity: 0.5;
-        }
-        .title {
-          transform: scale(1.2) translate(0, -65%);
         }
       }
       &[data-tech="artificial-intelligence"] {
@@ -152,37 +147,10 @@ $gridTop: 0;
         background-color: white;
         .grid-bg {
           width: 100%;
-          height: 100%;
-          -webkit-transition: -webkit-transform $animateSpeed ease-in-out;
-          -moz-transition: -moz-transform $animateSpeed ease-in-out;
-          transition: transform $animateSpeed ease-in-out
+          -webkit-transition: -webkit-transform $animateSpeed ease-in-out, width $animateSpeed, margin $animateSpeed;
+          -moz-transition: -moz-transform $animateSpeed ease-in-out, width $animateSpeed, margin $animateSpeed;
+          transition: transform $animateSpeed ease-in-out, width $animateSpeed, margin $animateSpeed;
         }
-      }
-      .overlay {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(92,153,214);
-        opacity: 0;
-        -webkit-transition: opacity $animateSpeed ease-in-out;
-        -moz-transition: opacity $animateSpeed ease-in-out;
-        transition: opacity $animateSpeed ease-in-out;
-      }
-      .title {
-        position: absolute;
-        bottom: 5%;
-        left: 0;
-        right: 0;
-        transform: translate(0, -50%);
-        color: $orange;
-        font-size: 1em;
-        text-align: center;
-        -webkit-transition: all $animateSpeed ease-in-out;
-        -moz-transition: all $animateSpeed ease-in-out;
-        transition: all $animateSpeed ease-in-out;
       }
     }
   }
@@ -432,7 +400,7 @@ header {
       .title-container {
         position: absolute;
         width: 100%;
-        bottom: 6%;
+        bottom: 40%;
         text-align: center;
         h1 {
           font-family: "proxima-nova", sans-serif;

@@ -156,7 +156,7 @@ $(document).ready(function(event){
       position: getCoords(slideshowContainer)
     };
 
-    clickedPanel.addClass('no-transition');
+    clickedPanel.addClass('transition');
     clickedPanel.css({'z-index': 999});
 
     clickedPanel.animate({
@@ -180,7 +180,7 @@ $(document).ready(function(event){
             'z-index': 0
           });
           panels.removeClass('hover');
-          panels.removeClass('no-transition');
+          panels.removeClass('transition');
         }, 500);
       }
     });
