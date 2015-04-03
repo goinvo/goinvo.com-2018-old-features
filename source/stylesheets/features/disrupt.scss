@@ -400,7 +400,8 @@ header {
       .title-container {
         position: absolute;
         width: 100%;
-        bottom: 40%;
+        top: 50%;
+        transform: translateY(-50%);
         text-align: center;
         h1 {
           font-family: "proxima-nova", sans-serif;
@@ -413,6 +414,12 @@ header {
           text-align: center;
           text-transform: uppercase;
         }
+      }
+      .social-container {
+        position: absolute;
+        width: 100%;
+        bottom: 6%;
+        text-align: center;
       }
     }
   }

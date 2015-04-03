@@ -1,11 +1,3 @@
-// function play() {
-//   $(this).parent().find("video")[0].play();
-// }
-
-// function pause() {
-//   $(this).parent().find("video")[0].pause();
-// }
-
 $(document).ready(function(event){
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
@@ -30,7 +22,8 @@ $(document).ready(function(event){
   $('.container.content').css("background-color", colors[page].top);
 
   firstVideo.css("margin-top", articleNav.height());
-  var firstTitle = firstVideo.find('h1'); // H1 only on first page of article
+  var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
+  $('.social-container').hide().delay(6000).fadeIn(6000);
   firstTitle.hide();
   firstTitle.delay(2000).fadeIn(12000);
 
@@ -111,19 +104,6 @@ $(document).ready(function(event){
       });
     }
 
-    // if (windowBottom < documentHeight - 100) {
-    //   $('#bottom-nav').animate({
-    //     opacity: 0,
-    //     bottom: "0px"
-    //   }, {
-    //     duration: 0,
-    //     complete: function() {
-    //       bottomNavState = 'closed';
-    //       $(this).css('pointer-events', 'none');
-    //     }
-    //   });
-    // }
-
     // Fade videos
     if ( firstVideoCalc >= 0 ) {
       firstVideo.css({'opacity': firstVideoCalc });
@@ -136,7 +116,4 @@ $(document).ready(function(event){
 
   // Set the title color of the "next part" nav
   $('#bottom-nav .title').css("color", colors[page].bottom);
-
-  // ===== Video Hover Controls =====
-  // $('.sec-header .title-container').hover(pause, play);
 });
