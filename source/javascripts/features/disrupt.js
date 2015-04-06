@@ -24,8 +24,16 @@ $(document).ready(function(event){
   firstVideo.css("margin-top", articleNav.height());
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   $('.social-container').hide().delay(6000).fadeIn(6000);
-  firstTitle.hide();
-  firstTitle.delay(2000).fadeIn(12000);
+  firstTitle.css({
+    "letter-spacing" : "0.5em",
+    "opacity" : "0"
+  });
+  firstTitle.delay(2000).animate({
+    "letter-spacing" : "0.7em",
+    "opacity" : "1"
+  }, {
+    duration: 12000
+  });
 
   // ===== Initialization =====
   $("video").each(function() {

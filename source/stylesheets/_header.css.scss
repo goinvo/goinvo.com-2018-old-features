@@ -10,7 +10,8 @@
 	top:0;
 	left:0;
 	z-index:3000;
-
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 body.work #main-header #nav-buttons .work,

@@ -88,11 +88,11 @@ $(document).ready(function(event){
 
   if ($(window).width() >= 800) {
     panels.hide();
-    animateEntrance(panels);
   } else {
     grid.hide();
     slideshowContainer.find('.close').hide();
     slideshowContainer.css({'opacity': '1', 'pointer-events': 'auto'});
+    setSlideButtons(1);
     slideshowOpen = true;
   }
 
@@ -118,6 +118,16 @@ $(document).ready(function(event){
       slideshowOpen = true;
     }
     slickList.height(slickContainer.height());
+  });
+
+  // ===== Scroll event =====
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+    var windowBottom = scrollTop + windowHeight;
+    var gridTop = gridArea.offset().top;
+    if (windowBottom > gridTop + (gridArea.height() / 2)) {
+      animateEntrance(panels);
+    }
   });
 
   // ===== Grid panels hover states =====

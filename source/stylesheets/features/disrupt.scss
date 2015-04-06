@@ -127,16 +127,6 @@ $gridTop: 0;
           }
         }
       }
-      &[data-tech="artificial-intelligence"] {
-        .bg {
-          background-image: image-url("../../images/features/disrupt/grid/panels/artificial-intelligence1000.png")
-        }
-      }
-      &[data-tech="connected-environments"] {
-        .bg {
-          background-image: image-url("../../images/features/disrupt/grid/panels/augmented-reality.png")
-        }
-      }
       .bg-container {
         position: absolute;
         left: 4px;
@@ -266,27 +256,33 @@ $gridTop: 0;
             }
             .title {
               font-family: "proxima-nova", sans-serif;
-              font-size: 3em;
-              letter-spacing: 0.5em;
               text-align: center;
               text-transform: uppercase;
               margin-bottom: 5%;
               color: $orange;
-              @media only screen and (max-width: 650px) {
-                font-size: 2em;
+              @media only screen and (min-width: 1201px) {
+                font-size: 2.5em;
+                letter-spacing: 0.5em;
+                padding-left: 0.5em;
+                margin-left: -0.5em;
+                line-height: 1em;
+              }
+              @media only screen and (max-width: 1200px) {
+                font-size: 3vw;
+                letter-spacing: 1.5vw;
+                padding-left: 1.5vw;
+                margin-left: -1.5vw;
+                line-height: 3vw;
               }
             }
             .description {
-              @media only screen and (max-width: 425px) {
-                font-size: 0.8em;
+              @media only screen and (min-width: 1201px) {
+                font-size: 0.94em;
+                line-height: 1.5em;
               }
-            }
-            .links {
-              @media only screen and (max-width: 425px) {
-                font-size: 0.8em;
-              }
-              ul {
-                list-style: none;
+              @media only screen and (max-width: 1200px) {
+                font-size: 1.2vw;
+                line-height: 2vw;
               }
             }
             .image {
@@ -332,7 +328,10 @@ $gridTop: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   box-shadow: 0px -2px 7px;
   padding: 0px 26px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   ul, ol {
+    text-align: center;
     margin: 0 auto;
     li {
       display: inline-block;
@@ -401,7 +400,6 @@ header {
         position: absolute;
         width: 100%;
         top: 50%;
-        transform: translateY(-50%);
         text-align: center;
         h1 {
           font-family: "proxima-nova", sans-serif;
@@ -509,6 +507,10 @@ article {
     &:hover {
       background:#83838E;
     }
+    @media only screen and (max-width: 600px) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &.right-align {
@@ -544,13 +546,16 @@ article {
       }
       h3 {
         font-family: "proxima-nova", sans-serif;
-        font-size: 2em;
-        font-size: 3vw;
-        letter-spacing: 0.3em;
-        margin-bottom: 0.3em;
         text-transform: uppercase;
-        @media only screen and (min-width: 1200px) {
+        @media only screen and (min-width: 1201px) {
           font-size: 2em;
+          letter-spacing: 0.5em;
+          margin-bottom: 0.3em;
+        }
+        @media only screen and (max-width: 1200px) {
+          font-size: 2.7vw;
+          letter-spacing: 1.3vw;
+          margin-bottom: 0.5vw;
         }
       }
     }
@@ -578,10 +583,17 @@ article {
         .caption {
           text-transform: uppercase;
           font-family: "proxima-nova", sans-serif;
-          font-size: 0.9em;
-          letter-spacing: 0.4em;
           color: $lightgray;
-          margin: 0.4em;
+          @media only screen and (min-width: 1201px) {
+            font-size: 0.9em;
+            letter-spacing: 0.4em;
+            margin: 0.4em;
+          }
+          @media only screen and (max-width: 1200px) {
+            font-size: 1.2vw;
+            letter-spacing: 0.45vw;
+            margin: 0.45vw;
+          }
         }
       }
     }
@@ -601,21 +613,6 @@ article {
 }
 
 
-/* ===== Right Side Images ===== */
-
-.right-side {
-  .image-container {
-    width: 100%;
-    height: auto;
-    .caption {
-      margin-top: 5px;
-      font-size: 85%;
-      color: $gray;
-    }
-  }
-}
-
-
 /* ===== Footer ===== */
 
 #bottom-nav {
@@ -627,6 +624,12 @@ article {
   background-color: white;
   opacity: 0;
   pointer-events: none;
+  @media only screen and (max-width: 850px) {
+    height: 50px;
+  }
+  @media only screen and (max-width: 500px) {
+    height: 30px;
+  }
   .link-fill {
     position: absolute;
     top: 0;
@@ -638,67 +641,72 @@ article {
     float: right;
     font-family: "proxima-nova", sans-serif;
     text-transform: uppercase;
-    padding-top: 1.1em;
+    padding-top: 1.2em;
+    @media only screen and (min-width: 1201px) {
+      .next-part {
+        font-size: 0.9em;
+        letter-spacing: 0.6em;
+        padding-right: 0.8em;
+      }
+      .title {
+        font-size: 1.5em;
+        letter-spacing: 0.8em;
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      .next-part {
+        font-size: 1.2vw;
+        letter-spacing: 0.75vw;
+        padding-right: 0.9vw;
+      }
+      .title {
+        font-size: 2vw;
+        letter-spacing: 1.6vw;
+      }
+    }
     .next-part {
-      font-size: 0.8rem;
-      letter-spacing: 0.6rem;
-      padding-right: 0.8rem;
       text-align: right;
       color: $lightgray;
     }
-    .title {
-      font-size: 1.3rem;
-      letter-spacing: 0.8rem;
+    @media only screen and (max-width: 850px) {
+      padding-top: 0.8em;
+    }
+    @media only screen and (max-width: 500px) {
+      padding-top: 0.5em;
     }
   }
   .arrow {
     float: right;
-    width: 70px;
-    height: 70px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    transform: rotate(180deg);
+    @media only screen and (min-width: 1201px) {
+      width: 70px;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 70px;
+    }
+    @media only screen and (max-width: 850px) {
+      width: 50px;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 30px;
+    }
     &#one {
-      background-image: image-url("../../images/features/disrupt/buttons/next-orange.png");
+      background-image: image-url("../../images/features/disrupt/grid/buttons/left-orange.png");
     }
     &#two {
-      background-image: image-url("../../images/features/disrupt/buttons/next-pink.png");
+      background-image: image-url("../../images/features/disrupt/grid/buttons/left-pink.png");
     }
     &#three {
-      background-image: image-url("../../images/features/disrupt/buttons/next-purple.png");
+      background-image: image-url("../../images/features/disrupt/grid/buttons/left-purple.png");
     }
     &#four {
-      background-image: image-url("../../images/features/disrupt/buttons/next-blue.png");
+      background-image: image-url("../../images/features/disrupt/grid/buttons/left-blue.png");
     }
     &#five {
-      background-image: image-url("../../images/features/disrupt/buttons/next-teal.png");
-    }
-  }
-  @media only screen and (max-width: 850px) {
-    .text-container {
-      padding-top: 1.4em;
-      .next-part {
-        font-size: 0.5em;
-        letter-spacing: 0.3em;
-        padding-right: 0.5em;
-      }
-      .title {
-        font-size: 1em;
-        letter-spacing: 0.5em;
-      }
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    .text-container {
-      padding-top: 1.7em;
-      .next-part {
-        font-size: 0.2em;
-        letter-spacing: 0.1em;
-        padding-right: 0.2em;
-      }
-      .title {
-        font-size: 0.7em;
-        letter-spacing: 0.3em;
-      }
+      background-image: image-url("../../images/features/disrupt/grid/buttons/left-teal.png");
     }
   }
 }
@@ -800,7 +808,6 @@ article {
 
   .section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
     font-size: 1.2em;
-    padding: 0px 20px;
     @media only screen and (max-width: 600px) {
       font-size: 0.8em
     }
