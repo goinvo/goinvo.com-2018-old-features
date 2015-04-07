@@ -164,8 +164,8 @@ $gridTop: 0;
     }
     .nav-button {
       position: absolute;
-      top: calc(50% - 5%);
-      width: 12%;
+      top: 45%;
+      width: 3%;
       height: auto;
       z-index: 999;
       background-repeat: no-repeat;
@@ -192,18 +192,18 @@ $gridTop: 0;
         content: "";
       }
       &.prev {
-        left: 5px;
+        left: 1.75%;
       }
       &.next {
-        right: 5px;
+        right: 1.75%;
         transform: rotate(180deg);
       }
     }
     .close {
       position: absolute;
-      top: 5px;
-      right: 5px;
-      width: 10%;
+      top: 1.75%;
+      right: 1.75%;
+      width: 4%;
       height: auto;
       z-index: 999;
       background-repeat: no-repeat;
@@ -641,11 +641,13 @@ article {
     height: 100%;
   }
   .text-container {
-    float: right;
+    position: absolute;
     font-family: "proxima-nova", sans-serif;
     text-transform: uppercase;
     padding-top: 0.95em;
+    top: 0px;
     @media only screen and (min-width: 1201px) {
+      right: 50px;
       .next-part {
         font-size: 0.9em;
         letter-spacing: 0.6em;
@@ -657,6 +659,7 @@ article {
       }
     }
     @media only screen and (max-width: 1200px) {
+      right: 50px;
       .next-part {
         font-size: 1.2vw;
         letter-spacing: 0.75vw;
@@ -666,6 +669,12 @@ article {
         font-size: 2vw;
         letter-spacing: 1.6vw;
       }
+    }
+    @media only screen and (max-width: 850px) {
+      right: 32px;
+    }
+    @media only screen and (max-width: 500px) {
+      right: 12px;
     }
     .next-part {
       text-align: right;
@@ -686,22 +695,33 @@ article {
     }
   }
   .arrow {
-    float: right;
-    height: 100%;
+    position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(180deg);
-    @media only screen and (min-width: 1201px) {
-      width: 70px;
+    @media only screen and (min-width: 1200px) {
+      width: 14px;
+      height: 42px;
+      right: 25px;
+      top: 12px;
     }
     @media only screen and (max-width: 1200px) {
-      width: 70px;
+      width: 14px;
+      height: 42px;
+      right: 25px;
+      top: 12px;
     }
     @media only screen and (max-width: 850px) {
-      width: 50px;
+      width: 12px;
+      height: 36px;
+      right: 14px;
+      top: 5px;
     }
     @media only screen and (max-width: 500px) {
-      width: 30px;
+      width: 6px;
+      height: 18px;
+      right: 6px;
+      top: 5px;
     }
     &#one {
       background-image: image-url("../../images/features/disrupt/grid/buttons/left-orange.png");

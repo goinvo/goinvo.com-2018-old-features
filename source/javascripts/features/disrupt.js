@@ -25,7 +25,7 @@ $(document).ready(function(event){
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   $('.social-container').hide().delay(6000).fadeIn(6000);
   firstTitle.css({
-    "letter-spacing" : "0.5em",
+    "letter-spacing" : "0.6em",
     "opacity" : "0"
   });
   firstTitle.delay(2000).animate({
