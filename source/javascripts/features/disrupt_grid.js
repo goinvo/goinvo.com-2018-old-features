@@ -8,7 +8,7 @@ function animateEntrance(elements) {
 
     setTimeout(function() {
       div.fadeIn();
-    }, i*100);
+    }, i*75);
   });
 }
 

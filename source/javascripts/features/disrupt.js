@@ -1,6 +1,7 @@
 $(document).ready(function(event){
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
+  var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
 
   // Vars for scroll fades
@@ -21,7 +22,8 @@ $(document).ready(function(event){
 
   $('.container.content').css("background-color", colors[page].top);
 
-  firstVideo.css("margin-top", articleNav.height());
+  firstVideo.css("margin-top", articleNav.height() + siteNav.height());
+  
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   $('.social-container').hide().delay(6000).fadeIn(6000);
   firstTitle.css({
@@ -69,6 +71,7 @@ $(document).ready(function(event){
           }
         ]
       });
+      $('#grid-section').css("margin-bottom", secondVideo.height());
     } else {
       setTimeout(videosLoaded, 100);
     }
@@ -76,11 +79,7 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
-    if (articleNav.is(":visible")) {
-      firstVideo.css("margin-top", articleNav.height());
-    } else {
-      firstVideo.css("margin-top", 0);
-    }
+    firstVideo.css("margin-top", articleNav.height() + siteNav.height());
 
     // Recalc for scroll fades
     windowHeight = $(window).height();

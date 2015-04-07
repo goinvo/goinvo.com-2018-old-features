@@ -28,7 +28,7 @@ $gridTop: 0;
   background-color: $gridgray !important;
   #grid-section {
     width: 80%;
-    margin: 0 10%;
+    margin: 0 10% 15% 10%;
     padding: 2em 0;
   }
 }
@@ -166,23 +166,28 @@ $gridTop: 0;
       position: absolute;
       top: 45%;
       width: 3%;
-      height: auto;
+      height: 9%;
       z-index: 999;
-      background-repeat: no-repeat;
-      background-size: contain;
       transition: opacity 250ms ease-in-out;
       opacity: 0.8 !important;
+      -webkit-transition: opacity $animateSpeed;
+      -moz-transition: opacity $animateSpeed;
+      -o-transition: opacity $animateSpeed;
+      -ms-transition: opacity $animateSpeed;
+      transition: opacity $animateSpeed;
+      background-repeat: no-repeat;
+      background-size: contain;
       &[data-row="1"] {
-        content: url("../../images/features/disrupt/grid/buttons/left-teal.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/left-teal.png");
       }
       &[data-row="2"] {
-        content: url("../../images/features/disrupt/grid/buttons/left-purple.png");
+         background-image: image-url("../../images/features/disrupt/grid/buttons/left-purple.png");
       }
       &[data-row="3"] {
-        content: url("../../images/features/disrupt/grid/buttons/left-blue.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/left-blue.png");
       }
       &[data-row="4"] {
-        content: url("../../images/features/disrupt/grid/buttons/left-pink.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/left-pink.png");
       }
       &:hover {
         opacity: 1 !important;
@@ -204,31 +209,31 @@ $gridTop: 0;
       top: 1.75%;
       right: 1.75%;
       width: 4%;
-      height: auto;
+      height: 5%;
       z-index: 999;
-      background-repeat: no-repeat;
-      background-size: contain;
       opacity: 0.8;
       -webkit-transition: opacity $animateSpeed;
       -moz-transition: opacity $animateSpeed;
       -o-transition: opacity $animateSpeed;
       -ms-transition: opacity $animateSpeed;
       transition: opacity $animateSpeed;
+      background-repeat: no-repeat;
+      background-size: contain;
       &:hover {
         cursor: pointer;
         opacity: 1;
       }
       &[data-row="1"] {
-        content: url("../../images/features/disrupt/grid/buttons/x-teal.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/x-teal.png");
       }
       &[data-row="2"] {
-        content: url("../../images/features/disrupt/grid/buttons/x-purple.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/x-purple.png");
       }
       &[data-row="3"] {
-        content: url("../../images/features/disrupt/grid/buttons/x-blue.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/x-blue.png");
       }
       &[data-row="4"] {
-        content: url("../../images/features/disrupt/grid/buttons/x-pink.png");
+        background-image: image-url("../../images/features/disrupt/grid/buttons/x-pink.png");
       }
     }
     #slides-container {
@@ -400,6 +405,7 @@ header {
         position: absolute;
         width: 100%;
         top: 50%;
+        transform: translateY(-50%);
         text-align: center;
         h1 {
           font-family: "proxima-nova", sans-serif;
