@@ -21,22 +21,13 @@ $(document).ready(function(event){
   ];
 
   $('.container.content').css("background-color", colors[page].top);
+  firstVideo.css("background-color", colors[page].top);
 
   firstVideo.css("margin-top", articleNav.height() + siteNav.height());
   
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
-  $('.social-container').hide().delay(6000).fadeIn(6000);
-  firstTitle.css({
-    "letter-spacing" : "0.6em",
-    "opacity" : "0"
-  });
-  firstTitle.delay(2000).animate({
-    "letter-spacing" : "0.7em",
-    "opacity" : "1"
-  }, {
-    duration: 12000
-  });
-
+  $('.social-container').hide();
+  
   // ===== Initialization =====
   $("video").each(function() {
     this.volume = 0.5;
@@ -45,11 +36,30 @@ $(document).ready(function(event){
   var vid1 = document.getElementById('top').getElementsByTagName('video')[0];
   var vid2 = document.getElementById('bottom').getElementsByTagName('video')[0];
 
+  firstVideo.css("opacity", 0);
+
   (function videosLoaded() {
+    if (vid1.readyState === 4) {
+      firstVideo.css("opacity", 1);
+      $('.social-container').delay(6000).fadeIn(6000);
+      firstTitle.css({
+        "letter-spacing" : "0.6em",
+        "opacity" : "0"
+      });
+      firstTitle.delay(2000).animate({
+        "letter-spacing" : "0.7em",
+        "opacity" : "1"
+      }, {
+        duration: 12000
+      });
+
+    }
+    
     if (vid1.readyState === 4 && vid2.readyState === 4) {
       firstVideoBottom = firstVideo.offset().top + firstVideo.height();
       secondVideoTop = secondVideo.offset().top;
       documentHeight = $(document).height();
+
 
       $('.container.content').colorScroll({
         colors: [
