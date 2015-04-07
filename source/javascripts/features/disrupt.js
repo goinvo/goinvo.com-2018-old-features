@@ -10,6 +10,8 @@ $(document).ready(function(event){
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
 
+  firstVideo.delay(500).css("margin-top", articleNav.height() + siteNav.height());
+
   // Color scroll fading
   var colors = [
     {top: '#0282C1', bottom: '#E68B35'},
@@ -22,8 +24,6 @@ $(document).ready(function(event){
 
   $('.container.content').css("background-color", colors[page].top);
   firstVideo.css("background-color", colors[page].top);
-
-  firstVideo.css("margin-top", articleNav.height() + siteNav.height());
   
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   $('.social-container').hide();
@@ -40,6 +40,7 @@ $(document).ready(function(event){
 
   (function videosLoaded() {
     if (vid1.readyState === 4) {
+      firstVideo.css("margin-top", articleNav.height() + siteNav.height());
       firstVideo.css("opacity", 1);
       $('.social-container').delay(6000).fadeIn(6000);
       firstTitle.css({
