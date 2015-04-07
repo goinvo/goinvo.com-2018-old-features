@@ -54,12 +54,11 @@ $(document).ready(function(event){
       });
 
     }
-    
+
     if (vid1.readyState === 4 && vid2.readyState === 4) {
       firstVideoBottom = firstVideo.offset().top + firstVideo.height();
       secondVideoTop = secondVideo.offset().top;
       documentHeight = $(document).height();
-
 
       $('.container.content').colorScroll({
         colors: [
@@ -110,7 +109,7 @@ $(document).ready(function(event){
 
     //Bottom nav animation
     if (windowBottom > documentHeight - 50) {
-      $('#bottom-nav').animate({
+      $('#bottom-nav').delay(200).animate({
         opacity: 1,
         bottom: "50px"
       }, {
