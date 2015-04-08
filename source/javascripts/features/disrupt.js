@@ -81,7 +81,7 @@ $(document).ready(function(event){
           }
         ]
       });
-      $('#grid-section').css("margin-bottom", secondVideo.height());
+      $('#grid-section').css("margin-bottom", (secondVideo.height() * 0.66));
     } else {
       setTimeout(videosLoaded, 100);
     }
