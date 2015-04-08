@@ -633,10 +633,13 @@ article {
   background-color: white;
   opacity: 0;
   pointer-events: none;
+  @media only screen and (max-width: 1000px) {
+    height: 60px;
+  }
   @media only screen and (max-width: 850px) {
     height: 50px;
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 650px) {
     height: 30px;
   }
   .link-fill {
@@ -665,22 +668,69 @@ article {
       }
     }
     @media only screen and (max-width: 1200px) {
+      padding-top: 0.82em;
       right: 50px;
       .next-part {
-        font-size: 1.2vw;
-        letter-spacing: 0.75vw;
-        padding-right: 0.9vw;
+        font-size: 0.9em;
+        letter-spacing: 0.6em;
+        padding: 0 0.8em 0.4em 0;
       }
       .title {
-        font-size: 2vw;
-        letter-spacing: 1.6vw;
+        font-size: 1.5em;
+        letter-spacing: 0.8em;
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      padding-top: 0.75em;
+      right: 42px;
+      .next-part {
+        font-size: 0.8em;
+        letter-spacing: 0.5em;
+        padding: 0 0.6em 0.3em 0;
+      }
+      .title {
+        font-size: 1.4em;
+        letter-spacing: 0.7em;
       }
     }
     @media only screen and (max-width: 850px) {
+      padding-top: 0.6em;
       right: 32px;
+      .next-part {
+        font-size: 0.6em;
+        letter-spacing: 0.4em;
+        padding: 0 0.6em 0.2em 0;
+      }
+      .title {
+        font-size: 1.3em;
+        letter-spacing: 0.5em;
+      }
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 650px) {
+      padding-top: 0.25em;
       right: 12px;
+      .next-part {
+        font-size: 0.5em;
+        letter-spacing: 0.2em;
+        padding: 0 0.6em 0.1em 0;
+      }
+      .title {
+        font-size: 1em;
+        letter-spacing: 0.4em;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      padding-top: 0.35em;
+      right: 15px;
+      .next-part {
+        font-size: 0.4em;
+        letter-spacing: 0.1em;
+        padding: 0 0.5em 0.05em 0;
+      }
+      .title {
+        font-size: 0.8em;
+        letter-spacing: 0.2em;
+      }
     }
     .next-part {
       text-align: right;
@@ -689,15 +739,6 @@ article {
     }
     .title {
       font-weight: 800;
-    }
-    @media only screen and (max-width: 1200px) {
-      padding-top: 1.2em;
-    }
-    @media only screen and (max-width: 850px) {
-      padding-top: 0.8em;
-    }
-    @media only screen and (max-width: 500px) {
-      padding-top: 0.5em;
     }
   }
   .arrow {
@@ -717,13 +758,19 @@ article {
       right: 25px;
       top: 12px;
     }
-    @media only screen and (max-width: 850px) {
-      width: 12px;
-      height: 36px;
-      right: 14px;
-      top: 5px;
+    @media only screen and (max-width: 1000px) {
+      width: 13px;
+      height: 39px;
+      right: 20px;
+      top: 9px;
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 850px) {
+      width: 10px;
+      height: 30px;
+      right: 14px;
+      top: 9px;
+    }
+    @media only screen and (max-width: 650px) {
       width: 6px;
       height: 18px;
       right: 6px;
