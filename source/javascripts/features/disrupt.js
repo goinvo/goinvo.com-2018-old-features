@@ -29,12 +29,9 @@ $(document).ready(function(event){
   $('.social-container').hide();
   
   // ===== Initialization =====
-  $("video").each(function() {
-    this.volume = 0.5;
-  });
 
-  var vid1 = document.getElementById('top').getElementsByTagName('video')[0];
-  var vid2 = document.getElementById('bottom').getElementsByTagName('video')[0];
+  var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
+  var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
 
   firstVideo.css("opacity", 0);
 
@@ -59,6 +56,7 @@ $(document).ready(function(event){
     if (vid1.readyState === 4 && vid2.readyState === 4) {
       firstVideoBottom = firstVideo.offset().top + firstVideo.height();
       secondVideoTop = secondVideo.offset().top;
+      secondVideoBottom = secondVideoTop + secondVideo.height();
       documentHeight = $(document).height();
 
       $('.container.content').colorScroll({
@@ -77,7 +75,7 @@ $(document).ready(function(event){
           },
           {
             color: colors[page].bottom,
-            position: documentHeight - windowHeight
+            position: secondVideoBottom - windowHeight
           }
         ]
       });
