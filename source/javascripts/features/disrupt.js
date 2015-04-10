@@ -10,7 +10,13 @@ $(document).ready(function(event){
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
 
-  firstVideo.delay(500).css("margin-top", articleNav.height() + siteNav.height());
+  var navOffset = siteNav.height();
+
+  if (articleNav.is(':visible')) {
+    navOffset += articleNav.height();
+  }
+
+  firstVideo.css("margin-top", navOffset);
 
   // Color scroll fading
   var colors = [
@@ -87,7 +93,12 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
-    firstVideo.css("margin-top", articleNav.height() + siteNav.height());
+    navOffset = siteNav.height();
+    if (articleNav.is(':visible')) {
+      navOffset += articleNav.height();
+    }
+
+    firstVideo.css("margin-top", navOffset);
 
     // Recalc for scroll fades
     windowHeight = $(window).height();
