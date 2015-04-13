@@ -46,6 +46,7 @@
       %source{src: '../../videos/disrupt/section-6-header.mp4', type: 'video/mp4'}
       / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
       / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+      = image_tag "../../images/features/disrupt/video_fallbacks/section-6-top.png"
   .title-container
     %h3 Fukushima
     %h3 and Fragility
@@ -86,6 +87,7 @@
       %source{src: '../../videos/disrupt/section-6-footer.mp4', type: 'video/mp4'}
       / %source{src: '../../videos/disrupt/printer.ogg', type: 'video/ogg'}
       / %source{src: '../../videos/disrupt/printer.webm', type: 'video/webm'}
+      = image_tag "../../images/features/disrupt/video_fallbacks/section-6-bottom.png"
 %article#feature-article.disrupt
   %section.article-section#closer
     .section-content
@@ -128,29 +130,26 @@
       %tbody
         %tr
           %td.author
-            Jonathan Follett
-            %br
-            %span.orange Author
+            .container
+              = image_tag "../../images/features/disrupt/credits/jon-follett.png"
         %tr
           %td.designer
-            Brian Liston
-            %br
-            %span.orange Designer
+            .container
+              = image_tag "../../images/features/disrupt/credits/brian-liston.png"
         %tr
           %td.developer
-            Craig McGinley
-            %br
-            %span.orange Developer
+            .container
+              = image_tag "../../images/features/disrupt/credits/craig-mcginley.png"
         %tr
           %td.editor
-            Emily Twaddell
-            %br
-            %span.orange Editor
+            .container
+              = image_tag "../../images/features/disrupt/credits/emily-twaddell.png"
         %tr
           %td.special
-            Special Thanks To:
-            %br
-            %span.orange Expandable Attributions
+            .container
+              Special Thanks To:
+              %br
+              %span.orange Expandable Attributions
     .footer-logo
       .logo
         = image_tag "logo_blue.png"

@@ -27,8 +27,8 @@ $gridTop: 0;
   width: 100%;
   background-color: $gridgray !important;
   #grid-section {
-    width: 80%;
-    margin: 0 10% 15% 10%;
+    width: 60%;
+    margin: 0 20% 15% 20%;
     padding: 2em 0;
   }
 }
@@ -864,25 +864,34 @@ article {
     }
     tr {
       td {
+        padding-bottom: 2em;
+        .container {
+          width: 50%;
+        }
         &.author {
-          padding-left: 0%;
-          width: 100%;
+          .container {
+            padding-left: 0%;
+          }
         }
         &.designer {
-          padding-left: 16%;
-          width: 84%;
+          .container {
+            margin-left: 10%;
+          }
         }
         &.developer {
-          padding-left: 32%;
-          width: 68%;
+          .container {
+            margin-left: 20%;
+          }
         }
         &.editor {
-          padding-left: 48%;
-          width: 52%;
+          .container {
+            margin-left: 35%;
+          }
         }
         &.special {
-          padding-left: 64%;
-          width: 36%;
+          .container {
+            margin-left: 64%;
+          }
         }
       }
     }
