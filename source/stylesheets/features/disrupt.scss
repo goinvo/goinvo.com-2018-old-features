@@ -198,17 +198,17 @@ $gridTop: 0;
         content: "";
       }
       &.prev {
-        left: 1.75%;
+        left: 3%;
       }
       &.next {
-        right: 1.75%;
+        right: 3%;
         transform: rotate(180deg);
       }
     }
     .close {
       position: absolute;
-      top: 1.75%;
-      right: 1.75%;
+      top: 3%;
+      right: 3%;
       width: 4%;
       height: 5%;
       z-index: 999;
@@ -248,7 +248,7 @@ $gridTop: 0;
         border: 4px solid;
         .container {
           width: 88%;
-          margin: 6%;
+          margin: 9%;
           vertical-align: middle;
           .column {
             display: inline-block;
@@ -263,33 +263,33 @@ $gridTop: 0;
             }
             .title {
               font-family: "proxima-nova", sans-serif;
-              text-align: center;
+              text-align: left;
               text-transform: uppercase;
               margin-bottom: 5%;
               color: $orange;
               @media only screen and (min-width: 1201px) {
-                font-size: 2.5em;
+                font-size: 1.75em;
                 letter-spacing: 0.5em;
                 padding-left: 0.5em;
                 margin-left: -0.5em;
                 line-height: 1em;
               }
               @media only screen and (max-width: 1200px) {
-                font-size: 3vw;
-                letter-spacing: 1.5vw;
+                font-size: 2.2vw;
+                letter-spacing: 1.3vw;
                 padding-left: 1.5vw;
                 margin-left: -1.5vw;
-                line-height: 3vw;
+                line-height: 2.5vw;
               }
             }
             .description {
               @media only screen and (min-width: 1201px) {
-                font-size: 0.94em;
-                line-height: 1.5em;
+                font-size: 0.67em;
+                line-height: 1.4em;
               }
               @media only screen and (max-width: 1200px) {
-                font-size: 1.2vw;
-                line-height: 2vw;
+                font-size: 0.9vw;
+                line-height: 1.2vw;
               }
             }
             .image {
@@ -891,6 +891,9 @@ article {
         &.special {
           .container {
             margin-left: 64%;
+            @media only screen and (max-width: 1200px) {
+              font-size: 1.3vw;
+            }
           }
         }
       }
