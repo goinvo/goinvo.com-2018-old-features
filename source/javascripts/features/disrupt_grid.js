@@ -78,6 +78,10 @@ $(document).ready(function(event){
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
 
+  if ($(window).width() < 600) {
+    $("#grid-section").css("display", "none");
+  }
+
   layout(panels, grid, gridArea, slideshowContainer);
   var gridHeight = grid.height();
   gridArea.css({height: gridHeight});
@@ -102,6 +106,11 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
+    if ($(window).width() < 600) {
+      $("#grid-section").css("display", "none");
+    } else {
+      $("#grid-section").css("display", "block");
+    }
     layout(panels, grid, gridArea, slideshowContainer);
     var gridHeight = grid.height();
     gridArea.css({height: gridHeight });

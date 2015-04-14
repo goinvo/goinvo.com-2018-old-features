@@ -372,6 +372,17 @@ $gridTop: 0;
   }
 }
 
+.image-container {
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 #tomato-vid {
   width: 80%;
   max-width: 1050px;
@@ -516,7 +527,7 @@ article {
   width: 100%;
   height: auto;
   max-width: 1050px;
-  margin: auto;
+  margin: auto auto 3em auto;
   padding: 10px;
   @media only screen and (max-width: 1200px) {
     width: 85%;
@@ -590,6 +601,12 @@ article {
           letter-spacing: 1.1vw;
           margin-bottom: 0.5vw;
           line-height: 3.6vw;
+        }
+        @media only screen and (max-width: 700px) {
+          font-size: 0.8em;
+          letter-spacing: 0.5em;
+          margin-bottom: 0.1em;
+          line-height: 1.2em;
         }
       }
     }
@@ -856,7 +873,6 @@ article {
     margin: 0 auto;
     width: 100%;
     margin: 40px auto 20px auto;
-    width: 100%;
     max-width: 1050px;
     @media only screen and (max-width: 1200px) {
       width: 85%;
@@ -956,9 +972,6 @@ article {
 
   .section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
     font-size: 1.2em;
-    @media only screen and (max-width: 600px) {
-      font-size: 0.8em
-    }
   }
 
   .main-header {
