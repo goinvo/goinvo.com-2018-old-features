@@ -38,13 +38,11 @@
 	.title
 		- if randNum === 1
 			.actual-title Idea to Patient
-			.actual-content We design emerging technology from your R&D lab to your customers.
 		- if randNum === 2
 			.actual-title Idea to Hospital
-			.actual-content We design emerging technology from your R&D lab to your customers.
 		- if randNum === 3
 			.actual-title Idea to Doctor
-			.actual-content We design emerging technology from your R&D lab to your customers.
+		.actual-content We design emerging technology from<br>your R&D lab to your customers.
 		.bottom-image-wrapper
 			%img.bottom-image{:src => "/images/home/homepage-image-0" + randNum.to_s + ".png"}
 .contact-container{:style => "background-image: url('/images/home/homepage-contact-0" + randNum.to_s + ".png')"}
