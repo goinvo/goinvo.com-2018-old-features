@@ -153,8 +153,15 @@ a {
 	}
 	
 	.title {
-		top: 5%;
+		top: 0;
 		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.actual-title, .actual-content {
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 	
 	.actual-title {
@@ -180,8 +187,13 @@ a {
 		}
 	}
 	
-	img.bottom-image {
-		margin: 0 auto;		
+	.bottom-image-wrapper {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		img.bottom-image {
+			margin: 0 auto;		
+		}
 	}
 }
 

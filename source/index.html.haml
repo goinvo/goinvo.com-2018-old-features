@@ -45,7 +45,8 @@
 		- if randNum === 3
 			.actual-title Idea to Doctor
 			.actual-content We design emerging technology from your R&D lab to your customers.
-		%img.bottom-image{:src => "/images/home/homepage-image-0" + randNum.to_s + ".png"}
+		.bottom-image-wrapper
+			%img.bottom-image{:src => "/images/home/homepage-image-0" + randNum.to_s + ".png"}
 .contact-container{:style => "background-image: url('/images/home/homepage-contact-0" + randNum.to_s + ".png')"}
 	.actual-button Contact us today to discuss your next healthcare project
 	.sub-title We'll respond within 2 business hours.
