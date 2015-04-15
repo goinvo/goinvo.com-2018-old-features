@@ -25,7 +25,7 @@ $(document).ready(function(event){
   }
 
   function sidebarImages() {
-    if ($(window).width() < 700) {
+    if ($(window).width() < 800) {
       sideImages.removeClass("right");
       sideImages.addClass("center");
     } else {
@@ -35,7 +35,6 @@ $(document).ready(function(event){
   }
 
   function topVidMargin() {
-    console.log("hit");
     if (articleNav.is(':visible')) {
       navOffset += articleNav.height();
     }

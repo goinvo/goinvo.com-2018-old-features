@@ -53,13 +53,6 @@ function layout(panels, grid, gridArea, slideshowContainer) {
 
   grid.css({width: gridWidth, height: gridHeight, 'margin-left': margin})
   slideshowContainer.css({width: gridWidth, height: gridHeight, 'margin-left': margin});
-
-  var slides = slideshowContainer.find('.slide');
-  var imageWidth = slides.find('.column.right').width();
-
-  slides.each(function() {
-    $(this).find('.container').find('.image').css({width: imageWidth, height: imageWidth});
-  })
 }
 
 $(document).ready(function(event){
