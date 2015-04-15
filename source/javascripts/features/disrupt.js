@@ -3,6 +3,7 @@ $(document).ready(function(event){
   var documentHeight = $(document).height();
   var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
+  var siteFooter = $('#main-footer');
 
   // Vars for scroll fades
   var firstVideo = $('#top');
@@ -175,8 +176,8 @@ $(document).ready(function(event){
     //Bottom nav animation
     if (windowBottom > documentHeight - 50) {
       $('#bottom-nav').delay(200).animate({
-        opacity: 1,
-        bottom: "50px"
+        opacity: "1",
+        bottom: siteFooter.outerHeight()
       }, {
         duration: 500,
         complete: function() {
