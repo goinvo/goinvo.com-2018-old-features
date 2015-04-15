@@ -34,12 +34,7 @@
 		
 - randNum = 1 + rand(3)
 %a#homepage-hero.block.bar{:href => "healthcare"}
-	- if randNum === 1
-		.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png'), linear-gradient(-154deg, #C3746A 7%, #52C247 100%);"}
-	- if randNum === 2
-		.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png'), linear-gradient(-165deg, #5F78B8 2%, #6480C0 26%, #5A8FA5 89%);"}.
-	- if randNum === 3
-		.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png'), linear-gradient(-165deg, #5F78B8 2%, #6480C0 26%, #5A8FA5 89%);"}
+	.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png')"}
 	.title
 		- if randNum === 1
 			.actual-title Idea to Patient
