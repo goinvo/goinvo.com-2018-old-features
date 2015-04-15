@@ -898,6 +898,7 @@ article {
         padding-bottom: 2em;
         .container {
           width: 50%;
+          margin-right: 0;
         }
         &.author {
           .container {
@@ -921,6 +922,7 @@ article {
         }
         &.special {
           .container {
+            width: 36%;
             margin-left: 64%;
             @media only screen and (max-width: 1200px) {
               font-size: 1.3vw;
