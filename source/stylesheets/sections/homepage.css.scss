@@ -180,7 +180,30 @@ a {
 		position: absolute;
 		bottom: 0;
 		img.bottom-image {
-			margin: 0 auto;		
+			margin: 0 auto;	
+			
+			&.mobile-home-image{
+				display: none;
+			}
+		}
+		
+		&#homepageImage1 {
+			
+			img {
+				
+			}
+		}
+		
+		&#homepageImage2 {
+			img {
+				
+			}
+		}
+		
+		&#homepageImage3 {
+			img {
+				
+			}
 		}
 	}
 }
