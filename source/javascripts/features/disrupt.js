@@ -4,15 +4,23 @@ $(document).ready(function(event){
   var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
   var siteFooter = $('#main-footer');
-
-  // Vars for scroll fades
   var firstVideo = $('#top');
   var secondVideo = $('#bottom');
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
-
   var navOffset = siteNav.height();
+  var colors = [
+    {top: '#0282C1', bottom: '#E68B35'},
+    {top: '#E68B35', bottom: '#DD2E64'},
+    {top: '#DD2E64', bottom: '#82659B'},
+    {top: '#82659B', bottom: '#0282C1'},
+    {top: '#0282C1', bottom: '#0396AA'},
+    {top: '#0396AA', bottom: '#82659B'}
+  ];
+  var sideImages = $('.images.sidebar');
+  var mainBackground = $('.container.content');
 
+  // Check if we can play videos
   function videoSupport() {
     var v = document.createElement('video');
 
@@ -25,6 +33,7 @@ $(document).ready(function(event){
     }
   }
 
+  // Make right side images center if small screen
   function sidebarImages() {
     if ($(window).width() < 800) {
       sideImages.removeClass("right");
@@ -35,53 +44,40 @@ $(document).ready(function(event){
     }
   }
 
+  // Add margin to top video equal to total nav heights
   function topVidMargin() {
     if (articleNav.is(':visible')) {
       navOffset += articleNav.height();
     }
   }
 
+
+  // ===== Initialization =====
   Typekit.load({
     active: function() {
       topVidMargin();
       firstVideo.css("margin-top", navOffset);
     }
   });
-
-  // Make right side images center if small screen
-  var sideImages = $('.images.sidebar');
   sidebarImages();
 
-  if ($(window).width() < 600 || !videoSupport()) {
-    $("body").find(".video-container").css("display", "none");
-    $("body").find(".image-container").css("display", "block");
-  }
-
-  // Color scroll fading
-  var colors = [
-    {top: '#0282C1', bottom: '#E68B35'},
-    {top: '#E68B35', bottom: '#DD2E64'},
-    {top: '#DD2E64', bottom: '#82659B'},
-    {top: '#82659B', bottom: '#0282C1'},
-    {top: '#0282C1', bottom: '#0396AA'},
-    {top: '#0396AA', bottom: '#82659B'}
-  ];
-
-  $('.container.content').css("background-color", colors[page].top);
+  mainBackground.css("background-color", colors[page].top);
   firstVideo.css("background-color", colors[page].top);
   
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   $('.social-container').hide();
-  
-  // ===== Initialization =====
-
   var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
   var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
-
   firstVideo.css("opacity", 0);
 
-  if ($(window).width() > 600 && videoSupport()) {
+  if ($(window).width() < 800 || !videoSupport()) {
+    $("body").find(".video-container").css("display", "none");
+    $("body").find(".image-container").css("display", "block");
+  }
+
+  if ($(window).width() > 800 && videoSupport()) {
     (function videosLoaded() {
+      console.log("function call");
       if (vid1.readyState === 4) {
         navOffset = siteNav.height();
         topVidMargin();
@@ -106,7 +102,7 @@ $(document).ready(function(event){
         secondVideoBottom = secondVideoTop + secondVideo.height();
         documentHeight = $(document).height();
 
-        $('.container.content').colorScroll({
+        mainBackground.colorScroll({
           colors: [
             {
               color: colors[page].top,
@@ -128,7 +124,7 @@ $(document).ready(function(event){
         });
         $('#grid-section').css("margin-bottom", (secondVideo.height() * 0.66));
       } else {
-        setTimeout(videosLoaded, 100);
+        setTimeout(videosLoaded, 500);
       }
     }());
   } else {
@@ -146,8 +142,9 @@ $(document).ready(function(event){
       duration: 12000
     });
     $('#grid-section').css("margin-bottom", (secondVideo.height() * 0.66));
-    $('.container.content').css("background-color", "white");
+    mainBackground.css("background-color", "white");
   }
+
 
   // ===== Resize event =====
   $(window).resize(function() {
@@ -163,13 +160,11 @@ $(document).ready(function(event){
     secondVideoTop = secondVideo.offset().top;
   });
 
+
   // ===== Scroll event =====
   $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
     var windowBottom = scrollTop + windowHeight;
-    documentHeight = $(document).height();
-    firstVideoBottom = firstVideo.offset().top + firstVideo.height();
-    secondVideoTop = secondVideo.offset().top;
     var firstVideoCalc = ((firstVideoBottom - scrollTop) / firstVideoBottom);
     var secondVideoCalc = ((windowBottom-secondVideoTop) / (documentHeight - secondVideoTop));
 
