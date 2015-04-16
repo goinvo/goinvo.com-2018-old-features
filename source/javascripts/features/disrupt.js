@@ -192,7 +192,11 @@ $(document).ready(function(event){
     }
 
     if ( secondVideoCalc >= 0 ) {
-      secondVideo.css({'opacity': secondVideoCalc });
+      var extra = 0;
+      if (page === 5) {
+        extra = 0.3;
+      }
+      secondVideo.css({'opacity': secondVideoCalc + extra });
     }
   });
 
