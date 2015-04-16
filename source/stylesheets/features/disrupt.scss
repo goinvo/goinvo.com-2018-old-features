@@ -896,72 +896,57 @@ article {
     color: white;
     max-width: 1200px;
     margin: 0 auto;
+    font-weight: 400;
   }
 
-  .orange {
-    color: $orange;
-  }
-
-  table {
-    margin: 0 auto;
-    width: 100%;
-    margin: 40px auto 20px auto;
+  .main-credits {
+    list-style: none;
+    width: 80%;
+    margin: auto;
     max-width: 1050px;
-    @media only screen and (max-width: 1200px) {
-      width: 85%;
-      max-width: 1050px;
-    }
-    tr {
-      td {
-        padding-bottom: 2em;
-        .container {
-          width: 50%;
-          margin-right: 0;
+    li {
+      width: 50%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &.designer {
+        margin-left: 10%;
+      }
+      &.developer {
+        margin-left: 20%;
+      }
+      &.editor {
+        margin-left: 35%;
+        @media only screen and (max-width: 800px) {
+          margin-top: 5%;
         }
-        &.author {
-          .container {
-            padding-left: 0%;
-          }
-        }
-        &.designer {
-          .container {
-            margin-left: 10%;
-          }
-        }
-        &.developer {
-          .container {
-            margin-left: 20%;
-          }
-        }
-        &.editor {
-          .container {
-            margin-left: 35%;
-          }
-        }
-        &.special {
-          .container {
-            width: 36%;
-            margin-left: 64%;
-            @media only screen and (max-width: 1200px) {
-              font-size: 1.3vw;
-            }
-            @media only screen and (max-width: 800px) {
-              width: 50%;
-              margin-left: 34% !important;
-              font-size: 1.8vw;
-            }
-          }
+      }
+      &.special {
+        width: 36%;
+        margin-left: 64%;
+        @media only screen and (max-width: 800px) {
+          margin-left: 39% !important;
+          width: 55%;
         }
       }
     }
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.3vw;
+    }
     @media only screen and (max-width: 800px) {
-      tr {
-        td {
-          .container {
-            width: 75%;
-            margin-left: 5% !important;
-          }
-        }
+      font-size: 2.1vw;
+      li {
+        width: 100%;
+        margin-left: 0 !important;
+      }
+    }
+    .extra-credits {
+      list-style: none;
+      line-height: 2em;
+      li {
+        width: 100%;
+        color: $orange;
       }
     }
   }
