@@ -919,7 +919,7 @@ article {
       &.editor {
         margin-left: 35%;
         @media only screen and (max-width: 800px) {
-          margin-top: 5%;
+          margin-top: 3.5em;
         }
       }
       &.special {
@@ -930,12 +930,15 @@ article {
           width: 55%;
         }
       }
+      &.main {
+        margin-bottom: 2.5em;
+      }
     }
     @media only screen and (max-width: 1200px) {
       font-size: 1.3vw;
     }
     @media only screen and (max-width: 800px) {
-      font-size: 2.1vw;
+      font-size: 2.2vw;
       li {
         width: 100%;
         margin-left: 0 !important;
