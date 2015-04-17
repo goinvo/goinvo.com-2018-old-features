@@ -66,11 +66,11 @@ $(document).ready(function(event){
   var nextButton = $('#slideshow-container .next');
   var transitioning = false;
   var slideshowOpen = false;
-  var bottomNavState = 'closed';
-
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
 
+
+  // ===== Initialization =====
   if ($(window).width() < 800) {
     $("#grid-section").css("display", "none");
   }
@@ -91,18 +91,20 @@ $(document).ready(function(event){
   var slickContainer = slickList.parent();
   slickList.height(slickContainer.height());
 
+
   // ===== Resize event =====
   $(window).resize(function() {
     if ($(window).width() < 800) {
       $("#grid-section").css("display", "none");
     } else {
       $("#grid-section").css("display", "block");
+      layout(panels, grid, gridArea, slideshowContainer);
+      var gridHeight = grid.height();
+      gridArea.css({height: gridHeight });
+      slickList.height(slickContainer.height());
     }
-    layout(panels, grid, gridArea, slideshowContainer);
-    var gridHeight = grid.height();
-    gridArea.css({height: gridHeight });
-    slickList.height(slickContainer.height());
   });
+
 
   // ===== Scroll event =====
   $(window).scroll(function() {
@@ -113,6 +115,7 @@ $(document).ready(function(event){
       animateEntrance(panels);
     }
   });
+
 
   // ===== Grid panels hover states =====
   function mouseIn() {

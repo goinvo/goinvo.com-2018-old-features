@@ -169,7 +169,7 @@ $gridTop: 0;
       height: 9%;
       z-index: 999;
       transition: opacity 250ms ease-in-out;
-      opacity: 0.2 !important;
+      opacity: 0.1 !important;
       -webkit-transition: opacity $animateSpeed;
       -moz-transition: opacity $animateSpeed;
       -o-transition: opacity $animateSpeed;
@@ -177,7 +177,7 @@ $gridTop: 0;
       transition: opacity $animateSpeed;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: background-image 250ms ease-in-out, opacity 100ms ease-in-out;
+      transition: background-image 250ms ease-in-out, opacity 150ms ease-in-out;
       filter: grayscale(100%);
       &[data-row="1"] {
         background-image: image-url("../../images/features/disrupt/grid/buttons/left-teal.png");
@@ -214,7 +214,7 @@ $gridTop: 0;
       width: 4%;
       height: 5%;
       z-index: 999;
-      opacity: 0.2;
+      opacity: 0.1;
       -webkit-transition: opacity $animateSpeed;
       -moz-transition: opacity $animateSpeed;
       -o-transition: opacity $animateSpeed;
@@ -222,7 +222,7 @@ $gridTop: 0;
       transition: opacity $animateSpeed;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: background-image 250ms ease-in-out, opacity 100ms ease-in-out;
+      transition: background-image 250ms ease-in-out, opacity 150ms ease-in-out;
       filter: grayscale(100%);
       &:hover {
         cursor: pointer;
@@ -409,6 +409,7 @@ $gridTop: 0;
     height: auto;
   }
 }
+
 
 /* ===== Article ===== */
 
@@ -989,78 +990,9 @@ article {
   }
 }
 
-.scroll-wrapper {
-  overflow: hidden;
-  margin-bottom: 2em;
-  transition: height 10ms ease-in-out;
-  .full {
-    margin-bottom: 0px;
-  }
-
-  &.fix-me {
-    position: fixed;
-    width: 100%;
-    max-width: 1199px;
-    z-index: 1000;
-  }
-
-  .scroll-empty {
-    height: 0;
-    transition: height 10ms ease-in-out;
-  }
-
-  .video.full, img, div, .media-block.wide img{
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .navigation {
-    // display: none;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
     font-size: 1.2em;
-  }
-
-  .main-header {
-    padding-bottom: 4em;
-    .header-contents {
-      padding-bottom: 62px;
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-top: calc(5.5em + 220px);
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.25em;
-      }
-
-      .email, .author {
-        font-size: 1em;
-      }
-    }
-  }
-
-  .aside-media .video, .slider .video {
-    margin-right: 20px;
-  }
-
-  .aside-media .caption, .aside-media .slider-aside, .slider .caption, .slider .slider-aside {
-    width: 27%;
-  }
-
-  .media-block.relative .axiom-link {
-    font-size: .65em;
-  }
-
-  .contributions table td {
-    font-size: 0.725em;
   }
 
   .contributions .footer-logo {
