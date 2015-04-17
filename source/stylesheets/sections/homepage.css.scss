@@ -147,33 +147,95 @@ a {
 	min-height: 578px;
 	
 	.photo-container {
-			//background-image: image-url('home/hp-1.png');
-			min-height: 578px;
+		//background-image: image-url('home/hp-1.png');
+		min-height: 578px;
+		background-blend-mode: multiply;
 	}
 	
+	.title {
+		top: 0;
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.actual-title, .actual-content {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 	
 	.actual-title {
-		font-size: 75px;	
+		font-size: 65px;	
 	}
 	
 	.actual-content {
-		font-size: 40px;
-		max-width: 593px;
+		font-size: 30px;
+		line-height: 35px;
 		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 	
-	.actual-button {
-		margin-top: 25px;
-		border: 1px solid #ffffff;
-		border-radius: 5px;
-		display: inline-block;
-		padding: 10px;
-		transition: 350ms;
-		
-		&:hover {
-			transform: scale(1.1,1.1);
-			background: rgba(0,0,0,.2);	
+	.bottom-image-wrapper {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		img.bottom-image {
+			margin: 0 auto;	
+			
+			&.mobile-home-image{
+				display: none;
+			}
 		}
+		
+		&#homepageImage1 {
+			
+			img {
+				
+			}
+		}
+		
+		&#homepageImage2 {
+			img {
+				
+			}
+		}
+		
+		&#homepageImage3 {
+			img {
+				
+			}
+		}
+	}
+}
+
+.actual-button {
+	margin-top: 25px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px;
+	transition: 350ms;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1,1.1);
+		background: rgba(0,0,0,.2);	
+	}
+}
+
+.contact-container {
+	background-size: cover;	
+	text-align: center;
+	padding-bottom: 1em;
+	color: white;
+	.actual-button {
+		padding-Left: 30px;
+		padding-right: 30px;
+		font-size: 23px;
+	}
+	
+	.sub-title {
+		margin-top: .65em;	
 	}
 }
 
