@@ -52,7 +52,7 @@ $(document).ready(function(event){
   // Add margin to top video equal to total nav heights
   function topVidMargin() {
     navOffset = siteNav.height();
-    if (articleNav.is(':visible')) {
+    if (!articleNav.hasClass('mobile')) {
       navOffset += articleNav.height();
     }
   }
@@ -114,6 +114,7 @@ $(document).ready(function(event){
   if ($(window).width() < 800 || !videoSupport()) {
     $(".video-container").css("display", "none");
     $(".image-container").css("display", "block");
+    articleNav.addClass("mobile");
   }
 
   // Only applicable for section-4, but need the second video height from this script
@@ -152,6 +153,12 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
+    // Change article nav type
+    if ($(window).width() < 800) {
+      articleNav.addClass("mobile");
+    } else {
+      articleNav.removeClass("mobile");
+    }
     topVidMargin();
     firstVideo.css("margin-top", navOffset);
     sidebarImages();
