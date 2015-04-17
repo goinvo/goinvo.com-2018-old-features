@@ -9,8 +9,6 @@
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
   = javascript_include_tag "jquery.colorscroll.min.js"
   = javascript_include_tag "features/disrupt.js"
-  :javascript
-    try{Typekit.load();}catch(e){}
 - content_for(:worlds_end) do
   = javascript_include_tag "//platform.twitter.com/oct.js"
   :javascript
@@ -42,10 +40,9 @@
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
   .video-container
-    %video{autoplay: true, muted: true, loop: true}
+    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_fallbacks/section-5-top.png"}
       %source{src: '../../videos/disrupt/section-5-header.mp4', type: 'video/mp4'}
       %source{src: '../../videos/disrupt/section-5-header.webm', type: 'video/webm'}
-      = image_tag "../../images/features/disrupt/video_fallbacks/section-5-top.png"
   .image-container
     = image_tag "../../images/features/disrupt/video_fallbacks/section-5-top.png"
   .title-container
@@ -129,10 +126,9 @@
           %p The results of the Glowing Plant crowd-funding project illustrate the promise and perils of designing for such a disruptive technology as synthetic biology. How do we evaluate the risk and reward, in this case, knowing the outcome? Even though the team initially received immense grassroots enthusiasm and financial backing, they also caused the Kickstarter ban, as an established corporate entity reacted with fear. During this transition time between fear and acceptance, designers of genetically modified organisms, like the team behind the Glowing Plant project, will continue to push the envelope of what companies, regulators, and the government find acceptable. It’s safe to say that until synthetic biology is better understood, policy decisions such as this ban will continue to happen. It might be that a willingness to push forward and to take risks will be important to making the transition, to reach public acceptance and ultimately help move the technology forward.
 %header.sec-header#bottom.bottom-vid
   .video-container
-    %video{autoplay: true, muted: true, loop: true}
+    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_fallbacks/section-5-bottom.png"}
       %source{src: '../../videos/disrupt/section-5-footer.mp4', type: 'video/mp4'}
       %source{src: '../../videos/disrupt/section-5-footer.webm', type: 'video/webm'}
-      = image_tag "../../images/features/disrupt/video_fallbacks/section-5-bottom.png"
   .image-container
     = image_tag "../../images/features/disrupt/video_fallbacks/section-5-bottom.png"
 #bottom-nav

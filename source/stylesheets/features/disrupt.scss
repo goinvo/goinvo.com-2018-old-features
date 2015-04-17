@@ -443,11 +443,12 @@ header {
         transform: translateY(-50%);
         text-align: center;
         h1 {
+          opacity: 0;
           font-family: "proxima-nova", sans-serif;
           font-size: 6em;
           font-size: 8vw;
           color: white;
-          letter-spacing: 0.7em;
+          letter-spacing: 0.6em;
           margin: 0;
           padding-left: 0.5em;
           text-align: center;
@@ -455,6 +456,7 @@ header {
         }
       }
       .social-container {
+        display: none;
         position: absolute;
         width: 100%;
         bottom: 6%;
