@@ -11,6 +11,7 @@ $(document).ready(function(event){
   var navOffset = siteNav.height();
   var sideImages = $('.images.sidebar');
   var mainBackground = $('.container.content');
+  var articleContent = $('.disrupt');
   var socialButtons = $('.social-container');
   var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
   var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
@@ -103,6 +104,9 @@ $(document).ready(function(event){
   sidebarImages();
 
   mainBackground.css("background-color", colors[page].top);
+  articleContent.animate({
+    "opacity": 1
+  }, 1000);
   
   var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   socialButtons.hide();
