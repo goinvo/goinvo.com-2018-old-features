@@ -404,6 +404,7 @@ $gridTop: 0;
   max-width: 1050px;
   height: auto;
   overflow: hidden;
+  margin-bottom: 3em;
   video {
     width: 100%;
     height: auto;
@@ -508,9 +509,9 @@ header {
 }
 article {
   .article-section {
-    margin: 8em 0 10em 0;
+    margin: 8em 0 5em 0;
     @media only screen and (max-width: 800px) {
-      margin: 1.5em 0 3em 0;
+      margin: 5vw 0 3vw 0;
     }
     &#section-1 {
       h3 {
@@ -645,7 +646,7 @@ article {
         margin: 0 16% 0 0;
       }
       @media only screen and (max-width: 800px) {
-        margin: 0 0 2em 0;
+        margin: 0 0 4vw 0;
         &.no-margin {
           margin: 0;
         }
@@ -654,9 +655,9 @@ article {
     .images {
       &.center {
         width: 100%;
-        margin-bottom: 3em;
+        margin: 3em 0 3em 0;
         @media only screen and (max-width: 1200px) {
-          margin-bottom: 4vw;
+          margin: 5vw 0;
         }
         img {
           width: 80%;
@@ -1006,8 +1007,4 @@ article {
       font-size: 0.8em;
     }
   }
-}
-
-p.margin-bottom {
-  margin-bottom: 4em;
 }

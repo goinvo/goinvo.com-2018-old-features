@@ -184,7 +184,7 @@ $(document).ready(function(event){
     }
 
     //Bottom nav animation
-    if (windowBottom > documentHeight - 50) {
+    if (windowBottom > secondVideoBottom) {
       $('#bottom-nav').delay(200).animate({
         opacity: "1",
         bottom: siteFooter.outerHeight()
