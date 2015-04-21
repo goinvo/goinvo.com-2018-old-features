@@ -96,6 +96,9 @@ $(document).ready(function(event){
       active: function() {
         topVidMargin();
         firstVideo.css("margin-top", navOffset);
+
+        // Only applicable for section-4, but need the second video height from this script
+        $('#grid-section').css("margin-bottom", (windowHeight - secondVideo.height() - navOffset));
       }
     });
   } catch(e) {
@@ -116,9 +119,6 @@ $(document).ready(function(event){
     $(".image-container").css("display", "block");
     articleNav.addClass("mobile");
   }
-
-  // Only applicable for section-4, but need the second video height from this script
-  $('#grid-section').css("margin-bottom", (secondVideo.height() * 0.66));
 
   // Once we have just the dimensions of the videos, we can check this function
   vid1.onloadedmetadata = function() {
