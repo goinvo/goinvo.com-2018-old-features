@@ -98,7 +98,7 @@ $(document).ready(function(event){
         firstVideo.css("margin-top", navOffset);
 
         // Only applicable for section-4, but need the second video height from this script
-        $('#grid-section').css("margin-bottom", (windowHeight - secondVideo.height() - navOffset));
+        $('#grid-section').css("margin-bottom", (windowHeight - secondVideo.height()));
       }
     });
   } catch(e) {

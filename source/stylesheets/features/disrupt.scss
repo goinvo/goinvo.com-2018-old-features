@@ -335,7 +335,7 @@ $gridTop: 0;
 
 /* ===== Headers ===== */
 
-.navigation {
+#article-nav {
   position: fixed;
   top: 55px;
   left: 0;
@@ -348,6 +348,15 @@ $gridTop: 0;
   padding: 0px 26px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  @media only screen and (max-width: 1240px) {
+    padding: 0px 150px !important;
+  }
+  @media only screen and (max-width: 1105px) {
+    padding: 0px 80px !important;
+  }
+  @media only screen and (max-width: 1035px) {
+    padding: 0px 26px !important;
+  }
   ul, ol {
     text-align: center;
     margin: 0 auto;
