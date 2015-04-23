@@ -685,15 +685,15 @@ article {
         margin: 0 16% 0 0;
       }
       &:last-of-type {
-        margin: 0;
+        margin: 0 16% 0 0;
       }
       @media only screen and (max-width: 800px) {
-        margin: 0 0 4vw 0;
+        margin: 0 16% 4vw 0;
         &:last-of-type {
-          margin: 0;
+          margin: 0 16% 0 0;
         }
         &.no-margin {
-          margin: 0;
+          margin: 0 16% 0 0;
         }
       }
     }
@@ -728,12 +728,18 @@ article {
         float: right;
         width: 40%;
         height: auto;
-        margin: 0.45em 0 0 2%;
+        margin: 0.45em 0 0 0;
       }
       .image {
         margin-bottom: 1.5em;
         @media only screen and (max-width: 1200px) {
           margin-bottom: 1.7vw;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+          @media only screen and (max-width: 1200px) {
+            margin-bottom: 0;
+          }
         }
         .caption {
           color: $lightgray;
