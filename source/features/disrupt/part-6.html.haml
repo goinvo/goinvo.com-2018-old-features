@@ -40,7 +40,7 @@
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
   .video-container
-    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_fallbacks/section-6-top.png"}
+    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-6-top.jpg"}
       %source{src: '../../videos/disrupt/section-6-header.mp4', type: 'video/mp4'}
       %source{src: '../../videos/disrupt/section-6-header.webm', type: 'video/webm'}
   .image-container
@@ -53,7 +53,6 @@
     .section-content
       .content
         .sub-sec
-          %p On March 11, 2011, a 9.0 magnitude earthquake and subsequent tsunami damaged the Fukushima Daiichi nuclear reactors in Japan. Over the course of 24 hours, crews tried desperately to fix the reactors. However, as, one by one, the back-up safety measures failed, the fuel rods in the nuclear reactor overheated, releasing dangerous amounts of radiation into the surrounding area. As radiation levels became far too high for humans, emergency teams at the plant were unable to enter key areas to complete the tasks required for recovery. Three hundred thousand people had to be evacuated from their homes, some of whom have yet to return.
           .images.sidebar.right
             .image
               = image_tag "../../images/features/disrupt/section-6-fukushima.png"
@@ -61,7 +60,16 @@
             .image
               = image_tag "../../images/features/disrupt/section-6-irobot.png"
               .caption Caption goes here.
+          %p On March 11, 2011, a 9.0 magnitude earthquake and subsequent tsunami damaged the Fukushima Daiichi nuclear reactors in Japan. Over the course of 24 hours, crews tried desperately to fix the reactors. However, as, one by one, the back-up safety measures failed, the fuel rods in the nuclear reactor overheated, releasing dangerous amounts of radiation into the surrounding area. As radiation levels became far too high for humans, emergency teams at the plant were unable to enter key areas to complete the tasks required for recovery. Three hundred thousand people had to be evacuated from their homes, some of whom have yet to return.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-fukushima.png"
+              .caption Caption goes here.
           %p The current state of the art in robotics is not capable of surviving the hostile, high-radiation environment of a nuclear power plant meltdown and dealing with the complex tasks required to assist a recovery effort. In the aftermath of Fukushima, the Japanese government did not immediately have access to hardened, radiation-resistant robots. A few robots from American companies—tested on the modern battlefields of Afghanistan and Iraq—including iRobot’s 710 Warrior and PackBot were able to survey the plant. The potential for recovery-related tasks that can and should be handled by advanced robotics is far greater than this. However, for many reasons, spanning political, cultural, and systemic, before the Fukushima event, an investment in robotic research was never seriously considered. The meltdown was an unthinkable catastrophe, one that Japanese officials thought could never happen, and as such, it was not even acknowledged as a possible scenario for which planning was needed.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-irobot.png"
+              .caption Caption goes here.
         .sub-sec
           %h3 The Darpa Robotics Competition
           %p The Fukushima catastrophe inspired the United States Defense Advanced Research Projects Agency (DARPA) to create the #{link_to "Robotics Challenge", "http://www.theroboticschallenge.org/", target: "_blank"}, the purpose of which is to accelerate technological development for robotics in the area of disaster recovery. Acknowledging the fragility of our human systems and finding resilient solutions to catastrophes—whether it’s the next super storm, earthquake, or nuclear meltdown—is a problem on which designers, engineers, and technologists should focus.
@@ -71,18 +79,25 @@
             .image
               = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
               .caption Caption goes here.
-          %p The competition, so far, has been successful in its mission to encourage innovation in advanced robotics. In the competition trials held in December 2013, robots from MIT, Carnegie Mellon, and the Google-owned Japanese firm, Schaft, Inc., competed at a variety of tasks related to disaster recovery, which included driving cars, traversing difficult terrain, climbing ladders, opening doors, moving debris, cutting holes in walls, closing valves, and unreeling hoses.
-        .sub-sec
-          %h3 Building Resilient Cities
-          .images.sidebar.right
             .image
               = image_tag "../../images/features/disrupt/section-6-boston.png"
               .caption Caption goes here.
+          %p The competition, so far, has been successful in its mission to encourage innovation in advanced robotics. In the competition trials held in December 2013, robots from MIT, Carnegie Mellon, and the Google-owned Japanese firm, Schaft, Inc., competed at a variety of tasks related to disaster recovery, which included driving cars, traversing difficult terrain, climbing ladders, opening doors, moving debris, cutting holes in walls, closing valves, and unreeling hoses.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
+              .caption Caption goes here.
+        .sub-sec
+          %h3 Building Resilient Cities
           %p Dealing with natural and made made disasters will be a tremendous challenge and is one that emerging technologies will need to be brought to bear upon.
           %p The sea levels around cities in the Northeastern United States are rising, creating ongoing difficulties for constructing and maintaining buildings.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-boston.png"
+              .caption Caption goes here.
 %header.sec-header
   .video-container.bottom-vid
-    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_fallbacks/section-6-bottom.png"}
+    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-6-bottom.jpg"}
       %source{src: '../../videos/disrupt/section-6-footer.mp4', type: 'video/mp4'}
       %source{src: '../../videos/disrupt/section-6-footer.webm', type: 'video/webm'}
   .image-container
@@ -128,12 +143,24 @@
     %ul.main-credits
       %li.main.author
         = image_tag "../../images/features/disrupt/credits/jon-follett.png"
+        .title-container
+          .person Jon Follett
+          .title Author
       %li.main.designer
         = image_tag "../../images/features/disrupt/credits/brian-liston.png"
+        .title-container
+          .person Brian Liston
+          .title Designer and Illustrator
       %li.main.developer
         = image_tag "../../images/features/disrupt/credits/craig-mcginley.png"
+        .title-container
+          .person Craig McGinley
+          .title Developer
       %li.main.editor
         = image_tag "../../images/features/disrupt/credits/emily-twaddell.png"
+        .title-container
+          .person Emily Twaddell
+          .title Contributing Author
       %li.main.special
         Special Thanks To:
         %br

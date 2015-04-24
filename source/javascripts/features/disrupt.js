@@ -9,7 +9,7 @@ $(document).ready(function(event){
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
   var navOffset = siteNav.height();
-  var sideImages = $('.images.sidebar');
+  // var sideImages = $('.images.sidebar');
   var mainBackground = $('.container.content');
   var articleContent = $('.disrupt');
   var socialButtons = $('.social-container');
@@ -39,15 +39,15 @@ $(document).ready(function(event){
   }
 
   // Make right side images center if small screen
-  function sidebarImages() {
-    if ($(window).width() < 800) {
-      sideImages.removeClass("right");
-      sideImages.addClass("center");
-    } else {
-      sideImages.removeClass("center");
-      sideImages.addClass("right");
-    }
-  }
+  // function sidebarImages() {
+  //   if ($(window).width() < 800) {
+  //     sideImages.removeClass("right");
+  //     sideImages.addClass("center");
+  //   } else {
+  //     sideImages.removeClass("center");
+  //     sideImages.addClass("right");
+  //   }
+  // }
 
   // Add margin to top video equal to total nav heights
   function topVidMargin() {
@@ -104,7 +104,7 @@ $(document).ready(function(event){
   } catch(e) {
     console.log(e);
   }
-  sidebarImages();
+  // sidebarImages();
 
   mainBackground.css("background-color", colors[page].top);
   articleContent.animate({
@@ -161,13 +161,14 @@ $(document).ready(function(event){
     }
     topVidMargin();
     firstVideo.css("margin-top", navOffset);
-    sidebarImages();
+    // sidebarImages();
 
     // Recalc for scroll fades
     windowHeight = $(window).height();
     documentHeight = $(document).height();
     firstVideoBottom = firstVideo.offset().top + firstVideo.height();
     secondVideoTop = secondVideo.offset().top;
+    secondVideoBottom = secondVideoTop + secondVideo.height();
   });
 
 
