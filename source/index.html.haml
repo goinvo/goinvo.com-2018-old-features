@@ -1,7 +1,6 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage", :async => true
 	:javascript
-		// Retrieve current blog posts 
 		posts = [];
 		$.ajax({
 			url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('http://yes.goinvo.com/articles/rss.xml'),
@@ -12,9 +11,7 @@
 						posts.push(e);
 					});
 				}	
-				// ***Code goes here***
-				
-				// get the title and link information for current blog post
+				// Code goes here
 				var currentString = posts[0].content;
 				var sIndex = currentString.lastIndexOf('<img');
 				currentString = currentString.substring(0, sIndex);
@@ -24,31 +21,21 @@
 				currentString = currentString.substr(sIndex+5);
 				sIndex = currentString.indexOf('"');
 				currentString = currentString.substring(0, sIndex);
-				
-				// Set the recent blog post section
+
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+				var randNum = Math.ceil(Math.random()*3);
+				var imgURL = 'url("/images/home/hp-' + randNum + '.png")';
+				$('#homepage-hero .photo-container').css('background-image', imgURL);
 			}
 		});
-		
-- randNum = 1 + rand(3)
 %a#homepage-hero.block.bar{:href => "healthcare"}
-	.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png')"}
+	.photo-container
 	.title
-		- if randNum === 1
-			.actual-title Idea to Patient
-		- if randNum === 2
-			.actual-title Idea to Hospital
-		- if randNum === 3
-			.actual-title Idea to Doctor
-		.actual-content We design emerging technology from<br>your R&D lab to your customers.
-		.bottom-image-wrapper{:id => "homepageImage" + randNum.to_s}
-			%img.bottom-image{:src => "/images/home/homepage-image-0" + randNum.to_s + ".png"}
-			%img.bottom-image.mobile-home-image{:src => "/images/home/homepage-image-0" + randNum.to_s + "-mobile.png"}
-.contact-container{:style => "background-image: url('/images/home/homepage-contact-0" + randNum.to_s + ".png')"}
-	.actual-button Contact us today to discuss your next healthcare project
-	.sub-title We'll respond within 2 business hours.
+		.actual-title Idea to Product
+		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-button See our work
 .clients
 	%table.non-mobile
 		%tbody
