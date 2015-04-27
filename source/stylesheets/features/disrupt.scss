@@ -625,12 +625,14 @@ article {
     height: auto;
   }
   .caption {
-    width: 100%;
-    margin-top: 0.5em;
-    text-align: center;
+    width: 90%;
+    margin: 0.5em 5% 0 5%;
+    text-align: left;
+    padding: 0 16% 0 0;
     font-size: 1.3em;
     color: $lightgray;
     @media only screen and (max-width: 800px) {
+      padding: 0;
       font-size: 1em;
     }
   }
