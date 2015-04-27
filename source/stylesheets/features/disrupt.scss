@@ -302,10 +302,9 @@ $gridTop: 0;
               margin: 0;
               width: 100%;
               height: auto;
-              .fake {
+              img {
                 width: 100%;
-                height: 200px;
-                background-color: $orange;
+                height: auto;
               }
             }
           }
