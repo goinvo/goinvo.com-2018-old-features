@@ -260,58 +260,44 @@ $gridTop: 0;
             text-transform: uppercase;
             margin-bottom: 2%;
             color: $orange;
-            @media only screen and (min-width: 1201px) {
-              font-size: 1.3em;
+            @media only screen and (min-width: 1850px) {
+              font-size: 2.1em;
               letter-spacing: 0.5em;
               line-height: 1em;
             }
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1850px) {
               font-size: 1.7vw;
               letter-spacing: 0.9vw;
               line-height: 2vw;
             }
           }
+          p {
+            @media only screen and (min-width: 1850px) {
+              font-size: 1.7em;
+              line-height: 1.4em;
+            }
+            @media only screen and (max-width: 1850px) {
+              font-size: 1.55vw;
+              line-height: 1.9vw;
+            }
+          }
           .column {
             display: inline-block;
             vertical-align: top;
-            &.left {
-              display: inline-block;
-              width: 61.8%;
-              margin-right: 2%;
-            }
             &.right {
-              display: inline-block;
+              float: right;
               width: 34.5%;
-            }
-            .description {
-              p {
-                margin-bottom: 3%;
-              }
-              @media only screen and (min-width: 1251px) {
-                font-size: 0.75em;
-                line-height: 2em;
-              }
-              @media only screen and (max-width: 1250px) {
-                font-size: 0.95vw;
-                line-height: 1.85vw;
-              }
-            }
-            .image {
-              background-repeat: no-repeat;
-              background-size: cover;
-              margin: 0;
-              width: 100%;
-              height: auto;
-              img {
+              margin: 0 0 3% 4%;
+              // margin-left: 2%;
+              .image {
                 width: 100%;
                 height: auto;
+                img {
+                  width: 100%;
+                  height: auto;
+                }
               }
             }
-          }
-        }
-        &[data-tech="genomics"] {
-          .image {
-
           }
         }
         &[data-row="1"] {
