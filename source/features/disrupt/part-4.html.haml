@@ -8,7 +8,8 @@
     var page = 3;
   = javascript_include_tag "slick/slick"
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/picturefill.min.js"
   = javascript_include_tag "features/disrupt_grid.js"
   = javascript_include_tag "features/disrupt.js"
 - content_for(:worlds_end) do
@@ -58,7 +59,7 @@
           %p Development and adoption of emerging technologies is happening at an unprecedented pace. Part of the reason for this is the democratization of technological discovery and exploration, and the ease of sharing that information with other people across the globe.
           %p This crowd sourcing of innovation through citizen scientists, engineers, designers and other amateurs is increasing the reach of technological progress in a way never before seen. No longer is research and development relegated to the lab or to the big company, but rather to the garages, basements, and dorm rooms of interested and passionate explorers from biohackers to makers with 3D printers.
 .sci-fi
-  = image_tag "../../images/features/disrupt/peculiarstories.jpg"
+  %img{sizes:"100vw", srcset:"../../images/features/disrupt/peculiar-1200.jpg 1200w, ../../images/features/disrupt/peculiar-2880.jpg 2880w"}
   %article.disrupt
     .caption The dizzying speed of technological progress causes some to fear (and some to hope) that they might be replaced by machines.
 %article#feature-article.disrupt
@@ -149,7 +150,7 @@
               .title Connected Environments
               .column.right
                 .image
-                  = image_tag "../../images/features/disrupt/slideshow/connected-environments.png"
+                  = image_tag "../../images/features/disrupt/slideshow/connected-environments.jpg"
               %p At the 2014 Coachella Music Festival, the music-streaming service Spotify partnered with organizers to offer a connected space experience with the #WeWereThere campaign. Participants could “Connect, Collect, and Share” a personal Coachella story by linking their Facebook and Spotify accounts. Checkpoints let them map their journey and record how many steps they walked. They shared photos via Instagram, saved and shared playlists, and had access to Uber rides to get around. Two Verizon Wireless antenna trucks kept the network going.
               %p By contrast, you don’t need to leave your home to join in a competitive global soccer scrimmage using Kinect Sports for XBox. Motion-sensing input devices track movement of objects and people in 3D, assisted by machine learning to provide facial, voice, and advanced gesture recognition. These are examples of connected environments—the next phase of the Internet of Things. Interdisciplinary design teams work across  different environments, platforms, and technologies to enable multidimensional services that integrate both the physical and digital dimensions and are driven by real-time data. The challenge for designers is now to think beyond screens and human factors and consider the objects, networks, and algorithms that run environments and ambient interactions.
           .slide{data: {slideIndex: 2, tech: 'genomics', row: "1"}}
@@ -157,7 +158,7 @@
               .title Genomics
               .column.right
                 .image
-                  = image_tag "../../images/features/disrupt/slideshow/genomics.png"
+                  = image_tag "../../images/features/disrupt/slideshow/genomics.jpg"
               %p What if you could run a “spelling” check on your genes? Not just the genes in your 23 chromosome pairs, but your entire genome: all of your genes, gene-modifying sequences, and everything  in between. Then, what if you could compare your findings to those of millions of others?
               %p You would be participating in genomics research, which aims to identify the function of genes and what regulates them. Perhaps your data would help find genome-based strategies for detecting, diagnosing, and treating diseases. Or it might help reveal the significance of the tiny, individual variations in people’s DNA, and how our DNA interacts with our environments. Maybe your genetic map will contribute to discovering what makes some people resilient even when they carry potentially devastating genes. Genomic research has the potential to revolutionize the practice of health care. But not without ethical, legal, and social issues that must be addressed to prevent misuse of new genetic technologies and information.
           .slide{data: {slideIndex: 3, tech: 'crypto-currencies', row: "1"}}

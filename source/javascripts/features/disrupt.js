@@ -8,6 +8,7 @@ $(document).ready(function(event){
   var secondVideo = $('#bottom');
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
+  var secondVideoBottom = secondVideoTop + secondVideo.height();
   var navOffset = siteNav.height();
   var mainBackground = $('.container.content');
   var articleContent = $('.disrupt');

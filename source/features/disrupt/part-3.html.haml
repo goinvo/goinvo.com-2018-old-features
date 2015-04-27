@@ -7,7 +7,8 @@
   :javascript
     var page = 2;
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/picturefill.min.js"
   = javascript_include_tag "features/disrupt.js"
 - content_for(:worlds_end) do
   = javascript_include_tag "//platform.twitter.com/oct.js"
@@ -55,7 +56,7 @@
         .sub-sec
           %p What is the nature and magnitude of the disruption before us? Like the owner of the horse and buggy at the turn of the 20th century, we can not fully appreciate or completely anticipate the entirety of the coming technological change that will embrace nearly every aspect of our everyday lives. We can, however, begin to understand the magnitude of that disruption in areas as varied as the places we live, the food we eat, and the work we do by emerging technologies like the Internet of Things, robotics, genomics and synthetic biology.
 .sci-fi
-  = image_tag "../../images/features/disrupt/freakytales.jpg"
+  %img{sizes:"100vw", srcset:"../../images/features/disrupt/organisms-1200.jpg 1200w, ../../images/features/disrupt/organisms-2880.jpg 2880w"}
   %article.disrupt
     .caption While criticism of the uses to which emerging technologies are put is necessary, many critics make the mistake of rejecting technological innovations entirely.
 %article#feature-article.disrupt

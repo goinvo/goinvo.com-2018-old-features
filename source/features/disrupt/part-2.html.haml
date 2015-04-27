@@ -7,7 +7,8 @@
   :javascript
     var page = 1;
   = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/picturefill.min.js"
   = javascript_include_tag "features/disrupt.js"
 - content_for(:worlds_end) do
   = javascript_include_tag "//platform.twitter.com/oct.js"
@@ -55,7 +56,7 @@
         .sub-sec
           %p To envision our future and the possible effects of technological disruption, both positive and negative, it is helpful to consider some of the recent historical context for humanity’s ongoing relationship with technology.
 .sci-fi
-  = image_tag "../../images/features/disrupt/remarkable.jpg"
+  %img{sizes:"100vw", srcset:"../../images/features/disrupt/remarkable-1200.jpg 1200w, ../../images/features/disrupt/remarkable-2880.jpg 2880w"}
   %article.disrupt
     .caption As new technologies become closely interwoven with our daily lives it becomes difficult to envision how people functioned without them.
 %article#feature-article.disrupt
