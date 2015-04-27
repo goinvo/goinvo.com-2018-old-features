@@ -190,7 +190,7 @@ $(document).ready(function(event){
     if ( secondVideoCalc >= 0 ) {
       var extra = 0;
       if (page === 5) {
-        extra = 0.3;
+        extra = 0.4;
       }
       secondVideo.css({'opacity': secondVideoCalc + extra });
     }
