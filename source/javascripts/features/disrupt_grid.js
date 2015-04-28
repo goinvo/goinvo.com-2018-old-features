@@ -68,6 +68,9 @@ $(document).ready(function(event){
   var slideshowOpen = false;
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
+  var scrollTop = $(window).scrollTop();
+  var windowBottom = scrollTop + windowHeight;
+  var gridTop = gridArea.offset().top;
 
 
   // ===== Initialization =====
@@ -108,9 +111,9 @@ $(document).ready(function(event){
 
   // ===== Scroll event =====
   $(window).scroll(function() {
-    var scrollTop = $(window).scrollTop();
-    var windowBottom = scrollTop + windowHeight;
-    var gridTop = gridArea.offset().top;
+    scrollTop = $(window).scrollTop();
+    windowBottom = scrollTop + windowHeight;
+    gridTop = gridArea.offset().top;
     if (windowBottom > gridTop + (gridArea.height() / 2)) {
       animateEntrance(panels);
     }

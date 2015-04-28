@@ -3,9 +3,13 @@ $(document).ready(function(event){
   var documentHeight = $(document).height();
   var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
+  var bottomNav = $('#bottom-nav');
   var siteFooter = $('#main-footer');
   var firstVideo = $('#top');
   var secondVideo = $('#bottom');
+  var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
+  var scrollTop = $(window).scrollTop();
+  var windowBottom = scrollTop + windowHeight;
   var firstVideoBottom = firstVideo.offset().top + firstVideo.height();
   var secondVideoTop = secondVideo.offset().top;
   var secondVideoBottom = secondVideoTop + secondVideo.height();
@@ -16,6 +20,8 @@ $(document).ready(function(event){
   var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
   var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
   var vidsToLoad = 2;
+  var firstVideoCalc = ((firstVideoBottom - scrollTop) / firstVideoBottom);
+  var secondVideoCalc = ((windowBottom-secondVideoTop) / (documentHeight - secondVideoTop));
   var colors = [
     {top: '#0282C1', bottom: '#E68B35'},
     {top: '#E68B35', bottom: '#DD2E64'},
@@ -98,9 +104,8 @@ $(document).ready(function(event){
   articleContent.animate({
     "opacity": 1
   }, 1000);
-  
-  var firstTitle = firstVideo.find('h1'); // H1 only exists on first page of article
   socialButtons.hide();
+  bottomNav.find('.title').css("color", colors[page].bottom);
 
   if ($(window).width() < 800 || !videoSupport()) {
     $(".video-container").css("display", "none");
@@ -161,10 +166,10 @@ $(document).ready(function(event){
 
   // ===== Scroll event =====
   $(window).scroll(function() {
-    var scrollTop = $(window).scrollTop();
-    var windowBottom = scrollTop + windowHeight;
-    var firstVideoCalc = ((firstVideoBottom - scrollTop) / firstVideoBottom);
-    var secondVideoCalc = ((windowBottom-secondVideoTop) / (documentHeight - secondVideoTop));
+    scrollTop = $(window).scrollTop();
+    windowBottom = scrollTop + windowHeight;
+    firstVideoCalc = ((firstVideoBottom - scrollTop) / firstVideoBottom);
+    secondVideoCalc = ((windowBottom-secondVideoTop) / (documentHeight - secondVideoTop));
 
     // Let's play the second video here
     if (windowBottom >= documentHeight / 2) {
@@ -173,7 +178,7 @@ $(document).ready(function(event){
 
     //Bottom nav animation
     if (windowBottom > secondVideoBottom) {
-      $('#bottom-nav').delay(200).animate({
+      bottomNav.delay(150).animate({
         opacity: "1",
         bottom: siteFooter.outerHeight()
       }, {
@@ -196,7 +201,4 @@ $(document).ready(function(event){
       secondVideo.css({'opacity': secondVideoCalc + extra });
     }
   });
-
-  // Set the title color of the "next part" nav
-  $('#bottom-nav .title').css("color", colors[page].bottom);
 });
