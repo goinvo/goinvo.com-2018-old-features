@@ -360,10 +360,57 @@ $gridTop: 0;
       }
     }
   }
+  .mobile-menu {
+    display: none;
+    width: 100%;
+  }
   &.mobile {
-    position: relative;
     width: 100%;
     height: auto;
+    .mobile-menu {
+      display: block;
+      height: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+      .title {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        left: 0;
+        font-family: "proxima-nova", sans-serif;
+        font-size: 1em;
+        letter-spacing: 1em;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+      }
+      .toggle-arrow {
+        position: absolute;
+        top: 8px;
+        right: 29px;
+        width: 30px;
+        transition: transform 250ms ease-in-out;
+        &.open {
+          transform: scaleY(-1);
+          filter: flipv;
+        }
+      }
+    }
+    ol {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 250ms ease-in-out;
+      &.open {
+        max-height: 500px;
+      }
+      @media only screen and (max-width: 500px) {
+        li {
+          display: block;
+        }
+      }
+    }
   }
 }
 

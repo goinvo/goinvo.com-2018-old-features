@@ -3,6 +3,7 @@ $(document).ready(function(event){
   var documentHeight = $(document).height();
   var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
+  var mobileMenu = articleNav.find('.mobile-menu');
   var bottomNav = $('#bottom-nav');
   var siteFooter = $('#main-footer');
   var firstVideo = $('#top');
@@ -112,6 +113,15 @@ $(document).ready(function(event){
     $(".image-container").css("display", "block");
     articleNav.addClass("mobile");
   }
+
+  mobileMenu.on("click", function() {
+    $(this).parent().find('ol').toggleClass('open');
+    articleNav.find('.toggle-arrow').toggleClass('open');
+  });
+  // Close article nav if site nav is opened
+  $('#mobile-hamburger').on("click", function() {
+    articleNav.find('ol').removeClass('open');
+  });
 
   // Once we have just the dimensions of the videos, we can check this function
   vid1.onloadedmetadata = function() {
