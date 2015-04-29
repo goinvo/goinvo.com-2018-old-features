@@ -11,6 +11,9 @@
   = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
   %ol
     %li
       =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
@@ -25,12 +28,8 @@
     %li
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
-  .video-container
-    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-6-top.jpg"}
-      %source{src: '../../videos/disrupt/section-6-header.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-6-header.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-top.jpg"
+  .video-container{data: {page: 6}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-top.jpg", class: "placeholder"
   .title-container
     %h3 Fukushima
     %h3 and Fragility
@@ -81,13 +80,9 @@
             .image
               = image_tag "../../images/features/disrupt/section-6-boston.png"
               .caption Caption goes here.
-%header.sec-header
-  .video-container.bottom-vid
-    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-6-bottom.jpg"}
-      %source{src: '../../videos/disrupt/section-6-footer.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-6-footer.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-bottom.jpg"
+%header.sec-header.bottom-vid
+  .video-container{data: {page: 6}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-bottom.jpg", class: "placeholder"
 %article#feature-article.disrupt
   %section.article-section#closer
     .section-content

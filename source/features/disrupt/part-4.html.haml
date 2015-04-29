@@ -14,6 +14,9 @@
   = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
   %ol
     %li
       =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
@@ -28,12 +31,8 @@
     %li
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
-  .video-container
-    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-4-top.jpg"}
-      %source{src: '../../videos/disrupt/section-4-header.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-4-header.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-4-top.jpg"
+  .video-container{data: {page: 4}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-4-top.jpg", class: "placeholder"
   .title-container
     %h3 Crowdsourcing
     %h3 Innovation
@@ -280,12 +279,8 @@
                   = image_tag "../../images/features/disrupt/slideshow/internet-of-things.jpg"
               %p The Internet of Things connects inanimate objects across the Internet to improve (and disrupt) our lives in innumerable ways. Constellations of wirelessly connected sensors collect and transmit all sorts of data through devices and services. The IoT’s impact spans industries, government, education, and nearly infinite consumer applications. Designing for this expanding universe requires fluency beyond product and interaction design principles and adaptive business models. The challenge lies in designing within ecosystems of interconnected products, services, devices, and experiences—but that isn’t where it ends. The more devices we connect, the greater the security risks, and the increased complexity could exclude the people who need it the most. It remains to be seen whether the IoT will simply become a playground for the wealthy or the realization of Orwell’s Big Brother, or if it will change lives for the good.
 %header.sec-header#bottom.bottom-vid
-  .video-container
-    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-4-bottom.jpg"}
-      %source{src: '../../videos/disrupt/section-4-footer.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-4-footer.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-4-bottom.jpg"
+  .video-container{data: {page: 4}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-4-bottom.jpg", class: "placeholder"
 #bottom-nav
   =link_to "/features/disrupt/part-5.html" do
     %span.link-fill

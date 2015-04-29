@@ -12,6 +12,9 @@
   = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
   %ol
     %li
       =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
@@ -26,12 +29,8 @@
     %li
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
-  .video-container
-    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-3-top.jpg"}
-      %source{src: '../../videos/disrupt/section-3-header.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-3-header.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-top.jpg"
+  .video-container{data: {page: 3}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-top.jpg", class: "placeholder"
   .title-container
     %h3 The Coming
     %h3 Disruption
@@ -91,12 +90,8 @@
           %h3 Working
           %p In the area of global manufacturing, emerging technologies like advanced robotics and additive fabrication are changing the way products are constructed. These changes threaten to completely alter the nature and type of human labor required, with the very strong possibility that millions of jobs worldwide will be lost to agile, robotic manufacturing processes. Knowledge work is similarly threatened by the automation of tasks by computerized artificial intelligence. There will be no simple answers to this. But if we believe that humans need meaningful work to lead full lives, the need to find answers and design solutions becomes of tremendous importance.
 %header.sec-header#bottom.bottom-vid
-  .video-container
-    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-3-bottom.jpg"}
-      %source{src: '../../videos/disrupt/section-3-footer.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-3-footer.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-bottom.jpg"
+  .video-container{data: {page: 3}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-bottom.jpg", class: "placeholder"
 #bottom-nav
   =link_to "/features/disrupt/part-4.html" do
     %span.link-fill

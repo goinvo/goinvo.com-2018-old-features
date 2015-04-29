@@ -421,21 +421,100 @@ $gridTop: 0;
   width: 100%;
   height: auto;
   overflow: hidden;
-  margin-bottom: -3px;
+  background-size: contain;
+  .placeholder {
+    visibility: hidden;
+  }
   video {
+    display: block;
     width: 100%;
     height: auto;
   }
 }
 
-.image-container {
-  display: none;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
+.top-vid {
+  .video-container {
+    &[data-page="1"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-1-top.jpg");
+    }
+    &[data-page="2"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-2-top.jpg");
+    }
+    &[data-page="3"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-3-top.jpg");
+    }
+    &[data-page="4"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-4-top.jpg");
+    }
+    &[data-page="5"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-5-top.jpg");
+    }
+    &[data-page="6"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-6-top.jpg");
+    }
+    @media only screen and (min-width: 801px) {
+      &[data-page="1"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-1-top.jpg");
+      }
+      &[data-page="2"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-2-top.jpg");
+      }
+      &[data-page="3"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-3-top.jpg");
+      }
+      &[data-page="4"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-4-top.jpg");
+      }
+      &[data-page="5"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-5-top.jpg");
+      }
+      &[data-page="6"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-6-top.jpg");
+      }
+    }
+  }
+}
+
+.bottom-vid {
+  .video-container {
+    &[data-page="1"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-1-bottom.jpg");
+    }
+    &[data-page="2"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-2-bottom.jpg");
+    }
+    &[data-page="3"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-3-bottom.jpg");
+    }
+    &[data-page="4"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-4-bottom.jpg");
+    }
+    &[data-page="5"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-5-bottom.jpg");
+    }
+    &[data-page="6"] {
+      background-image: image-url("../../images/features/disrupt/video_fallbacks/section-6-bottom.jpg");
+    }
+    @media only screen and (min-width: 801px) {
+      &[data-page="1"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-1-bottom.jpg");
+      }
+      &[data-page="2"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-2-bottom.jpg");
+      }
+      &[data-page="3"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-3-bottom.jpg");
+      }
+      &[data-page="4"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-4-bottom.jpg");
+      }
+      &[data-page="5"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-5-bottom.jpg");
+      }
+      &[data-page="6"] {
+        background-image: image-url("../../images/features/disrupt/video_posters/section-6-bottom.jpg");
+      }
+    }
   }
 }
 

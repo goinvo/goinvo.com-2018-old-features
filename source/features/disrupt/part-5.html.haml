@@ -11,6 +11,9 @@
   = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
   %ol
     %li
       =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
@@ -25,12 +28,8 @@
     %li
       =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
 %header.sec-header#top.top-vid
-  .video-container
-    %video{autoplay: true, muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-5-top.jpg"}
-      %source{src: '../../videos/disrupt/section-5-header.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-5-header.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-5-top.jpg"
+  .video-container{data: {page: 5}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-5-top.jpg", class: "placeholder"
   .title-container
     %h3 The Future
     %h3 of Design
@@ -141,12 +140,8 @@
           %p However, soon after the Glowing Plant project finished its campaign, Kickstarter, without any explanation, changed its terms for project cre- ators, banning genetically modified organisms (GMOs) as rewards for online backers.15 Glowing Plant, with its project financing already in place, might be the last example of crowd-funded synthetic biology for a while. Although this incident, in and of itself, might seem minor, it’s worth remembering that Kickstarter is the primary resource for crowd-funding in the United States. Removing this financial option for synthetic biology startups, in a seemingly arbitrary decision, will have a chilling effect on future innovators.
           %p The results of the Glowing Plant crowd-funding project illustrate the promise and perils of designing for such a disruptive technology as synthetic biology. How do we evaluate the risk and reward, in this case, knowing the outcome? Even though the team initially received immense grassroots enthusiasm and financial backing, they also caused the Kickstarter ban, as an established corporate entity reacted with fear. During this transition time between fear and acceptance, designers of genetically modified organisms, like the team behind the Glowing Plant project, will continue to push the envelope of what companies, regulators, and the government find acceptable. It’s safe to say that until synthetic biology is better understood, policy decisions such as this ban will continue to happen. It might be that a willingness to push forward and to take risks will be important to making the transition, to reach public acceptance and ultimately help move the technology forward.
 %header.sec-header#bottom.bottom-vid
-  .video-container
-    %video{preload: 'metadata', muted: true, loop: true, poster: "../../images/features/disrupt/video_posters/section-5-bottom.jpg"}
-      %source{src: '../../videos/disrupt/section-5-footer.mp4', type: 'video/mp4'}
-      %source{src: '../../videos/disrupt/section-5-footer.webm', type: 'video/webm'}
-  .image-container
-    = image_tag "../../images/features/disrupt/video_fallbacks/section-5-bottom.jpg"
+  .video-container{data: {page: 5}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-5-bottom.jpg", class: "placeholder"
 #bottom-nav
   =link_to "/features/disrupt/part-6.html" do
     %span.link-fill
