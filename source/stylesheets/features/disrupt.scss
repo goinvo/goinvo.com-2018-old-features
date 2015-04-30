@@ -28,7 +28,7 @@ $gridTop: 0;
   background-color: $gridgray !important;
   #grid-section {
     width: 65%;
-    margin: 0 17.5% 15% 17.5%;
+    margin: 0 17.5%;
     padding: 2em 0;
     @media only screen and (max-width: 800px) {
       display: none;
@@ -1227,7 +1227,12 @@ article {
       line-height: 1.7em;
       li {
         width: 100%;
-        color: $orange;
+        a {
+          color: $orange;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

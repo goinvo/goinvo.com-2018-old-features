@@ -1,28 +1,35 @@
 $(document).ready(function(event){
-  var windowHeight = $(window).height();
-  var documentHeight = $(document).height();
+  // Selections
   var siteNav = $('#site-overlay');
   var articleNav = $('#article-nav');
-  var navOffset = siteNav.height() + articleNav.height();
-  var mobileMenu = articleNav.find('.mobile-menu');
+  var mainBackground = $('.container.content');
+  var articleContent = $('.disrupt');
+  var socialButtons = $('.social-container');
   var bottomNav = $('#bottom-nav');
   var siteFooter = $('#main-footer');
   var topFade = $('#top');
   var bottomFade = $('#bottom');
   var firstVideo = $('.top-vid');
   var secondVideo = $('.bottom-vid');
-  var videosAreGo = false;
   var firstTitle = topFade.find('h1'); // H1 only exists on first page of article
+  var mobileMenu = articleNav.find('.mobile-menu');
+
+  // States
+  var vidsToLoad = 2;
+  var videosAreGo = false;
+  var fontsLoaded = false;
+
+  // Calcs
+  var windowHeight = $(window).height();
+  var documentHeight = $(document).height();
   var scrollTop = $(window).scrollTop();
   var windowBottom = scrollTop + windowHeight;
   var topFadeBottom = topFade.offset().top + topFade.height();
   var bottomFadeTop = bottomFade.offset().top;
   var bottomFadeBottom = bottomFadeTop + bottomFade.height();
-  var mainBackground = $('.container.content');
-  var articleContent = $('.disrupt');
-  var socialButtons = $('.social-container');
   var topFadeCalc = ((topFadeBottom - scrollTop) / topFadeBottom);
   var bottomFadeCalc = ((windowBottom-bottomFadeTop) / (documentHeight - bottomFadeTop));
+  var navOffset = siteNav.height() + articleNav.height();
   var colors = [
     {top: '#0282C1', bottom: '#E68B35'},
     {top: '#E68B35', bottom: '#DD2E64'},
@@ -32,6 +39,8 @@ $(document).ready(function(event){
     {top: '#0396AA', bottom: '#82659B'}
   ];
 
+
+  // ===== Functions =====
   // Check if we can play videos
   function videoSupport() {
     var v = document.createElement('video');
@@ -51,15 +60,16 @@ $(document).ready(function(event){
   }
 
   // If all the videos are loaded, set up the color scrolling
-  function videosLoaded() {
-    vidsToLoad -= 1;
-    if (vidsToLoad <= 0) {
+  function contentLoaded() {
+    if (vidsToLoad <= 0 && fontsLoaded) {
+      topVidMargin();
+      topFade.css("margin-top", navOffset);
+
       topFadeBottom = topFade.offset().top + topFade.height();
       bottomFadeTop = bottomFade.offset().top;
       bottomFadeBottom = bottomFadeTop + bottomFade.height();
       documentHeight = $(document).height();
-      topVidMargin();
-      topFade.css("margin-top", navOffset);
+
       mainBackground.colorScroll({
         colors: [
           {
@@ -83,6 +93,22 @@ $(document).ready(function(event){
     }
   }
 
+  // Skip video stuff
+  function noVids() {
+    if (vidsToLoad === 0) {
+      contentLoaded();
+      if (page === 0) {
+        firstTitle.delay(2000).animate({
+          "letter-spacing" : "0.7em",
+          "opacity" : "1"
+        }, {
+          duration: 12000
+        });
+        socialButtons.delay(6000).fadeIn(6000);
+      }
+    }
+  }
+
 
   // ===== Initialization =====
   mainBackground.css("background-color", colors[page].top);
@@ -102,12 +128,21 @@ $(document).ready(function(event){
       secondVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-bottom.jpg"><source src="../../videos/disrupt/section-' + section + '-bottom.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-bottom.webm" type="video/webm"></video>');
       var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
       var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
-      var vidsToLoad = 2;
+      if (page === 2) {
+        vidsToLoad += 1;
+        var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
+        vid3.onloadedmetadata = function() {
+          vidsToLoad -= 1;
+          contentLoaded();
+        }
+      }
       vid1.onloadedmetadata = function() {
-        videosLoaded();
+        vidsToLoad -= 1;
+        contentLoaded();
       }
       vid2.onloadedmetadata = function() {
-        videosLoaded();
+        vidsToLoad -= 1;
+        contentLoaded();
       }
       vid1.oncanplay = function() {
         firstTitle.delay(2000).animate({
@@ -119,54 +154,20 @@ $(document).ready(function(event){
         socialButtons.delay(6000).fadeIn(6000);
       }
     } else {
-      topFadeBottom = topFade.offset().top + topFade.height();
-      bottomFadeTop = bottomFade.offset().top;
-      bottomFadeBottom = bottomFadeTop + bottomFade.height();
-      documentHeight = $(document).height();
-      firstTitle.delay(2000).animate({
-        "letter-spacing" : "0.7em",
-        "opacity" : "1"
-      }, {
-        duration: 12000
-      });
-      socialButtons.delay(6000).fadeIn(6000);
+      vidsToLoad = 0;
+      noVids();
     }
   } else {
-    if (page === 0) {
-      firstTitle.delay(2000).animate({
-        "letter-spacing" : "0.7em",
-        "opacity" : "1"
-      }, {
-        duration: 12000
-      });
-      socialButtons.delay(6000).fadeIn(6000);
+    vidsToLoad = 0;
+    if (page === 2) {
+      vidsToLoad += 1;
+      var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
+      vid3.onloadedmetadata = function() {
+        vidsToLoad -= 1;
+        contentLoaded();
+      }
     }
-    topVidMargin();
-    topFade.css("margin-top", navOffset);
-    topFadeBottom = topFade.offset().top + topFade.height();
-    bottomFadeTop = bottomFade.offset().top;
-    bottomFadeBottom = bottomFadeTop + bottomFade.height();
-    documentHeight = $(document).height();
-    mainBackground.colorScroll({
-      colors: [
-        {
-          color: colors[page].top,
-          position: '0'
-        },
-        {
-          color: '#ffffff',
-          position: topFadeBottom
-        },
-        {
-          color: '#ffffff',
-          position: bottomFadeTop - windowHeight
-        },
-        {
-          color: colors[page].bottom,
-          position: bottomFadeBottom - windowHeight
-        }
-      ]
-    });
+    noVids();
   }
 
 
@@ -175,14 +176,8 @@ $(document).ready(function(event){
       active: function() {
         topVidMargin();
         topFade.css("margin-top", navOffset);
-        topFadeBottom = topFade.offset().top + topFade.height();
-        bottomFadeTop = bottomFade.offset().top;
-        bottomFadeBottom = bottomFadeTop + bottomFade.height();
-        documentHeight = $(document).height();
-        // Only applicable for section-4, but need the second video height from this script
-        if (page === 3) {
-          $('#grid-section').css("margin-bottom", (windowHeight - bottomFade.height()));
-        }
+        fontsLoaded = true;
+        contentLoaded();
       }
     });
   } catch(e) {
@@ -197,6 +192,7 @@ $(document).ready(function(event){
   // Close article nav if site nav is opened
   $('#mobile-hamburger').on("click", function() {
     articleNav.find('ol').removeClass('open');
+    articleNav.find('.toggle-arrow').removeClass('open');
   });
 
 
@@ -229,7 +225,7 @@ $(document).ready(function(event){
     }
 
     //Bottom nav animation
-    if (windowBottom > ($(document).height() - siteFooter.height())) {
+    if (windowBottom > (documentHeight - siteFooter.outerHeight())) {
       bottomNav.delay(100).animate({
         opacity: "1",
         bottom: siteFooter.outerHeight()
@@ -245,7 +241,7 @@ $(document).ready(function(event){
     if ( topFadeCalc >= 0 ) {
       topFade.css({'opacity': topFadeCalc });
     }
-    if ( bottomFadeCalc >= 0 ) {
+    if ( bottomFadeCalc >= -0.1 ) {
       var extra = 0;
       if (page === 5) {
         extra = 0.4;
