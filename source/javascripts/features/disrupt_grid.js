@@ -74,10 +74,6 @@ $(document).ready(function(event){
 
 
   // ===== Initialization =====
-  if ($(window).width() < 800) {
-    $("#grid-section").css("display", "none");
-  }
-
   layout(panels, grid, gridArea, slideshowContainer);
   var gridHeight = grid.height();
   gridArea.css({height: gridHeight});
@@ -86,7 +82,7 @@ $(document).ready(function(event){
     arrows: false
   });
 
-  if ($(window).width() >= 800) {
+  if ($(window).width() > 800) {
     panels.hide();
   }
 
@@ -97,10 +93,7 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
-    if ($(window).width() < 800) {
-      $("#grid-section").css("display", "none");
-    } else {
-      $("#grid-section").css("display", "block");
+    if ($(window).width() > 800) {
       layout(panels, grid, gridArea, slideshowContainer);
       var gridHeight = grid.height();
       gridArea.css({height: gridHeight });

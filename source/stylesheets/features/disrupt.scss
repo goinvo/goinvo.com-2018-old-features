@@ -30,6 +30,9 @@ $gridTop: 0;
     width: 65%;
     margin: 0 17.5% 15% 17.5%;
     padding: 2em 0;
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }
 
@@ -364,7 +367,7 @@ $gridTop: 0;
     display: none;
     width: 100%;
   }
-  &.mobile {
+  @media only screen and (max-width: 800px) {
     width: 100%;
     height: auto;
     .mobile-menu {
@@ -1055,7 +1058,7 @@ article {
       font-weight: 400;
     }
     .title {
-      font-weight: 800;
+      font-weight: bold;
     }
   }
   .arrow {
@@ -1181,7 +1184,7 @@ article {
       }
       &.special {
         width: 36%;
-        margin-left: 61%;
+        margin-left: 61.1%;
         @media only screen and (max-width: 800px) {
           margin-left: 27.5% !important;
           width: 68%;
@@ -1197,7 +1200,11 @@ article {
         @media only screen and (max-width: 800px) {
           margin-top: 5vw;
         }
+        .person {
+          line-height: 1.7em;
+        }
         .title {
+          line-height: 1.7em;
           color: $orange;
         }
       }
@@ -1212,9 +1219,12 @@ article {
         margin-left: 0 !important;
       }
     }
+    .thanks {
+      line-height: 1.7em;
+    }
     .extra-credits {
       list-style: none;
-      line-height: 2em;
+      line-height: 1.7em;
       li {
         width: 100%;
         color: $orange;

@@ -97,9 +97,9 @@ $(document).ready(function(event){
       videosAreGo = true;
       var section = page + 1;
       firstVideo.find('.placeholder').remove();
-      firstVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-top.jpg"><source src="../../videos/disrupt/section-' + section + '-header.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-header.webm" type="video/webm"></video>');
+      firstVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-top.jpg"><source src="../../videos/disrupt/section-' + section + '-top.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-top.webm" type="video/webm"></video>');
       secondVideo.find('.placeholder').remove();
-      secondVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-bottom.jpg"><source src="../../videos/disrupt/section-' + section + '-footer.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-footer.webm" type="video/webm"></video>');
+      secondVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-bottom.jpg"><source src="../../videos/disrupt/section-' + section + '-bottom.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-bottom.webm" type="video/webm"></video>');
       var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
       var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
       var vidsToLoad = 2;
@@ -130,10 +130,8 @@ $(document).ready(function(event){
         duration: 12000
       });
       socialButtons.delay(6000).fadeIn(6000);
-      mainBackground.css("background-color", "white");
     }
   } else {
-    articleNav.addClass("mobile");
     if (page === 0) {
       firstTitle.delay(2000).animate({
         "letter-spacing" : "0.7em",
@@ -182,7 +180,9 @@ $(document).ready(function(event){
         bottomFadeBottom = bottomFadeTop + bottomFade.height();
         documentHeight = $(document).height();
         // Only applicable for section-4, but need the second video height from this script
-        $('#grid-section').css("margin-bottom", (windowHeight - bottomFade.height()));
+        if (page === 3) {
+          $('#grid-section').css("margin-bottom", (windowHeight - bottomFade.height()));
+        }
       }
     });
   } catch(e) {
@@ -202,12 +202,6 @@ $(document).ready(function(event){
 
   // ===== Resize event =====
   $(window).resize(function() {
-    // Change article nav type
-    if ($(window).width() < 800) {
-      articleNav.addClass("mobile");
-    } else {
-      articleNav.removeClass("mobile");
-    }
     topVidMargin();
     topFade.css("margin-top", navOffset);
 
@@ -235,8 +229,8 @@ $(document).ready(function(event){
     }
 
     //Bottom nav animation
-    if (windowBottom > bottomFadeBottom) {
-      bottomNav.delay(150).animate({
+    if (windowBottom > ($(document).height() - siteFooter.height())) {
+      bottomNav.delay(100).animate({
         opacity: "1",
         bottom: siteFooter.outerHeight()
       }, {
