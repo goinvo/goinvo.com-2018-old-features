@@ -29,7 +29,7 @@ $gridTop: 0;
   #grid-section {
     width: 65%;
     margin: 0 17.5%;
-    padding: 2em 0;
+    padding: 5em 0;
     @media only screen and (max-width: 800px) {
       display: none;
     }
@@ -1126,7 +1126,7 @@ article {
     letter-spacing: 0.4em;
     color: white;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 4em auto 0 auto;
     font-weight: 400;
   }
 

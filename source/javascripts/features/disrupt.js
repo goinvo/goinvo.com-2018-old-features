@@ -90,13 +90,7 @@ $(document).ready(function(event){
           }
         ]
       });
-    }
-  }
 
-  // Skip video stuff
-  function noVids() {
-    if (vidsToLoad === 0) {
-      contentLoaded();
       if (page === 0) {
         firstTitle.delay(2000).animate({
           "letter-spacing" : "0.7em",
@@ -109,7 +103,6 @@ $(document).ready(function(event){
     }
   }
 
-
   // ===== Initialization =====
   mainBackground.css("background-color", colors[page].top);
   articleContent.animate({
@@ -117,6 +110,7 @@ $(document).ready(function(event){
   }, 1000);
   socialButtons.hide();
   bottomNav.find('.title').css("color", colors[page].bottom);
+
 
   if ($(window).width() > 800) {
     if (videoSupport()) {
@@ -155,19 +149,22 @@ $(document).ready(function(event){
       }
     } else {
       vidsToLoad = 0;
-      noVids();
+      contentLoaded();
     }
   } else {
     vidsToLoad = 0;
-    if (page === 2) {
-      vidsToLoad += 1;
-      var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
-      vid3.onloadedmetadata = function() {
-        vidsToLoad -= 1;
-        contentLoaded();
+    if (videoSupport()) {
+      if (page === 2) {
+        vidsToLoad += 1;
+        var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
+        vid3.onloadedmetadata = function() {
+          vidsToLoad -= 1;
+          contentLoaded();
+        }
       }
+    } else {
+      contentLoaded();
     }
-    noVids();
   }
 
 
@@ -183,6 +180,7 @@ $(document).ready(function(event){
   } catch(e) {
     console.log(e);
   }
+
 
   // Mobile navigation setup
   mobileMenu.on("click", function() {
