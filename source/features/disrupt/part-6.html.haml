@@ -1,14 +1,14 @@
 - content_for(:title) do
   = "Disrupt - Part 6: Fukushima and Fragility"
-- content_for(:page_head) do
-  = stylesheet_link_tag "features/disrupt"
-  = stylesheet_link_tag "slick"
-  = stylesheet_link_tag "feature-elements"
-  :javascript
-    var page = 5;
-  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
-  = javascript_include_tag "features/disrupt.js"
+
+= stylesheet_link_tag "features/disrupt"
+= stylesheet_link_tag "slick"
+= stylesheet_link_tag "feature-elements"
+:javascript
+  var page = 5;
+= javascript_include_tag "//use.typekit.net/vja5lgo.js"
+= javascript_include_tag "vendor/jquery.colorscroll.min.js"
+= javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
   .mobile-menu
@@ -303,8 +303,3 @@
           %li
             .credit Light Warrior
             .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:Microchip_rfid_rice.jpg", :target => "_blank"
-
-    .footer-logo
-      .logo
-        = image_tag "logo_blue.png"
-      %a{:href => "http://www.goinvo.com"} goinvo.com

@@ -1128,6 +1128,9 @@ article {
     max-width: 1200px;
     margin: 4em auto 0 auto;
     font-weight: 400;
+    @media only screen and (max-width: 800px) {
+      margin-top: 0;
+    }
   }
 
   .main-credits {
@@ -1244,7 +1247,7 @@ article {
       overflow: hidden;
       transition: max-height 500ms ease-in-out;
       &.open {
-        max-height: 2000px;
+        max-height: 20000px;
       }
       li {
         width: 100%;

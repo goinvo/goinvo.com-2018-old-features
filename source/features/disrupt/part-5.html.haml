@@ -1,15 +1,15 @@
 - content_for(:title) do
   = "Disrupt - Part 5: The Future of Design"
-- content_for(:page_head) do
-  = stylesheet_link_tag "features/disrupt"
-  = stylesheet_link_tag "slick"
-  = stylesheet_link_tag "feature-elements"
-  :javascript
-    var page = 4;
-  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
-  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
-  = javascript_include_tag "vendor/picturefill.min.js"
-  = javascript_include_tag "features/disrupt.js"
+
+= stylesheet_link_tag "features/disrupt"
+= stylesheet_link_tag "slick"
+= stylesheet_link_tag "feature-elements"
+:javascript
+  var page = 4;
+= javascript_include_tag "//use.typekit.net/vja5lgo.js"
+= javascript_include_tag "vendor/jquery.colorscroll.min.js"
+= javascript_include_tag "vendor/picturefill.min.js"
+= javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
   .mobile-menu
@@ -109,16 +109,10 @@
             .image
               = image_tag "../../images/features/disrupt/section-5-wyss-institute.png"
               .caption Caption goes here
-            .image
-              = image_tag "../../images/features/disrupt/section-5-ideo.png"
-              .caption Caption goes here
           %p From such collaborations new roles will be created: perhaps we will soon see a great need for the synthetic biological systems engineer or the human-robot interaction designer. This cross-pollination of science, design, and engineering is already happening at organizations such as the Wyss Institute at Harvard, whose mission is to develop materials and devices inspired by nature and biology. Wyss structures itself around multidisciplinary teams. Forward-thinking design firms such as IDEO have also added synthetic biology to their established practices of industrial and digital design.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-5-wyss-institute.png"
-              .caption Caption goes here
-            .image
-              = image_tag "../../images/features/disrupt/section-5-ideo.png"
               .caption Caption goes here
         .sub-sec
           %h3 Take Risks, Responsibly
