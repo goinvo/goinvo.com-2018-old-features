@@ -194,6 +194,15 @@ $(document).ready(function(event){
   });
 
 
+  // Expandable credits
+  if (page === 5) {
+    $('#thanks').on("click", function() {
+      $(this).toggleClass("open");
+      $('.extra-credits').toggleClass("open");
+    });
+  }
+
+
   // ===== Resize event =====
   $(window).resize(function() {
     topVidMargin();
