@@ -1,14 +1,14 @@
 - content_for(:title) do
   = "Disrupt - Part 6: Fukushima and Fragility"
-
-= stylesheet_link_tag "features/disrupt"
-= stylesheet_link_tag "slick"
-= stylesheet_link_tag "feature-elements"
-:javascript
-  var page = 5;
-= javascript_include_tag "//use.typekit.net/vja5lgo.js"
-= javascript_include_tag "vendor/jquery.colorscroll.min.js"
-= javascript_include_tag "features/disrupt.js"
+- content_for(:page_head) do
+  = stylesheet_link_tag "features/disrupt"
+  = stylesheet_link_tag "slick"
+  = stylesheet_link_tag "feature-elements"
+  :javascript
+    var page = 5;
+  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
   .mobile-menu
@@ -41,45 +41,39 @@
           .images.sidebar.right
             .image
               = image_tag "../../images/features/disrupt/section-6-fukushima.png"
-              .caption Caption goes here.
+              .caption Radiation hotspot in Kashiwa, Japan
             .image
               = image_tag "../../images/features/disrupt/section-6-irobot.png"
-              .caption Caption goes here.
+              .caption iRobot 710 Warrior
           %p On March 11, 2011, a 9.0 magnitude earthquake and subsequent tsunami damaged the Fukushima Daiichi nuclear reactors in Japan. Over the course of 24 hours, crews tried desperately to fix the reactors. However, as, one by one, the back-up safety measures failed, the fuel rods in the nuclear reactor overheated, releasing dangerous amounts of radiation into the surrounding area. As radiation levels became far too high for humans, emergency teams at the plant were unable to enter key areas to complete the tasks required for recovery. Three hundred thousand people had to be evacuated from their homes, some of whom have yet to return.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-6-fukushima.png"
-              .caption Caption goes here.
+              .caption Radiation hotspot in Kashiwa, Japan
           %p The current state of the art in robotics is not capable of surviving the hostile, high-radiation environment of a nuclear power plant meltdown and dealing with the complex tasks required to assist a recovery effort. In the aftermath of Fukushima, the Japanese government did not immediately have access to hardened, radiation-resistant robots. A few robots from American companies—tested on the modern battlefields of Afghanistan and Iraq—including iRobot’s 710 Warrior and PackBot were able to survey the plant. The potential for recovery-related tasks that can and should be handled by advanced robotics is far greater than this. However, for many reasons, spanning political, cultural, and systemic, before the Fukushima event, an investment in robotic research was never seriously considered. The meltdown was an unthinkable catastrophe, one that Japanese officials thought could never happen, and as such, it was not even acknowledged as a possible scenario for which planning was needed.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-6-irobot.png"
-              .caption Caption goes here.
+              .caption iRobot 710 Warrior
         .sub-sec
           %h3 The Darpa Robotics Competition
           %p The Fukushima catastrophe inspired the United States Defense Advanced Research Projects Agency (DARPA) to create the #{link_to "Robotics Challenge", "http://www.theroboticschallenge.org/", target: "_blank"}, the purpose of which is to accelerate technological development for robotics in the area of disaster recovery. Acknowledging the fragility of our human systems and finding resilient solutions to catastrophes—whether it’s the next super storm, earthquake, or nuclear meltdown—is a problem on which designers, engineers, and technologists should focus.
           %p In the DARPA competition mission statement, we can see the framing of the challenge in human terms.
-          %p History has repeatedly demonstrated that humans are vulnerable to natural and man-made disasters, and there are often limitations to what we can do to help remedy these situations when they occur. Robots have the potential to be useful assistants in situations in which humans cannot safely operate, but despite the imaginings of science fiction, the actual robots of today are not yet robust enough to function in many disaster zones nor capable enough to perform the most basic tasks required to help mitigate a crisis situation. The goal of the DRC is to generate groundbreaking research and development in hardware and software that will enable future robots, in tandem with human counterparts, to perform the most hazardous activities in disaster zones, thus reducing casualties and saving lives.
+          %p.quote History has repeatedly demonstrated that humans are vulnerable to natural and man-made disasters, and there are often limitations to what we can do to help remedy these situations when they occur. Robots have the potential to be useful assistants in situations in which humans cannot safely operate, but despite the imaginings of science fiction, the actual robots of today are not yet robust enough to function in many disaster zones nor capable enough to perform the most basic tasks required to help mitigate a crisis situation. The goal of the DRC is to generate groundbreaking research and development in hardware and software that will enable future robots, in tandem with human counterparts, to perform the most hazardous activities in disaster zones, thus reducing casualties and saving lives.
           .images.sidebar.right
             .image
               = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
-              .caption Caption goes here.
-            .image
-              = image_tag "../../images/features/disrupt/section-6-boston.png"
-              .caption Caption goes here.
+              .caption Boston Dynamics Atlas, an agile anthropomorphic robot
           %p The competition, so far, has been successful in its mission to encourage innovation in advanced robotics. In the competition trials held in December 2013, robots from MIT, Carnegie Mellon, and the Google-owned Japanese firm, Schaft, Inc., competed at a variety of tasks related to disaster recovery, which included driving cars, traversing difficult terrain, climbing ladders, opening doors, moving debris, cutting holes in walls, closing valves, and unreeling hoses.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
-              .caption Caption goes here.
+              .caption Boston Dynamics Atlas, an agile anthropomorphic robot
         .sub-sec
-          %h3 Building Resilient Cities
-          %p Dealing with natural and made made disasters will be a tremendous challenge and is one that emerging technologies will need to be brought to bear upon.
-          %p The sea levels around cities in the Northeastern United States are rising, creating ongoing difficulties for constructing and maintaining buildings.
-          .images.sidebar.middle
-            .image
-              = image_tag "../../images/features/disrupt/section-6-boston.png"
-              .caption Caption goes here.
+          %h3 Changing Design and Designing Change
+          %p People are less interested in the science and engineering, the mechanisms that make emerging technologies such as advanced robotics, synthetic biology, and the IoT possible, but they are deeply concerned with the outcomes. As these technologies emerge, grow, and mature over the coming years, designers will have the opportunity to bridge human needs and the miraculous technological possibilities.
+          %p It will be a great and even intimidating challenge to involve design early in the process of defining new products and services, but it will be critical as we establish the practices of the twenty-first century—from the design of technology policy, to systems, to tactical interaction frameworks and techniques. Policy design will involve advising regulators and politicians on the possibilities and perils of emerging tech; system design will demand clear understanding of the broader interactions and implications that surround the immediate details of a product; and framework design will benefit our day-to-day tactical work, providing a foundation for designers and design practice to come. What all of these technologies will create, as they evolve together, remains to be seen. But, the most interesting discoveries will be at the intersections.
+          %p Understanding new technologies, their potential usage, and how they will impact people in the short and long term will require education and collaboration, resulting in new design specializations, many of which we have not yet even considered. In the coming years, as the boundaries between design and engineering for software, hardware, and biotechnology continue to blur, those who began their professional lives as industrial designers, computer engineers, UX practitioners, and scientists will find that the trajectory of their careers takes them into uncharted territory. Like the farmers who moved to the cities to participate in the birth of the Industrial Revolution, we can’t imagine all of the outcomes of our work. However, if history is any indicator, the convergence of these technologies will be greater than the sum of its parts. If we are prepared to take on such challenges, we only have to ask: “What stands in the way?”
 %header.sec-header.bottom-vid
   .video-container{data: {page: 6}}
     = image_tag "../../images/features/disrupt/video_fallbacks/section-6-bottom.jpg", class: "placeholder"

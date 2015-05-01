@@ -1,15 +1,15 @@
 - content_for(:title) do
   = "Disrupt - Part 2: From Horse to Horsepower"
-
-= stylesheet_link_tag "features/disrupt"
-= stylesheet_link_tag "slick"
-= stylesheet_link_tag "feature-elements"
-:javascript
-  var page = 1;
-= javascript_include_tag "//use.typekit.net/vja5lgo.js"
-= javascript_include_tag "vendor/jquery.colorscroll.min.js"
-= javascript_include_tag "vendor/picturefill.min.js"
-= javascript_include_tag "features/disrupt.js"
+- content_for(:page_head) do
+  = stylesheet_link_tag "features/disrupt"
+  = stylesheet_link_tag "slick"
+  = stylesheet_link_tag "feature-elements"
+  :javascript
+    var page = 1;
+  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/picturefill.min.js"
+  = javascript_include_tag "features/disrupt.js"
 
 .navigation#article-nav
   .mobile-menu
@@ -56,28 +56,28 @@
           .images.sidebar.right
             .image
               = image_tag "../../images/features/disrupt/section-2-highway-system.png"
-              .caption Map of the U.S. Highway System Plan (November 11, 1926)
+              .caption U.S. Highway System Plan, November 11, 1926
             .image
               = image_tag "../../images/features/disrupt/section-2-pijl.png"
-              .caption Caption goes here
+              .caption Karl Jilg represents a pedestrian’s view of city streets
             .image
               = image_tag "../../images/features/disrupt/section-2-standard-oil.png"
-              .caption Caption goes here
+              .caption John Rockefeller’s Standard Oil had an octupus-like economic influence
           %p Faster, better, more reliable transportation, nearly instantaneous communication across great distance, and a wondrous energy source to power inventions from electric lights to the radio, are just a few of the positive results of this era of technological disruption. But what did we give up in exchange? The automobile in particular, forced the remaking of the American landscape. To create the roads and highways on which autos could easily travel, we tore up the landscape and replaced it with asphalt and concrete, from sea to shining sea. The natural beauty of America was subjugated to the desire to move forward — with individual mobility for commerce and pleasure seen as the greatest good, everything else was required to give way.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-2-highway-system.png"
-              .caption Map of the U.S. Highway System Plan (November 11, 1926)
+              .caption U.S. Highway System Plan, November 11, 1926
           %p Within our cities, we experienced a great loss of public space or, at least, the ceding of that space in permanent fashion to one form of transportation only. An illustration by Karl Jilg commissioned by the Swedish Road Administration makes the point elegantly, depicting city roadways as yawning chasms that can only be crossed by rickety plywood bridges, with pedestrians limited in their motion to the near vicinity of buildings.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-2-pijl.png"
-              .caption Caption goes here
+              .caption Karl Jilg represents a pedestrian’s view of city streets
           %p Similarly, our natural resource and even our national policy were subjected to the whims of big oil companies in order to feed our insatiable thirst for fuel. A political cartoon from 1905 shows the outsized influence of Standard Oil, which wraps its tentacles around the government, industry, and labor.
           .images.sidebar.middle
             .image
               = image_tag "../../images/features/disrupt/section-2-standard-oil.png"
-              .caption Caption goes here
+              .caption John Rockefeller’s Standard Oil had an octupus-like economic influence
           %p In hindsight it’s easy to question if these were the best outcomes. We received great benefits, no doubt, from the auto, and great detriments as well. Going forward, it’s worth considering the trade-offs of emerging, disruptive technologies, for our environment, natural resources, and way of living.
 %header.sec-header#bottom.bottom-vid
   .video-container{data: {page: 2}}

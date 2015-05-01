@@ -816,6 +816,10 @@ article {
       &:last-of-type {
         margin: 0 16% 0 0;
       }
+      &.quote {
+        padding: 0 4em 0 2em;
+        font-style: italic;
+      }
       @media only screen and (max-width: 800px) {
         margin: 0 0 4vw 0;
         &:last-of-type {
