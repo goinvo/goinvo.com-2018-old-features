@@ -1227,10 +1227,16 @@ article {
       line-height: 1.7em;
       li {
         width: 100%;
-        a {
-          color: $orange;
-          &:hover {
-            text-decoration: underline;
+        margin-top: 0.7em;
+        .credit {
+          color: white;
+        }
+        .link {
+          a {
+            color: $orange;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }

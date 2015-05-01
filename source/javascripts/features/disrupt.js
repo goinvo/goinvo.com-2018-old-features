@@ -244,7 +244,7 @@ $(document).ready(function(event){
     if ( bottomFadeCalc >= -0.1 ) {
       var extra = 0;
       if (page === 5) {
-        extra = 0.4;
+        extra = 0.8;
       }
       bottomFade.css({'opacity': bottomFadeCalc + extra });
     }
