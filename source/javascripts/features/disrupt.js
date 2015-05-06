@@ -70,26 +70,30 @@ $(document).ready(function(event){
       bottomFadeBottom = bottomFadeTop + bottomFade.height();
       documentHeight = $(document).height();
 
-      mainBackground.colorScroll({
-        colors: [
-          {
-            color: colors[page].top,
-            position: '0'
-          },
-          {
-            color: '#ffffff',
-            position: topFadeBottom
-          },
-          {
-            color: '#ffffff',
-            position: bottomFadeTop - windowHeight
-          },
-          {
-            color: colors[page].bottom,
-            position: bottomFadeBottom - windowHeight
-          }
-        ]
-      });
+      if ($(window).width() > 800) {
+        mainBackground.colorScroll({
+          colors: [
+            {
+              color: colors[page].top,
+              position: '0'
+            },
+            {
+              color: '#ffffff',
+              position: topFadeBottom
+            },
+            {
+              color: '#ffffff',
+              position: bottomFadeTop - windowHeight
+            },
+            {
+              color: colors[page].bottom,
+              position: bottomFadeBottom - windowHeight
+            }
+          ]
+        });
+      } else {
+        mainBackground.css("background-color", "white");
+      }
 
       if (page === 0) {
         firstTitle.delay(2000).animate({
@@ -232,16 +236,18 @@ $(document).ready(function(event){
     }
 
     //Bottom nav animation
-    if (windowBottom > (documentHeight - siteFooter.outerHeight())) {
-      bottomNav.delay(100).animate({
-        opacity: "1",
-        bottom: siteFooter.outerHeight()
-      }, {
-        duration: 500,
-        complete: function() {
-          $(this).css('pointer-events', 'auto');
-        }
-      });
+    if ($(window).width() > 800) {
+      if (windowBottom > (documentHeight - siteFooter.outerHeight())) {
+        bottomNav.delay(100).animate({
+          opacity: "1",
+          bottom: siteFooter.outerHeight()
+        }, {
+          duration: 500,
+          complete: function() {
+            $(this).css('pointer-events', 'auto');
+          }
+        });
+      }
     }
 
     // Fade videos

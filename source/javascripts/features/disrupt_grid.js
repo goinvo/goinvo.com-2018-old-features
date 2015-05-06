@@ -8,7 +8,7 @@ function animateEntrance(elements) {
 
     setTimeout(function() {
       div.fadeIn();
-    }, i*75);
+    }, i*50);
   });
 }
 
@@ -107,7 +107,7 @@ $(document).ready(function(event){
     scrollTop = $(window).scrollTop();
     windowBottom = scrollTop + windowHeight;
     gridTop = gridArea.offset().top;
-    if (windowBottom > gridTop + (gridArea.height() / 2)) {
+    if (windowBottom > gridTop + (gridArea.height() / 4)) {
       animateEntrance(panels);
     }
   });

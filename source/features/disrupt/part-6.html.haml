@@ -10,6 +10,15 @@
   = javascript_include_tag "vendor/jquery.colorscroll.min.js"
   = javascript_include_tag "features/disrupt.js"
 
+.no-js
+  The article page is loading...
+  %br
+  %br
+  This article requires the use of JavaScript. If you have JavaScript disabled, please enable or 
+  =link_to "return home.", "/"
+:javascript
+  $('.no-js').remove();
+
 .navigation#article-nav
   .mobile-menu
     .title Disrupt!
