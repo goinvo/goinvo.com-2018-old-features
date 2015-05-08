@@ -119,6 +119,17 @@ a {
 	}
 }
 
+#disrupt {
+  .photo-container {
+    display: none;
+    background-image: image-url('features/disrupt/video_fallbacks/section-5-top.jpg');
+    background-position: 40% 0;
+    @media only screen and (max-width: 760px) {
+      display: block;
+    }
+  }
+}
+
 #blog .title {
 	width: 100%;
 	padding: 1em 3em;
@@ -146,9 +157,13 @@ a {
 #homepage-hero {
 	min-height: 578px;
 	
-	.photo-container {
+	.photo-container, .video-container {
 			//background-image: image-url('home/hp-1.png');
 			min-height: 578px;
+      video {
+        width: 100%;
+        height: auto;
+      }
 	}
 	
 	
@@ -258,22 +273,62 @@ a {
 	overflow: hidden;
 	z-index: 0;
 	min-height: 472px;
+  max-height: 472px;
 	
 	.photo-container {
 		transition: transform 500ms ease-in-out;
 		background-size: cover;
 		background-position: left center;
 		background-repeat: no-repeat;
-		width:100%;
-		min-height: 472px;
 		transform: scale(1, 1);	
-		
 	}
+
+  .video-container, .photo-container  {
+    width: 100%;
+    min-height: 472px;
+    transition: transform 500ms ease-in-out;
+    #disrupt-vid {
+      position: absolute;
+      bottom: 0; 
+      right: 0;
+      min-width: 100%; 
+      min-height: 100%; 
+      width: auto; 
+      height: auto;
+      z-index: -1000; 
+      overflow: hidden;
+
+      @media only screen and (min-width: 1650px) {
+        transform: translateY(10%);
+      }
+      @media only screen and (min-width: 1900px) {
+        transform: translateY(20%);
+      }
+      @media only screen and (min-width: 2150px) {
+        transform: translateY(30%);
+      }
+      @media only screen and (max-width: 1350px) {
+        transform: translateX(10%);
+      }
+      @media only screen and (max-width: 1200px) {
+        transform: translateX(12%);
+      }
+      @media only screen and (max-width: 1000px) {
+        transform: translateX(25%);
+      }
+      @media only screen and (max-width: 760px) {
+        display: none;
+      }
+    }
+  }
 	
 	&:hover {
 		.photo-container {
 			transform: scale(1.03, 1.03);	
 		}
+    .video-container {
+      transform: scale(1.1, 1.1);
+    }
 	}	
 	
 	//Layouts
