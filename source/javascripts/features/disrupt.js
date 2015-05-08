@@ -127,14 +127,6 @@ $(document).ready(function(event){
       secondVideo.find('.video-container').prepend('<video autoplay="true" muted="true" loop="true" poster="../../images/features/disrupt/video_posters/section-' + section + '-bottom.jpg"><source src="../../videos/disrupt/section-' + section + '-bottom.mp4" type="video/mp4"><source src="../../videos/disrupt/section-' + section + '-bottom.webm" type="video/webm"></video>');
       var vid1 = document.getElementsByClassName('top-vid')[0].getElementsByTagName('video')[0];
       var vid2 = document.getElementsByClassName('bottom-vid')[0].getElementsByTagName('video')[0];
-      if (page === 2) {
-        vidsToLoad += 1;
-        var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
-        vid3.onloadedmetadata = function() {
-          vidsToLoad -= 1;
-          contentLoaded();
-        }
-      }
       vid1.onloadedmetadata = function() {
         vidsToLoad -= 1;
         contentLoaded();
@@ -158,18 +150,7 @@ $(document).ready(function(event){
     }
   } else {
     vidsToLoad = 0;
-    if (videoSupport()) {
-      if (page === 2) {
-        vidsToLoad += 1;
-        var vid3 = document.getElementById('tomato-vid').getElementsByTagName('video')[0];
-        vid3.onloadedmetadata = function() {
-          vidsToLoad -= 1;
-          contentLoaded();
-        }
-      }
-    } else {
-      contentLoaded();
-    }
+    contentLoaded();
   }
 
 

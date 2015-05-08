@@ -89,11 +89,8 @@
           %h3 Eating
           %p There’s nothing more demonstrative of our connection to the greater world around us than the food we put inside our bodies. Genetically modified organisms (GMO) are prevalent throughout the United States. Some studies suggest that up to 80% of the US food supply has genetically modified ingredients (Link to source). Foods can be genetically altered for a variety of reasons — to resist pesticides, enhance shelf life, and even improve appearance or introduce novel variants.
           %p Disruption in our food supply can begin with something as mundane as improving the length of freshness of the humble tomato. For instance, while naturally occurring tomato varieties begin to soften and rot after a week on the shelves or two weeks in the refrigerator, altering the genetic makeup of a tomato — to suppress or "silence" certain characteristics — enables the texture of the fruit to remain intact for up to 45 days. Genetically modified crops have caused grave concerns about the long-term safety of the food. In the United States, there are currently no laws that require the labeling of such GMO foods, which further compounds the problem. Despite this, genomics, is already upending the trillion dollar agriculture industry worldwide, according to the McKinsey Global Institute Report,“Disruptive technologies: Advances that will transform life, business and the global economy”.
-          #tomato-vid
-            %video{preload: "metadata", autoplay: true, muted: true, loop: true}
-              %source{src: '../../videos/disrupt/tomato.mp4', type: 'video/mp4'}
-              %source{src: '../../videos/disrupt/tomato.webm', type: 'video/webm'}
-              %p Your browser does not support HTML5 video.
+          #tomato
+            = image_tag "../../images/features/disrupt/tomato.gif"  
           %p In 2010, scientists at the National Institute of Plant Genome Research in New Delhi, India, identified the genes that drive the ripening of the fruit and applied RNA-interference to silence them.
         .sub-sec
           %h3 Working
