@@ -798,6 +798,12 @@ article {
           margin: 0;
         }
       }
+      &.book {
+        margin: 0 0 3em 0;
+         @media only screen and (max-width: 800px) {
+          margin: 0 0 5vw 0;
+        }
+      }
       h3 {
         font-family: "proxima-nova", sans-serif;
         font-weight: 400;
@@ -805,19 +811,19 @@ article {
         @media only screen and (min-width: 1201px) {
           font-size: 1.5em;
           letter-spacing: 0.5em;
-          margin-bottom: 0.3em;
+          margin-bottom: 0.7em;
           line-height: 1.4em;
         }
         @media only screen and (max-width: 1200px) {
           font-size: 1.9vw;
           letter-spacing: 1.1vw;
-          margin-bottom: 0.5vw;
+          margin-bottom: 0.6vw;
           line-height: 3.6vw;
         }
         @media only screen and (max-width: 700px) {
           font-size: 0.8em;
           letter-spacing: 0.5em;
-          margin-bottom: 0.1em;
+          margin-bottom: 0.2em;
           line-height: 1.2em;
         }
       }
@@ -834,6 +840,12 @@ article {
         padding: 0 4em 0 2em;
         font-style: italic;
       }
+      .italics {
+        font-style: italic;
+      }
+      a {
+        display: inline;
+      }
       @media only screen and (max-width: 800px) {
         margin: 0 0 4vw 0;
         &:last-of-type {
@@ -841,6 +853,16 @@ article {
         }
         &.no-margin {
           margin: 0;
+        }
+      }
+    }
+    ul.refs {
+      list-style: none;
+      li {
+        color: $gray;
+        a {
+          color: $gray;
+          font-style: italic;
         }
       }
     }
