@@ -286,6 +286,9 @@ a {
   .video-container, .photo-container  {
     width: 100%;
     min-height: 472px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
     #disrupt-vid {
       position: absolute;
       bottom: 0; 
@@ -325,6 +328,9 @@ a {
 		.photo-container {
 			transform: scale(1.03, 1.03);	
 		}
+    .video-container {
+      transform: scale(1.1, 1.1);
+    }
 	}	
 	
 	//Layouts
