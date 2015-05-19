@@ -156,6 +156,7 @@ a {
 
 #homepage-hero {
 	min-height: 578px;
+	background-size: cover;
 	
 	.photo-container, .video-container {
 		//background-image: image-url('home/hp-1.png');
@@ -169,6 +170,7 @@ a {
 	}
 	
 	.title {
+		padding-top: 3em;
 		top: 0;
 		text-align: center;
 		padding-left: 0px;
@@ -182,6 +184,9 @@ a {
 	
 	.actual-title {
 		font-size: 65px;	
+		@media  only screen and (max-width: 500px) { 
+			font-size: 45px !important;	
+		}
 	}
 	
 	.actual-content {
@@ -189,38 +194,49 @@ a {
 		line-height: 35px;
 		margin-top: 5px;
 		margin-bottom: 5px;
+		
+		@media  only screen and (max-width: 500px) { 
+			font-size: 22px !important;	
+		}
 	}
 	
 	.bottom-image-wrapper {
 		width: 100%;
 		position: absolute;
 		bottom: 0;
+		
+		&#homepageImage3 {
+			@media only screen and (min-width: 400px) and (max-width:500px) {
+				bottom: -10%;	
+			}
+		}
+		
 		img.bottom-image {
 			margin: 0 auto;	
 			
 			&.mobile-home-image{
 				display: none;
 			}
-		}
-		
-		&#homepageImage1 {
 			
-			img {
+			@media  only screen and (max-width: 500px) { 
+				display: none;
 				
+				&.mobile-home-image {
+					display: block;
+					width: 100%;
+					max-height: 50%;
+					
+					&.image-2 {
+						@media only screen and (min-width: 450px) {
+							width: 80%;	
+						}
+					}
+					
+					
+				}
 			}
 		}
 		
-		&#homepageImage2 {
-			img {
-				
-			}
-		}
-		
-		&#homepageImage3 {
-			img {
-				
-			}
-		}
 	}
 }
 
@@ -256,6 +272,10 @@ a {
 	
 	.sub-title {
 		margin-top: .65em;	
+	}
+	
+	@media only screen and (max-width: 750px) {
+		display: none;	
 	}
 }
 
