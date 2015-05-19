@@ -158,36 +158,68 @@ a {
 	min-height: 578px;
 	
 	.photo-container, .video-container {
-			//background-image: image-url('home/hp-1.png');
-			min-height: 578px;
-      video {
-        width: 100%;
-        height: auto;
-      }
+		//background-image: image-url('home/hp-1.png');
+		min-height: 578px;
+		background-blend-mode: multiply;
+		
+		video {
+			width: 100%;
+			height: auto;
+		}
 	}
 	
+	.title {
+		top: 0;
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.actual-title, .actual-content {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 	
 	.actual-title {
-		font-size: 75px;	
+		font-size: 65px;	
 	}
 	
 	.actual-content {
-		font-size: 40px;
-		max-width: 593px;
+		font-size: 30px;
+		line-height: 35px;
 		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 	
-	.actual-button {
-		margin-top: 25px;
-		border: 1px solid #ffffff;
-		border-radius: 5px;
-		display: inline-block;
-		padding: 10px;
-		transition: 350ms;
+	.bottom-image-wrapper {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		img.bottom-image {
+			margin: 0 auto;	
+			
+			&.mobile-home-image{
+				display: none;
+			}
+		}
 		
-		&:hover {
-			transform: scale(1.1,1.1);
-			background: rgba(0,0,0,.2);	
+		&#homepageImage1 {
+			
+			img {
+				
+			}
+		}
+		
+		&#homepageImage2 {
+			img {
+				
+			}
+		}
+		
+		&#homepageImage3 {
+			img {
+				
+			}
 		}
 	}
 }
@@ -226,7 +258,6 @@ a {
 		margin-top: .65em;	
 	}
 }
-
 
 .clients, .news {
 	background: #f9f9f9;
@@ -309,17 +340,20 @@ a {
 	overflow: hidden;
 	z-index: 0;
 	min-height: 472px;
-  max-height: 472px;
+	max-height: 472px;
 	
 	.photo-container {
 		transition: transform 500ms ease-in-out;
 		background-size: cover;
 		background-position: left center;
 		background-repeat: no-repeat;
+		width:100%;
+		min-height: 472px;
 		transform: scale(1, 1);	
+		
 	}
-
-  .video-container, .photo-container  {
+	
+.video-container, .photo-container  {
     width: 100%;
     min-height: 472px;
     -webkit-backface-visibility: hidden;
@@ -364,9 +398,9 @@ a {
 		.photo-container {
 			transform: scale(1.03, 1.03);	
 		}
-    .video-container {
-      transform: scale(1.1, 1.1);
-    }
+		.video-container {
+		  transform: scale(1.1, 1.1);
+		}
 	}	
 	
 	//Layouts
