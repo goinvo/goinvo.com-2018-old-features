@@ -1,5 +1,15 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage"
+%a#disrupt.block.bar{:href => "disrupt/"}
+	.photo-container
+	.video-container
+		%video#disrupt-vid{autoplay: true, muted: true, loop: true, poster: "../images/features/disrupt/video_posters/section-5-top.jpg"}
+			%source{src: '../videos/disrupt/section-5-top.mp4', type: 'video/mp4'}
+			%source{src: '../videos/disrupt/section-5-top.webm', type: 'video/webm'}
+	.title
+		%h5.tag Feature Article
+		%h2.name Disrupt!
+		%h3.sub-name Designing for Emerging Technologies
 %a#from-bathroom-to-healthroom.block.bar{:href => "from-bathroom-to-healthroom/"}
 	.photo-container
 	.title

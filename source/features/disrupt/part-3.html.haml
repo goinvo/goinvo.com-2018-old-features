@@ -1,0 +1,107 @@
+- content_for(:title) do
+  = "Disrupt - Part 3: The Coming Disruption"
+- content_for(:page_head) do
+  = stylesheet_link_tag "features/disrupt"
+  = stylesheet_link_tag "slick"
+  = stylesheet_link_tag "feature-elements"
+  :javascript
+    var page = 2;
+  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "vendor/picturefill.min.js"
+  = javascript_include_tag "features/disrupt.js"
+
+.no-js
+  The article page is loading...
+  %br
+  %br
+  This article requires the use of JavaScript. If you have JavaScript disabled, please enable or 
+  =link_to "return home.", "/"
+:javascript
+  $('.no-js').remove();
+
+.navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
+  %ol
+    %li
+      =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
+    %li
+      =link_to "2. From Horse to Horsepower", "/features/disrupt/part-2.html"
+    %li
+      =link_to "3. The Coming Disruption", "/features/disrupt/part-3.html"
+    %li
+      =link_to "4. Crowdsourcing Innovation", "/features/disrupt/part-4.html"
+    %li
+      =link_to "5. The Future of Design", "/features/disrupt/part-5.html"
+    %li
+      =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
+%header.sec-header#top.top-vid
+  .video-container{data: {page: 3}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-top.jpg", class: "placeholder"
+  .title-container
+    %h3 The Coming
+    %h3 Disruption
+%article#feature-article.disrupt
+  %section.article-section#section-3
+    .section-content
+      .content
+        .sub-sec
+          %p What is the nature and magnitude of the disruption before us? Like the owner of the horse and buggy at the turn of the 20th century, we can not fully appreciate or completely anticipate the entirety of the coming technological change that will embrace nearly every aspect of our everyday lives. We can, however, begin to understand the magnitude of that disruption in areas as varied as the places we live, the food we eat, and the work we do by emerging technologies like the Internet of Things, robotics, genomics and synthetic biology.
+.sci-fi
+  %img{sizes:"100vw", srcset:"../../images/features/disrupt/freaky-800.jpg 800w, ../../images/features/disrupt/freaky-1280.jpg 1280w, ../../images/features/disrupt/freaky-2880.jpg 2880w"}
+  %article.disrupt
+    .caption While criticism of the uses to which emerging technologies are put is necessary, many critics make the mistake of rejecting technological innovations entirely.
+%article#feature-article.disrupt
+  %section.article-section#section-3
+    .section-content
+      .content
+        .sub-sec
+          %h3 Living
+          .images.sidebar.right
+            .image
+              = image_tag "../../images/features/disrupt/section-3-light-reeds.png"
+            .image
+              = image_tag "../../images/features/disrupt/section-3-light-reeds-2.png"
+              .caption Light Reeds by Pensa
+            .image
+              = image_tag "../../images/features/disrupt/section-3-bioluminescent-trees-1.png"
+            .image
+              = image_tag "../../images/features/disrupt/section-3-bioluminescent-trees-2.png"
+              .caption Bioluminescent Trees by Studio Roosegaarde
+          %p The places in which we live, work, and play, will be created, connected, and controlled in new ways — from the architecture of buildings to the composition of public and private spaces, to the infrastructure that binds it all together. Our relationship with these places will change as well. Already, our cities are being made “smarter” by the connected sensors of the Internet of Things (IoT). These systems can help save precious resources by reorienting our day-to-day activities through the optimization and coordination of elements like traffic flow — reducing congestion, saving commuters time and fuel, and helping to limit pollution — and municipal services such as police dispatch, snow removal, and public works, to adjust to evolving patterns. The IoT also has the potential to put us into more substantial contact with our surroundings, whether it be at work, in transit, or at home, by adding a digital layer to our physical infrastructure. One beautiful example of this increased awareness can be seen in the Light Reeds project, created by New York design firm Pensa, which provide viewers with a greater connection to the water and waterways that flow around and through our cities. Powered by an underwater turbine, the Light Reeds themselves rely on the motion of the water for power; their glow is dim or bright based on the degree of activity, while their color can indicate water quality.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-3-light-reeds.png"
+            .image
+              = image_tag "../../images/features/disrupt/section-3-light-reeds-2.png"
+              .caption Light Reeds by Pensa
+          %p Or consider the potential of our parks and open spaces to be lit by light-emitting trees with a bioluminescent coating instead of electric lights, illustrated beautifully in this visualization by designers from Studio Roosegaarde, as seen on #{link_to "Dezeen.com", "http://www.dezeen.com/2014/03/24/movie-sxsw-daan-roosegarde-glow-in-dark-trees", target: "_blank"}. This might seem far fetched, but glowing plants such as these are already being created through synthetic biology.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-3-bioluminescent-trees-1.png"
+            .image
+              = image_tag "../../images/features/disrupt/section-3-bioluminescent-trees-2.png"
+              .caption Bioluminescent Trees by Studio Roosegaarde
+          %p Buildings of the future may be partially or entirely 3D printed. Today, additive fabrication is already changing architecture and construction. In April 2014, #{link_to "WinSun", "http://www.bbc.com/news/blogs-news-from-elsewhere-27156775", target: "_blank"}, a Chinese engineering company, reported that it could construct 10 single-story homes in a day by using a specialized 3D printing technology that creates the main structure and walls using an inexpensive combination of concrete and construction waste materials.
+        .sub-sec
+          %h3 Eating
+          %p There’s nothing more demonstrative of our connection to the greater world around us than the food we put inside our bodies. Genetically modified organisms (GMO) are prevalent throughout the United States. Today the overwhelming majority of commodity crops from soybeans to cotton to beets to corn are genetically engineered. Foods can be genetically altered for a variety of reasons — to resist pesticides, enhance shelf life, and even improve appearance or introduce novel variants. According to the #{link_to "International Service for the Acquisition of Agri-biotech Applications (ISAAA)", "http://www.isaaa.org/resources/publications/briefs/49/executivesummary/default.asp", target: "_blank"} in 2014, a record 181.5 million hectares of biotech crops were grown globally.
+          %p Disruption in our food supply can begin with something as mundane as improving the length of freshness of the humble tomato. For instance, while naturally occurring tomato varieties begin to soften and rot after a week on the shelves or two weeks in the refrigerator, altering the genetic makeup of a tomato — to suppress or "silence" certain characteristics — enables the texture of the fruit to remain intact for up to 45 days. Genetically modified crops have caused grave concerns about the long-term safety of the food. In the United States, there are currently no laws that require the labeling of such GMO foods, which further compounds the problem. Despite this, genomics, is already upending the trillion dollar agriculture industry worldwide, according to the McKinsey Global Institute Report,“Disruptive technologies: Advances that will transform life, business and the global economy”.
+          #tomato
+            = image_tag "../../images/features/disrupt/tomato.gif"  
+          %p In 2010, scientists at the National Institute of Plant Genome Research in New Delhi, India, identified the genes that drive the ripening of the fruit and applied RNA-interference to silence them.
+        .sub-sec
+          %h3 Working
+          %p In the area of global manufacturing, emerging technologies like advanced robotics and additive fabrication are changing the way products are constructed. These changes threaten to completely alter the nature and type of human labor required, with the very strong possibility that millions of jobs worldwide will be lost to agile, robotic manufacturing processes. Knowledge work is similarly threatened by the automation of tasks by computerized artificial intelligence. There will be no simple answers to this. But if we believe that humans need meaningful work to lead full lives, the need to find answers and design solutions becomes of tremendous importance.
+%header.sec-header#bottom.bottom-vid
+  .video-container{data: {page: 3}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-3-bottom.jpg", class: "placeholder"
+#bottom-nav
+  =link_to "/features/disrupt/part-4.html" do
+    %span.link-fill
+      .arrow#three
+      .text-container
+        .next-part next part
+        .title crowdsourcing innovation

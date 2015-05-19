@@ -1,7 +1,6 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage", :async => true
 	:javascript
-		// Retrieve current blog posts 
 		posts = [];
 		$.ajax({
 			url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('http://yes.goinvo.com/articles/rss.xml'),
@@ -12,9 +11,7 @@
 						posts.push(e);
 					});
 				}	
-				// ***Code goes here***
-				
-				// get the title and link information for current blog post
+				// Code goes here
 				var currentString = posts[0].content;
 				var sIndex = currentString.lastIndexOf('<img');
 				currentString = currentString.substring(0, sIndex);
@@ -24,18 +21,19 @@
 				currentString = currentString.substr(sIndex+5);
 				sIndex = currentString.indexOf('"');
 				currentString = currentString.substring(0, sIndex);
-				
-				// Set the recent blog post section
+
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+				var randNum = Math.ceil(Math.random()*3);
+				var imgURL = 'url("/images/home/hp-' + randNum + '.png")';
+				$('#homepage-hero .photo-container').css('background-image', imgURL);
 			}
 		});
-		
-- randNum = 1 + rand(3)
 %a#homepage-hero.block.bar{:href => "healthcare"}
-	.photo-container{:style => "background-image: url('/images/home/homepage-0" + randNum.to_s + ".png')"}
+	.photo-container
 	.title
+<<<<<<< HEAD
 		- if randNum === 1
 			.actual-title Idea to Patient
 		- if randNum === 2
@@ -50,6 +48,11 @@
 	%a{:href => "/contact"}
 		.actual-button Contact us today to discuss your next healthcare project
 	.sub-title We'll respond within 2 business hours.
+=======
+		.actual-title Idea to Product
+		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-button See our work
+>>>>>>> master
 .clients
 	%table.non-mobile
 		%tbody
@@ -77,18 +80,23 @@
 						%img{:src => "/images/healthcare/partners/wallgreen.png"}
 
 
+%a#disrupt.block.bar{:href => "features/disrupt/"}
+	.photo-container
+	.video-container
+		%video#disrupt-vid{autoplay: true, muted: true, loop: true, poster: "/images/features/disrupt/video_posters/section-5-top.jpg"}
+			%source{src: '/videos/disrupt/section-5-top.mp4', type: 'video/mp4'}
+			%source{src: '/videos/disrupt/section-5-top.webm', type: 'video/webm'}
+	.title
+		%h5.tag Feature Article
+		%h2.name Disrupt!
+		%h3.sub-name Designing for Emerging Technologies
+
 %a#from-bathroom-to-healthroom.block.bar{:href => "features/from-bathroom-to-healthroom/"}
 	.photo-container
 	.title
 		%h5.tag February/March 2015 Feature
 		%h2.name From Bathroom to Healthroom
 		%h3.sub-name How magical technology will revolutionize human health
-	
-%a#ebola.block.bar{:href => "features/ebola"}
-	.photo-container
-	.title
-		%h3.sub-name A Visual Guide
-		%h2.name Understanding Ebola
 	
 .double
 	%a#three-m.block.half{:href => "healthcare/3m"}
@@ -156,3 +164,8 @@
 
 .recent-blog-post.dynamic
 		
+%a#ebola.block.bar{:href => "features/ebola"}
+	.photo-container
+	.title
+		%h3.sub-name A Visual Guide
+		%h2.name Understanding Ebola

@@ -119,6 +119,17 @@ a {
 	}
 }
 
+#disrupt {
+  .photo-container {
+    display: none;
+    background-image: image-url('features/disrupt/video_fallbacks/section-5-top.jpg');
+    background-position: 40% 0;
+    @media only screen and (max-width: 760px) {
+      display: block;
+    }
+  }
+}
+
 #blog .title {
 	width: 100%;
 	padding: 1em 3em;
@@ -146,64 +157,37 @@ a {
 #homepage-hero {
 	min-height: 578px;
 	
-	.photo-container {
-		//background-image: image-url('home/hp-1.png');
-		min-height: 578px;
-		background-blend-mode: multiply;
+	.photo-container, .video-container {
+			//background-image: image-url('home/hp-1.png');
+			min-height: 578px;
+      video {
+        width: 100%;
+        height: auto;
+      }
 	}
 	
-	.title {
-		top: 0;
-		text-align: center;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	
-	.actual-title, .actual-content {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
 	
 	.actual-title {
-		font-size: 65px;	
+		font-size: 75px;	
 	}
 	
 	.actual-content {
-		font-size: 30px;
-		line-height: 35px;
+		font-size: 40px;
+		max-width: 593px;
 		margin-top: 5px;
-		margin-bottom: 5px;
 	}
 	
-	.bottom-image-wrapper {
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		img.bottom-image {
-			margin: 0 auto;	
-			
-			&.mobile-home-image{
-				display: none;
-			}
-		}
+	.actual-button {
+		margin-top: 25px;
+		border: 1px solid #ffffff;
+		border-radius: 5px;
+		display: inline-block;
+		padding: 10px;
+		transition: 350ms;
 		
-		&#homepageImage1 {
-			
-			img {
-				
-			}
-		}
-		
-		&#homepageImage2 {
-			img {
-				
-			}
-		}
-		
-		&#homepageImage3 {
-			img {
-				
-			}
+		&:hover {
+			transform: scale(1.1,1.1);
+			background: rgba(0,0,0,.2);	
 		}
 	}
 }
@@ -242,6 +226,7 @@ a {
 		margin-top: .65em;	
 	}
 }
+
 
 .clients, .news {
 	background: #f9f9f9;
@@ -324,22 +309,64 @@ a {
 	overflow: hidden;
 	z-index: 0;
 	min-height: 472px;
+  max-height: 472px;
 	
 	.photo-container {
 		transition: transform 500ms ease-in-out;
 		background-size: cover;
 		background-position: left center;
 		background-repeat: no-repeat;
-		width:100%;
-		min-height: 472px;
 		transform: scale(1, 1);	
-		
 	}
+
+  .video-container, .photo-container  {
+    width: 100%;
+    min-height: 472px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+    #disrupt-vid {
+      position: absolute;
+      bottom: 0; 
+      right: 0;
+      min-width: 100%; 
+      min-height: 100%; 
+      width: auto; 
+      height: auto;
+      z-index: -1000; 
+      overflow: hidden;
+
+      @media only screen and (min-width: 1650px) {
+        transform: translateY(10%);
+      }
+      @media only screen and (min-width: 1900px) {
+        transform: translateY(20%);
+      }
+      @media only screen and (min-width: 2150px) {
+        transform: translateY(30%);
+      }
+      @media only screen and (max-width: 1350px) {
+        transform: translateX(10%);
+      }
+      @media only screen and (max-width: 1200px) {
+        transform: translateX(12%);
+      }
+      @media only screen and (max-width: 1000px) {
+        transform: translateX(25%);
+      }
+      @media only screen and (max-width: 760px) {
+        display: none;
+      }
+    }
+  }
 	
 	&:hover {
 		.photo-container {
 			transform: scale(1.03, 1.03);	
 		}
+    .video-container {
+      transform: scale(1.1, 1.1);
+    }
 	}	
 	
 	//Layouts

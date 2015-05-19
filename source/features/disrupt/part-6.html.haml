@@ -1,0 +1,337 @@
+- content_for(:title) do
+  = "Disrupt - Part 6: Fukushima and Fragility"
+- content_for(:page_head) do
+  = stylesheet_link_tag "features/disrupt"
+  = stylesheet_link_tag "slick"
+  = stylesheet_link_tag "feature-elements"
+  :javascript
+    var page = 5;
+  = javascript_include_tag "//use.typekit.net/vja5lgo.js"
+  = javascript_include_tag "vendor/jquery.colorscroll.min.js"
+  = javascript_include_tag "features/disrupt.js"
+
+%meta{:name => "description", :content => "Today, emerging technologies from robotics to synthetic biology to the Internet of Things are opening up new possibilities."}/
+%meta{:name => "keywords", :content => "design future emerging technologies technology robotics genomics internet of things iot ux user experience synthetic biology"}/
+
+%meta{:property => "og:url", :content => "http://www.goinvo.com/features/disrupt/"}/
+%meta{:property => "og:title", :content => "Disrupt: Designing for Emerging Technologies"}/
+%meta{:property => "og:description", :content => "Today, emerging technologies from robotics to synthetic biology to the Internet of Things are opening up new possibilities."}/
+%meta{:property => "og:type", :content => "article"}/
+%meta{:property => "og:image", :content => "http://www.goinvo.com/images/features/disrupt/twitter.jpg"}/
+
+
+%meta{:name => "twitter:card", :content => "summary_large_image"}/
+%meta{:name => "twitter:site", :content => "@goinvo"}/
+%meta{:name => "twitter:creator", :content => "@goinvo"}/
+%meta{:name => "twitter:title", :content => "Disrupt: Designing for Emerging Technologies"}/
+%meta{:name => "twitter:description", :content => "Today, emerging technologies from robotics to synthetic biology to the Internet of Things are opening up new possibilities."}/
+%meta{:name => "twitter:image", :content => "http://www.goinvo.com/images/features/disrupt/twitter.jpg"}
+
+.no-js
+  The article page is loading...
+  %br
+  %br
+  This article requires the use of JavaScript. If you have JavaScript disabled, please enable or 
+  =link_to "return home.", "/"
+:javascript
+  $('.no-js').remove();
+
+.navigation#article-nav
+  .mobile-menu
+    .title Disrupt!
+    = image_tag "../../images/features/disrupt/mobilenavutil.png", class: "toggle-arrow"
+  %ol
+    %li
+      =link_to "1. Emerging Technologies", "/features/disrupt/index.html"
+    %li
+      =link_to "2. From Horse to Horsepower", "/features/disrupt/part-2.html"
+    %li
+      =link_to "3. The Coming Disruption", "/features/disrupt/part-3.html"
+    %li
+      =link_to "4. Crowdsourcing Innovation", "/features/disrupt/part-4.html"
+    %li
+      =link_to "5. The Future of Design", "/features/disrupt/part-5.html"
+    %li
+      =link_to "6. Fukushima and Fragility", "/features/disrupt/part-6.html"
+%header.sec-header#top.top-vid
+  .video-container{data: {page: 6}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-top.jpg", class: "placeholder"
+  .title-container
+    %h3 Fukushima
+    %h3 and Fragility
+%article#feature-article.disrupt
+  %section.article-section#section-6
+    .section-content
+      .content
+        .sub-sec
+          .images.sidebar.right
+            .image
+              = image_tag "../../images/features/disrupt/section-6-fukushima.png"
+              .caption Radiation hotspot in Kashiwa, Japan
+            .image
+              = image_tag "../../images/features/disrupt/section-6-irobot.png"
+              .caption iRobot 710 Warrior
+          %p On March 11, 2011, a 9.0 magnitude earthquake and subsequent tsunami damaged the Fukushima Daiichi nuclear reactors in Japan. Over the course of 24 hours, crews tried desperately to fix the reactors. However, as, one by one, the back-up safety measures failed, the fuel rods in the nuclear reactor overheated, releasing dangerous amounts of radiation into the surrounding area. As radiation levels became far too high for humans, emergency teams at the plant were unable to enter key areas to complete the tasks required for recovery. Three hundred thousand people had to be evacuated from their homes, some of whom have yet to return.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-fukushima.png"
+              .caption Radiation hotspot in Kashiwa, Japan
+          %p The current state of the art in robotics is not capable of surviving the hostile, high-radiation environment of a nuclear power plant meltdown and dealing with the complex tasks required to assist a recovery effort. In the aftermath of Fukushima, the Japanese government did not immediately have access to hardened, radiation-resistant robots. A few robots from American companies—tested on the modern battlefields of Afghanistan and Iraq—including iRobot’s 710 Warrior and PackBot were able to survey the plant. The potential for recovery-related tasks that can and should be handled by advanced robotics is far greater than this. However, for many reasons, spanning political, cultural, and systemic, before the Fukushima event, an investment in robotic research was never seriously considered. The meltdown was an unthinkable catastrophe, one that Japanese officials thought could never happen, and as such, it was not even acknowledged as a possible scenario for which planning was needed.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-irobot.png"
+              .caption iRobot 710 Warrior
+        .sub-sec
+          %h3 The Darpa Robotics Competition
+          %p The Fukushima catastrophe inspired the United States Defense Advanced Research Projects Agency (DARPA) to create the #{link_to "Robotics Challenge", "http://www.theroboticschallenge.org/", target: "_blank"}, the purpose of which is to accelerate technological development for robotics in the area of disaster recovery. Acknowledging the fragility of our human systems and finding resilient solutions to catastrophes—whether it’s the next super storm, earthquake, or nuclear meltdown—is a problem on which designers, engineers, and technologists should focus.
+          %p In the DARPA competition mission statement, we can see the framing of the challenge in human terms.
+          %p.quote History has repeatedly demonstrated that humans are vulnerable to natural and man-made disasters, and there are often limitations to what we can do to help remedy these situations when they occur. Robots have the potential to be useful assistants in situations in which humans cannot safely operate, but despite the imaginings of science fiction, the actual robots of today are not yet robust enough to function in many disaster zones nor capable enough to perform the most basic tasks required to help mitigate a crisis situation. The goal of the DRC is to generate groundbreaking research and development in hardware and software that will enable future robots, in tandem with human counterparts, to perform the most hazardous activities in disaster zones, thus reducing casualties and saving lives.
+          .images.sidebar.right
+            .image
+              = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
+              .caption Boston Dynamics Atlas, an agile anthropomorphic robot
+          %p The competition, so far, has been successful in its mission to encourage innovation in advanced robotics. In the competition trials held in December 2013, robots from MIT, Carnegie Mellon, and the Google-owned Japanese firm, Schaft, Inc., competed at a variety of tasks related to disaster recovery, which included driving cars, traversing difficult terrain, climbing ladders, opening doors, moving debris, cutting holes in walls, closing valves, and unreeling hoses.
+          .images.sidebar.middle
+            .image
+              = image_tag "../../images/features/disrupt/section-6-mit-robots.png"
+              .caption Boston Dynamics Atlas, an agile anthropomorphic robot
+        .sub-sec
+          %h3 Changing Design and Designing Change
+          %p People are less interested in the science and engineering, the mechanisms that make emerging technologies such as advanced robotics, synthetic biology, and the IoT possible, but they are deeply concerned with the outcomes. As these technologies emerge, grow, and mature over the coming years, designers will have the opportunity to bridge human needs and the miraculous technological possibilities.
+          %p It will be a great and even intimidating challenge to involve design early in the process of defining new products and services, but it will be critical as we establish the practices of the twenty-first century—from the design of technology policy, to systems, to tactical interaction frameworks and techniques. Policy design will involve advising regulators and politicians on the possibilities and perils of emerging tech; system design will demand clear understanding of the broader interactions and implications that surround the immediate details of a product; and framework design will benefit our day-to-day tactical work, providing a foundation for designers and design practice to come. What all of these technologies will create, as they evolve together, remains to be seen. But, the most interesting discoveries will be at the intersections.
+          %p Understanding new technologies, their potential usage, and how they will impact people in the short and long term will require education and collaboration, resulting in new design specializations, many of which we have not yet even considered. In the coming years, as the boundaries between design and engineering for software, hardware, and biotechnology continue to blur, those who began their professional lives as industrial designers, computer engineers, UX practitioners, and scientists will find that the trajectory of their careers takes them into uncharted territory. Like the farmers who moved to the cities to participate in the birth of the Industrial Revolution, we can’t imagine all of the outcomes of our work. However, if history is any indicator, the convergence of these technologies will be greater than the sum of its parts. If we are prepared to take on such challenges, we only have to ask: “What stands in the way?”
+%header.sec-header.bottom-vid
+  .video-container{data: {page: 6}}
+    = image_tag "../../images/features/disrupt/video_fallbacks/section-6-bottom.jpg", class: "placeholder"
+%article#feature-article.disrupt
+  %section.article-section#closer
+    .section-content
+      .content
+        .sub-sec.book
+          %h3 Designing for Emerging Technologies
+          %p If you're interested in further exploration of this topic, check out #{link_to "\"Designing for Emerging Technologies\"", "http://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519", target: "_blank"} published by O'Reilly Media, from which portions of this article were excerpted. In this book, you will discover 20 essays, from designers, engineers, scientists and thinkers, exploring areas of fast-moving, ground breaking technology in desperate need of experience design — from genetic engineering to neuroscience to wearables to biohacking — and discussing frameworks and techniques they've used in the burgeoning practice area of UX for emerging technologies.
+        .sub-sec
+          %h3 References
+          %ul.refs
+            %li DRC. #{link_to "DARPA Robotics Challenge", "http://www.theroboticschallenge.org/", target: "_blank"}, DARPA.
+            %li Felton, Nick. #{link_to "Consumption Spreads Faster Today", "http://www.nytimes.com/imagepages/2008/02/10/opinion/10op.graphic.ready.html", target: "_blank"}, The New York Times
+            %li Geere, Duncan. #{link_to "Kickstarter bans project creators from giving away genetically-modified organisms", "http://www.theverge.com/2013/8/2/4583562/kickstarter-bans-project-creators-from-giving-GMO-rewards", target: "_blank"}, The Verge, August 2, 2013
+            %li Koren, Marina. #{link_to "3 Robots That Braved Fukushima", "http://www.popularmechanics.com/technology/robots/g795/3-robots-that-braved-fukushima-7223185/?slide=1", target: "_blank"}, Popular Mechanics, March 9th, 2012
+            %li Manyika, James, Michael Chui, Jacques Bughin, Richard Dobbs, Peter Bisson, and Alex Marrs. #{link_to "Disruptive technologies: Advances that will transform life, business, and the global economy", "http://www.mckinsey.com/insights/business_technology/disruptive_technologies", target: "_blank"}, McKinsey Global Institute Report, May 2013
+            %li News From Elsewhere. #{link_to "China: Firm 3D prints 10 full-sized houses in a day", "http://www.bbc.com/news/blogs-news-from-elsewhere-27156775", target: "_blank"}, BBC News, April 25, 2014
+            %li Pallister, Jasmes. #{link_to "Glowing trees could be used ‘instead of street lighting’ says Daan Roosegaarde", "http://www.dezeen.com/2014/03/24/movie-sxsw-daan-roosegarde-glow-in-dark-trees/", target: "_blank"}, Dezeen, March 24, 2014
+            %li Pontin, Jaso. #{link_to "Why We Can’t Solve Big Problems", "http://www.technologyreview.com/featuredstory/429690/why-we-cant-solve-big-problems/", target: "_blank"}, MIT Technology Review, October 24, 2012
+            %li United Nations Department of Economic and Social Affairs, Population Division (2013). #{link_to "World Population Prospects: The 2012 Revision", "http://esa.un.org/wpp/", target: "_blank"}, 2012
+.social-buttons.end
+  %a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/disrupt", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
+    %svg{:version => "1.1", :viewBox => "240 0 480 480"}
+      %path{:d => "M1251.9,388.7h-44.2c-15.4,0-21.1,9.6-21.1,21.1V452h65.3l-7.7,73h-57.6v205.4h-86.4V525h-44.2v-73h44.2 v-42.2c0-49.9,17.3-88.3,86.4-90.2h65.3L1251.9,388.7L1251.9,388.7z", :transform => "translate(-674.000000, -285.000000)"}
+  %a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fdisrupt%2F&hashtags=design,ux,iot,robotics&via=goinvo", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizeable=yes,scrollbars=yes,height=400,width=600');return false;", :title => "Share on Twitter"}
+    %svg{:version => "1.1", :viewBox => "-467 230 25 21"}
+      %path{:d => "M-444.9,233.3c1.1-0.7,1.9-1.7,2.3-2.9 c-1,0.6-2.1,1-3.3,1.3c-0.9-1-2.3-1.7-3.7-1.7c-2.8,0-5.1,2.4-5.1,5.3c0,0.4,0,0.8,0.1,1.2c-4.3-0.2-8-2.3-10.6-5.5 c-0.4,0.8-0.7,1.7-0.7,2.7c0,1.8,0.9,3.5,2.3,4.4c-0.8,0-1.6-0.3-2.3-0.7c0,0,0,0,0,0.1c0,2.6,1.8,4.7,4.1,5.2 c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.1,2.5,3.6,4.8,3.7c-1.8,1.4-4,2.3-6.4,2.3c-0.4,0-0.8,0-1.2-0.1 c2.3,1.5,5,2.4,7.9,2.4c9.4,0,14.6-8.1,14.6-15c0-0.2,0-0.5,0-0.7c1-0.7,1.9-1.7,2.6-2.7C-442.9,232.9-443.9,233.2-444.9,233.3z"}
+  %a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fdisrupt%2F&title=Disrupt%3A%20Designing%20for%20Emerging%20Technologies", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Share On LinkedIn"}
+    %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
+      %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
+      %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
+      %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
+  %a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fdisrupt%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;", :title => "Share on Google Plus"}
+    %svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
+      %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
+      %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}
+.disqus-container
+  :plain
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'invodisrupt';
+        
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+.contributions#bottom
+  .cont-wrapper
+    %ul.main-credits
+      %li.main.author
+        = image_tag "../../images/features/disrupt/credits/jon-follett.png"
+        .title-container
+          .person Jon Follett
+          .title Author
+      %li.main.designer
+        = image_tag "../../images/features/disrupt/credits/brian-liston.png"
+        .title-container
+          .person Brian Liston
+          .title Designer and Illustrator
+      %li.main.developer
+        = image_tag "../../images/features/disrupt/credits/craig-mcginley.png"
+        .title-container
+          .person Craig McGinley
+          .title Developer
+      %li.main.editor
+        = image_tag "../../images/features/disrupt/credits/emily-twaddell.png"
+        .title-container
+          .person Emily Twaddell
+          .title Contributing Author
+      %li.main.special
+        #thanks
+          Attributions
+          = image_tag "../../images/features/disrupt/credits-util.png"
+        %ul.extra-credits
+          %li
+            .credit Robin Zebrowski
+            .link= link_to "Flickr", "https://www.flickr.com/photos/firepile/438125743/in/set-72157600033515390", :target => "_blank"
+          %li
+            .credit Peter Weemeeuw
+            .link= link_to "FLickr", "https://www.flickr.com/photos/weemeeuw/2789442655/", :target => "_blank"
+          %li
+            .credit Ashley Van Haeften
+            .link= link_to "Flickr", "https://www.flickr.com/photos/wikimediacommons/16372820048/", :target => "_blank"
+          %li
+            .credit Creative Tools
+            .link= link_to "Flickr", "https://www.flickr.com/photos/creative_tools/8121256525/", :target => "_blank"
+          %li
+            .credit anyjazz65
+            .link= link_to "Flickr", "https://www.flickr.com/photos/49024304@N00/2834109194", :target => "_blank"
+          %li
+            .credit Fjioera Lynn
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=Xm4huNBW0Ho", :target => "_blank"
+          %li
+            .credit MakerBot
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=WT3772yhr0o", :target => "_blank"
+          %li
+            .credit ingen ost
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=G0_oqCDOFOUjjaandj", :target => "_blank"
+          %li
+            .credit fccysf
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=aAWyRlX3tcQ", :target => "_blank"
+          %li
+            .credit Marines
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=IIbtwn8jwwc", :target => "_blank"
+          %li
+            .credit rwg42985
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=J1MfcS1PLWE", :target => "_blank"
+          %li
+            .credit TWiT Netcast Network
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=9y5X06fFCs4", :target => "_blank"
+          %li
+            .credit Nova Carlisle
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=4ee0fX7jl0o", :target => "_blank"
+          %li
+            .credit Travel Magazine
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=kbeEGGFS1Qs", :target => "_blank"
+          %li
+            .credit Samuel Pine
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=hnC7FeUdLXw", :target => "_blank"
+          %li
+            .credit Electronica de Invierno
+            .link= link_to "YouTube", "https://www.youtube.com/watch?v=UULS4CB_j3A", :target => "_blank"
+          %li
+            .credit Lockheed Martin
+            .link= link_to "lockheedmartin.com", "http://www.lockheedmartin.com/us/news/features/2014/mfc-103114-relief-daily-grind-industrial-exoskeletons-work.html", :target => "_blank"
+          %li
+            .credit e.chromi
+            .link= link_to "echromi.com", "http://www.echromi.com/", :target => "_blank"
+          %li
+            .credit U.S. Department of Agriculture
+            .link= link_to "Wikimedia", "http://commons.wikimedia.org/wiki/File:1926us.jpg", :target => "_blank"
+          %li
+            .credit Karl Jilg
+            .link= link_to "Swedish Road Administration", "http://www.vox.com/xpress/2014/11/18/7236471/cars-pedestrians-roads", :target => "_blank"
+          %li
+            .credit Udo J. Keppler
+            .link= link_to "Wikimedia", "http://commons.wikimedia.org/wiki/File:Standard_oil_octopus_loc_color.jpg", :target => "_blank"
+          %li
+            .credit Pensa
+            .link= link_to "pensanyc.com", "http://blog.pensanyc.com/post/22358402448/light-reeds-is-pensas-concept-for-an-urban", :target => "_blank"
+          %li
+            .credit Studio Roosegarde
+            .link= link_to "studioroosegarde.net", "https://www.studioroosegaarde.net/", :target => "_blank"
+          %li
+            .credit MIT Technology Review
+            .link= link_to "technologyreview.com", "http://www.technologyreview.com/magazine/2012/11/", :target => "_blank"
+          %li 
+            .credit Rethink Robotics
+            .link= link_to "rethinkrobotics.com", "http://www.rethinkrobotics.com/press/", :target => "_blank"
+          %li
+            .credit Universal Robotics
+            .link= link_to "universal-robots.com", "http://www.universal-robots.com/en/media/downloads/", :target => "_blank"
+          %li
+            .credit Yaskawa Motoman
+            .link= link_to "Motoman Robotics", "http://todaysmachiningworld.com/industry_news/motoman-robotics-begins-new-headquarters-construction/", :target => "_blank"
+          %li
+            .credit Glowing Plant Project
+            .link= link_to "glowingplant.com", "http://www.glowingplant.com/", :target => "_blank"
+          %li
+            .credit Wikiwand
+            .link= link_to "wikiwand.com", "http://www.wikiwand.com/en/Radiation_effects_from_the_Fukushima_Daiichi_nuclear_disaster", :target => "_blank"
+          %li
+            .credit iRobot
+            .link= link_to "irobot.com", "media.irobot.com/", :target => "_blank"
+          %li
+            .credit Boston Dynamics
+            .link= link_to "mit.edu", "http://drc.mit.edu/challenge/", :target => "_blank"
+          %li
+            .credit Jean Nicholas Buache
+            .link= link_to "Wikimedia", "http://commons.wikimedia.org/wiki/File:1807_Buache_Map_of_Boston,_Massachusetts_-_Geographicus_-_Boston-buache-1807.jpg", :target => "_blank"
+          %li
+            .credit brewbooks
+            .link= link_to "Flickr", "https://www.flickr.com/photos/brewbooks/3318600273", :target => "_blank"
+          %li
+            .credit Spotify
+            .link= link_to "spotify-wewerethere.com", "http://spotify-wewerethere.com/", :target => "_blank"
+          %li
+            .credit Jer Thorp
+            .link= link_to "Flickr", "https://www.flickr.com/photos/blprnt/3694704325", :target => "_blank"
+          %li
+            .credit Live Bitcoin News
+            .link= link_to "Flickr", "https://www.flickr.com/photos/127069763@N07/16673431158", :target => "_blank"
+          %li
+            .credit Kyle Pearce
+            .link= link_to "Flickr", "https://www.flickr.com/photos/keepitsurreal/6107889555", :target => "_blank"
+          %li
+            .credit Adelphi Lab Center
+            .link= link_to "Flickr", "https://www.flickr.com/photos/adelphilabcenter/5999582062", :target => "_blank"
+          %li
+            .credit Ryan Somma
+            .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:Awesome_Green_Roof.jpg", :target => "_blank"
+          %li
+            .credit Cities Unlocked
+            .link= link_to "City of Sound", "http://www.cityofsound.com/blog/2014/11/cities-unlocked.html", :target => "_blank"
+          %li
+            .credit Global Panorama
+            .link= link_to "Flickr", "https://www.flickr.com/photos/121483302@N02/14696937320", :target => "_blank"
+          %li
+            .credit Nan Palmero
+            .link= link_to "Flickr", "https://www.flickr.com/photos/nanpalmero/13013107993", :target => "_blank"
+          %li
+            .credit Ricardipus
+            .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:Affymetrix_5.0_microarray.jpg", :target => "_blank"
+          %li
+            .credit Textile Interactions Lab
+            .link= link_to "Flickr", "https://www.flickr.com/photos/78336251@N03/6941062654/", :target => "_blank"
+          %li
+            .credit HIA~commonswiki
+            .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:Herzklappe.JPG", :target => "_blank"
+          %li
+            .credit 7asmin
+            .link= link_to "Wikimedia", "http://de.wikipedia.org/wiki/Datei:R%C3%B6ntgenbild_nach_Kunstherzimplantation.JPG", :target => "_blank"
+          %li
+            .credit National Cancer Institute
+            .link= link_to "Flickr", "https://www.flickr.com/photos/ncimedia/8009859593", :target => "_blank"
+          %li
+            .credit David Shankbone
+            .link= link_to "Flickr", "https://www.flickr.com/photos/shankbone/10662254555", :target => "_blank"
+          %li
+            .credit Machinehien
+            .link= link_to "Wikimedia", "commons.wikimedia.org/wiki/File:Foglet_stimulacra.jpg", :target => "_blank"
+          %li
+            .credit Intel Free Press
+            .link= link_to "Flickr", "https://www.flickr.com/photos/intelfreepress/11458183003", :target => "_blank"
+          %li
+            .credit Michael Kleiman
+            .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:HAARP20l.jpg", :target => "_blank"
+          %li
+            .credit Light Warrior
+            .link= link_to "Wikimedia", "http://en.wikipedia.org/wiki/File:Microchip_rfid_rice.jpg", :target => "_blank"
