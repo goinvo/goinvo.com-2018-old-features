@@ -158,36 +158,73 @@ a {
 	min-height: 578px;
 	background-size: cover;
 	.photo-container, .video-container {
-			//background-image: image-url('home/hp-1.png');
-			min-height: 578px;
-      video {
-        width: 100%;
-        height: auto;
-      }
+		//background-image: image-url('home/hp-1.png');
+		min-height: 578px;
+		background-size: cover;
+		background-position-y: bottom;
+		
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+	.title {
+		top: 24px;
+		color: #33353d;
+		
+		@media only screen and (max-width: 750px){
+			top: 10px;
+  			background-color: rgba(255,255,255,.5);
+		}
 	}
 	
 	
 	.actual-title {
 		font-size: 75px;	
+		@media only screen and (max-width: 1380px)  and (min-width: 1213px){
+			font-size: 65px;
+			line-height: 75px;
+		}
+		
+		@media only screen and (max-width: 1213px) and (min-width: 750px){
+			font-size: 60px;
+			line-height: 70px;
+		}
+		
+		@media only screen and (max-width: 750px){
+			font-size: 50px;
+			line-height: 52px;
+		}
+		
+		
 	}
 	
 	.actual-content {
-		font-size: 40px;
-		max-width: 593px;
-		margin-top: 5px;
+		font-size: 32px;
+		max-width: 470px;
+		margin-top: 9px;
+		line-height: 41px;
+		
+		@media only screen and (max-width: 750px){
+			font-size: 26px;
+			line-height: 36px;
+			margin-top: 20px;
+		}
 	}
 	
 	.actual-button {
 		margin-top: 25px;
-		border: 1px solid #ffffff;
+		border: 1px solid rgba(51, 53, 61, 0.49);
 		border-radius: 5px;
+		font-size: 24px;
 		display: inline-block;
-		padding: 10px;
-		transition: 350ms;
-		
+		padding: 10px 45px;
+		transition: 250ms;
+		background: rgba(0,0,0,.1);
 		&:hover {
 			transform: scale(1.1,1.1);
-			background: rgba(0,0,0,.2);	
+			background: rgba(0,0,0,.2);
 		}
 	}
 }
@@ -445,16 +482,7 @@ a {
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	#homepage-hero {
-		.actual-content {
-			font-size: 26px;
-		}
-		.actual-title {
-			font-size: 60px;	
-		}
-	}
-	
+@media only screen and (max-width: 600px) {	
 	.block {
 		.title {
 			.tag {
