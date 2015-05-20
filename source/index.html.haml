@@ -33,18 +33,6 @@
 				// Randomizing the homepage header
 				var randNum = Math.floor((Math.random() * 3) + 1);
 				$('#homepage-hero').css('background-image', "url('/images/home/homepage-0" + randNum + ".png')");
-				if( randNum === 1) {
-					$('#homepage-hero .title .actual-title').text('Idea to Patient');
-				} else if (randNum === 2) {
-					$('#homepage-hero .title .actual-title').text('Idea to Hospital');
-				} else {
-					$('#homepage-hero .title .actual-title').text('Idea to Doctor');
-				}
-				$('#homepage-hero .title .bottom-image-wrapper').attr('id', 'homepageImage' + randNum);
-				$('#homepage-hero .title .bottom-image').attr('src',  '/images/home/homepage-image-0' + randNum + '.png')
-				$('#homepage-hero .title .bottom-image.mobile-image').attr('src',  '/images/home/homepage-image-0' + randNum + '-mobile.png')
-				$('#homepage-hero .title .bottom-image.mobile-image').toggleClass('image-' + randNum, true);
-				$('.contact-container').css('background-image', "url('/images/home/homepage-contact-0" + randNum + ".png')");
 			}
 		});
 	%meta{:name => "description", :content => "Involution Studios is a Boston user experience design firm. We design, build, and ship beautiful software for companies of all sizes."}/
@@ -52,15 +40,9 @@
 %a#homepage-hero.block.bar{:href => "healthcare"}
 	.photo-container
 	.title
-		.actual-title 
-		.actual-content We design emerging technology from<br>your R&D lab to your customers.
-		.bottom-image-wrapper
-			%img.bottom-image
-			%img.bottom-image.mobile-home-image
-.contact-container
-	%a{:href => "/contact"}
-		.actual-button Contact us today to discuss your next healthcare project
-	.sub-title We'll respond within 2 business hours.
+		.actual-title Magical Software for Personalized Medicine
+		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-button See our work
 .clients
 	%table.non-mobile
 		%tbody
