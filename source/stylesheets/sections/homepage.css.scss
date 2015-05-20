@@ -163,6 +163,7 @@ a {
 		
 		.photo-container {
 			min-height: 700px;	
+			background-position: center bottom;
 		}
 		
 		.title {
@@ -180,12 +181,14 @@ a {
 		@media only screen and (min-width: 1175px) {
 			.photo-container {
 				background-size: 1050px !important;
+				background-position: center bottom;
 			}
 		}
 		
 		@media only screen and (max-width: 800px) {
 			.photo-container {
 				background-size: 140% !important;
+				background-position: center bottom;
 			}
 		}
 		
