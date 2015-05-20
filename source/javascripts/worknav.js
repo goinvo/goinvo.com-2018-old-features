@@ -74,9 +74,9 @@ $( document ).ready(function() {
 			}
 		},
 		"enterprise" : {
-			"affinnova" : {
-				"title" : "Affinova",
-				"url" : "/enterprise/affinnova/",
+			"nielsen" : {
+				"title" : "Nielsen",
+				"url" : "/enterprise/nielsen/",
 				"image" : "affinnova.jpg",
 				"next-id" : "dnc"
 			},
