@@ -29,15 +29,28 @@
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+				
+				// Randomizing the homepage header
+				var randNum = Math.floor((Math.random() * 2) + 1);
+				if( randNum === 1) {
+					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
+				} else  {
+					$('#homepage-hero').css('background-color', '#f9f9f9');
+					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
+					$('#homepage-hero').toggleClass('iphone-images-style', 'true');
+					$('#homepage-hero .photo-container').css('background-size', '90%');
+					$('#homepage-hero .photo-container').css('background-position-x', 'center');
+				}
+				
 			}
 		});
 	%meta{:name => "description", :content => "Involution Studios is a Boston user experience design firm. We design, build, and ship beautiful software for companies of all sizes."}/
 	%meta{:name => "keywords", :content => "boston ux design, boston user experience design, boston ui design, boston user interface design, boston software design, healthcare design"}/
 %a#homepage-hero.block.bar{:href => "healthcare"}
-	.photo-container{:style => "background-image: url('/images/home/homepage-rooms2.png')"}
+	.photo-container
 	.title
 		.actual-title Magical Software for Personalized Medicine
-		.actual-content The software we design helps progressive companies create new markets and exploit future tech.
+		.actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
 		.actual-button See our work
 .clients
 	%table.non-mobile

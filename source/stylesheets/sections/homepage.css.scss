@@ -157,6 +157,57 @@ a {
 #homepage-hero {
 	min-height: 578px;
 	background-size: cover;
+	
+	&.iphone-images-style {
+		min-height: 700px;
+		
+		.photo-container {
+			min-height: 700px;	
+		}
+		
+		.title {
+			text-align: center;	
+			padding: 1em 1.5em;
+		}
+		
+		.actual-content {
+			max-width: 560px;
+			margin: 0 auto;
+			margin-top: 9px;
+		}
+		
+		.actual-button {
+			background-color: rgba(255,255,255,.9);	
+			padding: 10px 55px;
+			
+			&:hover {
+				background-color: rgba(255,255,255,1);	
+			}
+		}
+		
+		@media only screen and (min-width: 1175px) {
+			.photo-container {
+				background-size: 1050px !important;
+			}
+		}
+		
+		@media only screen and (max-width: 800px) {
+			.photo-container {
+				background-size: 140% !important;
+			}
+		}
+		
+		@media only screen and (max-width: 750px) {
+			.title {
+				padding-top: 3em;
+				.actual-content {
+					margin-top: 1em;	
+					margin-bottom: .5em;
+				}
+			}
+		}
+	}
+	
 	.photo-container, .video-container {
 		//background-image: image-url('home/hp-1.png');
 		min-height: 578px;
