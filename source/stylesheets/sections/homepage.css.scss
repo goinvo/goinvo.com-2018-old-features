@@ -167,22 +167,14 @@ a {
 		
 		.title {
 			text-align: center;	
-			padding: 1em 1.5em;
+			padding: 1em 3em;
+			
 		}
 		
 		.actual-content {
 			max-width: 560px;
 			margin: 0 auto;
-			margin-top: 9px;
-		}
-		
-		.actual-button {
-			background-color: rgba(255,255,255,.9);	
-			padding: 10px 55px;
-			
-			&:hover {
-				background-color: rgba(255,255,255,1);	
-			}
+			margin-top: 12px;
 		}
 		
 		@media only screen and (min-width: 1175px) {
@@ -199,7 +191,7 @@ a {
 		
 		@media only screen and (max-width: 750px) {
 			.title {
-				padding-top: 3em;
+				//padding-top: 3em;
 				.actual-content {
 					margin-top: 1em;	
 					margin-bottom: .5em;
@@ -226,7 +218,7 @@ a {
 		
 		@media only screen and (max-width: 750px){
 			top: 10px;
-  			background-color: rgba(255,255,255,.5);
+  			background-color: rgba(255,255,255,.75);
 		}
 	}
 	
@@ -270,12 +262,12 @@ a {
 		border-radius: 5px;
 		font-size: 24px;
 		display: inline-block;
-		padding: 10px 45px;
+		padding: 10px 55px;
 		transition: 250ms;
-		background: rgba(0,0,0,.1);
+		background-color: rgba(255,255,255,.9);	
 		&:hover {
 			transform: scale(1.1,1.1);
-			background: rgba(0,0,0,.2);
+			background-color: rgba(255,255,255,1);	
 		}
 	}
 }
