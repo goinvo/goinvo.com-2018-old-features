@@ -27,16 +27,14 @@
 					$('#homepage-hero .photo-container').css('background-position-x', 'center');
 				}
 				
-				// get the title and link information for current blog post
+				// Grabs the first image in the blog post
 				var currentString = posts[0].content;
-				var sIndex = currentString.lastIndexOf('<img');
-				currentString = currentString.substring(0, sIndex);
-				sIndex = currentString.lastIndexOf('<img');
-				currentString = currentString.substr(sIndex);
+				var sIndex = currentString.indexOf('<img');
+				currentString = currentString.substr(sIndex + 4);
 				sIndex = currentString.indexOf('src=');
-				currentString = currentString.substr(sIndex+5);
-				sIndex = currentString.indexOf('"');
-				currentString = currentString.substring(0, sIndex);
+				currentString = currentString.substr(sIndex + 5);
+				sIndex = currentString.indexOf('">');
+				currentString = currentString.substr(0, sIndex);
 				
 				// Set the recent blog post section
 				$('#oracle').removeClass('bar').addClass('half');
