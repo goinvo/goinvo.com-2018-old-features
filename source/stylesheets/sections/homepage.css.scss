@@ -203,6 +203,12 @@ a {
 		}
 	}
 	
+	&:hover {
+		.photo-container, .video-container {
+			transform: none;	
+		}
+	}	
+	
 	.photo-container, .video-container {
 		//background-image: image-url('home/hp-1.png');
 		min-height: 578px;

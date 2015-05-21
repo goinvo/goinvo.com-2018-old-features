@@ -14,6 +14,19 @@
 				}	
 				// ***Code goes here***
 				
+				// Randomizing the homepage header
+				var randNum = Math.floor((Math.random() * 2) + 1);
+				if( randNum === 1) {
+					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
+				} else  {
+					// Some stuff that should probably be in css but is instead here -- for the iphone header (w/ eric's face)
+					$('#homepage-hero').css('background-color', '#f9f9f9');
+					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
+					$('#homepage-hero').toggleClass('iphone-images-style', 'true');
+					$('#homepage-hero .photo-container').css('background-size', '90%');
+					$('#homepage-hero .photo-container').css('background-position-x', 'center');
+				}
+				
 				// get the title and link information for current blog post
 				var currentString = posts[0].content;
 				var sIndex = currentString.lastIndexOf('<img');
@@ -29,18 +42,6 @@
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
-				
-				// Randomizing the homepage header
-				var randNum = Math.floor((Math.random() * 2) + 1);
-				if( randNum === 1) {
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
-				} else  {
-					$('#homepage-hero').css('background-color', '#f9f9f9');
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
-					$('#homepage-hero').toggleClass('iphone-images-style', 'true');
-					$('#homepage-hero .photo-container').css('background-size', '90%');
-					$('#homepage-hero .photo-container').css('background-position-x', 'center');
-				}
 				
 			}
 		});
