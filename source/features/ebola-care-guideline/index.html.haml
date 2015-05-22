@@ -6,10 +6,10 @@
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	%meta{:name => "description", :content => ""}/
 	%meta{:name => "keywords", :content => ""}/
-    - meta = page_for_meta("ebola-care-guideline")
+	- meta = page_for_meta("ebola-care-guideline")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
-	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
 	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
 	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}

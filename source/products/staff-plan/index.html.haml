@@ -6,13 +6,13 @@
 	- meta = page_for_meta("staffplan")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
-	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
 	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
 	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}/
-- client = client_for_name("Staffplan")
+- client = client_for_name("StaffPlan")
 
 %article#complex-case.staffplan
 	%header.hero
