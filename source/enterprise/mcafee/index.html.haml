@@ -3,8 +3,15 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "Boston area UI design firm Involution completely re-designed and developed the user interface for McAfee&rsquo;s Total Protection Suite."}/
-	%meta{:name => "keywords", :content => "mcafee total protection suite, boston user interface design, boston ui design, boston application design, software design"}/
+	- meta = page_for_meta("mcafee")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 - client = client_for_name("McAfee")
 
 #content-area.caseStudyContent

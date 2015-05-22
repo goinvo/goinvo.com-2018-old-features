@@ -3,8 +3,15 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "Inspired EHRs is an open-sourced ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."}/
-	%meta{:name => "keywords", :content => "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"}/
+	- meta = page_for_meta("inspired-ehrs")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 - client = client_for_name("Inspired EHRs")
 
 #content-area.caseStudyContent

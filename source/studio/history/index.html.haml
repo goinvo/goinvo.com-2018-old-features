@@ -3,8 +3,15 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/history"
 	= javascript_include_tag 'http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js'
-	%meta{:name => "description", :content => "A timeline of the history of Involution Studios."}/
-	%meta{:name => "keywords", :content => ""}/
+	- meta = page_for_meta("history")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 .team
 	.time-wrapper
 		.js-disabled-callout.center-it This timeline is built using JavaScript. To view the timeline of Invo's history please enable JavaScript and reload the page.

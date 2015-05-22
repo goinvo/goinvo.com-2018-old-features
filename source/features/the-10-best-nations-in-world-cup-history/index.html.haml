@@ -4,8 +4,15 @@
 	= stylesheet_link_tag "features/world-cup-feature"
 	= stylesheet_link_tag "feature-elements"
 	= javascript_include_tag "featurenav"
-	%meta{:name => "description", :content => "World Cup History Visualized"}/
-	%meta{:name => "keywords", :content => "world cup history, world cup visualized, world cup info viz"}/
+	- meta = page_for_meta("world-cup")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}/
 
 %article#feature-article.soccer
 	%header.hero

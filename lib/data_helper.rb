@@ -5,6 +5,13 @@ module DataHelper
     
     match
   end
+	
+  def page_for_meta(page)
+    match = data.meta_tags.detect { |p| p.page == page }
+    puts "didn't find a match for name: #{page}" if match.nil?
+
+    match
+  end
   
   def practice_areas(project)
     project.practice_area_names.split(',').map(&:strip)

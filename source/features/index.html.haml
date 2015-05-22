@@ -1,5 +1,14 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/homepage"
+	- meta = page_for_meta("features")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 %a#disrupt.block.bar{:href => "disrupt/"}
 	.photo-container
 	.video-container

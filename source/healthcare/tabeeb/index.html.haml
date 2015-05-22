@@ -3,8 +3,15 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	%meta{:name => "description", :content => "Tabeeb: Bringing global medical specialists to rural communities with the flick of a finger."}/
-	%meta{:name => "keywords", :content => "tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user eperience"}/
+	- meta = page_for_meta("tabeeb")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 - client = client_for_name("Tabeeb")
 
 #content-area.caseStudyContent

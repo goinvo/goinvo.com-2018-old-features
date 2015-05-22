@@ -5,9 +5,15 @@
   = javascript_include_tag 'vendor/imagesloaded'
   = javascript_include_tag 'live'
   = javascript_include_tag 'studio'
-  %meta{:name => "description", :content => "Involution Studios is a user interface and software design firm located in Boston. We create great user experiences for deskop, mobile, and web applications."}/
-  %meta{:name => "keywords", :content => "boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design"}/
-  
+  - meta = page_for_meta("careers")
+  %meta{:name => "description", :content => "#{meta.description}" }
+  %meta{:name => "keywords", :content => "#{meta.keywords}" }
+  %meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+  %meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+  %meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+  %meta{:name => "twitter:description", :content => "#{meta.description}"}
+  - if (meta.twitterimage)
+    %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 %article#the-studio
   %header.hero
     #video-bg

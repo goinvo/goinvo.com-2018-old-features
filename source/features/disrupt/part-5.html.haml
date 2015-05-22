@@ -10,7 +10,16 @@
   = javascript_include_tag "vendor/jquery.colorscroll.min.js"
   = javascript_include_tag "vendor/picturefill.min.js"
   = javascript_include_tag "features/disrupt.js"
-
+- meta = page_for_meta("disrupt")
+%meta{:name => "description", :content => "#{meta.description}" }
+%meta{:name => "keywords", :content => "#{meta.keywords}" }
+%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+%meta{:name => "twitter:description", :content => "#{meta.description}"}
+- if (meta.twitterimage)
+  %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+  
 .no-js
   The article page is loading...
   %br

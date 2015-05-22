@@ -4,8 +4,15 @@
 	= stylesheet_link_tag "features/ebola"
 	= stylesheet_link_tag "feature-elements"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
-	%meta{:name => "description", :content => ""}/
-	%meta{:name => "keywords", :content => ""}/
+	- meta = page_for_meta("ebola")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}/
 %header.nav-wrapper
 	%a.nav-button{:href => "#"} T<small>able of </small>C<small>ontents</small>
 	%nav.main-nav

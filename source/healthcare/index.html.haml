@@ -4,8 +4,15 @@
 	= stylesheet_link_tag "sections/workpages"
 	= javascript_include_tag "video.js"
 	= javascript_include_tag "fitvids.js"
-	%meta{:name => "description", :content => "We help healthcare organizations make clinical strength software for high-test, high stress environments."}/
-	%meta{:name => "keywords", :content => "healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems"}/
+	- meta = page_for_meta("healthcare")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittertitle}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
 %article#healthcare
 	%header#article-header
