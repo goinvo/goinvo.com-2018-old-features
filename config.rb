@@ -48,9 +48,16 @@ activate :autoprefixer
 # Enable cache buster
 activate :cache_buster
 
+# Default s3 bucket in case you can't use CodeShip for some reason
+# Ideally, CodeShip should be the only thing syncing to s3
+# If you really need to push to production bucket and cannot
+# use CodeShip, change this variable temporarily, but don't
+# commit that change to GitHub
+s3_bucket = 'staging.goinvo.com'
+
 # S3 Sync
 activate :s3_sync do |s3_sync|
-	s3_sync.bucket                     = 'www.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	s3_sync.bucket                     = s3_bucket # The name of the S3 bucket you are targetting. This is globally unique.
 	s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
 	s3_sync.delete                     = true # We delete stray files by default.
 	s3_sync.after_build                = false # We do not chain after the build step by default.
@@ -66,7 +73,7 @@ default_caching_policy max_age:(60 * 60 * 24 * 365)
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-	config.bucket                = 'www.goinvo.com' # The name of the S3 bucket you are targetting. This is globally unique.
+	config.bucket                = s3_bucket # The name of the S3 bucket you are targetting. This is globally unique.
 	config.region                = 'us-east-1'     # The AWS region for your bucket.
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
@@ -371,7 +378,7 @@ configure :build do
 
 	# Use relative URLs
 	activate :relative_assets
-	
+
 	activate :gzip
 
 	# Compress PNGs after build
