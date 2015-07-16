@@ -11,9 +11,9 @@
 					$.each(data.responseData.feed.entries, function (i, e) {
 						posts.push(e);
 					});
-				}	
+				}
 				// ***Code goes here***
-				
+
 				// Randomizing the homepage header
 				var randNum = Math.floor((Math.random() * 2) + 1);
 				if( randNum === 1) {
@@ -26,7 +26,7 @@
 					$('#homepage-hero .photo-container').css('background-size', '90%');
 					$('#homepage-hero .photo-container').css('background-position-x', 'center');
 				}
-				
+
 				// Grabs the first image in the blog post
 				var currentString = posts[0].content;
 				var sIndex = currentString.indexOf('<img');
@@ -35,15 +35,15 @@
 				currentString = currentString.substr(sIndex + 5);
 				sIndex = currentString.indexOf('">');
 				currentString = currentString.substr(0, sIndex);
-				
+
 				// Set the recent blog post section
 				$('#oracle').removeClass('bar').addClass('half');
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
-				
+
 			}
 		});
-	
+
 	- meta = page_for_meta("homepage")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -53,7 +53,7 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-	
+
 %a#homepage-hero.block.bar{:href => "healthcare"}
 	.photo-container
 	.title
@@ -104,7 +104,7 @@
 		%h5.tag February/March 2015 Feature
 		%h2.name From Bathroom to Healthroom
 		%h3.sub-name How magical technology will revolutionize human health
-	
+
 .double
 	%a#three-m.block.half{:href => "healthcare/3m"}
 		.photo-container
@@ -126,8 +126,8 @@
 		%li
 			%a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
 				%img{:src => "/images/news/logo-new-scientist@2x.png", width: "177", height: "26"}
-				"Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
-		%li 
+				"Diving deeper into genetics in this way we stand a chance of fighting disease before we even have symptoms."
+		%li
 			%a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
 				%img{:src => "/images/news/logo-npr@2x.png", width: "177", height: "56"}
 				"The Care Card deck exudes their own geeky charm."
@@ -156,7 +156,7 @@
 						%img{:src => "/images/news/logo-ted.png"}
 				%td
 					%a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
-						%img{:src => "/images/news/logo-wired.png"}		
+						%img{:src => "/images/news/logo-wired.png"}
 			%tr
 				%td
 					"Blood biomarkers are the key to understanding fitness and well-being."
@@ -170,7 +170,7 @@
 					"hGraph might be just what the doctor will order."
 
 .recent-blog-post.dynamic
-		
+
 %a#ebola.block.bar{:href => "features/ebola"}
 	.photo-container
 	.title
