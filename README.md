@@ -1,3 +1,5 @@
+[ ![Codeship Status for goinvo/goinvo.com](https://codeship.com/projects/f4e57f70-0df4-0133-b611-2ed139d2fe7b/status?branch=master)](https://codeship.com/projects/91543)
+
 goinvo.com
 ==========
 
