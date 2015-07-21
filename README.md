@@ -50,24 +50,25 @@ Naming Convention: `hotfix-[hotfix description]`
 1. Make a new `feature` branch by branching off of `develop`. The title of this branch should be in the format `feature-[feature description]`.
 2. Do all of your development and testing in your `feature-[feature description]` branch. You may upload to stage at any point.
 3. When you're done developing and have fully tested in your isolated branch, merge into `development`.
-4. Do some more testing in the `development` branch. You may want to upload to stage to perform more testing.
+4. Do more testing in the `development` branch. You may want to upload to stage to perform more testing.
 5. When you believe you're ready to push live, merge the `development` branch into the `master` branch. This will upload to S3 automatically and your feature is now live.
+6. You can now delete your `feature-[feature description]` branch as its entire history is now in the `development` and `master` branches.
 
 #### Making a Quick Fix
 1. Make a new `hotfix` branch by branching off of `master`. The title of this branch should be in the format`hotfix-[hotfix description]`.
 2. Do all of your development and testing in your `hotfix-[hotfix description]` branch. You may want to upload to stage at any point.
 3. When you're done developing and have fully tested your fix (100% fully tested, we don't want bad code to go live), you will merge `hotfix-[hotfix description]` into `master` AND you will merge `hotfix-[hotfix description]` into `develop`.
+4. You can now delete your `hotfix-[hotfix description]` branch as its entire history is now in the `development` and `master` branches.
 
 
-
-### Generate Static Site
+## Generate Static Site
 
 To build a version of the site, which compiles all resources and consolidates all files into the `/build` folder, run:
 
 	$ bundle exec middleman build
 
 
-### Deploying `build` Folder
+## Deploying `build` Folder
 
 ### Codeship
 
@@ -122,18 +123,4 @@ Before running any of these commands, you should make sure that you have all of 
 
 #### Live Deployments
 
-To deploy the build to the live server, be sure the following line is set as follows in `config.rb`:
-
-	`s3_bucket = 'www.goinvo.com'`
-
-Then run
-
-	$ middleman s3_sync
-	
--OR-
-
-	$ middleman s3_sync --force
-
--OR to build and deploy in one fell swoop-
-
-	$ bundle exec middleman build && middleman s3_sync
+To deploy the build to the live server simply merge the `deploy` branch into `master`. Everything in master will automatically be built and uploaded to the server.
