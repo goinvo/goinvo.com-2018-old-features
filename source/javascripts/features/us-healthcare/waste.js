@@ -1,9 +1,12 @@
 $( document ).ready(function() {
 
+    
+var myWindow = d3.select(window);
+    
 var windowW = window.innerWidth;
 var windowH = window.innerHeight;
 var margin = {top: 20, right: 0, bottom: 50, left: 10},
-    w = windowW*.8 - margin.left - margin.right,
+    w = windowW*.7 - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom;
 var barPadding = 1;
 
@@ -28,9 +31,23 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .ticks(10);
 
+var tooltip = d3.select('#waste-chart')            // NEW 
+  .append('div')                             // NEW
+  .attr('class', 'tooltip');                 // NEW
+
+tooltip.append('div')                        // NEW
+  .attr('class', 'label');                   // NEW
+
+tooltip.append('div')                        // NEW
+  .attr('class', 'count');                   // NEW
+
+tooltip.append('div')                        // NEW
+  .attr('class', 'percent');                 // NEW
 
 var wasteSVG = d3.select("#waste-chart")
-    .append("svg")
+    .append("svg");
+    
+wasteSVG
     .attr("width", w + margin.left + margin.right)
     .attr("height", h + margin.top + margin.bottom);
 
@@ -73,11 +90,11 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     yScale.domain([1, maxProcedures]);
 
     wasteSVG.append("g")
-          .attr("class", "xaxis")
-          .attr("transform", "translate(0," + h + ")")
-          .call(xAxis)
-          .selectAll(".tick text")
-          .call(wrap, xScale.rangeBand());
+        .attr("class", "xaxis")
+        .attr("transform", "translate(0," + h + ")")
+        .call(xAxis)
+        .selectAll(".tick text")
+        .call(wrap, xScale.rangeBand());
 
     var myAxis = wasteSVG.append("g")
         .attr("class", "yaxis")
@@ -109,6 +126,13 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("height", function(d) {
             return h - yScale(d.NumberProcedures);
         });
+    rectangles.on('mouseover', function(d) {
+        tooltip.select('.label').html(d.Procedure);
+        tooltip.style('display', 'block');
+    });
+    rectangles.on('mouseout', function() {
+        tooltip.style('display', 'none');
+    });
 
 
 // Toggle between datasets
@@ -177,5 +201,28 @@ d3.select("#dollarsWasted")
             .ease('sin-in-out')
             .call(yAxis)
     });
+});
+
+
+myWindow.on('resize.waste', function() {
+    var windowW = window.innerWidth;
+    var windowH = window.innerHeight;
+    w = windowW*.7 - margin.left - margin.right,
+    h = 500 - margin.top - margin.bottom; 
+    console.log('**')
+    xScale.rangeRoundBands([100, w], 0.2);
+    yScale.range([h+5, 5]);
+    xAxis.scale(xScale);
+    yAxis.scale(yScale);
+    
+    wasteSVG
+        .call(xAxis)
+        .selectAll(".tick text")
+        .call(wrap, xScale.rangeBand())
+        .call(yAxis)
+        .attr("width", w + margin.left + margin.right)
+        .attr("height", h + margin.top + margin.bottom);
+    
+    rectangles.attr("width", xScale.rangeBand());
 });
 });
