@@ -56,7 +56,7 @@
   fitbit_username: "25WCYP"
   dropbox_username: "ben@goinvo.com"
   photo: ben_salinas.jpg
-  
+
 - first_name: Ben
   last_name: Listwon
   title: Engineer
@@ -74,7 +74,7 @@
   github_username: "apere"
   dropbox_username: "adam@goinvo.com"
   photo: "adam_pere.jpg"
-  
+
 - first_name: Beth
   last_name: Herlin
   title: Product Designer
@@ -82,7 +82,7 @@
   twitter_username: "beth11herlin"
   linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
   photo: beth_herlin.jpg
-  
+
 - first_name: Michael
   last_name: Bester
   title: Engineer
@@ -91,13 +91,6 @@
   twitter_username: "mibester"
   github_username: "kimili"
   photo: michael_bester.jpg
-
-- first_name: Xinyu
-  last_name: Liu
-  title: Designer
-  bio: "Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design."
-  linkedin_url: "https://www.linkedin.com/profile/view?id=229659322"
-  photo: xinyu_liu.jpg
 
 - first_name: Jon
   last_name: Follett
@@ -125,22 +118,22 @@
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
   photo: emily_twaddell.jpg
-  
+
 - first_name: Craig
   last_name: McGinley
   title: "Engineer"
   bio: "Craig is an engineer devoted to full stack design and development. He brings skillful javascripting, front-end development techniques, and application logic design to software projects. Craig is a Launch Academy graduate, vegan, musician and social justice advocate."
   linkedin_url: "http://www.linkedin.com/in/craigmcginley"
   github_username: "craigmcginley"
-  photo: craig_mcginley.jpg 
+  photo: craig_mcginley.jpg
 - first_name: Brian
   last_name: Liston
   title: "Designer"
   bio: "Brian is a designer and visual artist with a background in graphic design, film and art history. He specializes in time-based media design and strives to create beautiful things in every medium available to him. Brian is a graduate of Columbus College of Art & Design."
   linkedin_url: "https://www.linkedin.com/pub/brian-liston/6/28a/9b8"
   twitter_username: lliissttoonn
-  photo: brian_liston.jpg 
-  
+  photo: brian_liston.jpg
+
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
