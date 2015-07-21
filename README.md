@@ -20,27 +20,33 @@ Then run
 Then visit `http://localhost:4567` in your favorite browser.
 
 ## Git Conventions
-The following conventions should be strictly followed when developing in this repo.
+The following conventions should be followed strictly when developing in this repo.
 
 ### Main Branches
-These two branches should ALWAYS exist in this repo.
+These two branches should ALWAYS exist in this repo. For the most part, you will not do any development inside of these branches. You will only merge into/from them.
 
 #### Master
-This branch is strictly used to deploy to the live version of the site. The ONLY branches to merge into master are the `develop` branch and `hotfix-` branches. NO OTHER BRANCHES SHOULD BE MERGED INTO `master`.
+This branch is strictly used to deploy to `www.goinvo.com`. The ONLY branches to merge into master are the `develop` branch and `hotfix-` branches.
 
 #### Develop
-This branch is to be used similarly to how we've historically used the master branch. When the feature being developed in a `feature` branch is complete, you merge that branch into `develop`. Then, after testing, you merge `develop` into `master`.
+This branch is to be used similarly to how we've historically used the master branch. All final products will be merged into the `development` branch before being merged into `master`.
+
+e.g. When the feature being developed in a `feature` branch is complete (and tested), you merge that branch into `develop`. Then, after more testing, you merge `develop` into `master`.
 
 ### Sub-Branches
-There can (and will) be many of these temporary branches.
+There can (and will) be many instances of these temporary branches. These branches are where you will do a majority of your development.
 
 #### Feature
-Feature Branches are branched off of `develop`. A `feature` branch is where most of your time will be spent when adding some sort of functionality to the website (that includes feature articles). When you're at a point where you are done with your feature (and have tested it), merge back into the `develop` branch. Continue to test in the `develop` branch and when you are ready to go live, merge into `master`.
+Feature Branches must be branched off of the `develop` branch.
+
+A `feature` branch is where most of your time will be spent. You should create a new `feature` branch when adding some sort of functionality to the website (that includes feature articles). When you are done with your feature (and have tested it), merge your `feature` branch back into the `develop` branch. Continue to test in the `develop` branch and when you are ready to go live, merge into `master`.
 
 Naming Convention: `feature-[feature description]`
 
 #### Hotfix
-A hotfix is a (generally) small update that needs to happen immediatly. For instance, if the live version of the website has a javascript error you should make a new `hotfix` branch. A `hotfix` branch should be branched off of `master` (This is the only branch to ever do this). You then make all your updates in the `hotfix` branch and then merge this branch (individually) into both the `develop` and `master` branches. This ensures that they are both up to date.
+A `hotfix` branch must be branched off of the `master` branch.
+
+A hotfix is a (generally) small update that needs to happen immediatly. For instance, if the live version of the website has a javascript error you should make a new `hotfix` branch. A `hotfix` branch should be branched off of the `master` branch (`hotfix` branches are the only branches allowed do this). You then make all your updates/bug fixes in the `hotfix` branch and then merge this branch (individually) into both the `develop` and `master` branches. This ensures that they are both up to date.
 
 Naming Convention: `hotfix-[hotfix description]`
 
@@ -72,9 +78,11 @@ To build a version of the site, which compiles all resources and consolidates al
 
 ### Codeship
 
-Codeship now handles deployment to Amazon S3. Any push to `master` branch will automatically build and sync to the `www.goinvo.com` bucket on s3. Any push to `staging` branch will automatically build and sync to the `staging.goinvo.com` bucket.
+Codeship now handles deployment to Amazon S3 for the live site. Any push to `master` branch will automatically build and sync to the `www.goinvo.com` bucket on s3. 
 
 If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_sync gem as described below. The appropriate s3 bucket can be targeted with the `s3_bucket` variable in `config.rb`.  
+
+Codeship does not sync to `stage.goinvo.com`. That must be done manually.
 
 ### AWS Setup
 
