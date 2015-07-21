@@ -33,14 +33,14 @@ var tooltip = d3.select('#waste-chart')            // NEW
   .append('div')                             // NEW
   .attr('class', 'tooltip');                 // NEW
 
-tooltip.append('div')                        // NEW
-  .attr('class', 'label');                   // NEW
-
-tooltip.append('div')                        // NEW
-  .attr('class', 'count');                   // NEW
-
-tooltip.append('div')                        // NEW
-  .attr('class', 'percent');                 // NEW
+//tooltip.append('div')                        // NEW
+//  .attr('class', 'label');                   // NEW
+//
+//tooltip.append('div')                        // NEW
+//  .attr('class', 'count');                   // NEW
+//
+//tooltip.append('div')                        // NEW
+//  .attr('class', 'percent');                 // NEW
 
 var wasteSVG = d3.select("#waste-chart")
     .append("svg");
@@ -139,20 +139,19 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
             return 10;
         });
     rectangles.on('mouseover', function(d) {
-        tooltip.select('.label').html(d.Procedure);
         tooltip.style('display', 'block');
-        //old
         d3.select(this)
                 .style("fill", "#D9C6E1")
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1)
-            tooltip.html("hello y u no work")
-                .style("left", (d3.event.pageX + 5) + "px")
-                .style("top", (d3.event.pageX + 5) + "px");
+            tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Unnecessary: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
+                .style("left", (d3.event.pageX -250) + "px")
+                .style("top", (d3.event.pageY - 100 - targetScrollTop + 5) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
+        d3.select(this).style('fill', null);
     });
 
 
@@ -244,7 +243,15 @@ myWindow.on('resize.waste', function() {
         .attr("width", w + margin.left + margin.right)
         .attr("height", h + margin.top + margin.bottom);
     
-    rectangles.attr("width", xScale.rangeBand());
+    rectangles
+        .attr("width", xScale.rangeBand())
+        .attr("x", function(d, i) {
+        return xScale(d.Procedure);
+        })
+        .attr("width", xScale.rangeBand())
+//        .attr("y", function(d) {
+//                return h - 10;
+//        });
 });
 
   
