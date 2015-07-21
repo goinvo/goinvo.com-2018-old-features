@@ -29,7 +29,7 @@ These two branches should ALWAYS exist in this repo. For the most part, you will
 This branch is strictly used to deploy to `www.goinvo.com`. The ONLY branches to merge into master are the `develop` branch and `hotfix-` branches.
 
 #### Develop
-This branch is to be used similarly to how we've historically used the master branch. All final products will be merged into the `development` branch before being merged into `master`.
+This branch is to be used similarly to how we've historically used the master branch. All final products will be merged into the `develop` branch before being merged into `master`.
 
 e.g. When the feature being developed in a `feature` branch is complete (and tested), you merge that branch into `develop`. Then, after more testing, you merge `develop` into `master`.
 
@@ -55,16 +55,16 @@ Naming Convention: `hotfix-[hotfix description]`
 #### Developing a Feature Article
 1. Make a new `feature` branch by branching off of `develop`. The title of this branch should be in the format `feature-[feature description]`.
 2. Do all of your development and testing in your `feature-[feature description]` branch. You may upload to stage at any point.
-3. When you're done developing and have fully tested in your isolated branch, merge into `development`.
-4. Do more testing in the `development` branch. You may want to upload to stage to perform more testing.
-5. When you believe you're ready to push live, merge the `development` branch into the `master` branch. This will upload to S3 automatically and your feature is now live.
-6. You can now delete your `feature-[feature description]` branch as its entire history is now in the `development` and `master` branches.
+3. When you're done developing and have fully tested in your isolated branch, merge into `develop`.
+4. Do more testing in the `develop` branch. You may want to upload to stage to perform more testing.
+5. When you believe you're ready to push live, merge the `develop` branch into the `master` branch. This will upload to S3 automatically and your feature is now live.
+6. You can now delete your `feature-[feature description]` branch as its entire history is now in the `develop` and `master` branches.
 
 #### Making a Quick Fix
 1. Make a new `hotfix` branch by branching off of `master`. The title of this branch should be in the format`hotfix-[hotfix description]`.
 2. Do all of your development and testing in your `hotfix-[hotfix description]` branch. You may want to upload to stage at any point.
 3. When you're done developing and have fully tested your fix (100% fully tested, we don't want bad code to go live), you will merge `hotfix-[hotfix description]` into `master` AND you will merge `hotfix-[hotfix description]` into `develop`.
-4. You can now delete your `hotfix-[hotfix description]` branch as its entire history is now in the `development` and `master` branches.
+4. You can now delete your `hotfix-[hotfix description]` branch as its entire history is now in the `develop` and `master` branches.
 
 
 ## Generate Static Site
