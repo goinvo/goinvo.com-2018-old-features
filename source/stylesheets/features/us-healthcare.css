@@ -1,18 +1,5 @@
 /* GENERAL STYLING */
 
-* {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-weight: lighter;
-}
-
-body {
-    background-color: #F7F7F7;
-    font-size: 30px;
-    color: black;
-    padding: 0;
-    text-align: center;
-
-}
 
 header p{
   text-align: center;
@@ -131,7 +118,7 @@ ul.tabs li.current{
 }
 
 
-span {
+span.slide {
   font-weight: 600;
   background-color: #D9C6E1;
   cursor: pointer;
@@ -290,14 +277,15 @@ div.tooltip {
 /* Bar Chart on Waste */
 
 #waste-chart {
-    margin: auto;
-
+    position: relative;
+    margin: 0 auto;
 }
+
 
 #waste-chart svg {
     margin-top: 60px;
     /* *** DELETE ME *** */
-    margin-left: calc(50% - 500px);
+    margin-left: calc(50% - 400px);
     /* *** DELETE ME *** */
 }
 
