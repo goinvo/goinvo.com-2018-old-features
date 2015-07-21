@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
     width = window.innerWidth*.8 - margin.left - margin.right,
@@ -85,19 +85,6 @@ d3.csv("/features/us-healthcare/data/data_capita.csv", function(error, data) {
       .data(countries)
     .enter().append("g")
       .attr("class", "country")
- /*   .on("mouseover", function(d) {
-      div.transition()
-        .duration(200)
-        .style("opacity", 1);
-      div.html(d.name)
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY - 28) + "px");
-    })
-    .on("mouseout", function(d) {
-      div.transition()
-      .duration(500)
-      .style("opacity", 0)
-    });*/
 
   country.append("path")
       .attr("class", "line")

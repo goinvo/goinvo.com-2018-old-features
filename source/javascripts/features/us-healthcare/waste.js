@@ -7,27 +7,28 @@ var margin = {top: 20, right: 0, bottom: 50, left: 10},
     h = 500 - margin.top - margin.bottom;
 var barPadding = 1;
 
-
-
 var padding = 20;
 
 var xScale = d3.scale.ordinal()
     //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
     .rangeRoundBands([100, w], 0.2); // .05 for spacing between bars
 
-var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .orient("bottom");
-
 var yScale = d3.scale.log()      // Unnecessary
     //.domain([1, d3.max(dataset)])
     .range([h+5, 5]);
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom");
 
 var yAxis = d3.svg.axis()
     .scale(yScale)
     .orient("left")
     .ticks(10);
 
+var tooltip = d3.select("#waste-chart").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
 
 var wasteSVG = d3.select("#waste-chart")
     .append("svg")
@@ -109,6 +110,28 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("height", function(d) {
             return h - yScale(d.NumberProcedures);
         });
+    
+    wasteSVG.selectAll(".bar")
+        .data(data)
+        .on("mouseover", function(d){
+            d3.select(this)
+                .style("fill", "#D9C6E1")
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+            tooltip.html("hello y u no work")
+                .style("left", (d3.event.pageX + 5) + "px")
+                .style("top", (d3.event.pageX + 5) + "px");
+            
+        })
+        .on("mouseout", function(d) {
+            d3.select(this).style("fill",null)
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0)
+        })
+        
+        
 
 
 // Toggle between datasets
