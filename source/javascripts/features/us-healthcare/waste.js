@@ -129,20 +129,11 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .data(data)
         .on("mouseover", function(d){
             d3.select(this)
-                .style("fill", "#D9C6E1")
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", 1)
-            tooltip.html("hello y u no work")
-                .style("left", (d3.event.pageX + 5) + "px")
-                .style("top", (d3.event.pageX + 5) + "px");
+                .style("fill", "#D9C6E1");
             
         })
         .on("mouseout", function(d) {
-            d3.select(this).style("fill",null)
-            tooltip.transition()
-                .duration(350)
-                .style("opacity", 0)
+            d3.select(this).style("fill",null);
         })
         
         

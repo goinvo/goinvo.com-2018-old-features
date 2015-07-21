@@ -23,10 +23,12 @@ $(document).ready(function(){
 
   var xAxis = d3.svg.axis()
       .scale(x)
-      .orient("bottom");
+      .orient("bottom")
+      .outerTickSize(0);
 
   var yAxis = d3.svg.axis()
       .scale(y)
+      //.tickSize(width)
       .orient("left");
 
   var tooltip = d3.select("#gdp-vs-capita-chart").append("div")
@@ -34,6 +36,15 @@ $(document).ready(function(){
       .style("opacity", 0);
   
   var xAxisG, xAxisText, yAxisG, yAxisText, points;
+
+  var initialTransition = function() {
+    points.transition()
+      .duration(350)
+      .ease('radial')
+      .attr("r", function(d) {
+        return 4;
+      });
+  }
 
   d3.csv("/features/us-healthcare/data/gdpvcapita.csv", function(error, data){
       if (error) throw error;
@@ -49,20 +60,21 @@ $(document).ready(function(){
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")");
+        .attr("transform", "translate(0," + (height + 10) + ")"); //adds padding for x axis
     
       xAxisG.call(xAxis);
     
       xAxisText = xAxisG.append("text");
     
-      xAxisText .attr("x", width)
+      xAxisText.attr("x", width)
           .attr("dx", ".71em")
           .attr("dy", "-.71em")
           .style("text-anchor", "end")
           .text("% GDP");
 
       yAxisG = svgWrapper.append("g")
-        .attr("class", "y axis");
+        .attr("class", "y axis")
+        .attr("transform", "translate(-10,0)"); //adds padding for y axis
     
        yAxisG.call(yAxis);
           
@@ -80,7 +92,7 @@ $(document).ready(function(){
         .enter().append("circle");
     
       points.attr("class", "dot")
-        .attr("r", 4)
+        .attr("r", 0)
         .attr("cx", function(d){return x(d.gdp)})
         .attr("cy", function(d){return y(d.capita)})
         .attr("fill", "#004363")
@@ -130,7 +142,7 @@ $(document).ready(function(){
     
     xAxisG.attr("transform", "translate(0," + height + ")");
     xAxisText .attr("x", width)
-    
+
     points.attr("cx", function(d){return x(d.gdp)})
       .attr("cy", function(d){return y(d.capita)})
     
@@ -138,7 +150,17 @@ $(document).ready(function(){
   
   myWindow.on('resize.gdpv', initializeSizes );
               
-
+  var haveWeInitializedYet = false;
+  $(window).on('scroll', function(i) {
+    if(!haveWeInitializedYet) {
+      var currentScrollTop = $(this).scrollTop();
+      var targetScrollTop = $('#gdp-vs-capita-chart').position().top;
+      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
+        initialTransition();
+        haveWeInitializedYet  = true;
+      }
+    }
+  });
   
   
 });
