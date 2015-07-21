@@ -58,16 +58,30 @@ function wrap(text, width) {
     }
   });
 }
+  
+  var rectangles;
+  
+  var initialTransition = function() {
+    rectangles.transition()
+      .duration(350)
+      .ease('linear')
+      .attr("height", function(d) {
+        return h - yScale(d.NumberProcedures);
+      })
+      .attr("y", function(d) {
+        return yScale(d.NumberProcedures);
+      }); 
+  }
 
 d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     var maxProcedures = d3.max(data, function(d) {
-     return d.NumberProcedures;
+     return parseInt(d.NumberProcedures);
     });
     var maxWaste = d3.max(data, function(d) {
-     return d.Waste;
+     return parseInt(d.Waste);
     });
     var maxUnnecessary = d3.max(data, function(d) {
-     return d.Unnecessary;
+     return parseInt(d.Unnecessary);
     });
 
     xScale.domain(data.map(function(d) { return d.Procedure;}));
@@ -97,18 +111,18 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .data(data).enter()
         .append("g");
 
-    var rectangles = myPoints.append("rect")
+    rectangles = myPoints.append("rect")
         .attr("class", "bar")
         .attr("x", function(d, i) {
            // make sure there are no spaces in the csv file or it won't parse
             return xScale(d.Procedure);
         })
-        .attr("y", function(d) {
-            return yScale(d.NumberProcedures);
-        })
         .attr("width", xScale.rangeBand())
+        .attr("y", function(d) {
+                return h - 10;
+            })
         .attr("height", function(d) {
-            return h - yScale(d.NumberProcedures);
+            return 10;
         });
     
     wasteSVG.selectAll(".bar")
@@ -127,7 +141,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .on("mouseout", function(d) {
             d3.select(this).style("fill",null)
             tooltip.transition()
-                .duration(500)
+                .duration(350)
                 .style("opacity", 0)
         })
         
@@ -137,12 +151,12 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
 // Toggle between datasets
 
 
-d3.select("#totalProcedures")
+    d3.select("#totalProcedures")
     .on("click", function() {
         yScale.domain([1, maxProcedures]);
 
         rectangles.transition()
-            .duration(1000)
+            .duration(350)
             .delay(50)
             .ease('sin-in-out')
             .attr("y", function(d, i) {
@@ -152,18 +166,18 @@ d3.select("#totalProcedures")
                 return h - yScale(d.NumberProcedures);
             });
         wasteSVG.select(".yaxis")
-            .transition().duration(1000)
+            .transition().duration(350)
             .delay(50)
             .ease('sin-in-out')
             .call(yAxis)
     });
 
-d3.select("#unnecessaryProcedures")
+  d3.select("#unnecessaryProcedures")
     .on("click", function() {
         yScale.domain([1, maxUnnecessary]);
 
         rectangles.transition()
-            .duration(1000)
+            .duration(350)
             .delay(50)
             .ease('sin-in-out')
             .attr("y", function(d) {
@@ -173,32 +187,43 @@ d3.select("#unnecessaryProcedures")
                 return h - yScale(d.Unnecessary);
             });
         wasteSVG.select(".yaxis")
-            .transition().duration(1000)
+            .transition().duration(350)
             .delay(50)
             .ease('sin-in-out')
             .call(yAxis)
     });
 
 
-d3.select("#dollarsWasted")
-    .on("click", function() {
-        yScale.domain([1, maxWaste]);
+  d3.select("#dollarsWasted").on("click", function() {
+    yScale.domain([1, maxWaste]);
 
-        rectangles.transition()
-            .duration(1000)
-            .delay(50)
-            .ease('sin-in-out')
-            .attr("y", function(d) {
-                return yScale(d.Waste);
-            })
-            .attr("height", function(d) {
-                return h - yScale(d.Waste);
-            });
-        wasteSVG.select(".yaxis")
-            .transition().duration(1000)
-            .delay(50)
-            .ease('sin-in-out')
-            .call(yAxis)
+    rectangles.transition()
+        .duration(350)
+        .delay(50)
+        .ease('sin-in-out')
+        .attr("y", function(d) {
+            return yScale(d.Waste);
+        })
+        .attr("height", function(d) {
+            return h - yScale(d.Waste);
+        });
+    wasteSVG.select(".yaxis")
+        .transition().duration(350)
+        .delay(50)
+        .ease('sin-in-out')
+        .call(yAxis)
     });
-});
+  });
+  
+  var haveWeInitialziedYet = false;
+  $(window).on('scroll', function(i) {
+    if(!haveWeInitialziedYet) {
+      var currentScrollTop = $(this).scrollTop();
+      var targetScrollTop = $('#waste-container').position().top;
+      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
+        initialTransition();
+        haveWeInitialziedYet  = true;
+      }
+    }
+  });
 });
