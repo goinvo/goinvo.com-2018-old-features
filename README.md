@@ -46,13 +46,13 @@ Naming Convention: `feature-[feature description]`
 #### Hotfix
 A `hotfix` branch must be branched off of the `master` branch.
 
-A hotfix is a (generally) small update that needs to happen immediatly. For instance, if the live version of the website has a javascript error you should make a new `hotfix` branch. A `hotfix` branch should be branched off of the `master` branch (`hotfix` branches are the only branches allowed do this). You then make all your updates/bug fixes in the `hotfix` branch and then merge this branch (individually) into both the `develop` and `master` branches. This ensures that they are both up to date.
+A hotfix is a (generally) small update that needs to happen immediatly. For instance, if the live version of the website has a javascript error, you should make a new `hotfix` branch. A `hotfix` branch should be branched off of the `master` branch (note: `hotfix` branches are the only branches allowed do this). You then make all your updates/bug fixes in the `hotfix` branch and then merge this branch (individually) into both the `develop` and `master` branches. This ensures that they are both up to date.
 
 Naming Convention: `hotfix-[hotfix description]`
 
 ### Git Scenarioes
 
-#### Developing a Feature
+#### Developing a Feature Article
 1. Make a new `feature` branch by branching off of `develop`. The title of this branch should be in the format `feature-[feature description]`.
 2. Do all of your development and testing in your `feature-[feature description]` branch. You may upload to stage at any point.
 3. When you're done developing and have fully tested in your isolated branch, merge into `development`.
