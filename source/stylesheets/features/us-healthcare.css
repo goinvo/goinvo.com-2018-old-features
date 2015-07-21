@@ -177,6 +177,11 @@ span.slide {
   display: none;
 }
 
+/*.y.axis line {
+    stroke: gray;
+    stroke-dasharray: 2,2;
+}
+
 /* line css for capita spending chart */
 .line {
   fill: none;
@@ -235,19 +240,11 @@ div.tooltip {
   pointer-events: none;
 }
 
-
-
-
 /* BIBLIOGRAPHY */
 #bibliography {
   text-align: left;
   font-size: 1.5rem;
 }
-
-
-
-
-
 
 /* FOOTER */
 .circle {
@@ -316,6 +313,11 @@ div.tooltip {
     stroke: black;
     shape-rendering: cripsEdges;
 }
+
+.yaxis path, .xaxis path {
+    display: none;
+}
+
 .axis text,
 .yaxis text,
 .xaxis text{
@@ -328,9 +330,6 @@ div.tooltip {
 .bar {
     fill: #004363;
 }
-/*.bar:hover {
-  fill: #D9C6E1;
-}*/
 
 /* Bar Chart on Waste: Radio Buttons */
 
@@ -346,10 +345,6 @@ div.tooltip {
   margin: 0 auto;
 
 }
-
-/*label {
-    padding:0.4em 2em 0.4em 0;
-}*/
 
 .toggle-btn {       /* Text */
     text-align: center;
@@ -405,22 +400,6 @@ div.tooltip {
 
 .toggle-btn-grp.cssonly div:hover label, .toggle-btn-grp.cssonly div:hover input:checked + label {
     background:#D9C6E1;
-}
-
-
-
-/* Axis */
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.chart {
-  display: block;
-  margin: auto;
 }
 
 /* SANKEY */
