@@ -15,6 +15,7 @@
   = javascript_include_tag "features/us-healthcare/waste.js"
   = javascript_include_tag "features/us-healthcare/sankey.js"
   = javascript_include_tag "features/us-healthcare/index.js"
+  = javascript_include_tag "features/us-healthcare/gdpvcapita.js"
 
   - # Custom Styles
   = stylesheet_link_tag "features/us-healthcare.css"
@@ -132,18 +133,18 @@
       \: Patients have access to personal data: what if he had access to his EHR? would he have remembered?].
     %p.p-slide
       Unsurprisingly, the EKG showed an arrhythmia, so the doctor admitted David for observation. Within the hour, David was given a bed, hooked up to a slew of monitoring equipment, and was having a full blood panel done.
-    .chart-container
+    #waste-container.chart-container
       %h4 Unnecessary testing means resources are being wasted
       .toggle-btn-grp.cssonly
         %div
-          %input#totalProcedures{:name => "group4", :type => "radio"}/
-          %label.toggle-btn{:onclick => ""} Total Procedures
+          %input#totalProcedures{:name => "group4", :type => "radio", :checked => true}/
+          %label.toggle-btn{:for => "totalProcedures"} Total Procedures
         %div
           %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
-          %label.toggle-btn{:onclick => ""} Unnecessary Procedures
+          %label.toggle-btn{:for => "unnecessaryProcedures"} Unnecessary Procedures
         %div
           %input#dollarsWasted{:name => "group4", :type => "radio"}/
-          %label.toggle-btn{:onclick => ""} Dollars Wasted
+          %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
       #waste-chart
     %p.p-slide
       After two days at the hospital, amounting to xyz dollars, David’s fever spiked and he began having chest pain. By the end of the week, a simple influenza admission turned into a case of
@@ -250,6 +251,7 @@
       %strong> graph
       ], more than any other nation.
     #spending-capita-chart
+    #gdp-vs-capita-chart
     %p.p-slide
       Despite this, we have worse outcomes, lower quality, and more limited access[graphs]. The
       %span.slide#flip5 Patient Protection and Affordable Care Act

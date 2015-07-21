@@ -10,21 +10,19 @@ var margin = {top: 20, right: 0, bottom: 50, left: 10},
     h = 500 - margin.top - margin.bottom;
 var barPadding = 1;
 
-
-
 var padding = 20;
 
 var xScale = d3.scale.ordinal()
     //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
     .rangeRoundBands([100, w], 0.2); // .05 for spacing between bars
 
-var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .orient("bottom");
-
 var yScale = d3.scale.log()      // Unnecessary
     //.domain([1, d3.max(dataset)])
     .range([h+5, 5]);
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom");
 
 var yAxis = d3.svg.axis()
     .scale(yScale)
@@ -74,16 +72,30 @@ function wrap(text, width) {
     }
   });
 }
+  
+  var rectangles;
+  
+  var initialTransition = function() {
+    rectangles.transition()
+      .duration(350)
+      .ease('linear')
+      .attr("height", function(d) {
+        return h - yScale(d.NumberProcedures);
+      })
+      .attr("y", function(d) {
+        return yScale(d.NumberProcedures);
+      }); 
+  }
 
 d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     var maxProcedures = d3.max(data, function(d) {
-     return d.NumberProcedures;
+     return parseInt(d.NumberProcedures);
     });
     var maxWaste = d3.max(data, function(d) {
-     return d.Waste;
+     return parseInt(d.Waste);
     });
     var maxUnnecessary = d3.max(data, function(d) {
-     return d.Unnecessary;
+     return parseInt(d.Unnecessary);
     });
 
     xScale.domain(data.map(function(d) { return d.Procedure;}));
@@ -113,22 +125,31 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .data(data).enter()
         .append("g");
 
-    var rectangles = myPoints.append("rect")
+    rectangles = myPoints.append("rect")
         .attr("class", "bar")
         .attr("x", function(d, i) {
            // make sure there are no spaces in the csv file or it won't parse
             return xScale(d.Procedure);
         })
-        .attr("y", function(d) {
-            return yScale(d.NumberProcedures);
-        })
         .attr("width", xScale.rangeBand())
+        .attr("y", function(d) {
+                return h - 10;
+            })
         .attr("height", function(d) {
-            return h - yScale(d.NumberProcedures);
+            return 10;
         });
     rectangles.on('mouseover', function(d) {
         tooltip.select('.label').html(d.Procedure);
         tooltip.style('display', 'block');
+        //old
+        d3.select(this)
+                .style("fill", "#D9C6E1")
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+            tooltip.html("hello y u no work")
+                .style("left", (d3.event.pageX + 5) + "px")
+                .style("top", (d3.event.pageX + 5) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
@@ -138,12 +159,12 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
 // Toggle between datasets
 
 
-d3.select("#totalProcedures")
+    d3.select("#totalProcedures")
     .on("click", function() {
         yScale.domain([1, maxProcedures]);
 
         rectangles.transition()
-            .duration(1000)
+            .duration(350)
             .delay(50)
             .ease('sin-in-out')
             .attr("y", function(d, i) {
@@ -153,18 +174,18 @@ d3.select("#totalProcedures")
                 return h - yScale(d.NumberProcedures);
             });
         wasteSVG.select(".yaxis")
-            .transition().duration(1000)
+            .transition().duration(350)
             .delay(50)
             .ease('sin-in-out')
             .call(yAxis)
     });
 
-d3.select("#unnecessaryProcedures")
+  d3.select("#unnecessaryProcedures")
     .on("click", function() {
         yScale.domain([1, maxUnnecessary]);
 
         rectangles.transition()
-            .duration(1000)
+            .duration(350)
             .delay(50)
             .ease('sin-in-out')
             .attr("y", function(d) {
@@ -174,33 +195,33 @@ d3.select("#unnecessaryProcedures")
                 return h - yScale(d.Unnecessary);
             });
         wasteSVG.select(".yaxis")
-            .transition().duration(1000)
+            .transition().duration(350)
             .delay(50)
             .ease('sin-in-out')
             .call(yAxis)
     });
 
 
-d3.select("#dollarsWasted")
-    .on("click", function() {
-        yScale.domain([1, maxWaste]);
+  d3.select("#dollarsWasted").on("click", function() {
+    yScale.domain([1, maxWaste]);
 
-        rectangles.transition()
-            .duration(1000)
-            .delay(50)
-            .ease('sin-in-out')
-            .attr("y", function(d) {
-                return yScale(d.Waste);
-            })
-            .attr("height", function(d) {
-                return h - yScale(d.Waste);
-            });
-        wasteSVG.select(".yaxis")
-            .transition().duration(1000)
-            .delay(50)
-            .ease('sin-in-out')
-            .call(yAxis)
+    rectangles.transition()
+        .duration(350)
+        .delay(50)
+        .ease('sin-in-out')
+        .attr("y", function(d) {
+            return yScale(d.Waste);
+        })
+        .attr("height", function(d) {
+            return h - yScale(d.Waste);
+        });
+    wasteSVG.select(".yaxis")
+        .transition().duration(350)
+        .delay(50)
+        .ease('sin-in-out')
+        .call(yAxis)
     });
+
 });
 
 
@@ -225,4 +246,18 @@ myWindow.on('resize.waste', function() {
     
     rectangles.attr("width", xScale.rangeBand());
 });
+
+  
+  var haveWeInitialziedYet = false;
+  $(window).on('scroll', function(i) {
+    if(!haveWeInitialziedYet) {
+      var currentScrollTop = $(this).scrollTop();
+      var targetScrollTop = $('#waste-container').position().top;
+      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
+        initialTransition();
+        haveWeInitialziedYet  = true;
+      }
+    }
+  });
+
 });

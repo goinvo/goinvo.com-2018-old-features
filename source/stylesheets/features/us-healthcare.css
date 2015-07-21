@@ -21,7 +21,7 @@ article, footer {
   margin: 0 auto;
 }
 
-article h2, artcile h1, footer {
+article h2, article h1, footer {
   text-align: center;
 }
 
@@ -153,8 +153,12 @@ span.slide {
 }
 
 
-/* CECILE'S GRAPH */
+/********* CECILE'S GRAPHS *********/
 #spending-capita-chart {
+    margin: auto;
+}
+
+#gdp-vs-capita-chart {
     margin: auto;
 }
 
@@ -173,6 +177,7 @@ span.slide {
   display: none;
 }
 
+/* line css for capita spending chart */
 .line {
   fill: none;
   stroke: gray;
@@ -181,6 +186,14 @@ span.slide {
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+/* point css for gdp v capita chart */
+.dot {
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
 }
 
 .label-hover{
@@ -315,9 +328,9 @@ div.tooltip {
 .bar {
     fill: #004363;
 }
-.bar:hover {
+/*.bar:hover {
   fill: #D9C6E1;
-}
+}*/
 
 /* Bar Chart on Waste: Radio Buttons */
 
@@ -408,35 +421,6 @@ div.tooltip {
 .chart {
   display: block;
   margin: auto;
-}
-
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
-
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
-
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
 }
 
 /* SANKEY */

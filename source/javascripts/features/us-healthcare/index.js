@@ -6,7 +6,6 @@ $(document).ready(function(){
     $("#"+tab.attr('data-tab')).addClass('current');
   });
 
-  document.getElementById("totalProcedures").click();
 
   // Slide down
   $('#panel1').hide();
