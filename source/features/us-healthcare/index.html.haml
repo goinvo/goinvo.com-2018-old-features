@@ -299,11 +299,10 @@
       - data.features.ushealthcare.perspectives.each do |perspective|
         .perspective{:data => {:key => perspective['key']}}
           %img{:src => "#{perspective.image}"}
-          %h3= perspective.title
+          %h5= perspective.title
     #actions
       - data.features.ushealthcare.perspectives.each do |perspective|
         .action-container{:data => {:perspective => "#{perspective['key']}"}}
-          %h1= perspective.title
           - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
           -  these_nodes.each do |key, node|
             .node 
