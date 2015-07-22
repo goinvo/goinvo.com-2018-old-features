@@ -247,11 +247,26 @@
       The health care system in the U.S. is in dire need of a transformation. Without a doubt health care is complex and nuanced, but even still we lag far behind most industrialized nations. We spend 8700 dollars per capita
       %a{:href => "#s29"}>
         %sup [29]
-      [
-      %strong> graph
-      ], more than any other nation.
-    #spending-capita-chart
-    #gdp-vs-capita-chart
+      , more than any other nation.
+    .container
+      %ul.tabs
+        %li.tab-link.current{"data-tab" => "tab-1"} Spending Over Time
+        %li.tab-link{"data-tab" => "tab-2"} Spending vs. GDP
+        %li.tab-link{"data-tab" => "tab-3"} Quality
+      #tab-1.tab-content.current
+        %p.tab_p
+          Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+        #spending-capita-chart
+      #tab-2.tab-content
+        %p.tab_p
+          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+          #gdp-vs-capita-chart
+      #tab-3.tab-content
+        %p.tab_p
+          %p.tab_p
+          Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
+          %a{:href => "http://www.commonwealthfund.org/publications/press-releases/2014/jun/us-health-system-ranks-last", :target => "_blank"} link
+        %img{:align => "middle", :alt => "Commonewealth Fund", :src => "http://www.commonwealthfund.org/~/media/images/publications/fund-report/2010/jun/mm2010l.gif", :style => "width:100%;"}
     %p.p-slide
       Despite this, we have worse outcomes, lower quality, and more limited access[graphs]. The
       %span.slide#flip5 Patient Protection and Affordable Care Act
@@ -270,29 +285,6 @@
         The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
         %a{:href => "#s32"}
           %sup [32]
-    %p.p-slide
-      Everyone has a role in saving U.S. healthcare. Explore our ideas and join the discussion by contributing your own.
-    .container
-      %ul.tabs
-        %li.tab-link.current{"data-tab" => "tab-1"} Better Cost
-        %li.tab-link{"data-tab" => "tab-2"} Higher Quality
-        %li.tab-link{"data-tab" => "tab-3"} More Access
-      #tab-1.tab-content.current
-        %p.tab_p
-          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
-        .embed-container
-          %iframe{:align => "left", :allowfullscreen => "true", :height => "645", :mozallowfullscreen => "true", :src => "//data.oecd.org/chart/4kd9", :style => "border: 0", :webkitallowfullscreen => "true", :width => "860"}
-            %a{:href => "//data.oecd.org/chart/4kd9", :target => "_blank"} OECD Chart: Health spending, Total, % of GDP, Annual, 1960 – 2012
-      #tab-2.tab-content
-        %p.tab_p
-          Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
-          %a{:href => "http://www.commonwealthfund.org/publications/press-releases/2014/jun/us-health-system-ranks-last", :target => "_blank"} link
-        %img{:align => "middle", :alt => "Commonewealth Fund", :src => "http://www.commonwealthfund.org/~/media/images/publications/fund-report/2010/jun/mm2010l.gif", :style => "width:100%;"}
-      #tab-3.tab-content
-        %p.tab_p
-          In addition to quality, health insurance coverage in the U.S. is also abysmal, though it has improved with the Affordable Care Act.
-          %a{:href => "http://www.theatlantic.com/health/archive/2012/08/no-chris-christie-us-health-care-is-not-the-worlds-greatest/261728/", :target => "_blank"} link
-        %img{:align => "middle", :alt => "Number of Uninsured Americans", :src => "http://cdn.theatlantic.com/static/mt/assets/food/oecd%20insurance%20coverage%20chart-615.png", :style => "width:100%;"}
   %article#prescription
     %h2 Prescription
     %p.p-slide
@@ -303,6 +295,12 @@
       Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability will require legislative action. Some changes will be cultural. Why do we spend so much on end-of-life care that reduces quality of life? It’s time to destigmatize death. Likewise, medical culture needs to be more patient-centered, which requires giving people access to their own health data.
     %p.p-slide
       Ultimately, everyone has a role in saving U.S. Health Care. Explore the ways you can make a difference and join the discussion by contributing your own ideas.
+    #perspectives
+      - data.features.ushealthcare.perspectives.each do |perspective|
+        .perspective{style: "width:{100/data.features.ushealthcare.perspectives.length-data.features.ushealthcare.perspectives.length*2}%"}
+          %img{:src => "#{perspective.image}"}
+          %h3= perspective.title
+        
   #sankey-chart
   /
     <div class="floating-footer">

@@ -294,9 +294,6 @@ div.tooltip {
 
 #waste-chart svg {
     margin-top: 60px;
-    /* *** DELETE ME *** */
-    margin-left: calc(50% - 400px);
-    /* *** DELETE ME *** */
 }
 
 .bar_chart {
@@ -425,4 +422,16 @@ div.tooltip {
 .link:hover {
   stroke: #939393;
   stroke-opacity: 1;
+}
+
+/* FINAL VIZ */
+#perspectives {
+  margin: auto;
+  background-color:aqua;
+}
+
+.perspective {
+  display: inline-block;
+  margin: 1%;
+  background-color: green;
 }

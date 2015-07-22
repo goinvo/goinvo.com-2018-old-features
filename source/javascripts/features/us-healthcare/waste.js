@@ -3,10 +3,12 @@ $( document ).ready(function() {
     
 var myWindow = d3.select(window);
     
-var windowW = window.innerWidth;
-var windowH = window.innerHeight;
+//var windowW = window.innerWidth;
+//var windowH = window.innerHeight;
+var elementW = $('#waste-container').width();
+var elementH = $('#waste-container').height();
 var margin = {top: 20, right: 0, bottom: 50, left: 10},
-    w = windowW*.7 - margin.left - margin.right,
+    w = elementW - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom;
 var barPadding = 1;
 
@@ -27,20 +29,13 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(yScale)
     .orient("left")
-    .ticks(10);
+    .tickFormat(function (d) {
+        return yScale.tickFormat(4,d3.format("s"))(d)
+    });
 
 var tooltip = d3.select('#waste-chart')            // NEW 
-  .append('div')                             // NEW
-  .attr('class', 'tooltip');                 // NEW
-
-//tooltip.append('div')                        // NEW
-//  .attr('class', 'label');                   // NEW
-//
-//tooltip.append('div')                        // NEW
-//  .attr('class', 'count');                   // NEW
-//
-//tooltip.append('div')                        // NEW
-//  .attr('class', 'percent');                 // NEW
+  .append('div')
+  .attr('class', 'tooltip');
 
 var wasteSVG = d3.select("#waste-chart")
     .append("svg");
@@ -54,6 +49,7 @@ function wrap(text, width) {
     var text = d3.select(this),
         words = text.text().split(/\s+/).reverse(),
         word,
+        wordNumber = 0;
         line = [],
         lineNumber = 0,
         lineHeight = 1.1, // ems
@@ -62,8 +58,9 @@ function wrap(text, width) {
         tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
     while (word = words.pop()) {
       line.push(word);
+        wordNumber++;
       tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
+      if (tspan.node().getComputedTextLength() > width && wordNumber != 1) {
         line.pop();
         tspan.text(line.join(" "));
         line = [word];
@@ -113,7 +110,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .call(yAxis)
         .attr()
         .style("fill", "black")
-        .attr('transform', 'translate(100,0)')
+        .attr('transform', 'translate(75,0)')
         .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
@@ -147,7 +144,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Unnecessary: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
                 .style("left", (d3.event.pageX -250) + "px")
-                .style("top", (d3.event.pageY - 100 - targetScrollTop + 5) + "px");
+                .style("top", (d3.event.pageY - 100 + 5) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
@@ -225,23 +222,31 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
 
 
 myWindow.on('resize.waste', function() {
-    var windowW = window.innerWidth;
-    var windowH = window.innerHeight;
-    w = windowW*.7 - margin.left - margin.right,
+    var elementW = $('#waste-container').width();
+    w = elementW - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom; 
-    console.log('**')
+    console.log('windowW='+elementW+", w="+w);
+
     xScale.rangeRoundBands([100, w], 0.2);
     yScale.range([h+5, 5]);
     xAxis.scale(xScale);
     yAxis.scale(yScale);
+
     
     wasteSVG
-        .call(xAxis)
-        .selectAll(".tick text")
-        .call(wrap, xScale.rangeBand())
-        .call(yAxis)
         .attr("width", w + margin.left + margin.right)
-        .attr("height", h + margin.top + margin.bottom);
+        .attr("height", h + margin.top + margin.bottom)
+        
+    wasteSVG
+        .select('.xaxis')
+            .call(xAxis)
+        .selectAll(".xaxis .tick text")
+            .call(wrap, xScale.rangeBand());
+    
+    wasteSVG
+        .select('.yaxis')
+        .call(yAxis)
+
     
     rectangles
         .attr("width", xScale.rangeBand())
