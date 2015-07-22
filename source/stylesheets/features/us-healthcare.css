@@ -445,6 +445,10 @@ div.tooltip {
   background-color: #D9C6E1;
 }
 
+.perspective.selected{
+  background-color: white;
+}
+
 .node {
   display: inline-block;
   margin: 0;
