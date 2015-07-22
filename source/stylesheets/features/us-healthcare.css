@@ -431,19 +431,45 @@ div.tooltip {
 }
 
 .perspective {
-  display: inline-block;
-  margin: .5%;
+  box-sizing: border-box;
+  margin: 0;
+  width: 25%;
+  padding: 10px;
+  float: left;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.perspective:hover {
   background-color: #D9C6E1;
 }
 
 .node {
   display: inline-block;
-  margin: .5%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 130px;
+  height: 130px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.node:hover {
   background-color: #D9C6E1;
 }
 
 .action-container {
   margin: auto;
   background-color: #EDEDED;
+<<<<<<< Updated upstream
   display: none;
+=======
+  padding: 20px;
+>>>>>>> Stashed changes
 }
