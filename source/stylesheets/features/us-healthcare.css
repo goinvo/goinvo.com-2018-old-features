@@ -419,10 +419,17 @@ div.tooltip {
 }
 
 /* changes what happens to the link lines during mouseover */
-.link:hover, .link[data-highlight="true"] {
+.link:hover{
   stroke: #939393;
   stroke-opacity: 1;
 }
+.link[data-highlight="forwards"]{
+  stroke: blue;
+} 
+.link[data-highlight="backwards"]{
+  stroke: orange;
+} 
+
 
 /* FINAL VIZ */
 #perspectives {
