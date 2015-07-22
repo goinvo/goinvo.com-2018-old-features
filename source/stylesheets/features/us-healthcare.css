@@ -419,7 +419,7 @@ div.tooltip {
 }
 
 /* changes what happens to the link lines during mouseover */
-.link:hover {
+.link:hover, .link.highlight {
   stroke: #939393;
   stroke-opacity: 1;
 }
@@ -445,4 +445,5 @@ div.tooltip {
 .action-container {
   margin: auto;
   background-color: #EDEDED;
+  display: none;
 }

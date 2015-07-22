@@ -32,4 +32,9 @@ $(document).ready(function(){
   $('#flip5').click(function(){
       $('#panel5').slideToggle('slow');
   });
+  $('.perspective').click(function(e){
+    $('.action-container').hide();
+    var this_key = $(this).attr('data-key');
+    $('.action-container[data-perspective="'+this_key+'"]').show()
+  });
 });

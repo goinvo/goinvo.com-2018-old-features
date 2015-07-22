@@ -369,6 +369,12 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
     .enter().append("path")
       .attr("class", "link")
       .attr("d", path)
+      .attr('data-key-source', function(d){
+        return d.source.name;
+      })
+      .attr('data-key-target', function(d){
+        return d.target.name;
+      })
       .style("stroke-width", function(d) { return Math.max(1, d.dy); }) // this changes the size of the stroke depending on value
       .sort(function(a, b) { return b.dy - a.dy; });
 
@@ -383,6 +389,9 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .data(graph.nodes)
     .enter().append("g")
       .attr("class", "node")
+      .attr('data-key', function(d){
+        return d.name;
+      })
       .attr("transform", function(d) {
       return "translate(" + d.x + "," + d.y + ")"; })
     /* .call(d3.behavior.drag()
