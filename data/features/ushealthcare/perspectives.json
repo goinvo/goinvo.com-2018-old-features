@@ -1,0 +1,22 @@
+[
+    {
+        "title":"Patients",
+        "key":"patient",
+        "image":"foo.jpg"
+    },
+    {
+        "title":"Providers",
+        "key":"provider",
+        "image":"foo.jpg"
+    },
+    {
+        "title":"Policy Makers",
+        "key":"policymaker",
+        "image":"foo.jpg"
+    },
+    {
+        "title":"Payers",
+        "key":"payer",
+        "image":"foo.jpg"
+    }   
+]
