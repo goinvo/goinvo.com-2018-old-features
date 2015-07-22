@@ -2,21 +2,21 @@
     {
         "title":"Patients",
         "key":"patient",
-        "image":"foo.jpg"
+        "image":"http://images.clipartpanda.com/person-clip-art-dc7g64qc9.png"
     },
     {
         "title":"Providers",
         "key":"provider",
-        "image":"foo.jpg"
+        "image":"http://imageenvision.com/sm/0033-0810-1218-1339_clip_art_graphic_of_an_orange_guy_character_doctor_in_a_lab_coat_holding_a_clipboard_with_a_patients_charts.jpg"
     },
     {
         "title":"Policy Makers",
         "key":"policymaker",
-        "image":"foo.jpg"
+        "image":"http://www.clipartbest.com/cliparts/9Tp/EBR/9TpEBRXTE.gif"
     },
     {
         "title":"Payers",
         "key":"payer",
-        "image":"foo.jpg"
+        "image":"http://www.instreamllc.com/images/healthcare.jpg"
     }   
 ]

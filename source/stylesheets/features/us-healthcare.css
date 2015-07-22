@@ -427,11 +427,11 @@ div.tooltip {
 /* FINAL VIZ */
 #perspectives {
   margin: auto;
-  background-color:aqua;
+  background-color:antiquewhite;
 }
 
 .perspective {
   display: inline-block;
-  margin: 1%;
-  background-color: green;
+  margin: .5%;
+  background-color:aqua;
 }

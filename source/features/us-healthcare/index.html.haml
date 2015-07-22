@@ -297,7 +297,7 @@
       Ultimately, everyone has a role in saving U.S. Health Care. Explore the ways you can make a difference and join the discussion by contributing your own ideas.
     #perspectives
       - data.features.ushealthcare.perspectives.each do |perspective|
-        .perspective{style: "width:{100/data.features.ushealthcare.perspectives.length-data.features.ushealthcare.perspectives.length*2}%"}
+        .perspective{style: "width:#{100/data.features.ushealthcare.perspectives.length - 1.45}%"}
           %img{:src => "#{perspective.image}"}
           %h3= perspective.title
         
