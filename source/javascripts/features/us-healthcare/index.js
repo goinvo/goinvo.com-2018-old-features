@@ -34,7 +34,19 @@ $(document).ready(function(){
   });
   $('.perspective').click(function(e){
     $('.action-container').hide();
+    $('.perspective').removeClass('selected');
     var this_key = $(this).attr('data-key');
     $('.action-container[data-perspective="'+this_key+'"]').show()
+    $(this).addClass('selected');
   });
+
+  $('.individual-action').click(function(e){
+    $('.link').attr('data-highlight','false');
+    $('.individual-action').removeClass('selected');
+    var this_key = $(this).attr('data-key');
+    console.log(this_key)
+    $('.link[data-key-source="'+this_key+'"]').attr('data-highlight', 'true');
+    $(this).addClass('selected');
+  });
+  
 });
