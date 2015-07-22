@@ -462,7 +462,8 @@ div.tooltip {
   background-color: aquamarine;
 }
 
-.node {
+.individual-action {
+  cursor:pointer;
   margin: 0;
   box-sizing: border-box;
   width: 90px;
@@ -478,7 +479,7 @@ div.tooltip {
   display: inline-block
 }
 
-.node:hover {
+.individual-action:hover {
   background-color: #D9C6E1;
 }
 
@@ -497,7 +498,7 @@ div.tooltip {
   padding-bottom: 0px
 }
 
-.node p {
+.individual-action p {
   margin: auto;
   font-size: 10px;
   text-align: center;

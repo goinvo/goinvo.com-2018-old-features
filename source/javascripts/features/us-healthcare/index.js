@@ -70,5 +70,6 @@ $(document).ready(function(){
     // })
     $(this).addClass('selected');
   });
+  $('.perspective:first').trigger('click');
   
 });
