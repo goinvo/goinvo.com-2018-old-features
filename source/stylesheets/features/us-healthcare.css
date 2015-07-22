@@ -427,11 +427,22 @@ div.tooltip {
 /* FINAL VIZ */
 #perspectives {
   margin: auto;
-  background-color:antiquewhite;
+  background-color:#EDEDED;
 }
 
 .perspective {
   display: inline-block;
   margin: .5%;
-  background-color:aqua;
+  background-color: #D9C6E1;
+}
+
+.node {
+  display: inline-block;
+  margin: .5%;
+  background-color: #D9C6E1;
+}
+
+.action-container {
+  margin: auto;
+  background-color: #EDEDED;
 }

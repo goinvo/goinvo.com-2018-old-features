@@ -300,6 +300,15 @@
         .perspective{style: "width:#{100/data.features.ushealthcare.perspectives.length - 1.45}%"}
           %img{:src => "#{perspective.image}"}
           %h3= perspective.title
+    #actions
+      - data.features.ushealthcare.perspectives.each do |perspective|
+        .action-container{:data => {:perspective => "#{perspective['key']}"}}
+          %h1= perspective.title
+          - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
+          -  these_nodes.each do |key, node|
+            .node{style: "width:#{100/these_nodes.length - 1.45}%"}
+              %p{:class => "individual-action", :data => {:key => key}}= node.title
+            
         
   #sankey-chart
   /
