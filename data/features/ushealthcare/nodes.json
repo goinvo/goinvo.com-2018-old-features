@@ -27,7 +27,7 @@
 	"everyone_covered":{
 		"title": "Everyone Gets Covered",
 		"description": "blah",
-		"impacts":["patient"]
+		"impacts":["patient", "policymaker"]
 	},
 	"better_costs":{
 		"title": "Better Costs",
@@ -42,7 +42,7 @@
 	"preventative_meds":{
 		"title": "Increased Preventative Medicine",
 		"description": "yay no sick",
-		"impacts":["patient"]
+		"impacts":[]
 	},
 	"give_patients_data":{
 		"title": "Give Patients Their Data",
@@ -57,22 +57,22 @@
 	"on_demand_care":{
 		"title": "Enable On-Demand Care",
 		"description": "yay everyone gets care",
-		"impacts": ["provider"]
+		"impacts": ["provider", "payer"]
 	},
 	"primary_care_workers":{
 		"title": "Train More Primary Care Workers",
 		"description": "yay more doctors",
-		"impacts": ["provider"]
+		"impacts": ["provider", "policymaker"]
 	},
 	"take_charge_of_health":{
-		"title": "Patients Can Take Charge of Their Own Health",
+		"title": "Patients Take Charge of Their Own Health",
 		"description":"",
 		"impacts": ["patient"]
 	},
 	"health_conscious_people":{
 		"title": "More Health Conscious People",
 		"description": "yay healthy people",
-		"impacts": ["patient"]
+		"impacts": []
 	},
 	"self_care":{
 		"title": "Self Care",
@@ -92,7 +92,7 @@
 	"interoperability":{
 		"title": "Improve Interoperability",
 		"description": "blah",
-		"impacts": ["policymaker", "provider"]
+		"impacts": ["policymaker"]
 	},
 	"shop_quality_cost":{
 		"title": "People Shop for Quality and Cost",
@@ -122,17 +122,17 @@
 	"coordinate_care":{
 		"title": "Coordinate Care",
 		"description": "blah",
-		"impacts": ["provider"]
+		"impacts": ["provider", "payer"]
 	},
 	"destigmatize_death":{
 		"title": "Destigmatize Death",
 		"description": "blah",
-		"impacts": ["provider"]
+		"impacts": ["provider","patient","payer","policymaker"]
 	},
 	"doctor_training":{
 		"title": "Improve Doctor Training",
 		"description": "blah",
-		"impacts": ["provider"]
+		"impacts": ["provider","policymaker"]
 	},
 	"value_quality_life":{
 		"title":"People Value Quality of Life",
@@ -157,12 +157,12 @@
 	"transparent_prices":{
 		"title": "Make Prices Transparent",
 		"description":"blah",
-		"impacts":["policymaker"]
+		"impacts":["policymaker","payer"]
 	},
 	"incentivize_outcomes":{
 		"title": "Incentivize Outcomes",
 		"description":"blah",
-		"impacts":["policymaker"]
+		"impacts":["policymaker", "payer"]
 	},
 	"reform_malpractice":{
 		"title":"Reform Malpractice Laws",
@@ -172,11 +172,11 @@
 	"fees_for_outcomes":{
 		"title":"Fees for Outcomes Instead of Fees for Services",
 		"description":"blah",
-		"impacts": []
+		"impacts": ["policymaker","payer"]
 	},
 	"clinicians_cover_butt":{
 		"title":"Clinicians Don\'t Have to Cover Their Butts",
 		"description": "blah",
-		"impacts":[]
+		"impacts":["provider"]
 	}
 }
