@@ -121,7 +121,7 @@ $(document).ready(function(){
                 .style("opacity", null);
           })
   });
-  
+    
   var initializeSizes = function() {
      w =  document.documentElement.clientWidth * .7;
      h = whRatio * w;
@@ -140,7 +140,7 @@ $(document).ready(function(){
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
-    xAxisG.attr("transform", "translate(0," + height + ")");
+    xAxisG.attr("transform", "translate(0," + (height + 10) + ")");
     xAxisText .attr("x", width)
 
     points.attr("cx", function(d){return x(d.gdp)})

@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
-
+var nodeMetadata = <%= data.features.ushealthcare.nodes.to_json.html_safe %>;
+console.log(nodeMetadata);
 d3.sankey = function() {
   var sankey = {},
       nodeWidth = 24,
@@ -337,8 +338,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       graph.nodes.push({ "name": d.target });
       graph.links.push({ "source": d.source,
                          "target": d.target,
-                         "value": +d.value,
-                         "src": d.source.src});
+                         "value": +d.value});
      });
 
      // return only the distinct / unique nodes
@@ -375,8 +375,8 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
 // add the link titles
   link.append("title")
         .text(function(d) {
-        return d.source.name + " → " +
-                d.target.name + "\n" + d.src; });
+        return nodeMetadata[d.source.name].title + " → " +
+                nodeMetadata[d.target.name].title; });
 
 // add in the nodes
   var node = svg.append("g").selectAll(".node")
@@ -404,7 +404,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       return d3.rgb(d.color).darker(2); })
     .append("title")
       .text(function(d) {
-      return d.name + "\n" + format(d.value); });
+      return nodeMetadata[d.name].title + "\n" + format(d.value); });
 
 
 // add in the title for the nodes
@@ -429,7 +429,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .attr("stroke-width", ".3px")
       .attr("text-anchor", "start") // position of text
       //.style("font-size", function(d) {return Math.max(10, d.dy/5) ; }) //font size depends on bar size, unless the text is too small
-      .text(function(d) { return d.name; })
+      .text(function(d) { return nodeMetadata[d.name].title; })
 
 // the function for moving the nodes
   function dragmove(d) {

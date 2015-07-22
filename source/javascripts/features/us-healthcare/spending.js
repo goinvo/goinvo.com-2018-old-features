@@ -47,7 +47,7 @@ $(document).ready(function(){
     var svgWrapper = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var xAxisG, yAxisG, yAxisText;
+    var xAxisG, yAxisG, yAxisText, country, countries;
     
     d3.csv("/features/us-healthcare/data/data_capita.csv", function(error, data) {
       if (error) throw error;
@@ -118,6 +118,7 @@ $(document).ready(function(){
       .attr("cy", function(d) { return y(d.capita)})
       .attr("r", function(d) { return d.capita == null ? 0: 3})
       .style("fill", function(d) { return color(d.name) ;})
+      
       .on("mouseover", function(d) {
         d3.selectAll(".linepoint")
           .style("opacity", 0)
@@ -128,6 +129,8 @@ $(document).ready(function(){
           .filter(function(p) { return p.name == d.name; })
           .style("opacity", 1)
           .style("stroke-width", 3)
+        
+        //tooltip
         div.transition()
           .duration(200)
           .style("opacity", 1);
@@ -135,6 +138,7 @@ $(document).ready(function(){
           .style("left", (d3.event.pageX + 5) + "px")
           .style("top", (d3.event.pageY + 5) + "px");
       })
+      
       .on("mouseout", function(d) {
         div.transition()
           .duration(500)
@@ -153,12 +157,12 @@ $(document).ready(function(){
             .filter(function(p) { return p.name == d.name; })
             .style("opacity", 1)
             .style("stroke-width", 3)
-          div.transition()
-            .duration(200)
-            .style("opacity", 1);
-          div.html(d.name)
-            .style("left", (d3.event.pageX + 5) + "px")
-            .style("top", (d3.event.pageY + 5) + "px");
+//          div.transition()
+//            .duration(200)
+//            .style("opacity", 1);
+//          div.html(d.name)
+//            .style("left", (d3.event.pageX + 5) + "px")
+//            .style("top", (d3.event.pageY + 5) + "px");
 
         })
         .on("mouseout", function(d){
@@ -167,9 +171,9 @@ $(document).ready(function(){
             .style("stroke-width", null)
           d3.selectAll(".linepoint")
             .style("opacity", 0)
-          div.transition()
-            .duration(500)
-            .style("opacity", 0)
+//          div.transition()
+//            .duration(500)
+//            .style("opacity", 0)
         })
     });
     
@@ -194,6 +198,6 @@ $(document).ready(function(){
     xAxisG.attr("transform", "translate(0," + height + ")");
 
   }
-  
+
   myWindow.on('resize.capita', initializeSizes );
 });
