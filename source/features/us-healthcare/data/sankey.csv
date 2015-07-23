@@ -1,7 +1,4 @@
 source,target,value,
-us_healthcare,universal_access,15,
-us_healthcare,perfect_quality,14,
-us_healthcare,better_prices,12,
 universal_access,single_payer_system,5,
 single_payer_system,everyone_covered,5,
 everyone_covered,better_costs,1.6,

@@ -419,10 +419,12 @@ div.tooltip {
 }
 
 /* changes what happens to the link lines during mouseover */
+/*
 .link:hover{
   stroke: #939393;
   stroke-opacity: 1;
 }
+*/
 .link[data-highlight="forwards"]{
   stroke: blue;
 } 

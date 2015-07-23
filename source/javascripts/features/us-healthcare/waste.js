@@ -135,7 +135,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("height", function(d) {
             return 10;
         });
-    rectangles.on('mouseover', function(d) {
+    rectangles.on('mousemove', function(d) {
         tooltip.style('display', 'block');
         d3.select(this)
                 .style("fill", "#D9C6E1")
@@ -143,8 +143,8 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
                 .duration(200)
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Unnecessary: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                .style("left", (d3.event.pageX -250) + "px")
-                .style("top", (d3.event.pageY - 100 + 5) + "px");
+                .style("left", (d3.event.pageX - 200) + "px")
+                .style("top", (d3.event.pageY - 1550) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');

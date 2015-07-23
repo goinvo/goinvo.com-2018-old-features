@@ -303,7 +303,7 @@ d3.sankey = function() {
 var units = "Widgets";
 
 // set canvas size
-var margin = {top: 10, right: 185, bottom: 10, left: 10},
+var margin = {top: 10, right: 200, bottom: 10, left: 0},
     width = window.innerWidth - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -379,10 +379,10 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .sort(function(a, b) { return b.dy - a.dy; });
 
 // add the link titles
-  link.append("title")
-        .text(function(d) {
-        return nodeMetadata[d.source.name].title + " → " +
-                nodeMetadata[d.target.name].title; });
+//  link.append("title")
+//        .text(function(d) {
+//        return nodeMetadata[d.source.name].title + " → " +
+//                nodeMetadata[d.target.name].title; });
 
 // add in the nodes
   var node = svg.append("g").selectAll(".node")
@@ -405,15 +405,16 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .attr("height", function(d) { return d.dy; })
       //.attr("height", 50)
       .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) {
-      return d.color = color(d.name.replace(/ .*/, "")); })
+      //.style("fill", function(d) {
+      //return d.color = color(d.name.replace(/ .*/, "")); })
       //.style("stroke", "black")
-      .style("stroke-width", ".5px")
-      .style("stroke", function(d) {
-      return d3.rgb(d.color).darker(2); })
-    .append("title")
-      .text(function(d) {
-      return nodeMetadata[d.name].title + "\n" + format(d.value); });
+      .style("fill", "red")
+//      .style("stroke-width", ".5px")
+//      .style("stroke", function(d) {
+//      return d3.rgb(d.color).darker(2); })
+//    .append("title")
+//      .text(function(d) {
+//      return nodeMetadata[d.name].title + "\n" + format(d.value); });
 
 
 // add in the title for the nodes
@@ -433,7 +434,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .attr("y", function(d) {return d.dy / 2; })
       .attr("x", function(d) {return d.dx / 2; })
       .attr("dy", ".35em")
-      .attr("dx", ".25em")
+      .attr("dx", ".75em")
       .attr("stroke", "black")
       .attr("stroke-width", ".3px")
       .attr("text-anchor", "start") // position of text

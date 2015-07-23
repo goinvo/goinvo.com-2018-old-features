@@ -12,6 +12,8 @@ $(document).ready(function(){
   var x = d3.scale.linear().range([0, width]);
 
   var y = d3.scale.linear().range([height, 0]);
+  
+  var rScale = d3.scale.linear().range([3,15]);
 
   var svg = d3.select("#gdp-vs-capita-chart").append("svg");
   
@@ -42,7 +44,7 @@ $(document).ready(function(){
       .duration(350)
       .ease('radial')
       .attr("r", function(d) {
-        return 4;
+        return rScale(d.population);
       });
   }
 
@@ -53,10 +55,12 @@ $(document).ready(function(){
           name = name; 
           d.capita = +d.capita;
           d.gdp = +d.gdp;
+          d.population = +d.population;
       });
 
       x.domain(d3.extent(data, function(d) { return d.gdp; }));
       y.domain(d3.extent(data, function(d) { return d.capita; }));
+      rScale.domain(d3.extent(data, function(d) { return d.population;}));
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
@@ -99,14 +103,14 @@ $(document).ready(function(){
         .on("mouseover", function(d){
         
             d3.select(this)
-              .style("r", 6)
+              .style("r", 1.2*rScale(d.population))
               .style("fill", "#D9C6E1");
         
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1);
         
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp )
+            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY + 5) + "px");
         })
@@ -149,18 +153,29 @@ $(document).ready(function(){
   }
   
   myWindow.on('resize.gdpv', initializeSizes );
-              
-  var haveWeInitializedYet = false;
-  $(window).on('scroll', function(i) {
-    if(!haveWeInitializedYet) {
-      var currentScrollTop = $(this).scrollTop();
-      var targetScrollTop = $('#gdp-vs-capita-chart').position().top;
-      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
-        initialTransition();
-        haveWeInitializedYet  = true;
-      }
-    }
-  });
+ 
   
+  $('li[data-tab="tab-2"]').click(function() {
+    initialTransition();
+    haveWeInitializedYet = true;
+  });
+  $('li[data-tab="tab-1"]').click(function() {
+    points.attr("r", 0);
+  });
+  $('li[data-tab="tab-3"]').click(function() {
+    points.attr("r", 0);
+  });
+//  var haveWeInitializedYet = false;
+//  $(window).on('scroll', function(i) {
+//    if(!haveWeInitializedYet) {
+//      var currentScrollTop = $(this).scrollTop();
+//      var targetScrollTop = $('#gdp-vs-capita-chart').position().top;
+//      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
+//        initialTransition();
+//        haveWeInitializedYet  = true;
+//      }
+//    }
+//  });
+//  
   
 });
