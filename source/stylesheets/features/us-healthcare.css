@@ -446,8 +446,8 @@ div.tooltip {
 
 /* FINAL VIZ */
 #perspectives {
-  margin: auto;
-  background-color: #EDEDED;
+  margin: 0;
+  background-color: red;
 }
 
 #perspectives li {
@@ -460,28 +460,27 @@ div.tooltip {
 
 #perspectives ul {
   margin: 0;
-  padding: 0;
-  list-style-type:none;
+  list-style-type: none;
 }
 
 .perspective {
-  height: 110px;
+  height: 100px;
 }
 .perspective img {
-  height: 80%;
+  height: 70%;
   margin: auto;
 }
 
-.perspective li:hover {
-  background-color: #D9C6E1;
+#perspectives li:hover {
+  background-color: #D9C6E1
+}
+
+#perspectives li.selected {
+  background-color: aquamarine;
 }
 
 .perspective h5 {
   text-align: center
-}
-
-.perspective.selected {
-  background-color: aquamarine;
 }
 
 .individual-action {
