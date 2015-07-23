@@ -162,6 +162,10 @@ span.slide {
     margin: auto;
 }
 
+#quality-vs-capita-chart {
+    margin: auto;
+}
+
 .axis path,
 .axis line {
   fill: none;
@@ -177,10 +181,17 @@ span.slide {
   display: none;
 }
 
-/*.y.axis line {
+/*
+.y.axis line {
     stroke: gray;
     stroke-dasharray: 2,2;
 }
+
+.x.axis line {
+    stroke: gray;
+    stroke-dasharray: 2,2;
+}
+*/
 
 /* line css for capita spending chart */
 .line {

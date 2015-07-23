@@ -16,6 +16,7 @@
   = javascript_include_tag "features/us-healthcare/sankey.js"
   = javascript_include_tag "features/us-healthcare/index.js"
   = javascript_include_tag "features/us-healthcare/gdpvcapita.js"
+  = javascript_include_tag "features/us-healthcare/qualityvcapita.js"
 
   - # Custom Styles
   = stylesheet_link_tag "features/us-healthcare.css"
@@ -263,10 +264,8 @@
           #gdp-vs-capita-chart
       #tab-3.tab-content
         %p.tab_p
-          %p.tab_p
           Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
-          %a{:href => "http://www.commonwealthfund.org/publications/press-releases/2014/jun/us-health-system-ranks-last", :target => "_blank"} link
-        %img{:align => "middle", :alt => "Commonewealth Fund", :src => "http://www.commonwealthfund.org/~/media/images/publications/fund-report/2010/jun/mm2010l.gif", :style => "width:100%;"}
+          #quality-vs-capita-chart
     %p.p-slide
       Despite this, we have worse outcomes, lower quality, and more limited access[graphs]. The
       %span.slide#flip5 Patient Protection and Affordable Care Act

@@ -5,17 +5,17 @@ $(document).ready(function(){
   var whRatio = 5/9.6;
   var h = whRatio * w;
 
-  var margin = {top: 20, right: 50, bottom: 30, left: 50},
+  var margin = {top: 20, right: 50, bottom: 50, left: 50},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
   var x = d3.scale.linear().range([0, width]);
 
-  var y = d3.scale.linear().range([height, 0]);
+  var y = d3.scale.linear().range([0, height]);
   
-  var rScale = d3.scale.linear().range([2,15]);
+  var rScale = d3.scale.linear().range([3,10]);
 
-  var svg = d3.select("#gdp-vs-capita-chart").append("svg");
+  var svg = d3.select("#quality-vs-capita-chart").append("svg");
   
   svg.attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom);
@@ -34,7 +34,7 @@ $(document).ready(function(){
       //.tickSize(width)
       .orient("left");
 
-  var tooltip = d3.select("#gdp-vs-capita-chart").append("div")
+  var tooltip = d3.select("#quality-vs-capita-chart").append("div")
       .attr("class", "tooltip")
       .style("opacity", 0);
   
@@ -45,23 +45,23 @@ $(document).ready(function(){
       .duration(350)
       .ease('radial')
       .attr("r", function(d) {
-        return rScale(d.population);
+        return rScale(d.capita);
       });
   }
 
-  d3.csv("/features/us-healthcare/data/gdpvcapita.csv", function(error, data){
+  d3.csv("/features/us-healthcare/data/qualityvcapita.csv", function(error, data){
       if (error) throw error;
 
       data.forEach(function(d) {
           name = name; 
           d.capita = +d.capita;
-          d.gdp = +d.gdp;
+          d.quality = +d.quality_ranking;
           d.population = +d.population;
       });
 
-      x.domain(d3.extent(data, function(d) { return d.gdp; }));
-      y.domain(d3.extent(data, function(d) { return d.capita; }));
-      rScale.domain(d3.extent(data, function(d) { return d.population;}));
+      x.domain(d3.extent(data, function(d) { return d.capita; }));
+      y.domain(d3.extent(data, function(d) { return d.quality; }));
+      rScale.domain(d3.extent(data, function(d) { return d.capita;}));
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
@@ -72,10 +72,12 @@ $(document).ready(function(){
       xAxisText = xAxisG.append("text");
     
       xAxisText.attr("x", width)
-          .attr("dx", ".71em")
-          .attr("dy", "-.71em")
-          .style("text-anchor", "end")
-          .text("% GDP");
+//          .attr("dx", ".71em")
+//          .attr("dy", "-.71em")
+          .attr("x", width / 2)
+          .attr("y", 35)
+          .style("text-anchor", "middle")
+          .text("US Dollars per Capita");
 
       yAxisG = svgWrapper.append("g")
         .attr("class", "y axis")
@@ -89,7 +91,7 @@ $(document).ready(function(){
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("US Dollars per Capita");
+      .text("Overall Quality Ranking");
 
       points = svgWrapper.append('g').attr('class', 'points')
         .selectAll("circle")
@@ -98,20 +100,20 @@ $(document).ready(function(){
     
       points.attr("class", "dot")
         .attr("r", 0)
-        .attr("cx", function(d){return x(d.gdp)})
-        .attr("cy", function(d){return y(d.capita)})
+        .attr("cx", function(d){return x(d.capita)})
+        .attr("cy", function(d){return y(d.quality)})
         .attr("fill", "#004363")
         .on("mouseover", function(d){
         
             d3.select(this)
-              .style("r", 2+rScale(d.population))
+              .style("r", 2+rScale(d.capita))
               .style("fill", "#D9C6E1");
         
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1);
         
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
+            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d.capita + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY + 5) + "px");
         })
@@ -137,7 +139,7 @@ $(document).ready(function(){
       .attr("height", height + margin.top + margin.bottom);
       
      x.range([0, width]);
-     y.range([height, 0]);
+     y.range([0,height]);
     
      xAxis.scale(x);
      yAxis.scale(y);
@@ -145,26 +147,26 @@ $(document).ready(function(){
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
-    xAxisG.attr("transform", "translate(0," + (height + 10) + ")");
-    xAxisText .attr("x", width)
+    xAxisG.attr("transform", "translate(0," + (height + 25) + ")");
+    xAxisText .attr("x", width/2)
 
-    points.attr("cx", function(d){return x(d.gdp)})
-      .attr("cy", function(d){return y(d.capita)})
+    points.attr("cx", function(d){return x(d.capita)})
+      .attr("cy", function(d){return y(d.quality)})
     
   }
   
-  myWindow.on('resize.gdpv', initializeSizes );
+  myWindow.on('resize.qvc', initializeSizes );
  
   
   $('li[data-tab="tab-2"]').click(function() {
-    initialTransition();
-    haveWeInitializedYet = true;
+    points.attr("r", 0);
   });
   $('li[data-tab="tab-1"]').click(function() {
     points.attr("r", 0);
   });
   $('li[data-tab="tab-3"]').click(function() {
-    points.attr("r", 0);
+    initialTransition();
+    haveWeInitializedYet = true;
   });
 //  var haveWeInitializedYet = false;
 //  $(window).on('scroll', function(i) {
