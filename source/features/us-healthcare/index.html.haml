@@ -298,17 +298,16 @@
     #perspectives
       - data.features.ushealthcare.perspectives.each do |perspective|
         .perspective{:data => {:key => perspective['key']}}
-          %img{:src => "#{perspective.image}"}
-          %h3= perspective.title
+          = image_tag perspective.image
+          %h5= perspective.title
     #actions
       - data.features.ushealthcare.perspectives.each do |perspective|
         .action-container{:data => {:perspective => "#{perspective['key']}"}}
-          %h1= perspective.title
           - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
           -  these_nodes.each do |key, node|
-            .node 
+            .individual-action{ :data => {:key => key}} 
               -#{style: "width:#{100/these_nodes.length}%"}
-              %p{:class => "individual-action", :data => {:key => key}}= node.title
+              %p= node.title
             
         
   #sankey-chart

@@ -419,58 +419,90 @@ div.tooltip {
 }
 
 /* changes what happens to the link lines during mouseover */
-.link:hover, .link[data-highlight="true"] {
+.link:hover{
   stroke: #939393;
   stroke-opacity: 1;
 }
+.link[data-highlight="forwards"]{
+  stroke: blue;
+} 
+.link[data-highlight="backwards"]{
+  stroke: orange;
+} 
+
 
 /* FINAL VIZ */
 #perspectives {
   margin: auto;
-  background-color:#EDEDED;
+  background-color: #EDEDED;
 }
 
 .perspective {
   box-sizing: border-box;
-  margin: 0;
-  width: 25%;
+  margin: auto;
+  width: 20%;
   padding: 10px;
-  float: left;
   border-style: solid;
   border-color: black;
   border-width: 2px;
+  height: 200px;
+  display:inline-block;
+  vertical-align: middle;
 }
 
 .perspective:hover {
   background-color: #D9C6E1;
 }
 
-.perspective.selected{
-  background-color: white;
+.perspective h5 {
+  text-align: center
 }
 
-.node {
-  display: inline-block;
+.perspective.selected {
+  background-color: aquamarine;
+}
+
+.individual-action {
+  cursor:pointer;
   margin: 0;
   box-sizing: border-box;
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: 70px;
   vertical-align: middle;
   margin-bottom: 10px;
   margin-top: 0px;
+  margin-right: 5px;
   padding: 10px;
   border-style: solid;
   border-color: black;
   border-width: 1px;
+  display: inline-block
 }
 
-.node:hover {
+.individual-action:hover {
   background-color: #D9C6E1;
+}
+
+
+
+#action{
 }
 
 .action-container {
   margin: auto;
   background-color: #EDEDED;
   display: none;
-  padding: 20px;
+
+  padding: 10px;
+  margin-top: 10px;
+  padding-bottom: 0px
+}
+
+.individual-action p {
+  margin: auto;
+  font-size: 10px;
+  text-align: center;
+}
+.individual-action.selected {
+  background-color: aquamarine;
 }
