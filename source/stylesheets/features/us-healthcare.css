@@ -439,20 +439,29 @@ div.tooltip {
   background-color: #EDEDED;
 }
 
-.perspective {
-  box-sizing: border-box;
-  margin: auto;
-  width: 20%;
-  padding: 10px;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  height: 200px;
-  display:inline-block;
-  vertical-align: middle;
+#perspectives li {
+  float: left;
+  width: 25%;
+  height: 100px;
+  text-align: center;
+  display: inline
 }
 
-.perspective:hover {
+#perspectives ul {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+}
+
+.perspective {
+  height: 110px;
+}
+.perspective img {
+  height: 80%;
+  margin: auto;
+}
+
+.perspective li:hover {
   background-color: #D9C6E1;
 }
 

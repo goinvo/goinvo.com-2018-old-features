@@ -141,7 +141,7 @@
           %label.toggle-btn{:for => "totalProcedures"} Total Procedures
         %div
           %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
-          %label.toggle-btn{:for => "unnecessaryProcedures"} Unnecessary Procedures
+          %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended Procedures
         %div
           %input#dollarsWasted{:name => "group4", :type => "radio"}/
           %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
@@ -296,10 +296,12 @@
     %p.p-slide
       Ultimately, everyone has a role in saving U.S. Health Care. Explore the ways you can make a difference and join the discussion by contributing your own ideas.
     #perspectives
-      - data.features.ushealthcare.perspectives.each do |perspective|
-        .perspective{:data => {:key => perspective['key']}}
-          = image_tag perspective.image
-          %h5= perspective.title
+      %ul.nav.nav-tabs.nav-stacked
+        - data.features.ushealthcare.perspectives.each do |perspective|
+          %li
+            .perspective{:data => {:key => perspective['key']}}
+              = image_tag perspective.image
+              %h5= perspective.title
     #actions
       - data.features.ushealthcare.perspectives.each do |perspective|
         .action-container{:data => {:perspective => "#{perspective['key']}"}}

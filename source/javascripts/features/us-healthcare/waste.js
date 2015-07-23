@@ -142,7 +142,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1)
-            tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Unnecessary: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
+            tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
                 .style("left", (d3.event.pageX - 200) + "px")
                 .style("top", (d3.event.pageY - 1550) + "px");
     });
