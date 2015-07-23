@@ -39,7 +39,10 @@ h3 {
     text-align: center;
 }
 
-
+.jumbotron {
+  margin-top: 55px;
+  height: 600px;
+}
 
 
 /* TABLE */
@@ -120,7 +123,7 @@ ul.tabs li.current{
 
 span.slide {
   font-weight: 600;
-  background-color: #D9C6E1;
+  background-color: rgba(242, 224, 84, 0.55);
   cursor: pointer;
 }
 
@@ -308,7 +311,9 @@ div.tooltip {
 }
 
 .bar_chart {
-    background-color: #F3F1E8;
+  color: #fff;
+  background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
 }
 
 /*
@@ -364,11 +369,11 @@ div.tooltip {
 
 .toggle-btn {       /* Text */
     text-align: center;
-    margin:5px 5px;
+    margin: 0 auto;
     padding:0.4em 3em;
-    color:#000;
-    background-color:#FFF;
-    border-radius:10px;
+    color: #fff;
+    background-color: #6496c8;
+    text-shadow: -1px 1px #417cb8;
     display:inline-block;
     border:solid 1px #CCC;
     cursor:pointer;
@@ -380,7 +385,7 @@ div.tooltip {
 }
 
 .toggle-btn-grp.cssonly div {
-    width: 29%;
+    width: 32.5%;
     height: auto;
     display: inline-block;
     position: relative;
@@ -390,15 +395,14 @@ div.tooltip {
 .toggle-btn-grp.cssonly div label {
     width: 100%;
     height: 5.5rem;
-    position:absolute;
-    left: 0;
-    top: 0;
+    margin: 0 auto;
     z-index:0;
-    padding:10px;
+    padding-top:15px;
+    vertical-align: middle;
     text-align:center;
     font-weight: normal;
-    font-size: 2rem;
-
+    font-size: auto;
+    height: 50px;
 }
 
 .toggle-btn-grp.cssonly div input {
@@ -410,12 +414,13 @@ div.tooltip {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background: rgba(221, 221, 221, 0.38);
-    border: solid 1px rgba(0, 67, 99, 0.73) !important;
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
 }
 
 .toggle-btn-grp.cssonly div:hover label, .toggle-btn-grp.cssonly div:hover input:checked + label {
-    background:#D9C6E1;
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
 }
 
 /* SANKEY */
@@ -445,10 +450,10 @@ div.tooltip {
 }
 */
 .link[data-highlight="forwards"]{
-  stroke: blue;
+  stroke: #5A97C9;
 } 
 .link[data-highlight="backwards"]{
-  stroke: orange;
+  stroke: #5A97C9;
 } 
 
 
@@ -463,6 +468,7 @@ div.tooltip {
   color: #fff;
   background-color: #6496c8;
   text-shadow: -1px 1px #417cb8;
+  cursor:pointer;
 }
 
 .perspective h5 {
@@ -514,6 +520,7 @@ div.tooltip {
   display: inline;
   padding-top: 10px;
   font-weight: 200;
+  cursor:pointer;
 }
 #actions li:hover {
   background-color: #346392;
@@ -539,7 +546,7 @@ div.tooltip {
 }
 
 [data-perspective="payer"] li {
-  bbackground-color: #27496d;
+  background-color: #27496d;
   text-shadow: -1px 1px #193047;
 }
 

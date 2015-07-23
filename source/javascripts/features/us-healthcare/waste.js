@@ -140,13 +140,13 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     rectangles.on('mousemove', function(d) {
         tooltip.style('display', 'block');
         d3.select(this)
-                .style("fill", "#D9C6E1")
+                .style("fill", "#346392")
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                .style("left", (d3.event.pageX - 200) + "px")
-                .style("top", (d3.event.pageY - 1550) + "px");
+                .style("left", (d3.event.pageX - 300) + "px")
+                .style("top", (d3.event.pageY - 1300) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
@@ -232,7 +232,11 @@ myWindow.on('resize.waste', function() {
     xScale.rangeRoundBands([100, w], 0.2);
     yScale.range([h+5, 5]);
     xAxis.scale(xScale);
-    yAxis.scale(yScale);
+    yAxis.scale(yScale)
+      .tickFormat(function (d) {
+        return yScale.tickFormat(4,d3.format("s"))(d)
+        })
+      .tickSize(-w);
 
     
     wasteSVG
