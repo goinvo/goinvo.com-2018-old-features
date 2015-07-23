@@ -530,8 +530,8 @@ div.tooltip {
 
 [data-perspective="patient"] li {
   color: #fff;
-  background-color: rgb(100, 150, 200);
-  text-shadow: -1px 1px #417cb8;
+  background-color: #27496d;
+  text-shadow: -1px 1px #193047;
   border: none;
 }
 
@@ -550,7 +550,7 @@ div.tooltip {
   text-shadow: -1px 1px #193047;
 }
 
-[data-persp="patient"] li.selected {
+[data-perspective="patient"] li.selected {
   background-color: #27496d;
   text-shadow: -1px 1px #193047;
 }
