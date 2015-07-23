@@ -295,7 +295,7 @@
     %p.p-slide
       Ultimately, everyone has a role in saving U.S. Health Care. Explore the ways you can make a difference and join the discussion by contributing your own ideas.
     #perspectives
-      %ul.nav.nav-tabs.nav-stacked
+      %ul
         - data.features.ushealthcare.perspectives.each do |perspective|
           %li
             .perspective{:data => {:key => perspective['key']}}
@@ -303,12 +303,14 @@
               %h5= perspective.title
     #actions
       - data.features.ushealthcare.perspectives.each do |perspective|
-        .action-container{:data => {:perspective => "#{perspective['key']}"}}
-          - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
-          -  these_nodes.each do |key, node|
-            .individual-action{ :data => {:key => key}} 
-              -#{style: "width:#{100/these_nodes.length}%"}
-              %p= node.title
+        %ul
+          .action-container{:data => {:perspective => "#{perspective['key']}"}}
+            - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
+            -  these_nodes.each do |key, node|
+              %li{:data => {:persp => node.impacts[0]}}
+                .individual-action{ :data => {:key => key}}
+                  -#{style: "width:#{100/these_nodes.length}%"}
+                  %p= node.title
             
         
   #sankey-chart
