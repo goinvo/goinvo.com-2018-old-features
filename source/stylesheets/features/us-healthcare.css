@@ -181,17 +181,17 @@ span.slide {
   display: none;
 }
 
-/*
 .y.axis line {
     stroke: gray;
+    opacity: .5;
     stroke-dasharray: 2,2;
 }
 
 .x.axis line {
     stroke: gray;
+    opacity: .5;
     stroke-dasharray: 2,2;
 }
-*/
 
 /* line css for capita spending chart */
 .line {
@@ -311,6 +311,7 @@ div.tooltip {
     background-color: #F3F1E8;
 }
 
+/*
 .axis path,
 .yaxis path,
 .xaxis path,
@@ -321,9 +322,16 @@ div.tooltip {
     stroke: black;
     shape-rendering: cripsEdges;
 }
+*/
 
 .yaxis path, .xaxis path {
     display: none;
+}
+
+.yaxis line {
+    stroke: gray;
+    opacity: .5;
+    stroke-dasharray: 2,2;
 }
 
 .axis text,

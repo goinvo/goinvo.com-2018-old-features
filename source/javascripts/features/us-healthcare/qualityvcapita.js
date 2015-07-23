@@ -5,7 +5,7 @@ $(document).ready(function(){
   var whRatio = 5/9.6;
   var h = whRatio * w;
 
-  var margin = {top: 20, right: 50, bottom: 50, left: 50},
+  var margin = {top: 20, right: 50, bottom: 60, left: 50},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -17,8 +17,8 @@ $(document).ready(function(){
 
   var svg = d3.select("#quality-vs-capita-chart").append("svg");
   
-  svg.attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom);
+  svg.attr("width", w)
+      .attr("height", h);
   
   var svgWrapper =  svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -26,12 +26,12 @@ $(document).ready(function(){
   var xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom")
-      //.tickSize(height)
+      .tickSize(-(height+margin.top*2))
       .outerTickSize(0);
 
   var yAxis = d3.svg.axis()
       .scale(y)
-      //.tickSize(width)
+      .tickSize(-(width))
       .orient("left");
 
   var tooltip = d3.select("#quality-vs-capita-chart").append("div")
@@ -65,17 +65,17 @@ $(document).ready(function(){
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + (height + 10) + ")"); //adds padding for x axis
+        .attr("transform", "translate(0," + (height + 20) + ")"); //adds padding for x axis
     
       xAxisG.call(xAxis);
     
       xAxisText = xAxisG.append("text");
     
-      xAxisText.attr("x", width)
-//          .attr("dx", ".71em")
-//          .attr("dy", "-.71em")
-          .attr("x", width / 2)
-          .attr("y", 35)
+      xAxisText
+          .attr("x", width/2)
+          .attr("y", "40")
+          .attr("dx", ".71em")
+          .attr("dy", "-.71em")
           .style("text-anchor", "middle")
           .text("US Dollars per Capita");
 
@@ -88,9 +88,11 @@ $(document).ready(function(){
     yAxisText = yAxisG.append("text");
     
     yAxisText.attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      .attr("dx",".71em")
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
+      .attr("x", -height/2)
+      .attr("y", "-30")
+      .style("text-anchor", "middle")
       .text("Overall Quality Ranking");
 
       points = svgWrapper.append('g').attr('class', 'points')
@@ -113,7 +115,7 @@ $(document).ready(function(){
                 .duration(200)
                 .style("opacity", 1);
         
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d.capita + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
+            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d3.format("$,")(d.capita) + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY + 5) + "px");
         })
@@ -135,20 +137,22 @@ $(document).ready(function(){
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;
     
-    svg.attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom);
+    svg.attr("width", w)
+      .attr("height", h);
       
      x.range([0, width]);
      y.range([0,height]);
     
-     xAxis.scale(x);
-     yAxis.scale(y);
+     xAxis.scale(x).tickSize(-(height+margin.top*2));
+     yAxis.scale(y).tickSize(-width);
     
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
     xAxisG.attr("transform", "translate(0," + (height + 25) + ")");
-    xAxisText .attr("x", width/2)
+    xAxisText.attr("x", width/2)
+    yAxisText.attr("x", -height/2)
+
 
     points.attr("cx", function(d){return x(d.capita)})
       .attr("cy", function(d){return y(d.quality)})

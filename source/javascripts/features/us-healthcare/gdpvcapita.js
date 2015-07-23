@@ -5,7 +5,7 @@ $(document).ready(function(){
   var whRatio = 5/9.6;
   var h = whRatio * w;
 
-  var margin = {top: 20, right: 50, bottom: 30, left: 50},
+  var margin = {top: 20, right: 50, bottom: 60, left: 70},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   var y = d3.scale.linear().range([height, 0]);
   
-  var rScale = d3.scale.linear().range([2,15]);
+  var rScale = d3.scale.linear().range([3,15]);
 
   var svg = d3.select("#gdp-vs-capita-chart").append("svg");
   
@@ -26,12 +26,12 @@ $(document).ready(function(){
   var xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom")
-      //.tickSize(height)
+      .tickSize(-(height+margin.top*2))
       .outerTickSize(0);
 
   var yAxis = d3.svg.axis()
       .scale(y)
-      //.tickSize(width)
+      .tickSize(-width)
       .orient("left");
 
   var tooltip = d3.select("#gdp-vs-capita-chart").append("div")
@@ -65,16 +65,17 @@ $(document).ready(function(){
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + (height + 10) + ")"); //adds padding for x axis
+        .attr("transform", "translate(0," + (height + 20) + ")"); //adds padding for x axis
     
       xAxisG.call(xAxis);
     
       xAxisText = xAxisG.append("text");
     
-      xAxisText.attr("x", width)
+      xAxisText.attr("x", width/2)
+          .attr("y","40")
           .attr("dx", ".71em")
           .attr("dy", "-.71em")
-          .style("text-anchor", "end")
+          .style("text-anchor", "middle")
           .text("% GDP");
 
       yAxisG = svgWrapper.append("g")
@@ -86,9 +87,10 @@ $(document).ready(function(){
     yAxisText = yAxisG.append("text");
     
     yAxisText.attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      .attr("y", "-50")
+      .attr("x", -height/2)
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
+      .style("text-anchor", "middle")
       .text("US Dollars per Capita");
 
       points = svgWrapper.append('g').attr('class', 'points')
@@ -104,7 +106,7 @@ $(document).ready(function(){
         .on("mouseover", function(d){
         
             d3.select(this)
-              .style("r", 2+rScale(d.population))
+              .style("r", 1.2*rScale(d.population))
               .style("fill", "#D9C6E1");
         
             tooltip.transition()
@@ -139,14 +141,15 @@ $(document).ready(function(){
      x.range([0, width]);
      y.range([height, 0]);
     
-     xAxis.scale(x);
-     yAxis.scale(y);
+     xAxis.scale(x).tickSize(-(height+margin.top*2));
+     yAxis.scale(y).tickSize(-width);
     
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
-    xAxisG.attr("transform", "translate(0," + (height + 10) + ")");
-    xAxisText .attr("x", width)
+    xAxisG.attr("transform", "translate(0," + (height + 25) + ")");
+    xAxisText.attr("x", width/2)
+    yAxisText.attr("x", -height/2)
 
     points.attr("cx", function(d){return x(d.gdp)})
       .attr("cy", function(d){return y(d.capita)})

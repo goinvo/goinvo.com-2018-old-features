@@ -5,7 +5,7 @@ $(document).ready(function(){
     var whRatio = 5/9.6;
     var h = whRatio * w;
 
-    var margin = {top: 20, right: 50, bottom: 30, left: 50},
+    var margin = {top: 20, right: 50, bottom: 30, left: 70},
         width = w - margin.left - margin.right,
         height = h - margin.top - margin.bottom;
 
@@ -23,11 +23,13 @@ $(document).ready(function(){
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient("bottom")
+        .tickSize(-(height+margin.top*2));
 
     var yAxis = d3.svg.axis()
         .scale(y)
-        .orient("left");
+        .orient("left")
+        .tickSize(-width);
 
     var line = d3.svg.line()
         .interpolate("cardinal")
@@ -77,7 +79,7 @@ $(document).ready(function(){
 
       xAxisG = svgWrapper.append("g")
           .attr("class", "x axis")
-          .attr("transform", "translate(0," + height + ")");
+          .attr("transform", "translate(0," + (height + 10) + ")");
     
       xAxisG.call(xAxis);
 
@@ -89,9 +91,10 @@ $(document).ready(function(){
       yAxisText = yAxisG.append("text");
         
       yAxisText.attr("transform", "rotate(-90)")
-          .attr("y", 6)
+          .attr("y", "-50")
+          .attr("x", -height/2)
           .attr("dy", ".71em")
-          .style("text-anchor", "end")
+          .style("text-anchor", "middle")
           .text("US Dollars per Capita");
 
       var country = svgWrapper.selectAll(".country")
@@ -189,13 +192,14 @@ $(document).ready(function(){
      x.range([0, width]);
      y.range([height, 0]);
     
-     xAxis.scale(x);
-     yAxis.scale(y);
+     xAxis.scale(x).tickSize(-(height+margin.top*2));
+     yAxis.scale(y).tickSize(-width);
     
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
     xAxisG.attr("transform", "translate(0," + height + ")");
+    yAxisText.attr("x", -height/2);
 
   }
 

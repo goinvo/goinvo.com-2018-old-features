@@ -31,7 +31,8 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .tickFormat(function (d) {
         return yScale.tickFormat(4,d3.format("s"))(d)
-    });
+    })
+    .tickSize(-w);
 
 var tooltip = d3.select('#waste-chart')            // NEW 
   .append('div')
@@ -110,12 +111,13 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .call(yAxis)
         .attr()
         .style("fill", "black")
-        .attr('transform', 'translate(75,0)')
+        .attr('transform', 'translate(100,0)')
         .append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 6)
+        .attr("y", -60)
+        .attr("x", -h/2)
         .attr("dy", ".71em")
-        .style("text-anchor", "end")
+        .style("text-anchor", "middle")
         .text("Number of Procedures");
 
     var myPoints = wasteSVG.selectAll(".point")
