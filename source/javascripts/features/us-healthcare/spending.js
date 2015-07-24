@@ -49,7 +49,7 @@ $(document).ready(function(){
     var svgWrapper = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var xAxisG, yAxisG, yAxisText, country, countries;
+    var xAxisG, yAxisG, yAxisText, country, countries, path;
     
     d3.csv("/features/us-healthcare/data/data_capita.csv", function(error, data) {
       if (error) throw error;

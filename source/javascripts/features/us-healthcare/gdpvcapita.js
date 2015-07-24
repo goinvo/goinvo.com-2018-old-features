@@ -106,7 +106,7 @@ $(document).ready(function(){
         .on("mouseover", function(d){
         
             d3.select(this)
-              .style("r", 1.2*rScale(d.population))
+              .style("r", (2+rScale(d.population)))
               .style("fill", "#D9C6E1");
         
             tooltip.transition()

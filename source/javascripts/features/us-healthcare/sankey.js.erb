@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 var nodeMetadata = <%= data.features.ushealthcare.nodes.to_json.html_safe %>;
-console.log(nodeMetadata);
+
 d3.sankey = function() {
   var sankey = {},
       nodeWidth = 24,
