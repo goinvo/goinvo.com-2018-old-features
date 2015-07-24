@@ -31,13 +31,13 @@
 		"positive":{
 			"heading":"Of Course!",
 			"description":"Electronic health records make it easy for doctors to access a patient’s medical information.",
-			"outcome":"The doctor saw that David was previously diagnosed with an arrhythmia, so the doctor decided the abnormal cardiac activity was probably not related to the flu. David was sent home with an antiviral regimen and was back to normal within a week.",
+			"outcome":"The doctor sees that David was previously diagnosed with an arrhythmia, so the doctor decides that the abnormal cardiac activity is probably not related to the flu. David is sent home with an antiviral regimen and is back to normal within a week.",
 			"alternative":"But what if the doctor didn’t have access?"
 		},
 		"negative":{
 			"heading":"No",
 			"description":"Even though David’s previous doctor used an electronic health record, it was a different system than this emergency department uses. Since the systems do not communicate with each other, the doctor does not have instant access to David’s medical information.",
-			"outcome":"The doctor did not know David had previously been diagnosed with an arrhythmia.",
+			"outcome":"The doctor does not know that David was previously diagnosed with an arrhythmia.",
 			"alternative":"Here's what happens next."
 		}
 	}
