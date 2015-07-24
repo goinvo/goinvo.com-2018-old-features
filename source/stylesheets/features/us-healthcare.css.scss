@@ -1,5 +1,10 @@
 /* GENERAL STYLING */
 
+$light-black: #222;
+$light-grey:#ededed;
+$black : #000;
+$dark-blue: #004363;
+$light-blue:#6496c8;
 
 header p{
   text-align: center;
@@ -73,20 +78,20 @@ ul.tabs{
 }
 ul.tabs li{
     background: none;
-    color: #222;
+    color: $light-black;
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
 }
 
 ul.tabs li.current{
-    background: #ededed;
-    color: #222;
+    background: $light-grey;
+    color: $light-black;
 }
 
 .tab-content{
     display: none;
-    background: #ededed;
+    background: $light-grey;
     padding: 15px;
 }
 
@@ -114,7 +119,7 @@ ul.tabs li.current{
 /* SLIDE DOWN */
 .slide-panel {
   display:none;
-  background-color: #EDEDED;
+  background-color: $light-grey;
   margin: auto;
   padding-top: 10px;
   text-align: left;
@@ -174,7 +179,7 @@ span.slide {
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: $black;
   shape-rendering: crispEdges;
 }
 
@@ -238,7 +243,7 @@ path.invisible {
 
 text.label {
   font-size: 10px;
-  color: #000;
+  color: $black;
 }
 
 div.tooltip {
@@ -314,7 +319,7 @@ div.tooltip {
 
 .bar_chart {
   color: #fff;
-  background-color: #6496c8;
+  background-color: $light-blue;
   text-shadow: -1px 1px #417cb8;
 }
 
@@ -351,7 +356,7 @@ div.tooltip {
     cursor: pointer;
 }
 .bar {
-    fill: #004363;
+    fill: $dark-blue;
 }
 
 /* Bar Chart on Waste: Radio Buttons */
@@ -374,7 +379,7 @@ div.tooltip {
     margin: 0 auto;
     padding:0.4em 3em;
     color: #fff;
-    background-color: #6496c8;
+    background-color: $light-blue;
     text-shadow: -1px 1px #417cb8;
     display:inline-block;
     border:solid 1px #CCC;
@@ -468,7 +473,7 @@ div.tooltip {
   text-align: center;
   display: inline;
   color: #fff;
-  background-color: #6496c8;
+  background-color: $light-blue;
   text-shadow: -1px 1px #417cb8;
   cursor:pointer;
 }
@@ -579,4 +584,48 @@ div.tooltip {
   text-align: center;
   color: white;
 }
+.decision-point{
+  background-color:$light-grey;
+}
+.decision-container{
+  display:flex;
+  .decision{
+    cursor:pointer;
+    flex:1;
+    background-color:$light-blue;
+    display:inline-block;
+    width:calc(50% - 10px);
+    
+    &:hover{
+      background-color: lighten($light-blue,20%)
+    }
+    &[data-selected="yes"]{
+      background-color:darken($light-blue,20%);
+    }
+    &[data-selected="no"]{
+      background-color:lighten($light-blue, 30%);
+    }
+    h3{
+      height:2em;
+      vertical-align:middle;
+    }
+  }
+}
+.decision, .next, .outcome{
+  padding:10px;
+  margin:15px;
+}
+.next{
+  display:none;
+}
+.outcome{
+  display:none;
+  &[data-outcome="positive"]{
+    background-color:green;
+  }
+  &[data-outcome="negative"]{
+    background-color:lighten(red,40%);
+  }
+}
+
 

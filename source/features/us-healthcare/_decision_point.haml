@@ -1,0 +1,17 @@
+.decision-point
+  .decision-container
+    -decision = data.features.ushealthcare.decisions[index]
+    .decision{:data=>{:index=> index, :outcome=>"positive"}}
+      %h3=decision.positive.heading.html_safe
+      %p.description=decision.positive.description.html_safe
+    .decision{:data =>{:index=> index, :outcome=>"negative"}}
+      %h3=decision.negative.heading.html_safe
+      %p.description=decision.negative.description.html_safe
+  %p.outcome{:data =>{:index=> index, :outcome=>"positive"}}
+    =decision.positive.outcome.html_safe
+  %p.next{:data =>{:index=> index, :outcome=>"positive"}}
+    =decision.positive.alternative.html_safe
+  %p.outcome{:data =>{:index=> index, :outcome=>"negative"}}
+    =decision.negative.outcome.html_safe
+  %p.next{:data =>{:index=> index, :outcome=>"negative"}}
+    =decision.negative.alternative.html_safe

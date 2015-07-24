@@ -1,0 +1,16 @@
+[
+	{
+		"positive":{
+			"heading":"Buy Health Insurance",
+			"description":"The cheapest plan on the Massachusetts health care exchange is the <span class=\"slide\" data-index=\"2\"> bronze plan</span>, which costs $180/month and covers basic things like doctor visits, home visits, ambulatory care, hospitalization, vision exams, and hearing exams.",
+			"outcome":"Good choice! David can get preventative care, like vaccinations, for free. And in case anything unexpected happens, David can get affordable access to the care he needs.",
+			"alternative":"But what if he had opted to pay the tax instead?"
+		},
+		"negative":{
+			"heading":"Pay Tax, No Coverage",
+			"description":"David is healthy, so why buy insurance? The penalty is the greater of 2% of income or $325 (or $27/month).",
+			"outcome":"At the time, David thought opting out was the more affordable and better option. Unfortunately, your health is not something you can control.",
+			"alternative":"Here's what happens next."
+		}
+	}
+]

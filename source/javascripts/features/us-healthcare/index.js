@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   $('ul.tabs li').click(function(){
     var tab = $(this);
     $('ul.tabs li, .tab-content').removeClass('current');
@@ -9,9 +9,21 @@ $(document).ready(function(){
 
 
   // Slide down
-  $('.slide').click(function(){
+  $('.slide').click(function(e){
+    e.stopPropagation();
     var index = $(this).attr('data-index');
     $('.slide-panel[data-index="'+index+'"]').slideToggle('slow');
+  });
+
+  $('.decision').click(function(e){
+    e.stopPropagation();
+    var index = $(this).attr('data-index');
+    $('.decision[data-index="'+index+'"]').attr('data-selected','no');
+    $(this).attr('data-selected','yes');
+    var outcome = $(this).attr('data-outcome');
+    var otherOutcome = outcome==='positive'? 'negative' : 'positive';
+    $('[data-outcome="'+otherOutcome+'"][data-index="'+index+'"]:not(.decision)').hide();
+    $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').slideDown();
   });
 
   $('.perspective').click(function(e){

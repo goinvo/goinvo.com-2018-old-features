@@ -48,18 +48,11 @@
         graph: number of people with medical debt relative to number of people uninsured
         %a{:href => "http://www.commonwealthfund.org/publications/issue-briefs/2015/jan/biennial-health-insurance-survey", :target => "_blank"} source
     %p.p-slide
-      What caused David’s misfortune? The saga began years before, when David decided to pay the 2% penalty tax
-      %a{:href => "#s3"}
-        %sup [3]
-      %a{:name => "s3b"}
-      instead of paying $180/month for the
-      %span.slide#flip2{:data=>{:index => 2}} bronze plan
-      %a{:name => "s4-8b"}
-      on Massachusetts’s healthcare exchange.
-      %a{:href => "#s9"}
-        %sup [9]
-      %a{:name => "s9b"}
-      At the time, he was convinced he was healthy. Why pay for something he wouldn’t use?
+      How did he get here?
+    %p With the passage of the ACA, David had to decide to purchase health insurance or pay a penalty tax.
+
+    = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
+
     .slide-panel{:data =>{:index=>2}}
       %p
         Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act [somehow link this to our ACA description below] requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
