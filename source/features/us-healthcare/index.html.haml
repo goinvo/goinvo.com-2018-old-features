@@ -95,12 +95,12 @@
       Having no primary care doctor, David goes to the only place he thinks he can; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picks the one closest to his home.
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Meier, Barry, Jo Mcginty, and Julie Creswell. Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"The New York Times", :access=>"The New York Times, 7 May 2013. Web"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Too", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
-    = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     %p.p-slide
       After waiting for over an hour, David finally sees a doctor.
     %p.p-slide
       Does the doctor have access to David's
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
+      %span.slide#flip3{:data=>{:index => 3}} Electronic Health Record?
+      say some stuff.
     .slide-panel{:data =>{:index=>3}}
       %p
         An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations. They contain information from all clinicians involved in a patient’s care.
@@ -115,7 +115,6 @@
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem", :href=>"http://www.elxrhealth.com/lack-of-interoperability/", :source=>"ELXR Health", :access=>"5 June 2015. Web"})
       %p
         In 2009, President Obama signed the HITECH Act, which stipulated that health care providers would be incentivized to demonstrate meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
-
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi. “Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Health Affairs Blog", :access=>"4 Mar. 2015. Web"})
     = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     %p.p-slide
