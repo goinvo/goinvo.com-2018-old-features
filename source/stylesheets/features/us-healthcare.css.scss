@@ -9,7 +9,7 @@ $light-blue:#6496c8;
 .jumbotron {
   color: white;
   height: 600px;
-  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
+//  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
   background-size: cover;
   text-shadow: 1px 1px black;
   padding-top: 200px;
@@ -42,11 +42,6 @@ article h2, article h1, footer {
 footer {
   font-size: 15px;
   margin: 12px auto;
-}
-
-
-a {
-    font-size: 15px;
 }
 
 h3 {
@@ -632,3 +627,37 @@ div.tooltip {
 }
 
 
+.social-buttons {
+  svg {
+    width: 28px;
+    height: 28px;
+    background: #474751;
+    padding: 6px;
+    fill: white;
+    transition: background 250ms ease-in-out;
+    &:hover {
+      background:#83838E;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.end {
+    text-align: center;
+    margin-bottom: 3em;
+    @media only screen and (max-width: 1200px) {
+      margin-bottom: 4vw;
+    }
+  }
+}
+
+#open-table {
+  background-color: #ededed;
+  padding: 20px;
+}
+
+#authors-table {
+  font-size: 8pt;
+}
