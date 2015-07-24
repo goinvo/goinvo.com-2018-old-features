@@ -20,6 +20,7 @@ $(document).ready(function(){
         .range([height, 0]);
 
     var color = d3.scale.category10();
+    var country, point;
 
     var xAxis = d3.svg.axis()
         .scale(x)
@@ -97,7 +98,7 @@ $(document).ready(function(){
           .style("text-anchor", "middle")
           .text("US Dollars per Capita");
 
-      var country = svgWrapper.selectAll(".country")
+      country = svgWrapper.selectAll(".country")
           .data(countries)
         .enter().append("g")
           .attr("class", "country")
@@ -111,7 +112,7 @@ $(document).ready(function(){
           .attr("class", "invisible hover")
           .attr("d", function(d) { return line(d.values); });
 
-      var point = country.append("g")
+      point = country.append("g")
         .attr("class", "linepoint");
 
       point.selectAll("circle")
@@ -200,7 +201,10 @@ $(document).ready(function(){
     
     xAxisG.attr("transform", "translate(0," + height + ")");
     yAxisText.attr("x", -height/2);
-
+    country.selectAll('.line').attr("d", function(d) { return line(d.values); })
+    point.selectAll('circle').attr("cx", function(d) { return x(d.date)})
+      .attr("cy", function(d) { return y(d.capita)})
+      .attr("r", function(d) { return d.capita == null ? 0: 3})
   }
 
   myWindow.on('resize.capita', initializeSizes );
