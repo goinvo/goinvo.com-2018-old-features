@@ -79,13 +79,10 @@
       %p
         *In 2016 and onwards, the tax will be raised to 2.5%.
     %p.p-slide
-      Without health insurance, David stopped seeing his doctor. As a result, he also stopped receiving vaccinations [
-      %strong> Pathway
-      ].
+      Without health insurance, David stopped seeing his doctor. As a result, he also stopped receiving vaccinations.
     %p.p-slide
-      A few weeks ago, David began showing flu-like symptoms, but he assumed he would get better in a few days. He didn’t. After a week, the symptoms still hadn’t resolved [
-      %strong> Pathway
-      ].
+      A few weeks ago, David began showing flu-like symptoms, but he assumed he would get better in a few days. He didn’t. After a week, the symptoms still hadn’t resolved.
+    = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
     %p.p-slide
       Having no primary care doctor, David went to the only place he thought he could; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picked the one closest to his home.
       %a{:href => "#s10"}
@@ -98,6 +95,7 @@
       %span.slide#flip3{:data=>{:index => 3}} electronic health record
       %a{:name => "s12-16b"}
       system than his former doctor did, so none of David’s medical information could be accessed upon his arrival.
+    = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     .slide-panel{:data =>{:index=>3}}
       %p
         An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations, so they contain information from all clinicians involved in a patient’s care.
@@ -107,6 +105,7 @@
         %a{:href => "#s13"}
           %sup [13]
         Within each system data is shared, but there is little to no data flow between different systems.
+    
       %p
         Problems arise with the lack of interoperability between EHR systems. 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways, causing misread charts, forgotten results, and untimely information in life-threatening crises.
         %a{:href => "#s14"}

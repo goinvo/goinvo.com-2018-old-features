@@ -12,5 +12,33 @@
 			"outcome":"At the time, David thought opting out was the more affordable and better option. Unfortunately, your health is not something you can control.",
 			"alternative":"Here's what happens next."
 		}
+	},
+	{
+		"positive":{
+			"heading":"Use Telemedicine",
+			"description":"David can use his smartphone to video chat with a doctor.",
+			"outcome":"Good choice! The doctor prescribed antiviral therapy and David was back to normal within a week.",
+			"alternative":"But what if he did not have access to telemedicine services?"
+		},
+		"negative":{
+			"heading":"Get Some Rest",
+			"description":"David has some soup and lies down for a nap. Maybe the symptoms will resolve on their own.",
+			"outcome":"When David woke up, his symptoms were worse.",
+			"alternative":"Here's what happens next."
+		}
+	},
+	{
+		"positive":{
+			"heading":"Of Course!",
+			"description":"Electronic health records make it easy for doctors to access a patient’s medical information.",
+			"outcome":"The doctor saw that David was previously diagnosed with an arrhythmia, so the doctor decided the abnormal cardiac activity was probably not related to the flu. David was sent home with an antiviral regimen and was back to normal within a week.",
+			"alternative":"But what if the doctor didn’t have access?"
+		},
+		"negative":{
+			"heading":"No",
+			"description":"Even though David’s previous doctor used an electronic health record, it was a different system than this emergency department uses. Since the systems do not communicate with each other, the doctor does not have instant access to David’s medical information.",
+			"outcome":"The doctor did not know David had previously been diagnosed with an arrhythmia.",
+			"alternative":"Here's what happens next."
+		}
 	}
 ]
