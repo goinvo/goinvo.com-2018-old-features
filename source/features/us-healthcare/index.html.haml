@@ -34,28 +34,39 @@
       That’s if he’s lucky.
     .slide-panel{:data =>{:index=>1}}
       %p
-        Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits, and varies depending on insurance coverage and personal medical needs.
+        Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits. Medical debt varies depending on insurance coverage and personal medical needs.
         %a{:href => "#s1"}
           %sup [1]
       %p
-        In the US, medical debt accounts for more than 50% of of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
+        In the US, medical debt accounts for more than 50% of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
         %a{:href => "#s2"}
           %sup [2]
-      %p
-        graph: average spending on health care in the US vs other countries
-        %a{:href => "https://data.oecd.org/healthres/health-spending.htm", :target => "_blank"} source
-      %p
-        graph: number of people with medical debt relative to number of people uninsured
-        %a{:href => "http://www.commonwealthfund.org/publications/issue-briefs/2015/jan/biennial-health-insurance-survey", :target => "_blank"} source
     %p.p-slide
       How did he get here?
-    %p With the passage of the ACA, David had to decide to purchase health insurance or pay a penalty tax.
+    %p.p-slide
+      With the passage of the
+      %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act (ACA)
+      each year David has to either purchase health insurance or pay a penalty tax.
+    .slide-panel{:data =>{:index=>5}}
+      %p
+        The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
+        %a{:href => "#s30"}
+          %sup [30]
+      %p
+        To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
+        %a{:href => "#s31"}
+          %sup [31]
+        Americans can use their state’s marketplace to obtain coverage from competing private health care providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
+      %p
+        The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
+        %a{:href => "#s32"}
+          %sup [32]
 
     = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
 
     .slide-panel{:data =>{:index=>2}}
       %p
-        Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act [somehow link this to our ACA description below] requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
+        Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
         %a{:href => "#s4"}
           %sup [4]
         Each offers a tradeoff between premiums and deductibles.
@@ -66,10 +77,10 @@
         the user interface was poorly designed and confusing to navigate,
         %a{:href => "#s6"}
           %sup [6]
-        and the cost calculator sometimes provided inaccurate information about subsidies
+        and the cost calculator sometimes provided inaccurate information about subsidies.
         %a{:href => "#s7"}
           %sup [7]
-        The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax
+        The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax.
         %a{:href => "#s3"}
           %sup [3]
       %p
@@ -79,42 +90,44 @@
       %p
         *In 2016 and onwards, the tax will be raised to 2.5%.
     %p.p-slide
-      Without health insurance, David stopped seeing his doctor. As a result, he also stopped receiving vaccinations.
+      Without health insurance, David stops seeing his doctor. As a result, he also stops receiving vaccinations.
     %p.p-slide
-      A few weeks ago, David began showing flu-like symptoms, but he assumed he would get better in a few days. He didn’t. After a week, the symptoms still hadn’t resolved.
-    = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
+      One day, David begins exhibiting flu-like symptoms. He assumes he will get better in a few days, but he doesn't. After a week, the symptoms continue to persist.
+    %p.pslide
+      What should David do?
+      = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
     %p.p-slide
-      Having no primary care doctor, David went to the only place he thought he could; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picked the one closest to his home.
+      Having no primary care doctor, David goes to the only place he thinks he can; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picks the one closest to his home.
       %a{:href => "#s10"}
         %sup [10]
       %a{:href => "#s11"}
         %sup [11]
       %a{:name => "s10-11b"}
-    %p.p-slide
-      As it happens, the hospital he chose also uses a different
-      %span.slide#flip3{:data=>{:index => 3}} electronic health record
-      %a{:name => "s12-16b"}
-      system than his former doctor did, so none of David’s medical information could be accessed upon his arrival.
     = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
+    %p.p-slide
+      After waiting for over an hour, David finally sees a doctor.
+    %p.p-slide
+      Does the doctor have access to David's
+      %span.slide#flip3{:data=>{:index => 3}} electronic health record?
+      %a{:name => "s12-16b"}
     .slide-panel{:data =>{:index=>3}}
       %p
-        An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations, so they contain information from all clinicians involved in a patient’s care.
+        An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations. They contain information from all clinicians involved in a patient’s care.
         %a{:href => "#s12"}
           %sup [12]
         However, when EHRs became more widely implemented in 2004, the industry built hundreds of standalone systems to create and maintain EHRs.
         %a{:href => "#s13"}
           %sup [13]
         Within each system data is shared, but there is little to no data flow between different systems.
-    
       %p
-        Problems arise with the lack of interoperability between EHR systems. 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways, causing misread charts, forgotten results, and untimely information in life-threatening crises.
+        Problems arise with the lack of interoperability between EHR systems. Approximately 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways. This causes misread charts, forgotten results, and untimely information during life-threatening crises.
         %a{:href => "#s14"}
           %sup [14]
         Other hospitals hesitate to transfer data in fear of incurring liability for sharing private information.
         %a{:href => "#s15"}
           %sup [15]
       %p
-        In 2009, President Obama signed the HITECH Act, which stipulated that health care providers would be incentivized for demonstrating meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
+        In 2009, President Obama signed the HITECH Act, which stipulated that health care providers would be incentivized to demonstrate meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
         %a{:href => "#s16"}
           %sup [16]
     %p.p-slide
@@ -247,11 +260,11 @@
         %li.tab-link{"data-tab" => "tab-3"} Quality
       #tab-1.tab-content.current
         %p.tab_p
-          Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+          Not only does the U.S. spend more, but health care spending is growing at a faster rate than in other countries.
         #spending-capita-chart
       #tab-2.tab-content
         %p.tab_p
-          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+          In 2012, the U.S. spent nearly 17% of its GDP on health care. The UK spent less than 10%.
           #gdp-vs-capita-chart
       #tab-3.tab-content
         %p.tab_p
