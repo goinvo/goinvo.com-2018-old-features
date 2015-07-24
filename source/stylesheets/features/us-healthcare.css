@@ -112,12 +112,13 @@ ul.tabs li.current{
 
 
 /* SLIDE DOWN */
-#panel1, #panel2, #panel3, #panel4, #panel5 {
-    background-color: #EDEDED;
-    margin: auto;
-    padding-top: 10px;
-    text-align: left;
-    padding: 5%;
+.slide-panel {
+  display:none;
+  background-color: #EDEDED;
+  margin: auto;
+  padding-top: 10px;
+  text-align: left;
+  padding: 2% 5%;
 }
 
 
@@ -125,6 +126,7 @@ span.slide {
   font-weight: 600;
   background-color: rgba(242, 224, 84, 0.55);
   cursor: pointer;
+  padding:0 5px;
 }
 
 .embed-extra-info {

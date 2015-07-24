@@ -29,10 +29,10 @@
     %h2 Symptoms
     %p.p-slide
       Two weeks ago, David was going about his daily life. Today he is bedridden in a hospital, battling an infection he contracted in that hospital. In two weeks, he’ll be at home trying to figure out how to pay off his massive
-      %span.slide#flip1 medical debt.
+      %span.slide#flip1{:data=>{:index => 1}} medical debt.
       %a{:name => "s1-2b"}
       That’s if he’s lucky.
-    #panel1
+    .slide-panel{:data =>{:index=>1}}
       %p
         Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits, and varies depending on insurance coverage and personal medical needs.
         %a{:href => "#s1"}
@@ -53,15 +53,14 @@
         %sup [3]
       %a{:name => "s3b"}
       instead of paying $180/month for the
-      %span.slide#flip2
-        bronze plan
-        %a{:name => "s4-8b"}
+      %span.slide#flip2{:data=>{:index => 2}} bronze plan
+      %a{:name => "s4-8b"}
       on Massachusetts’s healthcare exchange.
       %a{:href => "#s9"}
         %sup [9]
       %a{:name => "s9b"}
       At the time, he was convinced he was healthy. Why pay for something he wouldn’t use?
-    #panel2
+    .slide-panel{:data =>{:index=>2}}
       %p
         Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act [somehow link this to our ACA description below] requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
         %a{:href => "#s4"}
@@ -103,10 +102,10 @@
       %a{:name => "s10-11b"}
     %p.p-slide
       As it happens, the hospital he chose also uses a different
-      %span.slide#flip3 electronic health record
+      %span.slide#flip3{:data=>{:index => 3}} electronic health record
       %a{:name => "s12-16b"}
       system than his former doctor did, so none of David’s medical information could be accessed upon his arrival.
-    #panel3
+    .slide-panel{:data =>{:index=>3}}
       %p
         An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations, so they contain information from all clinicians involved in a patient’s care.
         %a{:href => "#s12"}
@@ -149,9 +148,9 @@
       #waste-chart
     %p.p-slide
       After two days at the hospital, amounting to xyz dollars, David’s fever spiked and he began having chest pain. By the end of the week, a simple influenza admission turned into a case of
-      %span.slide#flip4 hospital-acquired pneumonia.
+      %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia.
       %a{:name => "s17-22b"}
-    #panel4
+    .slide-panel{:data =>{:index=>4}}
       %p
         Hospital-acquired pneumonia is a lung infection that occurs during a hospital stay. Infections contracted at a hospital can be especially dangerous because of two reasons. First, patients are often already very sick and cannot fight off the germs. Second, the types of bacteria in hospitals are often more dangerous strains because they can be resistant to antibiotics.
         %a{:href => "#s17"}
@@ -268,9 +267,9 @@
           #quality-vs-capita-chart
     %p.p-slide
       Despite this, we have worse outcomes, lower quality, and more limited access. The
-      %span.slide#flip5 Patient Protection and Affordable Care Act
+      %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act
       was a step in the right direction, but our system has a long way to go. Health is a human right, and health care is undeniably a public good. But government regulation and changing public perception isn’t the full answer. The patriarchal medical culture needs to change to embrace innovation and engage patients.
-    #panel5
+    .slide-panel{:data =>{:index=>5}}
       %p
         The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
         %a{:href => "#s30"}
