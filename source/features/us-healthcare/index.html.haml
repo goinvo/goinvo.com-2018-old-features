@@ -51,20 +51,15 @@
     .slide-panel{:data =>{:index=>5}}
       %p
         The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
-        %a{:href => "#s30"}
-          %sup [30]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hamblin, James. What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"The Atlantic", :access=>"Atlantic Media Company, 2 Apr. 2013. Web"})
       %p
         To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
-        %a{:href => "#s31"}
-          %sup [31]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
         Americans can use their state’s marketplace to obtain coverage from competing private health care providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
       %p
         The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
-        %a{:href => "#s32"}
-          %sup [32]
-
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Health Care", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Harvard Business Review", :access=>"9 Oct. 2013. Web"})
     = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
-
     .slide-panel{:data =>{:index=>2}}
       %p
         Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
@@ -244,20 +239,8 @@
           Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
           #quality-vs-capita-chart
     %p.p-slide
-      Despite this, we have worse outcomes, lower quality, and more limited access. The
-      %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act
-      was a step in the right direction, but our system has a long way to go. Health is a human right, and health care is undeniably a public good. But government regulation and changing public perception isn’t the full answer. The patriarchal medical culture needs to change to embrace innovation and engage patients.
-    .slide-panel{:data =>{:index=>5}}
-      %p
-        The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hamblin, James. What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"The Atlantic", :access=>"Atlantic Media Company, 2 Apr. 2013. Web"})
-      %p
-        To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
-        Americans can use their state’s marketplace to obtain coverage from competing private health care providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
-      %p
-        The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Health Care", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Harvard Business Review", :access=>"9 Oct. 2013. Web"})
+      Despite this, we have worse outcomes, lower quality, and more limited access. The Patient Protection and Affordable Care Act was a step in the right direction, but our system has a long way to go. Health is a human right, and health care is undeniably a public good. But government regulation and changing public perception isn’t the full answer. The patriarchal medical culture needs to change to embrace innovation and engage patients.
+
   %article#prescription
     %h2 Prescription
     %p.p-slide
