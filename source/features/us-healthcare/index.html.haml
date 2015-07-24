@@ -303,7 +303,7 @@
     %ol.references
       -footnotes.each do |footnote|
         %li
-          %a{:href => "##{footnote[:name]}_ref"}= "^"
+          %a{:href => "##{footnote[:name]}_ref", :class=>"up_link"}= "^"
           %a{:name => footnote[:name]}= ""
           %a{:href=> "#{footnote[:href]}", :target=>"_blank"}= "#{footnote[:text]},"
           = succeed "." do

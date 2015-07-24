@@ -34,6 +34,22 @@ $(document).ready(function(){
     $(this).addClass('selected');
   });
 
+  $('.up_link').click(function(e){
+    var href = $(this).attr('href');
+    href = href.substring(1,href.length);
+    var target = $('[name="'+href+'"]');
+    if(!$(target).is(":visible") && target){
+      var parent = $(target).parent();
+      var lastParent;
+      while(!$(parent).is(":visible")){
+        console.log($(parent).is(":visible"));
+        lastParent = parent;
+        parent = $(parent).parent();
+      }
+      lastParent.show();
+    }
+  });
+
 
   var followLinks = function myself(find_targets, nodeKey){
     var data_attribute = "data-key-source";
