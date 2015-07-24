@@ -6,6 +6,17 @@ $black : #000;
 $dark-blue: #004363;
 $light-blue:#6496c8;
 
+.jumbotron {
+  height:600px;
+  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  vertical-align: baseline;
+  padding-top: 200px;
+}
+
 header p{
   text-align: center;
 }
@@ -42,18 +53,6 @@ a {
 
 h3 {
     text-align: center;
-}
-
-.jumbotron {
-  color: white;
-  height:100%;
-  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
-  background-size: cover;
-/*
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-*/
-  text-shadow: 2px 2px black;
 }
 
 

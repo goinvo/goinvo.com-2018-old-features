@@ -1,9 +1,4 @@
 {
-	"us_healthcare":{
-		"title":"US Healthcare",
-		"description":"",
-		"impacts":[]
-	},
 	"universal_access":{
 		"title":"Universal Access",
 		"description":"",
@@ -31,17 +26,17 @@
 	},
 	"better_costs":{
 		"title": "Better Costs",
-		"description": "yay no broke",
+		"description": "",
 		"impacts":[]
 	},
 	"more_equitable":{
 		"title":"More Equitable",
-		"description": "lets be nice",
+		"description": "",
 		"impacts":[]
 	},
 	"preventative_meds":{
 		"title": "Increased Preventative Medicine",
-		"description": "yay no sick",
+		"description": "",
 		"impacts":[]
 	},
 	"give_patients_data":{
@@ -71,7 +66,7 @@
 	},
 	"health_conscious_people":{
 		"title": "More Health Conscious People",
-		"description": "yay healthy people",
+		"description": "",
 		"impacts": []
 	},
 	"self_care":{
@@ -81,7 +76,7 @@
 	},
 	"more_time":{
 		"title":"Caregivers Spend More Time with Patients",
-		"description": "blah",
+		"description": "",
 		"impacts": []
 	},
 	"better_care":{
@@ -116,8 +111,8 @@
 	},
 	"individualise_meds":{
 		"title": "Individualize Medicine",
-		"description": "personal things",
-		"impacts": ["provider"]
+		"description": "",
+		"impacts": []
 	},
 	"coordinate_care":{
 		"title": "Coordinate Care",
@@ -136,7 +131,7 @@
 	},
 	"value_quality_life":{
 		"title":"People Value Quality of Life",
-		"description": "blah",
+		"description": "",
 		"impacts": []
 	},
 	"tailored_treatment":{
@@ -151,7 +146,7 @@
 	},
 	"fewer_visits":{
 		"title":"Fewer Hospital Visits",
-		"description":"blah",
+		"description":"",
 		"impacts":[]
 	},
 	"transparent_prices":{
@@ -171,7 +166,7 @@
 	},
 	"fees_for_outcomes":{
 		"title":"Fees for Outcomes Instead of Fees for Services",
-		"description":"blah",
+		"description":"",
 		"impacts": []
 	},
 	"clinicians_cover_butt":{
