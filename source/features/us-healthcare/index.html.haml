@@ -20,6 +20,9 @@
 
   - # Custom Styles
   = stylesheet_link_tag "features/us-healthcare.css"
+- footnotes = []
+- footnote_link = "features/us-healthcare/footnote_link"
+  
 
 %header.jumbotron
   %h1 Healing U.S. Healthcare
@@ -35,12 +38,10 @@
     .slide-panel{:data =>{:index=>1}}
       %p
         Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits, and varies depending on insurance coverage and personal medical needs.
-        %a{:href => "#s1"}
-          %sup [1]
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.debt.org/medical/", :text=>"Medical Debt Advice - Debt, Healthcare, Insurance & Medicare.", :source=>"Debtorg News", :access=>"Web"})
       %p
         In the US, medical debt accounts for more than 50% of of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
-        %a{:href => "#s2"}
-          %sup [2]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Debt Is Ruining the Credit Scores of Millions of Americans", :href=>"http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :source=>"Washington Post", :access=>"The Washington Post, 11 Dec. 2014. Web"})
       %p
         graph: average spending on health care in the US vs other countries
         %a{:href => "https://data.oecd.org/healthres/health-spending.htm", :target => "_blank"} source
@@ -56,22 +57,17 @@
     .slide-panel{:data =>{:index=>2}}
       %p
         Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act [somehow link this to our ACA description below] requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
-        %a{:href => "#s4"}
-          %sup [4]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bronze Plan – Affordable Care Act (Obamacare)", :href=>"http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :source=>"Obamacare Bronze Health Insurance Plans", :access=>"Web"})
         Each offers a tradeoff between premiums and deductibles.
       %p
         When the Affordable Care Act was first implemented, users spent hours on healthcare.gov before being able to purchase their insurance. The server was overwhelmed by the massive influx of information
-        %a{:href => "#s5"}
-          %sup [5]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites", :href=>"https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :source=>"Washington Post", :access=>"The Washington Post, 9 Oct. 2013. Web"})
         the user interface was poorly designed and confusing to navigate,
-        %a{:href => "#s6"}
-          %sup [6]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"The Fiscal Times", :access=>"Web"})
         and the cost calculator sometimes provided inaccurate information about subsidies
-        %a{:href => "#s7"}
-          %sup [7]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"", :access=>""})
         The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax
-        %a{:href => "#s3"}
-          %sup [3]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage", :href=>"https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :source=>"HealthCare.gov", :access=>"Web"})
       %p
         Despite the slow start, 9 out of 10 Americans now have insurance. Prior to the implementation of the Affordable Care Act, only 8 out of 10 Americans were insured.
         %a{:href => "#s8"}
@@ -319,48 +315,57 @@
   %article#bibliography
     %h2 Bibliography
     %ol.references
+      -footnotes.each do |footnote|
+        %li
+          %a{:href => "##{footnote[:name]}_ref"}= "^"
+          %a{:name => footnote[:name]}= ""
+          %a{:href=> "#{footnote[:href]}", :target=>"_blank"}= "#{footnote[:text]},"
+          = succeed "." do
+            %i= footnote[:source]
+          = "#{footnote[:access]}."
+
       %li
         %a{:href => "#s1-2b"} ^
         %a{:name => "s1"}
         %a{:href => "https://www.debt.org/medical/", :target => "_blank"} "Medical Debt Advice - Debt, Healthcare, Insurance & Medicare."
         = succeed "." do
           %i Debtorg News
-        Web.
+        %b Web.
       %li
         %a{:href => "#s1-2b"} ^
         %a{:name => "s2"}
         %a{:href => "http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :target => "_blank"} "Medical Debt Is Ruining the Credit Scores of Millions of Americans."
         = succeed "." do
           %i Washington Post
-        The Washington Post, 11 Dec. 2014. Web.
+        %b The Washington Post, 11 Dec. 2014. Web.
       %li
         %a{:href => "#s3b"} ^
         %a{:name => "s3"}
         %a{:href => "https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :target => "_blank"} "Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage."
         = succeed "." do
           %i HealthCare.gov
-        Web.
+        %b Web.
       %li
         %a{:href => "#s4-8b"} ^
         %a{:name => "s4"}
         %a{:href => "http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :target => "_blank"} "Bronze Plan – Affordable Care Act (Obamacare)."
         = succeed "." do
           %i Obamacare Bronze Health Insurance Plans
-        Web.
+        %b Web.
       %li
         %a{:href => "#s4-8b"} ^
         %a{:name => "s5"}
         %a{:href => "https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :target => "_blank"} "Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites."
         = succeed "." do
           %i Washington Post
-        The Washington Post, 9 Oct. 2013. Web.
+        %b The Washington Post, 9 Oct. 2013. Web.
       %li
         %a{:href => "#s4-8b"} ^
         %a{:name => "s6"}
         %a{:href => "http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :target => "_blank"} "Not Fully Ready for Round Two."
         = succeed "." do
           %i The Fiscal Times
-        Web.
+        %b Web.
       %li
         %a{:href => "#s4-8b"} ^
         %a{:name => "s7"}
@@ -372,133 +377,133 @@
         %a{:href => "http://money.cnn.com/2015/04/13/news/economy/obamacare-uninsured-gallup/", :target => "_blank"} "Nearly 90% of Americans Now Have Health Insurance."
         = succeed "." do
           %i CNNMoney
-        Cable News Network. Web.
+        %b Cable News Network. Web.
       %li
         %a{:href => "#s9b"} ^
         %a{:name => "s9"}
         %a{:href => "https://www.bluecrossma.com/medicare-options/2015/medicare-plans/medex-bronze/", :target => "_blank"} "Medex Bronze."
         = succeed "." do
           %i Medex Bronze
-        Web.
+        %b Web.
       %li
         %a{:href => "#s10-11b"} ^
         %a{:name => "s10"}
         %a{:href => "http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :target => "_blank"} Meier, Barry, Jo Mcginty, and Julie Creswell. "Hospital Billing Varies Wildly, Government Data Shows."
         = succeed "." do
           %i The New York Times
-        The New York Times, 7 May 2013. Web.
+        %b The New York Times, 7 May 2013. Web.
       %li
         %a{:href => "#s10-11b"} ^
         %a{:name => "s11"}
         %a{:href => "http://www.nerdwallet.com/health/hospitals/compare", :target => "_blank"} "Compare Hospitals Tool"
         = succeed "." do
           %i NerdWallet Health
-        Web.
+        %b Web.
       %li
         %a{:href => "#s12-16b"} ^
         %a{:name => "s12"}
         %a{:href => "http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :target => "_blank"} "What is an Electronic Health Record (EHR)?"
         = succeed "." do
           %i HealthIT
-        Web.
+        %b Web.
       %li
         %a{:href => "#s12-16b"} ^
         %a{:name => "s13"}
         %a{:href => "http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :target => "_blank"} Eastwood, Brian. “Is Healthcare IT Interoperability (Almost) Here?"
         = succeed "." do
           %i CIO
-        Web.
+        %b Web.
       %li
         %a{:href => "#s12-16b"} ^
         %a{:name => "s14"}
         %a{:href => "http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :target => "_blank"} Voltz, Donald. “Why I Hope to Help End EHRs Lack of Interoperability."
         = succeed "." do
           %i HIT Consultant
-        22 Mar. 2015. Web.
+        %b 22 Mar. 2015. Web.
       %li
         %a{:href => "#s12-16b"} ^
         %a{:name => "s15"}
         %a{:href => "http://www.elxrhealth.com/lack-of-interoperability/", :target => "_blank"} "The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem."
         = succeed "." do
           %i ELXR Health
-        5 June 2015. Web.
+        %b 5 June 2015. Web.
       %li
         %a{:href => "#s12-16b"} ^
         %a{:name => "s16"}
         %a{:href => "http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :target => "_blank"} Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi. “Where Is HITECH's $35 Billion Dollar Investment Going?"
         = succeed "." do
           %i Health Affairs Blog
-        4 Mar. 2015. Web.
+        %b 4 Mar. 2015. Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s17"}
         %a{:href => "http://www.nlm.nih.gov/medlineplus/ency/article/000146.html", :target => "_blank"} "Hospital-acquired Pneumonia: MedlinePlus Medical Encyclopedia."
         = succeed "." do
           %i U.S National Library of Medicine
-        U.S. National Library of Medicine. Web.
+        %b U.S. National Library of Medicine. Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s18"}
         %a{:href => "http://www.webmd.com/a-to-z-guides/features/before-surgery-your-top-six-hospital-risks?page=3", :target => "_blank"} "Common Problems Patients Face in the Hospital."
         = succeed "." do
           %i WebMD
-        WebMD. Web.
+        %b WebMD. Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s19"}
         %a{:href => "https://www.justice.org/what-we-do/advocate-civil-justice-system/issue-advocacy/medical-errors", :target => "_blank"} "Medical Errors."
         = succeed "." do
           %i American Association for Justice
-        Web.
+        %b Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s20"}
         %a{:href => "http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :target => "_blank"} "Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow."
         = succeed "." do
           %i Hospital Safety Score
-        23 Oct. 2013. Web.
+        %b 23 Oct. 2013. Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s21"}
         %a{:href => "http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :target => "_blank"} Kliff, Sarah. “Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why."
         = succeed "." do
           %i Vox
-        22 Apr. 2015. Web.
+        %b 22 Apr. 2015. Web.
       %li
         %a{:href => "#s17-22b"} ^
         %a{:name => "s22"}
         %a{:href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety"} Rau, Jordan. “Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety.
         = succeed "." do
           %i NPR
-        NPR. 19 Dec. 2014. Web.
+        %b NPR. 19 Dec. 2014. Web.
       %li
         %a{:href => "#s23-24b"} ^
         %a{:name => "s23"}
         %a{:href => "http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :target => "_blank"} "Bad Medicine."
         = succeed "." do
           %i The Economist
-        The Economist Newspaper, 2 Mar. 2013. Web.
+        %b The Economist Newspaper, 2 Mar. 2013. Web.
       %li
         %a{:href => "#s23-24b"} ^
         %a{:name => "s24"}
         %a{:href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up"} Harris, Richard. “U.S. Funding of Health Research Stalls As Other Nations Rev Up."
         = succeed "." do
           %i NPR
-        NPR. Web.
+        %b NPR. Web.
       %li
         %a{:href => "#s25-27b"} ^
         %a{:name => "s25"}
         %a{:href => "http://www.usnews.com/education/best-global-universities/clinical-medicine", :target => "_blank"} "Best Global Universities for Clinical Medicine."
         = succeed "." do
           %i US News
-        U.S.News & World Report. Web.
+        %b U.S.News & World Report. Web.
       %li
         %a{:href => "#s25-27b"} ^
         %a{:name => "s26"}
         %a{:href => "http://hospitals.webometrics.info/en/world", :target => "_blank"} "World."
         = succeed "." do
           %i Ranking Web of Hospitals
-        Web.
+        %b Web.
       %li
         %a{:href => "#s25-27b"} ^
         %a{:name => "s27"}
@@ -510,35 +515,35 @@
         %a{:href => "http://stats.oecd.org/#", :target => "_blank"} "OECD Statistics."
         = succeed "." do
           %i OECD Statistics
-        Web.
+        %b Web.
       %li
         %a{:href => "#s29-32b"} ^
         %a{:name => "s29"}
         %a{:href => "https://data.oecd.org/healthres/health-spending.html", :target => "_blank"} "Health Resources: Health Spending."
         = succeed "." do
           %i OECD Data
-        Web.
+        %b Web.
       %li
         %a{:href => "#s29-32b"} ^
         %a{:name => "s30"}
         %a{:href => "http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :target => "_blank"} Hamblin, James. "What Is Obamacare?"
         = succeed "." do
           %i The Atlantic
-        Atlantic Media Company, 2 Apr. 2013. Web.
+        %b Atlantic Media Company, 2 Apr. 2013. Web.
       %li
         %a{:href => "#s29-32b"} ^
         %a{:name => "s31"}
         %a{:href => "http://obamacarefacts.com/obamacare-health-insurance-exchange/", :target => "_blank"} "ObamaCare | Health Insurance Exchange."
         = succeed "." do
           %i Obamacare Facts
-        Web.
+        %b Web.
       %li
         %a{:href => "#s29-32b"} ^
         %a{:name => "s32"}
         %a{:href => "https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :target => "_blank"} Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Health Care."
         = succeed "." do
           %i Harvard Business Review
-        9 Oct. 2013. Web.
+        %b 9 Oct. 2013. Web.
 %footer
   \&copy
   %a{:href => "http://www.goinvo.com/", :target => "_blank"} 2015 Involution Studios
