@@ -7,20 +7,17 @@ $dark-blue: #004363;
 $light-blue:#6496c8;
 
 .jumbotron {
-  color: white;
+  color: #5A97C9;
   height: 600px;
   background-size: cover;
   text-shadow: 1px 1px black;
   padding-top: 200px;
+  text-align: center;
+  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg");
 }
-//background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
 
 header p{
   text-align: center;
-}
-
-.jumbotron h1 {
-    text-align: center;
 }
 
 p {
@@ -658,7 +655,3 @@ div.tooltip {
   padding: 20px;
 }
 
-#authors-table {
-  background-color: #ededed;
-  padding: 20px;
-}
