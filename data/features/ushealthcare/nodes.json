@@ -27,7 +27,7 @@
 	"everyone_covered":{
 		"title": "Everyone Gets Covered",
 		"description": "blah",
-		"impacts":["patient", "policymaker"]
+		"impacts":["patient"]
 	},
 	"better_costs":{
 		"title": "Better Costs",
@@ -47,7 +47,7 @@
 	"give_patients_data":{
 		"title": "Give Patients Their Data",
 		"description": "yay info",
-		"impacts":["patient", "provider"]
+		"impacts":["provider"]
 	},
 	"health_data_standard":{
 		"title": "Create Health Data Standard",
@@ -82,7 +82,7 @@
 	"more_time":{
 		"title":"Caregivers Spend More Time with Patients",
 		"description": "blah",
-		"impacts": ["provider"]
+		"impacts": []
 	},
 	"better_care":{
 		"title": "Better Care",
@@ -137,7 +137,7 @@
 	"value_quality_life":{
 		"title":"People Value Quality of Life",
 		"description": "blah",
-		"impacts": ["patient"]
+		"impacts": []
 	},
 	"tailored_treatment":{
 		"title":"Tailored Treatment Plans",
@@ -172,7 +172,7 @@
 	"fees_for_outcomes":{
 		"title":"Fees for Outcomes Instead of Fees for Services",
 		"description":"blah",
-		"impacts": ["policymaker","payer"]
+		"impacts": []
 	},
 	"clinicians_cover_butt":{
 		"title":"Clinicians Don\'t Have to Cover Their Butts",

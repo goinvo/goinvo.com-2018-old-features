@@ -45,7 +45,7 @@ $(document).ready(function(){
       .duration(350)
       .ease('radial')
       .attr("r", function(d) {
-        return rScale(d.capita);
+        return rScale(d.population);
       });
   }
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
       x.domain(d3.extent(data, function(d) { return d.capita; }));
       y.domain(d3.extent(data, function(d) { return d.quality; }));
-      rScale.domain(d3.extent(data, function(d) { return d.capita;}));
+      rScale.domain(d3.extent(data, function(d) { return d.population;}));
 
       xAxisG = svgWrapper.append("g")
         .attr("class", "x axis")
@@ -108,7 +108,7 @@ $(document).ready(function(){
         .on("mouseover", function(d){
         
             d3.select(this)
-              .style("r", 2+rScale(d.capita))
+              .style("r", (2+rScale(d.population)))
               .style("fill", "#D9C6E1");
         
             tooltip.transition()

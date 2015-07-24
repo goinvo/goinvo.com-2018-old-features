@@ -45,10 +45,10 @@ h3 {
 }
 
 .jumbotron {
-  margin-top: 55px;
-  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg");
-  background-size: 100%;
   color: white;
+  height: 600px;
+  background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg"); 
+  background-size: cover;
 /*
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
