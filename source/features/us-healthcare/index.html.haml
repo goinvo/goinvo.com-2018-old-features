@@ -20,6 +20,9 @@
 
   - # Custom Styles
   = stylesheet_link_tag "features/us-healthcare.css"
+- footnotes = []
+- footnote_link = "features/us-healthcare/footnote_link"
+  
 
 %header.jumbotron
   %h1 Healing U.S. Healthcare
@@ -34,90 +37,85 @@
       That’s if he’s lucky.
     .slide-panel{:data =>{:index=>1}}
       %p
-        Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits, and varies depending on insurance coverage and personal medical needs.
-        %a{:href => "#s1"}
-          %sup [1]
+        Medical debt refers to individual debt due to health care costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits. Medical debt varies depending on insurance coverage and personal medical needs.
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.debt.org/medical/", :text=>"Medical Debt Advice - Debt, Healthcare, Insurance & Medicare.", :source=>"Debtorg News", :access=>"Web"})
       %p
-        In the US, medical debt accounts for more than 50% of of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
-        %a{:href => "#s2"}
-          %sup [2]
-      %p
-        graph: average spending on health care in the US vs other countries
-        %a{:href => "https://data.oecd.org/healthres/health-spending.htm", :target => "_blank"} source
-      %p
-        graph: number of people with medical debt relative to number of people uninsured
-        %a{:href => "http://www.commonwealthfund.org/publications/issue-briefs/2015/jan/biennial-health-insurance-survey", :target => "_blank"} source
+        In the US, medical debt accounts for more than 50% of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Debt Is Ruining the Credit Scores of Millions of Americans", :href=>"http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :source=>"Washington Post", :access=>"The Washington Post, 11 Dec. 2014. Web"})
     %p.p-slide
       How did he get here?
-    %p With the passage of the ACA, David had to decide to purchase health insurance or pay a penalty tax.
+    %p.p-slide
+      With the passage of the
+      %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act (ACA)
+      each year David has to either purchase health insurance or pay a penalty tax.
+    .slide-panel{:data =>{:index=>5}}
+      %p
+        The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
+        %a{:href => "#s30"}
+          %sup [30]
+      %p
+        To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
+        %a{:href => "#s31"}
+          %sup [31]
+        Americans can use their state’s marketplace to obtain coverage from competing private health care providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
+      %p
+        The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
+        %a{:href => "#s32"}
+          %sup [32]
 
     = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
 
     .slide-panel{:data =>{:index=>2}}
       %p
-        Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act [somehow link this to our ACA description below] requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
-        %a{:href => "#s4"}
-          %sup [4]
+        Bronze Plan coverage typically means that insurance companies pay for around 60% of covered health care expenses and the consumer pays for the rest. The Affordable Care Act requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bronze Plan – Affordable Care Act (Obamacare)", :href=>"http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :source=>"Obamacare Bronze Health Insurance Plans", :access=>"Web"})
         Each offers a tradeoff between premiums and deductibles.
       %p
         When the Affordable Care Act was first implemented, users spent hours on healthcare.gov before being able to purchase their insurance. The server was overwhelmed by the massive influx of information
-        %a{:href => "#s5"}
-          %sup [5]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites", :href=>"https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :source=>"Washington Post", :access=>"The Washington Post, 9 Oct. 2013. Web"})
         the user interface was poorly designed and confusing to navigate,
-        %a{:href => "#s6"}
-          %sup [6]
-        and the cost calculator sometimes provided inaccurate information about subsidies
-        %a{:href => "#s7"}
-          %sup [7]
-        The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax
-        %a{:href => "#s3"}
-          %sup [3]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"The Fiscal Times", :access=>"Web"})
+        and the cost calculator sometimes provided inaccurate information about subsidies.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"", :access=>""})
+        The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage", :href=>"https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :source=>"HealthCare.gov", :access=>"Web"})
       %p
         Despite the slow start, 9 out of 10 Americans now have insurance. Prior to the implementation of the Affordable Care Act, only 8 out of 10 Americans were insured.
-        %a{:href => "#s8"}
-          %sup [8]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Nearly 90% of Americans Now Have Health Insurance", :href=>"http://money.cnn.com/2015/04/13/news/economy/obamacare-uninsured-gallup/", :source=>"CNNMoney", :access=>"Cable News Network. Web"})
       %p
         *In 2016 and onwards, the tax will be raised to 2.5%.
     %p.p-slide
-      Without health insurance, David stopped seeing his doctor. As a result, he also stopped receiving vaccinations [
-      %strong> Pathway
-      ].
+      Without health insurance, David stops seeing his doctor. As a result, he also stops receiving vaccinations.
     %p.p-slide
-      A few weeks ago, David began showing flu-like symptoms, but he assumed he would get better in a few days. He didn’t. After a week, the symptoms still hadn’t resolved [
-      %strong> Pathway
-      ].
+      One day, David begins exhibiting flu-like symptoms. He assumes he will get better in a few days, but he doesn't. After a week, the symptoms continue to persist.
+    %p.pslide
+      What should David do?
+      = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
     %p.p-slide
-      Having no primary care doctor, David went to the only place he thought he could; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picked the one closest to his home.
-      %a{:href => "#s10"}
-        %sup [10]
-      %a{:href => "#s11"}
-        %sup [11]
-      %a{:name => "s10-11b"}
+      Having no primary care doctor, David goes to the only place he thinks he can; an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picks the one closest to his home.
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Meier, Barry, Jo Mcginty, and Julie Creswell. Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"The New York Times", :access=>"The New York Times, 7 May 2013. Web"})
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Too", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
+    = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     %p.p-slide
-      As it happens, the hospital he chose also uses a different
-      %span.slide#flip3{:data=>{:index => 3}} electronic health record
-      %a{:name => "s12-16b"}
-      system than his former doctor did, so none of David’s medical information could be accessed upon his arrival.
+      After waiting for over an hour, David finally sees a doctor.
+    %p.p-slide
+      Does the doctor have access to David's
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
     .slide-panel{:data =>{:index=>3}}
       %p
-        An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations, so they contain information from all clinicians involved in a patient’s care.
-        %a{:href => "#s12"}
-          %sup [12]
+        An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple health care providers and organizations. They contain information from all clinicians involved in a patient’s care.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
         However, when EHRs became more widely implemented in 2004, the industry built hundreds of standalone systems to create and maintain EHRs.
-        %a{:href => "#s13"}
-          %sup [13]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Eastwood, Brian. “Is Healthcare IT Interoperability (Almost) Here", :href=>"http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :source=>"CIO", :access=>"Web"})
         Within each system data is shared, but there is little to no data flow between different systems.
       %p
-        Problems arise with the lack of interoperability between EHR systems. 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways, causing misread charts, forgotten results, and untimely information in life-threatening crises.
-        %a{:href => "#s14"}
-          %sup [14]
+        Problems arise with the lack of interoperability between EHR systems. Approximately 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways. This causes misread charts, forgotten results, and untimely information during life-threatening crises.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Voltz, Donald. “Why I Hope to Help End EHRs Lack of Interoperability", :href=>"http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :source=>"HIT Consultant", :access=>"22 Mar. 2015. Web"})
         Other hospitals hesitate to transfer data in fear of incurring liability for sharing private information.
-        %a{:href => "#s15"}
-          %sup [15]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem", :href=>"http://www.elxrhealth.com/lack-of-interoperability/", :source=>"ELXR Health", :access=>"5 June 2015. Web"})
       %p
-        In 2009, President Obama signed the HITECH Act, which stipulated that health care providers would be incentivized for demonstrating meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
-        %a{:href => "#s16"}
-          %sup [16]
+        In 2009, President Obama signed the HITECH Act, which stipulated that health care providers would be incentivized to demonstrate meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi. “Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Health Affairs Blog", :access=>"4 Mar. 2015. Web"})
     %p.p-slide
       David’s clinical presentation indicated influenza. While listening to David’s heart during the exam, the ED doctor noticed unusual rhythms. Worried that the cardiac event could be related to David’s influenza, the doctor ordered an EKG. [
       %strong> Pathway
@@ -146,25 +144,19 @@
     .slide-panel{:data =>{:index=>4}}
       %p
         Hospital-acquired pneumonia is a lung infection that occurs during a hospital stay. Infections contracted at a hospital can be especially dangerous because of two reasons. First, patients are often already very sick and cannot fight off the germs. Second, the types of bacteria in hospitals are often more dangerous strains because they can be resistant to antibiotics.
-        %a{:href => "#s17"}
-          %sup [17]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital-acquired Pneumonia: MedlinePlus Medical Encyclopedia", :href=>"http://www.nlm.nih.gov/medlineplus/ency/article/000146.html", :source=>"U.S National Library of Medicine", :access=>"U.S. National Library of Medicine. Web"})
         Pneumonia is one of the most common hospital-acquired infections, after urinary tract infections and wound infections, and has a 33% mortality rate.
-        %a{:href => "#s18"}
-          %sup [18]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Common Problems Patients Face in the Hospital", :href=>"http://www.webmd.com/a-to-z-guides/features/before-surgery-your-top-six-hospital-risks?page=3", :source=>"WebMD", :access=>"WebMD. Web"})
       %p
         440,000 patients die every year from preventable medical errors.
-        %a{:href => "#s19"}
-          %sup [19]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors", :href=>"https://www.justice.org/what-we-do/advocate-civil-justice-system/issue-advocacy/medical-errors", :source=>"American Association for Justice", :access=>"Web"})
         Medical errors are the third leading cause of death in the United States, following cancer and heart disease.
-        %a{:href => "#s20"}
-          %sup [20]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow", :href=>"http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :source=>"Hospital Safety Score", :access=>"23 Oct. 2013. Web"})
         Studies show that up to 12% of people going to a hospital will have severe harm as a result.
-        %a{:href => "#s21"}
-          %sup [21]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Kliff, Sarah. “Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why", :href=>"http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :source=>"Vox", :access=>"22 Apr. 2015. Web"})
       %p
         Medicare is now punishing hospitals with high rates of infections and other medical errors in an attempt to reduce medical errors and increase patient safety. Publicly funded hospitals have been penalized the most because they take care of sicker populations and deal with more complex cases.
-        %a{:href => "#s22"}
-          %sup [22]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Rau, Jordan. “Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"NPR", :access=>"NPR. 19 Dec. 2014. Web"})
     %p.p-slide
       It didn’t have to be that way. If David had insurance, he would probably have received a flu shot. More opportunities for self-care could have saved David time and money. If the two EHRs had talked to each other, David likely would not have been admitted for an arrhythmia, and wouldn’t have developed hospital-acquired pneumonia.
   / end id="story"
@@ -208,28 +200,22 @@
     %p.p-slide
       %a{:name => "s23-24b"}
       A decade ago, the United States funded 57% of biomedical research around the globe. In 2015, the U.S. share has dropped down to 44%. Even though the US still spends more than twice the amount than any other country on medical research, federal spending is being cut
-      %a{:href => "#s23"}
-        %sup [23]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bad Medicine", :href=>"http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :source=>"The Economist", :access=>"The Economist Newspaper, 2 Mar. 2013. Web"})
       and support for biomedical research in the U.S. has lessened. Simultaneously, global interest in biomedical research is increasing,
-      %a{:href => "#s24"}
-        %sup [24]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Harris, Richard. \"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"NPR", :access=>"NPR. Web"})
       decreasing the percentage of America’s share in global research.
     %p.p-slide
       %a{:name => "s25-27b"}
       According to the US News and World Reports, the US has 8 out of the top 10 medical schools in the world
-      %a{:href => "#s25"}
-        %sup [25]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Best Global Universities for Clinical Medicine", :href=>"http://www.usnews.com/education/best-global-universities/clinical-medicine", :source=>"US News", :access=>"U.S.News & World Report. Web"})
       and 17 of the top 20 hospitals in the world.
-      %a{:href => "#s26"}
-        %sup [26]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"World", :href=>"http://hospitals.webometrics.info/en/world", :source=>"Ranking Web of Hospitals", :access=>"Web"})
       Despite the resources, the US still has less doctors per capita than other developed nations.
-      %a{:href => "#s27"}
-        %sup [27]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"", :access=>""})
     %p.p-slide
       %a{:name => "s28b"}
       The US has more MRI, CT, and PET machines per capita than any other country,
-      %a{:href => "#s28"}
-        %sup [28]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"OECD Statistics", :href=>"http://stats.oecd.org/#", :source=>"OECD Statistics", :access=>"Web"})
       but we also spend more per capita than any other country.
   / end div id=story
   / TABS
@@ -238,8 +224,7 @@
     %p.p-slide
       %a{:name => "s29-32b"}
       The health care system in the U.S. is in dire need of a transformation. Without a doubt health care is complex and nuanced, but even still we lag far behind most industrialized nations. We spend 8700 dollars per capita
-      %a{:href => "#s29"}>
-        %sup [29]
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Health Spending", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Data", :access=>"Web"})
       , more than any other nation.
     .container
       %ul.tabs
@@ -248,11 +233,11 @@
         %li.tab-link{"data-tab" => "tab-3"} Quality
       #tab-1.tab-content.current
         %p.tab_p
-          Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+          Not only does the U.S. spend more, but health care spending is growing at a faster rate than in other countries.
         #spending-capita-chart
       #tab-2.tab-content
         %p.tab_p
-          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+          In 2012, the U.S. spent nearly 17% of its GDP on health care. The UK spent less than 10%.
           #gdp-vs-capita-chart
       #tab-3.tab-content
         %p.tab_p
@@ -265,17 +250,14 @@
     .slide-panel{:data =>{:index=>5}}
       %p
         The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of health care.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
-        %a{:href => "#s30"}
-          %sup [30]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hamblin, James. What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"The Atlantic", :access=>"Atlantic Media Company, 2 Apr. 2013. Web"})
       %p
         To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
-        %a{:href => "#s31"}
-          %sup [31]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
         Americans can use their state’s marketplace to obtain coverage from competing private health care providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
       %p
         The Affordable Care Act also implemented pay-for-performance incentives, which pays health care providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
-        %a{:href => "#s32"}
-          %sup [32]
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Health Care", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Harvard Business Review", :access=>"9 Oct. 2013. Web"})
   %article#prescription
     %h2 Prescription
     %p.p-slide
@@ -319,226 +301,14 @@
   %article#bibliography
     %h2 Bibliography
     %ol.references
-      %li
-        %a{:href => "#s1-2b"} ^
-        %a{:name => "s1"}
-        %a{:href => "https://www.debt.org/medical/", :target => "_blank"} "Medical Debt Advice - Debt, Healthcare, Insurance & Medicare."
-        = succeed "." do
-          %i Debtorg News
-        Web.
-      %li
-        %a{:href => "#s1-2b"} ^
-        %a{:name => "s2"}
-        %a{:href => "http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :target => "_blank"} "Medical Debt Is Ruining the Credit Scores of Millions of Americans."
-        = succeed "." do
-          %i Washington Post
-        The Washington Post, 11 Dec. 2014. Web.
-      %li
-        %a{:href => "#s3b"} ^
-        %a{:name => "s3"}
-        %a{:href => "https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :target => "_blank"} "Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage."
-        = succeed "." do
-          %i HealthCare.gov
-        Web.
-      %li
-        %a{:href => "#s4-8b"} ^
-        %a{:name => "s4"}
-        %a{:href => "http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :target => "_blank"} "Bronze Plan – Affordable Care Act (Obamacare)."
-        = succeed "." do
-          %i Obamacare Bronze Health Insurance Plans
-        Web.
-      %li
-        %a{:href => "#s4-8b"} ^
-        %a{:name => "s5"}
-        %a{:href => "https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :target => "_blank"} "Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites."
-        = succeed "." do
-          %i Washington Post
-        The Washington Post, 9 Oct. 2013. Web.
-      %li
-        %a{:href => "#s4-8b"} ^
-        %a{:name => "s6"}
-        %a{:href => "http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :target => "_blank"} "Not Fully Ready for Round Two."
-        = succeed "." do
-          %i The Fiscal Times
-        Web.
-      %li
-        %a{:href => "#s4-8b"} ^
-        %a{:name => "s7"}
-        %a{:href => "http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :target => "_blank"} "Yet Another Obamacare Glitch Was Just Discovered."
-        The Fiscal Times. Web.
-      %li
-        %a{:href => "#s4-8b"} ^
-        %a{:name => "s8"}
-        %a{:href => "http://money.cnn.com/2015/04/13/news/economy/obamacare-uninsured-gallup/", :target => "_blank"} "Nearly 90% of Americans Now Have Health Insurance."
-        = succeed "." do
-          %i CNNMoney
-        Cable News Network. Web.
-      %li
-        %a{:href => "#s9b"} ^
-        %a{:name => "s9"}
-        %a{:href => "https://www.bluecrossma.com/medicare-options/2015/medicare-plans/medex-bronze/", :target => "_blank"} "Medex Bronze."
-        = succeed "." do
-          %i Medex Bronze
-        Web.
-      %li
-        %a{:href => "#s10-11b"} ^
-        %a{:name => "s10"}
-        %a{:href => "http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :target => "_blank"} Meier, Barry, Jo Mcginty, and Julie Creswell. "Hospital Billing Varies Wildly, Government Data Shows."
-        = succeed "." do
-          %i The New York Times
-        The New York Times, 7 May 2013. Web.
-      %li
-        %a{:href => "#s10-11b"} ^
-        %a{:name => "s11"}
-        %a{:href => "http://www.nerdwallet.com/health/hospitals/compare", :target => "_blank"} "Compare Hospitals Tool"
-        = succeed "." do
-          %i NerdWallet Health
-        Web.
-      %li
-        %a{:href => "#s12-16b"} ^
-        %a{:name => "s12"}
-        %a{:href => "http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :target => "_blank"} "What is an Electronic Health Record (EHR)?"
-        = succeed "." do
-          %i HealthIT
-        Web.
-      %li
-        %a{:href => "#s12-16b"} ^
-        %a{:name => "s13"}
-        %a{:href => "http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :target => "_blank"} Eastwood, Brian. “Is Healthcare IT Interoperability (Almost) Here?"
-        = succeed "." do
-          %i CIO
-        Web.
-      %li
-        %a{:href => "#s12-16b"} ^
-        %a{:name => "s14"}
-        %a{:href => "http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :target => "_blank"} Voltz, Donald. “Why I Hope to Help End EHRs Lack of Interoperability."
-        = succeed "." do
-          %i HIT Consultant
-        22 Mar. 2015. Web.
-      %li
-        %a{:href => "#s12-16b"} ^
-        %a{:name => "s15"}
-        %a{:href => "http://www.elxrhealth.com/lack-of-interoperability/", :target => "_blank"} "The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem."
-        = succeed "." do
-          %i ELXR Health
-        5 June 2015. Web.
-      %li
-        %a{:href => "#s12-16b"} ^
-        %a{:name => "s16"}
-        %a{:href => "http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :target => "_blank"} Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi. “Where Is HITECH's $35 Billion Dollar Investment Going?"
-        = succeed "." do
-          %i Health Affairs Blog
-        4 Mar. 2015. Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s17"}
-        %a{:href => "http://www.nlm.nih.gov/medlineplus/ency/article/000146.html", :target => "_blank"} "Hospital-acquired Pneumonia: MedlinePlus Medical Encyclopedia."
-        = succeed "." do
-          %i U.S National Library of Medicine
-        U.S. National Library of Medicine. Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s18"}
-        %a{:href => "http://www.webmd.com/a-to-z-guides/features/before-surgery-your-top-six-hospital-risks?page=3", :target => "_blank"} "Common Problems Patients Face in the Hospital."
-        = succeed "." do
-          %i WebMD
-        WebMD. Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s19"}
-        %a{:href => "https://www.justice.org/what-we-do/advocate-civil-justice-system/issue-advocacy/medical-errors", :target => "_blank"} "Medical Errors."
-        = succeed "." do
-          %i American Association for Justice
-        Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s20"}
-        %a{:href => "http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :target => "_blank"} "Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow."
-        = succeed "." do
-          %i Hospital Safety Score
-        23 Oct. 2013. Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s21"}
-        %a{:href => "http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :target => "_blank"} Kliff, Sarah. “Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why."
-        = succeed "." do
-          %i Vox
-        22 Apr. 2015. Web.
-      %li
-        %a{:href => "#s17-22b"} ^
-        %a{:name => "s22"}
-        %a{:href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety"} Rau, Jordan. “Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety.
-        = succeed "." do
-          %i NPR
-        NPR. 19 Dec. 2014. Web.
-      %li
-        %a{:href => "#s23-24b"} ^
-        %a{:name => "s23"}
-        %a{:href => "http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :target => "_blank"} "Bad Medicine."
-        = succeed "." do
-          %i The Economist
-        The Economist Newspaper, 2 Mar. 2013. Web.
-      %li
-        %a{:href => "#s23-24b"} ^
-        %a{:name => "s24"}
-        %a{:href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up"} Harris, Richard. “U.S. Funding of Health Research Stalls As Other Nations Rev Up."
-        = succeed "." do
-          %i NPR
-        NPR. Web.
-      %li
-        %a{:href => "#s25-27b"} ^
-        %a{:name => "s25"}
-        %a{:href => "http://www.usnews.com/education/best-global-universities/clinical-medicine", :target => "_blank"} "Best Global Universities for Clinical Medicine."
-        = succeed "." do
-          %i US News
-        U.S.News & World Report. Web.
-      %li
-        %a{:href => "#s25-27b"} ^
-        %a{:name => "s26"}
-        %a{:href => "http://hospitals.webometrics.info/en/world", :target => "_blank"} "World."
-        = succeed "." do
-          %i Ranking Web of Hospitals
-        Web.
-      %li
-        %a{:href => "#s25-27b"} ^
-        %a{:name => "s27"}
-        %a{:href => "https://data.oecd.org/healthres/doctors.html", :target => "_blank"} "Health Resources: Doctors."
-        OECD Data. Web.
-      %li
-        %a{:href => "#s28b"} ^
-        %a{:name => "s28"}
-        %a{:href => "http://stats.oecd.org/#", :target => "_blank"} "OECD Statistics."
-        = succeed "." do
-          %i OECD Statistics
-        Web.
-      %li
-        %a{:href => "#s29-32b"} ^
-        %a{:name => "s29"}
-        %a{:href => "https://data.oecd.org/healthres/health-spending.html", :target => "_blank"} "Health Resources: Health Spending."
-        = succeed "." do
-          %i OECD Data
-        Web.
-      %li
-        %a{:href => "#s29-32b"} ^
-        %a{:name => "s30"}
-        %a{:href => "http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :target => "_blank"} Hamblin, James. "What Is Obamacare?"
-        = succeed "." do
-          %i The Atlantic
-        Atlantic Media Company, 2 Apr. 2013. Web.
-      %li
-        %a{:href => "#s29-32b"} ^
-        %a{:name => "s31"}
-        %a{:href => "http://obamacarefacts.com/obamacare-health-insurance-exchange/", :target => "_blank"} "ObamaCare | Health Insurance Exchange."
-        = succeed "." do
-          %i Obamacare Facts
-        Web.
-      %li
-        %a{:href => "#s29-32b"} ^
-        %a{:name => "s32"}
-        %a{:href => "https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :target => "_blank"} Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Health Care."
-        = succeed "." do
-          %i Harvard Business Review
-        9 Oct. 2013. Web.
+      -footnotes.each do |footnote|
+        %li
+          %a{:href => "##{footnote[:name]}_ref"}= "^"
+          %a{:name => footnote[:name]}= ""
+          %a{:href=> "#{footnote[:href]}", :target=>"_blank"}= "#{footnote[:text]},"
+          = succeed "." do
+            %i= footnote[:source]
+          = "#{footnote[:access]}."
 %footer
   \&copy
   %a{:href => "http://www.goinvo.com/", :target => "_blank"} 2015 Involution Studios

@@ -1,0 +1,4 @@
+- this_idx = footnotes.size + 1
+- footnotes << {:href=>href, :name=>"s#{this_idx}", :text=>"#{text}", :source=>source, :access=>access}
+%a{:href=>"#s#{this_idx}", :name=>"s#{this_idx}_ref"}
+  %sup= "[#{this_idx}]"
