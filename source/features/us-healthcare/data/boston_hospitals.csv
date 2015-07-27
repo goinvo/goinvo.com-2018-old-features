@@ -1,7 +1,10 @@
-name,price,lat,lon
-Massachusetts General Hospital,3265,42.3628,-71.0686
-Tufts Medical Center,2164,42.3495,-71.0633
-Boston Medical Center,1377,42.3349,-71.0735
-Beth Israel Deaconess Medical Center,3397,42.3366,-71.1094
-Brigham and Women's Hospital,3637,42.3359364,-71.106983
-New England Baptist Hospital,1956,42.3294,-71.1066
+name,price_echo,price_visit,price_imaging,price_pneumonia,lat,lon
+Massachusetts General Hospital,1438,198,2621,31168,42.3628,-71.0686
+Tufts Medical Center,1167,304,1731,14007,42.3495,-71.0633
+Boston Medical Center,883,153,2968,12238,42.3349,-71.0735
+Beth Israel Deaconess Medical Center,766,148,3785,14440,42.3366,-71.1094
+Brigham and Women's Hospital,1519,206,3172,29926,42.3359364,-71.106983
+Cambridge Health Alliance,766,121,2317,13956,42.3748,-711.1048
+St Elizabeth's Medical Center,2061,161,2893,9736,42.3491,-71.1486
+Faulkner Hospital,1186,144,3646,19732,42.3008,-71.1282
+Carney Hospital,1208,207,2563,12014,42.2774,-71.0653

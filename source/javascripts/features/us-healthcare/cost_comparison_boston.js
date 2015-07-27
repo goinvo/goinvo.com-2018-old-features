@@ -67,7 +67,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
               tooltip.transition()
                 .duration(200)
                 .style("opacity",1)
-              tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Echocardiogram Price: " + d3.format("$,")(d.price))
+              tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) + "<br/>" + "Echocardiogram: " + d3.format("$,")(d.price_echo)+"<br/>" + "Cardiac Imaging: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY + 5) + "px");
             })
