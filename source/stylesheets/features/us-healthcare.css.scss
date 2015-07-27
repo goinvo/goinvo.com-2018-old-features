@@ -265,7 +265,11 @@ div.tooltip {
   border-radius: 3px;
   pointer-events: none;
 }
-
+.annotation{
+    background-color:rgba(255,255,255,0.2);
+    position: absolute;
+    width: 249px;
+}
 /* BIBLIOGRAPHY */
 #bibliography {
   text-align: left;

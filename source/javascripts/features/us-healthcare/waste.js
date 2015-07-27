@@ -98,6 +98,16 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
 
     xScale.domain(data.map(function(d) { return d.Procedure;}));
     yScale.domain([1, maxProcedures]);
+    
+     d3.select('#waste-chart').append("div")
+        .attr('class','annotation')
+        .style("left", function() {
+          return xScale(data[2].Procedure)+'px';
+        })
+        .style('top', function() {
+            return yScale(data[2].NumberProcedures)+'px'
+        })
+        .text("Brand-name statins waste $5 billion annually.");
 
     wasteSVG.append("g")
         .attr("class", "xaxis")
@@ -120,15 +130,8 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .style("text-anchor", "middle")
         .text("Number of Procedures");
 	
-//    wasteSVG.append("text")
-//		.attr("x", function(d) {
-//			console.log(xScale(d.Procedure))
-//			return 500;
-//		})
-//		console.log('test')
-//        .attr("y", 50)
-//        .text("TEST TEST TEST");
-//  
+   
+
     var myPoints = wasteSVG.selectAll(".point")
         .data(data).enter()
         .append("g");
@@ -146,6 +149,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("height", function(d) {
             return 10;
         });
+
     rectangles.on('mousemove', function(d) {
         tooltip.style('display', 'block');
         d3.select(this)
@@ -154,8 +158,10 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
                 .duration(200)
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                .style("left", (d3.event.pageX - 300) + "px")
-                .style("top", (d3.event.pageY - 1300) + "px");
+                .style("top", (event.pageY - $(
+            '#waste-chart').position().top + 8) + "px")
+                .style("left", (event.pageX - $(
+            '#waste-chart').position().left + 8) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
