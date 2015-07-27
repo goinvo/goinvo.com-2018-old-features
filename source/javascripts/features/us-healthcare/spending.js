@@ -112,13 +112,13 @@ $(document).ready(function(){
           .attr("class", "invisible hover")
           .attr("d", function(d) { return line(d.values); });
 		
-	  svg.append("text")
-	  	  .attr("x", function(d) {
-		  	  console.log(d.name)
-			  return 50;
-	  	  })
-	  	  .attr("y", 50)
-	      .text("TEST TEST");
+//	  svg.append("text")
+//	  	  .attr("x", function(d) {
+//		  	  console.log(d.name)
+//			  return 50;
+//	  	  })
+//	  	  .attr("y", 50)
+//	      .text("TEST TEST");
 		
       point = country.append("g")
         .attr("class", "linepoint");
