@@ -111,17 +111,25 @@ $(document).ready(function(){
       country.append("path")
           .attr("class", "invisible hover")
           .attr("d", function(d) { return line(d.values); });
-
+		
+	  svg.append("text")
+	  	  .attr("x", function(d) {
+		  	  console.log(d.name)
+			  return 50;
+	  	  })
+	  	  .attr("y", 50)
+	      .text("TEST TEST");
+		
       point = country.append("g")
         .attr("class", "linepoint");
 
       point.selectAll("circle")
-      .data(function(d) { return d.values })
-      .enter().append("circle")
-      .attr("cx", function(d) { return x(d.date)})
-      .attr("cy", function(d) { return y(d.capita)})
-      .attr("r", function(d) { return d.capita == null ? 0: 3})
-      .style("fill", function(d) { return color(d.name) ;})
+		  .data(function(d) { return d.values })
+		  .enter().append("circle")
+		  .attr("cx", function(d) { return x(d.date)})
+		  .attr("cy", function(d) { return y(d.capita)})
+		  .attr("r", function(d) { return d.capita == null ? 0: 3})
+		  .style("fill", function(d) { return color(d.name) ;})
       
       .on("mouseover", function(d) {
         d3.selectAll(".linepoint")

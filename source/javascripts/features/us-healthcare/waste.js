@@ -119,7 +119,16 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("dy", ".71em")
         .style("text-anchor", "middle")
         .text("Number of Procedures");
-
+	
+//    wasteSVG.append("text")
+//		.attr("x", function(d) {
+//			console.log(xScale(d.Procedure))
+//			return 500;
+//		})
+//		console.log('test')
+//        .attr("y", 50)
+//        .text("TEST TEST TEST");
+//  
     var myPoints = wasteSVG.selectAll(".point")
         .data(data).enter()
         .append("g");

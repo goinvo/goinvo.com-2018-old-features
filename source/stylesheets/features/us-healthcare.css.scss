@@ -9,11 +9,12 @@ $light-blue:#6496c8;
 .jumbotron {
   color: #5A97C9;
   height: 600px;
-  background-size: cover;
   text-shadow: 1px 1px black;
   padding-top: 200px;
   text-align: center;
+	background-color: black;
   background-image: url("https://farm6.staticflickr.com/5473/11383979236_97370fc858_o.jpg");
+  background-size: cover;
 }
 
 header p{

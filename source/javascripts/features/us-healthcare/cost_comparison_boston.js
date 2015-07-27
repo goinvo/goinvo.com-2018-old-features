@@ -45,9 +45,16 @@ var boston_hospitals = {
 ]
 };
 
-var width = 900,
-    height = 680;
+                                                                                                                                 
+                                                                                                                                 
+var myWindow = d3.select(window);
 
+var elementW = window.innerWidth;
+var elementH = window.innerHeight;
+var margin = {top: 20, right: 0, bottom: 50, left: 10},
+    width = .7*elementW,
+    height = 600;
+                                                                         
 var svg = d3.select( "#cost-comparison-boston-chart" )
   .append( "svg" )
   .attr( "width", width )
@@ -106,3 +113,12 @@ hospitals.selectAll( "path" )
       .style("opacity", 0);
   });
 });
+
+//myWindow.on('resize.cost_comparison_boston', function() {
+//    var elementW = $('#cost-comparison-boston-container').width();
+//    width = elementW - margin.left - margin.right,
+//    height = 500 - margin.top - margin.bottom;
+//    svg
+//      .attr("width", width)
+//      .attr("height", height);
+//});
