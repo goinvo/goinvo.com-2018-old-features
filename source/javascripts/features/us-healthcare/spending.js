@@ -71,13 +71,47 @@ $(document).ready(function(){
         };
       });
 
-      x.domain(d3.extent(data, function(d) { return d.date; }));
+      x.domain(d3.extent(data, function(d) { 
+        return d.date; }));
 
       y.domain([
-        d3.min(countries, function(c) { return d3.min(c.values, function(v) { return v.capita; }); }),
+        d3.min(countries, function(c) { 
+          return d3.min(c.values, function(v) { 
+            return v.capita; }); }),
         d3.max(countries, function(c) { return d3.max(c.values, function(v) { return v.capita; }); })
       ]);
+        
+      /* Create Annotation */
+      d3.select("#spending-capita-chart").append("div")
+          .attr("id", "annotation-spending-id")
+          .attr('class','annotation-spending')
+          .style("left", function() {
+              console.log(x(data[53].date))
+              return x(data[53].date) + "px";
+          })
+          .style("top", function() {
+              return $('#spending-capita-chart').position().top + y(data[53]["United States"]) + "px";
+          })
+          .html("In 2013, the U.S. spent nearly $9,000 per person on healthcare.")
+      
+      svgWrapper.append("line")
+        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
+        .style("stroke-width", "3")
+        .attr("x1", function() {
+          return x(data[53].date)+'px';
+        })     // x position of the first end of the line
+        .attr("y1", function() {
+            return y(data[53]["United States"])+'px'
+        })      // y position of the first end of the line
+        .attr("x2", function() {
+          return x(data[53].date) - 98 +'px';
+        })     // x position of the second end of the line
+        .attr("y2", function() {
+          return y(data[53]["United States"]) + 'px';
+        }); 
 
+      /* End Annotation */
+      
       xAxisG = svgWrapper.append("g")
           .attr("class", "x axis")
           .attr("transform", "translate(0," + (height + 10) + ")");
@@ -96,7 +130,7 @@ $(document).ready(function(){
           .attr("x", -height/2)
           .attr("dy", ".71em")
           .style("text-anchor", "middle")
-          .text("US Dollars per Capita");
+          .text("U.S. Dollars per Capita");
 
       country = svgWrapper.selectAll(".country")
           .data(countries)
@@ -146,7 +180,7 @@ $(document).ready(function(){
         div.transition()
           .duration(200)
           .style("opacity", 1);
-        div.html(d.name + ", " + formatDate(d.date) + "<br/>" + "<b>" + d.capita + "</b>" + " US Dollars / Capita")
+        div.html(d.name + ", " + formatDate(d.date) + "<br/>" + "<b>" + d.capita + "</b>" + " U.S. Dollars / Capita")
           .style("left", (d3.event.pageX + 5) + "px")
           .style("top", (d3.event.pageY + 5) + "px");
       })

@@ -99,15 +99,28 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     xScale.domain(data.map(function(d) { return d.Procedure;}));
     yScale.domain([1, maxProcedures]);
     
+
      d3.select('#waste-chart').append("div")
         .attr('class','annotation')
         .style("left", function() {
           return xScale(data[2].Procedure)+'px';
         })
-        .style('top', function() {
+        .style('bottom', 450 +'px')
+        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
+     
+     wasteSVG.append("line")
+        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
+        .style("stroke-width", "3")
+        .attr("x1", function() {
+          return xScale(data[2].Procedure)+ 10+'px';
+        })     // x position of the first end of the line
+        .attr("y1", function() {
             return yScale(data[2].NumberProcedures)+'px'
-        })
-        .text("Brand-name statins waste $5 billion annually.");
+        })      // y position of the first end of the line
+        .attr("x2", function() {
+          return xScale(data[2].Procedure) + 30 +'px';
+        })     // x position of the second end of the line
+        .attr("y2", 54); 
 
     wasteSVG.append("g")
         .attr("class", "xaxis")
@@ -278,6 +291,10 @@ myWindow.on('resize.waste', function() {
 //        .attr("y", function(d) {
 //                return h - 10;
 //        });
+    wasteSVG.select(".annotation")
+        .style("left", function() {
+          return xScale(data[2].Procedure)+'px';
+        })
 });
 
   

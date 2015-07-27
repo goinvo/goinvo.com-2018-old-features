@@ -24,6 +24,22 @@
 - footnotes = []
 - footnote_link = "features/us-healthcare/footnote_link"
   
+%navigation#article-nav
+  %ul
+    %li 
+      %a{:href => "#symptoms"}Symptoms
+    %li 
+      %a{:href => "#history"}History
+    %li 
+      %a{:href => "#diagnosis"}Diagnosis
+    %li 
+      %a{:href => "#prescription"}Prescription
+    %li 
+      %a{:href => "#prognosis"}Prognosis
+    %li 
+      %a{:href => "#authors"}Authors
+    %li 
+      %a{:href => "#references"}References      
 
 %header.jumbotron
   .layer
@@ -32,7 +48,9 @@
     %h3 By Cecile Lu and Neil Rens
 .content-wrapper
   %article#symptoms
-    %h2 Symptoms
+    %h2 
+      %a{:name => "symptoms"}
+      Symptoms
     %p.p-slide
       Two weeks ago, David was going about his daily life. Today he is bedridden in a hospital, battling an infection he contracted in that hospital. In two weeks, he’ll be at home trying to figure out how to pay off his massive
       %span.slide#flip1{:data=>{:index => 1}} medical debt
@@ -161,6 +179,7 @@
   / Line Graph
   %article#history
     %h2 History
+    %a{:name => "history"}
     %p.p-slide
       Despite its shortcomings, the U.S. healthcare system also has strenghts. Medical research, education, and technology flourish in the U.S. However, even these traditional strengths are facing challenges.
     .previous-successes
@@ -207,6 +226,7 @@
   / TABS
   %article#diagnosis
     %h2 Diagnosis
+    %a{:name => "diagnosis"}
     %p.p-slide
       %a{:name => "s29-32b"}
       The healthcare system in the U.S. needs improvement. While healthcare is complex and nuanced, other industrialized countries are performing far better than the U.S.. We spend $8,700 per capita
@@ -233,6 +253,7 @@
       Despite this, we have worse outcomes, lower quality, and more limited access. The Patient Protection and Affordable Care Act initiated much needed comprehensive reforms. However, significant work remains. As the ACA continues to be implemented, it will need to be evaluated and adjusted. Some areas like malpractice reform were not addressed by the ACA and still need reform. But policymakers are not the only ones responsible for improving American healthcare. Patients, providers, payers, and inventors all play a role in changing the status quo.
   %article#prescription
     %h2 Prescription
+    %a{:name => "prescription"}
     %p.p-slide
       A successful healthcare system provides everyone with access to affordable, high quality care. This means that everyone has health insurance and can get care when they need it. It means information about quality and costs is readily available, and people can make informed decisions about the care they purchase.
     %p.p-slide
@@ -264,6 +285,7 @@
   
   %article#opensource
     %h2 Prognosis
+    %a{:name => "prognosis"}
     #open-table
       .row
         .col-sm-4
@@ -298,6 +320,7 @@
             = mail_to "feedback@goinvo.com", "feedback@goinvo", subject: "Healing U.S. Healthcare Feedback"
   %article#authors
     %h2 Authors
+    %a{:name => "authors"}
     #authors-table
       .row
         .col-sm-4
@@ -331,6 +354,7 @@
     </div>
   %article#bibliography
     %h2 Bibliography
+    %a{:name => "references"}
     %ol.references
       -footnotes.each do |footnote|
         %li
