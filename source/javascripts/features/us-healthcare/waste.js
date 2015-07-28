@@ -160,7 +160,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     rectangles.on('mousemove', function(d) {
         tooltip.style('display', 'block');
         d3.select(this)
-                .style("fill", "#346392")
+                .style("fill", "#E0E0E0")
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 1)
