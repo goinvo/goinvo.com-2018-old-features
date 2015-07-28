@@ -107,7 +107,7 @@ $(document).ready(function(){
         
             d3.select(this)
               .style("r", (2+rScale(d.population)))
-              .style("fill", "#383838");
+              .style("fill", "rgb(138, 197, 255)");
         
             tooltip.transition()
                 .duration(200)

@@ -61,7 +61,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
             .on("mouseover", function(d){
 
               d3.select(this)
-                .attr("fill", "#383838")
+                .attr("fill", "rgb(138, 197, 255)")
                 .attr("r", 6)
 
               tooltip.transition()
