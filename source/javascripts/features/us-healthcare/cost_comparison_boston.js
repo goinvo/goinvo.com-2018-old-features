@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 var myWindow = d3.select(window);
-var w = $('#cost-comparison-boston-chart').width();
+var w = window.innerWidth * .95;
 var whRatio = 5/9.6;
-var h = whRatio * w;
+var h = window.innerHeight * .75;
 
 var margin = {top: 20, right: 10, bottom: 50, left: 10},
     width = w - margin.left-margin.right,
@@ -85,9 +85,9 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
 });
     
 var initializeSizes = function(){
-    w = $('#cost-comparison-boston-chart').width();
+    w = window.innerWidth * .95;
     width = w - margin.left - margin.right;
-    height = whRatio * w;
+    height = window.innerHeight * .75;
 
     svg.attr("width", width)
        .attr("height", height);

@@ -5,11 +5,11 @@ var myWindow = d3.select(window);
     
 //var windowW = window.innerWidth;
 //var windowH = window.innerHeight;
-var elementW = $('#waste-container').width();
-var elementH = $('#waste-container').height();
+var elementW = window.innerWidth;
+var elementH = window.innerHeight;
 var margin = {top: 20, right: 30, bottom: 50, left: 30},
     w = .95*elementW - margin.left,
-    h = 400 - margin.bottom;
+    h = elementH * .65;
 
 
 var xScale = d3.scale.ordinal()
@@ -165,10 +165,8 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
                 .duration(200)
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                .style("top", (event.pageY - $(
-            '#waste-chart').position().top + 8) + "px")
-                .style("left", (event.pageX - $(
-            '#waste-chart').position().left + 8) + "px");
+                .style("top", (event.pageY + 8) + "px")
+                .style("left", (event.pageX + 8) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');
@@ -246,9 +244,10 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
 
 
 myWindow.on('resize.waste', function() {
-    var elementW = $('#waste-container').width();
-    w = elementW - margin.left - margin.right,
-    h = 500 - margin.top - margin.bottom; 
+    elementW = window.innerWidth;
+    elementH = window.innerHeight;
+    w = .95*elementW - margin.left,
+    h = elementH * .65; 
 
     xScale.rangeRoundBands([30, w], 0.2);
     yScale.range([h+5, 5]);
@@ -266,10 +265,11 @@ myWindow.on('resize.waste', function() {
         
     wasteSVG
         .select('.xaxis')
+            .attr("transform", "translate(0," + h + ")")
             .call(xAxis)
         .selectAll(".xaxis .tick text")
             .call(wrap, xScale.rangeBand());
-    
+  
     wasteSVG
         .select('.yaxis')
         .call(yAxis)
@@ -282,6 +282,12 @@ myWindow.on('resize.waste', function() {
           return xScale(d.Procedure);
         })
         .attr("width", xScale.rangeBand())
+        .attr("height", function(d) {
+        return h - yScale(d.NumberProcedures);
+        })
+        .attr("y", function(d) {
+          return yScale(d.NumberProcedures);
+        }); 
 
     annotation
         .style("left", function(d) {
