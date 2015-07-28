@@ -158,6 +158,7 @@
             %input#dollarsWasted{:name => "group4", :type => "radio"}/
             %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
     #waste-chart
+  %article#symptoms
     %p.p-slide
       After two days at the hospital, leading to a $5,000 bill, David’s fever spikes and he begins having chest pain. By the end of the week, a simple influenza admission turns into a case of
       %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia
@@ -238,23 +239,24 @@
       The healthcare system in the U.S. needs improvement. While healthcare is complex and nuanced, other industrialized countries are performing far better than the U.S.. We spend $8,700 per capita
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Health Spending", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Data", :access=>"Web"})
       , far more than any other nation.
-    .container
-      %ul.tabs
-        %li.tab-link.current{"data-tab" => "tab-1"} Spending Over Time
-        %li.tab-link{"data-tab" => "tab-2"} Spending vs. GDP
-        %li.tab-link{"data-tab" => "tab-3"} Quality
-      #tab-1.tab-content.current
-        %p.tab_p
-          Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
-        #spending-capita-chart
-      #tab-2.tab-content
-        %p.tab_p
-          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
-          #gdp-vs-capita-chart
-      #tab-3.tab-content
-        %p.tab_p
-          Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
-          #quality-vs-capita-chart
+  .container#triple-graph
+    %ul.tabs
+      %li.tab-link.current{"data-tab" => "tab-1"} Spending Over Time
+      %li.tab-link{"data-tab" => "tab-2"} Spending vs. GDP
+      %li.tab-link{"data-tab" => "tab-3"} Quality
+    #tab-1.tab-content.current
+      %p.tab_p
+        Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+      #spending-capita-chart
+    #tab-2.tab-content
+      %p.tab_p
+        In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+        #gdp-vs-capita-chart
+    #tab-3.tab-content
+      %p.tab_p
+        Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
+        #quality-vs-capita-chart
+  %article#diagnosis
     %p.p-slide
       Despite this, we have worse outcomes, lower quality, and more limited access. The Patient Protection and Affordable Care Act initiated much needed comprehensive reforms. However, significant work remains. As the ACA continues to be implemented, it will need to be evaluated and adjusted. Some areas like malpractice reform were not addressed by the ACA and still need reform. But policymakers are not the only ones responsible for improving American healthcare. Patients, providers, payers, and inventors all play a role in changing the status quo.
   %article#prescription
