@@ -7,12 +7,10 @@ var myWindow = d3.select(window);
 //var windowH = window.innerHeight;
 var elementW = $('#waste-container').width();
 var elementH = $('#waste-container').height();
-var margin = {top: 20, right: 10, bottom: 50, left: 20},
-    w = elementW - margin.left - margin.right,
-    h = 500 - margin.top - margin.bottom;
-var barPadding = 1;
+var margin = {top: 20, right: 30, bottom: 50, left: 30},
+    w = .95*elementW - margin.left,
+    h = 400 - margin.bottom;
 
-var padding = 20;
 
 var xScale = d3.scale.ordinal()
     //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
