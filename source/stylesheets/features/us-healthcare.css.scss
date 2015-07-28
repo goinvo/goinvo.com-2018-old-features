@@ -1,5 +1,6 @@
 /* GENERAL STYLING */
 @import "../base/core";
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,700);
 
 $light-black: #222;
 $light-grey:#ededed;
@@ -54,7 +55,7 @@ $light-blue:#6496c8;
 .jumbotron {
   color: white;
   height: 100vh;
-  padding-top: 250px;
+  padding-top: 300px;
   text-align: center;
   background: url("/images/features/us-healthcare/jumbotron_background.jpg");
   background-size: cover;
@@ -70,7 +71,7 @@ $light-blue:#6496c8;
   height: 100vh;
   top: 0;
   left: 0;
-  padding-top: 200px;
+  padding-top: 40vh;
   position: absolute;
 }
 
@@ -78,21 +79,34 @@ header p{
   text-align: center;
 }
 
+h1 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+}
+
 p {
-    font-size: 20px;
+    font-size: 1.5em;
     display: block;
     margin: 1em 0;
+    line-height: 150%;
     text-align: left;
 }
 
 article, footer {
   width: 70%;
   margin: 0 auto;
-  padding: 0px 0px 20px;
+  padding: 20px 0px 20px;
 }
 
 article h2, article h1, footer {
   text-align: center;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 1.5em;
 }
 
 footer {
@@ -690,13 +704,13 @@ div.tooltip {
   font-size: 16px;
 }
 .decision {
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 .decision p {
   font-size: 16px;
   padding: 0px 20px;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 10px;
 }
 .next{
   display:none;
