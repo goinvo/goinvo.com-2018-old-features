@@ -162,13 +162,13 @@ $(document).ready(function(){
   myWindow.on('resize.qvc', initializeSizes );
  
   
-  $('li[data-tab="tab-2"]').click(function() {
+  $('.tab-link[data-tab="tab-2"]').click(function() {
     points.attr("r", 0);
   });
-  $('li[data-tab="tab-1"]').click(function() {
+  $('.tab-link[data-tab="tab-1"]').click(function() {
     points.attr("r", 0);
   });
-  $('li[data-tab="tab-3"]').click(function() {
+  $('.tab-link[data-tab="tab-3"]').click(function() {
     initialTransition();
     haveWeInitializedYet = true;
   });

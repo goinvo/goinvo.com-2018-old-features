@@ -196,14 +196,14 @@ span.slide {
 
 /* TABS */
 
-#triple-graph li {
+#triple-graph .tab-link {
   padding: 10px;
   background-color: #E0E0E0;
   width: 100%;
   text-align: center;
   vertical-align: center;
   border-radius:8px;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 
@@ -213,11 +213,11 @@ span.slide {
     margin: 0 auto;
 }
 
-#triple-graph li.current {
+#triple-graph .tab-link.current {
   background-color: darken(#E0E0E0,10%);
 }
 
-#triple-graph li:hover {
+#triple-graph .tab-link:hover {
   background-color: lighten(#E0E0E0,5%);
 }
 

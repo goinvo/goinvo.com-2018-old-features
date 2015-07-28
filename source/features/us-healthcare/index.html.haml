@@ -241,14 +241,14 @@
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Health Spending", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Data", :access=>"Web"})
       , far more than any other nation.
   .container#triple-graph
-    %ul.tabs
+    .tabs
       .row
         .col-sm-4
-          %li.tab-link.current{"data-tab" => "tab-1"} Spending Over Time
+          .tab-link.current{"data-tab" => "tab-1"} Spending Over Time
         .col-sm-4
-          %li.tab-link{"data-tab" => "tab-2"} Spending vs. GDP
+          .tab-link{"data-tab" => "tab-2"} Spending vs. GDP
         .col-sm-4
-          %li.tab-link{"data-tab" => "tab-3"} Quality
+          .tab-link{"data-tab" => "tab-3"} Quality
     #tab-1.tab-content.current
       %p.tab_p
         Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.

@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $('ul.tabs li').click(function(){
+  $('.tab-link').click(function(){
     var tab = $(this);
-    $('ul.tabs li, .tab-content').removeClass('current');
+    $('.tab-link, .tab-content').removeClass('current');
     tab.addClass('current');
     $("#"+tab.attr('data-tab')).addClass('current');
   });
