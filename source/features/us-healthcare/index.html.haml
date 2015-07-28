@@ -139,25 +139,25 @@
     = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     %p.p-slide
       Worried that the cardiac event could be related to David’s influenza, the doctor orders an EKG. Unsurprisingly, the EKG shows an arrhythmia, so the doctor admits David for observation. Within the hour, David has a bed, is hooked up to a slew of monitoring equipment, and has a full blood panel done. These tests are unnecessary. Not only do they waste money, but they also reduce the efficiency of the healthcare system.
-    #waste-container.chart-container
+  #waste-container.chart-container
 
-    
-      %h3 Unnecessary testing means resources are being wasted
-      .toggle-btn-grp.cssonly
-        .row
-          .col-sm-4
-            %div
-              %input#totalProcedures{:name => "group4", :type => "radio", :checked => true}/
-              %label.toggle-btn{:for => "totalProcedures"} Total Procedures
-          .col-sm-4
-            %div
-              %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
-              %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended
-          .col-sm-4
-            %div
-              %input#dollarsWasted{:name => "group4", :type => "radio"}/
-              %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
-      #waste-chart
+
+    %h3 Unnecessary testing means resources are being wasted
+    .toggle-btn-grp.cssonly
+      .row
+        .col-sm-4
+          %div
+            %input#totalProcedures{:name => "group4", :type => "radio", :checked => true}/
+            %label.toggle-btn{:for => "totalProcedures"} Total Procedures
+        .col-sm-4
+          %div
+            %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
+            %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended
+        .col-sm-4
+          %div
+            %input#dollarsWasted{:name => "group4", :type => "radio"}/
+            %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
+    #waste-chart
     %p.p-slide
       After two days at the hospital, leading to a $5,000 bill, David’s fever spikes and he begins having chest pain. By the end of the week, a simple influenza admission turns into a case of
       %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia

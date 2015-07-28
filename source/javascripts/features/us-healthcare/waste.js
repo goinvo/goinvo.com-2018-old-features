@@ -7,7 +7,7 @@ var myWindow = d3.select(window);
 //var windowH = window.innerHeight;
 var elementW = $('#waste-container').width();
 var elementH = $('#waste-container').height();
-var margin = {top: 20, right: 0, bottom: 50, left: 10},
+var margin = {top: 20, right: 10, bottom: 50, left: 20},
     w = elementW - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom;
 var barPadding = 1;
@@ -16,7 +16,7 @@ var padding = 20;
 
 var xScale = d3.scale.ordinal()
     //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
-    .rangeRoundBands([100, w], 0.2); // .05 for spacing between bars
+    .rangeRoundBands([30, w], 0.2); // .05 for spacing between bars
 
 var yScale = d3.scale.log()      // Unnecessary
     //.domain([1, d3.max(dataset)])
@@ -139,16 +139,7 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .call(yAxis)
         .attr()
         .style("fill", "black")
-        .attr('transform', 'translate(100,0)')
-        .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", -60)
-        .attr("x", -h/2)
-        .attr("dy", ".71em")
-        .style("text-anchor", "middle")
-        .text("Number of Procedures");
-	
-   
+        .attr('transform', 'translate(30,0)')
 
     var myPoints = wasteSVG.selectAll(".point")
         .data(data).enter()
@@ -261,7 +252,7 @@ myWindow.on('resize.waste', function() {
     w = elementW - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom; 
 
-    xScale.rangeRoundBands([100, w], 0.2);
+    xScale.rangeRoundBands([30, w], 0.2);
     yScale.range([h+5, 5]);
     xAxis.scale(xScale);
     yAxis.scale(yScale)
