@@ -3,7 +3,7 @@ $(document).ready(function(){
     var myWindow = d3.select(window);
     var w = window.innerWidth * .95;
     var whRatio = 5/9.6;
-    var h = window.innerHeight * .65;
+    var h = window.innerHeight * .6;
 
     var margin = {top: 70, right: 50, bottom: 30, left: 70},
         width = w - margin.left - margin.right,
@@ -225,7 +225,7 @@ $(document).ready(function(){
     
   var initializeSizes = function() {
      w = window.innerWidth * .95;
-     h = window.innerHeight * .65;
+     h = window.innerHeight * .6;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;
     
