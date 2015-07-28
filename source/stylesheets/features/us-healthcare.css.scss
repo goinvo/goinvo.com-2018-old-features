@@ -5,7 +5,7 @@
 $light-black: #222;
 $light-grey:#E0E0E0;
 $black : #000;
-$light-blue:#6496c8;
+$light-blue:rgb(138, 197, 255);
 
 #article-nav {
   position: fixed;
@@ -437,7 +437,6 @@ sup {
 .bar_chart {
   color: #fff;
   background-color: $light-blue;
-  text-shadow: -1px 1px #417cb8;
 }
 
 /*
@@ -552,7 +551,6 @@ sup {
 
 .node text {
   pointer-events: none;
-  /*text-shadow: 0 1px 0 #fff;*/
   font: 12px sans-serif;
 }
 
@@ -587,7 +585,6 @@ sup {
   display: inline;
   color: #fff;
   background-color: $light-blue;
-  text-shadow: -1px 1px #417cb8;
   cursor:pointer;
 }
 
@@ -605,27 +602,22 @@ sup {
 
 #perspectives li:hover {
   background-color: #346392;
-  text-shadow: -1px 1px #27496d;
 }
 
 [data-key="patient"].selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-key="provider"].selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-key="policymaker"].selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-key="payer"].selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 .perspective h5 {
@@ -644,50 +636,41 @@ sup {
 }
 #actions li:hover {
   background-color: #346392;
-  text-shadow: -1px 1px #27496d;
 }
 
 
 [data-perspective="patient"] li {
   color: #fff;
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
   border: none;
 }
 
 [data-perspective="provider"] li {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="policymaker"] li {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="payer"] li {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="patient"] li.selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="provider"] li.selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="policymaker"] li.selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 [data-perspective="payer"] li.selected {
   background-color: #27496d;
-  text-shadow: -1px 1px #193047;
 }
 
 
