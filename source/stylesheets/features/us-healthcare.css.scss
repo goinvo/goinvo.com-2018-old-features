@@ -24,7 +24,17 @@ $light-blue:#6496c8;
 #article-nav a {
   color: white;
 }
-
+#nav-dropdown {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  z-index: 12;
+}
+#article-nav %h4 {
+  padding: 15px;
+  background-color: green;
+  color: red;
+}
 
 .jumbotron {
   color: white;

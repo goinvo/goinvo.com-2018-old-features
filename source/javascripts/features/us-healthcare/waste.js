@@ -101,11 +101,14 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     yScale.domain([1, maxProcedures]);
     
 
-     annotation = d3.select('#waste-chart').append("div")
+     annotation = d3.select('#waste-chart')
+        .data(data).enter()
+        .append("div")
         .attr('class','annotation')
         .style("left", function(d) {
-          console.log("start: " + xScale(data[2].Procedure))
-          return xScale(data[2].Procedure)+'px';
+          console.log(d);
+          console.log("start: " + xScale(d.Procedure))
+          return xScale(d.Procedure)+'px';
         })
         .style('bottom', 450 +'px')
         .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
@@ -293,9 +296,9 @@ myWindow.on('resize.waste', function() {
 
     annotation
         .style("left", function(d) {
-          console.log("TEST")
-          console.log("resize: " + xScale(data.Procedure))
-          return xScale(data.Procedure)+'px';
+          console.log("TEST");
+          console.log("resize: " + xScale(d.Procedure))
+          return xScale(d.Procedure)+'px';
         })
 });
 
