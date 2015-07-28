@@ -3,9 +3,8 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,700);
 
 $light-black: #222;
-$light-grey:#ededed;
+$light-grey:#E0E0E0;
 $black : #000;
-$dark-blue: #004363;
 $light-blue:#6496c8;
 
 #article-nav {
@@ -14,6 +13,7 @@ $light-blue:#6496c8;
   width: 100%;
   top: 55px;
   background-color: rgba(0, 0, 0, 0.81);
+  text-align: center;
   box-shadow: 0px -2px 7px;
   z-index: 1000;
 }
@@ -216,7 +216,7 @@ p.tab_p {
 
 #triple-graph .tab-link {
   padding: 10px;
-  background-color: #E0E0E0;
+  background-color: $light-grey;
   width: 100%;
   text-align: center;
   border:solid 1px #fff;
@@ -233,11 +233,11 @@ p.tab_p {
 }
 
 #triple-graph .tab-link.current {
-  background-color: darken(#E0E0E0,10%);
+  background-color: darken($light-grey,10%);
 }
 
 #triple-graph .tab-link:hover {
-  background-color: lighten(#E0E0E0,5%);
+  background-color: lighten($light-grey,5%);
 }
 
 .tab-content{
@@ -473,7 +473,7 @@ sup {
     cursor: pointer;
 }
 .bar {
-    fill: darken(#E0E0E0,10%);
+    fill: darken($light-grey,10%);
 }
 
 /* Bar Chart on Waste: Radio Buttons */
@@ -496,7 +496,7 @@ sup {
     margin: 0 auto;
     padding: 10px;
     color: #000;
-    background-color: #E0E0E0;
+    background-color: $light-grey;
     border:solid 1px #fff;
     cursor:pointer;
     vertical-align: middle;
@@ -535,11 +535,11 @@ sup {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background-color: darken(#E0E0E0,10%);
+    background-color: darken($light-grey,10%);
 }
 
 .toggle-btn:hover {
-  background-color: lighten(#E0E0E0,5%);
+  background-color: lighten($light-grey,5%);
 }
 
 
@@ -705,18 +705,18 @@ sup {
   .decision{
     cursor:pointer;
     flex:1;
-    background-color:#E0E0E0;
+    background-color:$light-grey;
     display:inline-block;
     width:calc(50% - 10px);
     
     &:hover{
-      background-color: lighten(#E0E0E0,5%)
+      background-color: lighten($light-grey,5%)
     }
     &[data-selected="yes"]{
-      background-color:darken(#E0E0E0,10%);
+      background-color:darken($light-grey,10%);
     }
     &[data-selected="no"]{
-      background-color:lighten(#E0E0E0, 5%);
+      background-color:lighten($light-grey, 5%);
     }
     h3{
       height:2em;
