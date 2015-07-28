@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 var myWindow = d3.select(window);
-var w = window.innerWidth * .95;
+var w = window.innerWidth * 1;
 var whRatio = 5/9.6;
 var h = window.innerHeight * .75;
 
@@ -85,7 +85,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
 });
     
 var initializeSizes = function(){
-    w = window.innerWidth * .95;
+    w = window.innerWidth * 1;
     width = w - margin.left - margin.right;
     height = window.innerHeight * .75;
 
