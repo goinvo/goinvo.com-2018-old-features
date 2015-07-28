@@ -104,7 +104,10 @@ $(document).ready(function(){
         .attr("r", 0)
         .attr("cx", function(d){return x(d.capita)})
         .attr("cy", function(d){return y(d.quality)})
-        .attr("fill", "#585858")
+        .attr("fill", function(d) {
+            if (d.capita > 8500) {return "rgb(138, 197, 255)"}
+            else {return "#585858"}
+        ;})
         .on("mouseover", function(d){
         
             d3.select(this)
