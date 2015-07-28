@@ -297,9 +297,6 @@ d3.sankey = function() {
   return sankey;
 };
 
-
-
-
 var units = "Widgets";
 
 var myWindow = d3.select(window);
@@ -313,16 +310,16 @@ var margin = {top: 10, right: 200, bottom: 10, left: 0},
 
 
 var formatNumber = d3.format(",.0f"),    // zero decimal places
-    format = function(d) { return formatNumber(d) + " " + units; },
-    color = d3.scale.category20c(); //color scale
+    format = function(d) { return formatNumber(d) + " " + units; };
 
 // append the svg canvas to the page
-var svg = d3.select("#sankey-chart").append("svg")
+var svg = d3.select("#sankey-chart")
+    .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("height", height + margin.top + margin.bottom);
+
+var g = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
 // Set the sankey diagram properties
 var sankey = d3.sankey()
@@ -332,7 +329,8 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-// load the data (using the timelyportfolio csv method)
+var link, graph, node;
+// load the data
 d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
 
   //set up graph in same style as original example but empty
@@ -369,46 +367,29 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
     .layout(32);
 
 // add in the links
-  var link = svg.append("g").selectAll(".link")
+  link = g.selectAll(".link")
       .data(graph.links)
-    .enter().append("path")
-      .attr("class", "link")
+      .enter().append("path");
+
+  link.attr("class", "link")
       .attr("d", path)
-      .attr('data-key-source', function(d){
-        return d.source.name;
-      })
-      .attr('data-key-target', function(d){
-        return d.target.name;
-      })
+      .attr('data-key-source', function(d){ return d.source.name; })
+      .attr('data-key-target', function(d){ return d.target.name; })
       .style("stroke-width", function(d) { return Math.max(1, d.dy); }) // this changes the size of the stroke depending on value
       .sort(function(a, b) { return b.dy - a.dy; });
 
-// add the link titles
-//  link.append("title")
-//        .text(function(d) {
-//        return nodeMetadata[d.source.name].title + " → " +
-//                nodeMetadata[d.target.name].title; });
-
 // add in the nodes
-  var node = svg.append("g").selectAll(".node")
+  node = g.selectAll(".node")
       .data(graph.nodes)
-    .enter().append("g")
-      .attr("class", "node")
-      .attr('data-key', function(d){
-        return d.name;
-      })
-      .attr("transform", function(d) {
-      return "translate(" + d.x + "," + d.y + ")"; })
-    /* .call(d3.behavior.drag()
-      .origin(function(d) { return d; })
-      .on("dragstart", function() {
-      this.parentNode.appendChild(this); })
-      .on("drag", dragmove));  // this is the stupid drag function that is so unnecessary for this project lol */
+      .enter().append("g");
+    
+  node.attr("class", "node")
+      .attr('data-key', function(d){ return d.name; })
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
 // add the rectangles for the nodes
  node.append("rect")
       .attr("height", function(d) { return d.dy; })
-      //.attr("height", 50)
       .attr("width", sankey.nodeWidth())
       //.style("fill", function(d) {
       //return d.color = color(d.name.replace(/ .*/, "")); })
@@ -447,41 +428,31 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .text(function(d) { return nodeMetadata[d.name].title; })
 
 // the function for moving the nodes
-  function dragmove(d) {
-    d3.select(this).attr("transform",
-        "translate(" + d.x + "," + (
-                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
-            ) + ")");
-    sankey.relayout();
-    link.attr("d", path);
-  }
+//  function dragmove(d) {
+//    d3.select(this).attr("transform",
+//        "translate(" + d.x + "," + (
+//                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+//            ) + ")");
+//    sankey.relayout();
+//    link.attr("d", path);
+//  }
 });
 
-//myWindow.on('resize.sankey', function() {
-//  var elementW = $('#sankey-container').width();
-//    w = elementW - margin.left - margin.right,
-//    h = 600 - margin.top - margin.bottom
-//    console.log('windowW='+elementW+", w="+w);
-//  
-//  svg
-//    .attr("width", width + margin.left + margin.right)
-//    .attr("height", height + margin.top + margin.bottom);
-//  
-//  sankey.size([width, height])
-//    .nodes(graph.nodes)
-//    .links(graph.links)
-//    .layout(32);
-//  
-//  link.data(graph.links)
-//      .enter().append("path")
-//      .attr("class", "link")
-//      .attr("d", path);
-//  
-//  node.attr("width", sankey.nodeWidth())
-//
-//
-//});
-//  
-//  
+var initializeSizes = function(){
+    elementW = $('#sankey-container').width();
+    elementH = $('#sankey-container').height();   
+    width = elementW - margin.left - margin.right;
+    height = 600 - margin.top - margin.bottom;
+    
+    svg.attr("width", elementW)
+       .attr("height", 600);
+    
+    sankey.size([width, height]);
+    path = sankey.link();
+    
+    node.selectAll(".node").attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    link.selectAll(".link").attr("d", path);
+}
 
+myWindow.on('resize.sankey', initializeSizes );
 });

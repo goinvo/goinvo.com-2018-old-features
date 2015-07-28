@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var myWindow = d3.select(window);
-    var w = document.documentElement.clientWidth * .7;
+    var w = $('#spending-capita-chart').width();
     var whRatio = 5/9.6;
     var h = whRatio * w;
 
@@ -224,7 +224,7 @@ $(document).ready(function(){
     });
     
   var initializeSizes = function() {
-     w =  document.documentElement.clientWidth * .7;
+     w = $('#spending-capita-chart').width();
      h = whRatio * w;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;

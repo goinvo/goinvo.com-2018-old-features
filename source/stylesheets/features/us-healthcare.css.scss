@@ -116,7 +116,7 @@ ul.tabs li.current{
 
 .tab-content{
     display: none;
-    background: $light-grey;
+    background: #fff;
     padding: 15px;
 }
 
@@ -156,7 +156,7 @@ span.slide {
   font-weight: 600;
   background-color: rgba(242, 224, 84, 0.55);
   cursor: pointer;
-  padding:0 5px;
+  padding:0 2px;
 }
 
 .embed-extra-info {
@@ -191,6 +191,7 @@ span.slide {
 /********* CECILE'S GRAPHS *********/
 #spending-capita-chart {
     margin: auto;
+    width: 100%;
 }
 
 #gdp-vs-capita-chart {

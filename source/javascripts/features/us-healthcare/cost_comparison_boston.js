@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 var myWindow = d3.select(window);
-var w = document.documentElement.clientWidth * .7;
+var w = $('#cost-comparison-boston-chart').width();
 var whRatio = 5/9.6;
 var h = whRatio * w;
 
-var margin = {top: 20, right: 0, bottom: 50, left: 10},
+var margin = {top: 20, right: 10, bottom: 50, left: 10},
     width = w - margin.left-margin.right,
     height = h;
                                                                          
@@ -57,11 +57,11 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
               return albersProjection([d.lon, d.lat])[1];
             })
             .attr("r", 4)
-            .attr("fill", "#004363")
+            .attr("fill", "#585858")
             .on("mouseover", function(d){
 
               d3.select(this)
-                .attr("fill", "D9C6E1")
+                .attr("fill", "#383838")
                 .attr("r", 6)
 
               tooltip.transition()
@@ -74,7 +74,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
 
             .on("mouseout", function(){
               d3.select(this)
-                .attr("fill", "#004363")
+                .attr("fill", "#585858")
                 .attr("r", 4)
               tooltip.transition()
                 .duration(500)
@@ -85,7 +85,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
 });
     
 var initializeSizes = function(){
-    w =  document.documentElement.clientWidth * .7;
+    w = $('#cost-comparison-boston-chart').width();
     width = w - margin.left - margin.right;
     height = whRatio * w;
 
