@@ -8,23 +8,37 @@ $dark-blue: #004363;
 $light-blue:#6496c8;
 
 #article-nav {
-  display: inline;
-  list-style-type: none;
-  padding-right: 20px;
-  padding-top: 63px;
   position: fixed;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  top: 55px;
+  background-color: rgba(0, 0, 0, 0.81);
+  box-shadow: 0px -2px 7px;
+  z-index: 1000;
+}
+
+#article-nav ul {
+  margin: 0 auto;
 }
 
 #article-nav li {
-  background-color: rgba(0, 0, 0, 0.81);
-  display: inline;
-  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  width: 14%;
+  text-align: center;
+  margin: auto;
+  padding: 8px;
 }
 
 #article-nav a {
-  color: white;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  &:hover {
+      color:rgba(255,255,255,1);
+      text-decoration: none;
+  }
 }
+
 #nav-dropdown {
   background-color: red;
   height: 200px;
