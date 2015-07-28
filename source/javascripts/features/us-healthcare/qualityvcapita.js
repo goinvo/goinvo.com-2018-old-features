@@ -104,12 +104,12 @@ $(document).ready(function(){
         .attr("r", 0)
         .attr("cx", function(d){return x(d.capita)})
         .attr("cy", function(d){return y(d.quality)})
-        .attr("fill", "#004363")
+        .attr("fill", "#585858")
         .on("mouseover", function(d){
         
             d3.select(this)
               .style("r", (2+rScale(d.population)))
-              .style("fill", "#D9C6E1");
+              .style("fill", "#383838");
         
             tooltip.transition()
                 .duration(200)

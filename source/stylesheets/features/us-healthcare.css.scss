@@ -154,11 +154,16 @@ ul.tabs li.current{
 /* SLIDE DOWN */
 .slide-panel {
   display:none;
-  background-color: $light-grey;
+  background-color: #fff;
   margin: auto;
-  padding-top: 10px;
   text-align: left;
-  padding: 2% 5%;
+  padding: 0% 5%;
+  padding-top: 10px;
+  padding-bottom: 75px;
+}
+
+.slide-panel p {
+  font-size: 16px;
 }
 
 
@@ -166,7 +171,7 @@ span.slide {
   font-weight: 600;
   background-color: rgba(242, 224, 84, 0.55);
   cursor: pointer;
-  padding:0 2px;
+  padding:0 5px;
 }
 
 .embed-extra-info {
@@ -201,7 +206,6 @@ span.slide {
 /********* CECILE'S GRAPHS *********/
 #spending-capita-chart {
     margin: auto;
-    width: 100%;
 }
 
 #gdp-vs-capita-chart {
@@ -634,25 +638,25 @@ div.tooltip {
   color: white;
 }
 .decision-point{
-  background-color:$light-grey;
+  background-color:#fff;
 }
 .decision-container{
   display:flex;
   .decision{
     cursor:pointer;
     flex:1;
-    background-color:$light-blue;
+    background-color:#E0E0E0;
     display:inline-block;
     width:calc(50% - 10px);
     
     &:hover{
-      background-color: lighten($light-blue,20%)
+      background-color: lighten(#E0E0E0,5%)
     }
     &[data-selected="yes"]{
-      background-color:darken($light-blue,20%);
+      background-color:darken(#E0E0E0,10%);
     }
     &[data-selected="no"]{
-      background-color:lighten($light-blue, 30%);
+      background-color:lighten(#E0E0E0, 5%);
     }
     h3{
       height:2em;
@@ -661,21 +665,32 @@ div.tooltip {
   }
 }
 .decision, .next, .outcome{
-  padding:10px;
-  margin:15px;
+  margin:10px;
+  font-size: 15px;
+}
+.decision {
+  padding: 10px;
+  border-radius: 10px;
+}
+.decision p {
+  font-size: 15px;
+  padding: 0px 20px;
 }
 .next{
   display:none;
+  padding: 5px 20px 50px;
 }
 .outcome{
   display:none;
+  padding: 5px 20px;
   &[data-outcome="positive"]{
-    background-color:green;
+    background-color:#fff;
   }
   &[data-outcome="negative"]{
-    background-color:lighten(red,40%);
+    background-color:#fff;
   }
 }
+
 
 
 .social-buttons {
