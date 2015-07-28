@@ -364,6 +364,20 @@ div.tooltip {
   line-height: 125%;
 }
 
+sup {
+     vertical-align: baseline;
+   position: relative;
+   top: -0.6em;
+ font-size: 12px;
+}
+
+.slide-panel sup{
+     vertical-align: baseline;
+   position: relative;
+   top: -0.5em;
+ font-size: 10px;
+}
+
 /* FOOTER */
 .circle {
     display: block;
