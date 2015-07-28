@@ -5,7 +5,9 @@
 $light-black: #222;
 $light-grey:#E0E0E0;
 $black : #000;
-$light-blue:rgb(138, 197, 255);
+$light-blue:rgba(138, 197, 255,.5);
+$light-blue-hover:rgba(138, 197, 255,1);
+$light-blue-selected: darken(rgba(138, 197, 255,1),10%);
 
 #article-nav {
   position: fixed;
@@ -568,10 +570,10 @@ sup {
 }
 */
 .link[data-highlight="forwards"]{
-  stroke: #5A97C9;
+  stroke: $light-blue-hover;
 } 
 .link[data-highlight="backwards"]{
-  stroke: #5A97C9;
+  stroke: $light-blue-hover;
 } 
 
 
@@ -583,7 +585,7 @@ sup {
   height: 100px;
   text-align: center;
   display: inline;
-  color: #fff;
+  color: #000;
   background-color: $light-blue;
   cursor:pointer;
 }
@@ -601,23 +603,23 @@ sup {
 }
 
 #perspectives li:hover {
-  background-color: #346392;
+  background-color: $light-blue-hover;
 }
 
 [data-key="patient"].selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-key="provider"].selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-key="policymaker"].selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-key="payer"].selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 .perspective h5 {
@@ -635,42 +637,45 @@ sup {
   cursor:pointer;
 }
 #actions li:hover {
-  background-color: #346392;
+  background-color: darken($light-blue-selected,10%);
 }
-
 
 [data-perspective="patient"] li {
   color: #fff;
-  background-color: #27496d;
+  background-color: $light-blue-selected;
   border: none;
 }
 
+[data-perspective="patient"] li.selected{
+  background-color:darken($light-blue-selected,10%);
+}
+
 [data-perspective="provider"] li {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="policymaker"] li {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="payer"] li {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="patient"] li.selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="provider"] li.selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="policymaker"] li.selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 [data-perspective="payer"] li.selected {
-  background-color: #27496d;
+  background-color: $light-blue-selected;
 }
 
 
