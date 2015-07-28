@@ -136,56 +136,7 @@ h3 {
 //  padding-right: 2.5%;
 }
 
-/* TABS */
 
-.container{
-    width: 100%;
-    padding: 0px;
-    margin: 0 auto;
-}
-
-ul.tabs{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-ul.tabs li{
-    background: none;
-    color: $light-black;
-    display: inline-block;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-ul.tabs li.current{
-    background: $light-grey;
-    color: $light-black;
-}
-
-.tab-content{
-    display: none;
-    background: #fff;
-    padding: 15px;
-}
-
-.tab-content.current{
-    display: inherit;
-}
-
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-}
-.embed-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 
 
@@ -246,6 +197,45 @@ span.slide {
   width: 95%;
   max-height: 70%;
 }
+
+
+/* TABS */
+
+#triple-graph li {
+  padding: 10px;
+  background-color: $light-blue;
+  width: 100%;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+#triple-graph li.current {
+  background-color: #27496d;
+}
+
+#triple-graph li:hover {
+  background-color: #346392;
+}
+
+.tab-content{
+    display: none;
+    background: #fff;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+/* end tabs */
 
 #spending-capita-chart {
     margin: auto;
