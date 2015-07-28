@@ -81,7 +81,11 @@ function wrap(text, width) {
       })
       .attr("y", function(d) {
         return yScale(d.NumberProcedures);
-      }); 
+      })
+      .style("fill", function(d) {
+           if (d.Waste  > 4000000000) {return "rgb(138, 197, 255)"}
+           else {return "darken(#E0E0E0,10%)"}
+       ;})
   }
 
 d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
