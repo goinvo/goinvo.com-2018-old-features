@@ -108,7 +108,11 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
           console.log("start: " + xScale(d.Procedure))
           return xScale(d.Procedure)+'px';
         })
-        .style('bottom', 450 +'px')
+        .style('bottom', function(d) {
+          console.log(d);
+          console.log("start: " + yScale(d.NumberProcedures))
+          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
+        })
         .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
      
      wasteSVG.append("line")
