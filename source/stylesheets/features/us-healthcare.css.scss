@@ -54,11 +54,14 @@ $light-blue:#6496c8;
 .jumbotron {
   color: white;
   height: 100vh;
-  border-radius: 0px;
   padding-top: 250px;
   text-align: center;
-  background-image: url("/images/features/us-healthcare/jumbotron_background.jpg");
+  background: url("/images/features/us-healthcare/jumbotron_background.jpg");
   background-size: cover;
+}
+
+.container .jumbotron{
+    border-radius: 0px;
 }
 
 .layer {
