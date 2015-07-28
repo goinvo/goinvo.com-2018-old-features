@@ -71,6 +71,7 @@ function wrap(text, width) {
   });
 }
   
+  var annotation;
   var rectangles;
   
   var initialTransition = function() {
@@ -100,9 +101,10 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     yScale.domain([1, maxProcedures]);
     
 
-     d3.select('#waste-chart').append("div")
+     annotation = d3.select('#waste-chart').append("div")
         .attr('class','annotation')
-        .style("left", function() {
+        .style("left", function(d) {
+          console.log("start: " + xScale(data[2].Procedure))
           return xScale(data[2].Procedure)+'px';
         })
         .style('bottom', 450 +'px')
@@ -255,7 +257,6 @@ myWindow.on('resize.waste', function() {
     var elementW = $('#waste-container').width();
     w = elementW - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom; 
-    console.log('windowW='+elementW+", w="+w);
 
     xScale.rangeRoundBands([100, w], 0.2);
     yScale.range([h+5, 5]);
@@ -285,15 +286,16 @@ myWindow.on('resize.waste', function() {
     rectangles
         .attr("width", xScale.rangeBand())
         .attr("x", function(d, i) {
-        return xScale(d.Procedure);
+          console.log(xScale(d.Procedure))
+          return xScale(d.Procedure);
         })
         .attr("width", xScale.rangeBand())
-//        .attr("y", function(d) {
-//                return h - 10;
-//        });
-    wasteSVG.select(".annotation")
-        .style("left", function() {
-          return xScale(data[2].Procedure)+'px';
+
+    annotation
+        .style("left", function(d) {
+          console.log("TEST")
+          console.log("resize: " + xScale(data.Procedure))
+          return xScale(data.Procedure)+'px';
         })
 });
 
