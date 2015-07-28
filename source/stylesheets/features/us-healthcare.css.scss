@@ -114,6 +114,21 @@ h3 {
     font-size: 1.25em;
 }
 
+a:link {
+    color: #585858;
+}
+a:visited{
+    color: #585858;
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+a:hover {
+    color: #383838;
+    text-decoration: none;
+}
+
 /* TABLE */
 
 .previous-successes {
