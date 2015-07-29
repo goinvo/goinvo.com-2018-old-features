@@ -306,7 +306,7 @@ var elementW = $('#sankey-container').width();
 var elementH = $('#sankey-container').height();   
 var margin = {top: 10, right: 0, bottom: 30, left: 0},
     width = elementW - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
 
 var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -454,7 +454,7 @@ var initializeSizes = function(){
     elementW = $('#sankey-container').width();
     elementH = $('#sankey-container').height();   
     width = elementW - margin.left - margin.right;
-    height = 600 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
     
     svg.attr("width", elementW)
        .attr("height", 600);
