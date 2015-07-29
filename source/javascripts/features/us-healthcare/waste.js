@@ -177,7 +177,7 @@ $( document ).ready(function() {
           tooltip.style('display', 'block');
           var recTip = $(this)
           d3.select(this)
-                  .style("fill", "rgb(138, 197, 255)")
+                  .style("fill", "rgb(142, 175, 208)")
               tooltip.transition()
                   .duration(200)
                   .style("opacity", 1)
