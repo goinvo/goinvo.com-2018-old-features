@@ -103,22 +103,22 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     yScale.domain([1, maxProcedures]);
     
 
-//     annotation = d3.select('#waste-chart')
-//        .data(data).enter()
-//        .append("div")
-//        .attr('class','annotation')
-//        .style("left", function(d) {
-//          console.log(d);
-//          console.log("start: " + xScale(d.Procedure))
-//          return xScale(d.Procedure)+'px';
-//        })
-//        .style('bottom', function(d) {
-//          console.log(d);
-//          console.log("start: " + yScale(d.NumberProcedures))
-//          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
-//        })
-//        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
-//     
+     annotation = d3.select('#waste-chart')
+        .data(data).enter()
+        .append("div")
+        .attr('class','annotation')
+        .style("left", function(d) {
+          console.log(d);
+          console.log("start: " + xScale(d.Procedure))
+          return xScale(d.Procedure)+'px';
+        })
+        .style('bottom', function(d) {
+          console.log(d);
+          console.log("start: " + yScale(d.NumberProcedures))
+          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
+        })
+        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
+     
      wasteSVG.append("line")
         .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
         .style("stroke-width", "3")
@@ -138,7 +138,11 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
         .attr("transform", "translate(0," + h + ")")
         .call(xAxis)
         .selectAll(".tick text")
-        .call(wrap, xScale.rangeBand());
+        .call(wrap, xScale.rangeBand())
+        .style("opacity", function() {
+            if (elementW > 700) { return 1;
+            } else { return 0;
+            }});
 
     var myAxis = wasteSVG.append("g")
         .attr("class", "yaxis")
@@ -255,11 +259,16 @@ myWindow.on('resize.waste', function() {
     elementW = window.innerWidth;
     elementH = window.innerHeight;
     w = .95*elementW - margin.left,
-    h = elementH * .65; 
+    h = elementH * .65;
 
     xScale.rangeRoundBands([30, w], 0.2);
     yScale.range([h+5, 5]);
     xAxis.scale(xScale);
+    d3.selectAll("xaxis").selectAll(".tick text")
+      .style("opacity", function() {
+            if (elementW > 700) { return 1;
+            } else { return 0;
+            }});
     yAxis.scale(yScale)
       .tickFormat(function (d) {
         return yScale.tickFormat(4,d3.format("s"))(d)
