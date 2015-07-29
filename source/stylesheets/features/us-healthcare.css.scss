@@ -134,6 +134,7 @@ a:hover {
 
 
 #cost-comparison-boston-chart {
+  position: relative;
 //  padding-left: 2.5%;
 //  padding-right: 2.5%;
 }
@@ -357,6 +358,7 @@ div.tooltip {
   border-color: gray;
   border-radius: 3px;
   pointer-events: none;
+  z-index: 100;
 }
 .annotation{
     background-color:rgba(213, 230, 245, 0.76);
