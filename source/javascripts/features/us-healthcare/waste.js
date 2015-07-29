@@ -14,7 +14,7 @@ $( document ).ready(function() {
   var elementW = window.innerWidth;
   var elementH = window.innerHeight;
   var margin = {top: 20, right: 0, bottom: 50, left: 30},
-      w = 1*elementW - margin.left,
+      w = elementW - margin.left - margin.right,
       h = elementH * .65;
 
 
@@ -263,7 +263,7 @@ $( document ).ready(function() {
   myWindow.on('resize.waste', function() {
       elementW = window.innerWidth;
       elementH = window.innerHeight;
-      w = .95*elementW - margin.left,
+      w = elementW - margin.left,
       h = elementH * .65;
 
       xScale.rangeRoundBands([30, w], 0.2);
