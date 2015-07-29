@@ -264,7 +264,7 @@ myWindow.on('resize.waste', function() {
     xScale.rangeRoundBands([30, w], 0.2);
     yScale.range([h+5, 5]);
     xAxis.scale(xScale);
-    d3.selectAll("xaxis").selectAll(".tick text")
+    d3.selectAll(".xaxis").selectAll(".tick text")
       .style("opacity", function() {
             if (elementW > 700) { return 1;
             } else { return 0;
