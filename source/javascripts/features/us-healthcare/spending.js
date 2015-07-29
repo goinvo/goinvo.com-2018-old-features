@@ -84,33 +84,33 @@ $(document).ready(function(){
       ]);
         
       /* Create Annotation */
-      d3.select("#spending-capita-chart").append("div")
-          .attr("id", "annotation-spending-id")
-          .attr('class','annotation-spending')
-          .style("left", function() {
-              console.log(x(data[53].date))
-              return x(data[53].date) - 100 + "px";
-          })
-          .style("top", function() {
-              return $('#spending-capita-chart').position().top + y(data[53]["United States"]) + "px";
-          })
-          .html("In 2013, the U.S. spent nearly $9,000 per person on healthcare.")
-      
-      svgWrapper.append("line")
-        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
-        .style("stroke-width", "3")
-        .attr("x1", function() {
-          return x(data[53].date)+'px';
-        })     // x position of the first end of the line
-        .attr("y1", function() {
-            return y(data[53]["United States"])+'px'
-        })      // y position of the first end of the line
-        .attr("x2", function() {
-          return x(data[53].date) - 98 +'px';
-        })     // x position of the second end of the line
-        .attr("y2", function() {
-          return y(data[53]["United States"]) + 'px';
-        }); 
+//      d3.select("#spending-capita-chart").append("div")
+//          .attr("id", "annotation-spending-id")
+//          .attr('class','annotation-spending')
+//          .style("left", function() {
+//              console.log(x(data[53].date))
+//              return x(data[53].date) - 100 + "px";
+//          })
+//          .style("top", function() {
+//              return $('#spending-capita-chart').position().top + y(data[53]["United States"]) + "px";
+//          })
+//          .html("In 2013, the U.S. spent nearly $9,000 per person on healthcare.")
+//      
+//      svgWrapper.append("line")
+//        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
+//        .style("stroke-width", "3")
+//        .attr("x1", function() {
+//          return x(data[53].date)+'px';
+//        })     // x position of the first end of the line
+//        .attr("y1", function() {
+//            return y(data[53]["United States"])+'px'
+//        })      // y position of the first end of the line
+//        .attr("x2", function() {
+//          return x(data[53].date) - 98 +'px';
+//        })     // x position of the second end of the line
+//        .attr("y2", function() {
+//          return y(data[53]["United States"]) + 'px';
+//        }); 
 
       /* End Annotation */
       
