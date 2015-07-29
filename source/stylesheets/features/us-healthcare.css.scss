@@ -268,12 +268,12 @@ p.tab_p {
 }
 
 //remove sankey when mobile
-//#sankey-chart {
-//    margin: auto;
-//    @media only screen and (max-width: 768px){
-//        display: none;
-//    }
-//}
+#sankey-chart {
+    margin: auto;
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}
 
 .axis path,
 .axis line {

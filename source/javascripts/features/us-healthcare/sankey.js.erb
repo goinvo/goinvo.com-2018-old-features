@@ -304,7 +304,7 @@ var myWindow = d3.select(window);
 // set canvas size
 var elementW = $('#sankey-container').width();
 var elementH = $('#sankey-container').height();   
-var margin = {top: 10, right: 0, bottom: 10, left: 0},
+var margin = {top: 10, right: 0, bottom: 30, left: 0},
     width = elementW - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -424,7 +424,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
       .attr("dx", "-.70em")
       .attr("stroke", "black")
       .attr("stroke-width", ".3px")
-      .attr("text-anchor", function(d){ return d.source == null ? "end" : "start" }) // position of text
+      .attr("text-anchor", "end") // position of text
       .text(function(d) { return nodeMetadata[d.name].title; })
     
     node.append("text")
@@ -436,7 +436,7 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
         .attr("stroke", "black")
         .attr("stroke-width", ".3px")
         .attr("text-anchor", "start")
-        .text(function(d) { return nodeMetadata[d.name].righttitle;})
+        .text(function(d) { return nodeMetadata[d.name].title2;})
     
 
 // the function for moving the nodes
