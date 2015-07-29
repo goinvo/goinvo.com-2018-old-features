@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   var myWindow = d3.select(window);  
-  var w =  window.innerWidth * 1;
+  var w =  window.innerWidth;
   var whRatio = 5/9.6;
   var h = window.innerHeight * .6;
 
-  var margin = {top: 10, right: 0, bottom: 70, left: 70},
+  var margin = {top: 10, right: 10, bottom: 70, left: 70},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -104,13 +104,24 @@ $(document).ready(function(){
         .attr("r", 0)
         .attr("cx", function(d){return x(d.gdp)})
         .attr("cy", function(d){return y(d.capita)})
-        .attr("fill", function(d) {
-            if (d.capita > 8500) {return "rgb(138, 197, 255)"}
-            else {return "#585858"}
-        ;})
+        .attr("fill", "#585858")
         .on("mouseover", function(d){
         
             d3.select(this)
+              .style("r", (2+rScale(d.population)))
+              .style("fill", "rgb(138, 197, 255)");
+        
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 1);
+        
+            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
+                .style("left", (d3.event.pageX - 30) + "px")
+                .style("top", (d3.event.pageY + 20) + "px");
+        })
+        
+        .on("click", function(d){
+          d3.select(this)
               .style("r", (2+rScale(d.population)))
               .style("fill", "rgb(138, 197, 255)");
         
@@ -135,7 +146,7 @@ $(document).ready(function(){
   });
     
   var initializeSizes = function() {
-     w =  window.innerWidth * 1;
+     w =  window.innerWidth;
      h = window.innerHeight * .6;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;

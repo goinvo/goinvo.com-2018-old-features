@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   var myWindow = d3.select(window);  
-  var w =  window.innerWidth * 1;
+  var w =  window.innerWidth;
   var whRatio = 5/9.6;
   var h = window.innerHeight * .6;
 
-  var margin = {top: 10, right: 0, bottom: 40, left: 50},
+  var margin = {top: 10, right: 10, bottom: 40, left: 50},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -136,7 +136,7 @@ $(document).ready(function(){
   });
     
   var initializeSizes = function() {
-     w = window.innerWidth * 1;
+     w = window.innerWidth;
      h = window.innerHeight * .6;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;
