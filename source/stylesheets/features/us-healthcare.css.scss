@@ -575,7 +575,7 @@ sup {
 
 .link {
   fill: none;
-  stroke: #d3d3d3;
+  stroke: $light-grey;
   stroke-opacity: .5;
 }
 
@@ -698,7 +698,7 @@ sup {
 
 .individual-action p {
   margin: auto;
-  font-size: 10px;
+  font-size: 0.8em;
   text-align: center;
   color: white;
 }

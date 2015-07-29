@@ -1,16 +1,16 @@
 {
 	"universal_access":{
-		"title":"Universal Access",
+        "righttitle":"Universal Access",
 		"description":"",
 		"impacts":[]
 	},
 	"perfect_quality":{
-		"title": "Near Perfect Quality",
+        "righttitle": "Near Perfect Quality",
 		"description":"",
 		"impacts":[]
 	},
 	"better_prices":{
-		"title": "Much Better Prices",
+        "righttitle": "Much Better Prices",
 		"description": "",
 		"impacts":[]
 	},

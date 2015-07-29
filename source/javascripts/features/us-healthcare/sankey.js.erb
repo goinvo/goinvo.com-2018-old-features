@@ -304,7 +304,7 @@ var myWindow = d3.select(window);
 // set canvas size
 var elementW = $('#sankey-container').width();
 var elementH = $('#sankey-container').height();   
-var margin = {top: 10, right: 200, bottom: 10, left: 0},
+var margin = {top: 10, right: 0, bottom: 10, left: 0},
     width = elementW - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -417,15 +417,27 @@ d3.csv("/features/us-healthcare/data/sankey.csv", function(error, data) {
 
 
     node.append("text")
+      .attr("class", "left-label")
       .attr("y", function(d) {return d.dy / 2; })
       .attr("x", function(d) {return d.dx / 2; })
       .attr("dy", ".35em")
-      .attr("dx", ".75em")
+      .attr("dx", "-.70em")
       .attr("stroke", "black")
       .attr("stroke-width", ".3px")
-      .attr("text-anchor", "start") // position of text
-      //.style("font-size", function(d) {return Math.max(10, d.dy/5) ; }) //font size depends on bar size, unless the text is too small
+      .attr("text-anchor", function(d){ return d.source == null ? "end" : "start" }) // position of text
       .text(function(d) { return nodeMetadata[d.name].title; })
+    
+    node.append("text")
+        .attr("class", "right-label")
+        .attr("y", function(d) {return d.dy / 2;})
+        .attr("x", function(d) {return d.dx / 2;})
+        .attr("dy", ".35em")
+        .attr("dx", ".70em")
+        .attr("stroke", "black")
+        .attr("stroke-width", ".3px")
+        .attr("text-anchor", "start")
+        .text(function(d) { return nodeMetadata[d.name].righttitle;})
+    
 
 // the function for moving the nodes
 //  function dragmove(d) {
