@@ -7,8 +7,8 @@ var myWindow = d3.select(window);
 //var windowH = window.innerHeight;
 var elementW = window.innerWidth;
 var elementH = window.innerHeight;
-var margin = {top: 20, right: 30, bottom: 50, left: 30},
-    w = .95*elementW - margin.left,
+var margin = {top: 20, right: 0, bottom: 50, left: 30},
+    w = 1*elementW - margin.left,
     h = elementH * .65;
 
 
@@ -173,8 +173,8 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
                 .duration(200)
                 .style("opacity", 1)
             tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                .style("top", (event.pageY + 8) + "px")
-                .style("left", (event.pageX + 8) + "px");
+                .style("top", (event.pageY + 20) + "px")
+                .style("left", (event.pageX - 30) + "px");
     });
     rectangles.on('mouseout', function() {
         tooltip.style('display', 'none');

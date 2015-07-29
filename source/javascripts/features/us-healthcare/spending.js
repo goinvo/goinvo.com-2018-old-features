@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
     var myWindow = d3.select(window);
-    var w = window.innerWidth * .95;
+    var w = window.innerWidth * 1;
     var whRatio = 5/9.6;
     var h = window.innerHeight * .6;
 
-    var margin = {top: 70, right: 50, bottom: 30, left: 70},
+    var margin = {top: 10, right: 0, bottom: 30, left: 60},
         width = w - margin.left - margin.right,
         height = h - margin.top - margin.bottom;
 
@@ -71,8 +71,10 @@ $(document).ready(function(){
         };
       });
 
-      x.domain(d3.extent(data, function(d) { 
-        return d.date; }));
+//      x.domain(d3.extent(data, function(d) { 
+//        return d.date; }));
+      x.domain([d3.min(data, function(d) { return d.date; }), d3.max(data, function(d) { console.log(d.date); return d.date;})]);
+
 
       y.domain([
         d3.min(countries, function(c) { 
@@ -87,7 +89,7 @@ $(document).ready(function(){
           .attr('class','annotation-spending')
           .style("left", function() {
               console.log(x(data[53].date))
-              return x(data[53].date) + "px";
+              return x(data[53].date) - 100 + "px";
           })
           .style("top", function() {
               return $('#spending-capita-chart').position().top + y(data[53]["United States"]) + "px";
@@ -181,8 +183,8 @@ $(document).ready(function(){
           .duration(200)
           .style("opacity", 1);
         div.html(d.name + ", " + formatDate(d.date) + "<br/>" + "<b>" + d.capita + "</b>" + " U.S. Dollars / Capita")
-          .style("left", (d3.event.pageX + 5) + "px")
-          .style("top", (d3.event.pageY + 5) + "px");
+          .style("left", (d3.event.pageX -30) + "px")
+          .style("top", (d3.event.pageY + 20) + "px");
       })
       
       .on("mouseout", function(d) {
@@ -224,7 +226,7 @@ $(document).ready(function(){
     });
     
   var initializeSizes = function() {
-     w = window.innerWidth * .95;
+     w = window.innerWidth * 1;
      h = window.innerHeight * .6;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;

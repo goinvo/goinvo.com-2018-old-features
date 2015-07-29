@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   var myWindow = d3.select(window);  
-  var w =  window.innerWidth * .95;
+  var w =  window.innerWidth * 1;
   var whRatio = 5/9.6;
   var h = window.innerHeight * .6;
 
-  var margin = {top: 70, right: 50, bottom: 60, left: 50},
+  var margin = {top: 10, right: 0, bottom: 40, left: 50},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -59,7 +59,8 @@ $(document).ready(function(){
           d.population = +d.population;
       });
 
-      x.domain(d3.extent(data, function(d) { return d.capita; }));
+//      x.domain(d3.extent(data, function(d) { return d.capita; }));
+      x.domain([d3.min(data, function(d) { return d.capita; }), d3.max(data, function(d) { return d.capita + 200;})]);
       y.domain(d3.extent(data, function(d) { return d.quality; }));
       rScale.domain(d3.extent(data, function(d) { return d.population;}));
 
@@ -119,8 +120,8 @@ $(document).ready(function(){
                 .style("opacity", 1);
         
             tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d3.format("$,")(d.capita) + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", (d3.event.pageX + 5) + "px")
-                .style("top", (d3.event.pageY + 5) + "px");
+                .style("left", (d3.event.pageX -30) + "px")
+                .style("top", (d3.event.pageY + 20) + "px");
         })
       
         .on("mouseout", function(d) {
@@ -135,7 +136,7 @@ $(document).ready(function(){
   });
     
   var initializeSizes = function() {
-     w = window.innerWidth * .95;
+     w = window.innerWidth * 1;
      h = window.innerHeight * .6;
      width = w - margin.left - margin.right;
      height = h - margin.top - margin.bottom;

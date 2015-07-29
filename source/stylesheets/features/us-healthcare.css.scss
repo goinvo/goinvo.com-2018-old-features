@@ -85,7 +85,7 @@ h1 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 600;
   font-size: 3em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.03em;
 }
 
 p {
@@ -206,7 +206,7 @@ span.slide {
 
 /********* CECILE'S GRAPHS *********/
 #triple-graph {
-  width: 95%;
+  width: 100%;
   max-height: 70%;
 }
 
@@ -215,6 +215,7 @@ p.tab_p {
 }
 
 /* TABS */
+
 
 #triple-graph .tab-link {
   padding: 10px;
@@ -228,10 +229,17 @@ p.tab_p {
   cursor: pointer;
 }
 
+#triple-graph .col-sm-4{
+  padding: 0;
+}
+#triple-graph .row {
+  margin: 0;
+}
+
 .container{
     width: 100%;
     padding: 0px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 #triple-graph .tab-link.current {
@@ -245,7 +253,7 @@ p.tab_p {
 .tab-content{
     display: none;
     background: #fff;
-    padding: 15px;
+//    padding: 15px;
 }
 
 .tab-content.current{
@@ -255,7 +263,7 @@ p.tab_p {
 /* end tabs */
 
 #spending-capita-chart {
-    margin: auto;
+    margin: 0;
 }
 
 #gdp-vs-capita-chart {
@@ -432,7 +440,6 @@ sup {
 
 #waste-chart {
     margin: 0 auto;
-    padding: 2.5%;
 }
 
 
@@ -490,6 +497,14 @@ sup {
 .chart-container div{
   margin: 0 auto;
 
+}
+
+#waste-container .row {
+  margin: 0;
+}
+
+#waste-container .col-sm-4 {
+  padding: 0;
 }
 
 .toggle-btn {       /* Text */
