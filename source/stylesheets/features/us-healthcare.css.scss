@@ -30,7 +30,7 @@ $light-blue-selected: darken(rgba(138, 197, 255,1),10%);
 #article-nav li {
   display: inline-block;
   white-space: nowrap;
-  width: 14%;
+  width: calc(100% / 8);
   text-align: center;
   margin: auto;
   padding: 8px;
