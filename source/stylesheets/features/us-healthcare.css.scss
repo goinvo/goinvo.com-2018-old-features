@@ -233,11 +233,11 @@ p.tab_p {
 }
 
 #triple-graph .tab-link.current {
-  background-color: darken($light-grey,10%);
+  background-color: darken($light-grey,15%);
 }
 
 #triple-graph .tab-link:hover {
-  background-color: lighten($light-grey,5%);
+  background-color: lighten($light-grey,6%);
 }
 
 .tab-content{
@@ -549,11 +549,11 @@ sup {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background-color: darken($light-grey,10%);
+    background-color: darken($light-grey,15%);
 }
 
 .toggle-btn:hover {
-  background-color: lighten($light-grey,5%);
+  background-color: lighten($light-grey,6%);
 }
 
 
