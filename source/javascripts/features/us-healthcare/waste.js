@@ -103,21 +103,21 @@ d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
     yScale.domain([1, maxProcedures]);
     
 
-     annotation = d3.select('#waste-chart')
-        .data(data).enter()
-        .append("div")
-        .attr('class','annotation')
-        .style("left", function(d) {
-          console.log(d);
-          console.log("start: " + xScale(d.Procedure))
-          return xScale(d.Procedure)+'px';
-        })
-        .style('bottom', function(d) {
-          console.log(d);
-          console.log("start: " + yScale(d.NumberProcedures))
-          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
-        })
-        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
+//     annotation = d3.select('#waste-chart')
+//        .data(data).enter()
+//        .append("div")
+//        .attr('class','annotation')
+//        .style("left", function(d) {
+//          console.log(d);
+//          console.log("start: " + xScale(d.Procedure))
+//          return xScale(d.Procedure)+'px';
+//        })
+//        .style('bottom', function(d) {
+//          console.log(d);
+//          console.log("start: " + yScale(d.NumberProcedures))
+//          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
+//        })
+//        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
      
      wasteSVG.append("line")
         .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
@@ -295,7 +295,6 @@ myWindow.on('resize.waste', function() {
     rectangles
         .attr("width", xScale.rangeBand())
         .attr("x", function(d, i) {
-          console.log(xScale(d.Procedure))
           return xScale(d.Procedure);
         })
         .attr("width", xScale.rangeBand())
@@ -306,12 +305,12 @@ myWindow.on('resize.waste', function() {
           return yScale(d.NumberProcedures);
         }); 
 
-    annotation
-        .style("left", function(d) {
-          console.log("TEST");
-          console.log("resize: " + xScale(d.Procedure))
-          return xScale(d.Procedure)+'px';
-        })
+//    annotation
+//        .style("left", function(d) {
+//          console.log("TEST");
+//          console.log("resize: " + xScale(d.Procedure))
+//          return xScale(d.Procedure)+'px';
+//        })
 });
 
   

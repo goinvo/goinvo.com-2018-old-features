@@ -82,5 +82,4 @@ $(document).ready(function(){
   });
   $('.perspective:first').trigger('click');
   
-  
 });

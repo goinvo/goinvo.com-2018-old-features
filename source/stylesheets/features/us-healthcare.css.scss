@@ -257,10 +257,12 @@ p.tab_p {
 }
 
 #gdp-vs-capita-chart {
+    position: relative;
     margin: auto;
 }
 
 #quality-vs-capita-chart {
+    position: relative;
     margin: auto;
 }
 
@@ -311,7 +313,7 @@ p.tab_p {
 }
 
 /* point css for gdp v capita chart */
-.dot {
+.dot, .dotQ {
     -webkit-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;

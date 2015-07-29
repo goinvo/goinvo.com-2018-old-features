@@ -73,7 +73,7 @@ $(document).ready(function(){
 
 //      x.domain(d3.extent(data, function(d) { 
 //        return d.date; }));
-      x.domain([d3.min(data, function(d) { return d.date; }), d3.max(data, function(d) { console.log(d.date); return d.date;})]);
+      x.domain([d3.min(data, function(d) { return d.date; }), d3.max(data, function(d) { return d.date;})]);
 
 
       y.domain([

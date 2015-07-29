@@ -1,4 +1,11 @@
 $(document).ready(function(){
+  
+  d3.selection.prototype.trigger = function( event ) {
+     var e = document.createEvent('Event');
+     e.initEvent( event, true, true);
+     this.node().dispatchEvent( e );
+     return this;
+ }
 
   var myWindow = d3.select(window);  
   var w =  window.innerWidth;
@@ -101,26 +108,13 @@ $(document).ready(function(){
         .enter().append("circle");
     
       points.attr("class", "dot")
+        .attr("id", function(d) {return d.name})
         .attr("r", 0)
         .attr("cx", function(d){return x(d.gdp)})
         .attr("cy", function(d){return y(d.capita)})
-        .attr("fill", "#585858")
+        .attr("fill", "#585858")  
         .on("mouseover", function(d){
-        
-            d3.select(this)
-              .style("r", (2+rScale(d.population)))
-              .style("fill", "rgb(138, 197, 255)");
-        
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", 1);
-        
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", (d3.event.pageX - 30) + "px")
-                .style("top", (d3.event.pageY + 20) + "px");
-        })
-        
-        .on("click", function(d){
+          var circle = $(this);
           d3.select(this)
               .style("r", (2+rScale(d.population)))
               .style("fill", "rgb(138, 197, 255)");
@@ -130,8 +124,8 @@ $(document).ready(function(){
                 .style("opacity", 1);
         
             tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", (d3.event.pageX - 30) + "px")
-                .style("top", (d3.event.pageY + 20) + "px");
+                .style("left", (circle.attr('cx') + 20) + "px")
+                .style("top", (circle.attr('cy')) -100 + "px");
         })
       
         .on("mouseout", function(d) {
@@ -176,6 +170,7 @@ $(document).ready(function(){
  
   
   $('.tab-link[data-tab="tab-2"]').click(function() {
+    d3.select('[id="United States"].dot').trigger('mouseover');
     initialTransition();
     haveWeInitializedYet = true;
   });

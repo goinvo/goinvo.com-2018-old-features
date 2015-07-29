@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  d3.selection.prototype.trigger = function( event ) {
+     var e = document.createEvent('Event');
+     e.initEvent( event, true, true);
+     this.node().dispatchEvent( e );
+     return this;
+  }
+  
   var myWindow = d3.select(window);  
   var w =  window.innerWidth;
   var whRatio = 5/9.6;
@@ -78,7 +85,7 @@ $(document).ready(function(){
           .attr("dx", ".71em")
           .attr("dy", "-.71em")
           .style("text-anchor", "middle")
-          .text("US Dollars per Capita");
+          .text("U.S. Dollars per Capita");
 
       yAxisG = svgWrapper.append("g")
         .attr("class", "y axis")
@@ -101,16 +108,14 @@ $(document).ready(function(){
         .data(data)
         .enter().append("circle");
     
-      points.attr("class", "dot")
+      points.attr("class", "dotQ")
+        .attr("id", function(d) {return d.name})
         .attr("r", 0)
         .attr("cx", function(d){return x(d.capita)})
         .attr("cy", function(d){return y(d.quality)})
-        .attr("fill", function(d) {
-            if (d.capita > 8500) {return "rgb(138, 197, 255)"}
-            else {return "#585858"}
-        ;})
+        .attr("fill", "#585858")
         .on("mouseover", function(d){
-        
+            var circle = $(this);
             d3.select(this)
               .style("r", (2+rScale(d.population)))
               .style("fill", "rgb(138, 197, 255)");
@@ -119,9 +124,9 @@ $(document).ready(function(){
                 .duration(200)
                 .style("opacity", 1);
         
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "US Dollars / Capita: " + d3.format("$,")(d.capita) + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", (d3.event.pageX -30) + "px")
-                .style("top", (d3.event.pageY + 20) + "px");
+            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d3.format("$,")(d.capita) + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
+                .style("left", (circle.attr('cx')) + 20 + "px")
+                .style("top", (circle.attr('cy')) -100 + "px");
         })
       
         .on("mouseout", function(d) {
@@ -173,6 +178,7 @@ $(document).ready(function(){
     points.attr("r", 0);
   });
   $('.tab-link[data-tab="tab-3"]').click(function() {
+    d3.select('[id="United States"].dotQ').trigger('mouseover');
     initialTransition();
     haveWeInitializedYet = true;
   });
