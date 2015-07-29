@@ -320,11 +320,11 @@ $( document ).ready(function() {
         var targetScrollTop = $('#waste-container').position().top;
         if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
           initialTransition();
-          d3.select('[id="Routine Lab Studies"]').trigger('mouseover');
+          
           haveWeInitialziedYet  = true;
+          d3.select('[id="Brand-Name Statins"]').trigger('mousemove')
         }
     }
   });
-
 
 });

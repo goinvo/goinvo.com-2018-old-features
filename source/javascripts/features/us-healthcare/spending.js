@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+    d3.selection.prototype.trigger = function( event ) {
+       var e = document.createEvent('Event');
+       e.initEvent( event, true, true);
+       this.node().dispatchEvent( e );
+       return this;
+    }
+    
     var myWindow = d3.select(window);
     var w = window.innerWidth;
     var whRatio = 5/9.6;
@@ -157,11 +164,12 @@ $(document).ready(function(){
 //	      .text("TEST TEST");
 		
       point = country.append("g")
-        .attr("class", "linepoint");
+        .attr("class", "linepoint")
 
       point.selectAll("circle")
 		  .data(function(d) { return d.values })
 		  .enter().append("circle")
+      .attr("id", function(d) { return d.name })
 		  .attr("cx", function(d) { return x(d.date)})
 		  .attr("cy", function(d) { return y(d.capita)})
 		  .attr("r", function(d) { return d.capita == null ? 0: 3})
@@ -169,6 +177,7 @@ $(document).ready(function(){
       
       .on("mouseover", function(d) {
         d3.selectAll(".linepoint")
+          console.log($(this))
           .style("opacity", 0)
           .filter(function(p) { return p.name == d.name; })
           .style("opacity", 1)
@@ -252,4 +261,8 @@ $(document).ready(function(){
   }
 
   myWindow.on('resize.capita', initializeSizes );
+  setTimeout( function() {
+    d3.select('[id="United States"]').trigger('mouseover');
+  }, 1000);
+
 });
