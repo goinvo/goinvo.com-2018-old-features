@@ -641,12 +641,11 @@ sup {
 
 #actions li {
   float: left;
-//  width: 10%;
   height: 60px;
   overflow: hidden;
   text-align: center;
-  display: inline;
-  padding: 5px;
+  display: block;
+  padding: 3px;
   font-weight: 200;
   cursor:pointer;
 }

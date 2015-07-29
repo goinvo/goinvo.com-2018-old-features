@@ -8,7 +8,7 @@ var h = window.innerHeight * .75;
 var margin = {top: 20, right: 10, bottom: 50, left: 10},
     width = w - margin.left-margin.right,
     height = h;
-                                                                         
+
 var svg = d3.select( "#cost-comparison-boston-chart" )
   .append( "svg" )
   .attr( "width", width )
@@ -28,6 +28,8 @@ var albersProjection = d3.geo.albers()
 
 var geoPath = d3.geo.path()
     .projection( albersProjection );
+
+var rScale = d3.scale.linear().range([.0001,.0005]);
 
 var neighborhoods, hospitals;
 
@@ -56,13 +58,13 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
             .attr("cy", function(d){
               return albersProjection([d.lon, d.lat])[1];
             })
-            .attr("r", 4)
+            .style("r", function(d){ return rScale(d.price_pneumonia)})
             .attr("fill", "#585858")
             .on("mouseover", function(d){
 
               d3.select(this)
                 .attr("fill", "rgb(138, 197, 255)")
-                .attr("r", 6)
+                .style("r", function(d){ return rScale(d.price_pneumonia)+2})
 
               tooltip.transition()
                 .duration(200)
@@ -75,7 +77,7 @@ d3.json("/features/us-healthcare/data/neighborhoods.json", function(error, neigh
             .on("mouseout", function(){
               d3.select(this)
                 .attr("fill", "#585858")
-                .attr("r", 4)
+                .style("r", function(d){ return rScale(d.price_pneumonia)})
               tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
