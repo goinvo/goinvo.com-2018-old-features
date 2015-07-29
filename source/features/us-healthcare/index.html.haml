@@ -79,14 +79,14 @@
     .slide-panel{:data =>{:index=>5}}
       %p
         The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of healthcare.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hamblin, James. What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"The Atlantic", :access=>"Atlantic Media Company, 2 Apr. 2013. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"Hamblin, James", :access=>"The Atlantic. Atlantic Media Company, 2 Apr. 2013. Web"})
       %p
         To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
         Americans can use their state’s marketplace to obtain coverage from competing private healthcare providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
       %p
         The Affordable Care Act also implemented pay-for-performance incentives, which pays healthcare providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Ryan, Andrew M., Rachel M. Werner. “Doubts About Pay-for-Performance in Healthcare", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Harvard Business Review", :access=>"9 Oct. 2013. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Doubts About Pay-for-Performance in Healthcare", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Ryan, Andrew M., Rachel M. Werner", :access=>"Harvard Business Review, 9 Oct. 2013. Web"})
     = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
     .slide-panel{:data =>{:index=>2}}
       %p
@@ -97,9 +97,9 @@
         When the Affordable Care Act was first implemented, users spent hours on healthcare.gov before being able to purchase their insurance. The server was overwhelmed by the massive influx of information
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites", :href=>"https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :source=>"Washington Post", :access=>"The Washington Post, 9 Oct. 2013. Web"})
         the user interface was poorly designed and confusing to navigate,
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"The Fiscal Times", :access=>"Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 31 Jul. 2014. Web"})
         and the cost calculator sometimes provided inaccurate information about subsidies.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"", :access=>""})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 21 Mar. 2014. Web"})
         The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage", :href=>"https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :source=>"HealthCare.gov", :access=>"Web"})
       %p
@@ -116,10 +116,12 @@
       = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
     %p.p-slide
       Having no primary care doctor, David goes to the only place he thinks he can: an emergency department at a nearby hospital. It’s hard to find information about quality and cost of care at specific hospitals, so he simply picks the one closest to his home.
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Meier, Barry, Jo Mcginty, and Julie Creswell. Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"The New York Times", :access=>"The New York Times, 7 May 2013. Web"})
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Too", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"Meier, Barry, Jo Mcginty, and Julie Creswell", :access=>"The New York Times, 7 May 2013. Web"})
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Tool", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
   #cost-comparison-boston-container.chart-container
-    %h3 Cost Disparity between Boston Hospitals
+    %h3 
+      Cost Disparity between Boston Hospitals
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Boston, Massachusetts: Simple Pneumonia & Pleurisy With Complications And Comorbities", :href=>"http://www.opscost.com/search?location=Boston%2C%20Massachusetts&drg_procedure_code=194", :source=>"OpsCost", :access=>"Web"})
     #cost-comparison-boston-chart
   %article#symptoms
     %p.p-slide
@@ -133,16 +135,16 @@
         An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs are built to share information with multiple healthcare providers and organizations. They contain information from all clinicians involved in a patient’s care.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
         However, when EHRs became more widely implemented in 2004, the industry built hundreds of standalone systems to create and maintain EHRs.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Eastwood, Brian. “Is Healthcare IT Interoperability (Almost) Here", :href=>"http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :source=>"CIO", :access=>"Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Is Healthcare IT Interoperability (Almost) Here", :href=>"http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :source=>"Eastwood, Brian", :access=>"CIO, 15 Apr. 2013. Web"})
         Within each system data is shared, but there is little to no data flow between different systems.
       %p
         Problems arise with the lack of interoperability between EHR systems. Approximately 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways. This causes misread charts, forgotten results, and untimely information during life-threatening crises.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Voltz, Donald. “Why I Hope to Help End EHRs Lack of Interoperability", :href=>"http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :source=>"HIT Consultant", :access=>"22 Mar. 2015. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Why I Hope to Help End EHRs Lack of Interoperability", :href=>"http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :source=>"Voltz, Donald", :access=>"HIT Consultant, 22 Mar. 2015. Web"})
         Other hospitals hesitate to transfer data in fear of incurring liability for sharing private information.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem", :href=>"http://www.elxrhealth.com/lack-of-interoperability/", :source=>"ELXR Health", :access=>"5 June 2015. Web"})
       %p
         In 2009, President Obama signed the HITECH Act, which stipulated that healthcare providers would be incentivized to demonstrate meaningful use of EHRs until 2015. However, providers still struggle to meet even modest health information exchange requirements.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi. “Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Health Affairs Blog", :access=>"4 Mar. 2015. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi", :access=>"Health Affairs Blog, 4 Mar. 2015. Web"})
     %p.p-slide
     = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
     %p.p-slide
@@ -150,7 +152,9 @@
   #waste-container.chart-container
 
 
-    %h3 Unnecessary testing means resources are being wasted
+    %h3 
+      Unnecessary testing means resources are being wasted
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
     .toggle-btn-grp.cssonly
       .row
         .col-sm-4
@@ -168,7 +172,9 @@
     #waste-chart
   %article#symptoms
     %p.p-slide
-      After two days at the hospital, leading to a $5,000 bill, David’s fever spikes and he begins having chest pain. By the end of the week, a simple influenza admission turns into a case of
+      After two days at the hospital, leading to a $5,000 bill
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"How Much Does a Night in the Hospital Cost?", :href=>"https://www.trustedchoice.com/insurance-articles/life-health/cost-night-hospital/", :source=>"Trusted Choice Independent Insurance Agents", :access=>"17 Dec. 2013. Web"})
+      , David’s fever spikes and he begins having chest pain. By the end of the week, a simple influenza admission turns into a case of
       %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia
       \.
       %a{:name => "s17-22b"}
@@ -184,10 +190,10 @@
         Medical errors are the third leading cause of death in the United States, following cancer and heart disease.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow", :href=>"http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :source=>"Hospital Safety Score", :access=>"23 Oct. 2013. Web"})
         Studies show that up to 12% of people going to a hospital will suffer severe harm as a result.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Kliff, Sarah. “Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why", :href=>"http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :source=>"Vox", :access=>"22 Apr. 2015. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why", :href=>"http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :source=>"Kliff, Sarah", :access=>"Vox, 22 Apr. 2015. Web"})
       %p
         Medicare is now punishing hospitals with high rates of infections and other medical errors in an attempt to increase patient safety. Publicly funded hospitals have been penalized the most because they take care of sicker populations and deal with more complex cases.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Rau, Jordan. “Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"NPR", :access=>"NPR. 19 Dec. 2014. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"Rau, Jordan", :access=>"NPR. 19 Dec. 2014. Web"})
     %p.p-slide
       It doesn't have to be this way. If David had insurance, he probably would have received a flu shot. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have been admitted for an arrhythmia, and wouldn’t have developed hospital-acquired pneumonia.
   / end id="story"
@@ -219,7 +225,7 @@
             = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"World", :href=>"http://hospitals.webometrics.info/en/world", :source=>"Ranking Web of Hospitals", :access=>"Web"})
           %p
             However, the U.S. has fewer doctors per capita than most other industrialized nations.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"", :access=>""})
+            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"OECD Statistics", :access=>"Web"})
         .col-sm-4
           %h3 Technology
           %p.centeredImage
@@ -234,7 +240,7 @@
       A decade ago, the United States funded 57% of biomedical research around the globe. In 2015, the U.S. share has dropped down to 44%. Even though the U.S. still spends more than twice as much as any other country on medical research, federal spending is being cut
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bad Medicine", :href=>"http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :source=>"The Economist", :access=>"The Economist Newspaper, 2 Mar. 2013. Web"})
       and support for biomedical research in the U.S. is decreasing. Simultaneously, global interest in biomedical research is increasing
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Harris, Richard. \"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"NPR", :access=>"NPR. Web"})
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"Harris, Richard", :access=>"NPR, 13 Jan. 2015. Web"})
       , decreasing the percentage of America’s share in global research.
 
   / end div id=story
@@ -251,22 +257,27 @@
     .tabs
       .row
         .col-sm-4
-          .tab-link.current{"data-tab" => "tab-1"} Spending Over Time
+          .tab-link.current{"data-tab" => "tab-1"} 
+            Spending Over Time
         .col-sm-4
-          .tab-link{"data-tab" => "tab-2"} Spending vs. GDP
+          .tab-link{"data-tab" => "tab-2"} 
+            Spending vs. GDP
         .col-sm-4
           .tab-link{"data-tab" => "tab-3"} Quality
     #tab-1.tab-content.current
       %p.tab_p
         Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, US Dollars/Capita, 1960-2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
       #spending-capita-chart
     #tab-2.tab-content
       %p.tab_p
         In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, 2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
         #gdp-vs-capita-chart
     #tab-3.tab-content
       %p.tab_p
         Despite spending far more than other industrialized nations, the U.S. lags far behind in terms of quality.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mirror, Mirror On The Wall: How the Performance of the U.S. Health Care System Compares Internationally", :href=>"http://www.commonwealthfund.org/~/media/files/publications/fund-report/2014/jun/1755_davis_mirror_mirror_2014.pdf", :source=>"Davis, Karen, Kristof Stremikis, David Squires, Cathy Schoen", :access=>"The Commonwealth Fund, June 2014. Web"})
         #quality-vs-capita-chart
   %article#diagnosis
     %p.p-slide
