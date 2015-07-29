@@ -18,7 +18,7 @@ $light-blue-selected: darken(rgba(138, 197, 255,1),10%);
   text-align: center;
   box-shadow: 0px -2px 7px;
   z-index: 1000;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 768px) {
       display: none;
   }
 }
@@ -695,12 +695,20 @@ sup {
 }
 .decision-container{
   display:flex;
+  @media only screen and (max-width: 768px) {
+      display: table;
+      width: 100%;
+  }
   .decision{
     cursor:pointer;
     flex:1;
     background-color:$light-grey;
     display:inline-block;
     width:calc(50% - 10px);
+    @media only screen and (max-width: 768px) {
+        width: 100% !important;
+        display:block;
+    }
     
     &:hover{
       background-color: lighten($light-grey,5%)
