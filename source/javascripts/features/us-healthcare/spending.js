@@ -90,36 +90,7 @@ $(document).ready(function(){
         d3.max(countries, function(c) { return d3.max(c.values, function(v) { return v.capita; }); })
       ]);
         
-      /* Create Annotation */
-//      d3.select("#spending-capita-chart").append("div")
-//          .attr("id", "annotation-spending-id")
-//          .attr('class','annotation-spending')
-//          .style("left", function() {
-//              console.log(x(data[53].date))
-//              return x(data[53].date) - 100 + "px";
-//          })
-//          .style("top", function() {
-//              return $('#spending-capita-chart').position().top + y(data[53]["United States"]) + "px";
-//          })
-//          .html("In 2013, the U.S. spent nearly $9,000 per person on healthcare.")
-//      
-//      svgWrapper.append("line")
-//        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
-//        .style("stroke-width", "3")
-//        .attr("x1", function() {
-//          return x(data[53].date)+'px';
-//        })     // x position of the first end of the line
-//        .attr("y1", function() {
-//            return y(data[53]["United States"])+'px'
-//        })      // y position of the first end of the line
-//        .attr("x2", function() {
-//          return x(data[53].date) - 98 +'px';
-//        })     // x position of the second end of the line
-//        .attr("y2", function() {
-//          return y(data[53]["United States"]) + 'px';
-//        }); 
 
-      /* End Annotation */
       
       xAxisG = svgWrapper.append("g")
           .attr("class", "x axis")
@@ -170,6 +141,7 @@ $(document).ready(function(){
 		  .data(function(d) { return d.values })
 		  .enter().append("circle")
       .attr("id", function(d) { return d.name })
+      .attr("id", function(d) { return d.date })
 		  .attr("cx", function(d) { return x(d.date)})
 		  .attr("cy", function(d) { return y(d.capita)})
 		  .attr("r", function(d) { return d.capita == null ? 0: 3})
@@ -177,7 +149,6 @@ $(document).ready(function(){
       
       .on("mouseover", function(d) {
         d3.selectAll(".linepoint")
-          console.log($(this))
           .style("opacity", 0)
           .filter(function(p) { return p.name == d.name; })
           .style("opacity", 1)
@@ -188,12 +159,15 @@ $(document).ready(function(){
           .style("stroke-width", 3)
         
         //tooltip
+        d3.select(this)
+        console.log($(this))
+        var circle = $(this)
         div.transition()
           .duration(200)
           .style("opacity", 1);
         div.html(d.name + ", " + formatDate(d.date) + "<br/>" + "<b>" + d.capita + "</b>" + " U.S. Dollars / Capita")
-          .style("left", (d3.event.pageX -30) + "px")
-          .style("top", (d3.event.pageY + 20) + "px");
+          .style("left", parseFloat(circle.attr('cx')) - 70 + "px")
+          .style("top", parseFloat(circle.attr('cy'))  -30 + "px");
       })
       
       .on("mouseout", function(d) {
@@ -262,7 +236,7 @@ $(document).ready(function(){
 
   myWindow.on('resize.capita', initializeSizes );
   setTimeout( function() {
-    d3.select('[id="United States"]').trigger('mouseover');
+    d3.select('[id="Tue Jan 01 2013 00:00:00 GMT-0500 (EST)"]').trigger('mouseover');
   }, 1000);
 
 });
