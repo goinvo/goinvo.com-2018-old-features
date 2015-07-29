@@ -18,6 +18,9 @@ $light-blue-selected: darken(rgba(138, 197, 255,1),10%);
   text-align: center;
   box-shadow: 0px -2px 7px;
   z-index: 1000;
+  @media only screen and (max-width: 770px) {
+      display: none;
+  }
 }
 
 #article-nav ul {
@@ -42,22 +45,9 @@ $light-blue-selected: darken(rgba(138, 197, 255,1),10%);
   }
 }
 
-#nav-dropdown {
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  z-index: 12;
-}
-#article-nav %h4 {
-  padding: 15px;
-  background-color: green;
-  color: red;
-}
-
 .jumbotron {
   color: white;
   height: 80vh;
-  padding-top: 300px;
   text-align: center;
   background: url("/images/features/us-healthcare/jumbotron_background.jpg");
   background-size: cover;
@@ -85,7 +75,7 @@ h1 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 600;
   font-size: 3em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
 }
 
 p {
