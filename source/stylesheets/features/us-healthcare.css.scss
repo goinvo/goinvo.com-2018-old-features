@@ -264,6 +264,14 @@ p.tab_p {
     margin: auto;
 }
 
+//remove sankey when mobile
+//#sankey-chart {
+//    margin: auto;
+//    @media only screen and (max-width: 768px){
+//        display: none;
+//    }
+//}
+
 .axis path,
 .axis line {
   fill: none;
