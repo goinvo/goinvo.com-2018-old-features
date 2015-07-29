@@ -124,8 +124,8 @@ $(document).ready(function(){
                 .style("opacity", 1);
         
             tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d.capita + "<br/>" + "% GDP: " + d.gdp + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", (circle.attr('cx') + 20) + "px")
-                .style("top", (circle.attr('cy')) -100 + "px");
+                .style("left", parseFloat(circle.attr('cx')) + 20 + "px")
+                .style("top", parseFloat(circle.attr('cy'))  + 30 + "px");
         })
       
         .on("mouseout", function(d) {
