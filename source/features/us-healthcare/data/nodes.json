@@ -114,8 +114,8 @@
 		"description": "",
 		"impacts": []
 	},
-	"individualise_meds":{
-		"title": "Individualize Medicine",
+	"personalize_meds":{
+		"title": "Personalize Medicine",
 		"description": "personal things",
 		"impacts": ["provider"]
 	},
