@@ -861,7 +861,7 @@ sup {
 }
 #authors-table {
   background-color: #fff;
-  margin: 0px 0px 30px;
+  margin: 0px 0px 20px;
   border-radius: 8px;
 }
 
@@ -882,7 +882,7 @@ sup {
 }
 
 #authors-table h3 {
-    padding: 10px 0px 0px;
+    padding: 30px 0px 0px;
 }
 
 #authors-table p {
@@ -890,10 +890,25 @@ sup {
 }
 
 #contributers-table {
-  margin: 0px 10px 30px;
+  margin: 30px 10px 30px;
   border-radius: 8px;
 }
 
-#contributers-table .col-sm-6 {
-    padding: 10px;
+#contributers-table .row {
+    background-color: $light-grey;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#contributers-table .contributer {
+    .image, .info {
+        float: left;
+    }
+    .image {
+        width: 20%;
+    }
+    .info {
+        padding-left: 1em;
+        width: 80%;
+    }
 }
