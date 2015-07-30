@@ -154,18 +154,18 @@
       .row
         .col-sm-4
           %div
-            %input#totalProcedures{:name => "group4", :type => "radio", :checked => true}/
-            %label.toggle-btn{:for => "totalProcedures"} Total Procedures
+            %input#dollarsWasted{:name => "group4", :type => "radio", :checked => true}/
+            %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
         .col-sm-4
           %div
             %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
             %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended
         .col-sm-4
           %div
-            %input#dollarsWasted{:name => "group4", :type => "radio"}/
-            %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
-    %p 
-      Unnecessary testing means resources are being wasted
+            %input#totalProcedures{:name => "group4", :type => "radio"}/
+            %label.toggle-btn{:for => "totalProcedures"} Total Procedures
+    %p
+      Nonrecommended statins cost more than $5 billion each year
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
     #waste-chart
   %article#symptoms

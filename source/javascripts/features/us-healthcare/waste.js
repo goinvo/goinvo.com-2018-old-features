@@ -83,10 +83,10 @@ $( document ).ready(function() {
         .duration(350)
         .ease('linear')
         .attr("height", function(d) {
-          return h - yScale(d.NumberProcedures);
+          return h - yScale(d.Waste);
         })
         .attr("y", function(d) {
-          return yScale(d.NumberProcedures);
+          return yScale(d.Waste);
         })
         .style("fill", "darken(#E0E0E0,10%)");
     }
