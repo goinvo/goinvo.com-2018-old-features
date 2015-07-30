@@ -150,11 +150,6 @@
     %p.p-slide
       Worried that the cardiac event could be related to David’s influenza, the doctor orders an ECG. The ECG shows an arrhythmia, but because the doctor does not know about David's previous diagnosis, he admits David for observation. Within the hour, David has a bed, is hooked up to a slew of monitoring equipment, and has a full blood panel done. These tests are unnecessary. Not only do they waste money, but they also reduce the efficiency of the healthcare system.
   #waste-container.chart-container
-
-
-    %h3 
-      Unnecessary testing means resources are being wasted
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
     .toggle-btn-grp.cssonly
       .row
         .col-sm-4
@@ -169,6 +164,9 @@
           %div
             %input#dollarsWasted{:name => "group4", :type => "radio"}/
             %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
+    %h3 
+      Unnecessary testing means resources are being wasted
+      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
     #waste-chart
   %article#symptoms
     %p.p-slide
