@@ -86,8 +86,12 @@ h1 {
   }
 }
 
+h5 {
+  font-size: 1.25em; 
+}
+
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     display: block;
     margin: 1em 0;
     line-height: 150%;
@@ -97,7 +101,7 @@ p {
 article, footer {
   width: 70%;
   margin: 0 auto;
-  padding: 60px 0px 60px;
+  padding: 40px 0px 40px;
   
   @media only screen and (max-width: 768px){
     padding: 20px 0px 20px;
@@ -139,6 +143,12 @@ a:hover {
 
 .previous-successes {
     margin: auto;
+  
+  @media only screen and (max-width: 768px) {
+    .col-sm-4 {
+      margin-top: 2em;   
+    }
+  }
 }
 
 .centeredImage {
@@ -172,11 +182,12 @@ a:hover {
   padding: 0% 5%;
   padding-top: 10px;
   padding-bottom: 75px;
+  
+  p {
+    font-size: 1em;
+  }
 }
 
-.slide-panel p {
-  font-size: 1.25em;
-}
 
 
 span.slide {
@@ -262,14 +273,25 @@ p.tab_p {
 }
 
 .tab-content{
-    display: none;
-    background: #fff;
-//    padding: 15px;
+  display: none;
+  background: #fff;
+  &.current {
+    display: inherit; 
+  }
+  
+  p {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      margin-bottom: 0px;
+    } 
+  }
 }
 
-.tab-content.current{
-    display: inherit;
-}
 
 /* end tabs */
 
@@ -289,12 +311,11 @@ p.tab_p {
 }
 
 //remove sankey when mobile
-//#sankey-chart {
-//    margin: auto;
-//    @media only screen and (max-width: 768px){
-//        display: none;
-//    }
-//}
+#sankey-chart, #perspectives, #actions {
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}
 
 .axis path,
 .axis line {
@@ -510,18 +531,46 @@ sup {
 
 /* Bar Chart on Waste: Radio Buttons */
 
-.chart-container h4{
-   font-weight: bold;
-}
-
 .chart-container {
   width: 100%;
+  
+  h4 {
+   font-weight: bold;
+  }
+  
+  div{
+    margin: 0 auto;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      margin-bottom: 0px;
+    } 
+  }
+  
 }
 
-.chart-container div{
-  margin: 0 auto;
-
+.chart-container, .tabs {
+  .row {
+    width: 70%;
+    margin: 0 auto !important;
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      
+      .col-sm-4 {
+        margin-bottom: .5em !important; 
+      }
+    } 
+  }  
 }
+
 
 #waste-container .row {
   margin: 0;
@@ -640,10 +689,11 @@ sup {
 
 .perspective {
   height: 100px;
-}
-.perspective img {
-  height: 70%;
-  margin: auto;
+  padding-top: .5em;
+  img {
+    height: 60%;
+    margin: auto;
+   }
 }
 
 #perspectives li:hover {
@@ -723,11 +773,15 @@ sup {
 }
 
 
-.individual-action p {
-  margin: auto;
-  font-size: 0.8em;
-  text-align: center;
-  color: white;
+.individual-action {
+  padding: 0 10px;
+  padding-top: .5em;
+  p {
+    margin: auto;
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+  }
 }
 .decision-point{
   background-color:#fff;
@@ -744,9 +798,13 @@ sup {
     background-color:$light-grey;
     display:inline-block;
     width:calc(50% - 10px);
+    padding: 25px;
+    border-radius: 8px;
+    
     @media only screen and (max-width: 768px) {
-        width: 100% !important;
-        display:block;
+      width: 100% !important;
+      display:block;
+      margin-bottom: 1.25em;
     }
     
     &:hover{
@@ -758,29 +816,29 @@ sup {
     &[data-selected="no"]{
       background-color:lighten($light-grey, 5%);
     }
+    
     h3{
       height:2em;
       vertical-align:middle;
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+    
+    p {
+      font-size: 1em;
+      text-align: center;
+      padding: 0px 5px;
+      margin: 0px 0px 5px;
     }
   }
 }
 .decision, .next, .outcome{
   margin:10px;
+  @media only screen and (max-width: 768px) {
+    margin: 10px 0; 
+  }
 }
-.decision {
-  padding: 25px;
-  border-radius: 8px;
-}
-.decision h3{
-  font-size: 1.25em;
-  text-transform: uppercase;
-}
-.decision p {
-  font-size: 1.25em;
-  text-align: center;
-  padding: 0px 5px;
-  margin: 0px 0px 5px;
-}
+
 .next{
   display:none;
   font-size: 1.25em;
