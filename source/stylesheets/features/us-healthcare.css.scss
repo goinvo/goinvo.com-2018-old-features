@@ -861,7 +861,7 @@ sup {
 }
 #authors-table {
   background-color: #fff;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 120px;
   border-radius: 8px;
 }
 
@@ -890,7 +890,7 @@ sup {
 }
 
 #contributors-table {
-  margin: 30px 10px 30px;
+  margin: 40px 10px 30px;
   border-radius: 8px;
 }
 
@@ -920,6 +920,7 @@ sup {
             font-style: italic;
             font-weight: 300;
             text-align: left;
+            font-size: 1em;
             margin: 0px;
         }
         p {
