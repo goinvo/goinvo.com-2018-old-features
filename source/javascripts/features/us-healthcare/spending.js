@@ -44,10 +44,13 @@ $(document).ready(function(){
         .x(function(d) { return x(d.date); })
         .y(function(d) { return y(d.capita); })
         .defined(function(d) { return d.capita != null;});
-
-    var div = d3.select("#spending-capita-chart").append("div")
+    
+    // EXTREMELY BAD VARIABLE NAME. DIV TELLS ME ABOSOLUTELY NOTHING ABOUT WHAT THIS CONTAINS AND IT CAN BE CONFUSED WITH SELECTORS *******
+    var div = d3.select("#spending-capita-chart").append("div")   
         .attr("class", "tooltip")
-        .style("opacity", 0);
+        .style("opacity", 0)
+        .style("left", width - (width/2) + "px")
+        .style("top", height - (height/2)  -30 + "px");
 
     var svg = d3.select("#spending-capita-chart").append("svg");
     
@@ -157,6 +160,7 @@ $(document).ready(function(){
           .style("opacity", 1)
           .style("stroke-width", 3)
         
+      
         //tooltip
         d3.select(this)
         var circle = $(this)
@@ -234,7 +238,11 @@ $(document).ready(function(){
 
   myWindow.on('resize.capita', initializeSizes );
   setTimeout( function() {
-    d3.select('[id="Tue Jan 01 2013 00:00:00 GMT-0500 (EST)"]').trigger('mouseover');
-  }, 1000);
+    
+    // Why are you doing this? You should probably not be doing this... this also causes the tooltip to be 
+    // visible when the graph loads.
+    d3.select('[id="Tue Jan 01 2013 00:00:00 GMT-0500 (EST)"]').trigger('mouseover');  }, 1000);
+    
+    
 
 });
