@@ -667,7 +667,7 @@ sup {
   text-align: center
 }
 
-#actions {
+#next {
   width: 60%;
   background-color: green;
   height: 190px;
@@ -675,7 +675,7 @@ sup {
   margin-top: 10px;
 }
 
-.act {
+#actions li {
   float: left;
   width: 100px;
   height: 95px;
@@ -688,7 +688,7 @@ sup {
   background-color: teal;
 }
 
-.result {
+.individual-result {
   float: left;
   width: 100%;
   height: 190px;
@@ -699,7 +699,7 @@ sup {
   font-weight: 200;
   cursor:pointer;
   background-color: red;
-  display: none;
+//  display: none;
 }
 
 #act li:hover {
