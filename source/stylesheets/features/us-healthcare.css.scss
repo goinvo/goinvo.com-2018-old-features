@@ -821,9 +821,39 @@ sup {
 }
 #authors-table {
   background-color: #fff;
-  padding: 20px;
+  margin: 0px 0px 30px;
+  border-radius: 8px;
+}
+
+#authors-table .col-sm-6 {
+    padding: 10px;
+}
+
+#authors-table .box {
+    background-color: $light-grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#authors-table .centeredImage {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#authors-table h3 {
+    padding: 10px 0px 0px;
 }
 
 #authors-table p {
   text-align: center;
+}
+
+#contributers-table {
+  margin: 0px 10px 30px;
+  border-radius: 8px;
+}
+
+#contributers-table .col-sm-6 {
+    padding: 10px;
 }

@@ -349,25 +349,32 @@
     %a{:name => "authors"}
     #authors-table
       .row
-        .col-sm-4
-          %h3 Principal Authors
-          %p Cecile Lu
-          %p Neil Rens
-        .col-sm-4
-          %h3 Master Coders
-          %p Ben Salinas
-          %p Adam Pere
-          %p Craig McGinley
-        .col-sm-4
-          %h3 Illustrator
-          %p Sarah Kaiser
-        .col-sm-4
-          %h3 Contributing Author
-          %p Juhan Sonin
-        .col-sm-4
-          %h3 Editor
-          %p Emily Twaddell
-            
+        .col-sm-6
+          .box
+            %p.centeredImage
+            = image_tag "features/us-healthcare/Cecile.jpg", width: "100%", class: "centeredImage"
+            %h3 Cecile Lu
+            %p bio 
+        .col-sm-6
+          .box
+            %p.centeredImage
+            = image_tag "features/us-healthcare/Neil.jpg", width: "100%", class: "centeredImage"
+            %h3 Neil Rens
+            %p bio
+    %h2 Contributers
+    #contributers-table
+      .row
+        .col-sm-6
+          .contributers-left
+            %p Ben Salinas
+            %p Adam Pere
+            %p Craig McGinley
+        .col-sm-6
+          .contributers-right
+            %p Sarah Kaiser
+            %p Juhan Sonin
+            %p Emily Twaddell
+    
   /
     <div class="floating-footer">
     <p>Check out our awesome viz</p>
