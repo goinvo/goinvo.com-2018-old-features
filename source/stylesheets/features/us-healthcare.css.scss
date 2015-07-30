@@ -609,9 +609,20 @@ sup {
 
 /* FINAL VIZ GUI */
 
+#sankeyGUI {
+  margin: auto;
+  width: 100%;
+  
+}
+
+#perspectives {
+  width: 30%;
+  float: left;
+}
+
 #perspectives li {
   float: left;
-  width: 25%;
+  width: 50%;
   height: 100px;
   text-align: center;
   display: inline;
@@ -656,58 +667,81 @@ sup {
   text-align: center
 }
 
-#actions li {
+#actions {
+  width: 60%;
+  background-color: green;
+  height: 190px;
   float: left;
-  height: 60px;
+  margin-top: 10px;
+}
+
+.act {
+  float: left;
+  width: 100px;
+  height: 95px;
   overflow: hidden;
   text-align: center;
-  display: block;
+  display: inline-block;
   padding: 3px;
   font-weight: 200;
   cursor:pointer;
+  background-color: teal;
 }
-#actions li:hover {
+
+.result {
+  float: left;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  padding: 3px;
+  font-weight: 200;
+  cursor:pointer;
+  background-color: red;
+  display: none;
+}
+
+#act li:hover {
   background-color: darken($light-blue-selected,10%);
 }
 
-[data-perspective="patient"] li {
-  color: #fff;
-  background-color: $light-blue-selected;
-  border: none;
-  width: calc(100% / 5);
-}
-
-[data-perspective="provider"] li {
-  background-color: $light-blue-selected;
-  width: calc(100% / 9);
-}
-
-[data-perspective="policymaker"] li {
-  background-color: $light-blue-selected;
-  width: calc(100% / 9);
-}
-
-[data-perspective="payer"] li {
-  background-color: $light-blue-selected;
-  width: calc(100% / 6);
-}
-
-[data-perspective="patient"] li.selected {
-  background-color: $light-blue-selected;
-}
-
-[data-perspective="provider"] li.selected {
-  background-color: $light-blue-selected;
-}
-
-[data-perspective="policymaker"] li.selected {
-  background-color: $light-blue-selected;
-}
-
-[data-perspective="payer"] li.selected {
-  background-color: $light-blue-selected;
-}
-
+//[data-perspective="patient"] li {
+//  background-color: $light-blue-selected;
+//  border: none;
+//  width: calc(100% / 5);
+//}
+//
+//[data-perspective="provider"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 9);
+//}
+//
+//[data-perspective="policymaker"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 9);
+//}
+//
+//[data-perspective="payer"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 6);
+//}
+//
+//[data-perspective="patient"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="provider"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="policymaker"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="payer"] li.selected {
+//  background-color: $light-blue-selected;
+//}
 
 .individual-action p {
   margin: auto;
@@ -715,6 +749,12 @@ sup {
   text-align: center;
   color: white;
 }
+
+
+
+
+
+/* MAKE YOUR OWN STORY */
 .decision-point{
   background-color:#fff;
 }
