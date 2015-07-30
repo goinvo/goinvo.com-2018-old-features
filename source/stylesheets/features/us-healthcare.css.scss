@@ -511,6 +511,10 @@ sup {
   padding: 0;
 }
 
+#waste-container p {
+    text-align: center;
+}
+
 .toggle-btn {       /* Text */
     text-align: center;
     margin: 0 auto;
@@ -524,7 +528,7 @@ sup {
 
 .toggle-btn-grp.cssonly {
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 //.toggle-btn-grp.cssonly div {
