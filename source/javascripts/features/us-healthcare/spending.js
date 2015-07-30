@@ -128,7 +128,6 @@ $(document).ready(function(){
 		
 //	  svg.append("text")
 //	  	  .attr("x", function(d) {
-//		  	  console.log(d.name)
 //			  return 50;
 //	  	  })
 //	  	  .attr("y", 50)
@@ -160,7 +159,6 @@ $(document).ready(function(){
         
         //tooltip
         d3.select(this)
-        console.log($(this))
         var circle = $(this)
         div.transition()
           .duration(200)
