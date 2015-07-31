@@ -738,7 +738,6 @@ sup {
 
 #next {
   width: 60%;
-  background-color: green;
   height: 190px;
   float: left;
   margin-top: 10px;
@@ -754,7 +753,7 @@ sup {
   padding: 3px;
   font-weight: 200;
   cursor:pointer;
-  background-color: teal;
+  background-color: $light-blue;
 }
 
 .individual-result {
@@ -767,12 +766,15 @@ sup {
   padding: 3px;
   font-weight: 200;
   cursor:pointer;
-  background-color: red;
-//  display: none;
+  background-color: $light-blue-selected;
+}
+#results li {
+  list-style-type: none;
 }
 
-#act li:hover {
-  background-color: darken($light-blue-selected,10%);
+
+#actions li:hover {
+  background-color: $light-blue-hover;
 }
 
 //[data-perspective="patient"] li {

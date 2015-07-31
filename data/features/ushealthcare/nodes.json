@@ -79,52 +79,52 @@
 	},
 	"more_time":{
 		"title":"Caregivers Spend More Time with Patients",
-		"description": "",
+		"description": "Caregivers Spend More Time with Patients",
 		"impacts": []
 	},
 	"better_care":{
 		"title": "Better Care",
-		"description": "",
+		"description": "Better Care",
 		"impacts": []
 	},
 	"interoperability":{
 		"title": "Improve Interoperability",
-		"description": "blah",
+		"description": "Improve Interoperability",
 		"impacts": ["policymaker"]
 	},
 	"shop_quality_cost":{
 		"title": "People Shop for Quality and Cost",
-		"description": "people buy cheap things because poor",
+		"description": "People Shop for Quality and Cost",
 		"impacts": ["patient"]
 	},
 	"fewer_tests":{
 		"title": "Fewer Unnecessary Tests",
-		"description": "",
+		"description": "Fewer Unnecessary Tests",
 		"impacts": []
 	},
 	"reduced_errors":{
 		"title":"Reduced Errors",
-		"description": "",
+		"description": "Reduced Errors",
 		"impacts": []
 	},
 	"efficiency": {
 		"title": "Increased Efficiency",
-		"description": "",
+		"description": "Increased Efficiency",
 		"impacts": []
 	},
 	"individualise_meds":{
 		"title": "Personalize Medicine",
-		"description": "",
+		"description": "Personalize Medicine",
 		"impacts": []
 	},
 	"coordinate_care":{
 		"title": "Coordinate Care",
-		"description": "blah",
+		"description": "Coordinate Care",
 		"impacts": ["provider", "payer"]
 	},
 	"destigmatize_death":{
 		"title": "Destigmatize Death",
-		"description": "blah",
+		"description": "Destigmatize Death",
 		"impacts": ["provider","patient","payer","policymaker"]
 	},
 	"doctor_training":{

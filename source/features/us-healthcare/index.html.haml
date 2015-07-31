@@ -308,15 +308,15 @@
                   .individual-action{ :data => {:key => key}}
                     -#{style: "width:#{100/these_nodes.length}%"}
                     %p= node.title
-        #results
-          %ul
 
-            - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
-            -  these_nodes.each do |key, node|
-              %li{:data => {:persp => node.impacts[0]}}
-                .individual-result{ :data => {:key => key}}
-                  -#{style: "width:#{100/these_nodes.length}%"}
-                  %p= node.description
+      #results
+        %ul
+          - data.features.ushealthcare.nodes.each do |key, value|
+            %li
+              .individual-result{ :data => {:key => key}}
+                -#{style: "width:#{100/these_nodes.length}%"}
+                %h3= value.title
+                %p= value.description
 
   #sankey-container.chart-container     
   #sankey-chart
