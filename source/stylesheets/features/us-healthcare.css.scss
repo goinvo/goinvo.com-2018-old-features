@@ -316,7 +316,7 @@ p.tab_p {
 }
 
 //remove sankey when mobile
-#sankey-chart, #perspectives, #actions {
+#sankey-chart, #perspectives, #actions, #sankeyGUI{
     @media only screen and (max-width: 768px){
         display: none;
     }
@@ -989,46 +989,48 @@ sup {
 }
 
 #contributors-table {
-  margin: 40px 10px 30px;
-  border-radius: 8px;
-}
-
-#contributors-table .col-sm-6 {
-    padding: 0px;
-}
-
-#contributors-table .row {
-    background-color: $light-grey;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-#contributors-table .contributor {
-    .image, .info {
-        float: left;
-        display: inline-table;
-    }
-    .image {
-        width: 20%;
-    }
-    .info {
-        padding-left: 1em;
-        width: 80%;
-        h3{
-            text-transform: lowercase;
-            font-style: italic;
-            font-weight: 300;
-            text-align: left;
-            font-size: 1em;
-            margin: 0px;
-        }
-        p {
-            text-align: left;
-            margin: 5px 0px;
-        }
-    }
-    hr {
-        margin: 0.5em;
-        border-top: 1px solid $light-grey;
-    }
+  	margin: 40px 10px 30px;
+  	border-radius: 8px;
+	
+	.col-sm-6 {
+    	padding: 0px;
+	}
+	
+	.row {
+		background-color: $light-grey;
+		border-radius: 8px;
+		padding: 20px;
+	}
+	.contributor {
+		.image, .info {
+			float: left;
+			display: inline-table;
+		}
+		.image {
+			width: 20%;
+			img {
+				border-radius: 5px;
+			}
+		}
+		.info {
+			padding-left: 1em;
+			width: 80%;
+			h3{
+				text-transform: lowercase;
+				font-style: italic;
+				font-weight: 300;
+				text-align: left;
+				font-size: 1em;
+				margin: 0px;
+			}
+			p {
+				text-align: left;
+				margin: 5px 0px;
+			}
+		}
+		hr {
+			margin: 0.5em;
+			border-top: 1px solid $light-grey;
+		}
+	}
 }
