@@ -886,12 +886,12 @@ sup {
 
 .next{
   display:none;
-  font-size: 1.25em;
+  font-size: 1em;
   padding: 5px 20px 50px;
 }
 .outcome{
   display:none;
-  font-size: 1.25em;
+  font-size: 1em;
   padding: 5px 20px;
   &[data-outcome="positive"]{
     background-color:#fff;
