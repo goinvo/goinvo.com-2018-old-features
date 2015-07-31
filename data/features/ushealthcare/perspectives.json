@@ -1,0 +1,22 @@
+[
+    {
+        "title":"Patients",
+        "key":"patient",
+        "image":"features/us-healthcare/final_vis_icon_patient.png"
+    },
+    {
+        "title":"Providers",
+        "key":"provider",
+        "image":"features/us-healthcare/final_vis_icon_provider.png"
+    },
+    {
+        "title":"Policy Makers",
+        "key":"policymaker",
+        "image":"features/us-healthcare/final_vis_icon_policymaker.png"
+    },
+    {
+        "title":"Payers",
+        "key":"payer",
+        "image":"features/us-healthcare/final_vis_icon_payer.png"
+    }   
+]

@@ -1,0 +1,180 @@
+{
+	"universal_access":{
+		"title":"Universal Access",
+        "title2":"Universal Access",
+		"description":"",
+		"impacts":[]
+	},
+	"perfect_quality":{
+		"title": "Near Perfect Quality",
+        "title2":"Near Perfect Quality",
+		"description":"",
+		"impacts":[]
+	},
+	"better_prices":{
+		"title": "Much Better Prices",
+        "title2": "Much Better Prices",
+		"description": "",
+		"impacts":[]
+	},
+	"single_payer_system":{
+		"title": "Create Single Payer System",
+		"description": "blah",
+		"impacts":["policymaker", "payer"]
+	},
+	"everyone_covered":{
+		"title": "Everyone Gets Covered",
+		"description": "blah",
+		"impacts":["patient"]
+	},
+	"better_costs":{
+		"title": "Better Costs",
+		"description": "",
+		"impacts":[]
+	},
+	"more_equitable":{
+		"title":"More Equitable",
+		"description": "",
+		"impacts":[]
+	},
+	"preventative_meds":{
+		"title": "Increased Preventative Medicine",
+		"description": "",
+		"impacts":[]
+	},
+	"give_patients_data":{
+		"title": "Give Patients Their Data",
+		"description": "yay info",
+		"impacts":["provider"]
+	},
+	"health_data_standard":{
+		"title": "Create Health Data Standard",
+		"description": "yay standards",
+		"impacts":["policymaker"]
+	},
+	"on_demand_care":{
+		"title": "Enable On-Demand Care",
+		"description": "yay everyone gets care",
+		"impacts": ["provider", "payer"]
+	},
+	"primary_care_workers":{
+		"title": "Train More Primary Care Workers",
+		"description": "yay more doctors",
+		"impacts": ["provider", "policymaker"]
+	},
+	"take_charge_of_health":{
+		"title": "Patients Take Charge of Their Own Health",
+		"description":"",
+		"impacts": ["patient"]
+	},
+	"health_conscious_people":{
+		"title": "More Health Conscious People",
+		"description": "",
+		"impacts": []
+	},
+	"self_care":{
+		"title": "Self Care",
+		"description": "blah",
+		"impacts": ["patient"]
+	},
+	"more_time":{
+		"title":"Caregivers Spend More Time with Patients",
+		"description": "",
+		"impacts": []
+	},
+	"better_care":{
+		"title": "Better Care",
+		"description": "",
+		"impacts": []
+	},
+	"interoperability":{
+		"title": "Improve Interoperability",
+		"description": "blah",
+		"impacts": ["policymaker"]
+	},
+	"shop_quality_cost":{
+		"title": "People Shop for Quality and Cost",
+		"description": "people buy cheap things because poor",
+		"impacts": ["patient"]
+	},
+	"fewer_tests":{
+		"title": "Fewer Unnecessary Tests",
+		"description": "",
+		"impacts": []
+	},
+	"reduced_errors":{
+		"title":"Reduced Errors",
+		"description": "",
+		"impacts": []
+	},
+	"efficiency": {
+		"title": "Increased Efficiency",
+		"description": "",
+		"impacts": []
+	},
+	"individualise_meds":{
+		"title": "Personalize Medicine",
+		"description": "",
+		"impacts": []
+	},
+	"coordinate_care":{
+		"title": "Coordinate Care",
+		"description": "blah",
+		"impacts": ["provider", "payer"]
+	},
+	"destigmatize_death":{
+		"title": "Destigmatize Death",
+		"description": "blah",
+		"impacts": ["provider","patient","payer","policymaker"]
+	},
+	"doctor_training":{
+		"title": "Improve Doctor Training",
+		"description": "blah",
+		"impacts": ["provider","policymaker"]
+	},
+	"value_quality_life":{
+		"title":"People Value Quality of Life",
+		"description": "",
+		"impacts": []
+	},
+	"tailored_treatment":{
+		"title":"Tailored Treatment Plans",
+		"description": "blah",
+		"impacts":["provider"]
+	},
+	"communicate_better":{
+		"title": "Clinicians Communicate Better with Patients",
+		"description": "blah",
+		"impacts":["provider"]
+	},
+	"fewer_visits":{
+		"title":"Fewer Hospital Visits",
+		"description":"",
+		"impacts":[]
+	},
+	"transparent_prices":{
+		"title": "Make Prices Transparent",
+		"description":"blah",
+		"impacts":["policymaker","payer"]
+	},
+	"incentivize_outcomes":{
+		"title": "Incentivize Outcomes",
+		"description":"blah",
+		"impacts":["policymaker", "payer"]
+	},
+	"reform_malpractice":{
+		"title":"Reform Malpractice Laws",
+		"description":"blah",
+		"impacts": ["policymaker"]
+	},
+	"fees_for_outcomes":{
+		"title":"Fees for Outcomes Instead of Fees for Services",
+		"description":"",
+		"impacts": []
+	},
+	"clinicians_cover_butt":{
+		"title":"Doctors who Follow Best Practices Shielded from Liability",
+		"description": "blah",
+		"impacts":["provider"]
+	}
+}
