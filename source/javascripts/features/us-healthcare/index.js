@@ -92,6 +92,11 @@ $(document).ready(function(){
     console.log("this_key: " + this_key)
     $('.individual-result[data-key="'+this_key+'"]').show()
   });
+  
+  $('.cancel').click(function(e){
+    console.log("cancel")
+    $('.individual-result').hide();
+  });
       
       
 });
