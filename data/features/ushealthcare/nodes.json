@@ -1,0 +1,180 @@
+{
+	"universal_access":{
+		"title":"Universal Access",
+        "title2":"Universal Access",
+		"description":"",
+		"impacts":[]
+	},
+	"perfect_quality":{
+		"title": "Near Perfect Quality",
+        "title2":"Near Perfect Quality",
+		"description":"Patients who have access to their personal health information (lab tests, health record, etc.) can better engage with their health. This can only happen if patients get access to their data.",
+		"impacts":[]
+	},
+	"better_prices":{
+		"title": "Much Better Prices",
+        "title2": "Much Better Prices",
+		"description": "",
+		"impacts":[]
+	},
+	"single_payer_system":{
+		"title": "Create Single Payer System",
+		"description": "Regardless of income or current health status, a person can purchase health insurance. In the past, unhealthy people were more likely to purchase health insurance than health people because they needed it more. This made the insurance pool lopsided, causing the average cost for a company to cover a person to rise. Companies would then raise prices, which in turn deterred even more healthy people from buying insurance. This death spiral can be avoided through universal coverage, which involves a mandate that every person buy coverage (the approach taken by the ACA) or a single payer system where the government insures everyone (the approach taken by many other industrialized nations).",
+		"impacts":["policymaker", "payer"]
+	},
+	"everyone_covered":{
+		"title": "Everyone Gets Covered",
+		"description": "Regardless of income or current health status, a person can purchase health insurance. In the past, unhealthy people were more likely to purchase health insurance than health people because they needed it more. This made the insurance pool lopsided, causing the average cost for a company to cover a person to rise. Companies would then raise prices, which in turn deterred even more healthy people from buying insurance. This death spiral can be avoided through universal coverage, which involves a mandate that every person buy coverage (the approach taken by the ACA) or a single payer system where the government insures everyone (the approach taken by many other industrialized nations).",
+		"impacts":["patient"]
+	},
+	"better_costs":{
+		"title": "Better Costs",
+		"description": "",
+		"impacts":[]
+	},
+	"more_equitable":{
+		"title":"More Equitable",
+		"description": "",
+		"impacts":[]
+	},
+	"preventative_meds":{
+		"title": "Increased Preventative Medicine",
+		"description": "",
+		"impacts":[]
+	},
+	"give_patients_data":{
+		"title": "Give Patients Their Data",
+		"description": "",
+		"impacts":["provider"]
+	},
+	"health_data_standard":{
+		"title": "Create Health Data Standard",
+		"description": "When people have information about prices and quality, they can make informed purchasing decisions. This will put downward pressure on costs and upward pressure on quality due to increased competition. In addition to transparency, this requires a health data standard so that patients can easily move between providers.Creating a health data standard will improve interoperability, which is the transmission of information between two different EHR systems. This would guarantee that no matter where a patient goes for care, their provider will be able to access their medical information.",
+		"impacts":["policymaker"]
+	},
+	"on_demand_care":{
+		"title": "Enable On-Demand Care",
+		"description": "New technologies allow patients to care for themselves from the comfort of their own home. Care delivered outside of the hospital is much less expensive. Moreover, patients who can care for themselves are less likely to let symptoms exacerbate before addressing them.",
+		"impacts": ["provider", "payer"]
+	},
+	"primary_care_workers":{
+		"title": "Train More Primary Care Workers",
+		"description": "The U.S. has an abundance of specialists but a much lower number of primary care workers. This drives up costs. It can be addressed by training more primary care workers, not just doctors but nurses and home-health providers as well.",
+		"impacts": ["provider", "policymaker"]
+	},
+	"take_charge_of_health":{
+		"title": "Patients Take Charge of Their Own Health",
+		"description":"Patients who have access to their personal health information (lab tests, health record, etc.) can better engage with their health. This can only happen if patients get access to their data.",
+		"impacts": ["patient"]
+	},
+	"health_conscious_people":{
+		"title": "More Health Conscious People",
+		"description": "",
+		"impacts": []
+	},
+	"self_care":{
+		"title": "Self Care",
+		"description": "New technologies allow patients to care for themselves from the comfort of their own home. Care delivered outside of the hospital is much less expensive. Moreover, patients who can care for themselves are less likely to let symptoms exacerbate before addressing them.",
+		"impacts": ["patient"]
+	},
+	"more_time":{
+		"title":"Caregivers Spend More Time with Patients",
+		"description": "Caregivers Spend More Time with Patients",
+		"impacts": []
+	},
+	"better_care":{
+		"title": "Better Care",
+		"description": "Better Care",
+		"impacts": []
+	},
+	"interoperability":{
+		"title": "Improve Interoperability",
+		"description": "Creating a health data standard will improve interoperability, which is the transmission of information between two different EHR systems. This would guarantee that no matter where a patient goes for care, their provider will be able to access their medical information.",
+		"impacts": ["policymaker"]
+	},
+	"shop_quality_cost":{
+		"title": "People Shop for Quality and Cost",
+		"description": "When people have information about prices and quality, they can make informed purchasing decisions. This will put downward pressure on costs and upward pressure on quality due to increased competition. In addition to transparency, this requires a health data standard so that patients can easily move between providers.",
+		"impacts": ["patient"]
+	},
+	"fewer_tests":{
+		"title": "Fewer Unnecessary Tests",
+		"description": "Fewer Unnecessary Tests",
+		"impacts": []
+	},
+	"reduced_errors":{
+		"title":"Reduced Errors",
+		"description": "Reduced Errors",
+		"impacts": []
+	},
+	"efficiency": {
+		"title": "Increased Efficiency",
+		"description": "Increased Efficiency",
+		"impacts": []
+	},
+	"individualise_meds":{
+		"title": "Personalize Medicine",
+		"description": "Personalize Medicine",
+		"impacts": []
+	},
+	"coordinate_care":{
+		"title": "Coordinate Care",
+		"description": "People with chronic conditions (heart disease, diabetes, cancer, etc.) often need many different types of care. For example, someone with diabetes may suffer from dietary challenges, ulcers, damaged nerves, and many other conditions. Coordinating care will increase quality and ultimately save money.",
+		"impacts": ["provider", "payer"]
+	},
+	"destigmatize_death":{
+		"title": "Destigmatize Death",
+		"description": "Most people want to pass peacefully in their own homes surrounded by loved ones. Instead, most people die in the hospital, often hooked up to a ventilator. Patients with advanced cancers often opt for intensive treatment that dereases their quality of life and barely increases (or in some cases decreases) their remaining time. Destigmatizing death starts to address this.",
+		"impacts": ["provider","patient","payer","policymaker"]
+	},
+	"doctor_training":{
+		"title": "Improve Doctor Training",
+		"description": "Doctors have been trained according to a model developed by a non-doctor over a century ago. Medical education should be less expensive and shorter. Doctors should be learning skills within the same care teams that they will eventually be operating (including nurses, social workers, and others). Most healthcare is delivered outside of the hospital, yet nearly all medical training occurs within hospitals. It's time for a change.",
+		"impacts": ["provider","policymaker"]
+	},
+	"value_quality_life":{
+		"title":"People Value Quality of Life",
+		"description": "",
+		"impacts": []
+	},
+	"tailored_treatment":{
+		"title":"As sequencing costs continue to drop below $1000 per genome, it will soon become normal for every person to have their genome analyzed. The information that results enables tailored treatment plans where medication type and dosage are adapted to a person's genetic makeup.",
+		"description": "blah",
+		"impacts":["provider"]
+	},
+	"communicate_better":{
+		"title": "Clinicians Communicate Better with Patients",
+		"description": "The amount of time doctors spend with patients is decreasing. The time that they do spend with patients is often dominated by clicking and typing in the EHR. As new technology enters the care paradigm, it is important that doctors receive training on how to maintain a strong doctor-patient relationship.",
+		"impacts":["provider"]
+	},
+	"fewer_visits":{
+		"title":"Fewer Hospital Visits",
+		"description":"",
+		"impacts":[]
+	},
+	"transparent_prices":{
+		"title": "Make Prices Transparent",
+		"description":"When people have information about prices and quality, they can make informed purchasing decisions. This will put downward pressure on costs and upward pressure on quality due to increased competition.",
+		"impacts":["policymaker","payer"]
+	},
+	"incentivize_outcomes":{
+		"title": "Incentivize Outcomes",
+		"description":"Currently, most providers are paid for each service they provide. This means that a clinician receives some payment every time they order a test or perform a procedure, regardless of whether the procedure was necessary or the outcome was positive. By reimbursing based on outcomes, payers can incentivize better quality while simultaneously decreasing costs.",
+		"impacts":["policymaker", "payer"]
+	},
+	"reform_malpractice":{
+		"title":"Reform Malpractice Laws",
+		"description":"If doctors who follow best practices are protected against frivolous malpractice lawsuits, they will not have to order exhaustive tests to decrease their liability.",
+		"impacts": ["policymaker"]
+	},
+	"fees_for_outcomes":{
+		"title":"Fees for Outcomes Instead of Fees for Services",
+		"description":"",
+		"impacts": []
+	},
+	"clinicians_cover_butt":{
+		"title":"Doctors who Follow Best Practices Shielded from Liability",
+		"description": "If doctors who follow best practices are protected against frivolous malpractice lawsuits, they will not have to order exhaustive tests to decrease their liability.",
+		"impacts":["provider"]
+	}
+}

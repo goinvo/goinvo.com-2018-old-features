@@ -1,0 +1,1036 @@
+/* GENERAL STYLING */
+@import "../base/core";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+
+$light-black: #222;
+$light-grey:#E0E0E0;
+$black : #000;
+$light-blue:lighten(rgb(142, 175, 208),10%);
+$light-blue-hover:rgb(142, 175, 208);
+$light-blue-selected: darken(rgba(142, 175, 208,1),10%);
+
+#article-nav {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 55px;
+  background-color: rgba(0, 0, 0, 0.81);
+  text-align: center;
+  box-shadow: 0px -2px 7px;
+  z-index: 1000;
+  @media only screen and (max-width: 768px) {
+      display: none;
+  }
+}
+
+#article-nav ul {
+  margin: 0 auto;
+}
+
+#article-nav li {
+  display: inline-block;
+  white-space: nowrap;
+  width: calc(100% / 8);
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+}
+
+#article-nav a {
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  &:hover {
+      color:rgba(255,255,255,1);
+      text-decoration: none;
+  }
+}
+
+.jumbotron {
+  color: white;
+  height: 80vh;
+  text-align: center;
+  background: url("/images/features/us-healthcare/jumbotron3.jpg");
+  background-size: cover;
+  
+  @media only screen and (max-width: 768px){
+    margin-bottom: 10px; 
+  }
+
+  .footnote {
+      font-size: 0px;
+  }
+}
+
+.container .jumbotron{
+    border-radius: 0px;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  padding-top: 35vh;
+  position: absolute;
+}
+
+header p{
+  text-align: center;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  letter-spacing: 0.03em;
+  
+  @media only screen and (max-width: 768px){
+    font-size: 2em; 
+  }
+}
+
+h5 {
+  font-size: 1.25em; 
+}
+
+p {
+    font-size: 1.25em;
+    display: block;
+    margin: 1em 0;
+    line-height: 150%;
+    text-align: left;
+}
+
+article, footer {
+  width: 70%;
+  margin: 0 auto;
+  padding: 40px 0px 40px;
+  
+  @media only screen and (max-width: 768px){
+    padding: 20px 0px 20px;
+    width: 85%;
+  }
+  
+}
+
+article h2, article h1 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.5em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+a:link {
+    color: #585858;
+}
+a:visited{
+    color: #585858;
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+a:hover {
+    color: #383838;
+    text-decoration: none;
+}
+
+/* TABLE */
+
+.previous-successes {
+    margin: auto;
+  
+  @media only screen and (max-width: 768px) {
+    .col-sm-4 {
+      margin-top: 2em;   
+    }
+  }
+}
+
+.centeredImage {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#cost-comparison-boston-chart {
+  position: relative;
+//  padding-left: 2.5%;
+//  padding-right: 2.5%;
+}
+
+#cost-comparison-boston-container {
+    text-align: center;
+}
+
+#cost-comparison-boston-container p {
+    text-align: center;
+}
+
+
+
+/* SLIDE DOWN */
+.slide-panel {
+  display:none;
+  background-color: #fff;
+  margin: auto;
+  text-align: left;
+  padding: 0% 5%;
+  padding-top: 10px;
+  padding-bottom: 75px;
+  
+  p {
+    font-size: 1em;
+  }
+}
+
+
+
+span.slide {
+  font-weight: 600;
+  background-color: rgba(242, 224, 84, 0.55);
+  cursor: pointer;
+  padding:0 5px;
+}
+
+.embed-extra-info {
+    position: relative;
+    padding-bottom: 75%;
+    padding-top: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.embed-extra-info iframe {
+    position: absolute;
+    top:20px;
+    left: 12.5%;
+    height: 75%;
+    width: 75%;
+
+}
+
+#p-slide {
+    display: inline;
+}
+
+/* STORY */
+#story {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+
+
+/********* CECILE'S GRAPHS *********/
+#triple-graph {
+  width: 100%;
+  max-height: 70%;
+}
+
+p.tab_p {
+  text-align: center;
+  padding-top: 1em;
+}
+
+/* TABS */
+
+
+#triple-graph .tab-link {
+  padding: 10px;
+  background-color: $light-grey;
+  width: 100%;
+  text-align: center;
+  border:solid 1px #fff;
+  vertical-align: center;
+  border-radius:8px;
+  color: black;
+  cursor: pointer;
+}
+
+#triple-graph .col-sm-4{
+  padding: 0;
+}
+#triple-graph .row {
+  margin: 0;
+}
+
+.container{
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+}
+
+#triple-graph .tab-link.current {
+  background-color: darken($light-grey,15%);
+}
+
+#triple-graph .tab-link:hover {
+  background-color: lighten($light-grey,6%);
+}
+
+.tab-content{
+  display: none;
+  background: #fff;
+  &.current {
+    display: inherit; 
+  }
+  
+  p {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      margin-bottom: 0px;
+    } 
+  }
+}
+
+
+/* end tabs */
+
+#spending-capita-chart {
+    position: relative;
+    margin: 0;
+}
+
+#gdp-vs-capita-chart {
+    position: relative;
+    margin: auto;
+}
+
+#quality-vs-capita-chart {
+    position: relative;
+    margin: auto;
+}
+
+//remove sankey when mobile
+#sankey-chart, #perspectives, #actions, #sankeyGUI{
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $black;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.y.axis line {
+    stroke: gray;
+    opacity: .5;
+    stroke-dasharray: 2,2;
+}
+
+.x.axis line {
+    stroke: gray;
+    opacity: .5;
+    stroke-dasharray: 2,2;
+}
+
+/* line css for capita spending chart */
+.line {
+  fill: none;
+  stroke: gray;
+  stroke-width: 1.5px;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+/* point css for gdp v capita chart */
+.dot, .dotQ {
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.label-hover{
+  opacity: 0;
+}
+
+.linepoint{
+  opacity: 0;
+  fill: gray;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+path.invisible {
+  fill: none;
+  stroke: rgba(0,0,0,0);
+  stroke-width: 8px;
+}
+
+text.label {
+  font-size: 10px;
+  color: $black;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 100;
+}
+.annotation{
+    background-color:rgba(213, 230, 245, 0.76);
+    position: absolute;
+    width: 170px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(159, 184, 206, 0.9);
+    padding: 5px;
+    z-index: 15;
+}
+
+.annotation-spending {
+    background-color:rgba(213, 230, 245, 0.76);
+    position: absolute;
+    width: 170px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(159, 184, 206, 0.9);
+    padding: 5px;
+}
+/* BIBLIOGRAPHY */
+#bibliography {
+  text-align: left;
+  line-height: 125%;
+}
+
+sup {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.6em;
+   font-size:.5em;
+}
+
+.slide-panel sup{
+   vertical-align: baseline;
+   position: relative;
+   top: -0.5em;
+   font-size: .5em;
+}
+
+/* FOOTER */
+.circle {
+    display: block;
+    margin: auto;
+}
+
+.floating-circle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150;
+}
+
+.floating-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: white;
+    opacity: .7;
+    border-top-width: thick;
+    border-top-style: solid;
+    border-top-color: #336699;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: white;
+    opacity: 1;
+    text-align: center;
+}
+
+
+/* Bar Chart on Waste */
+
+#waste-chart {
+    position: relative;
+//    margin: 0 auto;
+}
+
+
+.bar_chart {
+  color: #fff;
+  background-color: $light-blue;
+}
+
+/*
+.axis path,
+.yaxis path,
+.xaxis path,
+.axis line
+.yaxis line,
+.xaxis line{
+    fill: none;
+    stroke: black;
+    shape-rendering: cripsEdges;
+}
+*/
+
+.yaxis path, .xaxis path {
+    display: none;
+}
+
+.yaxis line {
+    stroke: gray;
+    opacity: .5;
+    stroke-dasharray: 2,2;
+}
+
+.axis text,
+.yaxis text,
+.xaxis text{
+    font-family: sans-serif;
+    font-size: 11px !important;
+}
+#totalProcedures {
+    cursor: pointer;
+}
+.bar {
+    fill: darken($light-grey,10%);
+}
+
+/* Bar Chart on Waste: Radio Buttons */
+
+.chart-container {
+  width: 100%;
+  
+  h4 {
+   font-weight: bold;
+  }
+  
+  div{
+    margin: 0 auto;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      margin-bottom: 0px;
+    } 
+  }
+  
+}
+
+.chart-container, .tabs {
+  .row {
+    width: 70%;
+    margin: 0 auto !important;
+    @media only screen and (max-width: 768px){
+      padding: 20px 0px 20px;
+      width: 85%;
+      
+      .col-sm-4 {
+        margin-bottom: .5em !important; 
+      }
+    } 
+  }  
+}
+
+
+#waste-container .row {
+  margin: 0;
+}
+
+#waste-container .col-sm-4 {
+  padding: 0;
+}
+
+#waste-container p {
+    text-align: center;
+}
+
+.toggle-btn {       /* Text */
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: #000;
+    background-color: $light-grey;
+    border:solid 1px #fff;
+    cursor:pointer;
+    vertical-align: middle;
+}
+
+.toggle-btn-grp.cssonly {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+//.toggle-btn-grp.cssonly div {
+//    width: 32.5%;
+//    height: auto;
+//    display: inline-block;
+//    position: relative;
+//    height: 5.5rem;
+//}
+
+.toggle-btn-grp.cssonly div label {
+    width: 100%;
+    height: 5.5rem;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align:center;
+    font-weight: normal;
+    border-radius: 8px;
+    font-size: auto;
+    height: auto;
+}
+
+.toggle-btn-grp.cssonly div input { /*Hides radio buttons */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    z-index:1;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background-color: darken($light-grey,15%);
+}
+
+.toggle-btn:hover {
+  background-color: lighten($light-grey,6%);
+}
+
+
+/* SANKEY */
+.node rect {
+  /*cursor: move; /* changes icon cursor */
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: $light-grey;
+  stroke-opacity: .5;
+}
+
+/* changes what happens to the link lines during mouseover */
+/*
+.link:hover{
+  stroke: #939393;
+  stroke-opacity: 1;
+}
+*/
+.link[data-highlight="forwards"]{
+  stroke: $light-blue-hover;
+} 
+.link[data-highlight="backwards"]{
+  stroke: $light-blue-hover;
+} 
+
+
+/* FINAL VIZ GUI */
+
+#sankeyGUI {
+  margin: auto;
+  width: 100%;
+  
+}
+
+#perspectives {
+  width: 30%;
+  float: left;
+}
+
+#perspectives li {
+  float: left;
+  width: 50%;
+  height: 100px;
+  text-align: center;
+  display: inline;
+  color: #000;
+  background-color: $light-blue;
+  cursor:pointer;
+}
+
+.perspective h5 {
+  color: white;
+}
+
+.perspective {
+  height: 100px;
+  padding-top: .5em;
+  img {
+    height: 60%;
+    margin: auto;
+   }
+}
+
+#perspectives li:hover {
+  background-color: $light-blue-hover;
+}
+
+[data-key="patient"].selected {
+  background-color: $light-blue-selected;
+}
+
+[data-key="provider"].selected {
+  background-color: $light-blue-selected;
+}
+
+[data-key="policymaker"].selected {
+  background-color: $light-blue-selected;
+}
+
+[data-key="payer"].selected {
+  background-color: $light-blue-selected;
+}
+
+.perspective h5 {
+  text-align: center
+}
+
+#next {
+  width: 70%;
+  height: 200px;
+  float: left;
+  background-color: $light-blue-selected;
+}
+
+#actions li {
+  list-style-type: none;
+}
+
+.individual-action {
+  float: left;
+  width: 20%;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  padding: 6px;
+  font-weight: 200;
+  cursor:pointer;
+  background-color: $light-blue-selected;
+  vertical-align: middle;
+}
+
+.individual-action:hover {
+  background-color: $light-blue-hover;
+}
+  
+
+.individual-result {
+  position: absolute;
+  width: 70%;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 200;
+  cursor:pointer;
+  background-color: $light-blue-selected;
+}
+.individual-result:hover {
+  background-color: $light-blue-hover;
+}
+#results li {
+  list-style-type: none;
+}
+
+
+
+//[data-perspective="patient"] li {
+//  background-color: $light-blue-selected;
+//  border: none;
+//  width: calc(100% / 5);
+//}
+//
+//[data-perspective="provider"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 9);
+//}
+//
+//[data-perspective="policymaker"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 9);
+//}
+//
+//[data-perspective="payer"] li {
+//  background-color: $light-blue-selected;
+//  width: calc(100% / 6);
+//}
+//
+//[data-perspective="patient"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="provider"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="policymaker"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+//
+//[data-perspective="payer"] li.selected {
+//  background-color: $light-blue-selected;
+//}
+
+.individual-action {
+  padding: 0 10px;
+  padding-top: .5em;
+  p {
+    margin: auto;
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+  }
+}
+
+
+
+
+
+/* MAKE YOUR OWN STORY */
+.decision-point{
+  background-color:#fff;
+}
+.decision-container{
+  display:flex;
+  @media only screen and (max-width: 768px) {
+      display: table;
+      width: 100%;
+  }
+  .decision{
+    cursor:pointer;
+    flex:1;
+    background-color:$light-grey;
+    display:inline-block;
+    width:calc(50% - 10px);
+    padding: 25px;
+    border-radius: 8px;
+    
+    @media only screen and (max-width: 768px) {
+      width: 100% !important;
+      display:block;
+      margin-bottom: 1.25em;
+    }
+    
+    &:hover{
+      background-color: lighten($light-grey,5%)
+    }
+    &[data-selected="yes"]{
+      background-color:darken($light-grey,10%);
+    }
+    &[data-selected="no"]{
+      background-color:lighten($light-grey, 5%);
+    }
+    
+    h3{
+      height:2em;
+      vertical-align:middle;
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+    
+    p {
+      font-size: 1em;
+      text-align: center;
+      padding: 0px 5px;
+      margin: 0px 0px 5px;
+    }
+  }
+}
+.decision, .next, .outcome{
+  margin:10px;
+  @media only screen and (max-width: 768px) {
+    margin: 10px 0; 
+  }
+}
+
+.next{
+  display:none;
+  font-size: 1em;
+  padding: 5px 20px 50px;
+}
+.outcome{
+  display:none;
+  font-size: 1em;
+  padding: 5px 20px;
+  &[data-outcome="positive"]{
+    background-color:#fff;
+  }
+  &[data-outcome="negative"]{
+    background-color:#fff;
+  }
+}
+
+
+
+.social-buttons {
+  svg {
+    width: 28px;
+    height: 28px;
+    background: #474751;
+    padding: 6px;
+    fill: white;
+    transition: background 250ms ease-in-out;
+    &:hover {
+      background:#83838E;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.end {
+    text-align: center;
+    margin-bottom: 3em;
+    @media only screen and (max-width: 1200px) {
+      margin-bottom: 4vw;
+    }
+  }
+  &.authors {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+#open-table {
+  background-color: #fff;
+  padding: 20px;
+}
+#open-table p {
+    text-align: center;
+}
+#open-table .row {
+    margin: 0px 0px 30px;
+}
+#authors-table {
+  background-color: #fff;
+  margin: 0px 0px 120px;
+  border-radius: 8px;
+}
+
+#authors-table .col-sm-6 {
+    padding: 10px;
+}
+
+#authors-table .box {
+    background-color: $light-grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#authors-table .centeredImage {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#authors-table h3 {
+    padding: 30px 0px 0px;
+}
+
+#authors-table p {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+#contributors-table {
+  	margin: 40px 10px 30px;
+  	border-radius: 8px;
+	
+	.col-sm-6 {
+    	padding: 0px;
+	}
+	
+	.row {
+		background-color: $light-grey;
+		border-radius: 8px;
+		padding: 20px;
+	}
+	.contributor {
+		.image, .info {
+			float: left;
+			display: inline-table;
+		}
+		.image {
+			width: 20%;
+			img {
+				border-radius: 5px;
+			}
+		}
+		.info {
+			padding-left: 1em;
+			width: 80%;
+			h3{
+				text-transform: lowercase;
+				font-style: italic;
+				font-weight: 300;
+				text-align: left;
+				font-size: 1em;
+				margin: 0px;
+			}
+			p {
+				text-align: left;
+				margin: 5px 0px;
+			}
+		}
+		hr {
+			margin: 0.5em;
+			border-top: 1px solid $light-grey;
+		}
+	}
+}
