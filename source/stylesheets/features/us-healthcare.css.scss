@@ -55,6 +55,10 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
   @media only screen and (max-width: 768px){
     margin-bottom: 10px; 
   }
+
+  .footnote {
+      font-size: 0px;
+  }
 }
 
 .container .jumbotron{
