@@ -93,7 +93,7 @@ $(document).ready(function(){
     $('.individual-result[data-key="'+this_key+'"]').show()
   });
   
-  $('.cancel').click(function(e){
+  $('.individual-result').click(function(e){
     console.log("cancel")
     $('.individual-result').hide();
   });
