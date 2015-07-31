@@ -26,17 +26,17 @@
 	},
 	"everyone_covered":{
 		"title": "Everyone Gets Covered",
-		"description": "blah",
+		"description": "Universal coverage means everyone has access to healthcare services. Regardless of income or current health status, a person can purchase health insurance. In the past, unhealthy people were more likely to purchase health insurance than health people, making the insurance pool generally unhealthy. On average, customers were costing insurance companies more money, causing the companies to raise prices, which in turn deterred even more healthy people from buying insurance. This \"death spiral\" can be avoided through universal coverage, which involves a mandate that every person buy coverage (the approach taken by the ACA) or a single payer system where the government insures everyone (the approach taken by many other industrialized nations).",
 		"impacts":["patient"]
 	},
 	"better_costs":{
 		"title": "Better Costs",
-		"description": "yay no broke",
+		"description": "",
 		"impacts":[]
 	},
 	"more_equitable":{
 		"title":"More Equitable",
-		"description": "lets be nice",
+		"description": "",
 		"impacts":[]
 	},
 	"preventative_meds":{
