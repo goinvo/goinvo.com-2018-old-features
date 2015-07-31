@@ -18,42 +18,24 @@ a {
 	margin-top: 55px;
 }
 
+$text-stroke: rgba(0, 0, 0, 0.4);
+
 // Heros
-#democracy {
+#us-healthcare-feature {
 	.photo-container {
-		background-image: image-url('home/democracy.png');	
+		background: linear-gradient(rgba(2, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) , image-url('features/us-healthcare/header_image.png') rgba(0, 0, 0, 0.62);
 	}
-	
-	.title {
-		.tag {
-			color: #9B9B9B;	
-		}
-		.name {
-			color: #D75F4E;	
-		}
-		.sub-name {
-			color: #6C8696;	
-		}
+    .title {
+	   color: white;
+	   text-shadow:
+		   2px 2px 0 $text-stroke,
+		 -1px -1px 0 $text-stroke,  
+		  1px -1px 0 $text-stroke,
+		  -1px 1px 0 $text-stroke,
+		   1px 1px 0 $text-stroke;
 	}
 }
 
-#oral-history{
-	.photo-container {
-		background-image: image-url('home/oral-history.jpg');	
-	}
-	
-	.title {
-		.tag {
-			color: #f9f9f9;	
-		}
-		.name {
-			color: #f9f9f9;	
-		}
-		.sub-name {
-			color: #f9f9f9;	
-		}
-	}
-}
 
 #from-bathroom-to-healthroom {
 	background-color: rgba(0,0,0,.5);

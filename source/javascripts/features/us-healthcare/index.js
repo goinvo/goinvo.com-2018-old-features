@@ -32,6 +32,7 @@ $(document).ready(function(){
     var this_key = $(this).attr('data-key');
     $('.action-container[data-perspective="'+this_key+'"]').show()
     $(this).addClass('selected');
+    $('.individual-result').hide();
   });
 
   $('.up_link').click(function(e){
@@ -82,4 +83,20 @@ $(document).ready(function(){
   });
   $('.perspective:first').trigger('click');
   
+  
+  $('.individual-result').hide();
+  
+  $('.individual-action').click(function(e){
+    $('.individual-result').hide();
+    var this_key = $(this).attr('data-key');
+    console.log("this_key: " + this_key)
+    $('.individual-result[data-key="'+this_key+'"]').show()
+  });
+  
+  $('.individual-result').click(function(e){
+    console.log("cancel")
+    $('.individual-result').hide();
+  });
+      
+      
 });
