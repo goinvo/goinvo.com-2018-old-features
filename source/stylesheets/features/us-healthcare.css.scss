@@ -234,6 +234,7 @@ span.slide {
 
 p.tab_p {
   text-align: center;
+  padding-top: 1em;
 }
 
 /* TABS */
@@ -930,6 +931,9 @@ sup {
 }
 #open-table p {
     text-align: center;
+}
+#open-table .row {
+    margin: 0px 0px 30px;
 }
 #authors-table {
   background-color: #fff;
