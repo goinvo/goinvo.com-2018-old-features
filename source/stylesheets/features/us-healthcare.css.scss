@@ -45,6 +45,17 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
   }
 }
 
+.stuff-below-nav {
+  height: calc(100% - 90px);
+  position: fixed;
+  bottom: 0;
+  overflow: scroll;
+  background-color: white;
+  @media only screen and (max-width: 768px) {
+      height: calc(100% - 50px);
+  }
+}
+
 .jumbotron {
   color: white;
   height: 80vh;
@@ -78,6 +89,30 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
 header p{
   text-align: center;
 }
+
+#hospital-bill {
+  height: 200px;
+  width: calc(15% - 10px);
+  position: fixed;
+  bottom: 30%;
+  right: 5px;
+  background-color: $light-blue;
+  padding: 10px;
+  z-index: 1000;
+  transition: all .2s ease-in-out;
+}
+#hospital-bill:hover {
+  height: 200px;
+  width: calc(15% - 10px);
+  position: fixed;
+  bottom: 31%;
+  right: 5px;
+  background-color: $light-blue-hover;
+  padding: 10px;
+  z-index: 1000;
+  transform: scale(1.2);
+}
+  
 
 h1 {
   font-family: "Lato", sans-serif;

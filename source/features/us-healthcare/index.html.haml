@@ -22,7 +22,7 @@
   = stylesheet_link_tag "features/us-healthcare.css"
 - footnotes = []
 - footnote_link = "features/us-healthcare/footnote_link"
-  
+
 %navigation#article-nav
   %ul
     %li 
@@ -39,442 +39,444 @@
       %a{:href => "#authors"}6. Authors
     %li 
       %a{:href => "#references"}7. References      
-
-%header.jumbotron
-  .layer
-    .footnote
-      =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.flickr.com/photos/seattlemunicipalarchives/4058808950/in/photolist-7bEsuE-6LyK5M-7d7ZMT-7Jw7ex-rSw7be-e987Cm-2EGZw9-9866ZQ-7LPorK-9834p4-edxrUt-e6ozvb-k47W5X-544hCN-6X4VM4-gbFYAc-4yQ2Na-7Rrgrj-67NVrN-9dDXGJ-7Rrg6o-7Ty3UM-7Rrg2q-7Ro14K-pMrny1-6F44ap-cvUW9h-d2Tn1f-poy9aV-ipPt8L-fvhD2S-5R3Uac-qBATWq-7FagL3-6SUtcs-qLq2WU-QxxNc-d2TmHm-cXQtRQ-5PnkEG-7kbDUt-7JA3Mb-dfyCuv-gtZQYt-gtZQzn-9bfuhi-beVpGe-982PDg-8UUA3X-AKC4i", :text=>"Image", :source=>"Seattle Municipal Archives", :access=>"Flickr, 10 Nov. 1999. Web"})
-    %h1 Healing U.S. Healthcare
-    %h3 How do we save an ailing system?
-    %h3 By Cecile Lu and Neil Rens
-.content-wrapper
-  %article#background
-    %p.p-slide
-      $9,255. That’s how much your health costs the U.S. every year. 
-      =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
-      You probably don’t pay that amount, let alone use that amount in health services. In fact, 90% of Americans account for less than 33% of healthcare consumption
-      =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.nihcm.org/images/Health_Care_Spending_Highly_Concentrated_CS2F2.png", :text=>"The Concentration of Health Care Spending", :source=>"NIHCM Foundation", :access=>"Web"})
-      \. 
-    %p.p-slide
-      Nonetheless, you are entangled in the $2.9 trillion
-      =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
-      our country spends on healthcare. 24%
-      =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cbpp.org/research/policy-basics-where-do-our-federal-tax-dollars-go", :text=>"Policy Basics: Where Do Our Federal Tax Dollars Go?", :source=>"Center on Budget and Policy Priorities", :access=>"11 Mar. 2015. Web"})
-      of the federal budget—your tax dollars—is part of this $2.9 trillion. You pay a lot. But what do you get, and how good is it?
-    %p.p-slide
-      Consider David. He just left his job as a high school teacher to launch an education-technology startup. With the change, he lost his health coverage and must decide whether to purchase new insurance. He’s healthy - why would he need health coverage? 
-    %p.p-slide
-      David is just one of the thousands of Americans facing tough choices like this one. He could be any one of us. What happens if David’s gamble of good health fails him? Read on to follow David’s healthcare journey as he navigates the current system. Then, discover our vision for better healthcare in the U.S. and contribute your own ideas.
-  %article#symptoms
-    %h2 Symptoms
-    %a{:name => "symptoms"}
-    %p.p-slide
-      Two weeks ago, David was going about his daily life. Yesterday he was bedridden in a hospital, battling an infection he contracted in that hospital. Now he's back at home, trying to figure out how to pay off his massive
-      %span.slide#flip1{:data=>{:index => 1}} medical debt
-      \. How did he get here?
-    .slide-panel{:data =>{:index=>1}}
-      %p
-        Medical debt refers to individual debt due to healthcare costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits. Medical debt varies depending on insurance coverage and personal medical needs.
-        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.debt.org/medical/", :text=>"Medical Debt Advice - Debt, Healthcare, Insurance & Medicare.", :source=>"Debtorg News", :access=>"Web"})
-      %p
-        In the U.S., medical debt accounts for more than 50% of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Debt Is Ruining the Credit Scores of Millions of Americans", :href=>"http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :source=>"Washington Post", :access=>"The Washington Post, 11 Dec. 2014. Web"})
-    %p.p-slide
-      The process was set in motion when David had to decide whether or not to buy health inusrance. With the passage of the
-      %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act (ACA)
-      , every American has to either purchase health insurance or pay a penalty tax each year.
-    %p.p-slide
-      What should David do?
-    .slide-panel{:data =>{:index=>5}}
-      %p
-        The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of healthcare.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"Hamblin, James", :access=>"The Atlantic. Atlantic Media Company, 2 Apr. 2013. Web"})
-      %p
-        To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
-        Americans can use their state’s marketplace to obtain coverage from competing private healthcare providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
-      %p
-        The Affordable Care Act also implemented pay-for-performance incentives, which pays healthcare providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Doubts About Pay-for-Performance in Healthcare", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Ryan, Andrew M., Rachel M. Werner", :access=>"Harvard Business Review, 9 Oct. 2013. Web"})
-    = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
-    .slide-panel{:data =>{:index=>2}}
-      %p
-        Bronze Plan coverage typically means that insurance companies pay for around 60% of covered healthcare expenses and the consumer pays for the rest. The Affordable Care Act requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bronze Plan – Affordable Care Act (Obamacare)", :href=>"http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :source=>"Obamacare Bronze Health Insurance Plans", :access=>"Web"})
-        Each offers a tradeoff between premiums and deductibles.
-      %p
-        When the Affordable Care Act was first implemented, users spent hours on healthcare.gov before being able to purchase their insurance. The server was overwhelmed by the massive influx of information
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites", :href=>"https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :source=>"Washington Post", :access=>"The Washington Post, 9 Oct. 2013. Web"})
-        the user interface was poorly designed and confusing to navigate,
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 31 Jul. 2014. Web"})
-        and the cost calculator sometimes provided inaccurate information about subsidies.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 21 Mar. 2014. Web"})
-        The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage", :href=>"https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :source=>"HealthCare.gov", :access=>"Web"})
-      %p
-        Despite the slow start, 9 out of 10 Americans now have insurance. Prior to the implementation of the Affordable Care Act, only 8 out of 10 Americans were insured.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Nearly 90% of Americans Now Have Health Insurance", :href=>"http://money.cnn.com/2015/04/13/news/economy/obamacare-uninsured-gallup/", :source=>"CNNMoney", :access=>"Cable News Network. Web"})
-      %p
-        *In 2016 and onwards, the tax will be raised to 2.5%.
-    %p.p-slide
-      Without health insurance, David stops seeing his primary care physician. Not only does he lose his first point of contact for health concerns, but he also stops receiving preventative treatments like vaccines.
-    %p.p-slide
-      One day, David begins having coughing fits. He assumes he will get better in a few days, but he doesn't. After a week, the symptoms continue to persist.
-    %p.pslide
-      What should David do?
-      = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
-    %p.p-slide
-      The cough continues to worsen so David decides to go to a walk-in clinic. It’s hard to
-      %span.slide#flip6{:data=>{:index => 6}} compare the quality and cost of care
-      at different places becuase the information is not readily available.
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"Meier, Barry, Jo Mcginty, and Julie Creswell", :access=>"The New York Times, 7 May 2013. Web"})
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Tool", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
-      David simply picks the one closest to his home.
-      .slide-panel{:data =>{:index=>6}}
+.stuff-below-nav
+  #hospital-bill
+    %h3 Hospital Bill
+  %header.jumbotron
+    .layer
+      .footnote
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.flickr.com/photos/seattlemunicipalarchives/4058808950/in/photolist-7bEsuE-6LyK5M-7d7ZMT-7Jw7ex-rSw7be-e987Cm-2EGZw9-9866ZQ-7LPorK-9834p4-edxrUt-e6ozvb-k47W5X-544hCN-6X4VM4-gbFYAc-4yQ2Na-7Rrgrj-67NVrN-9dDXGJ-7Rrg6o-7Ty3UM-7Rrg2q-7Ro14K-pMrny1-6F44ap-cvUW9h-d2Tn1f-poy9aV-ipPt8L-fvhD2S-5R3Uac-qBATWq-7FagL3-6SUtcs-qLq2WU-QxxNc-d2TmHm-cXQtRQ-5PnkEG-7kbDUt-7JA3Mb-dfyCuv-gtZQYt-gtZQzn-9bfuhi-beVpGe-982PDg-8UUA3X-AKC4i", :text=>"Image", :source=>"Seattle Municipal Archives", :access=>"Flickr, 10 Nov. 1999. Web"})
+      %h1 Healing U.S. Healthcare
+      %h3 How do we save an ailing system?
+      %h3 By Cecile Lu and Neil Rens
+  .content-wrapper
+    %article#background
+      %p.p-slide
+        $9,255. That’s how much your health costs the U.S. every year. 
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
+        You probably don’t pay that amount, let alone use that amount in health services. In fact, 90% of Americans account for less than 33% of healthcare consumption
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.nihcm.org/images/Health_Care_Spending_Highly_Concentrated_CS2F2.png", :text=>"The Concentration of Health Care Spending", :source=>"NIHCM Foundation", :access=>"Web"})
+        \. 
+      %p.p-slide
+        Nonetheless, you are entangled in the $2.9 trillion
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
+        our country spends on healthcare. 24%
+        =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cbpp.org/research/policy-basics-where-do-our-federal-tax-dollars-go", :text=>"Policy Basics: Where Do Our Federal Tax Dollars Go?", :source=>"Center on Budget and Policy Priorities", :access=>"11 Mar. 2015. Web"})
+        of the federal budget—your tax dollars—is part of this $2.9 trillion. You pay a lot. But what do you get, and how good is it?
+      %p.p-slide
+        Consider David. He just left his job as a high school teacher to launch an education-technology startup. With the change, he lost his health coverage and must decide whether to purchase new insurance. He’s healthy—why would he need health coverage? 
+      %p.p-slide
+        David is just one of the thousands of Americans facing tough choices like this one. He could be any one of us. What happens if David’s gamble of good health fails him? Read on to follow David’s healthcare journey as he navigates the current system. Then, discover our vision for better healthcare in the U.S. and contribute your own ideas.
+    %article#symptoms
+      %h2 Symptoms
+      %a{:name => "symptoms"}
+      %p.p-slide
+        Two weeks ago, David was going about his daily life. Yesterday he was bedridden in a hospital, battling an infection he contracted in that hospital. Now he's back at home, trying to figure out how to pay off his massive
+        %span.slide#flip1{:data=>{:index => 1}} medical debt
+        \. How did he get here?
+      .slide-panel{:data =>{:index=>1}}
         %p
-          In 2014, Massachusetts became the first state to require price information for different health procedures. For the first time, insurance companies were required to tell their customers how much the company pays for a given procedure or test.
-          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mass. Becomes First State To Require Price Tags For Health Care", :href=>"http://commonhealth.wbur.org/2014/10/mass-first-price-tags-health-care", :source=>"Bebinger, Martha", :access=>"WBUR, 8 October 2014. Web"})
-          However, it is still difficult to find accurate pricing information for people without insurance.
-  #cost-comparison-boston-container.chart-container
-    %p 
-      Pneumonia treatment costs in Boston range from $10,000 to $31,000
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Boston, Massachusetts: Simple Pneumonia & Pleurisy With Complications And Comorbities", :href=>"http://www.opscost.com/search?location=Boston%2C%20Massachusetts&drg_procedure_code=194", :source=>"OpsCost", :access=>"Web"})
-    #cost-comparison-boston-chart
-  %article#symptoms
-    %p.p-slide
-      After a physical examination, the doctor decides to X-ray David’s chest. The radiologist who reads the scan notices a small nodule that cannot be characterized. He decides to look at David’s health record to see if the nodule was previously documented.
-    %p.p-slide
-      Does the doctor have access to David's
-      %span.slide#flip3{:data=>{:index => 3}} Electronic Health Record
-      ?
-    .slide-panel{:data =>{:index=>3}}
-      %p
-        An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs enable the sharing of information between multiple healthcare providers and organizations. They contain information from all clinicians involved in a patient’s care.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
-        However, when EHRs became more widely implemented in 2004, the industry built hundreds of standalone systems to create and maintain EHRs.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Is Healthcare IT Interoperability (Almost) Here", :href=>"http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :source=>"Eastwood, Brian", :access=>"CIO, 15 Apr. 2013. Web"})
-        Within each system data is shared, but there is little to no data flow between different systems.
-      %p
-        Problems arise with the lack of interoperability between EHR systems. Approximately 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways. This causes misread charts, forgotten results, and untimely information during life-threatening crises.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Why I Hope to Help End EHRs Lack of Interoperability", :href=>"http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :source=>"Voltz, Donald", :access=>"HIT Consultant, 22 Mar. 2015. Web"})
-        Other hospitals hesitate to transfer data in fear of incurring liability for sharing private information.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem", :href=>"http://www.elxrhealth.com/lack-of-interoperability/", :source=>"ELXR Health", :access=>"5 June 2015. Web"})
-      %p
-        The 2009 Health Information Technology for Economic and Clinical Health (HITECH) Act promotes the adoption and meaningful use of health information technology such as EHRs.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi", :access=>"Health Affairs Blog, 4 Mar. 2015. Web"})
-        Using money from the HITECH Act, the Centers for Medicare and Medicaid Services (CMS) provide incentive payments to eligible professionals and hospitals. The CMS Medicare and Medicaid EHR Incentive Programs encourage adoption, implementation, upgrades and demonstration of meaningful use of certified EHR technology.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"EHR Incentive Programs", :href=>"http://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/index.html?redirect=/EHRIncentivePrograms/", :source=>"CMS.gov: Centers for Medicare & Medicaid Services", :access=>"Web"})
-    %p.p-slide
-    = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
-    %p.p-slide
-      Worried that the nodule could be malignant, the doctor advises David to have a CT scan so the nodule can be examined in more detail. David is not told about the cost of the CT scan, only that it is important to keep him healthy. He agrees to the scan, which shows that the nodule is old and benign. The scan also uncovers a mass on the left adrenal gland. Although there is a low suspicion for cancer, the doctors order another scan—this time with contrast—just to be sure the lesion is benign.
-  #waste-container.chart-container
-    .toggle-btn-grp.cssonly
-      .row
-        .col-sm-4
-          %div
-            %input#dollarsWasted{:name => "group4", :type => "radio", :checked => true}/
-            %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
-        .col-sm-4
-          %div
-            %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
-            %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended
-        .col-sm-4
-          %div
-            %input#totalProcedures{:name => "group4", :type => "radio"}/
-            %label.toggle-btn{:for => "totalProcedures"} Total Procedures
-    %p
-      Nonrecommended statins cost more than $5 billion each year
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
-    #waste-chart
-  %article#symptoms
-    %p.p-slide
-      Thankfully, the scan showed the mass to be benign. Unfortunately, David suffered a severe allergic reaction to the dye used for contrast.
-    %p.p-slide
-      David is admitted to a nearby hospital for treatment. His condition improves after a few days, but suddenly David’s temperature spikes and his coughing exacerbates. The diagnosis:
-      %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia
-      \.
-    .slide-panel{:data =>{:index=>4}}
-      %p
-        Hospital-acquired pneumonia is a lung infection that occurs during a hospital stay. Infections contracted at a hospital can be especially dangerous because of two reasons. First, patients are often already very sick and cannot fight off the germs. Second, the types of bacteria in hospitals are often more dangerous strains because they can be resistant to antibiotics.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital-acquired Pneumonia: MedlinePlus Medical Encyclopedia", :href=>"http://www.nlm.nih.gov/medlineplus/ency/article/000146.html", :source=>"U.S National Library of Medicine", :access=>"U.S. National Library of Medicine. Web"})
-        Pneumonia is one of the most common hospital-acquired infections, after urinary tract infections and wound infections. It has a 33% mortality rate, although the cause of death can be a combination of the pneumonia and other presenting illnesses.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Common Problems Patients Face in the Hospital", :href=>"http://www.webmd.com/a-to-z-guides/features/before-surgery-your-top-six-hospital-risks?page=3", :source=>"WebMD", :access=>"WebMD. Web"})
-      %p
-        440,000 patients die every year from preventable medical errors.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors", :href=>"https://www.justice.org/what-we-do/advocate-civil-justice-system/issue-advocacy/medical-errors", :source=>"American Association for Justice", :access=>"Web"})
-        Medical errors are the third leading cause of death in the United States, following cancer and heart disease.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow", :href=>"http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :source=>"Hospital Safety Score", :access=>"23 Oct. 2013. Web"})
-        Studies show that up to 12% of people going to a hospital will suffer severe harm as a result.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why", :href=>"http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :source=>"Kliff, Sarah", :access=>"Vox, 22 Apr. 2015. Web"})
-      %p
-        Medicare is now punishing hospitals with high rates of infections and other medical errors in an attempt to increase patient safety. Publicly funded hospitals have been penalized the most because they take care of sicker populations and deal with more complex cases.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"Rau, Jordan", :access=>"NPR. 19 Dec. 2014. Web"})
-    %p.p-slide
-      After a week in the hospital, David’s initial cough, allergic reaction, and pneumonia are successfully treated. But he isn't sent home empty-handed: he has a bill that says he owes $20,000.
-    %p.p-slide
-      It doesn’t have to be this way. If David had insurance, he would have had access to a primary care physician. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have had the second and third CT scans, preventing his allergic reaction and hospital-acquired pneumonia. 
-    %p.p-slide
-      The account of David is fictional, but it’s well within the realm of possibility.
-  / end id="story"
-  / Line Graph
-  %article#history
-    %h2 History
-    %a{:name => "history"}
-    %p.p-slide
-      Despite its shortcomings, the U.S. healthcare system also has strengths. Medical research, education, and technology flourish in the U.S. However, even these traditional strengths are facing challenges.
-    .previous-successes
-      .row
-        .col-sm-4
-          %h3 Research
-          %p.centeredImage
-            = image_tag "features/us-healthcare/research_icon-03.png", width: "50%", class: "centeredImage"
+          Medical debt refers to individual debt due to healthcare costs and related expenses. It is different from other debts because it is almost never accumulated by choice, and can add up quickly and unexpectedly. It can stem from any medical expenses, ranging from regular checkups to emergency room visits. Medical debt varies depending on insurance coverage and personal medical needs.
+          =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"https://www.debt.org/medical/", :text=>"Medical Debt Advice - Debt, Healthcare, Insurance & Medicare.", :source=>"Debtorg News", :access=>"Web"})
+        %p
+          In the U.S., medical debt accounts for more than 50% of all overdue debt that appears on credit reports. For 15 million people, medical debt is the only debt they have in collections in their credit report.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Debt Is Ruining the Credit Scores of Millions of Americans", :href=>"http://www.washingtonpost.com/news/get-there/wp/2014/12/11/medical-debt-is-ruining-the-credit-score-of-millions-of-americans/", :source=>"Washington Post", :access=>"The Washington Post, 11 Dec. 2014. Web"})
+      %p.p-slide
+        The process was set in motion when David had to decide whether or not to buy health inusrance. With the passage of the
+        %span.slide#flip5{:data=>{:index => 5}} Patient Protection and Affordable Care Act (ACA)
+        , every American has to either purchase health insurance or pay a penalty tax each year.
+      %p.p-slide
+        What should David do?
+      .slide-panel{:data =>{:index=>5}}
+        %p
+          The purpose of the Patient Protection and Affordable Care Act (also known as ACA or Obamacare) is to “increase the number of Americans covered by health insurance and decrease the cost of healthcare.” Insurance companies are no longer allowed to deny people coverage and they can no longer revoke coverage when people get sick. People are no longer forced to pay extra for insurance because of pre-existing conditions.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What Is Obamacare", :href=>"http://www.theatlantic.com/health/archive/2013/04/what-is-obamacare/274509/", :source=>"Hamblin, James", :access=>"The Atlantic. Atlantic Media Company, 2 Apr. 2013. Web"})
+        %p
+          To make insurance more accessible, the Affordable Care Act implemented Health Insurance Exchanges. The exchanges function as marketplaces for health insurance plans.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"ObamaCare | Health Insurance Exchange", :href=>"http://obamacarefacts.com/obamacare-health-insurance-exchange/", :source=>"Obamacare Facts", :access=>"Web"})
+          Americans can use their state’s marketplace to obtain coverage from competing private healthcare providers. People can now compare prices of qualified health plans to choose the best fit in terms of coverage, premiums, and deductibles.
+        %p
+          The Affordable Care Act also implemented pay-for-performance incentives, which pays healthcare providers for outcomes instead of for services. While there have not been any adverse effects, the system has yet to show much evidence of success in improving patient outcomes.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Doubts About Pay-for-Performance in Healthcare", :href=>"https://hbr.org/2013/10/doubts-about-pay-for-performance-in-health-care", :source=>"Ryan, Andrew M., Rachel M. Werner", :access=>"Harvard Business Review, 9 Oct. 2013. Web"})
+      = partial("features/us-healthcare/decision_point", :locals => {:index=>0} )
+      .slide-panel{:data =>{:index=>2}}
+        %p
+          Bronze Plan coverage typically means that insurance companies pay for around 60% of covered healthcare expenses and the consumer pays for the rest. The Affordable Care Act requires insurance companies to offer Gold, Silver, and Platinum plans along with Bronze.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bronze Plan – Affordable Care Act (Obamacare)", :href=>"http://www.healthpocket.com/individual-health-insurance/bronze-health-plans#.VaZx7hNVikp", :source=>"Obamacare Bronze Health Insurance Plans", :access=>"Web"})
+          Each offers a tradeoff between premiums and deductibles.
+        %p
+          When the Affordable Care Act was first implemented, users spent hours on healthcare.gov before being able to purchase their insurance. The server was overwhelmed by the massive influx of information
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Here’s Everything You Need to Know about Obamacare’s Error-plagued Websites", :href=>"https://www.washingtonpost.com/blogs/the-switch/wp/2013/10/09/heres-everything-you-need-to-know-about-obamacares-error-plagued-web-sites/", :source=>"Washington Post", :access=>"The Washington Post, 9 Oct. 2013. Web"})
+          the user interface was poorly designed and confusing to navigate,
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Not Fully Ready for Round Two", :href=>"http://www.thefiscaltimes.com/Articles/2014/07/31/Healthcaregov-Not-Fully-Ready-Round-Two", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 31 Jul. 2014. Web"})
+          and the cost calculator sometimes provided inaccurate information about subsidies.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Yet Another Obamacare Glitch Was Just Discovered", :href=>"http://www.thefiscaltimes.com/Articles/2014/03/21/Yet-Another-Obamacare-Glitch-Was-Just-Discovered", :source=>"Brianna Ehley", :access=>"The Fiscal Times, 21 Mar. 2014. Web"})
+          The poor implementation may have caused some people, like David, to opt out of the plans in favor of the 2%* penalty tax.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Individual Mandate Penalty You Pay If You Don't Have Health Insurance Coverage", :href=>"https://www.healthcare.gov/fees-exemptions/fee-for-not-being-covered/", :source=>"HealthCare.gov", :access=>"Web"})
+        %p
+          Despite the slow start, 9 out of 10 Americans now have insurance. Prior to the implementation of the Affordable Care Act, only 8 out of 10 Americans were insured.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Nearly 90% of Americans Now Have Health Insurance", :href=>"http://money.cnn.com/2015/04/13/news/economy/obamacare-uninsured-gallup/", :source=>"CNNMoney", :access=>"Cable News Network. Web"})
+        %p
+          *In 2016 and onwards, the tax will be raised to 2.5%.
+      %p.p-slide
+        Without health insurance, David stops seeing his primary care physician. Not only does he lose his first point of contact for health concerns, but he also stops receiving preventative treatments like vaccines.
+      %p.p-slide
+        One day, David begins having coughing fits. He assumes he will get better in a few days, but he doesn't. After a week, the symptoms continue to persist.
+      %p.pslide
+        What should David do?
+        = partial("features/us-healthcare/decision_point", :locals => {:index=>1} )
+      %p.p-slide
+        The cough continues to worsen so David decides to go to a walk-in clinic. It’s hard to
+        %span.slide#flip6{:data=>{:index => 6}} compare the quality and cost of care
+        at different places becuase the information is not readily available.
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"Meier, Barry, Jo Mcginty, and Julie Creswell", :access=>"The New York Times, 7 May 2013. Web"})
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Tool", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
+        David simply picks the one closest to his home.
+        .slide-panel{:data =>{:index=>6}}
           %p
-            49% of public research funding throughout the world comes from the U.S., amounting to $50.5B annually.
-          %p
-            However, U.S. spending on medical research has been increasing by less than the inflation rate since 2012. Not only is funding decreasing, but funding as a percentage of gross domestic product (GDP) is also decreasing.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Restore the U.S. Lead in Biomedical Research", :href=>"http://jama.jamanetwork.com/article.aspx?articleid=2089336", :source=>"Dzau VJ, Fineberg HV", :access=>"JAMA. 2015;313(2):143-144. doi:10.1001/jama.2014.17660. Web"})
-        .col-sm-4
-          %h3 Education
-          %p.centeredImage
-            = image_tag "features/us-healthcare/education_icon-02.png", width: "50%", class: "centeredImage"
-          %p
-            According to U.S. News and World Reports, the U.S. has 8 of the top 10 medical schools in the world. 
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Best Global Universities for Clinical Medicine", :href=>"http://www.usnews.com/education/best-global-universities/clinical-medicine", :source=>"U.S. News", :access=>"U.S.News & World Report. Web"})
-            It is also home to 17 of the top 20 hospitals.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"World", :href=>"http://hospitals.webometrics.info/en/world", :source=>"Ranking Web of Hospitals", :access=>"Web"})
-          %p
-            However, the U.S. has fewer doctors per capita than most other industrialized nations.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"OECD Statistics", :access=>"Web"})
-        .col-sm-4
-          %h3 Technology
-          %p.centeredImage
-            = image_tag "features/us-healthcare/tech_icon-03.png", width: "50%", class: "centeredImage"
-          %p
-            We have more MRI, CT, and PET machines per capita than any other country.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"OECD Statistics", :href=>"http://stats.oecd.org/#", :source=>"OECD Statistics", :access=>"Web"})
-          %p
-            However, we spend significantly more on clinical care per capita than any other industrialized country.
-    %p.p-slide
-      A decade ago, the United States funded 57% of biomedical research around the globe. In 2015, the U.S. share has dropped down to 44%. Even though the U.S. still spends more than twice as much as any other country on medical research, federal spending is being cut
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bad Medicine", :href=>"http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :source=>"The Economist", :access=>"The Economist Newspaper, 2 Mar. 2013. Web"})
-      and support for biomedical research in the U.S. is decreasing. Simultaneously, global interest in biomedical research is increasing
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"Harris, Richard", :access=>"NPR, 13 Jan. 2015. Web"})
-      , decreasing the percentage of America’s share in global research.
+            In 2014, Massachusetts became the first state to require price information for different health procedures. For the first time, insurance companies were required to tell their customers how much the company pays for a given procedure or test.
+            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mass. Becomes First State To Require Price Tags For Health Care", :href=>"http://commonhealth.wbur.org/2014/10/mass-first-price-tags-health-care", :source=>"Bebinger, Martha", :access=>"WBUR, 8 October 2014. Web"})
+            However, it is still difficult to find accurate pricing information for people without insurance.
+    #cost-comparison-boston-container.chart-container
+      %p 
+        Pneumonia treatment costs in Boston range from $10,000 to $31,000
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Boston, Massachusetts: Simple Pneumonia & Pleurisy With Complications And Comorbities", :href=>"http://www.opscost.com/search?location=Boston%2C%20Massachusetts&drg_procedure_code=194", :source=>"OpsCost", :access=>"Web"})
+      #cost-comparison-boston-chart
+    %article#symptoms
+      %p.p-slide
+        After a physical examination, the doctor decides to X-ray David’s chest. The radiologist who reads the scan notices a small nodule that cannot be characterized. He decides to look at David’s health record to see if the nodule was previously documented.
+      %p.p-slide
+        Does the doctor have access to David's
+        %span.slide#flip3{:data=>{:index => 3}} Electronic Health Record
+        ?
+      .slide-panel{:data =>{:index=>3}}
+        %p
+          An Electronic Health Record (EHR) contains the medical and treatment histories of patients and is designed to be inclusive of a broader view of a patient’s care. EHRs enable the sharing of information between multiple healthcare providers and organizations. They contain information from all clinicians involved in a patient’s care.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"What is an Electronic Health Record (EHR)", :href=>"http://www.healthit.gov/providers-professionals/faqs/what-electronic-health-record-ehr", :source=>"HealthIT", :access=>"Web"})
+          However, when EHRs became more widely implemented in 2004, the industry built hundreds of standalone systems to create and maintain EHRs.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Is Healthcare IT Interoperability (Almost) Here", :href=>"http://www.cio.com/article/2386750/vertical-industries/is-healthcare-it-interoperability-almost-here.html", :source=>"Eastwood, Brian", :access=>"CIO, 15 Apr. 2013. Web"})
+          Within each system data is shared, but there is little to no data flow between different systems.
+        %p
+          Problems arise with the lack of interoperability between EHR systems. Approximately 40% of medical errors are directly related to information omissions and miscommunications. EHR systems do not share information with each other and they all present information in different ways. This causes misread charts, forgotten results, and untimely information during life-threatening crises.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Why I Hope to Help End EHRs Lack of Interoperability", :href=>"http://hitconsultant.net/2015/03/23/why-i-hope-to-help-end-ehrs-lack-of-interoperability/", :source=>"Voltz, Donald", :access=>"HIT Consultant, 22 Mar. 2015. Web"})
+          Other hospitals hesitate to transfer data in fear of incurring liability for sharing private information.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Lack of Interoperability in the Healthcare Industry is an Enormous National Problem", :href=>"http://www.elxrhealth.com/lack-of-interoperability/", :source=>"ELXR Health", :access=>"5 June 2015. Web"})
+        %p
+          The 2009 Health Information Technology for Economic and Clinical Health (HITECH) Act promotes the adoption and meaningful use of health information technology such as EHRs.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Where Is HITECH's $35 Billion Dollar Investment Going", :href=>"http://healthaffairs.org/blog/2015/03/04/where-is-hitechs-35-billion-dollar-investment-going/", :source=>"Thune, John, Lamar Alexander, Pat Roberts, Richard Burr, Mike Enzi", :access=>"Health Affairs Blog, 4 Mar. 2015. Web"})
+          Using money from the HITECH Act, the Centers for Medicare and Medicaid Services (CMS) provide incentive payments to eligible professionals and hospitals. The CMS Medicare and Medicaid EHR Incentive Programs encourage adoption, implementation, upgrades and demonstration of meaningful use of certified EHR technology.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"EHR Incentive Programs", :href=>"http://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/index.html?redirect=/EHRIncentivePrograms/", :source=>"CMS.gov: Centers for Medicare & Medicaid Services", :access=>"Web"})
+      %p.p-slide
+      = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
+      %p.p-slide
+        Worried that the nodule could be malignant, the doctor advises David to have a CT scan so the nodule can be examined in more detail. David is not told about the cost of the CT scan, only that it is important to keep him healthy. He agrees to the scan, which shows that the nodule is old and benign. The scan also uncovers a mass on the left adrenal gland. Although there is a low suspicion for cancer, the doctors order another scan—this time with contrast—just to be sure the lesion is benign.
+    #waste-container.chart-container
+      .toggle-btn-grp.cssonly
+        .row
+          .col-sm-4
+            %div
+              %input#dollarsWasted{:name => "group4", :type => "radio", :checked => true}/
+              %label.toggle-btn{:for => "dollarsWasted"} Dollars Wasted
+          .col-sm-4
+            %div
+              %input#unnecessaryProcedures{:name => "group4", :type => "radio"}/
+              %label.toggle-btn{:for => "unnecessaryProcedures"} Nonrecommended
+          .col-sm-4
+            %div
+              %input#totalProcedures{:name => "group4", :type => "radio"}/
+              %label.toggle-btn{:for => "totalProcedures"} Total Procedures
+      %p
+        Nonrecommended statins cost more than $5 billion each year
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
+      #waste-chart
+    %article#symptoms
+      %p.p-slide
+        Thankfully, the scan showed the mass to be benign. Unfortunately, David suffered a severe allergic reaction to the dye used for contrast.
+      %p.p-slide
+        David is admitted to a nearby hospital for treatment. His condition improves after a few days, but suddenly David’s temperature spikes and his coughing exacerbates. The diagnosis:
+        %span.slide#flip4{:data=>{:index => 4}} hospital-acquired pneumonia
+        \.
+      .slide-panel{:data =>{:index=>4}}
+        %p
+          Hospital-acquired pneumonia is a lung infection that occurs during a hospital stay. Infections contracted at a hospital can be especially dangerous because of two reasons. First, patients are often already very sick and cannot fight off the germs. Second, the types of bacteria in hospitals are often more dangerous strains because they can be resistant to antibiotics.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital-acquired Pneumonia: MedlinePlus Medical Encyclopedia", :href=>"http://www.nlm.nih.gov/medlineplus/ency/article/000146.html", :source=>"U.S National Library of Medicine", :access=>"U.S. National Library of Medicine. Web"})
+          Pneumonia is one of the most common hospital-acquired infections, after urinary tract infections and wound infections. It has a 33% mortality rate, although the cause of death can be a combination of the pneumonia and other presenting illnesses.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Common Problems Patients Face in the Hospital", :href=>"http://www.webmd.com/a-to-z-guides/features/before-surgery-your-top-six-hospital-risks?page=3", :source=>"WebMD", :access=>"WebMD. Web"})
+        %p
+          440,000 patients die every year from preventable medical errors.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors", :href=>"https://www.justice.org/what-we-do/advocate-civil-justice-system/issue-advocacy/medical-errors", :source=>"American Association for Justice", :access=>"Web"})
+          Medical errors are the third leading cause of death in the United States, following cancer and heart disease.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Errors Are the Third Leading Cause of Death in U.S., and New Hospital Safety Scores Show Improvements Are Too Slow", :href=>"http://www.hospitalsafetyscore.org/newsroom/display/hospitalerrors-thirdleading-causeofdeathinus-improvementstooslow", :source=>"Hospital Safety Score", :access=>"23 Oct. 2013. Web"})
+          Studies show that up to 12% of people going to a hospital will suffer severe harm as a result.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Medical Errors in America Kill More People than AIDS or Drug Overdoses. Here's Why", :href=>"http://www.vox.com/2015/1/29/7878731/medical-errors-statistics", :source=>"Kliff, Sarah", :access=>"Vox, 22 Apr. 2015. Web"})
+        %p
+          Medicare is now punishing hospitals with high rates of infections and other medical errors in an attempt to increase patient safety. Publicly funded hospitals have been penalized the most because they take care of sicker populations and deal with more complex cases.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"Rau, Jordan", :access=>"NPR. 19 Dec. 2014. Web"})
+      %p.p-slide
+        After a week in the hospital, David’s initial cough, allergic reaction, and pneumonia are successfully treated. But he isn't sent home empty-handed: he has a bill that says he owes $20,000.
+      %p.p-slide
+        It doesn’t have to be this way. If David had insurance, he would have had access to a primary care physician. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have had the second and third CT scans, preventing his allergic reaction and hospital-acquired pneumonia. 
+      %p.p-slide
+        The account of David is fictional, but it’s well within the realm of possibility.
+    / end id="story"
+    / Line Graph
+    %article#history
+      %h2 History
+      %a{:name => "history"}
+      %p.p-slide
+        Despite its shortcomings, the U.S. healthcare system also has strengths. Medical research, education, and technology flourish in the U.S. However, even these traditional strengths are facing challenges.
+      .previous-successes
+        .row
+          .col-sm-4
+            %h3 Research
+            %p.centeredImage
+              = image_tag "features/us-healthcare/research_icon-03.png", width: "50%", class: "centeredImage"
+            %p
+              49% of public research funding throughout the world comes from the U.S., amounting to $50.5B annually.
+            %p
+              However, U.S. spending on medical research has been increasing by less than the inflation rate since 2012. Not only is funding decreasing, but funding as a percentage of gross domestic product (GDP) is also decreasing.
+              = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Restore the U.S. Lead in Biomedical Research", :href=>"http://jama.jamanetwork.com/article.aspx?articleid=2089336", :source=>"Dzau VJ, Fineberg HV", :access=>"JAMA. 2015;313(2):143-144. doi:10.1001/jama.2014.17660. Web"})
+          .col-sm-4
+            %h3 Education
+            %p.centeredImage
+              = image_tag "features/us-healthcare/education_icon-02.png", width: "50%", class: "centeredImage"
+            %p
+              According to U.S. News and World Reports, the U.S. has 8 of the top 10 medical schools in the world. 
+              = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Best Global Universities for Clinical Medicine", :href=>"http://www.usnews.com/education/best-global-universities/clinical-medicine", :source=>"U.S. News", :access=>"U.S.News & World Report. Web"})
+              It is also home to 17 of the top 20 hospitals.
+              = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"World", :href=>"http://hospitals.webometrics.info/en/world", :source=>"Ranking Web of Hospitals", :access=>"Web"})
+            %p
+              However, the U.S. has fewer doctors per capita than most other industrialized nations.
+              = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"OECD Statistics", :access=>"Web"})
+          .col-sm-4
+            %h3 Technology
+            %p.centeredImage
+              = image_tag "features/us-healthcare/tech_icon-03.png", width: "50%", class: "centeredImage"
+            %p
+              We have more MRI, CT, and PET machines per capita than any other country.
+              = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"OECD Statistics", :href=>"http://stats.oecd.org/#", :source=>"OECD Statistics", :access=>"Web"})
+            %p
+              However, we spend significantly more on clinical care per capita than any other industrialized country.
+      %p.p-slide
+        A decade ago, the United States funded 57% of biomedical research around the globe. In 2015, the U.S. share has dropped down to 44%. Even though the U.S. still spends more than twice as much as any other country on medical research, federal spending is being cut
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bad Medicine", :href=>"http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :source=>"The Economist", :access=>"The Economist Newspaper, 2 Mar. 2013. Web"})
+        and support for biomedical research in the U.S. is decreasing. Simultaneously, global interest in biomedical research is increasing
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"Harris, Richard", :access=>"NPR, 13 Jan. 2015. Web"})
+        , decreasing the percentage of America’s share in global research.
 
-  / end div id=story
-  / TABS
-  %article#diagnosis
-    %h2 Diagnosis
-    %a{:name => "diagnosis"}
-    %p.p-slide
-      The healthcare system in the U.S. needs improvement. While healthcare is complex and nuanced, other industrialized countries are performing much better than the U.S.. We spend $8,700 per capita
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Health Spending", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Data", :access=>"Web"})
-      , far more than any other nation.
-  .container#triple-graph
-    .tabs
-      .row
-        .col-sm-4
-          .tab-link.current{"data-tab" => "tab-1"} 
-            Spending Over Time
-        .col-sm-4
-          .tab-link{"data-tab" => "tab-2"} 
-            Spending vs. GDP
-        .col-sm-4
-          .tab-link{"data-tab" => "tab-3"} Quality
-    #tab-1.tab-content.current
-      %p.tab_p
-        Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, US Dollars/Capita, 1960-2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
-      #spending-capita-chart
-    #tab-2.tab-content
-      %p.tab_p
-        In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, 2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
-        #gdp-vs-capita-chart
-    #tab-3.tab-content
-      %p.tab_p
-        The U.S. spends the most money but ranks last in quality.
-        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mirror, Mirror On The Wall: How the Performance of the U.S. Health Care System Compares Internationally", :href=>"http://www.commonwealthfund.org/~/media/files/publications/fund-report/2014/jun/1755_davis_mirror_mirror_2014.pdf", :source=>"Davis, Karen, Kristof Stremikis, David Squires, Cathy Schoen", :access=>"The Commonwealth Fund, June 2014. Web"})
-        #quality-vs-capita-chart
-  %article#diagnosis
-    %p.p-slide
-      Despite this, we have lower quality and less access. The Patient Protection and Affordable Care Act initiated much needed comprehensive reforms. However, significant work remains. As the ACA continues to be implemented, it will need to be evaluated and adjusted. Some areas like malpractice reform were not addressed by the ACA and still need reform. But policymakers are not the only ones responsible for improving American healthcare. Patients, providers, payers, and inventors all play a role in changing the status quo.
-  %article#prescription
-    %h2 Prescription
-    %a{:name => "prescription"}
-    %p.p-slide
-      A successful healthcare system provides everyone with access to affordable, high quality care. This means that everyone has health insurance and can get care when they need it. It means information about quality and costs is readily available, and people can make informed decisions about the care they purchase.
-    %p.p-slide
-      These are ambitious goals that will take years to achieve, but technology can expedite the process. Apps and wearables are already enabling more self-monitoring and self-care. Simultaneously, information about your DNA sequence allows for personalized medicine. In the future, people will only receive the treatments that will work for them.
-    %p.p-slide
-      Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability require legislative action. Some changes will be cultural. For example, why do we spend so much on end-of-life care that reduces quality of life? It’s time to destigmatize death. Likewise, medical culture needs to be more patient-centered, which involves giving people access to their own health data.
-    %p.p-slide
-      Ultimately, everyone has a role in healing U.S. healthcare. Below we explore the different actions that will lead to an improved system. Each is interconnected and influenced by patients, providers, policy makers, and payers. Explore the ways you can make a difference, and join the discussion by contributing your own ideas.
-  #sankeyGUI
-    #perspectives
-      %ul
-        - data.features.ushealthcare.perspectives.each do |perspective|
-          %li
-            .perspective{:data => {:key => perspective['key']}}
-              = image_tag perspective.image
-              %h5= perspective.title
-    #next
-      - data.features.ushealthcare.perspectives.each do |perspective|
-        #actions
-          %ul
-            .action-container{:data => {:perspective => "#{perspective['key']}"}}
-              - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
-              -  these_nodes.each do |key, node|
-                %li{:data => {:persp => node.impacts[0]}}
-                  .individual-action{ :data => {:key => key}}
-                    -#{style: "width:#{100/these_nodes.length}%"}
-                    %p= node.title
-
-      #results
+    / end div id=story
+    / TABS
+    %article#diagnosis
+      %h2 Diagnosis
+      %a{:name => "diagnosis"}
+      %p.p-slide
+        The healthcare system in the U.S. needs improvement. While healthcare is complex and nuanced, other industrialized countries are performing much better than the U.S.. We spend $8,700 per capita
+        = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Health Spending", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Data", :access=>"Web"})
+        , far more than any other nation.
+    .container#triple-graph
+      .tabs
+        .row
+          .col-sm-4
+            .tab-link.current{"data-tab" => "tab-1"} 
+              Spending Over Time
+          .col-sm-4
+            .tab-link{"data-tab" => "tab-2"} 
+              Spending vs. GDP
+          .col-sm-4
+            .tab-link{"data-tab" => "tab-3"} Quality
+      #tab-1.tab-content.current
+        %p.tab_p
+          Not only does the U.S. spend more, but healthcare spending is growing at a faster rate than in other countries.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, US Dollars/Capita, 1960-2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
+        #spending-capita-chart
+      #tab-2.tab-content
+        %p.tab_p
+          In 2012, the U.S. spent nearly 17% of its GDP on healthcare. The UK spent less than 10%.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Spending: Total, 2013", :href=>"https://data.oecd.org/healthres/health-spending.html", :source=>"OECD Statistics", :access=>"Web"})
+          #gdp-vs-capita-chart
+      #tab-3.tab-content
+        %p.tab_p
+          The U.S. spends the most money but ranks last in quality.
+          = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mirror, Mirror On The Wall: How the Performance of the U.S. Health Care System Compares Internationally", :href=>"http://www.commonwealthfund.org/~/media/files/publications/fund-report/2014/jun/1755_davis_mirror_mirror_2014.pdf", :source=>"Davis, Karen, Kristof Stremikis, David Squires, Cathy Schoen", :access=>"The Commonwealth Fund, June 2014. Web"})
+          #quality-vs-capita-chart
+    %article#diagnosis
+      %p.p-slide
+        Despite this, we have lower quality and less access. The Patient Protection and Affordable Care Act initiated much needed comprehensive reforms. However, significant work remains. As the ACA continues to be implemented, it will need to be evaluated and adjusted. Some areas like malpractice reform were not addressed by the ACA and still need reform. But policymakers are not the only ones responsible for improving American healthcare. Patients, providers, payers, and inventors all play a role in changing the status quo.
+    %article#prescription
+      %h2 Prescription
+      %a{:name => "prescription"}
+      %p.p-slide
+        A successful healthcare system provides everyone with access to affordable, high quality care. This means that everyone has health insurance and can get care when they need it. It means information about quality and costs is readily available, and people can make informed decisions about the care they purchase.
+      %p.p-slide
+        These are ambitious goals that will take years to achieve, but technology can expedite the process. Apps and wearables are already enabling more self-monitoring and self-care. Simultaneously, information about your DNA sequence allows for personalized medicine. In the future, people will only receive the treatments that will work for them.
+      %p.p-slide
+        Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability require legislative action. Some changes will be cultural. For example, why do we spend so much on end-of-life care that reduces quality of life? It’s time to destigmatize death. Likewise, medical culture needs to be more patient-centered, which involves giving people access to their own health data.
+      %p.p-slide
+        Ultimately, everyone has a role in healing U.S. healthcare. Below we explore the different actions that will lead to an improved system. Each is interconnected and influenced by patients, providers, policy makers, and payers. Explore the ways you can make a difference, and join the discussion by contributing your own ideas.
+    #sankeyGUI
+      #perspectives
         %ul
-          - data.features.ushealthcare.nodes.each do |key, value|
+          - data.features.ushealthcare.perspectives.each do |perspective|
             %li
-              .individual-result{ :data => {:key => key}}
-                -#{style: "width:#{100/these_nodes.length}%"}
-                %h3= value.title
-                %p= value.description
-                %h3= "How the ACA Does"
-                %p= value.aca
+              .perspective{:data => {:key => perspective['key']}}
+                = image_tag perspective.image
+                %h5= perspective.title
+      #next
+        - data.features.ushealthcare.perspectives.each do |perspective|
+          #actions
+            %ul
+              .action-container{:data => {:perspective => "#{perspective['key']}"}}
+                - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
+                -  these_nodes.each do |key, node|
+                  %li{:data => {:persp => node.impacts[0]}}
+                    .individual-action{ :data => {:key => key}}
+                      -#{style: "width:#{100/these_nodes.length}%"}
+                      %p= node.title
 
-  #sankey-container.chart-container     
-  #sankey-chart
-  
-  %article#opensource
-    %h2 participate
-    %a{:name => "participate"}
-    #open-table
-      .row
-        %h3 1. Give Feedback
-        %p
-          Send us an email at 
-          = mail_to "feedback-ushealthcare@goinvo.com", "feedback-ushealthcare@goinvo.com", subject: "Healing U.S. Healthcare Feedback"
-      .row    
-        %h3 2. Remix and Reuse
-        %p
-          Contribute to the project with new data and insights at 
-          %a{:href => "https://github.com/goinvo/ushealthcare", :target => "_blank"} github.com
-      .row    
-        %h3 3. Share
-        %p
-          .social-buttons.end
-            %a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/us-healthcare", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
-              %svg{:version => "1.1", :viewBox => "240 0 480 480"}
-                %path{:d => "M1251.9,388.7h-44.2c-15.4,0-21.1,9.6-21.1,21.1V452h65.3l-7.7,73h-57.6v205.4h-86.4V525h-44.2v-73h44.2 v-42.2c0-49.9,17.3-88.3,86.4-90.2h65.3L1251.9,388.7L1251.9,388.7z", :transform => "translate(-674.000000, -285.000000)"}
-            %a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F&hashtags=healthcare,design&via=goinvo", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizeable=yes,scrollbars=yes,height=400,width=600');return false;", :title => "Share on Twitter"}
-              %svg{:version => "1.1", :viewBox => "-467 230 25 21"}
-                %path{:d => "M-444.9,233.3c1.1-0.7,1.9-1.7,2.3-2.9 c-1,0.6-2.1,1-3.3,1.3c-0.9-1-2.3-1.7-3.7-1.7c-2.8,0-5.1,2.4-5.1,5.3c0,0.4,0,0.8,0.1,1.2c-4.3-0.2-8-2.3-10.6-5.5 c-0.4,0.8-0.7,1.7-0.7,2.7c0,1.8,0.9,3.5,2.3,4.4c-0.8,0-1.6-0.3-2.3-0.7c0,0,0,0,0,0.1c0,2.6,1.8,4.7,4.1,5.2 c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.1,2.5,3.6,4.8,3.7c-1.8,1.4-4,2.3-6.4,2.3c-0.4,0-0.8,0-1.2-0.1 c2.3,1.5,5,2.4,7.9,2.4c9.4,0,14.6-8.1,14.6-15c0-0.2,0-0.5,0-0.7c1-0.7,1.9-1.7,2.6-2.7C-442.9,232.9-443.9,233.2-444.9,233.3z"}
-            %a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F&title=Healing%20U.S.%20Healthcare", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Share On LinkedIn"}
-              %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
-                %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
-                %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
-                %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
-            %a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;", :title => "Share on Google Plus"}
-              %svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
-                %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
-                %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}  
+        #results
+          %ul
+            - data.features.ushealthcare.nodes.each do |key, value|
+              %li
+                .individual-result{ :data => {:key => key}}
+                  -#{style: "width:#{100/these_nodes.length}%"}
+                  %h3= value.title
+                  %p= value.description
+                  %h3= "How the ACA Does"
+                  %p= value.aca
 
-  %article#authors
-    %h2 Creators
-    %a{:name => "authors"}
-    #authors-table
-      .row
-        .col-sm-6
-          .box
-            %p.centeredImage
-            = image_tag "features/us-healthcare/Cecile.jpg", width: "100%", class: "centeredImage"
-            %h3 Cecile Lu
-            %p Cecile is a designer studying architecture at the Massachusetts Institute of Technology.
-            .social-buttons.authors
-              %a.in{:href => "https://www.linkedin.com/in/cecilelu", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Cecile Lu on LinkedIn"}
+    #sankey-container.chart-container     
+    #sankey-chart
+
+    %article#opensource
+      %a{:name => "participate"}
+      %h2 participate
+      #open-table
+        .row
+          %h3 1. Give Feedback
+          %p
+            Send us an email at 
+            = mail_to "feedback-ushealthcare@goinvo.com", "feedback-ushealthcare@goinvo.com", subject: "Healing U.S. Healthcare Feedback"
+        .row    
+          %h3 2. Remix and Reuse
+          %p
+            Contribute to the project with new data and insights at 
+            %a{:href => "https://github.com/goinvo/ushealthcare", :target => "_blank"} github.com
+        .row    
+          %h3 3. Share
+          %p
+            .social-buttons.end
+              %a.fb{:href => "https://www.facebook.com/sharer/sharer.php?u=http://www.goinvo.com/features/us-healthcare", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", :title => "Share on Facebook"}
+                %svg{:version => "1.1", :viewBox => "240 0 480 480"}
+                  %path{:d => "M1251.9,388.7h-44.2c-15.4,0-21.1,9.6-21.1,21.1V452h65.3l-7.7,73h-57.6v205.4h-86.4V525h-44.2v-73h44.2 v-42.2c0-49.9,17.3-88.3,86.4-90.2h65.3L1251.9,388.7L1251.9,388.7z", :transform => "translate(-674.000000, -285.000000)"}
+              %a.twitter{:href => "https://twitter.com/intent/tweet?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F&hashtags=healthcare,design&via=goinvo", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizeable=yes,scrollbars=yes,height=400,width=600');return false;", :title => "Share on Twitter"}
+                %svg{:version => "1.1", :viewBox => "-467 230 25 21"}
+                  %path{:d => "M-444.9,233.3c1.1-0.7,1.9-1.7,2.3-2.9 c-1,0.6-2.1,1-3.3,1.3c-0.9-1-2.3-1.7-3.7-1.7c-2.8,0-5.1,2.4-5.1,5.3c0,0.4,0,0.8,0.1,1.2c-4.3-0.2-8-2.3-10.6-5.5 c-0.4,0.8-0.7,1.7-0.7,2.7c0,1.8,0.9,3.5,2.3,4.4c-0.8,0-1.6-0.3-2.3-0.7c0,0,0,0,0,0.1c0,2.6,1.8,4.7,4.1,5.2 c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.1,2.5,3.6,4.8,3.7c-1.8,1.4-4,2.3-6.4,2.3c-0.4,0-0.8,0-1.2-0.1 c2.3,1.5,5,2.4,7.9,2.4c9.4,0,14.6-8.1,14.6-15c0-0.2,0-0.5,0-0.7c1-0.7,1.9-1.7,2.6-2.7C-442.9,232.9-443.9,233.2-444.9,233.3z"}
+              %a.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F&title=Healing%20U.S.%20Healthcare", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Share On LinkedIn"}
                 %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
                   %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
                   %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
                   %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
-        .col-sm-6
-          .box
-            %p.centeredImage
-            = image_tag "features/us-healthcare/Neil.jpg", width: "100%", class: "centeredImage"
-            %h3 Neil Rens
-            %p Neil studies biomedical engineering and entrepreneurship at Johns Hopkins University.
-            .social-buttons.authors
-              %a.in{:href => "https://www.linkedin.com/in/neilrens", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Neil Rens on LinkedIn"}
-                %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
-                  %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
-                  %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
-                  %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
-    %h2 Contributors
-    #contributors-table
-      .row
-        .col-sm-6
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/ben_salinas.jpg'
-              .info
-                %h3 Master Coder
-                %p Ben Salinas
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/adam_pere.jpg'
-              .info
-                %h3 Master Coder
-                %p Adam Pere
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/craig_mcginley.jpg'
-              .info
-                %h3 Master Coder
-                %p Craig McGinley
-        .col-sm-6
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/sarah_kaiser.jpg'
-              .info
-                %h3 Illustrator
-                %p Sarah Kaiser
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/juhan_sonin.jpg'
-              .info
-                %h3 contributing author
-                %p Juhan Sonin
-          .row
-            .contributor
-              .image
-                = image_tag 'features/us-healthcare/emily_twaddell.jpg'
-              .info
-                %h3 Editor
-                %p Emily Twaddell
+              %a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;", :title => "Share on Google Plus"}
+                %svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
+                  %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
+                  %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}  
 
-  /
-    <div class="floating-footer">
-    <p>Check out our awesome viz</p>
-    </div>
+    %article#authors
+      %h2 Creators
+      %a{:name => "authors"}
+      #authors-table
+        .row
+          .col-sm-6
+            .box
+              %p.centeredImage
+              = image_tag "features/us-healthcare/Cecile.jpg", width: "100%", class: "centeredImage"
+              %h3 Cecile Lu
+              %p Cecile is a designer studying architecture at the Massachusetts Institute of Technology.
+              .social-buttons.authors
+                %a.in{:href => "https://www.linkedin.com/in/cecilelu", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Cecile Lu on LinkedIn"}
+                  %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
+                    %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
+                    %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
+                    %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
+          .col-sm-6
+            .box
+              %p.centeredImage
+              = image_tag "features/us-healthcare/Neil.jpg", width: "100%", class: "centeredImage"
+              %h3 Neil Rens
+              %p Neil studies biomedical engineering and entrepreneurship at Johns Hopkins University.
+              .social-buttons.authors
+                %a.in{:href => "https://www.linkedin.com/in/neilrens", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=1000');return false;", :title => "Neil Rens on LinkedIn"}
+                  %svg{:version => "1.1", :viewBox => "-465.5 228 25 26"}
+                    %rect{:x => "-461.7", :y => "238", :width => "3.8", :height => "11.7"}
+                    %path{:d => "M-459.8,236.4L-459.8,236.4c-1.3,0-2.1-0.9-2.1-2c0-1.2,0.8-2,2.1-2c1.3,0,2.1,0.9,2.1,2 C-457.7,235.5-458.5,236.4-459.8,236.4L-459.8,236.4z"}
+                    %path{:d => "M-444.3,249.8h-3.8v-6.3c0-1.6-0.5-2.7-1.9-2.7c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.6h-3.8 c0,0,0.1-10.6,0-11.7h3.8v1.7c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.7,4.3,5.3V249.8L-444.3,249.8z"}
+      %h2 Contributors
+      #contributors-table
+        .row
+          .col-sm-6
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/ben_salinas.jpg'
+                .info
+                  %h3 Master Coder
+                  %p Ben Salinas
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/adam_pere.jpg'
+                .info
+                  %h3 Master Coder
+                  %p Adam Pere
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/craig_mcginley.jpg'
+                .info
+                  %h3 Master Coder
+                  %p Craig McGinley
+          .col-sm-6
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/sarah_kaiser.jpg'
+                .info
+                  %h3 Illustrator
+                  %p Sarah Kaiser
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/juhan_sonin.jpg'
+                .info
+                  %h3 contributing author
+                  %p Juhan Sonin
+            .row
+              .contributor
+                .image
+                  = image_tag 'features/us-healthcare/emily_twaddell.jpg'
+                .info
+                  %h3 Editor
+                  %p Emily Twaddell
 
-    <div class="floating-circle">
-    <svg class="circle" height="100" width="100">
-    <circle cx="50" cy="50" r="20" stroke="#336699" stroke-opacity=".7" stroke-width="4" fill="#33CCFF"/>
-    </svg>
-    </div>
-  %article#bibliography
-    %h2 References
-    %a{:name => "references"}
-    %ol.references
-      -footnotes.each do |footnote|
-        %li
-          %a{:href => "##{footnote[:name]}_ref", :class=>"up_link"}= "^"
-          %a{:name => footnote[:name]}= ""
-          %a{:href=> "#{footnote[:href]}", :target=>"_blank"}= "#{footnote[:text]},"
-          = succeed "." do
-            %i= footnote[:source]
-          = "#{footnote[:access]}."
+    /
+      <div class="floating-footer">
+      <p>Check out our awesome viz</p>
+      </div>
+
+      <div class="floating-circle">
+      <svg class="circle" height="100" width="100">
+      <circle cx="50" cy="50" r="20" stroke="#336699" stroke-opacity=".7" stroke-width="4" fill="#33CCFF"/>
+      </svg>
+      </div>
+    %article#bibliography
+      %a{:name => "references"}
+      %h2 References
+      %ol.references
+        -footnotes.each do |footnote|
+          %li
+            %a{:href => "##{footnote[:name]}_ref", :class=>"up_link"}= "^"
+            %a{:name => footnote[:name]}= ""
+            %a{:href=> "#{footnote[:href]}", :target=>"_blank"}= "#{footnote[:text]},"
+            = succeed "." do
+              %i= footnote[:source]
+            = "#{footnote[:access]}."
