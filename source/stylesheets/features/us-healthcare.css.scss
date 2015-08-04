@@ -315,13 +315,6 @@ p.tab_p {
     margin: auto;
 }
 
-//remove sankey when mobile
-#sankey-chart, #perspectives, #actions {
-    @media only screen and (max-width: 768px){
-        display: none;
-    }
-}
-
 .axis path,
 .axis line {
   fill: none;
@@ -427,6 +420,10 @@ div.tooltip {
     border-color: rgba(159, 184, 206, 0.9);
     padding: 5px;
 }
+
+
+
+
 /* BIBLIOGRAPHY */
 #bibliography {
   text-align: left;
@@ -686,6 +683,9 @@ sup {
 #perspectives {
   width: 30%;
   float: left;
+  @media only screen and (max-width: 768px){
+        width: 100%;
+    }
 }
 
 #perspectives li {
@@ -697,6 +697,9 @@ sup {
   color: #000;
   background-color: $light-blue;
   cursor:pointer;
+  @media only screen and (max-width: 768px){
+        width: 25%;
+    }
 }
 
 .perspective h5 {
@@ -740,7 +743,12 @@ sup {
   width: 70%;
   height: 200px;
   float: left;
-  background-color: $light-blue-selected;
+//  background-color: $light-blue-selected;
+  @media only screen and (max-width: 768px){
+        width: 100%;
+        height: 415px;
+        margin-bottom: 100px;
+    }
 }
 
 #actions li {
@@ -754,12 +762,23 @@ sup {
   overflow: hidden;
   text-align: center;
   display: inline-block;
-  padding: 6px;
+  padding: 0 10px;
+  padding-top: .5em;
   font-weight: 200;
   cursor:pointer;
   background-color: $light-blue-selected;
   vertical-align: middle;
+  p {
+    margin: auto;
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+  }
+  @media only screen and (max-width: 768px){
+        width: 25%;
+    }
 }
+
 
 .individual-action:hover {
   background-color: $light-blue-hover;
@@ -773,10 +792,15 @@ sup {
   overflow: hidden;
   text-align: center;
   display: inline-block;
-  padding: 10px;
+  padding: 40px;
   font-weight: 200;
   cursor:pointer;
   background-color: $light-blue-selected;
+  overflow: auto;
+  @media only screen and (max-width: 768px){
+      width: 100%;
+      height: 400px;
+  }
 }
 .individual-result:hover {
   background-color: $light-blue-hover;
@@ -787,54 +811,12 @@ sup {
 
 
 
-//[data-perspective="patient"] li {
-//  background-color: $light-blue-selected;
-//  border: none;
-//  width: calc(100% / 5);
-//}
-//
-//[data-perspective="provider"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 9);
-//}
-//
-//[data-perspective="policymaker"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 9);
-//}
-//
-//[data-perspective="payer"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 6);
-//}
-//
-//[data-perspective="patient"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="provider"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="policymaker"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="payer"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-
-.individual-action {
-  padding: 0 10px;
-  padding-top: .5em;
-  p {
-    margin: auto;
-    font-size: 0.8em;
-    text-align: center;
-    color: white;
-  }
+/* Mobile Sankey Adaptation */
+#sankey-chart {
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
 }
-
 
 
 
@@ -1032,3 +1014,4 @@ sup {
         border-top: 1px solid $light-grey;
     }
 }
+

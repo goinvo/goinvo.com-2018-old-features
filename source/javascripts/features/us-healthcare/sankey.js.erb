@@ -410,10 +410,9 @@ function initializePoints() {
       .attr("x", function(d) {return d.dx / 2; })
       .attr("dy", ".35em")
       .attr("dx", "-.70em")
-      .attr("stroke", "black")
-      .attr("stroke-width", ".3px")
       .attr("text-anchor", "end") // position of text
       .text(function(d) { return nodeMetadata[d.name].title; })
+      .on("click", function(d) {return console.log("clicked: " + d);})
     
     node.append("text")
         .attr("class", "right-label")
@@ -421,10 +420,10 @@ function initializePoints() {
         .attr("x", function(d) {return d.dx / 2;})
         .attr("dy", ".35em")
         .attr("dx", ".70em")
-        .attr("stroke", "black")
-        .attr("stroke-width", ".3px")
         .attr("text-anchor", "start")
         .text(function(d) { return nodeMetadata[d.name].title2;})
+    
+    node.on("click", function(d) { console.log("clicked: " + d);})
 }
 
 var initializeSizes = function(){
@@ -454,3 +453,4 @@ myWindow.on('resize.sankey', function() {
   initializePoints();
 });
 });
+
