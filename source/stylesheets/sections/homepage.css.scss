@@ -18,7 +18,7 @@ a {
 	margin-top: 55px;
 }
 
-$text-stroke: rgba(0, 0, 0, 0.4);
+$text-stroke: rgba(255, 255, 255, 0.6);
 
 // Heros
 #us-healthcare-feature {
@@ -27,12 +27,7 @@ $text-stroke: rgba(0, 0, 0, 0.4);
 	}
     .title {
 	   color: white;
-	   text-shadow:
-		   2px 2px 0 $text-stroke,
-		 -1px -1px 0 $text-stroke,  
-		  1px -1px 0 $text-stroke,
-		  -1px 1px 0 $text-stroke,
-		   1px 1px 0 $text-stroke;
+	
 	}
 }
 
