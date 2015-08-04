@@ -78,7 +78,7 @@ $(document).ready(function(){
                 tooltip.transition()
                   .duration(200)
                   .style("opacity",1)
-                tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) + "<br/>" + "Echocardiogram: " + d3.format("$,")(d.price_echo)+"<br/>" + "Cardiac Imaging: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
+                tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) +"<br/>" + "MRI Without Contrast: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
                   .style("left", (circle.attr('cx')) + 20 + "px")
                   .style("top", (circle.attr('cy')) -100 + "px");
               })
@@ -119,8 +119,8 @@ $(document).ready(function(){
   myWindow.on('resize.cost', initializeSizes );
 
   setTimeout( function() {
-    d3.select('[id="Massachusetts General Hospital"]').trigger('mouseover');
     d3.select('[id="St Elizabeth\'s Medical Center"]').trigger('mouseover');
+    d3.select('[id="Massachusetts General Hospital"]').trigger('mouseover');
   }, 1000);
 
 });

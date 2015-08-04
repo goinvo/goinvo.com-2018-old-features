@@ -105,37 +105,6 @@ $( document ).ready(function() {
       xScale.domain(data.map(function(d) { return d.Procedure;}));
       yScale.domain([1, maxProcedures]);
 
-
-  //     annotation = d3.select('#waste-chart')
-  //        .data(data).enter()
-  //        .append("div")
-  //        .attr('class','annotation')
-  //        .style("left", function(d) {
-  //          console.log(d);
-  //          console.log("start: " + xScale(d.Procedure))
-  //          return xScale(d.Procedure)+'px';
-  //        })
-  //        .style('bottom', function(d) {
-  //          console.log(d);
-  //          console.log("start: " + yScale(d.NumberProcedures))
-  //          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
-  //        })
-  //        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
-  //     
-  //     wasteSVG.append("line")
-  //        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
-  //        .style("stroke-width", "3")
-  //        .attr("x1", function() {
-  //          return xScale(data[2].Procedure)+ 10+'px';
-  //        })     // x position of the first end of the line
-  //        .attr("y1", function() {
-  //            return yScale(data[2].NumberProcedures)+'px'
-  //        })      // y position of the first end of the line
-  //        .attr("x2", function() {
-  //          return xScale(data[2].Procedure) + 30 +'px';
-  //        })     // x position of the second end of the line
-  //        .attr("y2", 54); 
-
       wasteSVG.append("g")
           .attr("class", "xaxis")
           .attr("transform", "translate(0," + h + ")")
@@ -182,8 +151,16 @@ $( document ).ready(function() {
                   .duration(200)
                   .style("opacity", 1)
               tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                  .style("left", parseFloat(recTip.attr('x')) + 10 + "px")
-                  .style("top", parseFloat(recTip.attr('y')) + 10 + "px");
+//                  .style("left", function(d) {
+//                      if (d.Procedure == "Bone Density Scan for Younger Patients") {
+//                        return parseFloat(recTip.attr('x')) + 10 + "px";
+//                      } else {
+//                        return parseFloat(recTip.attr('x')) + 10 + "px";
+//                      }
+//                  })
+                  .style("left", window.innerWidth*.4 + "px")
+//                  .style("top", parseFloat(recTip.attr('y')) + 10 + "px");
+                  .style("top", 300 + "px")
       });
       rectangles.on('mouseout', function() {
           tooltip.style('display', 'none');
