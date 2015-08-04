@@ -91,7 +91,7 @@ header p{
 }
 
 #hospital-bill {
-  height: 200px;
+//  height: 200px;
   width: calc(15% - 10px);
   position: fixed;
   bottom: 30%;
@@ -100,19 +100,15 @@ header p{
   padding: 10px;
   z-index: 1000;
   transition: all .2s ease-in-out;
+  border-radius: 8px;
 }
 #hospital-bill:hover {
-  height: 200px;
-  width: calc(15% - 10px);
-  position: fixed;
-  bottom: 31%;
-  right: 5px;
   background-color: $light-blue-hover;
-  padding: 10px;
-  z-index: 1000;
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
-  
+#hospital-bill td th {
+  padding-left: .5rem;
+}
 
 h1 {
   font-family: "Lato", sans-serif;
@@ -234,6 +230,10 @@ span.slide {
   background-color: rgba(242, 224, 84, 0.55);
   cursor: pointer;
   padding:0 5px;
+}
+
+span.slide:hover {
+  background-color: rgb(242, 224, 84);
 }
 
 .embed-extra-info {
@@ -875,6 +875,7 @@ sup {
     width:calc(50% - 10px);
     padding: 25px;
     border-radius: 8px;
+    transition: .2s ease-in-out;
     
     @media only screen and (max-width: 768px) {
       width: 100% !important;
@@ -883,7 +884,8 @@ sup {
     }
     
     &:hover{
-      background-color: lighten($light-grey,5%)
+      background-color: lighten($light-grey,5%);
+      transform: scale(1.07);
     }
     &[data-selected="yes"]{
       background-color:darken($light-grey,10%);

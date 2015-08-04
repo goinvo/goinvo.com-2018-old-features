@@ -97,6 +97,16 @@ $(document).ready(function(){
     console.log("cancel")
     $('.individual-result').hide();
   });
+  
+  $('.all_costs').hide()
+  $(window).scroll(function() {
+    var y_scroll_pos = window.pageYOffset;
+    console.log("TEST");
+    console.log(window.pageYOffset);
+    var scroll_pos_test = 250;
+    if(y_scroll_pos > scroll_pos_test) {
+      $('.all_costs').show();}
+  });
       
       
 });
