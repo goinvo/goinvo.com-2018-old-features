@@ -98,15 +98,83 @@ $(document).ready(function(){
     $('.individual-result').hide();
   });
   
-  $('.all_costs').hide()
-  $(window).scroll(function() {
-    var y_scroll_pos = window.pageYOffset;
-    console.log("TEST");
-    console.log(window.pageYOffset);
-    var scroll_pos_test = 250;
-    if(y_scroll_pos > scroll_pos_test) {
-      $('.all_costs').show();}
+  
+  
+  function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+  
+    while(element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+    return { x: xPosition, y: yPosition };
+  }
+  
+//  var clinic = document.querySelector("#clinic_visit_location"); 
+//  var xray = document.querySelector("#xray_location"); 
+//  var ct1 = document.querySelector("#ct1_location"); 
+//  var ct2 = document.querySelector("#ct2_location"); 
+//  var hospital = document.querySelector("#hospital_location"); 
+//  var total = document.querySelector("#total_location"); 
+  var position = function(input) { return getPosition(input);}
+  var winH = window.innerHeight;
+  
+  
+ var bill_data = [
+  {
+    "key": "clinic",
+		"title":"Clinic Visit",
+    "location":"clinic_visit_location",
+		"cost":"$150"
+	},
+  {
+    "key":"xray",
+		"title":"X-ray",
+    "location":"xray_location",
+		"cost":"$100"
+	},
+  {
+    "key":"ct1",
+		"title":"CT Scan #1",
+    "location":"ct1_location",
+		"cost":"$785"
+	},
+  {
+    "key":"ct2",
+		"title":"CT Scan #2",
+    "location":"ct2_location",
+		"cost":"$785"
+	},
+  {
+    "key":"hospital",
+		"title":"Hospital Stay",
+    "location":"hospital_location",
+		"cost":"$14,000"
+	},
+  {
+    "key":"total",
+		"title":"Total",
+    "location":"total_location",
+		"cost":"$15,820"
+	}
+];
+  
+    
+  bill_data.forEach(function(item) {
+    $('[data-reason="' + item.key + '"]').hide()
   });
-      
-      
+  $(window).scroll(function() {
+      bill_data.forEach(function(item) {
+        var bill_item = document.querySelector("#" + item.location);
+        var scroll_pos_test = position(bill_item).y;
+        if(scroll_pos_test < 0 + .6*winH) {
+          $('[data-reason="' + item.key + '"]').show();
+        } else {
+          $('[data-reason="' + item.key + '"]').hide();
+        }
+      })
+  });
+
 });

@@ -1,0 +1,38 @@
+[
+  {
+    "key": "clinic",
+		"title":"Clinic Visit",
+    "location":"clinic_visit_location",
+		"cost":"$150"
+	},
+  {
+    "key":"xray",
+		"title":"X-ray",
+    "location":"xray_location",
+		"cost":"$100"
+	},
+  {
+    "key":"ct1",
+		"title":"CT Scan #1",
+    "location":"ct1_location",
+		"cost":"$785"
+	},
+  {
+    "key":"ct2",
+		"title":"CT Scan #2",
+    "location":"ct2_location",
+		"cost":"$785"
+	},
+  {
+    "key":"hospital",
+		"title":"Hospital Stay",
+    "location":"hospital_location",
+		"cost":"$14,000"
+	},
+  {
+    "key":"total",
+		"title":"Total",
+    "location":"total_location",
+		"cost":"$15,820"
+	}
+]

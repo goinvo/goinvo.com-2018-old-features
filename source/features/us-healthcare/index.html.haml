@@ -48,25 +48,10 @@
         %th Procedure
         %th Cost
     %tbody.all_costs
-      %tr#clinic_visit
-        %td Clinic Visit
-        %td $150
-      %tr#xray
-        %td X-ray
-        %td $100
-      %tr#ct_scan1
-        %td CT Scan #1
-        %td $785
-      %tr#ct_scan2
-        %td CT Scan #2
-        %td $785
-      %tr#hospital_stay
-        %td Hospital Stay
-        %td $14,000
-      %tr#total_cost
-        %td Total
-        %td $15,820
-
+      - data.features.ushealthcare.bill.each do |item|
+        %tr{:data => {:reason => item['key']}}
+          %td= item.title
+          %td= item.cost
 %header.jumbotron
   .layer
     .footnote
@@ -157,6 +142,7 @@
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"Meier, Barry, Jo Mcginty, and Julie Creswell", :access=>"The New York Times, 7 May 2013. Web"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Tool", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
       David simply picks the one closest to his home.
+      #clinic_visit_location
       .slide-panel{:data =>{:index=>6}}
         %p
           In 2014, Massachusetts became the first state to require price information for different health procedures. For the first time, insurance companies were required to tell their customers how much the company pays for a given procedure or test.
@@ -168,6 +154,7 @@
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Boston, Massachusetts: Simple Pneumonia & Pleurisy With Complications And Comorbities", :href=>"http://www.opscost.com/search?location=Boston%2C%20Massachusetts&drg_procedure_code=194", :source=>"OpsCost", :access=>"Web"})
     #cost-comparison-boston-chart
   %article#symptoms
+    #xray_location
     %p.p-slide
       After a physical examination, the doctor decides to X-ray David’s chest. The radiologist who reads the scan notices a small nodule that cannot be characterized. He decides to look at David’s health record to see if the nodule was previously documented.
     %p.p-slide
@@ -193,6 +180,7 @@
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"EHR Incentive Programs", :href=>"http://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/index.html?redirect=/EHRIncentivePrograms/", :source=>"CMS.gov: Centers for Medicare & Medicaid Services", :access=>"Web"})
     %p.p-slide
     = partial("features/us-healthcare/decision_point", :locals => {:index=>2} )
+    #ct1_location
     %p.p-slide
       Worried that the nodule could be malignant, the doctor advises David to have a CT scan so the nodule can be examined in more detail. David is not told about the cost of the CT scan, only that it is important to keep him healthy. He agrees to the scan, which shows that the nodule is old and benign. The scan also uncovers a mass on the left adrenal gland. Although there is a low suspicion for cancer, the doctors order another scan—this time with contrast—just to be sure the lesion is benign.
   #waste-container.chart-container
@@ -215,6 +203,7 @@
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"Top 5\" Lists Top $5 Billion", :href=>"http://archinte.jamanetwork.com/article.aspx?articleid=1106007", :source=>"Kale MS, Bishop TF, Federman AD, Keyhani S.", :access=>"Arch Intern Med. 2011;171(20):1858-1859. doi:10.1001/archinternmed.2011.501. Web"})
     #waste-chart
   %article#symptoms
+    #ct2_location
     %p.p-slide
       Thankfully, the scan showed the mass to be benign. Unfortunately, David suffered a severe allergic reaction to the dye used for contrast.
     %p.p-slide
@@ -237,8 +226,10 @@
       %p
         Medicare is now punishing hospitals with high rates of infections and other medical errors in an attempt to increase patient safety. Publicly funded hospitals have been penalized the most because they take care of sicker populations and deal with more complex cases.
         = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Teaching Hospitals Hit Hardest By Medicare Fines For Patient Safety", :href => "http://www.npr.org/sections/health-shots/2014/12/19/371862146/teaching-hospitals-hit-hardest-by-medicare-fines-for-patient-safety", :source=>"Rau, Jordan", :access=>"NPR. 19 Dec. 2014. Web"})
+    #hospital_location
     %p.p-slide
-      After a week in the hospital, David’s initial cough, allergic reaction, and pneumonia are successfully treated. But he isn't sent home empty-handed: he has a bill that says he owes $20,000.
+      After a week in the hospital, David’s initial cough, allergic reaction, and pneumonia are successfully treated. But he isn't sent home empty-handed: he has a bill that says he owes $15,820.
+    #total_location
     %p.p-slide
       It doesn’t have to be this way. If David had insurance, he would have had access to a primary care physician. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have had the second and third CT scans, preventing his allergic reaction and hospital-acquired pneumonia. 
     %p.p-slide
