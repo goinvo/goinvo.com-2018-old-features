@@ -13,7 +13,15 @@
 //= require fitvids.js
 
 $(document).ready(function(){
-	$('.video-box').fitVids();
+    try {
+      var vid =  $('.video-box');
+      if( vid.length ) {
+	   $('.video-box').fitVids();
+      }
+    }
+    catch(e) {
+      
+    }
 });
 
 //fix for problem where '/v01/' is missing in the url
