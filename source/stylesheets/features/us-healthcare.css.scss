@@ -21,29 +21,33 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
   @media only screen and (max-width: 768px) {
       display: none;
   }
-}
-
-#article-nav ul {
-  margin: 0 auto;
-}
-
-#article-nav li {
-  display: inline-block;
-  white-space: nowrap;
-  width: calc(100% / 8);
-  text-align: center;
-  margin: auto;
-  padding: 8px;
-}
-
-#article-nav a {
-  color: rgba(255,255,255,0.8);
-  text-align: center;
-  &:hover {
-      color:rgba(255,255,255,1);
-      text-decoration: none;
+  
+  ul {
+    margin: 0 auto;
+    
+    li {
+      display: inline-block;
+      white-space: nowrap;
+      width: calc(100% / 8);
+      text-align: center;
+      margin: auto;
+      padding: 8px;
+      cursor: pointer;
+      a {
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        &:hover {
+            color:rgba(255,255,255,1);
+            text-decoration: none;
+        }
+      }
+    }
   }
 }
+
+
+
+
 
 .stuff-below-nav {
   height: calc(100% - 90px);

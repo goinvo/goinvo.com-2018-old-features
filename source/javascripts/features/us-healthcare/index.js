@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+  $('#article-nav li').on('click', function() {
+    var data = $(this).find('a').data('link');
+    var wanted = $(data);
+    $('html, body').animate({
+        scrollTop: wanted.offset().top - 100
+    }, 750);
+    
+  });
+  
   $('.tab-link').click(function(){
     var tab = $(this);
     $('.tab-link, .tab-content').removeClass('current');
