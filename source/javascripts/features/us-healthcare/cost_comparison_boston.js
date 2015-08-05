@@ -66,7 +66,7 @@ $(document).ready(function(){
               .attr("cy", function(d){
                 return albersProjection([d.lon, d.lat])[1];
               })
-              .style("r", function(d){ return rScale(d.price_pneumonia)})
+              .attr("r", function(d){ return rScale(d.price_pneumonia)})
               .attr("fill", "#585858")
               .on("mouseover", function(d){
                 var circle = $(this);
@@ -75,14 +75,21 @@ $(document).ready(function(){
                   .attr("fill", "rgb(142, 175, 208)")
                   .style("r", function(d){ return rScale(d.price_pneumonia)+2})
 
-                tooltip.transition()
-                  .duration(200)
-                  .style("opacity",1)
+                tooltip.style("left", function(d,i) {
+                    var left = parseFloat(circle.attr('cx')) + 30;
+                    return left + "px";
+                  })
+                  .style("top", function(d,i) {
+                    var top = parseFloat(circle.attr('cy')) - 30;
+                    return top + "px";
+                  })
+                  .transition()
+                  .duration(400)
+                  .style("opacity",1);
+                
                 tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) +"<br/>" + "MRI Without Contrast: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
-                  .style("left", (circle.attr('cx')) + 20 + "px")
-                  .style("top", (circle.attr('cy')) -100 + "px");
+                  
               })
-
               .on("mouseout", function(){
                 d3.select(this)
                   .attr("fill", "#585858")
