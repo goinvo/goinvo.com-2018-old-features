@@ -52,7 +52,6 @@ $(document).ready(function(){
       var parent = $(target).parent();
       var lastParent;
       while(!$(parent).is(":visible")){
-        console.log($(parent).is(":visible"));
         lastParent = parent;
         parent = $(parent).parent();
       }
@@ -77,7 +76,6 @@ $(document).ready(function(){
     $('.link').attr('data-highlight','false');
     $('.individual-action').removeClass('selected');
     var this_key = $(this).attr('data-key');
-    console.log(this_key)
     //First, find things that use this key as a source.
     followLinks(false, this_key);
     //Then go the other way.
@@ -98,12 +96,10 @@ $(document).ready(function(){
   $('.individual-action').click(function(e){
     $('.individual-result').hide();
     var this_key = $(this).attr('data-key');
-    console.log("this_key: " + this_key)
     $('.individual-result[data-key="'+this_key+'"]').show()
   });
   
   $('.individual-result').click(function(e){
-    console.log("cancel")
     $('.individual-result').hide();
   });
   
@@ -175,34 +171,37 @@ $(document).ready(function(){
   });
   
   $(window).scroll(function(i) {
-      var winH = window.innerHeight;
-      bill_data.forEach(function(item) {
-        var bill_item = document.querySelector("#" + item.location);
-        var scroll_pos_test = position(bill_item).y;
-        if(scroll_pos_test < 0 + .6*winH) {
+    var winH = window.innerHeight;
+    var hb = $('#hospital-bill');
+    bill_data.forEach(function(item) {
+      var bill_item = document.querySelector("#" + item.location);
+      var scroll_pos_test = position(bill_item).y;
+      if(scroll_pos_test < 0 + .39*winH) {
+        if( !hb.visible ) {
+          $('[data-reason="' + item.key + '"]').show('fast'); 
+        } else {
           $('[data-reason="' + item.key + '"]').show();
+        }
+      } else {
+        if( !hb.visible ) {
+          $('[data-reason="' + item.key + '"]').hide('fast'); 
         } else {
           $('[data-reason="' + item.key + '"]').hide();
         }
-      });
-      var currentScrollTop = $(this).scrollTop();
-//      var targetScrollTop = $('#waste-container').position().top;
-//      var targetScrollBottom = $('#waste-container').position().bottom;
-//      console.log("currentScrollTop: " + currentScrollTop)
-//      console.log("targetScrollTop: " + targetScrollTop)
-//      console.log("targetScrollBottom: " + targetScrollTop)
-      
-      var top = position(document.querySelector('#waste-container')).y;
-      var bottom = position(document.querySelector('#ct2_location')).y;
-      var end = position(document.querySelector('#history')).y;
-      var start = position(document.querySelector('#clinic_visit_location')).y;
-      console.log("top: " + top + "bottom: " + bottom)
-      
-      if(start - winH*.6 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
-        $('#hospital-bill').hide();
-      } else {
-        $('#hospital-bill').show();
       }
+    });
+    var currentScrollTop = $(this).scrollTop();
+
+    var top = position(document.querySelector('#waste-container')).y;
+    var bottom = position(document.querySelector('#ct2_location')).y;
+    var end = position(document.querySelector('#history')).y;
+    var start = position(document.querySelector('#clinic_visit_location')).y;
+
+    if(start - winH*.6 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
+      $('#hospital-bill').toggleClass('is-visible', false);
+    } else {
+      $('#hospital-bill').toggleClass('is-visible', true);
+    }
 
   });
 });

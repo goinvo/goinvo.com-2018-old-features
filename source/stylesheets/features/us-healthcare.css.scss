@@ -97,17 +97,29 @@ header p{
 
 #hospital-bill {
 //  height: 200px;
-  width: calc(15% - 10px);
+  width: 180px;
   position: fixed;
-  bottom: 40%;
+  top: 30%;
   right: 5px;
   background-color: $light-blue;
   padding: 5px;
   z-index: 1000;
-  transition: all .2s ease-in-out;
+  transition: all 350ms ease-in-out;
   border-radius: 8px;
   td {
+    transition: inherit;
     padding: 6px;
+    
+    &:first-of-type {
+      min-width: 96px; 
+    }
+  }
+  opacity: 0;
+  pointer-events: none;
+  
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
