@@ -119,53 +119,54 @@ $(document).ready(function(){
 //  var hospital = document.querySelector("#hospital_location"); 
 //  var total = document.querySelector("#total_location"); 
   var position = function(input) { return getPosition(input);}
-  var winH = window.innerHeight;
   
   
- var bill_data = [
-  {
-    "key": "clinic",
-		"title":"Clinic Visit",
-    "location":"clinic_visit_location",
-		"cost":"$150"
-	},
-  {
-    "key":"xray",
-		"title":"X-ray",
-    "location":"xray_location",
-		"cost":"$100"
-	},
-  {
-    "key":"ct1",
-		"title":"CT Scan #1",
-    "location":"ct1_location",
-		"cost":"$785"
-	},
-  {
-    "key":"ct2",
-		"title":"CT Scan #2",
-    "location":"ct2_location",
-		"cost":"$785"
-	},
-  {
-    "key":"hospital",
-		"title":"Hospital Stay",
-    "location":"hospital_location",
-		"cost":"$14,000"
-	},
-  {
-    "key":"total",
-		"title":"Total",
-    "location":"total_location",
-		"cost":"$15,820"
-	}
-];
+   var bill_data = [
+    {
+      "key": "clinic",
+      "title":"Clinic Visit",
+      "location":"clinic_visit_location",
+      "cost":"$150"
+    },
+    {
+      "key":"xray",
+      "title":"X-ray",
+      "location":"xray_location",
+      "cost":"$100"
+    },
+    {
+      "key":"ct1",
+      "title":"CT Scan #1",
+      "location":"ct1_location",
+      "cost":"$785"
+    },
+    {
+      "key":"ct2",
+      "title":"CT Scan #2",
+      "location":"ct2_location",
+      "cost":"$785"
+    },
+    {
+      "key":"hospital",
+      "title":"Hospital Stay",
+      "location":"hospital_location",
+      "cost":"$14,000"
+    },
+    {
+      "key":"total",
+      "title":"Total",
+      "location":"total_location",
+      "cost":"$15,820"
+    }
+  ];
   
     
   bill_data.forEach(function(item) {
     $('[data-reason="' + item.key + '"]').hide()
   });
-  $(window).scroll(function() {
+  
+  $(window).scroll(function(i) {
+      var winH = window.innerHeight;
       bill_data.forEach(function(item) {
         var bill_item = document.querySelector("#" + item.location);
         var scroll_pos_test = position(bill_item).y;
@@ -174,7 +175,25 @@ $(document).ready(function(){
         } else {
           $('[data-reason="' + item.key + '"]').hide();
         }
-      })
-  });
+      });
+      var currentScrollTop = $(this).scrollTop();
+//      var targetScrollTop = $('#waste-container').position().top;
+//      var targetScrollBottom = $('#waste-container').position().bottom;
+//      console.log("currentScrollTop: " + currentScrollTop)
+//      console.log("targetScrollTop: " + targetScrollTop)
+//      console.log("targetScrollBottom: " + targetScrollTop)
+      
+      var top = position(document.querySelector('#waste-container')).y;
+      var bottom = position(document.querySelector('#ct2_location')).y;
+      var end = position(document.querySelector('#history')).y;
+      var start = position(document.querySelector('#symptoms')).y;
+      console.log("top: " + top + "bottom: " + bottom)
+      
+      if(start - winH*.5 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
+        $('#hospital-bill').hide();
+      } else {
+        $('#hospital-bill').show();
+      }
 
+  });
 });
