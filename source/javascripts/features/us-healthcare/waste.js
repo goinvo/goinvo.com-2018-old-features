@@ -22,7 +22,7 @@ $( document ).ready(function() {
       //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
       .rangeRoundBands([30, w], 0.2); // .05 for spacing between bars
 
-  var yScale = d3.scale.log()      // Unnecessary
+  var yScale = d3.scale.log()     // Unnecessary
       //.domain([1, d3.max(dataset)])
       .range([h+5, 5]);
 
@@ -88,7 +88,7 @@ $( document ).ready(function() {
         .attr("y", function(d) {
           return yScale(d.Waste);
         })
-        .style("fill", "darken(#E0E0E0,10%)");
+        .style("fill", "#c7c7c7");
     }
 
   d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
@@ -142,29 +142,30 @@ $( document ).ready(function() {
               return 10;
           });
 
-      rectangles.on('mousemove', function(d) {
-          tooltip.style('display', 'block');
-          var recTip = $(this)
-          d3.select(this)
-                  .style("fill", "rgb(142, 175, 208)")
-              tooltip.transition()
-                  .duration(200)
-                  .style("opacity", 1)
-              tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-//                  .style("left", function(d) {
-//                      if (d.Procedure == "Bone Density Scan for Younger Patients") {
-//                        return parseFloat(recTip.attr('x')) + 10 + "px";
-//                      } else {
-//                        return parseFloat(recTip.attr('x')) + 10 + "px";
-//                      }
-//                  })
-                  .style("left", window.innerWidth*.4 + "px")
-//                  .style("top", parseFloat(recTip.attr('y')) + 10 + "px");
-                  .style("top", 300 + "px")
-      });
-      rectangles.on('mouseout', function() {
-          tooltip.style('display', 'none');
-          d3.select(this).style('fill', null);
+      rectangles.on('mouseover', function(d) {        
+        var me = d3.select(this);
+        me.style("fill", "rgb(142, 175, 208)");
+        tooltip.style('opacity', 0);
+        
+        tooltip.html("<strong>" + d.Procedure + "</strong>" + "<br>" + "<div class = 'tt-important'>"+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "</div> Nonrecommended <br><div class = 'tt-important'>" + d3.format("$,")(d.Waste) + "</div> Wasted" );
+        
+        tooltip.style("left", function(d) {
+              var x = parseFloat(me.attr('x'));
+              var value = x - parseFloat(tooltip.style('width'))/2  + parseFloat(me.attr('width'))/2;
+                return value  + "px";
+          }) 
+          .style("top", parseFloat(me.attr('y')) + 20 + "px");
+        
+        tooltip.transition()
+          .duration(500)
+          .style("opacity", 1);
+
+      })
+        
+        .on('mouseleave', function() {
+          tooltip.transition()
+            .duration(100).style('opacity', 0);
+          d3.select(this).style('fill', '');
       });
 
 

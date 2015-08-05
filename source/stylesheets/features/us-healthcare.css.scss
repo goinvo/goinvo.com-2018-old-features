@@ -45,9 +45,9 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
   }
 }
 
-
-
-
+strong {
+  font-weight: 800; 
+}
 
 .stuff-below-nav {
   height: calc(100% - 90px);
@@ -444,17 +444,28 @@ text.label {
 div.tooltip {
   position: absolute;
   text-align: center;
+  max-width: 175px;
+  min-width: 150px;
   width: auto;
   height: auto;
-  padding: 5px;
+  padding: 7px;
+  padding-bottom: 1.5em;
   font: 12px sans-serif;
-  background: white;
+  background: rgba(255, 255, 255, 0.75);
   border-style: solid;
   border-width: 1px;
-  border-color: gray;
+  border-color: rgba(128, 128, 128, 0.11);
   border-radius: 3px;
   pointer-events: none;
   z-index: 100;
+  word-wrap: break-word;
+  
+  .tt-important {
+    margin-top: .6em;
+    font-size: 1.85em; 
+    
+  }
+  
 }
 .annotation{
     background-color:rgba(213, 230, 245, 0.76);
