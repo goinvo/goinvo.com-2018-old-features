@@ -40,12 +40,8 @@
     %li 
       %a{:href => "#references"}7. References      
 #hospital-bill
-  %h3 Hospital Bill
+  %h3 Medical Bill
   %table{:border => 1}
-    %thead
-      %tr
-        %th Procedure
-        %th Cost
     %tbody.all_costs
       - data.features.ushealthcare.bill.each do |item|
         %tr{:data => {:reason => item['key']}}

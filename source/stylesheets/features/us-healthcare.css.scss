@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
 $light-black: #222;
-$light-grey:#E0E0E0;
+$light-grey:#EDEDED;
 $black : #000;
 $light-blue:lighten(rgb(142, 175, 208),10%);
 $light-blue-hover:rgb(142, 175, 208);
@@ -98,17 +98,18 @@ header p{
   bottom: 40%;
   right: 5px;
   background-color: $light-blue;
-  padding: 10px;
+  padding: 5px;
   z-index: 1000;
   transition: all .2s ease-in-out;
   border-radius: 8px;
+  td {
+    padding: 6px;
+  }
 }
-#hospital-bill:hover {
-  background-color: $light-blue-hover;
-  transform: scale(1.05);
-}
-#hospital-bill td th {
-  padding-left: .5rem;
+
+
+[data-reason="total"] {
+  font-weight: bold;
 }
 
 h1 {
@@ -290,6 +291,7 @@ p.tab_p {
   border-radius:8px;
   color: black;
   cursor: pointer;
+  transition: .2s ease-in-out;
 }
 
 #triple-graph .col-sm-4{
@@ -310,7 +312,8 @@ p.tab_p {
 }
 
 #triple-graph .tab-link:hover {
-  background-color: lighten($light-grey,6%);
+//  background-color: lighten($light-grey,6%);
+  transform: (scale(1.1));
 }
 
 .tab-content{
@@ -632,6 +635,8 @@ sup {
     border:solid 1px #fff;
     cursor:pointer;
     vertical-align: middle;
+    transition: .2s ease-in-out;
+
 }
 
 .toggle-btn-grp.cssonly {
@@ -672,7 +677,9 @@ sup {
 }
 
 .toggle-btn:hover {
-  background-color: lighten($light-grey,6%);
+//  background-color: lighten($light-grey,6%);
+  z-index: 1000;
+  transform: scale(1.1);
 }
 
 
@@ -885,7 +892,7 @@ sup {
     }
     
     &:hover{
-      background-color: lighten($light-grey,5%);
+//      background-color: lighten($light-grey,5%);
       transform: scale(1.07);
     }
     &[data-selected="yes"]{

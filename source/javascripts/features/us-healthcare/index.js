@@ -186,10 +186,10 @@ $(document).ready(function(){
       var top = position(document.querySelector('#waste-container')).y;
       var bottom = position(document.querySelector('#ct2_location')).y;
       var end = position(document.querySelector('#history')).y;
-      var start = position(document.querySelector('#symptoms')).y;
+      var start = position(document.querySelector('#clinic_visit_location')).y;
       console.log("top: " + top + "bottom: " + bottom)
       
-      if(start - winH*.5 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
+      if(start - winH*.6 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
         $('#hospital-bill').hide();
       } else {
         $('#hospital-bill').show();
