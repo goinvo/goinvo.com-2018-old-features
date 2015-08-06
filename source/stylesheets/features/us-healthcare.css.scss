@@ -96,7 +96,7 @@ header p{
 }
 
 
-#hospital-bill {
+#medical-bill {
 //  height: 200px;
   width: 180px;
   position: fixed;
@@ -133,7 +133,7 @@ header p{
   }
 }
 
-#hospital-bill:hover {
+#medical-bill:hover {
   @media only screen and (max-width: 1150px){
     width: 180px;
     height: auto;
@@ -764,7 +764,12 @@ sup {
   float: left;
   @media only screen and (max-width: 768px){
         width: 100%;
+        border-bottom-width: 0px;
     }
+  border-style: solid;
+  border-width: 6px;
+  border-color: $light-blue;
+  background-color: $light-blue;
 }
 
 #perspectives li {
@@ -775,14 +780,18 @@ sup {
   display: inline;
   color: #000;
   background-color: $light-blue;
-  cursor:pointer;
   @media only screen and (max-width: 768px){
-        width: 25%;
+    width: 25%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+//    border-bottom-width: 2px;
     }
 }
 
 .perspective h5 {
-  color: white;
+  color: black;
 }
 
 .perspective {
@@ -796,22 +805,55 @@ sup {
 
 #perspectives li:hover {
   background-color: $light-blue-selected;
+  cursor:pointer;
 }
 
 [data-key="patient"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="provider"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="policymaker"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="payer"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 .perspective h5 {
@@ -820,13 +862,14 @@ sup {
 
 #next {
   width: 70%;
-  height: 200px;
+  height: 212px;
+  background-color: white;
   float: left;
 //  background-color: $light-blue-selected;
   @media only screen and (max-width: 768px){
-        width: 100%;
-        height: 415px;
-        margin-bottom: 100px;
+    width: 100%;
+    height: 650px;
+    padding: 10px;
     }
 }
 
@@ -836,7 +879,7 @@ sup {
 
 .individual-action {
   float: left;
-  width: 20%;
+  width: calc(20% - 4px);
   height: 100px;
   overflow: hidden;
   text-align: center;
@@ -844,17 +887,24 @@ sup {
   padding: 0 10px;
   padding-top: .5em;
   font-weight: 200;
+  margin: 2px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $light-blue-selected;
   cursor:pointer;
-  background-color: $light-blue;
+  background-color: white;
   vertical-align: middle;
   p {
     margin: auto;
     font-size: 0.8em;
     text-align: center;
-    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: black;
   }
   @media only screen and (max-width: 768px){
-        width: 25%;
+        width: calc(25% - 4px - 2px);
   }
 
 
@@ -863,6 +913,7 @@ sup {
 
 .individual-action:hover {
   background-color: $light-blue-selected;
+  cursor:pointer;
 }
   
 
@@ -875,22 +926,42 @@ sup {
   display: inline-block;
   padding: 40px;
   font-weight: 200;
-  cursor:pointer;
   background-color: $light-blue;
   overflow: auto;
   @media only screen and (max-width: 768px){
-      width: 100%;
-      height: 400px;
+      width: calc(100% - 8px);
+      height: auto;
+      border-radius: 8px;
+//      border-style: solid;
+//      border-width: 1px;
+//      border-color: $light-blue-selected;
+      background-color: white;
   }
 }
-.individual-result:hover {
-  background-color: $light-blue-selected;
-  height: auto;
-}
+
 #results li {
   list-style-type: none;
 }
 
+.cancel-button {
+  width: 27px;
+  height: 27px;
+  background-color: $light-blue-selected;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  transition: 1s;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+      vertical-align: middle;
+
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 
 /* Mobile Sankey Adaptation */

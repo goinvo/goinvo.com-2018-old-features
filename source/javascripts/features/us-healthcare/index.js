@@ -99,7 +99,7 @@ $(document).ready(function(){
     $('.individual-result[data-key="'+this_key+'"]').show()
   });
   
-  $('.individual-result').click(function(e){
+  $('.cancel-button').click(function(e){
     $('.individual-result').hide();
   });
   
@@ -172,7 +172,7 @@ $(document).ready(function(){
   
   $(window).scroll(function(i) {
     var winH = window.innerHeight;
-    var hb = $('#hospital-bill');
+    var hb = $('#medical-bill');
     bill_data.forEach(function(item) {
       var bill_item = document.querySelector("#" + item.location);
       var scroll_pos_test = position(bill_item).y;
@@ -198,9 +198,9 @@ $(document).ready(function(){
     var start = position(document.querySelector('#clinic_visit_location')).y;
 
     if(start - winH*.6 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
-      $('#hospital-bill').toggleClass('is-visible', false);
+      $('#medical-bill').toggleClass('is-visible', false);
     } else {
-      $('#hospital-bill').toggleClass('is-visible', true);
+      $('#medical-bill').toggleClass('is-visible', true);
     }
 
   });

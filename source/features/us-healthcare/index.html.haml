@@ -39,7 +39,7 @@
       %a{:data => {:link => "#authors"}}6. Authors
     %li 
       %a{:data => {:link => "#bibliography"}}7. References      
-#hospital-bill
+#medical-bill
   %h3 Medical Bill
   %table{:border => 1}
     %tbody.all_costs
@@ -350,10 +350,13 @@
             %li
               .individual-result{ :data => {:key => key}}
                 -#{style: "width:#{100/these_nodes.length}%"}
+                %p.cancel-button
+                  ="&#10094"
                 %h3= value.title
                 %p= value.description
                 %h3= "How the ACA Does"
                 %p= value.aca
+                
 
   #sankey-container.chart-container     
   #sankey-chart
