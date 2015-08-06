@@ -3,11 +3,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
 $light-black: #222;
-$light-grey:#EDEDED;
+$light-grey:#dedede;
 $black : #000;
-$light-blue:lighten(rgb(142, 175, 208),10%);
+$light-blue:rgb(177, 205, 234); 
 $light-blue-hover:rgb(142, 175, 208);
-$light-blue-selected: darken(rgba(142, 175, 208,1),10%);
+$light-blue-selected: rgb(106, 141, 177);
 
 #article-nav {
   position: fixed;
@@ -101,11 +101,14 @@ header p{
   position: fixed;
   top: 30%;
   right: 5px;
-  background-color: $light-blue;
+  background-color: $light-grey;
   padding: 5px;
   z-index: 1000;
   transition: all 350ms ease-in-out;
   border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffffff;
   td {
     transition: inherit;
     padding: 6px;
@@ -324,7 +327,7 @@ p.tab_p {
 }
 
 #triple-graph .tab-link.current {
-  background-color: darken($light-grey,15%);
+  background-color: #9a9a9a;
 }
 
 #triple-graph .tab-link:hover {
@@ -454,7 +457,7 @@ div.tooltip {
   background: rgba(255, 255, 255, 0.75);
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(128, 128, 128, 0.11);
+  border-color: $light-blue;
   border-radius: 3px;
   pointer-events: none;
   z-index: 100;
@@ -557,24 +560,6 @@ sup {
 }
 
 
-.bar_chart {
-  color: #fff;
-  background-color: $light-blue;
-}
-
-/*
-.axis path,
-.yaxis path,
-.xaxis path,
-.axis line
-.yaxis line,
-.xaxis line{
-    fill: none;
-    stroke: black;
-    shape-rendering: cripsEdges;
-}
-*/
-
 .yaxis path, .xaxis path {
     display: none;
 }
@@ -594,9 +579,7 @@ sup {
 #totalProcedures {
     cursor: pointer;
 }
-.bar {
-    fill: darken($light-grey,10%);
-}
+
 
 /* Bar Chart on Waste: Radio Buttons */
 
@@ -700,7 +683,7 @@ sup {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background-color: darken($light-grey,15%);
+    background-color: #9a9a9a;
 }
 
 .toggle-btn:hover {
@@ -923,10 +906,10 @@ sup {
       transform: scale(1.07);
     }
     &[data-selected="yes"]{
-      background-color:darken($light-grey,10%);
+      background-color:#9a9a9a;
     }
     &[data-selected="no"]{
-      background-color:lighten($light-grey, 5%);
+      background-color: #ffffff;
     }
     
     h3{

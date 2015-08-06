@@ -88,7 +88,7 @@ $( document ).ready(function() {
         .attr("y", function(d) {
           return yScale(d.Waste);
         })
-        .style("fill", "#c7c7c7");
+        .style("fill", "#9a9a9a");
     }
 
   d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
@@ -103,7 +103,7 @@ $( document ).ready(function() {
       });
 
       xScale.domain(data.map(function(d) { return d.Procedure;}));
-      yScale.domain([1, maxProcedures]);
+      yScale.domain([1, maxWaste]);
 
       wasteSVG.append("g")
           .attr("class", "xaxis")
@@ -165,7 +165,7 @@ $( document ).ready(function() {
         .on('mouseleave', function() {
           tooltip.transition()
             .duration(100).style('opacity', 0);
-          d3.select(this).style('fill', '');
+          d3.select(this).style('fill', '#9a9a9a');
       });
 
 
@@ -300,7 +300,9 @@ $( document ).ready(function() {
           initialTransition();
           
           haveWeInitialziedYet  = true;
-          d3.select('[id="Brand-Name Statins"]').trigger('mousemove')
+          setTimeout( function() {
+            d3.select('[id="Brand-Name Statins"]').trigger('mouseover');
+  }, 1000);
         }
     }
   });

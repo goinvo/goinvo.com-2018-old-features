@@ -47,7 +47,7 @@ $(document).ready(function(){
       .data(neighborhoods.features)
       .enter()
       .append("path")
-      .attr("fill", "#E0E0E0")
+      .attr("fill", "#dedede")
       .attr("stroke", "white")
       .attr("stroke-width", "0.75px")
       .attr("d", geoPath);
@@ -67,7 +67,7 @@ $(document).ready(function(){
                 return albersProjection([d.lon, d.lat])[1];
               })
               .attr("r", function(d){ return rScale(d.price_pneumonia)})
-              .attr("fill", "#585858")
+              .attr("fill", "#9a9a9a")
               .on("mouseover", function(d){
                 var circle = $(this);
               
@@ -87,12 +87,13 @@ $(document).ready(function(){
                   .duration(400)
                   .style("opacity",1);
                 
-                tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) +"<br/>" + "MRI Without Contrast: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
+                tooltip.html("<strong>" + d.name + "</strong>" + "<br>" +  "<div class = 'tt-important'>"  + d3.format("$,")(d.price_visit) + "</div>Clinic Visit <br><div class = 'tt-important'>" + d3.format("$,")(d.price_imaging) + "</div>MRI Without Contrast <br><div class = 'tt-important'>" + d3.format("$,")(d.price_pneumonia) + "</div>Pneumonia Treatment")
+
                   
               })
               .on("mouseout", function(){
                 d3.select(this)
-                  .attr("fill", "#585858")
+                  .attr("fill", "#9a9a9a")
                   .style("r", function(d){ return rScale(d.price_pneumonia)})
                 tooltip.transition()
                   .duration(500)

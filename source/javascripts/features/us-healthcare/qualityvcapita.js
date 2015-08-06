@@ -67,7 +67,7 @@ $(document).ready(function(){
       });
 
 //      x.domain(d3.extent(data, function(d) { return d.capita; }));
-      x.domain([d3.min(data, function(d) { return d.capita; }), d3.max(data, function(d) { return d.capita + 200;})]);
+      x.domain([d3.min(data, function(d) { return d.capita - 400; }), d3.max(data, function(d) { return d.capita + 400;})]);
       y.domain(d3.extent(data, function(d) { return d.quality; }));
       rScale.domain(d3.extent(data, function(d) { return d.population;}));
 
@@ -85,7 +85,7 @@ $(document).ready(function(){
           .attr("dx", ".71em")
           .attr("dy", "-.71em")
           .style("text-anchor", "middle")
-          .text("U.S. Dollars per Capita");
+          .text("Dollars per Capita");
 
       yAxisG = svgWrapper.append("g")
         .attr("class", "y axis")
@@ -113,7 +113,7 @@ $(document).ready(function(){
         .attr("r", 0)
         .attr("cx", function(d){return x(d.capita)})
         .attr("cy", function(d){return y(d.quality)})
-        .attr("fill", "#585858")
+        .attr("fill", "#9a9a9a")
         .on("mouseover", function(d){
             var circle = $(this);
             d3.select(this)
@@ -124,8 +124,8 @@ $(document).ready(function(){
                 .duration(200)
                 .style("opacity", 1);
         
-            tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "U.S. Dollars / Capita: " + d3.format("$,")(d.capita) + "<br/>" + "Quality Ranking: " + d.quality + "<br/>" + "Population: " + d3.format(",")(d.population))
-                .style("left", parseFloat(circle.attr('cx')) + 20 + "px")
+            tooltip.html("<strong>" + d.name + "</strong></b>" + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita<br>" + "<div class = 'tt-important'>" + (d.quality) + "<sup>th</sup>" + "</div>quality rank<br>" + "<div class = 'tt-important'>"  + d3.format(",")(d.population) + "</div>population")
+                .style("left", parseFloat(circle.attr('cx')) - 30 + "px")
                 .style("top", parseFloat(circle.attr('cy'))  + 30 + "px");
         })
       

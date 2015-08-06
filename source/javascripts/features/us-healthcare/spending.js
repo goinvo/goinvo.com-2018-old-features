@@ -113,7 +113,7 @@ $(document).ready(function(){
           .attr("x", -height/2)
           .attr("dy", ".71em")
           .style("text-anchor", "middle")
-          .text("U.S. Dollars per Capita");
+          .text("Dollars per Capita");
 
       country = svgWrapper.selectAll(".country")
           .data(countries)
@@ -123,7 +123,7 @@ $(document).ready(function(){
       country.append("path")
           .attr("class", "line")
           .attr("d", function(d) { return line(d.values); })
-          .style("stroke", function(d) { return color(d.name); });
+          .style("stroke", "#9a9a9a");
 
       country.append("path")
           .attr("class", "invisible hover")
@@ -147,9 +147,13 @@ $(document).ready(function(){
 		  .attr("cx", function(d) { return x(d.date)})
 		  .attr("cy", function(d) { return y(d.capita)})
 		  .attr("r", function(d) { return d.capita == null ? 0: 3})
-		  .style("fill", function(d) { return color(d.name) ;})
+		  .style("fill", "#9a9a9a")
       
       .on("mouseover", function(d) {
+        var me = d3.select(this);
+        me.attr("r", 10)
+          .style("fill", "rgb(142, 175, 208)");
+        
         d3.selectAll(".linepoint")
           .style("opacity", 0)
           .filter(function(p) { return p.name == d.name; })
@@ -167,16 +171,20 @@ $(document).ready(function(){
         div.transition()
           .duration(200)
           .style("opacity", 1);
-        div.html(d.name + ", " + formatDate(d.date) + "<br/>" + "<b>" + d.capita + "</b>" + " U.S. Dollars / Capita")
-          .style("left", parseFloat(circle.attr('cx')) - 70 + "px")
-          .style("top", parseFloat(circle.attr('cy'))  -30 + "px");
+        div.html("<strong>" + d.name + "</strong><br>" + formatDate(d.date) + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita" )
+          .style("left", parseFloat(circle.attr('cx')) - 40 + "px")
+          .style("top", parseFloat(circle.attr('cy')) + 25 + "px");
       })
       
       .on("mouseout", function(d) {
+        var me = d3.select(this);
+        me.attr("r", 3)
+          .style("fill", "#9a9a9a");
         div.transition()
           .duration(500)
           .style("opacity", 0)
       });
+      
 
       country.selectAll(".hover")
         .data(function(d) { return d.values})
