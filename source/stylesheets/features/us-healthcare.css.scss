@@ -4,6 +4,7 @@
 
 $light-black: #222;
 $light-grey:#dedede;
+$dark-grey:#9a9a9a;
 $black : #000;
 $light-blue:rgb(177, 205, 234); 
 $light-blue-hover:rgb(142, 175, 208);
@@ -101,14 +102,14 @@ header p{
   position: fixed;
   top: 30%;
   right: 5px;
-  background-color: $light-grey;
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 5px;
   z-index: 1000;
   transition: all 350ms ease-in-out;
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
-  border-color: #ffffff;
+  border-color: $light-blue-selected;
   td {
     transition: inherit;
     padding: 6px;
@@ -124,8 +125,21 @@ header p{
     opacity: 1;
     pointer-events: auto;
   }
+  @media only screen and (max-width: 1150px){
+    width: 80px; 
+    height: 60px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
+#hospital-bill:hover {
+  @media only screen and (max-width: 1150px){
+    width: 180px;
+    height: auto;
+    
+  }
+}
 
 [data-reason="total"] {
   font-weight: bold;
@@ -162,6 +176,10 @@ article, footer {
   @media only screen and (max-width: 768px){
     padding: 20px 0px 20px;
     width: 85%;
+  }
+  @media only screen and (min-width: 1200px){
+    padding: 40px 0px 40px;
+    width: 840px;
   }
   
 }
@@ -327,7 +345,7 @@ p.tab_p {
 }
 
 #triple-graph .tab-link.current {
-  background-color: #9a9a9a;
+  background-color: $dark-grey;
 }
 
 #triple-graph .tab-link:hover {
@@ -458,14 +476,21 @@ div.tooltip {
   border-style: solid;
   border-width: 1px;
   border-color: $light-blue;
-  border-radius: 3px;
+  border-radius: 8px;
   pointer-events: none;
   z-index: 100;
   word-wrap: break-word;
-  
+    @media only screen and (max-width: 768px){
+      min-width: 0px;
+      width: auto;
+  }
   .tt-important {
     margin-top: .6em;
-    font-size: 1.85em; 
+    font-size: 1.85em;
+    @media only screen and (max-width: 768px){
+      margin-top: .3em;
+      font-size: 1.4em;
+    }
     
   }
   
@@ -683,7 +708,7 @@ sup {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background-color: #9a9a9a;
+    background-color: $dark-grey;
 }
 
 .toggle-btn:hover {
@@ -719,10 +744,10 @@ sup {
 }
 */
 .link[data-highlight="forwards"]{
-  stroke: $light-blue-hover;
+  stroke: $light-blue-selected;
 } 
 .link[data-highlight="backwards"]{
-  stroke: $light-blue-hover;
+  stroke: $light-blue-selected;
 } 
 
 
@@ -770,7 +795,7 @@ sup {
 }
 
 #perspectives li:hover {
-  background-color: $light-blue-hover;
+  background-color: $light-blue-selected;
 }
 
 [data-key="patient"].selected {
@@ -820,7 +845,7 @@ sup {
   padding-top: .5em;
   font-weight: 200;
   cursor:pointer;
-  background-color: $light-blue-selected;
+  background-color: $light-blue;
   vertical-align: middle;
   p {
     margin: auto;
@@ -830,12 +855,14 @@ sup {
   }
   @media only screen and (max-width: 768px){
         width: 25%;
-    }
+  }
+
+
 }
 
 
 .individual-action:hover {
-  background-color: $light-blue-hover;
+  background-color: $light-blue-selected;
 }
   
 
@@ -849,7 +876,7 @@ sup {
   padding: 40px;
   font-weight: 200;
   cursor:pointer;
-  background-color: $light-blue-selected;
+  background-color: $light-blue;
   overflow: auto;
   @media only screen and (max-width: 768px){
       width: 100%;
@@ -857,7 +884,8 @@ sup {
   }
 }
 .individual-result:hover {
-  background-color: $light-blue-hover;
+  background-color: $light-blue-selected;
+  height: auto;
 }
 #results li {
   list-style-type: none;
@@ -906,7 +934,7 @@ sup {
       transform: scale(1.07);
     }
     &[data-selected="yes"]{
-      background-color:#9a9a9a;
+      background-color:$dark-grey;
     }
     &[data-selected="no"]{
       background-color: #ffffff;
