@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+  $('#article-nav li').on('click', function() {
+    var data = $(this).find('a').data('link');
+    var wanted = $(data);
+    $('html, body').animate({
+        scrollTop: wanted.offset().top - 100
+    }, 750);
+    
+  });
+  
   $('.tab-link').click(function(){
     var tab = $(this);
     $('.tab-link, .tab-content').removeClass('current');
@@ -43,7 +52,6 @@ $(document).ready(function(){
       var parent = $(target).parent();
       var lastParent;
       while(!$(parent).is(":visible")){
-        console.log($(parent).is(":visible"));
         lastParent = parent;
         parent = $(parent).parent();
       }
@@ -68,7 +76,6 @@ $(document).ready(function(){
     $('.link').attr('data-highlight','false');
     $('.individual-action').removeClass('selected');
     var this_key = $(this).attr('data-key');
-    console.log(this_key)
     //First, find things that use this key as a source.
     followLinks(false, this_key);
     //Then go the other way.
@@ -89,14 +96,112 @@ $(document).ready(function(){
   $('.individual-action').click(function(e){
     $('.individual-result').hide();
     var this_key = $(this).attr('data-key');
-    console.log("this_key: " + this_key)
     $('.individual-result[data-key="'+this_key+'"]').show()
   });
   
-  $('.individual-result').click(function(e){
-    console.log("cancel")
+  $('.cancel-button').click(function(e){
     $('.individual-result').hide();
   });
-      
-      
+  
+  
+  
+  function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+  
+    while(element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+    return { x: xPosition, y: yPosition };
+  }
+  
+//  var clinic = document.querySelector("#clinic_visit_location"); 
+//  var xray = document.querySelector("#xray_location"); 
+//  var ct1 = document.querySelector("#ct1_location"); 
+//  var ct2 = document.querySelector("#ct2_location"); 
+//  var hospital = document.querySelector("#hospital_location"); 
+//  var total = document.querySelector("#total_location"); 
+  var position = function(input) { return getPosition(input);}
+  
+  
+   var bill_data = [
+    {
+      "key": "clinic",
+      "title":"Clinic Visit",
+      "location":"clinic_visit_location",
+      "cost":"$150"
+    },
+    {
+      "key":"xray",
+      "title":"X-ray",
+      "location":"xray_location",
+      "cost":"$100"
+    },
+    {
+      "key":"ct1",
+      "title":"CT Scan #1",
+      "location":"ct1_location",
+      "cost":"$785"
+    },
+    {
+      "key":"ct2",
+      "title":"CT Scan #2",
+      "location":"ct2_location",
+      "cost":"$785"
+    },
+    {
+      "key":"hospital",
+      "title":"Hospital Stay",
+      "location":"hospital_location",
+      "cost":"$14,000"
+    },
+    {
+      "key":"total",
+      "title":"Total",
+      "location":"total_location",
+      "cost":"$15,820"
+    }
+  ];
+  
+    
+  bill_data.forEach(function(item) {
+    $('[data-reason="' + item.key + '"]').hide()
+  });
+  
+  $(window).scroll(function(i) {
+    var winH = window.innerHeight;
+    var hb = $('#medical-bill');
+    bill_data.forEach(function(item) {
+      var bill_item = document.querySelector("#" + item.location);
+      var scroll_pos_test = position(bill_item).y;
+      if(scroll_pos_test < 0 + .39*winH) {
+        if( !hb.visible ) {
+          $('[data-reason="' + item.key + '"]').show('fast'); 
+        } else {
+          $('[data-reason="' + item.key + '"]').show();
+        }
+      } else {
+        if( !hb.visible ) {
+          $('[data-reason="' + item.key + '"]').hide('fast'); 
+        } else {
+          $('[data-reason="' + item.key + '"]').hide();
+        }
+      }
+    });
+    var currentScrollTop = $(this).scrollTop();
+
+    var top = position(document.querySelector('#waste-container')).y;
+    var bottom = position(document.querySelector('#ct2_location')).y;
+    var end = position(document.querySelector('#history')).y;
+    var start = position(document.querySelector('#clinic_visit_location')).y;
+
+    if(start - winH*.6 > 0 || (top - winH*.5 < 0 && bottom - winH*.5 > 0) || end - winH*.5 < 0 ) { 
+      $('#medical-bill').toggleClass('is-visible', false);
+    } else {
+      $('#medical-bill').toggleClass('is-visible', true);
+    }
+
+  });
 });

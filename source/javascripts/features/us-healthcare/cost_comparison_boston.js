@@ -47,7 +47,7 @@ $(document).ready(function(){
       .data(neighborhoods.features)
       .enter()
       .append("path")
-      .attr("fill", "#E0E0E0")
+      .attr("fill", "#dedede")
       .attr("stroke", "white")
       .attr("stroke-width", "0.75px")
       .attr("d", geoPath);
@@ -66,8 +66,8 @@ $(document).ready(function(){
               .attr("cy", function(d){
                 return albersProjection([d.lon, d.lat])[1];
               })
-              .style("r", function(d){ return rScale(d.price_pneumonia)})
-              .attr("fill", "#585858")
+              .attr("r", function(d){ return rScale(d.price_pneumonia)})
+              .attr("fill", "#9a9a9a")
               .on("mouseover", function(d){
                 var circle = $(this);
               
@@ -75,17 +75,25 @@ $(document).ready(function(){
                   .attr("fill", "rgb(142, 175, 208)")
                   .style("r", function(d){ return rScale(d.price_pneumonia)+2})
 
-                tooltip.transition()
-                  .duration(200)
-                  .style("opacity",1)
-                tooltip.html("<b>" + d.name + "</b>" + "<br/>" + "Clinic Visit: " + d3.format("$,")(d.price_visit) + "<br/>" + "Echocardiogram: " + d3.format("$,")(d.price_echo)+"<br/>" + "Cardiac Imaging: " + d3.format("$,")(d.price_imaging) + "<br/>" + "Pneumonia Treatment: " + d3.format("$,")(d.price_pneumonia))
-                  .style("left", (circle.attr('cx')) + 20 + "px")
-                  .style("top", (circle.attr('cy')) -100 + "px");
-              })
+                tooltip.style("left", function(d,i) {
+                    var left = parseFloat(circle.attr('cx')) + 30;
+                    return left + "px";
+                  })
+                  .style("top", function(d,i) {
+                    var top = parseFloat(circle.attr('cy')) - 30;
+                    return top + "px";
+                  })
+                  .transition()
+                  .duration(400)
+                  .style("opacity",1);
+                
+                tooltip.html("<strong>" + d.name + "</strong>" + "<br>" +  "<div class = 'tt-important'>"  + d3.format("$,")(d.price_visit) + "</div>Clinic Visit <br><div class = 'tt-important'>" + d3.format("$,")(d.price_imaging) + "</div>MRI Without Contrast <br><div class = 'tt-important'>" + d3.format("$,")(d.price_pneumonia) + "</div>Pneumonia Treatment")
 
+                  
+              })
               .on("mouseout", function(){
                 d3.select(this)
-                  .attr("fill", "#585858")
+                  .attr("fill", "#9a9a9a")
                   .style("r", function(d){ return rScale(d.price_pneumonia)})
                 tooltip.transition()
                   .duration(500)
@@ -119,8 +127,8 @@ $(document).ready(function(){
   myWindow.on('resize.cost', initializeSizes );
 
   setTimeout( function() {
-    d3.select('[id="Massachusetts General Hospital"]').trigger('mouseover');
     d3.select('[id="St Elizabeth\'s Medical Center"]').trigger('mouseover');
+    d3.select('[id="Massachusetts General Hospital"]').trigger('mouseover');
   }, 1000);
 
 });

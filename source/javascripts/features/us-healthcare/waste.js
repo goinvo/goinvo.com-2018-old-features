@@ -22,7 +22,7 @@ $( document ).ready(function() {
       //.domain(d3.range(dataset.length))   // range creates [0, 1,...length(dataset)]
       .rangeRoundBands([30, w], 0.2); // .05 for spacing between bars
 
-  var yScale = d3.scale.log()      // Unnecessary
+  var yScale = d3.scale.log()     // Unnecessary
       //.domain([1, d3.max(dataset)])
       .range([h+5, 5]);
 
@@ -88,7 +88,7 @@ $( document ).ready(function() {
         .attr("y", function(d) {
           return yScale(d.Waste);
         })
-        .style("fill", "darken(#E0E0E0,10%)");
+        .style("fill", "#9a9a9a");
     }
 
   d3.csv("/features/us-healthcare/data/data-waste.csv", function(error, data) {
@@ -103,38 +103,7 @@ $( document ).ready(function() {
       });
 
       xScale.domain(data.map(function(d) { return d.Procedure;}));
-      yScale.domain([1, maxProcedures]);
-
-
-  //     annotation = d3.select('#waste-chart')
-  //        .data(data).enter()
-  //        .append("div")
-  //        .attr('class','annotation')
-  //        .style("left", function(d) {
-  //          console.log(d);
-  //          console.log("start: " + xScale(d.Procedure))
-  //          return xScale(d.Procedure)+'px';
-  //        })
-  //        .style('bottom', function(d) {
-  //          console.log(d);
-  //          console.log("start: " + yScale(d.NumberProcedures))
-  //          return h - yScale(d.NumberProcedures) - $('#waste-container').position().top + 'px';
-  //        })
-  //        .html("Brand-name statins waste " + "<b>" + "$5 billion" + "</b>" + " annually.")
-  //     
-  //     wasteSVG.append("line")
-  //        .style("stroke", "rgba(159, 184, 206, 0.9)")  // colour the line
-  //        .style("stroke-width", "3")
-  //        .attr("x1", function() {
-  //          return xScale(data[2].Procedure)+ 10+'px';
-  //        })     // x position of the first end of the line
-  //        .attr("y1", function() {
-  //            return yScale(data[2].NumberProcedures)+'px'
-  //        })      // y position of the first end of the line
-  //        .attr("x2", function() {
-  //          return xScale(data[2].Procedure) + 30 +'px';
-  //        })     // x position of the second end of the line
-  //        .attr("y2", 54); 
+      yScale.domain([1, maxWaste]);
 
       wasteSVG.append("g")
           .attr("class", "xaxis")
@@ -160,6 +129,7 @@ $( document ).ready(function() {
 
       rectangles = myPoints.append("rect")
           .attr("class", "bar")
+          .style("fill", "#9a9a9a")
           .attr("id", function(d) { return d.Procedure; })
           .attr("x", function(d, i) {
              // make sure there are no spaces in the csv file or it won't parse
@@ -173,21 +143,30 @@ $( document ).ready(function() {
               return 10;
           });
 
-      rectangles.on('mousemove', function(d) {
-          tooltip.style('display', 'block');
-          var recTip = $(this)
-          d3.select(this)
-                  .style("fill", "rgb(142, 175, 208)")
-              tooltip.transition()
-                  .duration(200)
-                  .style("opacity", 1)
-              tooltip.html("<b>" + d.Procedure + "</b>" + "<br>" + "Percent Nonrecommended: "+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "<br>" + "Dollars Wasted: " + d3.format("$,")(d.Waste))
-                  .style("left", parseFloat(recTip.attr('x')) + 10 + "px")
-                  .style("top", parseFloat(recTip.attr('y')) + 10 + "px");
-      });
-      rectangles.on('mouseout', function() {
-          tooltip.style('display', 'none');
-          d3.select(this).style('fill', null);
+      rectangles.on('mouseover', function(d) {        
+        var me = d3.select(this);
+        me.style("fill", "rgb(142, 175, 208)");
+        tooltip.style('opacity', 0);
+        
+        tooltip.html("<strong>" + d.Procedure + "</strong>" + "<br>" + "<div class = 'tt-important'>"+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "</div> Nonrecommended <br><div class = 'tt-important'>" + d3.format("$,")(d.Waste) + "</div> Wasted" );
+        
+        tooltip.style("left", function(d) {
+              var x = parseFloat(me.attr('x'));
+              var value = x - parseFloat(tooltip.style('width'))/2  + parseFloat(me.attr('width'))/2;
+                return value  + "px";
+          }) 
+          .style("top", parseFloat(me.attr('y')) + 20 + "px");
+        
+        tooltip.transition()
+          .duration(500)
+          .style("opacity", 1);
+
+      })
+        
+        .on('mouseleave', function() {
+          tooltip.transition()
+            .duration(100).style('opacity', 0);
+          d3.select(this).style('fill', '#9a9a9a');
       });
 
 
@@ -322,7 +301,9 @@ $( document ).ready(function() {
           initialTransition();
           
           haveWeInitialziedYet  = true;
-          d3.select('[id="Brand-Name Statins"]').trigger('mousemove')
+          setTimeout( function() {
+            d3.select('[id="Brand-Name Statins"]').trigger('mouseover');
+  }, 1000);
         }
     }
   });

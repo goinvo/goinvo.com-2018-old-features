@@ -3,11 +3,21 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
 $light-black: #222;
-$light-grey:#E0E0E0;
+$light-grey:#dedede;
+$dark-grey:#9a9a9a;
 $black : #000;
-$light-blue:lighten(rgb(142, 175, 208),10%);
+$light-blue:rgb(177, 205, 234); 
 $light-blue-hover:rgb(142, 175, 208);
-$light-blue-selected: darken(rgba(142, 175, 208,1),10%);
+$light-blue-selected: rgb(106, 141, 177);
+
+.container{
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  &.content {
+    overflow: hidden; 
+  }
+}
 
 #article-nav {
   position: fixed;
@@ -21,27 +31,42 @@ $light-blue-selected: darken(rgba(142, 175, 208,1),10%);
   @media only screen and (max-width: 768px) {
       display: none;
   }
+  
+  ul {
+    margin: 0 auto;
+    
+    li {
+      display: inline-block;
+      white-space: nowrap;
+      width: calc(100% / 8);
+      text-align: center;
+      margin: auto;
+      padding: 8px;
+      cursor: pointer;
+      a {
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        &:hover {
+            color:rgba(255,255,255,1);
+            text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
-#article-nav ul {
-  margin: 0 auto;
+strong {
+  font-weight: 800; 
 }
 
-#article-nav li {
-  display: inline-block;
-  white-space: nowrap;
-  width: calc(100% / 8);
-  text-align: center;
-  margin: auto;
-  padding: 8px;
-}
-
-#article-nav a {
-  color: rgba(255,255,255,0.8);
-  text-align: center;
-  &:hover {
-      color:rgba(255,255,255,1);
-      text-decoration: none;
+.stuff-below-nav {
+  height: calc(100% - 90px);
+  position: fixed;
+  bottom: 0;
+  overflow: scroll;
+  background-color: white;
+  @media only screen and (max-width: 768px) {
+      height: calc(100% - 50px);
   }
 }
 
@@ -79,6 +104,58 @@ header p{
   text-align: center;
 }
 
+
+#medical-bill {
+//  height: 200px;
+  width: 180px;
+  position: fixed;
+  top: 30%;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px;
+  z-index: 1000;
+  transition: all 350ms ease-in-out;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $light-blue;
+  td {
+    transition: inherit;
+    padding: 6px;
+    
+    &:first-of-type {
+      min-width: 96px; 
+    }
+  }
+  opacity: 0;
+  pointer-events: none;
+  
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @media only screen and (max-width: 1150px){
+    width: 80px; 
+    height: 60px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+#medical-bill:hover {
+  @media only screen and (max-width: 1150px){
+    width: 180px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+[data-reason="total"] {
+  font-weight: bold;
+}
+
 h1 {
   font-family: "Lato", sans-serif;
   font-weight: 900;
@@ -110,6 +187,10 @@ article, footer {
   @media only screen and (max-width: 768px){
     padding: 20px 0px 20px;
     width: 85%;
+  }
+  @media only screen and (min-width: 1200px){
+    padding: 40px 0px 40px;
+    width: 840px;
   }
   
 }
@@ -201,6 +282,10 @@ span.slide {
   padding:0 5px;
 }
 
+span.slide:hover {
+  background-color: rgb(242, 224, 84);
+}
+
 .embed-extra-info {
     position: relative;
     padding-bottom: 75%;
@@ -254,6 +339,7 @@ p.tab_p {
   border-radius:8px;
   color: black;
   cursor: pointer;
+  transition: .2s ease-in-out;
 }
 
 #triple-graph .col-sm-4{
@@ -263,18 +349,13 @@ p.tab_p {
   margin: 0;
 }
 
-.container{
-    width: 100%;
-    padding: 0px;
-    margin: 0;
-}
-
 #triple-graph .tab-link.current {
-  background-color: darken($light-grey,15%);
+  background-color: $dark-grey;
 }
 
 #triple-graph .tab-link:hover {
-  background-color: lighten($light-grey,6%);
+//  background-color: lighten($light-grey,6%);
+  transform: (scale(1.1));
 }
 
 .tab-content{
@@ -315,12 +396,6 @@ p.tab_p {
     margin: auto;
 }
 
-//remove sankey when mobile
-#sankey-chart, #perspectives, #actions, #sankeyGUI{
-    @media only screen and (max-width: 768px){
-        display: none;
-    }
-}
 
 .axis path,
 .axis line {
@@ -395,17 +470,35 @@ text.label {
 div.tooltip {
   position: absolute;
   text-align: center;
+  max-width: 175px;
+  min-width: 150px;
   width: auto;
   height: auto;
-  padding: 5px;
+  padding: 7px;
+  padding-bottom: 1.5em;
   font: 12px sans-serif;
-  background: white;
+  background: rgba(255, 255, 255, 0.75);
   border-style: solid;
   border-width: 1px;
-  border-color: gray;
-  border-radius: 3px;
+  border-color: $light-blue;
+  border-radius: 8px;
   pointer-events: none;
   z-index: 100;
+  word-wrap: break-word;
+    @media only screen and (max-width: 768px){
+      min-width: 0px;
+      width: auto;
+  }
+  .tt-important {
+    margin-top: .6em;
+    font-size: 1.85em;
+    @media only screen and (max-width: 768px){
+      margin-top: .3em;
+      font-size: 1.4em;
+    }
+    
+  }
+  
 }
 .annotation{
     background-color:rgba(213, 230, 245, 0.76);
@@ -427,6 +520,10 @@ div.tooltip {
     border-color: rgba(159, 184, 206, 0.9);
     padding: 5px;
 }
+
+
+
+
 /* BIBLIOGRAPHY */
 #bibliography {
   text-align: left;
@@ -493,24 +590,6 @@ sup {
 }
 
 
-.bar_chart {
-  color: #fff;
-  background-color: $light-blue;
-}
-
-/*
-.axis path,
-.yaxis path,
-.xaxis path,
-.axis line
-.yaxis line,
-.xaxis line{
-    fill: none;
-    stroke: black;
-    shape-rendering: cripsEdges;
-}
-*/
-
 .yaxis path, .xaxis path {
     display: none;
 }
@@ -530,9 +609,7 @@ sup {
 #totalProcedures {
     cursor: pointer;
 }
-.bar {
-    fill: darken($light-grey,10%);
-}
+
 
 /* Bar Chart on Waste: Radio Buttons */
 
@@ -598,6 +675,8 @@ sup {
     border:solid 1px #fff;
     cursor:pointer;
     vertical-align: middle;
+    transition: .2s ease-in-out;
+
 }
 
 .toggle-btn-grp.cssonly {
@@ -634,11 +713,13 @@ sup {
 }
 
 .toggle-btn-grp.cssonly div input:checked + label {
-    background-color: darken($light-grey,15%);
+    background-color: $dark-grey;
 }
 
 .toggle-btn:hover {
-  background-color: lighten($light-grey,6%);
+//  background-color: lighten($light-grey,6%);
+  z-index: 1000;
+  transform: scale(1.1);
 }
 
 
@@ -668,10 +749,10 @@ sup {
 }
 */
 .link[data-highlight="forwards"]{
-  stroke: $light-blue-hover;
+  stroke: $light-blue-selected;
 } 
 .link[data-highlight="backwards"]{
-  stroke: $light-blue-hover;
+  stroke: $light-blue-selected;
 } 
 
 
@@ -684,8 +765,23 @@ sup {
 }
 
 #perspectives {
-  width: 30%;
+  width: calc(30% - 4px);
+  margin-left: 2px;
+  margin-right: 2px;
   float: left;
+  @media only screen and (max-width: 768px){
+        width: 100%;
+        border-bottom-width: 0px;
+    }
+  border-style: solid;
+  border-width: 6px;
+  border-color: $light-blue;
+  background-color: $light-blue;
+  @media only screen and (min-width: 769px){  
+    border-radius: 20px;
+    background-color: white;
+    border-color: $light-blue-selected;
+  }
 }
 
 #perspectives li {
@@ -696,11 +792,51 @@ sup {
   display: inline;
   color: #000;
   background-color: $light-blue;
-  cursor:pointer;
+  @media only screen and (max-width: 768px){
+    width: 25%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+//    border-bottom-width: 2px;
+    }
+  @media only screen and (min-width: 769px){  
+    width: calc(50% - 1px);
+    background-color: $light-blue-selected;
+  }
+}
+
+[data-li-key="patient"] {
+  @media only screen and (min-width: 769px){
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-top-left-radius: 13px;
+  }
+}
+[data-li-key="provider"] {
+  @media only screen and (min-width: 769px){
+    margin-left: 1px;
+    margin-bottom: 1px;
+    border-top-right-radius: 13px;
+  }
+}
+[data-li-key="policymaker"] {
+  @media only screen and (min-width: 769px){
+    margin-right: 1px;
+    margin-top: 1px;
+    border-bottom-left-radius: 13px;
+  }
+}
+[data-li-key="payer"] {
+  @media only screen and (min-width: 769px){
+    margin-left: 1px;
+    margin-top: 1px;
+    border-bottom-right-radius: 13px;
+  }
 }
 
 .perspective h5 {
-  color: white;
+  color: black;
 }
 
 .perspective {
@@ -713,23 +849,69 @@ sup {
 }
 
 #perspectives li:hover {
-  background-color: $light-blue-hover;
+  background-color: $light-blue-selected;
+  cursor:pointer;
 }
 
 [data-key="patient"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (min-width: 769px){
+    border-top-left-radius: 13px;
+  }
+
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="provider"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (min-width: 769px){
+    border-top-right-radius: 13px;
+  }
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="policymaker"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (min-width: 769px){
+    border-bottom-left-radius: 13px;
+  }
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 [data-key="payer"].selected {
-  background-color: $light-blue-selected;
+  background-color: white;
+  @media only screen and (min-width: 769px){
+    border-bottom-right-radius: 13px;
+  }
+  @media only screen and (max-width: 768px){
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-color: $light-blue-selected;
+    border-width: 2px;
+    border-bottom-width: 0px;
+  }
 }
 
 .perspective h5 {
@@ -738,31 +920,61 @@ sup {
 
 #next {
   width: 70%;
-  height: 200px;
+  height: 212px;
+  background-color: white;
   float: left;
-  background-color: $light-blue-selected;
+//  background-color: $light-blue-selected;
+  @media only screen and (max-width: 768px){
+    width: 100%;
+    height: 650px;
+    padding: 10px;
+  }
 }
 
 #actions li {
   list-style-type: none;
+  @media only screen and (min-width: 769px){
+    margin-top: 5px;
+  }
 }
 
 .individual-action {
   float: left;
-  width: 20%;
+  width: calc(20% - 4px);
   height: 100px;
   overflow: hidden;
   text-align: center;
   display: inline-block;
-  padding: 6px;
+  padding: 0 10px;
+  padding-top: .5em;
   font-weight: 200;
+  margin: 2px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $light-blue-selected;
   cursor:pointer;
-  background-color: $light-blue-selected;
+  background-color: white;
   vertical-align: middle;
+  p {
+    margin: auto;
+    font-size: 0.8em;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: black;
+  }
+  @media only screen and (max-width: 768px){
+        width: calc(25% - 4px - 2px);
+  }
+
+
 }
 
+
 .individual-action:hover {
-  background-color: $light-blue-hover;
+  background-color: $light-blue-selected;
+  cursor:pointer;
 }
   
 
@@ -773,68 +985,64 @@ sup {
   overflow: hidden;
   text-align: center;
   display: inline-block;
-  padding: 10px;
+  padding: 40px;
   font-weight: 200;
-  cursor:pointer;
-  background-color: $light-blue-selected;
+  background-color: $light-blue;
+  overflow: auto;
+  @media only screen and (max-width: 768px){
+      width: calc(100% - 8px);
+      height: auto;
+      border-radius: 8px;
+//      border-style: solid;
+//      border-width: 1px;
+//      border-color: $light-blue-selected;
+      background-color: white;
+  }
+  @media only screen and (min-width: 769px){
+    border-radius: 8px;
+    height: 206px;
+  }
 }
+
 .individual-result:hover {
-  background-color: $light-blue-hover;
+  @media only screen and (min-width: 769px){
+    overflow: visible;
+    height: auto;
+    cursor: pointer;
+  }
 }
+
 #results li {
   list-style-type: none;
 }
 
+.cancel-button {
+  width: 27px;
+  height: 27px;
+  background-color: $light-blue-selected;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  transition: 1s;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+      vertical-align: middle;
 
-
-//[data-perspective="patient"] li {
-//  background-color: $light-blue-selected;
-//  border: none;
-//  width: calc(100% / 5);
-//}
-//
-//[data-perspective="provider"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 9);
-//}
-//
-//[data-perspective="policymaker"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 9);
-//}
-//
-//[data-perspective="payer"] li {
-//  background-color: $light-blue-selected;
-//  width: calc(100% / 6);
-//}
-//
-//[data-perspective="patient"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="provider"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="policymaker"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-//
-//[data-perspective="payer"] li.selected {
-//  background-color: $light-blue-selected;
-//}
-
-.individual-action {
-  padding: 0 10px;
-  padding-top: .5em;
-  p {
-    margin: auto;
-    font-size: 0.8em;
-    text-align: center;
-    color: white;
-  }
 }
 
+.cancel-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+/* Mobile Sankey Adaptation */
+#sankey-chart {
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}
 
 
 
@@ -857,6 +1065,7 @@ sup {
     width:calc(50% - 10px);
     padding: 25px;
     border-radius: 8px;
+    transition: .2s ease-in-out;
     
     @media only screen and (max-width: 768px) {
       width: 100% !important;
@@ -865,13 +1074,14 @@ sup {
     }
     
     &:hover{
-      background-color: lighten($light-grey,5%)
+//      background-color: lighten($light-grey,5%);
+      transform: scale(1.07);
     }
     &[data-selected="yes"]{
-      background-color:darken($light-grey,10%);
+      background-color:$dark-grey;
     }
     &[data-selected="no"]{
-      background-color:lighten($light-grey, 5%);
+      background-color: #ffffff;
     }
     
     h3{
