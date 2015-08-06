@@ -129,6 +129,7 @@ $( document ).ready(function() {
 
       rectangles = myPoints.append("rect")
           .attr("class", "bar")
+          .style("fill", "#9a9a9a")
           .attr("id", function(d) { return d.Procedure; })
           .attr("x", function(d, i) {
              // make sure there are no spaces in the csv file or it won't parse

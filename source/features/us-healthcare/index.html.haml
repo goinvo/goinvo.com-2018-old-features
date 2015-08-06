@@ -328,7 +328,7 @@
     #perspectives
       %ul
         - data.features.ushealthcare.perspectives.each do |perspective|
-          %li
+          %li{:data => {:li_key => perspective['key']}}
             .perspective{:data => {:key => perspective['key']}}
               = image_tag perspective.image
               %h5= perspective.title

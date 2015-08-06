@@ -10,6 +10,15 @@ $light-blue:rgb(177, 205, 234);
 $light-blue-hover:rgb(142, 175, 208);
 $light-blue-selected: rgb(106, 141, 177);
 
+.container{
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  &.content {
+    overflow: hidden; 
+  }
+}
+
 #article-nav {
   position: fixed;
   left: 0;
@@ -109,7 +118,7 @@ header p{
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
-  border-color: $light-blue-selected;
+  border-color: $light-blue;
   td {
     transition: inherit;
     padding: 6px;
@@ -336,12 +345,6 @@ p.tab_p {
 }
 #triple-graph .row {
   margin: 0;
-}
-
-.container{
-    width: 100%;
-    padding: 0px;
-    margin: 0;
 }
 
 #triple-graph .tab-link.current {
@@ -760,7 +763,9 @@ sup {
 }
 
 #perspectives {
-  width: 30%;
+  width: calc(30% - 4px);
+  margin-left: 2px;
+  margin-right: 2px;
   float: left;
   @media only screen and (max-width: 768px){
         width: 100%;
@@ -770,6 +775,11 @@ sup {
   border-width: 6px;
   border-color: $light-blue;
   background-color: $light-blue;
+  @media only screen and (min-width: 769px){  
+    border-radius: 20px;
+    background-color: white;
+    border-color: $light-blue-selected;
+  }
 }
 
 #perspectives li {
@@ -788,6 +798,39 @@ sup {
     border-color: $light-blue-selected;
 //    border-bottom-width: 2px;
     }
+  @media only screen and (min-width: 769px){  
+    width: calc(50% - 1px);
+    background-color: $light-blue-selected;
+  }
+}
+
+[data-li-key="patient"] {
+  @media only screen and (min-width: 769px){
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-top-left-radius: 13px;
+  }
+}
+[data-li-key="provider"] {
+  @media only screen and (min-width: 769px){
+    margin-left: 1px;
+    margin-bottom: 1px;
+    border-top-right-radius: 13px;
+  }
+}
+[data-li-key="policymaker"] {
+  @media only screen and (min-width: 769px){
+    margin-right: 1px;
+    margin-top: 1px;
+    border-bottom-left-radius: 13px;
+  }
+}
+[data-li-key="payer"] {
+  @media only screen and (min-width: 769px){
+    margin-left: 1px;
+    margin-top: 1px;
+    border-bottom-right-radius: 13px;
+  }
 }
 
 .perspective h5 {
@@ -810,6 +853,10 @@ sup {
 
 [data-key="patient"].selected {
   background-color: white;
+  @media only screen and (min-width: 769px){
+    border-top-left-radius: 13px;
+  }
+
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -822,6 +869,9 @@ sup {
 
 [data-key="provider"].selected {
   background-color: white;
+  @media only screen and (min-width: 769px){
+    border-top-right-radius: 13px;
+  }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -834,6 +884,9 @@ sup {
 
 [data-key="policymaker"].selected {
   background-color: white;
+  @media only screen and (min-width: 769px){
+    border-bottom-left-radius: 13px;
+  }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -846,6 +899,9 @@ sup {
 
 [data-key="payer"].selected {
   background-color: white;
+  @media only screen and (min-width: 769px){
+    border-bottom-right-radius: 13px;
+  }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -870,11 +926,14 @@ sup {
     width: 100%;
     height: 650px;
     padding: 10px;
-    }
+  }
 }
 
 #actions li {
   list-style-type: none;
+  @media only screen and (min-width: 769px){
+    margin-top: 5px;
+  }
 }
 
 .individual-action {
@@ -936,6 +995,18 @@ sup {
 //      border-width: 1px;
 //      border-color: $light-blue-selected;
       background-color: white;
+  }
+  @media only screen and (min-width: 769px){
+    border-radius: 8px;
+    height: 206px;
+  }
+}
+
+.individual-result:hover {
+  @media only screen and (min-width: 769px){
+    overflow: visible;
+    height: auto;
+    cursor: pointer;
   }
 }
 
