@@ -54,6 +54,7 @@
     %h1 Healing U.S. Healthcare
     %h3 How do we save an ailing system?
     %h3 By Cecile Lu and Neil Rens
+    %h3 September 2015
 .content-wrapper
   %article#background
     %p.p-slide
@@ -357,10 +358,11 @@
                   ="&#10005"
                 %h3= value.title
                 %p= value.description
-                %h3= "How the ACA Does"
+                %h3= "What does the ACA do?"
                 %p= value.aca
-                
-
+                - if value.citation_urls
+                  - value.citation_urls.each do |url|
+                    = link_to url, url, class: "source-link"
   #sankey-container.chart-container     
   #sankey-chart
 
@@ -455,11 +457,6 @@
         .col-sm-6
           .row
             .contributor
-              .info
-                %h3 Contributing Author
-                %p Ken Zonies, MD
-          .row
-            .contributor
               .image
                 = image_tag 'features/us-healthcare/juhan_sonin.jpg'
               .info
@@ -472,6 +469,10 @@
               .info
                 %h3 Editor
                 %p Emily Twaddell
+          .row
+            .contributor
+              .img
+                %p.small With inspiration and feedback from Harry Sleeper, Gigi Peterkin, and Kenneth Zonies, MD
 
   /
     <div class="floating-footer">
