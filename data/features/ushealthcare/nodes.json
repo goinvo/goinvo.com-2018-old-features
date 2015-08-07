@@ -22,8 +22,8 @@
 	},
 	"public_option":{
 		"title": "Offer Public Option",
-		"description": "Universal coverage is crucial to ensuring everyone has affordable access to healthcare. If health insurance is made optional, healthy people will be unlikely to buy insurance. This skews the risk pool and drives up the cost of a given insurance policy. The increased cost results in even fewer healthy people purchasing insurance, and the ‘death spiral’ continues. A public option (‘Medicare for all’) would guarantee that everyone has a base insurance plan. People could voluntarily purchase expanded coverage through private insurers.",
-    "aca": "Following the ACA’s insurance mandate, 13% of Americans still lack health insurance (4% less than before the ACA). (http://www.gallup.com/poll/180425/uninsured-rate-sinks.aspx).",
+		"description": "Universal coverage is crucial to ensuring that everyone has affordable access to healthcare. If health insurance is made optional, healthy people will be unlikely to buy insurance. This skews the risk pool and drives up the cost of a given insurance policy. The increased cost results in even fewer healthy people purchasing insurance, and the ‘death spiral’ continues. A public option (‘Medicare for all’) would guarantee that everyone has a base insurance plan. People could voluntarily purchase expanded coverage through private insurers.",
+    "aca": "Following the ACA’s insurance mandate, 13% of Americans still lack health insurance (down from 17% before the ACA). (http://www.gallup.com/poll/180425/uninsured-rate-sinks.aspx).",
 		"impacts":["policymaker", "payer"]
 	},
 	"everyone_covered":{
@@ -64,7 +64,7 @@
 	},
 	"on_demand_care":{
 		"title": "Enable On-Demand Care",
-		"description": "New technologies allow patients to care for themselves from the comfort of their own homes. Not only is care delivered outside of the hospital is much less expensive, but patients who can care for themselves may also be less likely to let symptoms exacerbate before addressing them.",
+		"description": "New technologies allow patients to care for themselves from the comfort of their own homes. Care delivered outside of the hospital is much less expensive, and patients who can care for themselves may also be less likely to let symptoms exacerbate before addressing them.",
     "aca": "Under the ACA, Medicare will begin testing new models of patient care, including the use of home-based primary care teams. Additionally, the ACA allocates grant money for training community health workers.",
 		"impacts": ["provider", "payer"]
 	},
@@ -149,12 +149,12 @@
 	"destigmatize_death":{
 		"title": "Destigmatize Death",
 		"description": "Many people spend their final days undergoing intensive treatments. Patients with advanced cancers often opt for intensive treatment that dereases their quality of life and barely increases (or in some cases decreases) their remaining time. Yet, most people want to pass peacefully in their own homes surrounded by loved ones. There is a disconnect between how we want to spend the end of our lives, how we are capable of spending that time, and how we actually spend that time.",
-    "aca": "No parts of the ACA directly deal with end of life care. Originally, a portion of the act was supposed to enable physicians to be reimbursed for having advanced care planning discussions with their patients. However, this portion was removed from the bill before it was passed because it was publicized as something that would result in a 'death panel.'",
+    "aca": "No parts of the ACA directly deal with end-of-life care. Originally, a portion of the act was supposed to enable physicians to be reimbursed for having advanced care planning discussions with their patients. However, this portion was removed from the bill before it was passed because it was publicized as something that would result in a 'death panel.'",
 		"impacts": ["provider","patient","payer","policymaker"]
 	},
 	"doctor_training":{
 		"title": "Improve Doctor Training",
-		"description": "Doctors have been trained according to a model developed over a century ago. Medical education should be less expensive and shorter. Doctors should be learning skills within the same care teams that they will eventually be operating (including nurses, social workers, and others). Most healthcare is delivered outside of the hospital, yet nearly all medical training occurs within hospitals.",
+		"description": "Doctors have been trained according to a model developed over a century ago. Medical education should be less expensive and shorter. Doctors should be learning skills within the same care teams that they will eventually be operating (including nurses, social workers, and others). Most healthcare is delivered outside of the hospital, yet most medical training occurs within hospitals.",
     "aca": "Although it provides support for workforce training programs, the ACA does not significantly revamp medical education.",
 		"impacts": ["provider","policymaker"]
 	},
@@ -196,7 +196,7 @@
 	},
 	"reform_malpractice":{
 		"title":"Reform Malpractice Laws",
-		"description":"The current system fails both patients and physicians. A 1991 study in New York showed that 97% of physician and hospital mistakes that result in harm do not lead to a lawsuit. At the same time, of all malpractice suits filed, 80% were not related to an adverse event caused by a physician or hospital (http://www.nejm.org/doi/full/10.1056/NEJM199107253250405). That means that patients are not being reimbursed when they deserve to be, and doctors are being sued when they should not be. Additionally, in order to protect them against malpractice lawsuits, some suggest that doctors practice defensive medicine by ordering exhaustive testing. Health Affairs estimated the costs of defensive medicine to be $55 billion (http://content.healthaffairs.org/content/29/9/1569.full).",
+		"description":"The current malpractice system fails both patients and physicians. A 1991 study in New York showed that 97% of physician and hospital mistakes that result in harm do not lead to a lawsuit. At the same time, of all malpractice suits filed, 80% were not related to an adverse event caused by a physician or hospital (http://www.nejm.org/doi/full/10.1056/NEJM199107253250405). That means that patients are not being reimbursed when they deserve to be, and doctors are being sued when they should not be. Additionally, in order to protect them against malpractice lawsuits, some suggest that doctors practice defensive medicine by ordering exhaustive testing. Health Affairs estimated the costs of defensive medicine to be $55 billion (http://content.healthaffairs.org/content/29/9/1569.full).",
     "aca": "The ACA does not address malpractice reform. Most reforms will have to take place at the state level, but the ACA did nothing to incentivize such reforms.",
 		"impacts": ["policymaker"]
 	},
@@ -208,7 +208,7 @@
 	},
 	"less_malpractice_liability":{
 		"title":"Doctors who Follow Best Practices Shielded from Liability",
-		"description": "The current system fails both patients and physicians. A 1991 study in New York showed that 97% of physician and hospital mistakes that result in harm do not lead to a lawsuit. At the same time, of all malpractice suits filed, 80% were not related to an adverse event caused by a physician or hospital (http://www.nejm.org/doi/full/10.1056/NEJM199107253250405). That means that patients are not being reimbursed when they deserve to be, and doctors are being sued when they should not be. Additionally, in order to protect them against malpractice lawsuits, some suggest that doctors practice defensive medicine by ordering exhaustive testing. Health Affairs estimated the costs of defensive medicine to be $55 billion (http://content.healthaffairs.org/content/29/9/1569.full).",
+		"description": "The current malpractice system fails both patients and physicians. A 1991 study in New York showed that 97% of physician and hospital mistakes that result in harm do not lead to a lawsuit. At the same time, of all malpractice suits filed, 80% were not related to an adverse event caused by a physician or hospital (http://www.nejm.org/doi/full/10.1056/NEJM199107253250405). That means that patients are not being reimbursed when they deserve to be, and doctors are being sued when they should not be. Additionally, in order to protect them against malpractice lawsuits, some suggest that doctors practice defensive medicine by ordering exhaustive testing. Health Affairs estimated the costs of defensive medicine to be $55 billion (http://content.healthaffairs.org/content/29/9/1569.full).",
     "aca": "The ACA does not address malpractice reform. Most reforms will have to take place at the state level, but the ACA did nothing to incentivize such reforms.",
 		"impacts":["provider"]
 	}

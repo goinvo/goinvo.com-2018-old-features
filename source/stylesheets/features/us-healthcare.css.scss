@@ -9,6 +9,9 @@ $black : #000;
 $light-blue:rgb(177, 205, 234); 
 $light-blue-hover:rgb(142, 175, 208);
 $light-blue-selected: rgb(106, 141, 177);
+$light-purple: rgb(201, 203, 222);
+$dark-purple: rgb(133, 137, 186);
+
 
 .container{
   width: 100%;
@@ -111,14 +114,14 @@ header p{
   position: fixed;
   top: 30%;
   right: 5px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 1);
   padding: 5px;
   z-index: 1000;
   transition: all 350ms ease-in-out;
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
-  border-color: $light-blue;
+  border-color: $dark-grey;
   td {
     transition: inherit;
     padding: 6px;
@@ -135,6 +138,8 @@ header p{
     pointer-events: auto;
   }
   @media only screen and (max-width: 1150px){
+    top: auto;
+    bottom: 1%;
     width: 80px; 
     height: 60px;
     overflow: hidden;
@@ -146,7 +151,7 @@ header p{
   @media only screen and (max-width: 1150px){
     width: 180px;
     height: auto;
-    
+    background-color: rgba(255, 255, 255, 1);   
   }
 }
 
@@ -478,7 +483,7 @@ div.tooltip {
   background: rgba(255, 255, 255, 0.75);
   border-style: solid;
   border-width: 1px;
-  border-color: $light-blue;
+  border-color: $dark-grey;
   border-radius: 8px;
   pointer-events: none;
   z-index: 100;
@@ -677,6 +682,12 @@ sup {
 
 }
 
+.toggle-rect {
+  @media only screen and (min-width: 769px){
+    padding: 10px;
+  }
+}
+
 .toggle-btn-grp.cssonly {
   margin: 0 auto;
   padding-bottom: 10px;
@@ -747,10 +758,10 @@ sup {
 }
 */
 .link[data-highlight="forwards"]{
-  stroke: $light-blue-selected;
+  stroke: $dark-purple;
 } 
 .link[data-highlight="backwards"]{
-  stroke: $light-blue-selected;
+  stroke: $dark-purple;
 } 
 
 
@@ -759,26 +770,26 @@ sup {
 #sankeyGUI {
   margin: auto;
   width: 100%;
-  
+  @media only screen and (min-width: 769px){  
+    padding: 10px;
+  }  
 }
 
 #perspectives {
   width: calc(30% - 4px);
-  margin-left: 2px;
-  margin-right: 2px;
   float: left;
   @media only screen and (max-width: 768px){
-        width: 100%;
-        border-bottom-width: 0px;
+    width: 100%;
+    border-bottom-width: 0px;
     }
   border-style: solid;
   border-width: 6px;
-  border-color: $light-blue;
-  background-color: $light-blue;
+  border-color: $light-purple;
+  background-color: $light-purple;
   @media only screen and (min-width: 769px){  
-    border-radius: 20px;
+    border-radius: 8px;
     background-color: white;
-    border-color: $light-blue-selected;
+    border-color: $light-purple;
   }
 }
 
@@ -789,18 +800,18 @@ sup {
   text-align: center;
   display: inline;
   color: #000;
-  background-color: $light-blue;
+  background-color: $light-purple;
   @media only screen and (max-width: 768px){
     width: 25%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-style: solid;
-    border-color: $light-blue-selected;
+    border-color: $dark-purple;
 //    border-bottom-width: 2px;
     }
   @media only screen and (min-width: 769px){  
     width: calc(50% - 1px);
-    background-color: $light-blue-selected;
+    background-color: $light-purple;
   }
 }
 
@@ -808,28 +819,28 @@ sup {
   @media only screen and (min-width: 769px){
     margin-right: 1px;
     margin-bottom: 1px;
-    border-top-left-radius: 13px;
+    border-top-left-radius: 1px;
   }
 }
 [data-li-key="provider"] {
   @media only screen and (min-width: 769px){
     margin-left: 1px;
     margin-bottom: 1px;
-    border-top-right-radius: 13px;
+    border-top-right-radius: 1px;
   }
 }
 [data-li-key="policymaker"] {
   @media only screen and (min-width: 769px){
     margin-right: 1px;
     margin-top: 1px;
-    border-bottom-left-radius: 13px;
+    border-bottom-left-radius: 1px;
   }
 }
 [data-li-key="payer"] {
   @media only screen and (min-width: 769px){
     margin-left: 1px;
     margin-top: 1px;
-    border-bottom-right-radius: 13px;
+    border-bottom-right-radius: 1px;
   }
 }
 
@@ -840,6 +851,7 @@ sup {
 .perspective {
   height: 100px;
   padding-top: .5em;
+  transistion: 2s;
   img {
     height: 60%;
     margin: auto;
@@ -847,21 +859,26 @@ sup {
 }
 
 #perspectives li:hover {
-  background-color: $light-blue-selected;
+  @media only screen and (min-width: 769px){
+    h5 {
+      font-size: 1.4em;
+    }
+  }
+  background-color: $light-purple;
   cursor:pointer;
 }
 
 [data-key="patient"].selected {
   background-color: white;
   @media only screen and (min-width: 769px){
-    border-top-left-radius: 13px;
+    border-top-left-radius:8px;
   }
 
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-style: solid;
-    border-color: $light-blue-selected;
+    border-color: $light-purple;
     border-width: 2px;
     border-bottom-width: 0px;
   }
@@ -870,13 +887,13 @@ sup {
 [data-key="provider"].selected {
   background-color: white;
   @media only screen and (min-width: 769px){
-    border-top-right-radius: 13px;
+    border-top-right-radius: 8px;
   }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-style: solid;
-    border-color: $light-blue-selected;
+    border-color: $light-purple;
     border-width: 2px;
     border-bottom-width: 0px;
   }
@@ -885,13 +902,13 @@ sup {
 [data-key="policymaker"].selected {
   background-color: white;
   @media only screen and (min-width: 769px){
-    border-bottom-left-radius: 13px;
+    border-bottom-left-radius: 8px;
   }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-style: solid;
-    border-color: $light-blue-selected;
+    border-color: $light-purple;
     border-width: 2px;
     border-bottom-width: 0px;
   }
@@ -900,13 +917,13 @@ sup {
 [data-key="payer"].selected {
   background-color: white;
   @media only screen and (min-width: 769px){
-    border-bottom-right-radius: 13px;
+    border-bottom-right-radius: 8px;
   }
   @media only screen and (max-width: 768px){
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-style: solid;
-    border-color: $light-blue-selected;
+    border-color: $light-purple;
     border-width: 2px;
     border-bottom-width: 0px;
   }
@@ -921,6 +938,9 @@ sup {
   height: 212px;
   background-color: white;
   float: left;
+  @media only screen and (min-width: 769px){
+    padding-left: 10px;
+  }
 //  background-color: $light-blue-selected;
   @media only screen and (max-width: 768px){
     width: 100%;
@@ -932,14 +952,14 @@ sup {
 #actions li {
   list-style-type: none;
   @media only screen and (min-width: 769px){
-    margin-top: 5px;
+//    margin-top: 8px;
   }
 }
 
 .individual-action {
   float: left;
   width: calc(20% - 4px);
-  height: 100px;
+  height: 104px;
   overflow: hidden;
   text-align: center;
   display: inline-block;
@@ -950,7 +970,7 @@ sup {
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
-  border-color: $light-blue-selected;
+  border-color: $dark-purple;
   cursor:pointer;
   background-color: white;
   vertical-align: middle;
@@ -963,7 +983,8 @@ sup {
     color: black;
   }
   @media only screen and (max-width: 768px){
-        width: calc(25% - 4px - 2px);
+    width: calc(33% - 3px);
+    height: 120px;
   }
 
 
@@ -971,7 +992,7 @@ sup {
 
 
 .individual-action:hover {
-  background-color: $light-blue-selected;
+  background-color: $dark-purple;
   cursor:pointer;
 }
   
@@ -979,33 +1000,50 @@ sup {
 .individual-result {
   position: absolute;
   width: 70%;
-  height: 200px;
+  max-height: 200px;
   overflow: hidden;
   text-align: center;
   display: inline-block;
   padding: 40px;
   font-weight: 200;
-  background-color: $light-blue;
+  background-color: $light-purple;
   overflow: auto;
   @media only screen and (max-width: 768px){
-      width: calc(100% - 8px);
-      height: auto;
-      border-radius: 8px;
+    width: calc(100% - 20px);
+    max-height: 900px;
+    border-radius: 8px;
+    padding: 10px;
 //      border-style: solid;
 //      border-width: 1px;
 //      border-color: $light-blue-selected;
-      background-color: white;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $light-purple;
+    h3 {
+      padding-right: 30px;
+      padding-top: 6px;
+    }
   }
   @media only screen and (min-width: 769px){
+    width: calc(70% - 25px);
     border-radius: 8px;
-    height: 206px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-height: 214px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $dark-purple;
+    background-color: white;
   }
+  transition: max-height .8s;
 }
 
 .individual-result:hover {
   @media only screen and (min-width: 769px){
-    overflow: visible;
-    height: auto;
+    border-radius: 8px;
+    max-height: 900px;
     cursor: pointer;
   }
 }
@@ -1015,23 +1053,24 @@ sup {
 }
 
 .cancel-button {
-  width: 27px;
-  height: 27px;
-  background-color: $light-blue-selected;
-  text-align: center;
-  border-radius: 30px;
-  color: white;
+  color: $dark-grey;
+  font-family: sans-serif;
+  font-size: 30px;
   transition: 1s;
   position: absolute;
-  top: 10px;
-  left: 15px;
-      vertical-align: middle;
-
+  top: 8px;
+  right: 17px;
+  margin: 0 auto;
+  vertical-align: middle;
+  @media only screen and (max-width: 768px){
+    color: $dark-grey;
+    font-size: 23px;
+  }
 }
 
 .cancel-button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: rotate(90deg);
 }
 
 
@@ -1217,7 +1256,7 @@ sup {
 		.image {
 			width: 20%;
 			img {
-				border-radius: 5px;
+				border-radius: 8px;
 			}
 		}
 		.info {

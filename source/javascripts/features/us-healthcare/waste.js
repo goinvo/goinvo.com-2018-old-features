@@ -145,7 +145,7 @@ $( document ).ready(function() {
 
       rectangles.on('mouseover', function(d) {        
         var me = d3.select(this);
-        me.style("fill", "rgb(142, 175, 208)");
+        me.style("fill", "rgb(133, 137, 186)");
         tooltip.style('opacity', 0);
         
         tooltip.html("<strong>" + d.Procedure + "</strong>" + "<br>" + "<div class = 'tt-important'>"+ d3.format("%")(d.Unnecessary/d.NumberProcedures) + "</div> Nonrecommended <br><div class = 'tt-important'>" + d3.format("$,")(d.Waste) + "</div> Wasted" );

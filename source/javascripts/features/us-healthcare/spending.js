@@ -152,7 +152,7 @@ $(document).ready(function(){
       .on("mouseover", function(d) {
         var me = d3.select(this);
         me.attr("r", 10)
-          .style("fill", "rgb(142, 175, 208)");
+          .style("fill", "rgb(133, 137, 186)");
         
         d3.selectAll(".linepoint")
           .style("opacity", 0)

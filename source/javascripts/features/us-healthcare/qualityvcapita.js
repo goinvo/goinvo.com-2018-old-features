@@ -118,7 +118,7 @@ $(document).ready(function(){
             var circle = $(this);
             d3.select(this)
               .style("r", (2+rScale(d.population)))
-              .style("fill", "rgb(142, 175, 208)");
+              .style("fill", "rgb(133, 137, 186)");
         
             tooltip.transition()
                 .duration(200)
