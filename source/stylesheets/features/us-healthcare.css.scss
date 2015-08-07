@@ -772,7 +772,7 @@ sup {
   width: 100%;
   @media only screen and (min-width: 769px){  
     padding: 10px;
-  }  
+  }
 }
 
 #perspectives {
@@ -780,6 +780,7 @@ sup {
   float: left;
   @media only screen and (max-width: 768px){
     width: 100%;
+    height: 120px;
     border-bottom-width: 0px;
     }
   border-style: solid;
@@ -856,6 +857,10 @@ sup {
     height: 60%;
     margin: auto;
    }
+  @media only screen and (max-width: 768px){
+    height: 120px;
+    padding-bottom: 20px;
+  }
 }
 
 #perspectives li:hover {
@@ -935,7 +940,7 @@ sup {
 
 #next {
   width: 70%;
-  height: 212px;
+  height: 214px;
   background-color: white;
   float: left;
   @media only screen and (min-width: 769px){
@@ -959,7 +964,7 @@ sup {
 .individual-action {
   float: left;
   width: calc(20% - 4px);
-  height: 104px;
+  height: 105px;
   overflow: hidden;
   text-align: center;
   display: inline-block;
@@ -985,6 +990,10 @@ sup {
   @media only screen and (max-width: 768px){
     width: calc(33% - 3px);
     height: 120px;
+  }
+  @media only screen and (min-width: 769px){
+    margin-top: 0px;
+    margin-bottom: 4px;
   }
 
 
