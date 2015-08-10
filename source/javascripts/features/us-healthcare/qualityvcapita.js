@@ -12,7 +12,7 @@ $(document).ready(function(){
   var whRatio = 5/9.6;
   var h = window.innerHeight * .6;
 
-  var margin = {top: 10, right: 10, bottom: 40, left: 50},
+  var margin = {top: 10, right: 10, bottom: 60, left: 50},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
