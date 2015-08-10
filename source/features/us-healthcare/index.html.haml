@@ -234,77 +234,18 @@
   / Line Graph
   %article#history
     %h2 History
-    %a{:name => "history"}
-    %p.p-slide
-      The problems with the healthcare system are well-documented. In the past century, there have been numerous attempts to reform the U.S. healthcare system. To understand why the reforms were proposed, it is important to examine how healthcare evolved in the U.S..
-    %p.p-slide
-      The first program resembling health insurance--known as prepaid hospital coverage--became available in Texas in 1929. For a fixed $6 payment, Dallas teachers could receive 21 days of hospitalization at Baylor University. Over the next twenty years, Blue Cross (for hospital services) and Blue Shield (for physician services) entered the scene. Insurance made healthcare more accessible. However, prior to insurance, doctors charged different rates to different patients. They often charged wealthy people more and poor people less, something they could no longer do for patients with insurance.
-    %p.p-slide
-      During World War II, companies used health insurance to attract employees. Due to cost controls, companies were restrained in their ability to raise wages but not in their ability to add health benefits to employment packages. In 1954, a comprehensive revision of the IRS code created a tax exclusion for employer-provided health insurance. While employers were required to pay taxes on the money they paid employees, they were not required to pay taxes on the money they spent on an employee’s health insurance. This meant that a dollar spent by an employer on health insurance was worth more to the employee than a dollar spent on wages. The cost controls combined with the tax exclusion are largely responsible for the employer-based health insurance model still present in the U.S. today.
-    %p.p-slide
-      In 1946, Congress passed the Hospital Survey and Construction (Hill-Burton) Act, which funded the construction and expansion of hospitals. The act was the first major federally funded healthcare act. It resulted in more than 416,000 new hospital beds at a cost of nearly $5 billion (http://www.encyclopedia.com/doc/1G2-3407400156.html).
-    %p.p-slide
-      Healthcare reform efforts began in earnest with the New Deal and continued through the passage of the Patient Protection and Affordable Care Act in 2010. The most notable national healthcare legislation that passed in the interim was Medicare and Medicaid in 1965, focused on assisting the elderly and poor.
-    %p.p-slide
-      President Obama signed the Patient Protection and Affordable Care Act into law in 2010. The legislation was highly contentious and passed along party lines. Among the most controversial aspects, the individual mandate requires everyone to buy health insurance or pay a penalty tax (unless neither can be afforded). Despite its negative reception by Republicans, the individual mandate was first proposed in 1989 by a conservative think-tank called The Heritage Foundation.
-    %p.p-slide
-      This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system evolved to what it is today.
-    %h2 History 2
     %p.p-slide
       In the past century, there have been numerous attempts to reform the U.S. healthcare system. To understand why the reforms were proposed, it is important to examine how healthcare evolved in the U.S..
-  %iframe{:src => "http://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk&font=Default&lang=en&height=600", :height => "600", :width => "100%", :id => "timeline"}
+  %iframe{:src => "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk&font=Default&lang=en&height=600", :height => "600", :width => "100%", :id => "timeline"}
   %article
     %p.p-slide
-      This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system evolved to what it is today.
+      This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system came to be what it is today.
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Insurance in the United States", :href=>"http://eh.net/encyclopedia/health-insurance-in-the-united-states/", :source=>"EHnet", :access=>"N.p., n.d. Web. 10 Aug. 2015"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Reinventing American Health Care: How the Affordable Care Act Will Improve Our Terribly Complex, Blatantly Unjust, Outrageously Expensive, Grossly Inefficient, Error Prone System", :href=>"http://www.amazon.com/gp/product/1610395425?redirect=true&ref_=s9_simh_gw_p14_d3_i2", :source=>"Emanuel, Ezekiel J", :access=>"PublicAffairs, 2014. Pg. 29. Print"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hill-Burton Act (1946)", :href=>"http://www.encyclopedia.com/doc/1G2-3407400156.html", :source=>"Newman, Roger K.", :access=>"Encyclopedia.com. HighBeam Research, 01 Jan. 2004. Web. 10 Aug. 2015"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"History", :href=>"https://www.cms.gov/About-CMS/Agency-Information/History/index.html?redirect=/History/", :source=>"Centers for Medicare & Medicaid Services", :access=>"N.p., n.d. Web. 10 Aug. 2015"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"The Tortuous History of Conservatives and the Individual Mandate", :href=>"http://www.forbes.com/sites/theapothecary/2012/02/07/the-tortuous-conservative-history-of-the-individual-mandate/", :source=>"Forbes", :access=>"Forbes Magazine, n.d. Web. 10 Aug. 2015"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Timeline: History of Health Reform in the U.S.", :href=>"https://kaiserfamilyfoundation.files.wordpress.com/2011/03/5-02-13-history-of-health-reform.pdf", :source=>"Kaiser Family Foundation", :access=>""})
-  %article.history
-    %h2 History 3
-    %p.p-slide
-      Despite its shortcomings, our healthcare system also has strengths. Medical research, education, and technology flourish in the U.S. However, even these traditional strengths are facing challenges.
-    .previous-successes
-      .row
-        .col-sm-4
-          %h3 Research
-          %p.centeredImage
-            = image_tag "features/us-healthcare/research_icon-03.png", width: "50%", class: "centeredImage"
-          %p
-            49% of public research funding throughout the world comes from the U.S., amounting to $50.5B annually.
-          %p
-            However, our nation's spending on medical research has been increasing by less than the inflation rate since 2012. Not only is funding decreasing, but funding as a percentage of gross domestic product (GDP) is also decreasing.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Restore the U.S. Lead in Biomedical Research", :href=>"http://jama.jamanetwork.com/article.aspx?articleid=2089336", :source=>"Dzau VJ, Fineberg HV", :access=>"JAMA. 2015;313(2):143-144. doi:10.1001/jama.2014.17660. Web"})
-        .col-sm-4
-          %h3 Education
-          %p.centeredImage
-            = image_tag "features/us-healthcare/education_icon-02.png", width: "50%", class: "centeredImage"
-          %p
-            According to U.S. News and World Reports, we have 8 of the top 10 medical schools in the world. 
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Best Global Universities for Clinical Medicine", :href=>"http://www.usnews.com/education/best-global-universities/clinical-medicine", :source=>"U.S. News", :access=>"U.S.News & World Report. Web"})
-            The U.S. is also home to 17 of the top 20 hospitals.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"World", :href=>"http://hospitals.webometrics.info/en/world", :source=>"Ranking Web of Hospitals", :access=>"Web"})
-          %p
-            However, we have fewer doctors per capita than most other industrialized nations.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Health Resources: Doctors", :href=>"https://data.oecd.org/healthres/doctors.html", :source=>"OECD Statistics", :access=>"Web"})
-        .col-sm-4
-          %h3 Technology
-          %p.centeredImage
-            = image_tag "features/us-healthcare/tech_icon-03.png", width: "50%", class: "centeredImage"
-          %p
-            We have more MRI, CT, and PET machines per capita than any other country.
-            = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"OECD Statistics", :href=>"http://stats.oecd.org/#", :source=>"OECD Statistics", :access=>"Web"})
-          %p
-            However, our country spends significantly more on clinical care per capita than any other industrialized country.
-    %p.p-slide
-      A decade ago, we funded 57% of biomedical research around the globe. In 2015, our share has dropped down to 44%. Even though we still spend more than twice as much as any other country on medical research, federal spending is being cut
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Bad Medicine", :href=>"http://www.economist.com/news/science-and-technology/21572735-cutting-american-health-research-will-harm-world-bad-medicine", :source=>"The Economist", :access=>"The Economist Newspaper, 2 Mar. 2013. Web"})
-      and support for biomedical research in the U.S. is decreasing. Simultaneously, global interest in biomedical research is increasing
-      = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"\"U.S. Funding of Health Research Stalls As Other Nations Rev Up.\"", :href => "http://www.npr.org/sections/health-shots/2015/01/13/376801357/u-s-funding-of-health-research-stalls-as-other-nations-rev-up", :source=>"Harris, Richard", :access=>"NPR, 13 Jan. 2015. Web"})
-      , decreasing the percentage of America’s share in global research.
-
   / end div id=story
   / TABS
   %article#diagnosis

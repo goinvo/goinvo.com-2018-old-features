@@ -26,7 +26,7 @@
     "aca": "Following the ACA’s insurance mandate, 13% of Americans still lack health insurance (down from 17% before the ACA).",
 		"impacts":["policymaker", "payer"],
     "citation_urls" : ["http://www.gallup.com/poll/180425/uninsured-rate-sinks.aspx"],
-    "references" : [45]
+    "references" : [44]
 	},
 	"everyone_covered":{
 		"title": "Everyone Gets Covered",
@@ -34,7 +34,7 @@
     "aca": "Following the ACA’s insurance mandate, 13% of Americans still lack health insurance (down from 17% before the ACA).",
 		"impacts":["patient"],
     "citation_urls" : ["http://www.gallup.com/poll/180425/uninsured-rate-sinks.aspx"],
-    "references" : [45]
+    "references" : [44]
 	},
 	"better_costs":{
 		"title": "Better Costs",
@@ -60,7 +60,7 @@
     "aca": "The Health Insurance Portability and Accountability Act of 1996 (HIPAA) ensured a person's legal right to their health information. While the ACA did nothing to facilitate a person's access to their information, HITECH gives people the right to request electronic access to their health information.",
 		"impacts":["provider"],
     "citation_urls" : ["http://www.bmj.com/content/350/bmj.g7785", "http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [46, 47]
+    "references" : [45, 46]
 	},
 	"health_data_standard":{
 		"title": "Create Health Data Standard",
@@ -74,7 +74,7 @@
     "aca": "Under the ACA, Medicare will begin testing new models of patient care, including the use of home-based primary care teams. Additionally, the ACA allocates grant money for training community health workers.",
 		"impacts": ["provider", "payer"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"primary_care_workers":{
 		"title": "Train More Primary Care Workers",
@@ -82,7 +82,7 @@
     "aca": "The ACA attempts to incentivize more people to work in primary care through a variety of student loans and loan repayment initiatives.",
 		"impacts": ["provider", "policymaker"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"take_charge_of_health":{
 		"title": "Patients Take Charge of Their Own Health",
@@ -90,7 +90,7 @@
     "aca": "The Health Insurance Portability and Accountability Act of 1996 (HIPAA) ensured a person's legal right to their health information. While the ACA did nothing to facilitate a person's access to their information, HITECH gives people the right to request electronic access to their health information.",
 		"impacts": ["patient"],
     "citation_urls" : ["http://www.bmj.com/content/350/bmj.g7785"],
-    "references" : [46]
+    "references" : [45]
 	},
 	"health_conscious_people":{
 		"title": "More Health Conscious People",
@@ -104,7 +104,7 @@
     "aca": "Under the ACA, Medicare will begin testing new models of patient care, including the use of home-based primary care teams.",
 		"impacts": ["patient"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"more_time":{
 		"title":"Caregivers Spend More Time with Patients",
@@ -130,7 +130,7 @@
     "aca": "The exchanges created by the ACA enable some degree of shopping. However, price and quality information for individual procedures is not widely accessible.",
 		"impacts": ["patient"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"fewer_tests":{
 		"title": "Fewer Unnecessary Tests",
@@ -162,7 +162,7 @@
     "aca": "The ACA encourages the development of new patient care models through financial incentives. For example, Accountable Care Organizations (ACOs) that take responsibility for the cost and quality of caring for patients can receive a share of the savings they achieve for Medicare.",
 		"impacts": ["provider", "payer"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"destigmatize_death":{
 		"title": "Destigmatize Death",
@@ -170,7 +170,7 @@
     "aca": "No parts of the ACA directly deal with end-of-life care. Originally, a portion of the act was supposed to enable physicians to be reimbursed for having advanced care planning discussions with their patients. However, this portion was removed from the bill before it was passed because it was publicized as something that would result in a 'death panel.'",
 		"impacts": ["provider","patient","payer","policymaker"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"doctor_training":{
 		"title": "Improve Doctor Training",
@@ -178,7 +178,7 @@
     "aca": "Although it provides support for workforce training programs, the ACA does not significantly revamp medical education.",
 		"impacts": ["provider","policymaker"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"value_quality_life":{
 		"title":"People Value Quality of Life",
@@ -198,7 +198,7 @@
     "aca": "The ACA does not directly address patient-communication. However, it does include support for enhanced cultural competency, prevention/public health, and individuals with disabilities training.",
 		"impacts":["provider"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"fewer_visits":{
 		"title":"Fewer Hospital Visits",
@@ -212,7 +212,7 @@
     "aca": "The exchanges created by the ACA enable some degree of shopping. However, price and quality information for individual procedures is not widely accessible.",
 		"impacts":["policymaker","payer"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"incentivize_outcomes":{
 		"title": "Incentivize Outcomes",
@@ -220,7 +220,7 @@
     "aca": "The ACA explores new payment models to incentivize outcomes and reduce costs. These include approaches like shared savings (for ACOs) and bundled payments.",
 		"impacts":["policymaker", "payer"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf"],
-    "references" : [47]
+    "references" : [46]
 	},
 	"reform_malpractice":{
 		"title":"Reform Malpractice Laws",
@@ -228,7 +228,7 @@
     "aca": "The ACA does not address malpractice reform. Most reforms will have to take place at the state level, but the ACA did nothing to incentivize such reforms.",
 		"impacts": ["policymaker"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf", "http://www.nejm.org/doi/full/10.1056/NEJM199107253250405", "http://content.healthaffairs.org/content/29/9/1569.full"],
-    "references" : [47, 48, 49]
+    "references" : [46, 47, 48]
 	},
 	"fees_for_outcomes":{
 		"title":"Fees for Outcomes Instead of Fees for Services",
@@ -242,6 +242,6 @@
     "aca": "The ACA does not address malpractice reform. Most reforms will have to take place at the state level, but the ACA did nothing to incentivize such reforms.",
 		"impacts":["provider"],
     "citation_urls" : ["http://www.dpc.senate.gov/healthreformbill/healthbill04.pdf", "http://www.nejm.org/doi/full/10.1056/NEJM199107253250405", "http://content.healthaffairs.org/content/29/9/1569.full"],
-    "references" : [47, 48, 49]
+    "references" : [46, 47, 48]
 	}
 }
