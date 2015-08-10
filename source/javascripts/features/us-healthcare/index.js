@@ -6,6 +6,14 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: wanted.offset().top - 100
     }, 750);
+  });
+    
+  $('.up_link li').on('click', function() {
+    var data = $(this).find('a').data('link');
+    var wanted = $(data);
+    $('html, body').animate({
+        scrollTop: wanted.offset().top - 100
+    }, 750);
     
   });
   
