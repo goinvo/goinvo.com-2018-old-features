@@ -36,8 +36,9 @@ $( document ).ready(function() {
       .tickFormat(function (d) {
           return yScale.tickFormat(4,d3.format("s"))(d)
       })
-      .tickSize(-w);
-
+      .tickSize(-w)
+  .tickValues([1,10,100,1000,10000,100000,1000000,10000000,100000000,1000000000]);
+  
   var tooltip = d3.select('#waste-chart')            // NEW 
     .append('div')
     .attr('class', 'tooltip');
@@ -229,6 +230,7 @@ $( document ).ready(function() {
           .attr("height", function(d) {
               return h - yScale(d.Waste);
           });
+      
       wasteSVG.select(".yaxis")
           .transition().duration(350)
           .delay(50)

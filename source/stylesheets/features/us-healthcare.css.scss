@@ -703,7 +703,7 @@ sup {
 
 .toggle-btn-grp.cssonly {
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 //.toggle-btn-grp.cssonly div {
@@ -742,6 +742,17 @@ sup {
 //  background-color: lighten($light-grey,6%);
   z-index: 1000;
   transform: scale(1.1);
+}
+
+.note1 {
+  padding-bottom: 0px;
+  margin-bottom: 0px !important;
+}
+
+
+.note2 {
+  font-size: 15px;
+  margin-bottom: 0px !important;
 }
 
 
@@ -1279,6 +1290,7 @@ sup {
 			width: 20%;
 			img {
 				border-radius: 8px;
+        width: 100%;
 			}
 		}
 		.info {
