@@ -2,13 +2,13 @@
 	{
 		"positive":{
 			"heading":"Buy Health Insurance",
-			"description":"The cheapest plan on the Massachusetts healthcare exchange is the <span class=\"slide\" data-index=\"2\"> bronze plan</span>, which costs $180 per month. It covers doctor visits, home visits, ambulatory care, hospitalization, vision exams, and hearing exams.",
+			"description":"The cheapest plan on the Massachusetts healthcare exchange is the <span class=\"slide\" data-index=\"2\"> bronze plan</span>, which costs $180 per month ($2,160 per year). It covers doctor visits, home visits, ambulatory care, hospitalization, vision exams, and hearing exams.",
 			"outcome":"Good choice! David can get preventative care for free. He also can afford to keep seeing his primary care physician. Equally important, in case anything unexpected happens David can get affordable access to the care he needs.",
 			"alternative":"But what if he had opted to pay the tax instead?"
 		},
 		"negative":{
 			"heading":"Pay Tax, No Coverage",
-			"description":"David is healthy, so why buy insurance? The penalty for not buying insurance is the greater of $325 ($27 per month) or 2% of income.",
+			"description":"David is healthy, so why buy insurance? The penalty for not buying insurance is either 2% of yearly income or $325, whichever is greater. This is much less expensive than the $2,160 per year bronze plan.",
 			"outcome":"At the time, David thought opting out would save him money. Initially, it did because the penalty tax is less than the least expensive insurance plan. But even healthy people can become sick.",
 			"alternative":"Here's what happens next."
 		}
