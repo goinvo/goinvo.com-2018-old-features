@@ -72,7 +72,7 @@ $(document).ready(function(){
                 var circle = $(this);
               
                 d3.select(this)
-                  .attr("fill", "rgb(142, 175, 208)")
+                  .attr("fill", "rgb(133, 137, 186)")
                   .style("r", function(d){ return rScale(d.price_pneumonia)+2})
 
                 tooltip.style("left", function(d,i) {

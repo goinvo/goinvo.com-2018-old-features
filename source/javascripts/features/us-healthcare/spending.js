@@ -12,7 +12,7 @@ $(document).ready(function(){
     var whRatio = 5/9.6;
     var h = window.innerHeight * .6;
 
-    var margin = {top: 10, right: 20, bottom: 30, left: 60},
+    var margin = {top: 10, right: 20, bottom: 50, left: 60},
         width = w - margin.left - margin.right,
         height = h - margin.top - margin.bottom;
 
@@ -60,7 +60,7 @@ $(document).ready(function(){
     var svgWrapper = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var xAxisG, yAxisG, yAxisText, country, countries, path;
+    var xAxisG, yAxisG, xAxisText, yAxisText, country, countries, path;
     
     d3.csv("/features/us-healthcare/data/data_capita.csv", function(error, data) {
       if (error) throw error;
@@ -107,13 +107,22 @@ $(document).ready(function(){
       yAxisG.call(yAxis);
         
       yAxisText = yAxisG.append("text");
+      xAxisText = yAxisG.append("text");
         
       yAxisText.attr("transform", "rotate(-90)")
           .attr("y", "-50")
           .attr("x", -height/2)
           .attr("dy", ".71em")
           .style("text-anchor", "middle")
-          .text("Dollars per Capita");
+          .text("Dollars per Capita");       
+      
+      xAxisText
+          .attr("x", width/2)
+          .attr("y", h -15)
+          .attr("dx", ".71em")
+          .attr("dy", "-.71em")
+          .style("text-anchor", "middle")
+          .text("Year");
 
       country = svgWrapper.selectAll(".country")
           .data(countries)
@@ -152,7 +161,7 @@ $(document).ready(function(){
       .on("mouseover", function(d) {
         var me = d3.select(this);
         me.attr("r", 10)
-          .style("fill", "rgb(142, 175, 208)");
+          .style("fill", "rgb(133, 137, 186)");
         
         d3.selectAll(".linepoint")
           .style("opacity", 0)
@@ -238,6 +247,7 @@ $(document).ready(function(){
     
     xAxisG.attr("transform", "translate(0," + height + ")");
     yAxisText.attr("x", -height/2);
+    xAxisText.attr("x", width/2);
     country.selectAll('.line').attr("d", function(d) { return line(d.values); })
     point.selectAll('circle').attr("cx", function(d) { return x(d.date)})
       .attr("cy", function(d) { return y(d.capita)})
