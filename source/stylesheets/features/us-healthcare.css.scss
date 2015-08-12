@@ -4,6 +4,7 @@
 
 $light-black: #222;
 $light-grey:#dedede;
+$medium-grey: #bebebe;
 $dark-grey:#9a9a9a;
 $black : #000;
 $light-blue:rgb(177, 205, 234); 
@@ -364,7 +365,8 @@ p.tab_p {
 
 #triple-graph .tab-link:hover {
 //  background-color: lighten($light-grey,6%);
-  transform: (scale(1.1));
+  //transform: (scale(1.1));
+  background-color: $medium-grey !important;
 }
 
 .tab-content{
@@ -699,7 +701,7 @@ sup {
 
 .toggle-rect {
   @media only screen and (min-width: 769px){
-    padding: 10px;
+    padding: 5px;
   }
 }
 
@@ -743,7 +745,8 @@ sup {
 .toggle-btn:hover {
 //  background-color: lighten($light-grey,6%);
   z-index: 1000;
-  transform: scale(1.1);
+  //transform: scale(1.1);
+  background-color: $medium-grey !important;
 }
 
 .note1 {
@@ -1147,10 +1150,11 @@ sup {
     
     &:hover{
 //      background-color: lighten($light-grey,5%);
-      transform: scale(1.07);
+      //transform: scale(1.07);
+      background-color: $medium-grey !important;
     }
     &[data-selected="yes"]{
-      background-color:$dark-grey;
+      background-color: $dark-grey;
     }
     &[data-selected="no"]{
       background-color: #ffffff;
@@ -1158,7 +1162,7 @@ sup {
     
     h3{
       height:2em;
-      vertical-align:middle;
+      vertical-align: middle;
       font-size: 1em;
       text-transform: uppercase;
     }
@@ -1179,21 +1183,29 @@ sup {
 }
 
 .next{
-  display:none;
   font-size: 1em;
-  padding: 5px 20px 50px;
+  padding: 0 20px 3em;
+  margin-bottom: 0;
 }
-.outcome{
-  display:none;
-  font-size: 1em;
-  padding: 5px 20px;
-  &[data-outcome="positive"]{
-    background-color:#fff;
+.outcome-container {
+  display: none;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  transition: background-color 150ms ease-in-out;
+  
+  &.done-transitioning[data-outcome="positive"]{
+    background-color: rgba(76, 214, 51, 0.09)
   }
-  &[data-outcome="negative"]{
-    background-color:#fff;
+  &.done-transitioning[data-outcome="negative"]{
+    background-color: rgba(255, 0, 0, 0.05);
+  }
+  .outcome{
+    font-size: 1em;
+    padding: 5px 20px;
+    padding-top: 1rem;
   }
 }
+
 
 
 

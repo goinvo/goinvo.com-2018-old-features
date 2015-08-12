@@ -7,11 +7,13 @@
     .decision{:data =>{:index=> index, :outcome=>"negative"}}
       %h3=decision.negative.heading.html_safe
       %p.description=decision.negative.description.html_safe
-  %p.outcome{:data =>{:index=> index, :outcome=>"positive"}}
-    =decision.positive.outcome.html_safe
-  %p.next{:data =>{:index=> index, :outcome=>"positive"}}
-    =decision.positive.alternative.html_safe
-  %p.outcome{:data =>{:index=> index, :outcome=>"negative"}}
-    =decision.negative.outcome.html_safe
-  %p.next{:data =>{:index=> index, :outcome=>"negative"}}
-    =decision.negative.alternative.html_safe
+  .outcome-container{:data =>{:index=> index, :outcome=>"positive"}}
+    %p.outcome
+      =decision.positive.outcome.html_safe
+    %p.next
+      =decision.positive.alternative.html_safe
+  .outcome-container{:data =>{:index=> index, :outcome=>"negative"}}
+    %p.outcome
+      =decision.negative.outcome.html_safe
+    %p.next
+      =decision.negative.alternative.html_safe

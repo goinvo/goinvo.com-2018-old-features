@@ -39,8 +39,10 @@ $(document).ready(function(){
     $(this).attr('data-selected','yes');
     var outcome = $(this).attr('data-outcome');
     var otherOutcome = outcome==='positive'? 'negative' : 'positive';
-    $('[data-outcome="'+otherOutcome+'"][data-index="'+index+'"]:not(.decision)').hide();
-    $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').slideDown();
+    $('[data-outcome="'+otherOutcome+'"][data-index="'+index+'"]:not(.decision)').toggleClass('done-transitioning', false).hide();
+    $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').slideDown(300, function() {
+      $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').toggleClass('done-transitioning', true);
+    });
   });
 
   $('.perspective').click(function(e){
