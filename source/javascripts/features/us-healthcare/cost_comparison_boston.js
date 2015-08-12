@@ -1,10 +1,14 @@
 $(document).ready(function(){
 
   d3.selection.prototype.trigger = function( event ) {
-     var e = document.createEvent('Event');
-     e.initEvent( event, true, true);
-     this.node().dispatchEvent( e );
-     return this;
+     try {
+       var e = document.createEvent('Event');
+       e.initEvent( event, true, true);
+       this.node().dispatchEvent( e );
+     } catch(e) {
+        console.log(e); 
+     }
+    return this;
   }
 
   var myWindow = d3.select(window);

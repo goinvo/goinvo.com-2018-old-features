@@ -24,7 +24,7 @@ $dark-purple: rgb(133, 137, 186);
 }
 
 svg {
-  circle:hover {
+  circle:hover, rect:hover, path:hover {
     cursor: pointer; 
   }
 }
@@ -493,22 +493,30 @@ div.tooltip {
   height: auto;
   padding: 7px;
   padding-bottom: 1.5em;
-  font: 12px sans-serif;
+  font: .8em 'Lato';
+  line-height: 1.5em;
   background: rgba(255, 255, 255, 0.75);
   border-style: solid;
   border-width: 1px;
-  border-color: $dark-grey;
+  border-color: rgba($dark-grey, .3);
   border-radius: 8px;
   pointer-events: none;
   z-index: 100;
   word-wrap: break-word;
-    @media only screen and (max-width: 768px){
-      min-width: 0px;
-      width: auto;
+  
+  strong {
+    font-family: 'Lato';  
+    font-size: 1.1em;
+  }
+  
+  @media only screen and (max-width: 768px){
+    min-width: 0px;
+    width: auto;
   }
   .tt-important {
+    font-family: 'Lato';
     margin-top: .6em;
-    font-size: 1.85em;
+    font-size: 1.65em;
     @media only screen and (max-width: 768px){
       margin-top: .3em;
       font-size: 1.4em;
