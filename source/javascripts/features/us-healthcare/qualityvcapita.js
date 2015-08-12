@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   var y = d3.scale.linear().range([0, height]);
   
-  var rScale = d3.scale.linear().range([5,20]);
+  var rScale = d3.scale.linear().range([3,20]);
 
   var svg = d3.select("#quality-vs-capita-chart").append("svg");
   
@@ -117,7 +117,8 @@ $(document).ready(function(){
         .on("mouseover", function(d){
           var circle = d3.select(this);
           var diameterOffset = 5+rScale(d.population) + margin.top + 5;
-          var newX = parseFloat(circle.attr('cx')) - 30;
+          var ttWidth = parseFloat(tooltip.style('width')) / 2;
+          var newX = parseFloat(circle.attr('cx')) - ttWidth + margin.left;
           var newY = parseFloat(circle.attr('cy'))  + diameterOffset;
           var ttHTML = "<strong>" + d.name + "</strong></b>" + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita<br>" + "<div class = 'tt-important'>" + (d.quality) + "<sup>th</sup>" + "</div>quality rank<br>" + "<div class = 'tt-important'>"  + d3.format(",")(d.population) + "</div>population";
                 
@@ -191,8 +192,8 @@ $(document).ready(function(){
     points.attr("r", 0);
   });
   $('.tab-link[data-tab="tab-3"]').click(function() {
-    d3.select('[id="United States"].dotQ').trigger('mouseover');
     initialTransition();
+    d3.select('[id="United States"].dotQ').trigger('mouseover');
     haveWeInitializedYet = true;
   });
   

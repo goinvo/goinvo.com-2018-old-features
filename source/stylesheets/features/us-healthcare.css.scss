@@ -23,6 +23,12 @@ $dark-purple: rgb(133, 137, 186);
   }
 }
 
+svg {
+  circle:hover {
+    cursor: pointer; 
+  }
+}
+
 #article-nav {
   position: fixed;
   left: 0;
