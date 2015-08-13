@@ -1357,3 +1357,138 @@ sup {
     }
 	}
 }
+
+// Timeline Styles 
+
+.timeline-wrapper {
+  padding: 30px 0 50px 0;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  
+  @media only screen and (max-width: 768px){
+    padding: 30px 0; 
+  }
+}
+
+#health-history {
+  font-family: 'Adobe Jenson Pro', serif;
+  width: 100%;
+  height: 350px;
+
+  
+  @media only screen and (max-width: 768px){
+    height: 600px;
+  }
+  
+  .vco-storyslider{
+    box-shadow: 0 -3px 6px rgba(0,0,0,0);
+  }
+  
+  h2.vco-headline, .vco-timeaxis-tick-text {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .vco-slidenav-next, .vco-slidenav-previous {
+    top: 50px !important; 
+    @media only screen and (max-width: 768px){
+      top: 200px !important; 
+    }
+  }
+  
+  .vco-slidenav-previous {
+    .vco-slidenav-icon {
+      position: relative;
+      width: 24px;
+      height: 32px;
+      &::before {
+        transition: all 250ms ease-in-out;
+        content: " " !important;
+        width: 100%;
+        height: 24px;
+        background: image-url('icons/previous.svg');
+        background-size: 90%;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: .3;
+      }
+    }
+  }
+    
+  .vco-slidenav-next {
+    .vco-slidenav-icon {
+      position: relative;
+      &::before {
+        transition: all 250ms ease-in-out;
+        content: " " !important;
+        width: 100%;
+        height: 24px;
+        background: image-url('icons/next.svg');
+        background-size: 90%;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: .3;
+      }
+    }
+  }
+  
+  .vco-slidenav-content-container {
+    * {
+      transition: all 250ms ease-in-out; 
+    }
+    .vco-slidenav-title, .vco-slidenav-description {
+      font-family: 'Lato', sans-serif;  
+      text-transform: uppercase;
+    }
+    
+    &:hover {
+      .vco-slidenav-icon {
+        &:before {
+          opacity: 1 !important; 
+        }
+      }
+    }
+  }
+  
+  .vco-slide {
+    .vco-slide-content {
+      padding-left: 0 !Important; 
+    }
+    .vco-text {
+      width: 840px;
+      max-width: 840px;
+      margin-left: calc((50vw - 420px));
+      padding: 0 5%;
+      
+      @media only screen and (max-width: 768px){
+        width: 85vw;
+        max-width: 85vw;
+        margin-left: calc((50vw - 42.5vw));
+      }      
+    }
+    
+    .vco-headline-date {
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+    }
+    .vco-headline {
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    .vco-text-content p {
+      font-size: 16px;
+      line-height: 24px;
+      color: black;
+    }
+    
+  }
+  
+}

@@ -6,7 +6,7 @@
   = javascript_include_tag "vendor/jquery-ui.js"
   = javascript_include_tag "vendor/bootstrap.min.js"
   = javascript_include_tag "vendor/d3.min.js"
-  = javascript_include_tag 'http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js'
+  = javascript_include_tag '//cdn.knightlab.com/libs/timeline3/latest/js/timeline.js'
 
   - # Custom Scripts
   = javascript_include_tag "features/us-healthcare/spending.js"
@@ -21,6 +21,7 @@
   = stylesheet_link_tag "vendor/jquery-ui.css"
   = stylesheet_link_tag "vendor/bootstrap.min.css"
   = stylesheet_link_tag "features/us-healthcare.css"
+  = stylesheet_link_tag "//cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"
 - footnotes = []
 - footnote_link = "features/us-healthcare/footnote_link"
 
@@ -239,7 +240,8 @@
     %h2 History
     %p.p-slide
       In the past century, there have been numerous attempts to reform the U.S. healthcare system. To understand why the reforms were proposed, it is important to examine how healthcare evolved in the U.S..
-  #health-history
+  .timeline-wrapper
+    #health-history
   %article
     %p.p-slide
       This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system came to be what it is today.

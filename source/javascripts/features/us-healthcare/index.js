@@ -3,14 +3,18 @@ $(document).ready(function(){
   // ***
   // * Timeline Code
   // ***
-  createStoryJS({
-      type:       'timeline',
-      width:      '100%',
-      height:     '600',
-      source:     'https://docs.google.com/spreadsheet/ccc?key=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk',
-      embed_id:   'health-history',
-      hash_bookmark:      true
-  });
+  var wW = $(window).width();
+  var height = '350px';
+  if(wW <= 768) {
+    height = '600px'; 
+  }
+  var additionalOptions = {
+    width: '100%',
+    height: 'height'
+  };
+
+  timeline = new VCO.Timeline('health-history', 'https://docs.google.com/spreadsheet/ccc?key=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk', additionalOptions);
+  
   // *** End Timeline ***
 
   
