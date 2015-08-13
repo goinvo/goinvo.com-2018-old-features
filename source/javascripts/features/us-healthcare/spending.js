@@ -13,7 +13,7 @@ $(document).ready(function () {
   var h = window.innerHeight * .6;
 
   var margin = {
-      top: 10,
+      top: 25,
       right: 20,
       bottom: 50,
       left: 60
@@ -63,7 +63,8 @@ $(document).ready(function () {
     .style("left", width - (width / 2) + "px")
     .style("top", height - (height / 2) - 30 + "px");
 
-  var svg = d3.select("#spending-capita-chart").append("svg");
+  var svg = d3.select("#spending-capita-chart")
+    .append("svg");
 
   svg.attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -98,8 +99,6 @@ $(document).ready(function () {
       };
     });
 
-    //      x.domain(d3.extent(data, function(d) { 
-    //        return d.date; }));
     x.domain([d3.min(data, function (d) {
       return d.date;
     }), d3.max(data, function (d) {
@@ -143,7 +142,7 @@ $(document).ready(function () {
 
     xAxisText
       .attr("x", width / 2)
-      .attr("y", h - 15)
+      .attr("y", h - 20)
       .attr("dx", ".71em")
       .attr("dy", "-.71em")
       .style("text-anchor", "middle")
@@ -161,30 +160,29 @@ $(document).ready(function () {
       })
       .style("stroke", "#9a9a9a");
     
-    paths.on('mouseover', function(d) {
-      d3.selectAll(".linepoint")
-          .transition()
-          .duration(250)
-          .style("opacity", 0)
-          .filter(function (p) {
-            return p.name == d.name;
-          })
-          .style("opacity", 1);
-      
-      d3.selectAll(".line")
-          .transition()
-          .duration(250)
-          .style("opacity", 0.3)
-          .filter(function (p) {
-            return p.name == d.name;
-          })
-          .style("opacity", 1)
-          .style("stroke-width", 3);
-      
-      tooltip.transition()
+    paths.on('mouseover', commonHover)
+      .on('mouseout', function() {
+        tooltip.transition()
           .duration(500)
           .style("opacity", 0);
-    });
+      });
+    
+    var labels = country.append('text')
+      .classed('country-label', true)
+      .attr('text-anchor', 'end')
+      .attr('x', function(d) {
+        return w - margin.right - margin.left;
+      })
+      .attr('y', function(d) {
+        var val = d.values.filter(function(d,i) {
+            return d.capita !== null;
+        });
+        return y(val[val.length -1].capita) - 12;
+      })
+      .text(function(d) {
+        return d.name;
+      })
+      .style('opacity', 0);
 
 
     point = country.append("g")
@@ -196,9 +194,6 @@ $(document).ready(function () {
       })
       .enter()
       .append("circle")
-      .attr("id", function (d) {
-        return d.name + '-' + d.date
-      })
       .attr("cx", function (d) {
         return x(d.date)
       })
@@ -223,10 +218,13 @@ $(document).ready(function () {
         var newX = parseFloat(circle.attr('cx')) - ttWidth + margin.left;
         var newY = parseFloat(circle.attr('cy')) + diameterOffset;
         var ttHTML = "<strong>" + d.name + "</strong><br>" + formatDate(d.date) + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita";
-
-        if (newY > h / 2) { // If on the bottom half of the chart, make the tooltip go above point
+        
+        // If on the bottom half of the chart, make the tooltip go above point
+        if (newY > h / 2) { 
           newY = newY - (2 * diameterOffset) - ttHeight + 20;
         }
+      
+        // Are we too far to the right or the left? Fix it.
         if(newX + ttWidth*2 > w) {
           newX = newX - ttWidth; 
         } else if(newX - ttWidth < margin.left) {
@@ -237,25 +235,8 @@ $(document).ready(function () {
           .duration(250)
           .attr("r", 10)
           .style("fill", "rgb(133, 137, 186)");
-
-        d3.selectAll(".linepoint")
-          .transition()
-          .duration(250)
-          .style("opacity", 0)
-          .filter(function (p) {
-            return p.name == d.name;
-          })
-          .style("opacity", 1);
-
-        d3.selectAll(".line")
-          .transition()
-          .duration(250)
-          .style("opacity", 0.3)
-          .filter(function (p) {
-            return p.name == d.name;
-          })
-          .style("opacity", 1)
-          .style("stroke-width", 3);
+      
+        commonHover(d);
 
         tooltip.transition()
           .duration(200)
@@ -279,6 +260,39 @@ $(document).ready(function () {
 
   });
   
+  function commonHover(d) {
+    d3.selectAll('.country-label')
+      .transition()
+      .duration(250)
+      .style("opacity", 0)
+      .filter(function (p) {
+        return p.name == d.name;
+      })
+      .style("opacity", 1);
+
+    d3.selectAll(".linepoint")
+        .transition()
+        .duration(250)
+        .style("opacity", 0)
+        .filter(function (p) {
+          return p.name == d.name;
+        })
+        .style("opacity", 1);
+
+    d3.selectAll(".line")
+        .transition()
+        .duration(250)
+        .style("opacity", 0.3)
+        .filter(function (p) {
+          return p.name == d.name;
+        })
+        .style("opacity", 1)
+        .style("stroke-width", 3);
+
+//    tooltip.transition()
+//        .duration(500)
+//        .style("opacity", 0);
+  }
   
 
   var initializeSizes = function () {
