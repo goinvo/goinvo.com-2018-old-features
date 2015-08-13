@@ -210,7 +210,7 @@ $(document).ready(function () {
           .duration(250)
           .attr("r", 3)
           .style("fill", "#9a9a9a");
-
+      
         var circle = d3.select(this);
         var diameterOffset = 10 + margin.top + 5;
         var ttWidth = parseFloat(tooltip.style('width')) / 2;

@@ -23,6 +23,10 @@ $dark-purple: rgb(133, 137, 186);
   }
 }
 
+#cost-comparison-boston-container svg path:hover {
+  cursor: default; 
+}
+
 svg {
   circle:hover, rect:hover, path:hover {
     cursor: pointer; 
