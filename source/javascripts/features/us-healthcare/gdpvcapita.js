@@ -12,7 +12,7 @@ $(document).ready(function(){
   var whRatio = 5/9.6;
   var h = window.innerHeight * .6;
 
-  var margin = {top: 10, right: 10, bottom: 70, left: 70},
+  var margin = {top: 20, right: 10, bottom: 70, left: 70},
       width = w - margin.left - margin.right,
       height = h - margin.top - margin.bottom;
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   var y = d3.scale.linear().range([height, 0]);
   
-  var rScale = d3.scale.linear().range([3,15]);
+  var rScale = d3.scale.linear().range([3,20]);
 
   var svg = d3.select("#gdp-vs-capita-chart").append("svg");
   
@@ -114,30 +114,41 @@ $(document).ready(function(){
         .attr("cy", function(d){return y(d.capita)})
         .attr("fill", "#9a9a9a")  
         .on("mouseover", function(d){
-          var circle = $(this);
-          d3.select(this)
-              .style("r", (2+rScale(d.population)))
-              .style("fill", "rgb(133, 137, 186)");
-        
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", 1);
-        
+          var circle = d3.select(this);
+          var diameterOffset = 5+rScale(d.population) + margin.top + 5;
+          var ttWidth = parseFloat(tooltip.style('width')) / 2;
+          var newX = parseFloat(circle.attr('cx')) - ttWidth + margin.left;
+          var newY = parseFloat(circle.attr('cy'))  + diameterOffset;
+          var ttHTML = "<strong>" + d.name + "</strong></b>" + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita<br>" + "<div class = 'tt-important'>" + d3.format("%")(d.gdp / 100) + "</div>of GDP<br>" + "<div class = 'tt-important'>"  + d3.format(",")(d.population) + "</div>population";
 
-        
-            tooltip.html("<strong>" + d.name + "</strong></b>" + "<div class = 'tt-important'>" + d3.format("$,")(d.capita) + "</div>per capita<br>" + "<div class = 'tt-important'>" + d3.format("%")(d.gdp / 100) + "</div>of GDP<br>" + "<div class = 'tt-important'>"  + d3.format(",")(d.population) + "</div>population")
-                .style("left", parseFloat(circle.attr('cx')) -40 + "px")
-                .style("top", parseFloat(circle.attr('cy'))  + 30 + "px");
+          if(newY > h/2) { // If on the bottom half of the chart, make the tooltip go above point
+           newY = newY - (2*diameterOffset) - 150 - 10; 
+          }
+
+          circle.transition()
+           .duration(250)
+           .attr("r", (5+rScale(d.population)))
+           .style("fill", "rgb(133, 137, 186)");
+
+          tooltip.transition()
+             .duration(200)
+             .style("opacity", 1);
+
+          tooltip.html(ttHTML)
+             .style("left", newX + "px")
+             .style("top", newY + "px");
         })
       
         .on("mouseout", function(d) {
-            tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-             
-            points.style("r", null)
-                .style("fill", null)
-                .style("opacity", null);
+          tooltip.transition()
+              .duration(500)
+              .style("opacity", 0);
+
+          points.transition()
+            .duration(250)
+            .attr("r", function(d,i) { return rScale(d.population); })
+            .style("fill", null)
+            .style("opacity", null);
           })
   });
     
@@ -182,17 +193,6 @@ $(document).ready(function(){
   $('.tab-link[data-tab="tab-3"]').click(function() {
     points.attr("r", 0);
   });
-//  var haveWeInitializedYet = false;
-//  $(window).on('scroll', function(i) {
-//    if(!haveWeInitializedYet) {
-//      var currentScrollTop = $(this).scrollTop();
-//      var targetScrollTop = $('#gdp-vs-capita-chart').position().top;
-//      if(currentScrollTop > targetScrollTop - 200 && currentScrollTop < targetScrollTop + 200) {
-//        initialTransition();
-//        haveWeInitializedYet  = true;
-//      }
-//    }
-//  });
-//  
+
   
 });

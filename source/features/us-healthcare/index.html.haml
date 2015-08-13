@@ -6,6 +6,7 @@
   = javascript_include_tag "vendor/jquery-ui.js"
   = javascript_include_tag "vendor/bootstrap.min.js"
   = javascript_include_tag "vendor/d3.min.js"
+  = javascript_include_tag '//cdn.knightlab.com/libs/timeline3/latest/js/timeline.js'
 
   - # Custom Scripts
   = javascript_include_tag "features/us-healthcare/spending.js"
@@ -20,6 +21,7 @@
   = stylesheet_link_tag "vendor/jquery-ui.css"
   = stylesheet_link_tag "vendor/bootstrap.min.css"
   = stylesheet_link_tag "features/us-healthcare.css"
+  = stylesheet_link_tag "//cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"
 - footnotes = []
 - footnote_link = "features/us-healthcare/footnote_link"
 
@@ -134,7 +136,7 @@
     %p.p-slide
       The cough continues to worsen so David decides to go to a walk-in clinic. It’s hard to
       %span.slide#flip6{:data=>{:index => 6}} compare the quality and cost of care
-      at different places becuase the information is not always readily available.
+      at different places because the information is not always readily available.
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Hospital Billing Varies Wildly, Government Data Shows", :href=>"http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html?_r=0", :source=>"Meier, Barry, Jo Mcginty, and Julie Creswell", :access=>"The New York Times, 7 May 2013. Web"})
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Compare Hospitals Tool", :href=>"http://www.nerdwallet.com/health/hospitals/compare", :source=>"NerdWallet Health", :access=>"Web"})
       David simply picks the one closest to his home.
@@ -238,7 +240,8 @@
     %h2 History
     %p.p-slide
       In the past century, there have been numerous attempts to reform the U.S. healthcare system. To understand why the reforms were proposed, it is important to examine how healthcare evolved in the U.S..
-  %iframe{:src => "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk&font=Default&lang=en&height=600", :height => "600", :width => "100%", :id => "timeline"}
+  .timeline-wrapper
+    #health-history
   %article
     %p.p-slide
       This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system came to be what it is today.
@@ -300,44 +303,40 @@
       Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability require legislative action. Some changes will be cultural. For example, why do we spend so much money on end-of-life care that reduces quality of life? Likewise, medical culture needs to be more patient-centered, which involves giving people access to their own health data.
     %p.p-slide
       Ultimately, everyone has a role in healing the U.S. healthcare system. Below we explore the different actions that will lead to an improved system. Each is interconnected and influenced by patients, providers, policy makers, and payers. Discover the ways you can make a difference, and join the discussion by contributing your own ideas.
-  #sankeyGUI
-    %a{:name => "sankeyRef"}
-    #perspectives
-      %ul
-        - data.features.ushealthcare.perspectives.each do |perspective|
-          %li{:data => {:li_key => perspective['key']}}
-            .perspective{:data => {:key => perspective['key']}}
-              = image_tag perspective.image
-              %h5= perspective.title
-    #next
-      - data.features.ushealthcare.perspectives.each do |perspective|
-        #actions
-          %ul
-            .action-container{:data => {:perspective => "#{perspective['key']}"}}
+  
+  .sankey-wrapper
+    #sankeyGUI
+      %a#sankey-link{:name => "sankeyRef"}
+      .sankey-menu
+        .sankey-menu-wrapper
+          I am a
+          %ul.perspectives
+            - data.features.ushealthcare.perspectives.each do |perspective|
+              %li{:data => {:li_key => perspective['key']}}
+                .perspective{:data => {:key => perspective['key']}} 
+                  %span= perspective.title
+        .sankey-menu-wrapper
+          I want to change
+          - data.features.ushealthcare.perspectives.each do |perspective|
+            %ul.action-container{:data => {:perspective => "#{perspective['key']}"}}
               - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
-              -  these_nodes.each do |key, node|
+              - these_nodes.each do |key, node|
                 %li{:data => {:persp => node.impacts[0]}}
                   .individual-action{ :data => {:key => key}}
-                    -#{style: "width:#{100/these_nodes.length}%"}
-                    %p= node.title
-
-      #results
-        %ul
-          - data.features.ushealthcare.nodes.each do |key, value|
-            %li
-              .individual-result{ :data => {:key => key}}
-                -#{style: "width:#{100/these_nodes.length}%"}
-                %p.cancel-button
-                  ="&#10005"
-                %h3= value.title
-                %p= value.description
-                %h3= "What does the ACA do?"
-                %p= value.aca
-                - if value.references
-                  - value.references.each do |ref|
-                    %a{:href => "/features/us-healthcare##{ref}"}= [ref]
-  #sankey-container.chart-container     
-  #sankey-chart
+                    %span= node.title
+    #sankey-chart.chart-container  
+    %article#results
+      %ul
+        - data.features.ushealthcare.nodes.each do |key, value|
+          %li
+            .individual-result{ :data => {:key => key}}
+              %h3= value.title
+              %p= value.description
+              %h3= "What does the ACA do?"
+              %p= value.aca
+              - if value.references
+                - value.references.each do |ref|
+                  %a{:href => "/features/us-healthcare##{ref}"}= [ref]
 
   %article#participate
     %a{:name => "participate"}
