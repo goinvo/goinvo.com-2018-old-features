@@ -880,13 +880,15 @@ sup {
       text-align: right;
       font-size: 16px;
       margin-top: 1px;
+      margin-top: 1px;
       &:first-child {
         display: inline-block; 
+        margin-top: 0;
       }
       &:hover {
         color: $dark-grey;
         .perspective, .individual-action {
-          background-color: lighten(black, 90%);
+          background-color: rgba(#8589ba, .15);
           color: lighten(black, 25%);
         }
       } 
@@ -897,9 +899,18 @@ sup {
         display: inline-block;
         color: lighten(black, 45%);
         &.selected {
-          background-color: lighten(black, 95%);
+          background-color: rgba(#8589ba, .35);
           color: black;
         }
+      }
+    }
+  }
+  
+  .action-container {
+    li {
+      &:first-child {
+        display: block; 
+        margin-top: 1px;
       }
     }
   }

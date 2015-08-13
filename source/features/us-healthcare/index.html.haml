@@ -315,16 +315,12 @@
               %li{:data => {:li_key => perspective['key']}}
                 .perspective{:data => {:key => perspective['key']}} 
                   %span= perspective.title
-                  - if data.features.ushealthcare.perspectives[data.features.ushealthcare.perspectives.length() -1] === perspective
-                    %span .
-                  - else
-                    %span ,
         .sankey-menu-wrapper
           I want to change
           - data.features.ushealthcare.perspectives.each do |perspective|
             %ul.action-container{:data => {:perspective => "#{perspective['key']}"}}
               - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
-              -  these_nodes.each do |key, node|
+              - these_nodes.each do |key, node|
                 %li{:data => {:persp => node.impacts[0]}}
                   .individual-action{ :data => {:key => key}}
                     %span= node.title

@@ -70,6 +70,11 @@ $(document).ready(function(){
     $('.action-container[data-perspective="'+this_key+'"]').show()
     $(this).addClass('selected');
     $('.individual-result').hide();
+    window.setTimeout(function() {
+      var actionContainer =  $('.action-container[data-perspective="' + this_key + '"]');
+      actionContainer.find('li:first-of-type .individual-action').trigger('click');
+    }, 200);
+    
   });
 
   $('.up_link').click(function(e){
