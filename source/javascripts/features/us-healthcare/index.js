@@ -1,5 +1,23 @@
 $(document).ready(function(){
+  
+  // ***
+  // * Timeline Code
+  // ***
+  var wW = $(window).width();
+  var height = '350px';
+  if(wW <= 768) {
+    height = '600px'; 
+  }
+  var additionalOptions = {
+    width: '100%',
+    height: 'height'
+  };
 
+  timeline = new VCO.Timeline('health-history', 'https://docs.google.com/spreadsheet/ccc?key=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk', additionalOptions);
+  
+  // *** End Timeline ***
+
+  
   $('#article-nav li').on('click', function() {
     var data = $(this).find('a').data('link');
     var wanted = $(data);
@@ -39,8 +57,10 @@ $(document).ready(function(){
     $(this).attr('data-selected','yes');
     var outcome = $(this).attr('data-outcome');
     var otherOutcome = outcome==='positive'? 'negative' : 'positive';
-    $('[data-outcome="'+otherOutcome+'"][data-index="'+index+'"]:not(.decision)').hide();
-    $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').slideDown();
+    $('[data-outcome="'+otherOutcome+'"][data-index="'+index+'"]:not(.decision)').toggleClass('done-transitioning', false).hide();
+    $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').slideDown(300, function() {
+      $('[data-outcome="'+outcome+'"][data-index="'+index+'"]:not(.decision)').toggleClass('done-transitioning', true);
+    });
   });
 
   $('.perspective').click(function(e){
@@ -50,6 +70,11 @@ $(document).ready(function(){
     $('.action-container[data-perspective="'+this_key+'"]').show()
     $(this).addClass('selected');
     $('.individual-result').hide();
+    window.setTimeout(function() {
+      var actionContainer =  $('.action-container[data-perspective="' + this_key + '"]');
+      actionContainer.find('li:first-of-type .individual-action').trigger('click');
+    }, 200);
+    
   });
 
   $('.up_link').click(function(e){

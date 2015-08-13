@@ -308,9 +308,9 @@ function initializeVariables() {
   myWindow = d3.select(window);
 
   // set canvas size
-  elementW = $('#sankey-container').width();
-  elementH = $('#sankey-container').height();   
-  margin = {top: 10, right: 0, bottom: 30, left: 0},
+  elementW = $('#sankey-chart').width();
+  elementH = $('#sankey-chart').height();   
+  margin = {top: 0, right: 0, bottom: 30, left: 0},
     width = elementW - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
