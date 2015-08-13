@@ -818,332 +818,110 @@ sup {
   stroke: $dark-purple;
 } 
 
+.sankey-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+#sankey-chart {
+  width: calc(100vw - 254px);
+  display: inline-block;
+  vertical-align: top;
+  
+  @media only screen and (max-width: 768px){
+    display: none;
+  }
+}
 
 /* FINAL VIZ GUI */
 
 #sankeyGUI {
+  position: relative;
   margin: auto;
-  width: 100%;
-  @media only screen and (min-width: 769px){  
-    padding: 10px;
-  }
-}
-
-#perspectives {
-  width: calc(30% - 4px);
-  float: left;
-  @media only screen and (max-width: 768px){
-    width: 100%;
-    height: 120px;
-    border-bottom-width: 0px;
-    }
-  border-style: solid;
-  border-width: 6px;
-  border-color: $light-purple;
-  background-color: $light-purple;
-  @media only screen and (min-width: 769px){  
-    border-radius: 8px;
-    background-color: white;
-    border-color: $light-purple;
-  }
-}
-
-#perspectives li {
-  float: left;
-  width: 50%;
-  height: 100px;
-  text-align: center;
-  display: inline;
-  color: #000;
-  background-color: $light-purple;
-  @media only screen and (max-width: 768px){
-    width: 25%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-style: solid;
-    border-color: $dark-purple;
-//    border-bottom-width: 2px;
-    }
-  @media only screen and (min-width: 769px){  
-    width: calc(50% - 1px);
-    background-color: $light-purple;
-  }
-}
-
-[data-li-key="patient"] {
-  @media only screen and (min-width: 769px){
-    margin-right: 1px;
-    margin-bottom: 1px;
-    border-top-left-radius: 1px;
-  }
-}
-[data-li-key="provider"] {
-  @media only screen and (min-width: 769px){
-    margin-left: 1px;
-    margin-bottom: 1px;
-    border-top-right-radius: 1px;
-  }
-}
-[data-li-key="policymaker"] {
-  @media only screen and (min-width: 769px){
-    margin-right: 1px;
-    margin-top: 1px;
-    border-bottom-left-radius: 1px;
-  }
-}
-[data-li-key="payer"] {
-  @media only screen and (min-width: 769px){
-    margin-left: 1px;
-    margin-top: 1px;
-    border-bottom-right-radius: 1px;
-  }
-}
-
-.perspective h5 {
-  color: black;
-}
-
-.perspective {
-  height: 100px;
-  padding-top: .5em;
-  transistion: 2s;
-  img {
-    height: 60%;
-    margin: auto;
-   }
-  @media only screen and (max-width: 768px){
-    height: 120px;
-    padding-bottom: 20px;
-  }
-}
-
-#perspectives li:hover {
-  @media only screen and (min-width: 769px){
-    h5 {
-      font-size: 1.4em;
-    }
-  }
-  background-color: $light-purple;
-  cursor:pointer;
-}
-
-[data-key="patient"].selected {
-  background-color: white;
-  @media only screen and (min-width: 769px){
-    border-top-left-radius:8px;
-  }
-
-  @media only screen and (max-width: 768px){
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-style: solid;
-    border-color: $light-purple;
-    border-width: 2px;
-    border-bottom-width: 0px;
-  }
-}
-
-[data-key="provider"].selected {
-  background-color: white;
-  @media only screen and (min-width: 769px){
-    border-top-right-radius: 8px;
-  }
-  @media only screen and (max-width: 768px){
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-style: solid;
-    border-color: $light-purple;
-    border-width: 2px;
-    border-bottom-width: 0px;
-  }
-}
-
-[data-key="policymaker"].selected {
-  background-color: white;
-  @media only screen and (min-width: 769px){
-    border-bottom-left-radius: 8px;
-  }
-  @media only screen and (max-width: 768px){
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-style: solid;
-    border-color: $light-purple;
-    border-width: 2px;
-    border-bottom-width: 0px;
-  }
-}
-
-[data-key="payer"].selected {
-  background-color: white;
-  @media only screen and (min-width: 769px){
-    border-bottom-right-radius: 8px;
-  }
-  @media only screen and (max-width: 768px){
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-style: solid;
-    border-color: $light-purple;
-    border-width: 2px;
-    border-bottom-width: 0px;
-  }
-}
-
-.perspective h5 {
-  text-align: center
-}
-
-#next {
-  width: 70%;
-  height: 214px;
-  background-color: white;
-  float: left;
-  @media only screen and (min-width: 769px){
-    padding-left: 10px;
-  }
-//  background-color: $light-blue-selected;
-  @media only screen and (max-width: 768px){
-    width: 100%;
-    height: 650px;
-    padding: 10px;
-  }
-}
-
-#actions li {
-  list-style-type: none;
-  @media only screen and (min-width: 769px){
-//    margin-top: 8px;
-  }
-}
-
-.individual-action {
-  float: left;
-  width: calc(20% - 4px);
-  height: 105px;
-  overflow: hidden;
-  text-align: center;
+  width: 250px;
   display: inline-block;
-  padding: 0 10px;
-  padding-top: .5em;
-  font-weight: 200;
-  margin: 2px;
-  border-radius: 8px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: $dark-purple;
-  cursor:pointer;
-  background-color: white;
-  vertical-align: middle;
-  p {
-    margin: auto;
-    font-size: 0.8em;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 15px;
-    color: black;
+  vertical-align: top;
+  padding: 10px;
+  padding-top: 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 26px;
+  height: 100%;
+  overflow: visible;
+  
+  #sankey-link {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
   }
-  @media only screen and (max-width: 768px){
-    width: calc(33% - 3px);
-    height: 120px;
+  
+  .sankey-menu {
+    text-align: right; 
+    vertical-align: top;
+    
+    .sankey-menu-wrapper {
+      &:not(:first-child) {
+        margin-top: 1em; 
+      }
+    }
   }
-  @media only screen and (min-width: 769px){
-    margin-top: 0px;
-    margin-bottom: 4px;
+  
+  .perspectives, .action-container {
+    display: inline; 
+    width: auto;
+    li {
+      cursor: pointer;
+      width: auto;
+      display: block;
+      color: #000;
+      text-align: right;
+      font-size: 16px;
+      margin-top: 1px;
+      &:first-child {
+        display: inline-block; 
+      }
+      &:hover {
+        color: $dark-grey;
+        .perspective, .individual-action {
+          background-color: lighten(black, 90%);
+          color: lighten(black, 25%);
+        }
+      } 
+      
+      .perspective, .individual-action {
+        transition: all 250ms ease-in-out;
+        padding: 1px 3px 2px 5px;
+        display: inline-block;
+        color: lighten(black, 45%);
+        &.selected {
+          background-color: lighten(black, 95%);
+          color: black;
+        }
+      }
+    }
   }
-
-
 }
 
 
-.individual-action:hover {
-  background-color: $dark-purple;
-  cursor:pointer;
-}
+
   
 
 .individual-result {
-  position: absolute;
-  width: 70%;
-  max-height: 200px;
-  overflow: hidden;
   text-align: center;
-  display: inline-block;
+  display: block;
   padding: 40px;
   font-weight: 200;
-  background-color: $light-purple;
-  overflow: auto;
-  @media only screen and (max-width: 768px){
-    width: calc(100% - 20px);
-    max-height: 900px;
-    border-radius: 8px;
-    padding: 10px;
-//      border-style: solid;
-//      border-width: 1px;
-//      border-color: $light-blue-selected;
-    background-color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $light-purple;
-    h3 {
-      padding-right: 30px;
-      padding-top: 6px;
-    }
-  }
-  @media only screen and (min-width: 769px){
-    width: calc(70% - 25px);
-    border-radius: 8px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    max-height: 214px;
-    overflow: hidden;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $dark-purple;
-    background-color: white;
-  }
-  transition: max-height .8s;
 }
 
-.individual-result:hover {
-  @media only screen and (min-width: 769px){
-    border-radius: 8px;
-    max-height: 900px;
-    cursor: pointer;
+#results {
+  padding-top: 0;
+  li {
+    list-style-type: none;
   }
 }
-
-#results li {
-  list-style-type: none;
-}
-
-.cancel-button {
-  color: $dark-grey;
-  font-family: sans-serif;
-  font-size: 30px;
-  transition: 1s;
-  position: absolute;
-  top: 8px;
-  right: 17px;
-  margin: 0 auto;
-  vertical-align: middle;
-  @media only screen and (max-width: 768px){
-    color: $dark-grey;
-    font-size: 23px;
-  }
-}
-
-.cancel-button:hover {
-  cursor: pointer;
-  transform: rotate(90deg);
-}
-
-
-/* Mobile Sankey Adaptation */
-#sankey-chart {
-    @media only screen and (max-width: 768px){
-        display: none;
-    }
-}
-
 
 
 

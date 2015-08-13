@@ -303,44 +303,44 @@
       Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability require legislative action. Some changes will be cultural. For example, why do we spend so much money on end-of-life care that reduces quality of life? Likewise, medical culture needs to be more patient-centered, which involves giving people access to their own health data.
     %p.p-slide
       Ultimately, everyone has a role in healing the U.S. healthcare system. Below we explore the different actions that will lead to an improved system. Each is interconnected and influenced by patients, providers, policy makers, and payers. Discover the ways you can make a difference, and join the discussion by contributing your own ideas.
-  #sankeyGUI
-    %a{:name => "sankeyRef"}
-    #perspectives
-      %ul
-        - data.features.ushealthcare.perspectives.each do |perspective|
-          %li{:data => {:li_key => perspective['key']}}
-            .perspective{:data => {:key => perspective['key']}}
-              = image_tag perspective.image
-              %h5= perspective.title
-    #next
-      - data.features.ushealthcare.perspectives.each do |perspective|
-        #actions
-          %ul
-            .action-container{:data => {:perspective => "#{perspective['key']}"}}
+  
+  .sankey-wrapper
+    #sankeyGUI
+      %a#sankey-link{:name => "sankeyRef"}
+      .sankey-menu
+        .sankey-menu-wrapper
+          I am a
+          %ul.perspectives
+            - data.features.ushealthcare.perspectives.each do |perspective|
+              %li{:data => {:li_key => perspective['key']}}
+                .perspective{:data => {:key => perspective['key']}} 
+                  %span= perspective.title
+                  - if data.features.ushealthcare.perspectives[data.features.ushealthcare.perspectives.length() -1] === perspective
+                    %span .
+                  - else
+                    %span ,
+        .sankey-menu-wrapper
+          I want to change
+          - data.features.ushealthcare.perspectives.each do |perspective|
+            %ul.action-container{:data => {:perspective => "#{perspective['key']}"}}
               - these_nodes = data.features.ushealthcare.nodes.select { | this_key, value | value['impacts'].include?(perspective['key']) }
               -  these_nodes.each do |key, node|
                 %li{:data => {:persp => node.impacts[0]}}
                   .individual-action{ :data => {:key => key}}
-                    -#{style: "width:#{100/these_nodes.length}%"}
-                    %p= node.title
-
-      #results
-        %ul
-          - data.features.ushealthcare.nodes.each do |key, value|
-            %li
-              .individual-result{ :data => {:key => key}}
-                -#{style: "width:#{100/these_nodes.length}%"}
-                %p.cancel-button
-                  ="&#10005"
-                %h3= value.title
-                %p= value.description
-                %h3= "What does the ACA do?"
-                %p= value.aca
-                - if value.references
-                  - value.references.each do |ref|
-                    %a{:href => "/features/us-healthcare##{ref}"}= [ref]
-  #sankey-container.chart-container     
-  #sankey-chart
+                    %span= node.title
+    #sankey-chart.chart-container  
+    %article#results
+      %ul
+        - data.features.ushealthcare.nodes.each do |key, value|
+          %li
+            .individual-result{ :data => {:key => key}}
+              %h3= value.title
+              %p= value.description
+              %h3= "What does the ACA do?"
+              %p= value.aca
+              - if value.references
+                - value.references.each do |ref|
+                  %a{:href => "/features/us-healthcare##{ref}"}= [ref]
 
   %article#participate
     %a{:name => "participate"}
