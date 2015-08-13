@@ -1,5 +1,19 @@
 $(document).ready(function(){
+  
+  // ***
+  // * Timeline Code
+  // ***
+  createStoryJS({
+      type:       'timeline',
+      width:      '100%',
+      height:     '600',
+      source:     'https://docs.google.com/spreadsheet/ccc?key=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk',
+      embed_id:   'health-history',
+      hash_bookmark:      true
+  });
+  // *** End Timeline ***
 
+  
   $('#article-nav li').on('click', function() {
     var data = $(this).find('a').data('link');
     var wanted = $(data);

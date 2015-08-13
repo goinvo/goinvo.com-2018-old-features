@@ -6,6 +6,7 @@
   = javascript_include_tag "vendor/jquery-ui.js"
   = javascript_include_tag "vendor/bootstrap.min.js"
   = javascript_include_tag "vendor/d3.min.js"
+  = javascript_include_tag 'http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js'
 
   - # Custom Scripts
   = javascript_include_tag "features/us-healthcare/spending.js"
@@ -238,7 +239,7 @@
     %h2 History
     %p.p-slide
       In the past century, there have been numerous attempts to reform the U.S. healthcare system. To understand why the reforms were proposed, it is important to examine how healthcare evolved in the U.S..
-  %iframe{:src => "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qWsuZ9ldjqB1pUambLW1EIbwhHziqCxUEqKixVD2uvk&font=Default&lang=en&height=600", :height => "600", :width => "100%", :id => "timeline"}
+  #health-history
   %article
     %p.p-slide
       This history of healthcare in the U.S. is by no means comprehensive, but it sheds light on how the healthcare system came to be what it is today.
