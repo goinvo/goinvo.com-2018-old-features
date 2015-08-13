@@ -228,8 +228,9 @@ $(document).ready(function () {
           newY = newY - (2 * diameterOffset) - ttHeight + 20;
         }
         if(newX + ttWidth*2 > w) {
-          console.log('**');
           newX = newX - ttWidth; 
+        } else if(newX - ttWidth < margin.left) {
+          newX = newX + ttWidth + 2;
         }
 
         circle.transition()
