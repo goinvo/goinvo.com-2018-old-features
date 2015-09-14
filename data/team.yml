@@ -46,18 +46,6 @@
   photo: jennifer_patel.jpg
 
 - first_name: Ben
-  last_name: Salinas
-  title: "Designer, Engineer"
-  bio: "Ben is a designer specializing in engineering and holistic design. He orchestrates exceptional outcomes in algorithm-driven software and specializes in transitioning beautiful designs from pixels to production code. Ben joined Invo in 2012 and is a graduate of the Olin College of Engineering. Ben also works to revolutionize the world of coffee brewing at his company, Luminaire Coffee."
-  mbti: ENTP
-  linkedin_url: "http://www.linkedin.com/profile/view?id=189869447"
-  twitter_username: "bensalinas"
-  github_username: "bsalinas"
-  fitbit_username: "25WCYP"
-  dropbox_username: "ben@goinvo.com"
-  photo: ben_salinas.jpg
-
-- first_name: Ben
   last_name: Listwon
   title: Engineer
   bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
@@ -66,15 +54,6 @@
   github_username: "BenjaminListwon"
   photo: ben_listwon.jpg
 
-- first_name: Adam
-  last_name: Pere
-  title: "Engineer, Designer"
-  bio: "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College with a degree in Computer Science and Visual Arts."
-  linkedin_url: "http://www.linkedin.com/in/adampere"
-  github_username: "apere"
-  dropbox_username: "adam@goinvo.com"
-  photo: "adam_pere.jpg"
-
 - first_name: Beth
   last_name: Herlin
   title: Product Designer
@@ -82,6 +61,13 @@
   twitter_username: "beth11herlin"
   linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
   photo: beth_herlin.jpg
+
+- first_name: Edwin
+  last_name: Choi
+  title: Designer
+  bio: Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University.
+  photo: edwin_choi.jpg
+  linkedin_url: "https://www.linkedin.com/in/edwinchoi1"
 
 - first_name: Michael
   last_name: Bester
@@ -92,6 +78,15 @@
   github_username: "kimili"
   photo: michael_bester.jpg
 
+- first_name: Yanyang
+  last_name: Zhou
+  title: Engineer
+  bio: Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.
+  photo: yanyang_zhou.jpg
+  github_username: "yvonnechow"
+  linkedin_url: "https://www.linkedin.com/in/zhouyanyang"
+
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
@@ -100,16 +95,6 @@
   twitter_username: "jonfollett"
   github_username: "jonfollett"
   photo: jon_follett.jpg
-
-- first_name: Eli
-  last_name: Rodriguez
-  title: Business Admin
-  bio: "Eli is a multi-talented administrator specializing in organization and follow-through. She is the studio manager at Involution Studios Columbus. Eli joined Invo in 2012 from a similar role in New York City."
-  linkedin_url: "http://www.linkedin.com/profile/view?id=160866659&trk=nav_responsive_tab_profile"
-  fitbit_username: "23LKC6"
-  dropbox_username: "eli@wecreategoodness.com"
-  mbti: ESFJ
-  photo: eli_rodriguez.jpg
 
 - first_name: Emily
   last_name: Twaddell
@@ -126,6 +111,7 @@
   linkedin_url: "http://www.linkedin.com/in/craigmcginley"
   github_username: "craigmcginley"
   photo: craig_mcginley.jpg
+
 - first_name: Brian
   last_name: Liston
   title: "Designer"
@@ -133,6 +119,15 @@
   linkedin_url: "https://www.linkedin.com/pub/brian-liston/6/28a/9b8"
   twitter_username: lliissttoonn
   photo: brian_liston.jpg
+
+- first_name: Courtney
+  last_name: McGorrill
+  title: Engineering Intern
+  bio: Courtney McGorrill is a computer science undergraduate at the Rochester Institute of Technology (RIT) and joins the studio for a fall coop. She's wrangling pixels and code while learning system engineering.
+  photo: courtney_mcgorrill.jpg
+  linkedin_url: "https://www.linkedin.com/in/courtneymcgorrill"
+  github_username: "cmcgorrill"
+  twitter_username: "court_mcgort"
 
 - first_name: Dirk
   last_name: Knemeyer
