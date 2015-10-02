@@ -33,7 +33,7 @@
 				currentString = currentString.substr(sIndex + 4);
 				sIndex = currentString.indexOf('src=');
 				currentString = currentString.substr(sIndex + 5);
-				sIndex = currentString.indexOf('">');
+				sIndex = currentString.indexOf('"');
 				currentString = currentString.substr(0, sIndex);
 
 				// Set the recent blog post section
@@ -41,6 +41,11 @@
 				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
 				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
 
+			},
+			error: function(a,b,c) {
+				console.log(a);
+				console.log(b);
+				console.log(c);
 			}
 		});
 

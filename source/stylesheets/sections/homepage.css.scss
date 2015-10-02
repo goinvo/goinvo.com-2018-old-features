@@ -27,7 +27,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
     .title {
 	   color: white;
-	
+
 	}
 }
 
@@ -37,7 +37,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		background:rgba(0, 0, 0, 0.5) image-url('home/bathroom.jpg');
 		background-size: cover;
 	}
-	
+
 	.title {
 		color: white;
 	}
@@ -45,36 +45,36 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 #democracy {
 	.photo-container {
-		background-image: image-url('home/democracy.png');	
+		background-image: image-url('home/democracy.png');
 	}
-	
+
 	.title {
 		.tag {
-			color: #9B9B9B;	
+			color: #9B9B9B;
 		}
 		.name {
-			color: #D75F4E;	
+			color: #D75F4E;
 		}
 		.sub-name {
-			color: #6C8696;	
+			color: #6C8696;
 		}
 	}
 }
 
 #oral-history{
 	.photo-container {
-		background-image: image-url('home/oral-history.jpg');	
+		background-image: image-url('home/oral-history.jpg');
 	}
-	
+
 	.title {
 		.tag {
-			color: #f9f9f9;	
+			color: #f9f9f9;
 		}
 		.name {
-			color: #f9f9f9;	
+			color: #f9f9f9;
 		}
 		.sub-name {
-			color: #f9f9f9;	
+			color: #f9f9f9;
 		}
 	}
 }
@@ -110,23 +110,23 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 	.sub-name {
 		color: rgb(85, 93, 98);
-	}	
+	}
 }
 
 #ebola {
 	  //padding-top: 75px;
 		//padding-bottom: 75px;
-  
+
     .photo-container {
       background-image: image-url('home/ebola.png');
     }
-  
+
 		.title {
 			.name {
-				color: #00C4E9;	
+				color: #00C4E9;
 			}
 			.sub-name {
-				color: #A5DEF1;	
+				color: #A5DEF1;
 			}
 	}
 }
@@ -169,114 +169,114 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 #homepage-hero {
 	min-height: 578px;
 	background-size: cover;
-	
+
 	&.iphone-images-style {
 		min-height: 700px;
-		
+
 		.photo-container {
-			min-height: 700px;	
+			min-height: 700px;
 			background-position: center bottom;
 		}
-		
+
 		.title {
-			text-align: center;	
+			text-align: center;
 			padding: 1em 3em;
-			
+
 		}
-		
+
 		.actual-content {
 			max-width: 560px;
 			margin: 0 auto;
 			margin-top: 12px;
 		}
-		
+
 		@media only screen and (min-width: 1175px) {
 			.photo-container {
 				background-size: 1050px !important;
 				background-position: center bottom;
 			}
 		}
-		
+
 		@media only screen and (max-width: 800px) {
 			.photo-container {
 				background-size: 140% !important;
 				background-position: center bottom;
 			}
 		}
-		
+
 		@media only screen and (max-width: 750px) {
 			.title {
 				//padding-top: 3em;
 				.actual-content {
-					margin-top: 1em;	
+					margin-top: 1em;
 					margin-bottom: .5em;
 				}
 			}
 		}
 	}
-	
+
 	&:hover {
 		.photo-container, .video-container {
-			transform: none;	
+			transform: none;
 		}
-	}	
-	
+	}
+
 	.photo-container, .video-container {
 		//background-image: image-url('home/hp-1.png');
 		min-height: 578px;
 		background-size: cover;
 		background-position-y: bottom;
-		
+
 		video {
 			width: 100%;
 			height: auto;
 		}
 	}
-	
+
 	.title {
 		top: 24px;
 		color: #33353d;
-		
+
 		@media only screen and (max-width: 750px){
 			top: 10px;
   			background-color: rgba(255,255,255,.75);
 		}
 	}
-	
-	
+
+
 	.actual-title {
-		font-size: 75px;	
+		font-size: 75px;
 		@media only screen and (max-width: 1380px)  and (min-width: 1213px){
 			font-size: 65px;
 			line-height: 75px;
 		}
-		
+
 		@media only screen and (max-width: 1213px) and (min-width: 750px){
 			font-size: 60px;
 			line-height: 70px;
 		}
-		
+
 		@media only screen and (max-width: 750px){
 			font-size: 50px;
 			line-height: 52px;
 		}
-		
-		
+
+
 	}
-	
+
 	.actual-content {
 		font-size: 32px;
 		max-width: 470px;
 		margin-top: 9px;
 		line-height: 41px;
-		
+
 		@media only screen and (max-width: 750px){
 			font-size: 26px;
 			line-height: 36px;
 			margin-top: 20px;
 		}
 	}
-	
+
 	.actual-button {
 		margin-top: 25px;
 		border: 1px solid rgba(51, 53, 61, 0.49);
@@ -285,10 +285,10 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		display: inline-block;
 		padding: 10px 55px;
 		transition: 250ms;
-		background-color: rgba(255,255,255,.9);	
+		background-color: rgba(255,255,255,.9);
 		&:hover {
 			transform: scale(1.1,1.1);
-			background-color: rgba(255,255,255,1);	
+			background-color: rgba(255,255,255,1);
 		}
 	}
 }
@@ -304,31 +304,31 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	&:hover {
 		transform: scale(1.1,1.1);
-		background: rgba(0,0,0,.2);	
+		background: rgba(0,0,0,.2);
 	}
 }
 
 .contact-container {
-	background-size: cover;	
+	background-size: cover;
 	text-align: center;
 	padding-bottom: 1em;
 	color: white;
 	a .actual-button {
-		color: white;	
+		color: white;
 	}
-	
+
 	.actual-button {
 		padding-Left: 30px;
 		padding-right: 30px;
 		font-size: 23px;
 	}
-	
+
 	.sub-title {
-		margin-top: .65em;	
+		margin-top: .65em;
 	}
-	
+
 	@media only screen and (max-width: 750px) {
-		display: none;	
+		display: none;
 	}
 }
 
@@ -347,11 +347,11 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	table.non-mobile {
 		width: 100%;
-		
+
 		@media  only screen and (max-width: 500px) {
 			display: none !important;
 		}
-		
+
 		tbody {
 			tr {
 				td {
@@ -360,7 +360,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 					vertical-align: middle;
 					max-width: 300px;
 					img {
-						margin: 0 auto;	
+						margin: 0 auto;
 					}
 				}
 			}
@@ -371,18 +371,18 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		list-style: none;
 		width: auto;
 		margin: 0 auto;
-		
+
 		@media  only screen and (max-width: 500px) {
 			display: inline-block !important;
 		}
-		
+
 		li {
 			margin: 0 auto;
 	        width: 85%;
 			margin-bottom: 40px;
 			text-align: center;
 			img {
-				margin: 0 auto;	
+				margin: 0 auto;
 				margin-bottom: 15px;
 			}
 			a {
@@ -402,7 +402,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 }
 
 .recent-blog-post .block {
-	border-bottom-width: 0px;	
+	border-bottom-width: 0px;
 }
 
 
@@ -414,7 +414,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	z-index: 0;
 	min-height: 472px;
 	max-height: 472px;
-	
+
 	.photo-container {
 		transition: transform 500ms ease-in-out;
 		background-size: cover;
@@ -422,10 +422,10 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		background-repeat: no-repeat;
 		width:100%;
 		min-height: 472px;
-		transform: scale(1, 1);	
-		
+		transform: scale(1, 1);
+
 	}
-	
+
 .video-container, .photo-container  {
     width: 100%;
     min-height: 472px;
@@ -434,13 +434,13 @@ $text-stroke: rgba(255, 255, 255, 0.6);
     transition: transform 500ms ease-in-out;
     #disrupt-vid {
       position: absolute;
-      bottom: 0; 
+      bottom: 0;
       right: 0;
-      min-width: 100%; 
-      min-height: 100%; 
-      width: auto; 
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
       height: auto;
-      z-index: -1000; 
+      z-index: -1000;
       overflow: hidden;
 
       @media only screen and (min-width: 1650px) {
@@ -466,16 +466,16 @@ $text-stroke: rgba(255, 255, 255, 0.6);
       }
     }
   }
-	
+
 	&:hover {
 		.photo-container {
-			transform: scale(1.03, 1.03);	
+			transform: scale(1.03, 1.03);
 		}
 		.video-container {
 		  transform: scale(1.1, 1.1);
 		}
-	}	
-	
+	}
+
 	//Layouts
 	&.bar {
 		width: 100%;
@@ -501,11 +501,11 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 			margin-bottom: 0;
 		}
 		.name {
-			font-size:75px;	
+			font-size:75px;
 			margin-bottom:0px;
 		}
 		.sub-name {
-			font-size:40px;	
+			font-size:40px;
 		}
 		h2 {
 			font-size: 40px;
@@ -521,7 +521,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 			font-size: 23px;
 		}
     .tag {
-       margin-bottom: 10px; 
+       margin-bottom: 10px;
     }
 	}
 }
@@ -540,24 +540,30 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		display: block;
 		width: 100%;
 	}
-	
+
 	.block, .block .photo-container {
-		min-height: 600px;	
+		min-height: 600px;
 	}
 }
 
-@media only screen and (max-width: 600px) {	
+@media only screen and (max-width: 600px) {
 	.block {
 		.title {
 			.tag {
-				font-size: 14px;	
+				font-size: 14px;
 			}
 			.name {
 				font-size: 60px;
 			}
 			.sub-name {
-				font-size: 26px;	
+				font-size: 26px;
 			}
-		}		
+		}
 	}
+}
+
+#blog {
+  .photo-container {
+    background-position: left top;
+  }
 }
