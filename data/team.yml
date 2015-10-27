@@ -129,11 +129,11 @@
   twitter_username: "dknemeyer"
   photo: dirk_knemeyer.jpg
 
-- first_name: Ben
-  last_name: Listwon
-  title: Engineer
-  bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
-  flickr_username: "nettles"
-  twitter_username: "benjaminlistwon"
-  github_username: "BenjaminListwon"
-  photo: ben_listwon.jpg
+# - first_name: Ben
+#   last_name: Listwon
+#   title: Engineer
+#   bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
+#   flickr_username: "nettles"
+#   twitter_username: "benjaminlistwon"
+#   github_username: "BenjaminListwon"
+#   photo: ben_listwon.jpg
