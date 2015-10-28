@@ -25,6 +25,9 @@ module LinkFormatters
     "http://twitter.com/#{username}"
   end
 
+  def email_url_for(address)
+    "mailto:#{address}"
+  end
 
   # Greets a user
   def greeting_for(user)
