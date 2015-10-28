@@ -7,6 +7,7 @@
   flickr_username: "juhansonin"
   twitter_username: "jsonin"
   github_username: "jsonin"
+  email: "juhan@goinvo.com"
   photo: juhan_sonin.jpg
 
 - first_name: Eric
@@ -19,6 +20,7 @@
   github_username: "ericbenwa"
   fitbit_username: "276GNC"
   dropbox_username: "benwa02@gmail.com"
+  email: "eric@goinvo.com"
   photo: eric_benoit.jpg
 
 - first_name: Sarah
@@ -28,12 +30,13 @@
   mbti: ISTP
   linkedin_url: "http://www.linkedin.com/pub/sarah-kaiser/27/bb1/315"
   twitter_username: "DamnTorren"
+  email: "sarah@goinvo.com"
   photo: sarah_kaiser.jpg
 
 - first_name: "Your Career"
   last_name: Awaits!
   title: "We're always looking for amazing talent."
-  bio: "<a class='careerButton' id='team-button'>Learn why we should work together</a>"
+  bio: "<a class='careerButton' id='team-button' href='/studio/careers'>Learn why we should work together</a>"
   photo: career_silhouette.jpg
 
 - first_name: Jennifer
@@ -43,6 +46,7 @@
   mbti: ISFJ
   twitter_username: "catamariface"
   github_username: "jen-p"
+  email: "jennifer@goinvo.com"
   photo: jennifer_patel.jpg
 
 - first_name: Beth
@@ -51,6 +55,7 @@
   bio: "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University."
   twitter_username: "beth11herlin"
   linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
+  email: "beth@goinvo.com"
   photo: beth_herlin.jpg
 
 - first_name: Edwin
@@ -58,6 +63,7 @@
   title: Designer
   bio: Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University.
   photo: edwin_choi.jpg
+  email: "edwin@goinvo.com"
   linkedin_url: "https://www.linkedin.com/in/edwinchoi1"
 
 - first_name: Michael
@@ -67,6 +73,7 @@
   flickr_username: "michaelbester"
   twitter_username: "mibester"
   github_username: "kimili"
+  email: "michael@goinvo.com"
   photo: michael_bester.jpg
 
 - first_name: Yanyang
@@ -75,6 +82,7 @@
   bio: Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.
   photo: yanyang_zhou.jpg
   github_username: "yvonnechow"
+  email: "yangyang@goinvo.com"
   linkedin_url: "https://www.linkedin.com/in/zhouyanyang"
 
 
@@ -85,6 +93,7 @@
   linkedin_url: "https://www.linkedin.com/in/jonfollett"
   twitter_username: "jonfollett"
   github_username: "jonfollett"
+  email: "jon@goinvo.com"
   photo: jon_follett.jpg
 
 - first_name: Emily
@@ -93,6 +102,7 @@
   bio: "Emily is a mentor and leader specializing in instructional design. Since joining Invo in 2013 as studio manager, Emily manages daily operations, writes for the blog, consults on design, and creates whimsical art installations. Emily holds degrees from Trinity College, Lesley University, and The Center for Digital Imaging Arts at Boston University."
   twitter_username: "MimiTwaddell"
   linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
+  email: "emily@goinvo.com"
   photo: emily_twaddell.jpg
 
 - first_name: Craig
@@ -101,6 +111,7 @@
   bio: "Craig is an engineer devoted to full stack design and development. He brings skillful javascripting, front-end development techniques, and application logic design to software projects. Craig is a Launch Academy graduate, vegan, musician and social justice advocate."
   linkedin_url: "http://www.linkedin.com/in/craigmcginley"
   github_username: "craigmcginley"
+  email: "craig@goinvo.com"
   photo: craig_mcginley.jpg
 
 - first_name: Brian
@@ -109,16 +120,18 @@
   bio: "Brian is a designer and visual artist with a background in graphic design, film and art history. He specializes in time-based media design and strives to create beautiful things in every medium available to him. Brian is a graduate of Columbus College of Art & Design."
   linkedin_url: "https://www.linkedin.com/pub/brian-liston/6/28a/9b8"
   twitter_username: lliissttoonn
+  email: "brian@goinvo.com"
   photo: brian_liston.jpg
 
 - first_name: Courtney
   last_name: McGorrill
   title: Engineering Intern
   bio: Courtney McGorrill is a computer science undergraduate at the Rochester Institute of Technology (RIT) and joins the studio for a fall coop. She's wrangling pixels and code while learning system engineering.
-  photo: courtney_mcgorrill.jpg
   linkedin_url: "https://www.linkedin.com/in/courtneymcgorrill"
   github_username: "cmcgorrill"
   twitter_username: "court_mcgort"
+  email: "courtney@goinvo.com"
+  photo: courtney_mcgorrill.jpg
 
 - first_name: Dirk
   last_name: Knemeyer
@@ -127,6 +140,7 @@
   linkedin_url: "https://www.linkedin.com/in/knemeyer"
   mbti: INFJ
   twitter_username: "dknemeyer"
+  email: "dirk@goinvo.com"
   photo: dirk_knemeyer.jpg
 
 # - first_name: Ben
