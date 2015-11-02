@@ -413,142 +413,40 @@ img {
 			color: $lightgray;
 		}
 	}
-	
-	
-	.authors {
-		margin-bottom: 50px;
-		
-		h1 {
-			font-weight: 100;
-			font-size:65px;
-			line-height: 75px;
-			color: rgba(0,0,0,.6);
-			
-			@media only screen and(max-width: 620px) {
-				font-size: 55px;
-				line-height: 65px;
-			}
-			@media only screen and(max-width: 542px) {
-				font-size: 50px;
-				line-height: 55px;
-				margin-bottom: 1em;
-			}
-		}
-		
-		.person {
-			margin-bottom: 50px;
-			
-			.image, .content  {
-				display: inline-block;	
-				vertical-align: top;
-			}
-			
-			.image {
-				width: 150px;
-				height: auto;
-				@media only screen and(max-width: 1170px) {
-					width: 125px;
-				}
-			}
-			p.mobile {
-					padding-top: 10px;
-					color: rgba(0,0,0,.6);	
-					display: none;
-					@media only screen and (max-width: 750px) {
-						display: block;	
-					}
-			}
-			.content {
-				padding-left: 15px;
-				width: calc(100% - 155px);	
-				
-				@media only screen and(max-width: 1170px) {
-					width: calc(100% - 135px);	
-				}
-				
-				h2 {
-					color: rgba(0,0,0,.6);
-					
-					@media only screen and(max-width: 680px) {
-						font-size: 35px;
-					}
-					
-					@media only screen and(max-width: 597px) {
-						font-size: 30px;
-					}
-				}
-				
-				p {
-					padding-top: 5px;
-					color: rgba(0,0,0,.6);	
-					@media only screen and (max-width: 750px) {
-						display: none;	
-					}
-				}
-				
-				small {
-					@media only screen and(max-width: 1170px) {
-						display: block;
-						margin-top: 3px;
-					}
-				}
-			}
-				
-		}
-		
+	.author {
+		width: 65%;
+		padding-right: 3em;
+		color: #444;
+		//margin: 0 auto;
 	}
-	
-	
+	.author-content {
+		position: relative;
+		//margin-top: -25%;
+		background: $white;
+		padding: 2em;
+		border-color: $blue;
+		border-width: 0 3px 3px;
+		border-style: solid;
+		p {
+			margin-bottom: 0;
+		}
+	}
 	.contributors.download-links {
 		margin-top: 20px;
 		font-size: 24px;
 	}
 	.contributors {
-		width: 100%;
+		width: 35%;
 		padding: 2em;
-		border: 2px solid rgba(0, 0, 0, 0.4);
-		background: #fff;
-		@media only screen and(max-width: 1170px) {
-			max-width: 375px;
-			width: auto;
-			margin: 0 auto;
-			float: none;
-		}
-		.cont-wrapper {
-			width: 906px;
-			margin: 0 auto;
-			@media only screen and (max-width: 400px) {
-				padding-left: calc(50% - 80px);	
-			}
-			
-			h2 {
-				text-align: center;	
-				font-size: 28px;
-				line-height: 22px;
-				width: 100%;
-				margin: 0 auto;
-				margin-bottom: 30px;
-				color: rgba(0,0,0,.6);
-				@media only screen and (max-width: 750px) {
-					text-align: left;	
-				}
-			}
-			
-			@media only screen and(max-width: 1170px) {
-				max-width: 305px;
-				width: 100%;
-			}
-		}
+		border: 3px solid $blue;
 		h3 {
-			font-size: 18px;
-			padding-bottom: 0.4em;
-			font-weight: 100;
+			font-size: 22px;
+			padding-bottom: 0.5em;
 		}
 		p {
-			font-size: 24px;
-			line-height: 26px;
+			font-size: 34px;
+			line-height: 1em;
 			margin-bottom: 0;
-			color: rgba(0,0,0,.6);
 		}
 		hr {
 			width: 2em;
@@ -556,45 +454,17 @@ img {
 			border-width: 5px;
 			border-color: $blue;
 		}
-		small {
-			font-size: 18px;
-			padding-top: 0px;
-			margin-top: 0px;
-			font-weight: 100;	
-		}
 		.contributor {
-			display: inline-block;
-			width: 300px;
-			@media only screen and(max-width: 1170px) {
-				display: block;
-				height: 100px;
-			}
-			@media only screen and (max-width: 400px) {
-				height: auto;	
-			}
+			@include clearfix();
 			.image, .info {
 				float: left;
-				@media only screen and (max-width: 400px) {
-					float: none;	
-					display: block;
-				}
 			}
 			.image {
-				width: 75px;
-				height: auto;
-				@media only screen and (max-width: 400px) {
-					width: 90px;	
-				}
+				width: 20%;
 			}
 			.info {
 				padding-left: 1em;
-				width: 225px;
-				@media only screen and (max-width: 400px) {
-					padding-left: 0;
-					width: 100%;
-					padding: 10px 0px 25px 0px;
-					max-width: 100%;	
-				}
+				width: 80%;
 			}
 		}
 	}
@@ -608,6 +478,9 @@ img {
 		}
 		.author, .contributors {
 			width: 100%;
+		}
+		.contributor {
+			margin-bottom: 1.5em;
 		}
 	}
 }

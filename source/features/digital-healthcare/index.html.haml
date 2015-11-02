@@ -179,25 +179,35 @@
 	 
 	.credit-wrapper
 		.row
-			#credits
-
-				.contributors
-					.cont-wrapper
-						.contributor
-							/ .image
-							/ 	= image_tag 'features/democracy/contrib/brian.jpg'
-							/ .info
-							/ 	%h3 Designer
-							/ 	%p Brian Liston<br><small><a href="https://twitter.com/lliissttoonn">@lliissttoonn</a></small>
-						.contributor
-							/ .image
-							/ 	= image_tag 'features/ebola/contrib/adam.jpeg'
-							/ .info
-							/ 	%h3 Web Designer
-							/ 	%p Adam Pere<br><small><a href="http://adampere.com">adampere.com</a></small>
-						.contributor
-							/ .image
-							/ 	= image_tag 'features/democracy/contrib/emily.jpg'
-							/ .info
-							/ 	%h3 Editor
-							/ 	%p Emily Twaddell<br><small><a href="http://twitter.com/mimitwaddell">@mimitwaddell</a></small>
+			- # BEGIN Credits: Copy from this line.
+		#credits
+			.author
+				%img{:src => "../../images/team_photos/beth_herlin.jpg", :alt => ""}/
+				.author-content
+					.author-header
+						%h3 Author and Illustrator
+						%h2 Beth Herlin
+					.author-bio
+						%p 
+			.contributors
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/jon.jpg'
+					.info
+						%h3 Contributing Author
+						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
+						%hr
+				.contributor
+					.image
+						= image_tag 'features/democracy/contrib/juhan.jpg'
+					.info
+						%h3 Contributing Author
+						%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
+						%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
+					.info
+						%h3 Web Developer
+						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>
+		- # END Credits. Copy to this %%%%%line.
