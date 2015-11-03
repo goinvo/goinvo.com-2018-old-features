@@ -129,7 +129,7 @@ a {
 		color: #6d6e6a;
 		font-size: 62px;
 		text-align: center;
-		padding-top: 105px;
+		padding-top: 95px;
 		
 		@media only screen and (max-width: 960px) {
 			font-size: 50px;	
@@ -145,12 +145,9 @@ a {
 		}
 	}
 	header {
-		color: white;
-		background-color: rgb(180, 180, 180);
+		color: black;
 		max-width: 1280px;	
-		font-size: 54px;	
-		padding: 10px;
-		text-align: center;
+		font-size: 50px;	
 		&.left {
 			text-align: right;
 			@media only screen and (max-width: 768px) {
@@ -176,14 +173,21 @@ a {
 
 .item {
 	min-height: 400px;
+	margin-bottom: 60px;
+}
+
+.no-image {
+	margin-left: 470px;
 }
 
 .row {
-	margin: 0 5% 0 5%;	
+	margin: 0 auto 0 auto;
+	max-width: 1080px;
+	width: 90%;
 	.item-wrapper {
 		
 		.item-img {
-			max-width: 400px;
+			max-width: 420px;
 			&.right {
 				float: right;
 				margin: 0 10px 0 40px;
@@ -250,7 +254,7 @@ a {
 
 
 			h4.intro-quote {
-				color: #776e6a;
+				color: #849CAA;
 				margin-top: 20px;
 				font-size: 32px;
 				@media only screen and (max-width: 960px) {
@@ -262,7 +266,6 @@ a {
 				}
 			}
 		}
-		
 	}
 	@media only screen and (max-width: 768px) {
 		margin: 0 2% 6% 2%;
