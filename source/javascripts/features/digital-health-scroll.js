@@ -1,4 +1,3 @@
-// This file is for feature articles with a navigation that is fixed after scrolling past it.
 $(window).on('scroll', function () {
 	var fixed = $('.nav-wrapper.scroll-nav');
 	var scrollTop = $(window).scrollTop();
@@ -15,8 +14,12 @@ $(window).on('scroll', function () {
 	var navSections = [$('.main-nav a.one'), $('.main-nav a.two'), $('.main-nav a.three'), $('.main-nav a.four'), $('.main-nav a.five'), $('.main-nav a.six'), $('.main-nav a.seven'), $('.main-nav a.eight')];
 	
 	for(var i = 0; i < sections.length && sections[i].length > 0; i++) {
-		myPosition = sections[i].position().top;
-		
+		var myPosition = sections[i].position().top-125;
+
+		if (scrollTop < 118) {
+			$('.main-nav .active').toggleClass('active', false);
+		}		
+
 		if (i == sections.length-1) {
 			if(scrollTop >= myPosition && !navSections[i].hasClass('active')) {
 				$('.main-nav .active').toggleClass('active', false);	
@@ -31,4 +34,47 @@ $(window).on('scroll', function () {
 			}
 		}
 	}
+});
+
+$(document).ready(function() {
+	$('a.one').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.one").offset().top-125
+        }, 500);
+	});
+	$('a.two').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.two").offset().top-125
+        }, 500);
+	});
+	$('a.three').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.three").offset().top-125
+        }, 500);
+	});
+	$('a.four').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.four").offset().top-125
+        }, 500);
+	});
+	$('a.five').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.five").offset().top-125
+        }, 500);
+	});
+	$('a.six').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.six").offset().top-125
+        }, 500);
+	});
+	$('a.seven').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.seven").offset().top-125
+        }, 500);
+	});
+	$('a.eight').click ( function () {
+		$('html, body').animate({
+            scrollTop: $(".item.eight").offset().top-125
+        }, 500);
+	});
 });
