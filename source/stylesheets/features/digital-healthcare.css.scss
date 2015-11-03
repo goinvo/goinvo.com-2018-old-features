@@ -372,6 +372,9 @@ a {
 		&:hover {
 			color: $lightgray;
 		}
+		@media only screen and (max-width: 768px) {
+			font-size: 16px;
+		}
 	}
 	.author {
 		width: 65%;
@@ -407,6 +410,9 @@ a {
 			font-size: 34px;
 			line-height: 1em;
 			margin-bottom: 0;
+			@media only screen and (max-width: 768px) {
+				font-size: 28px;
+			}
 		}
 		hr {
 			width: 2em;
