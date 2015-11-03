@@ -4,6 +4,7 @@
 	= stylesheet_link_tag "features/digital-healthcare"
 	= stylesheet_link_tag "feature-elements"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "features/digital-health-scroll.js"
 	= javascript_include_tag "invo-time-feature"
 	= javascript_include_tag "vendor/responsiveslides.min.js"
 	- meta = page_for_meta("oral-history")
@@ -16,56 +17,27 @@
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-.navigation#article-nav
-	%ol
-		%li 
-			%a.one{:href => "#section1-medication"} 
-				.nav-div 1. Medication Adherence
-		%li 
-			%a.two{:href => "#section2-interfaces"}
-				.nav-div 2. Talking to Technology
-		%li 
-			%a.three{:href => "#section3-predictive"} 
-				.nav-div 3. Predicting Health
-		%li 
-			%a.four{:href => "#section4-disease"} 
-				.nav-div 4. Disease Detection
-		%li 
-			%a.five{:href => "#section5-careplan"} 
-				.nav-div 5. Digital Care Planning
-		%li 
-			%a.six{:href => "#section6-records"} 
-				.nav-div 6. Computable Medical Records
-		%li 
-			%a.seven{:href => "#section7-patient"} 
-				.nav-div 7. Patient Engagement
-		%li 
-			%a.eight{:href => "#section8-companion"} 
-				.nav-div 8. Virtual Helpers
-
-			
-			
-			
-			
 %article#feature-article.digital-healthcare
 	.overall-header 
 		%div Digital Healthcare: 2016 and Beyond
-	/ %table.item
-	/ 	%tr
-	/ 		%td.content
-	/ 			%header#article-header.left
-	/ 				.header-wrapper.left
-	/ 					.main-header-content
-	/ 						.header-title 1. Medication Adherence
-	/ 			%section#section1-medications-content
-	/ 				.row
-	/ 					%h4.intro-quote ...gets a boost from sensor tech
-	/ 					.item-wrapper
-	/ 						.item-content
-	/ 							%span Solving the complex problem of medication adherence could have a huge impact on lowering cost of care; It’s no surprise that millions of dollars have already been invested in digital health software to guide the process. In 2016, expect the basics of digital adherence — self-reporting, tracking refills and chronic disease outcomes, etc. — will receive a boost from the use 
-	/ 		%td
-	/ 			%aside.item-img.right
-	/ 				%img{:src => "../../images/features/digital-healthcare/digital_health_1.jpg"}
+	%header.nav-wrapper.scroll-nav
+		%nav.main-nav
+			%a.one{:href => "#section1-medication"} 
+				.nav-div 1. Medication Adherence
+			%a.two{:href => "#section2-interfaces"}
+				.nav-div 2. Talking to Technology
+			%a.three{:href => "#section3-predictive"} 
+				.nav-div 3. Predicting Health
+			%a.four{:href => "#section4-disease"} 
+				.nav-div 4. Disease Detection
+			%a.five{:href => "#section5-careplan"} 
+				.nav-div 5. Digital Care Planning
+			%a.six{:href => "#section6-records"} 
+				.nav-div 6. Computable Medical Records
+			%a.seven{:href => "#section7-patient"} 
+				.nav-div 7. Patient Engagement
+			%a.eight{:href => "#section8-companion"} 
+				.nav-div 8. Virtual Helpers
 	.item#section1-medication.one			
 		%section#section1-medications-content
 			.row
