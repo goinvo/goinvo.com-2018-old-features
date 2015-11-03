@@ -26,12 +26,8 @@ a {
 	font-weight: 800;	
 }
 
-
-
 .content {
 }
-
-
 
 #article-nav {
   position: fixed;
@@ -136,12 +132,12 @@ a {
 		vertical-align: middle;
 		padding-top: 65px;
 		
-		@media only screen and (max-width: 910px) {
+		@media only screen and (max-width: 960px) {
 			font-size: 50px;	
 			padding-top: 75px;
 		}
 		
-		@media only screen and (max-width: 740px) {
+		@media only screen and (max-width: 768px) {
 			font-size: 40px;	
 			padding-top: 80px;
 		}
@@ -150,74 +146,90 @@ a {
 			padding-top: 60px;
 		}
 	}
-	
 	header {
 		color: white;
 		background-color: rgb(180, 180, 180);
-		min-height: 74px;
 		max-width: 1280px;	
 		font-size: 54px;	
 		padding: 10px;
 		&.left {
 			text-align: right;
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
 		}
 		&.right {
 			text-align: left;
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		@media only screen and (max-width: 960px) {
+			font-size: 36px;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 28px;
 		}
 
-			
 	}
-}
-
-h4.intro-quote {
-	color: #776e6a;
-	margin-top: 20px;
-	font-size: 32px;
+	
 }
 
 .item {
-	min-height: 500px;
+	min-height: 400px;
 	margin-top: 40px;
 }
 
-.item-img {
-	max-width: 400px;
-	&.right {
-		float: right;
-		margin: 0 10px 0 40px;
-		@media only screen and (max-width: 960px) {
-			margin: 8px 40px 8px 40px;
-		}
-		
-		@media only screen and (max-width: 750px) {
-			margin: 8px 40px 8px 40px;
-		}
-	}
-	&.left {
-		float: left;
-		margin: 0 40px 0 10px;
-		@media only screen and (max-width: 960px) {
-			margin: 8px 40px 8px 40px;
-		}
-		
-		@media only screen and (max-width: 750px) {
-			margin: 8px 40px 8px 40px;
-		}
-	}
-}
-
-img.item-img {
-	width: 100%;
-	position: relative;
-	z-index: 2;
-}
-
 .row {
-	margin: 0 80px 0 80px;	
+	margin: 0 5% 0 5%;	
 	.item-wrapper {
 		
+		.item-img {
+			max-width: 400px;
+			&.right {
+				float: right;
+				margin: 0 10px 0 40px;
+				@media only screen and (max-width: 768px) {
+					margin: 8px 1% 8px 1%;
+					float: none;
+				}
+			}
+			&.left {
+				float: left;
+				margin: 0 40px 0 10px;
+				@media only screen and (max-width: 768px) {
+					margin: 8px 1% 8px 1%;
+					float: none;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				max-width: 98%;
+			}
+
+			img.item-img {
+				width: 100%;
+				position: relative;
+				z-index: 2;
+			}
+		}
+
+		#computer-image {
+			display: none;
+			@media only screen and (min-width: 769px) {
+				display: inherit;
+			}
+		}
+
+		#phone-image {
+			display: none;
+			@media only screen and (max-width: 768px) {
+				display: inherit;
+				margin: 10px 0 20px 0;
+			}
+		}
+
 		.item-content {
-			min-height: 100%;
+			min-height: 300px;
 			position: relative;
 			top: 15px;
 			font-size: 24px;
@@ -231,24 +243,33 @@ img.item-img {
 			&.right {
 				text-align: left;
 			}
+			@media only screen and (max-width: 960px) {
+				font-size: 20px;
+			}
+			@media only screen and (max-width: 768px) {
+				font-size: 16px;
+			}
+
+
+			h4.intro-quote {
+				color: #776e6a;
+				margin-top: 20px;
+				font-size: 32px;
+				@media only screen and (max-width: 960px) {
+					font-size: 24px;
+				}
+				@media only screen and (max-width: 768px) {
+					font-size: 20px;
+					text-align: center;
+				}
+			}
 		}
 		
 	}
-	@media only screen and (max-width: 960px) {
-		text-align: left;
-		width: 100%;
-		display: block;
-		padding: 0px 15px;
-	}
-	
-	@media only screen and (max-width: 750px) {
-		//max-width: 250px;	
-		width: 100%;
-		display: block;
-		padding: 0px 15px;
+	@media only screen and (max-width: 768px) {
+		margin: 0 2% 6% 2%;
 		
 	}
-	
 }
 
 .social-buttons {
