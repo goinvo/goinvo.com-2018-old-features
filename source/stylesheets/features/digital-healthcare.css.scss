@@ -194,7 +194,7 @@ a {
 	.item-wrapper {
 		
 		.item-img {
-			max-width: 420px;
+			max-width: 430px;
 			&.right {
 				float: right;
 				margin: 0 10px 0 40px;
@@ -240,7 +240,6 @@ a {
 		.item-content {
 			min-height: 300px;
 			position: relative;
-			top: 15px;
 			font-size: 1.375em;
 			line-height: 1.5em;
 			z-index: 1;
