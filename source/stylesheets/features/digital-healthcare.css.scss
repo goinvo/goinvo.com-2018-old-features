@@ -88,16 +88,14 @@ a {
 	width: 100%;
 	
 	.overall-header {
-		width: 100%;
-		color: #6d6e6a;
-		font-size: 4em;
-		text-align: center;
-		padding-top: 95px;
-		padding-bottom: 40px;
-		
-		@media only screen and (max-width: 1437px) {
-			    padding-top: 125px;
-		}
+	    width: 100%;
+	    color: #FFFFFF;
+	    font-size: 4em;
+	    text-align: center;
+	    padding: 30% 5rem 5%;
+	    background-color: rgb(11, 94, 148);
+	    margin-bottom: 120px;
+	    height: 80vh;
 
 		@media only screen and (max-width: 960px) {
 			font-size: 3em;
@@ -105,11 +103,6 @@ a {
 		
 		@media only screen and (max-width: 768px) {
 			font-size: 2em;
-			padding-top: 80px;
-		}
-		
-		@media only screen and (max-width: 590px) {	
-			padding-top: 60px;
 		}
 	}
 	header {
@@ -143,7 +136,7 @@ a {
 
 .item {
 	min-height: 400px;
-	margin-bottom: 120px;
+	margin-bottom: 240px;
 }
 
 h4 {
@@ -157,6 +150,7 @@ h4 {
 	&.header-quote {
 		font-size: .5em;
 		line-height: 2em;
+		color: white;
 	}
 	@media only screen and (max-width: 768px) {
 		text-align: center;
