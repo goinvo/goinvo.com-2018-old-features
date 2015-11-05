@@ -24,6 +24,9 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 #digital-healthcare {
 	.photo-container {
 		background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(11, 94, 148, 0.6) 100%) , image-url('features/digital-healthcare/digital_health_2.jpg') rgba(0, 0, 0, 0.62);
+		background-size: 100%;
+    	background-repeat: no-repeat;
+    	background-position: center;
 	}
     .title {
 	   color: white;
