@@ -34,7 +34,7 @@ a {
 }
 
 #feature-article header.nav-wrapper {
-	background-color: rgba(11, 94, 148, .95);;
+	background-color: rgba(11, 94, 148, .95);
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
@@ -65,11 +65,11 @@ a {
 		transition: 300ms ease-in-out;
 		&.active {
 			text-decoration: underline;
-			color: rgb(109, 110, 106);
+			color: rgba(255, 255, 255, .65);
 		}
 		
 		&:hover {
-			color: rgb(109, 110, 106);	
+			color: rgba(255, 255, 255, .65);	
 		}
 	}
 	
