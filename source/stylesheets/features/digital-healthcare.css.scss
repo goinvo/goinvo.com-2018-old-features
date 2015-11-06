@@ -26,12 +26,15 @@ a {
 	font-weight: 800;	
 }
 
+.scroll-nav {
+	box-shadow: 0 5px 15px -8px #000
+}
+
 .content {
 }
 
 #feature-article header.nav-wrapper {
-	background-color: rgba(180, 180, 180, .95);;
-	position: fixed;
+	background-color: rgba(11, 94, 148, .95);;
 	z-index: 100;
 	width: 100%;
 	border-bottom: 0;
@@ -40,6 +43,7 @@ a {
 	min-height: 0;
 	height: auto;
 	text-align: center;
+	
 	@media only screen and (max-width: 1130px) {
 		padding: 0px 31px;	
 		padding-right: 10px;		
@@ -73,10 +77,14 @@ a {
 		position: fixed;
 		top: 55px;
 		left: 0;
-		display: block;
+		display: none;
 		@media only screen and (max-width: 768px) {
 			display: none;
 		}
+	}
+
+	&.stuck {
+		margin-bottom: 120px;
 	}
 	
 	@media only screen and (max-width: 768px) {
@@ -89,20 +97,44 @@ a {
 	
 	.overall-header {
 	    width: 100%;
-	    color: #FFFFFF;
-	    font-size: 4em;
-	    text-align: center;
-	    padding: 30% 5rem 5%;
-	    background-color: rgb(11, 94, 148);
-	    margin-bottom: 120px;
+	    font-size: 3.5em;
+	    padding: 17% 60px 5%;
+	    color: rgb(11, 94, 148);
+	    background-color: rgb(255, 255, 255);
+	    background-image: image-url('features/digital-healthcare/digital_health_cover_transp.gif');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: right;
+	    line-height: 1.2em;
 	    height: 80vh;
 
-		@media only screen and (max-width: 960px) {
-			font-size: 3em;
+	    @media only screen and (max-width: 1039px) {
+			padding-top: 13%;
+		}
+
+		@media only screen and (max-width: 915px) {
+			padding-top: 10%;
+		}
+		
+		@media only screen and (max-width: 830px) {
+			padding-top: 7%;
 		}
 		
 		@media only screen and (max-width: 768px) {
 			font-size: 2em;
+			color: rgb(255, 255, 255);
+	    	background-color: rgb(11, 94, 148);
+	    	background-image: none;
+	    	padding-top: 60%;
+	    	margin-bottom: 120px;
+	    	text-align: center;
+		}
+
+		.title {
+			width: calc(100% - 510px);
+			@media only screen and (max-width: 768px) {
+				width: 100%;
+			}
 		}
 	}
 	header {
@@ -140,17 +172,21 @@ a {
 }
 
 h4 {
-	color: #849CAA;
 	margin-top: 10px;
 	font-weight: normal;
 
 	&.intro-quote {
+		color: #849CAA;
 		font-size: 1.5em;
 	}
 	&.header-quote {
-		font-size: .5em;
-		line-height: 2em;
-		color: white;
+		font-size: .45em;
+		line-height: 1.5em;
+		color: rgb(11, 94, 148);
+		font-weight: 200;
+		@media only screen and (max-width: 768px) {
+			color: rgb(255, 255, 255);
+		}
 	}
 	@media only screen and (max-width: 768px) {
 		text-align: center;

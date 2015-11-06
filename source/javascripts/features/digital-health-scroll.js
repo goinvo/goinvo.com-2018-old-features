@@ -1,9 +1,15 @@
 $(window).on('scroll', function () {
+	var header = $('.nav-wrapper.stuck');
+	var top = header.position().top;
 	var fixed = $('.nav-wrapper.scroll-nav');
 	var scrollTop = $(window).scrollTop();
 	var width = $(window).width();
 	if (width > 768) {
-		fixed.css('display', 'block');
+		if (top <= scrollTop && fixed.css('display') != 'block') {
+			fixed.css('display', 'block');
+		} else if (top > scrollTop && fixed.css('display') != 'none') {
+			fixed.css('display', 'none');
+		}
 	} else {
 		fixed.css('display', 'none');
 	}
