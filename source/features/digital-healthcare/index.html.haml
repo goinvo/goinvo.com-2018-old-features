@@ -163,14 +163,6 @@
 		.row
 			- # BEGIN Credits: Copy from this line.
 		#credits
-			.author
-				%img{:src => "../../images/team_photos/beth_herlin.jpg", :alt => ""}/
-				.author-content
-					.author-header
-						%h3 Author and Illustrator
-						%h2 Beth Herlin
-					.author-bio
-						%p 
 			.contributors
 				.contributor
 					.image
@@ -178,18 +170,25 @@
 					.info
 						%h3 Contributing Author
 						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
-						%hr
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/beth.jpg'
+					.info
+						%h3 Contributing Author/Illustrator
+						%p Beth Herlin<br><small><a href="https://twitter.com/beth11herlin">@beth11herlin</a></small>
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
+					.info
+						%h3 Web Developer/Designer
+						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>	
+				%hr
 				.contributor
 					.image
 						= image_tag 'features/democracy/contrib/juhan.jpg'
 					.info
 						%h3 Contributing Author
 						%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
-						%hr
-				.contributor
-					.image
-						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
-					.info
-						%h3 Web Developer
-						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>
 		- # END Credits. Copy to this %%%%%line.
