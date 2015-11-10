@@ -24,6 +24,8 @@
 		.title 
 			Digital Healthcare: 2016 and Beyond
 			%h4.header-quote Your business will be obsolete if you aren’t engaging in these 8 things next year.
+	.mobile-cover
+		%img{:src => "../../images/features/digital-healthcare/digital_health_cover_mobile.gif"}
 	%header.nav-wrapper.stuck
 		%nav.main-nav
 			%a.one{:href => "#1"} 1. Medication Adherence
@@ -59,7 +61,8 @@
 						%h4.intro-quote  ...gets a boost from sensor tech
 						.item-img#phone-image
 							%img.item-img{:src => "../../images/features/digital-healthcare/digital_health_1.jpg"}
-						%span Solving the complex problem of medication adherence could have a huge impact on lowering cost of care; It’s no surprise that millions of dollars have already been invested in digital health software to guide the process. In 2016, expect the basics of digital adherence — self-reporting, tracking refills and chronic disease outcomes, etc. — will receive a boost from the use of sensors to collect confirming data, whether it’s via breath analysis, urine sampling, or another non-invasive method.
+						.item-text
+							%span Solving the complex problem of medication adherence could have a huge impact on lowering cost of care; It’s no surprise that millions of dollars have already been invested in digital health software to guide the process. In 2016, expect the basics of digital adherence — self-reporting, tracking refills and chronic disease outcomes, etc. — will receive a boost from the use of sensors to collect confirming data, whether it’s via breath analysis, urine sampling, or another non-invasive method.
 	.item#section2-interfaces.two			
 		%section#section2-interfaces-content
 			.row
@@ -72,7 +75,8 @@
 						%h4.intro-quote  Conversational interfaces go mainstream.
 						.item-img
 							%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_2.jpg"}
-						%span The conversational user interface — driven by advances in voice recognition technology in conjunction with artificial intelligence, capable of understanding the content and context of patient concerns — has already founds its way into digital health software systems. Whether incorporated into mHealth apps for motivating health and fitness engagement, as a part of the digital prescription adherence user experience, or incorporated into interactive systems for outpatient education, expect the conversational user interface to gain traction and become mainstream in 2016.
+						.item-text
+							%span The conversational user interface — driven by advances in voice recognition technology in conjunction with artificial intelligence, capable of understanding the content and context of patient concerns — has already founds its way into digital health software systems. Whether incorporated into mHealth apps for motivating health and fitness engagement, as a part of the digital prescription adherence user experience, or incorporated into interactive systems for outpatient education, expect the conversational user interface to gain traction and become mainstream in 2016.
 	.item#section3-predictive.three			
 		%section#section3-predictive-content
 			.row
@@ -85,7 +89,8 @@
 						%h4.intro-quote  Analytics debut for patients and clinicians, not just payers.
 						.item-img
 							%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_3.jpg"}
-						%span While payers have had patient health analytics software for a few years already, in 2016, we can expect patient scoring and health analysis to make its way into the hands of the clinicians and patients. Software tools for visualizing a patient’s complete range of health metrics, along with clinically validated algorithms for scoring a holistic view of patient health will make their debut. These will provide clinicians with at-a-glance analytics of a patient’s overall health, allowing doctors to spot patterns and red flags by comparing a person’s health data against targeted health ranges, based on factors like age and gender.
+						.item-text
+							%span While payers have had patient health analytics software for a few years already, in 2016, we can expect patient scoring and health analysis to make its way into the hands of the clinicians and patients. Software tools for visualizing a patient’s complete range of health metrics, along with clinically validated algorithms for scoring a holistic view of patient health will make their debut. These will provide clinicians with at-a-glance analytics of a patient’s overall health, allowing doctors to spot patterns and red flags by comparing a person’s health data against targeted health ranges, based on factors like age and gender.
 	.item#section4-disease.four			
 		%section#section4-disease-content
 			.row
@@ -98,7 +103,8 @@
 						%h4.intro-quote  ...on your smart phone
 						.item-img
 						%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_4.jpg"}
-						%span Imagine your smart phone as a non-invasive health sniffer, a feat of which it is already technically capable. It can view you, via its cameras; listen to you via its microphone; and even pick up your gait, via its accelerometer. Such information can ultimately be used to help diagnose such diseases as depression and Parkinson’s. The current confluence of sensor tech, data analytics maturity, hardware durability, miniaturization, and industrial evolution has created a perfect storm for capturing biologic metrics and determining trends. In 2016, we’ll have a good first cut at a disease detection model that is personally meaningful and changes behavior.
+						.item-text
+							%span Imagine your smart phone as a non-invasive health sniffer, a feat of which it is already technically capable. It can view you, via its cameras; listen to you via its microphone; and even pick up your gait, via its accelerometer. Such information can ultimately be used to help diagnose such diseases as depression and Parkinson’s. The current confluence of sensor tech, data analytics maturity, hardware durability, miniaturization, and industrial evolution has created a perfect storm for capturing biologic metrics and determining trends. In 2016, we’ll have a good first cut at a disease detection model that is personally meaningful and changes behavior.
 	.item#section5-careplan.five			
 		%section#section5-careplan-content
 			.row
@@ -111,7 +117,8 @@
 						%h4.intro-quote  It's how to get better patient outcomes in a tech driven world.
 						.item-img
 							%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_5.jpg"}
-						%span Digital care planning will be a key factor driving better health outcomes and prices. The personal digital care plan will serve as a contract between patient and physician to commit to improving and maintaining patient health. The care plan will include patient / physician goals and the rationale for those goals, as well as a plan for case management and rehabilitation, psychological health, exercise, nutrition, birth / sexual health, and advance care / death.
+						.item-text
+							%span Digital care planning will be a key factor driving better health outcomes and prices. The personal digital care plan will serve as a contract between patient and physician to commit to improving and maintaining patient health. The care plan will include patient / physician goals and the rationale for those goals, as well as a plan for case management and rehabilitation, psychological health, exercise, nutrition, birth / sexual health, and advance care / death.
 	.item#section6-records.six			
 		%section#section6-records-content
 			.row
@@ -119,19 +126,20 @@
 					.item-content.right
 						%header#article-header.no-image 6. Computable Medical Records
 						%h4.intro-quote.no-image The next generation of the EMR conversation.
-						%span In 2016 and onward, computable medical records will fuel the next generation of EHRs, as the quest for interoperable, portable, and comprehensive health data continues. Computable medical records, readable by both human and machine, will house a patient’s entire record from conception to death. Importantly, such records will declare their fidelity level — their degree of completeness and accuracy — so that users can not only identify what data is there, but also what’s missing.
-						%br
-						%span The computable medical record will be unique, enabling users to find the right record for the right person; will support a health status scoring system; and will ideally be open source to drive adoption across software vendors, hospital systems, and government. 
-						%br
-						%span FHIR (HL7’s latest attempt at a health data exchange) is a step in the right direction. 
-						%a{:href => "http://hl7.org/implement/standards/fhir/2015Jan/argonauts.html"}The Argonauts
-						%span are working on a handful of profiles and core data services,  
-						%a{:href => "http://geekdoctor.blogspot.com/2014/12/kindling-fhir.html"}according to John Halamka, 
-						%span CIO of Beth Israel Deaconess Hospital. They’re implementing the API as recommended by the MITRE JASON report (see 
-						%a{:href => "http://healthit.gov/sites/default/files/ptp13-700hhs_white.pdf"} here
-						%span and 
-						%a{:href => "http://healthit.ahrq.gov/sites/default/files/docs/publication/2014-jason-data-for-individual-health.pdf"}here
-						%span). While a far cry from a ‘computable medical record’, it’s a hopeful signal flare for U.S. progress in digital healthcare.
+						.item-text
+							%span In 2016 and onward, computable medical records will fuel the next generation of EHRs, as the quest for interoperable, portable, and comprehensive health data continues. Computable medical records, readable by both human and machine, will house a patient’s entire record from conception to death. Importantly, such records will declare their fidelity level — their degree of completeness and accuracy — so that users can not only identify what data is there, but also what’s missing.
+							%br
+							%span The computable medical record will be unique, enabling users to find the right record for the right person; will support a health status scoring system; and will ideally be open source to drive adoption across software vendors, hospital systems, and government. 
+							%br
+							%span FHIR (HL7’s latest attempt at a health data exchange) is a step in the right direction. 
+							%a{:href => "http://hl7.org/implement/standards/fhir/2015Jan/argonauts.html"}The Argonauts
+							%span are working on a handful of profiles and core data services,  
+							%a{:href => "http://geekdoctor.blogspot.com/2014/12/kindling-fhir.html"}according to John Halamka, 
+							%span CIO of Beth Israel Deaconess Hospital. They’re implementing the API as recommended by the MITRE JASON report (see 
+							%a{:href => "http://healthit.gov/sites/default/files/ptp13-700hhs_white.pdf"} here
+							%span and 
+							%a{:href => "http://healthit.ahrq.gov/sites/default/files/docs/publication/2014-jason-data-for-individual-health.pdf"}here
+							%span). While a far cry from a ‘computable medical record’, it’s a hopeful signal flare for U.S. progress in digital healthcare.
 	.item#section7-patient.seven			
 		%section#section7-patient-content
 			.row
@@ -144,7 +152,8 @@
 						%h4.intro-quote  Most care is self care.
 						.item-img
 							%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_7.jpg"}
-						%span The startling truth is that 99% of healthcare is self care and that the actions of individuals rather than institutions are key to improving our healthcare system. Patients who are actively engaged in the management of their own healthcare increase the likelihood of having improved outcomes, reduced costs, and a better overall experience. In 2016, we can expect to see a rise in digital systems with a deep focus on patient engagement and interventions. These could include software like digital coaching and coordinated outpatient education — well-architected services that direct the right information to patients outside the clinical environment, especially for mental health.
+						.item-text
+							%span The startling truth is that 99% of healthcare is self care and that the actions of individuals rather than institutions are key to improving our healthcare system. Patients who are actively engaged in the management of their own healthcare increase the likelihood of having improved outcomes, reduced costs, and a better overall experience. In 2016, we can expect to see a rise in digital systems with a deep focus on patient engagement and interventions. These could include software like digital coaching and coordinated outpatient education — well-architected services that direct the right information to patients outside the clinical environment, especially for mental health.
 	.item#section8-companion.eight			
 		%section#section8-companion-content
 			.row
@@ -157,7 +166,8 @@
 						%h4.intro-quote  The digital health companion in your pocket: Siri meets Dr. Watson.
 						.item-img
 							%img.item-img#phone-image{:src => "../../images/features/digital-healthcare/digital_health_8.jpg"}
-						%span Virtual helpers will leverage human-modeled artificial intelligence to provide both health coaching and resources to motivate patients. Such mHealth companions will assist people in adhering to their care plans, their prescription regimens, and even outpatient treatment for complex, chronic conditions. These helpers might expand past the 2D mobile platform, seeping into other more physical services such as Echo, Nest, and Jibo.
+						.item-text
+							%span Virtual helpers will leverage human-modeled artificial intelligence to provide both health coaching and resources to motivate patients. Such mHealth companions will assist people in adhering to their care plans, their prescription regimens, and even outpatient treatment for complex, chronic conditions. These helpers might expand past the 2D mobile platform, seeping into other more physical services such as Echo, Nest, and Jibo.
 	 
 	.credit-wrapper
 		.row

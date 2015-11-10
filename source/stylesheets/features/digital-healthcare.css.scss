@@ -117,13 +117,13 @@ a {
 		}
 		
 		@media only screen and (max-width: 768px) {
-			font-size: 2em;
+			font-size: 3em;
 			color: rgb(255, 255, 255);
 	    	background-color: rgb(11, 94, 148);
 	    	background-image: none;
-	    	padding-top: 60%;
-	    	margin-bottom: 120px;
+	    	padding: 5%;
 	    	text-align: center;
+	    	height: inherit;
 		}
 
 		.title {
@@ -161,17 +161,31 @@ a {
 			line-height: 1.2em;
 		}
 		@media only screen and (max-width: 768px) {
-			font-size: 1.2em;
+			width: 90%;
+			margin: 0 auto 3px auto;
+			font-size: 1.15em;
 			line-height: 1.2em;
+			text-align: center;
 		}
 
 	}
-	
+	.mobile-cover {
+		display: none;
+		@media only screen and (max-width: 768px) {
+			display: block;
+			margin-bottom: 40px;
+			border-bottom: 30px solid rgb(11, 94, 148);
+		}
+	}
+	.mobile-cover > img {
+		width: 100%;
+	}
 }
 
 .item {
 	min-height: 400px;
-	margin-bottom: 240px;
+	margin: 15% 0 15% 0;
+
 }
 
 h4 {
@@ -181,8 +195,11 @@ h4 {
 		font-size: 1.5em;
 		font-weight: 200;
 		@media only screen and (max-width: 768px) {
+			width: 90%;
+			margin: auto;
 			text-align: center;
 			font-size: .9em;
+			line-height: 1.25em;
 		}
 	}
 	&.header-quote {
@@ -192,6 +209,7 @@ h4 {
 		font-weight: 200;
 		@media only screen and (max-width: 768px) {
 			color: rgb(255, 255, 255);
+			font-size: .5em;
 		}
 	}
 	
@@ -199,14 +217,19 @@ h4 {
 
 .no-image {
 	margin-left: 470px;
+	@media only screen and (max-width: 768px) {
+		margin-left: 0;
+	}
 }
 
 .row {
 	margin: 0 auto 0 auto;
 	max-width: 1080px;
 	width: 90%;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
 	.item-wrapper {
-		
 		.item-img {
 			max-width: 430px;
 			&.right {
@@ -226,7 +249,7 @@ h4 {
 				}
 			}
 			@media only screen and (max-width: 768px) {
-				max-width: 98%;
+				max-width: 100%;
 			}
 
 			img.item-img {
@@ -254,7 +277,7 @@ h4 {
 		.item-content {
 			min-height: 300px;
 			position: relative;
-			font-size: 1.375em;
+			font-size: 1.5em;
 			line-height: 1.5em;
 			z-index: 1;
 			&.left {
@@ -263,10 +286,15 @@ h4 {
 					text-align: left;
 				}
 			}
-			&.right {
-				text-align: left;
-			}
 
+		}
+		.item-text {
+			@media only screen and (max-width: 768px) {
+				font-size: .75em;
+				line-height: 1.5em;
+				width: 90%;
+				margin: 0 auto;
+			}
 		}
 	}
 }
@@ -343,6 +371,10 @@ h4 {
     max-width: 645px;
     width: 60%;
 	@include clearfix();
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
 	.author, .contributors {
 		float: left;
 	}
