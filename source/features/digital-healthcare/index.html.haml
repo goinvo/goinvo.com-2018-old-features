@@ -7,7 +7,7 @@
 	= javascript_include_tag "features/digital-health-scroll.js"
 	= javascript_include_tag "invo-time-feature"
 	= javascript_include_tag "vendor/responsiveslides.min.js"
-	- meta = page_for_meta("oral-history")
+	- meta = page_for_meta("digital-healthcare")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
 	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
@@ -176,17 +176,17 @@
 			.contributors
 				.contributor
 					.image
-						= image_tag 'features/digital-healthcare/contrib/jon.jpg'
-					.info
-						%h3 Contributing Author
-						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
-				%hr
-				.contributor
-					.image
 						= image_tag 'features/digital-healthcare/contrib/beth.jpg'
 					.info
 						%h3 Contributing Author & Illustrator
 						%p Beth Herlin<br><small><a href="https://twitter.com/beth11herlin">@beth11herlin</a></small>
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/jon.jpg'
+					.info
+						%h3 Contributing Author
+						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
 				%hr
 				.contributor
 					.image
