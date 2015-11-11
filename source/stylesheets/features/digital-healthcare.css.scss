@@ -107,7 +107,8 @@ a {
 		background-position: right;
 	    line-height: 1.2em;
 	    height: 80vh;
-	    max-height: 744px;
+	    max-height: 600px;
+	    min-height: 500px;
 
 	    @media only screen and (max-width: 1129px) {
 			font-size: 3em;
@@ -117,6 +118,7 @@ a {
 	    	padding: 5%;
 	    	text-align: center;
 	    	height: inherit;
+	    	min-height: 0px;
 		}
 
 		@media only screen and (max-width: 768px) {
