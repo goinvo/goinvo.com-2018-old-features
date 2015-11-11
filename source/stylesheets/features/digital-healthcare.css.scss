@@ -109,15 +109,7 @@ a {
 	    height: 80vh;
 	    max-height: 744px;
 
-	    @media only screen and (max-width: 1039px) {
-			padding-top: 13%;
-		}
-
-		@media only screen and (max-width: 920px) {
-			padding-top: 50%;
-		}
-		
-		@media only screen and (max-width: 768px) {
+	    @media only screen and (max-width: 1129px) {
 			font-size: 3em;
 			color: rgb(255, 255, 255);
 	    	background-color: rgb(11, 94, 148);
@@ -127,13 +119,16 @@ a {
 	    	height: inherit;
 		}
 
+		@media only screen and (max-width: 768px) {
+			font-size: 3em;
+		}
+
 		.title {
 			width: calc(100% - 600px);
-			@media only screen and (max-width: 920px) {
+			@media only screen and (max-width: 1129px) {
 				width: 100%;
-				background-color: rgba(255, 255, 255, .4);
 				padding: .25em;
-				font-size: .78em;
+				font-size: .9em;
 				text-align: center;
 			}
 			@media only screen and (max-width: 768px) {
@@ -170,18 +165,41 @@ a {
 		}
 
 	}
-	.mobile-cover {
+
+	.small-screen-cover {
 		display: none;
-		@media only screen and (max-width: 768px) {
+
+		@media only screen and (max-width: 1129px) {
 			display: block;
+		}
+
+		@media only screen and (max-width: 768px) {
 			background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%) , image-url('features/digital-healthcare/digital_health_cover_mobile.gif') rgba(255, 255, 255, 0.62);
 			background-size: 100%;
 			margin-bottom: 40px;
 		}
-	}
-	.mobile-cover > img {
-		visibility: hidden;
-		width: 100%;
+		
+		.mobile {
+			visibility: hidden;
+			width: 100%;
+			@media only screen and (max-width: 1129px) {
+				display: none;
+			}
+			@media only screen and (max-width: 768px) {
+				display: block;
+			}
+		}
+		
+		.desktop {
+			display: none;
+			@media only screen and (max-width: 1129px) {
+				display: block;
+			}
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+			width: 100%;
+		}
 	}
 }
 
@@ -210,7 +228,7 @@ h4 {
 		line-height: 1.5em;
 		color: rgb(11, 94, 148);
 		font-weight: 200;
-		@media only screen and (max-width: 768px) {
+		@media only screen and (max-width: 1129px) {
 			color: rgb(255, 255, 255);
 			font-size: .5em;
 		}
