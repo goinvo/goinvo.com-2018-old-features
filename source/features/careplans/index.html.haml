@@ -1,0 +1,81 @@
+- content_for(:title) do
+	= "Care Plans"
+- content_for(:page_head) do
+	= stylesheet_link_tag "features/careplans"
+	= stylesheet_link_tag "feature-elements"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "features/careplans-scroll.js"
+	= javascript_include_tag "invo-time-feature"
+	= javascript_include_tag "vendor/responsiveslides.min.js"
+	- meta = page_for_meta("digital-healthcare")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%article#feature-article.digital-healthcare
+	
+
+	.overall-header 
+		.title 
+			Care Plans: Part 1
+	/ .small-screen-cover
+	/ 	%img.desktop{:src => ""}
+	/ 	%img.mobile{:src => ""}
+	%header.nav-wrapper.stuck
+		%nav.main-nav
+			%a.one{:href => "#"} What are they?
+			%a.two{:href => "#"} What's in them?
+			%a.three{:href => "#"} How do they work?
+			%a.four{:href => "#"} How did they start?
+	%header.nav-wrapper.scroll-nav
+		%nav.main-nav
+			%a.one{:href => "#"} What are they?
+			%a.two{:href => "#"} What's in them?
+			%a.three{:href => "#"} How do they work?
+			%a.four{:href => "#"} How did they start?
+	.item.one			
+		%h1 What are they?
+	.item.two			
+		%h1 What's in them?
+	.item.three			
+		%h1 How do they work?
+	.item.four			
+		%h1 How did they start?
+	.credit-wrapper
+		.row
+			- # BEGIN Credits: Copy from this line.
+		#credits
+			.contributors
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/beth.jpg'
+					.info
+						%h3 Contributing Author & Illustrator
+						%p Beth Herlin<br><small><a href="https://twitter.com/beth11herlin">@beth11herlin</a></small>
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/jon.jpg'
+					.info
+						%h3 Contributing Author
+						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
+					.info
+						%h3 Web Developer & Designer
+						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>	
+				%hr
+				.contributor
+					.image
+						= image_tag 'features/democracy/contrib/juhan.jpg'
+					.info
+						%h3 Contributing Author
+						%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
+		- # END Credits. Copy to this %%%%%line.
