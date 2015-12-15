@@ -200,7 +200,7 @@
 				}
 			}
 		},
-		"ortho":{
+		"option01":{
 			"care team":", Orthopedic, Surgeon, Anesthetist, Nurse, Physical Therapist, Pharmacist",
 			"care plan":{
 				"Nutrition":{
@@ -250,7 +250,7 @@
 				}
 			}
 		},
-		"puberty":{
+		"option11":{
 			"care team":"",
 			"care plan":{
 				"Nutrition":{
@@ -300,7 +300,7 @@
 				}
 			}
 		},
-		"caregiver":{
+		"option02":{
 			"care team":", Online Caregiver Support Group, Loved one in need of care, Assistive Care Service",
 			"care plan":{
 				"Nutrition":{
@@ -350,7 +350,7 @@
 				}
 			}
 		},
-		"chlamydia":{
+		"option12":{
 			"care team":"Pharmacist",
 			"care plan":{
 				"Nutrition":{
@@ -400,7 +400,7 @@
 				}
 			}
 		},
-		"dementia":{
+		"option03":{
 			"care team":", Neurologist, Pharmacist, Live-in Professional Caregiver",
 			"care plan":{
 				"Nutrition":{
@@ -450,7 +450,7 @@
 				}
 			}
 		},
-		"hypertension":{
+		"option13":{
 			"care team":", Cardiologist, Pharmacist",
 			"care plan":{
 				"Nutrition":{
