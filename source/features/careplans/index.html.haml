@@ -1,13 +1,20 @@
 - content_for(:title) do
 	= "Care Plans"
 - content_for(:page_head) do
+	= stylesheet_link_tag "vendor/bootstrap.min.css"
 	= stylesheet_link_tag "features/careplans"
 	= stylesheet_link_tag "feature-elements"
+	
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "vendor/jquery.js"
+	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/careplans/tab.js"
+	= javascript_include_tag "features/careplans/checkboxes.js"
 	= javascript_include_tag "features/careplans-scroll.js"
 	= javascript_include_tag "invo-time-feature"
 	= javascript_include_tag "vendor/responsiveslides.min.js"
-	- meta = page_for_meta("digital-healthcare")
+	
+	- meta = page_for_meta("careplans")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
 	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
@@ -17,10 +24,10 @@
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%article#feature-article.digital-healthcare
-	
-
+%article#feature-article
 	.overall-header 
+		/ %video#bgVideo{:preload => "true", :autoplay => "true", :loop => "true"}
+		/ 	%source{:src => "../../images/careplans/FeatureBanner_v02_slow.mp4", :type => "video/mp4"}
 		.title 
 			Care Plans: Part 1
 	/ .small-screen-cover
@@ -44,6 +51,24 @@
 		%h1 What's in them?
 	.item.three			
 		%h1 How do they work?
+		.careplan-diagram
+			%ul.nav.nav-tabs#tabs
+				%li.active{:role=> "presentation"}
+					%a{:href=> "#1", :data=> {:toggle=> "tab"}}
+						= partial("features/careplans/profile_tab", :locals => {:index=>0} )
+				%li{:role=> "presentation"}
+					%a{:href=> "#2", :data=> {:toggle=> "tab"}}
+						= partial("features/careplans/profile_tab", :locals => {:index=>1} )
+				%li{:role=> "presentation"}
+					%a{:href=> "#3", :data=> {:toggle=> "tab"}}
+						= partial("features/careplans/profile_tab", :locals => {:index=>2} )
+			.tab-content
+				.tab-pane.active{:id=> "1"}
+					= partial("features/careplans/diagram", :locals => {:index=>0} )
+				.tab-pane{:id=> "2"}
+					= partial("features/careplans/diagram", :locals => {:index=>1} )
+				.tab-pane{:id=> "3"}
+					= partial("features/careplans/diagram", :locals => {:index=>2} )
 	.item.four			
 		%h1 How did they start?
 	.credit-wrapper

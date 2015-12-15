@@ -1,0 +1,112 @@
+= javascript_include_tag "features/careplans/checkboxes.js"
+- profile = data.features.careplans.profiles[index]
+- careplan = profile["care plan"]
+.container-fluid.profile{:data=>{:index=> index, :patient=> profile.name}}
+  .row
+    #col.col-md-12
+      %h6 Patient Summary
+      %p.summary=profile.summary.html_safe
+  .row
+    #col.col-md-6
+      %h6 Health Concerns (Choose 2)
+      .col-md-6
+        .checkbox
+          %label
+            %input{:type=> "checkbox", :id=>"depression"} Depression
+        .checkbox
+          %label
+            %input{:type=> "checkbox", :id=>"smoking"} Smoking
+        .checkbox
+          %label
+            %input{:type=> "checkbox", :id=>"option0"}=profile.options[0].html_safe
+      .col-md-6
+        .checkbox
+          %label
+            %input{:type=> "checkbox", :id=>"obesity"} Obesity
+        .checkbox  
+          %label
+            %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes
+        .checkbox
+          %label
+            %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe
+    #col.col-md-6
+      %h6 Care Team
+      %p.care-team=profile["care team"].html_safe
+  .row
+    #col.col-md-12  
+      %table.table.table-bordered
+        %tr.headers
+          %td.header.blank
+          - data.features.careplans.globals[0]["content headers"].each do |header|
+            %td.header=header.html_safe
+        - careplan.each do |component|
+          - row_id = component[0].strip.delete(' ')
+          %tr{:id=> "#{row_id}"}
+            %td.header=component[0].html_safe
+            - component[1].each do |content|
+              -selector = "."+component[0]+"."+content[0]
+              %td.content{:id=> "#{content[0]}"}
+                %span=content[1].html_safe
+                  
+
+        / -if = partial("features/careplans/profile_tab", :locals => {:index=>2} )
+        / var id = $(this).attr("id");
+        /var additionalContent = html("<%= escape_javascript render(:partial => 'features/careplans/condition', :locals => { :id => this.id }) %>");
+        /$(selector).append(additionalContent);
+        / %tr.nutrition
+        /   %td.header
+        /     Nutrition
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.physical
+        /   %td.header
+        /     Physical Activity
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.sleep
+        /   %td.header
+        /     Sleep
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.mental
+        /   %td.header
+        /     Mental Resilience
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.medication
+        /   %td.header
+        /     Managing Medication
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.sexual-health
+        /   %td.header
+        /     Sexual Health
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.bad-habits
+        /   %td.header
+        /     Cessation of Bad Habits
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.vitals
+        /   %td.header
+        /     Tracking Vitals
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+        / %tr.adl
+        /   %td.header
+        /     Managing ADLs
+        /   %td.goals
+        /   %td.instruction
+        /   %td.review
+  / -option = profile.options[index]
+  / %ul
+  /   %li=option.html_safe

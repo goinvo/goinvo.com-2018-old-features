@@ -1,0 +1,504 @@
+[
+	{
+		"diabetes":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"obesity":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"smoking":{
+			"care team":"Smoking Cessation Support Group",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"Smoking cessation products and therapies could double or triple the chance of lasting change: try the patch or a support group.<br>Enlist the help of a friend or family member to hold you accountable.",
+					"review":"Review the need for and refer to smoking cessation resources."
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"Quit Smoking.",
+					"instruction":"Say \"No\" to smoking for good, the health rewards begin immediately.",
+					"review":"Review smoking behaviors."
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"depression":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"ortho":{
+			"care team":", Orthopedic, Surgeon, Anesthetist, Nurse, Physical Therapist, Pharmacist",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"puberty":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"caregiver":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"chlamydia":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"dementia":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		},
+		"hypertension":{
+			"care team":"",
+			"care plan":{
+				"Nutrition":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Physical Activity":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sleep":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Mental Resilience":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing Medication":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Sexual Health":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Cessation of Bad Habits":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Tracking Vitals":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				},
+				"Managing ADLs":{
+					"goals":"",
+					"instruction":"",
+					"review":""
+				}
+			}
+		}
+	}
+]
