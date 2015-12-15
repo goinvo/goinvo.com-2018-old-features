@@ -17,7 +17,7 @@ function addCondition (id) {
 	$.getJSON("/features/careplans/data/conditions.json", function (data) {
     	var condition = data[0][id];
     	if (condition != undefined) {
-	    	if( $('.care-team > .'+id).length == 0 ){
+	    	if( $(".tab-pane.active").find('.care-team > .'+id).length == 0 ){
 		    	$('.care-team').append("<span class="+id+">"+condition["care team"]+"</span>");
 		    }
 	    	$.each(condition["care plan"], function(component, content) {

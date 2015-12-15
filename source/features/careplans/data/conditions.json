@@ -1,6 +1,7 @@
 [
 	{
 		"diabetes":{
+			"summary":"",
 			"care team":", Endocrinologist, Pharmacist, Personal Trainer, Diabetes Support Group",
 			"care plan":{
 				"Nutrition":{
@@ -51,6 +52,7 @@
 			}
 		},
 		"obesity":{
+			"summary":"",
 			"care team":", Personal Trainer, Weight-Loss Program",
 			"care plan":{
 				"Nutrition":{
@@ -101,6 +103,7 @@
 			}
 		},
 		"smoking":{
+			"summary":"",
 			"care team":", Smoking Cessation Support Group",
 			"care plan":{
 				"Nutrition":{
@@ -151,6 +154,7 @@
 			}
 		},
 		"depression":{
+			"summary":"",
 			"care team":", Psychiatrist, Psychologist, Pharmacist",
 			"care plan":{
 				"Nutrition":{
@@ -201,6 +205,7 @@
 			}
 		},
 		"option01":{
+			"summary":"",
 			"care team":", Orthopedic, Surgeon, Anesthetist, Nurse, Physical Therapist, Pharmacist",
 			"care plan":{
 				"Nutrition":{
@@ -251,6 +256,7 @@
 			}
 		},
 		"option11":{
+			"summary":"",
 			"care team":"",
 			"care plan":{
 				"Nutrition":{
@@ -301,6 +307,7 @@
 			}
 		},
 		"option02":{
+			"summary":"",
 			"care team":", Online Caregiver Support Group, Loved one in need of care, Assistive Care Service",
 			"care plan":{
 				"Nutrition":{
@@ -351,6 +358,7 @@
 			}
 		},
 		"option12":{
+			"summary":"",
 			"care team":"Pharmacist",
 			"care plan":{
 				"Nutrition":{
@@ -401,6 +409,7 @@
 			}
 		},
 		"option03":{
+			"summary":"Donna has also been displaying early symptoms of dementia and has recently met with her doctor to address this issue.",
 			"care team":", Neurologist, Pharmacist, Live-in Professional Caregiver",
 			"care plan":{
 				"Nutrition":{
@@ -451,6 +460,7 @@
 			}
 		},
 		"option13":{
+			"summary":"Donna was recently diagnosed with hypertension at her last annual check-up.",
 			"care team":", Cardiologist, Pharmacist",
 			"care plan":{
 				"Nutrition":{
