@@ -9,7 +9,6 @@
 	= javascript_include_tag "vendor/jquery.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
 	= javascript_include_tag "features/careplans/tab.js"
-	= javascript_include_tag "features/careplans/checkboxes.js"
 	= javascript_include_tag "features/careplans-scroll.js"
 	= javascript_include_tag "invo-time-feature"
 	= javascript_include_tag "vendor/responsiveslides.min.js"
@@ -53,21 +52,21 @@
 		%h1 How do they work?
 		.careplan-diagram
 			%ul.nav.nav-tabs#tabs
+				/ %li.active{:role=> "presentation"}
+				/ 	%a{:href=> "#1", :data=> {:toggle=> "tab"}}
+				/ 		= partial("features/careplans/profile_tab", :locals => {:index=>0} )
+				/ %li{:role=> "presentation"}
+				/ 	%a{:href=> "#2", :data=> {:toggle=> "tab"}}
+				/ 		= partial("features/careplans/profile_tab", :locals => {:index=>1} )
 				%li.active{:role=> "presentation"}
-					%a{:href=> "#1", :data=> {:toggle=> "tab"}}
-						= partial("features/careplans/profile_tab", :locals => {:index=>0} )
-				%li{:role=> "presentation"}
-					%a{:href=> "#2", :data=> {:toggle=> "tab"}}
-						= partial("features/careplans/profile_tab", :locals => {:index=>1} )
-				%li{:role=> "presentation"}
 					%a{:href=> "#3", :data=> {:toggle=> "tab"}}
 						= partial("features/careplans/profile_tab", :locals => {:index=>2} )
 			.tab-content
-				.tab-pane.active{:id=> "1"}
-					= partial("features/careplans/diagram", :locals => {:index=>0} )
-				.tab-pane{:id=> "2"}
-					= partial("features/careplans/diagram", :locals => {:index=>1} )
-				.tab-pane{:id=> "3"}
+				/ .tab-pane.active{:id=> "1"}
+				/ 	= partial("features/careplans/diagram", :locals => {:index=>0} )
+				/ .tab-pane{:id=> "2"}
+				/ 	= partial("features/careplans/diagram", :locals => {:index=>1} )
+				.tab-pane.active{:id=> "3"}
 					= partial("features/careplans/diagram", :locals => {:index=>2} )
 	.item.four			
 		%h1 How did they start?
