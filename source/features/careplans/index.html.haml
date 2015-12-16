@@ -4,7 +4,7 @@
 	= stylesheet_link_tag "vendor/bootstrap.min.css"
 	= stylesheet_link_tag "features/careplans"
 	= stylesheet_link_tag "feature-elements"
-	
+
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "vendor/jquery.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
@@ -12,7 +12,7 @@
 	= javascript_include_tag "features/careplans-scroll.js"
 	= javascript_include_tag "invo-time-feature"
 	= javascript_include_tag "vendor/responsiveslides.min.js"
-	
+
 	- meta = page_for_meta("careplans")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -24,10 +24,10 @@
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
 %article#feature-article
-	.overall-header 
+	.overall-header
 		/ %video#bgVideo{:preload => "true", :autoplay => "true", :loop => "true"}
 		/ 	%source{:src => "../../images/careplans/FeatureBanner_v02_slow.mp4", :type => "video/mp4"}
-		.title 
+		.title
 			Care Plans: Part 1
 	/ .small-screen-cover
 	/ 	%img.desktop{:src => ""}
@@ -44,11 +44,11 @@
 			%a.two{:href => "#"} What's in them?
 			%a.three{:href => "#"} How do they work?
 			%a.four{:href => "#"} How did they start?
-	.item.one			
+	.item.one
 		%h1 What are they?
-	.item.two			
+	.item.two
 		%h1 What's in them?
-	.item.three			
+	.item.three
 		%h1 How do they work?
 		.careplan-diagram
 			%ul.nav.nav-tabs#tabs
@@ -68,10 +68,35 @@
 					= partial("features/careplans/diagram", :locals => {:index=>1} )
 				.tab-pane{:id=> "3"}
 					= partial("features/careplans/diagram", :locals => {:index=>2} )
-	.item.four			
+	.item.four
 		%h1 How did they start?
+		%ul.history-items
+			%li.history-item
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="1.5" fill="white"/></svg> 31st BC-15th Century
+				%p.history-item__content Much of medical history was focused in reactive care, rather than taking preventative measures for the individual’s health. In the middle ages especially, the idea of preventative care could also have been stunted by the explanations of medical phenomena connected to spirituality and religious belief systems. Preceding modern medicine, most of the care regimens provided to patients were focused on either external symptoms, or a spiritual or magical basis.
+			%li.history-item
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="2" fill="white"/></svg> 6th-19th Century
+				%p.history-item__content The 16th to 19th century was a period of heavy scientific discovery, leading to the transition of supernatural explanations to natural explanations for disease and illness. People began to see illness as something that could eventually be eradicated, and saw health as a natural state of the body that should be maintained and protected, further stepping away from traditional notions of supernatural explanations or divine punishment.
+			%li.history-item
+				%div#nurse_popup
+					%img#nurse_popup_img(src="../../../images/careplans/nursing_img.jpg")
+					%p.popup_text_header Nursing
+					%p.popup_text_content ksksksksjsksksjsk
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="2" fill="white"/></svg> 1930s
+				%p.history-item__content The 1930s marked the entry of clinically driven care plans into the <span id="nursing">nursing</span> field. When stays in the hospital were longer, there was time to implement written plans. Nursing team leads would also use care plans as a guide for the less-educated members of the team.
+			%li.history-item
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="2" fill="white"/></svg> 1970s
+				%p.history-item__content There were many fields involved in the emergence of <span>life care planning</span> during this time. The converging principles of the fields of experimental analysis of behavior <span>(EAB)</span>, <span>developmental psychology</span>, and <span>case management</span> established life care planning factors: a summative statement, communication tool, preventative planning, basic components, individualized plans, and needs come first ideology.
+			%li.history-item
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="2" fill="white"/></svg> 1980s
+				%p.history-item__content Starting in the 1980s and in the following decades, life care planners were involved in consultations with insurance carriers and also with attorneys involved in litigation. Life care planning played a huge initial role in the field of <span>litigation</span>. It has since expanded into elder care, chronic illness and discharge planning. It has also expanded the number and types of professions who can each be involved in a part of care planning.
+			%li.history-item
+				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#347299" stroke-width="2" fill="white"/></svg> 2000s
+				%p.history-item__content The breadth of professionals and care providers within life care planning expanded, with individuals coming from rehabilitation counseling, rehabilitation nursing, physiatry, and case management professions. Both paper based and digital technology based care plans were regularly being used by patients and their care providers. A proliferation of digital technology based care plans also began to take hold in later years. Healthtap, Amwell, Better., HelloDoctor, HealthKit, My Chart, Practice Fusion, Health Vault, AskMD, Happify, and Healarium are all more well known examples.
 	.credit-wrapper
 		.row
+		%script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+		%script(src="../../../javascripts/features/careplans/case_studies.js")
 			- # BEGIN Credits: Copy from this line.
 		#credits
 			.contributors
@@ -94,7 +119,7 @@
 						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
 					.info
 						%h3 Web Developer & Designer
-						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>	
+						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>
 				%hr
 				.contributor
 					.image
