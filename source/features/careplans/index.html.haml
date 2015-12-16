@@ -4,6 +4,7 @@
 	= stylesheet_link_tag "vendor/bootstrap.min.css"
 	= stylesheet_link_tag "features/careplans"
 	= stylesheet_link_tag "feature-elements"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
 	
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "vendor/jquery.js"
@@ -44,11 +45,53 @@
 			%a.two{:href => "#"} What's in them?
 			%a.three{:href => "#"} How do they work?
 			%a.four{:href => "#"} How did they start?
-	.item.one			
+	.part.one			
 		%h1 What are they?
-	.item.two			
+	.part.two			
 		%h1 What's in them?
-	.item.three			
+		.component-chart
+			%h4 A chart will live here. 
+			.container-fluid
+				.row
+					.col-md-12
+						%span See,
+				.row
+					.col-md-4
+						%span I
+					.col-md-4
+						%span am
+					.col-md-4
+						%span a
+				.row
+					.col-md-12
+						%span chart.
+		.content-carousel
+			-cards = data.features.careplans.care_cards
+			#care-cards.carousel.slide{:data=>{:ride=>"carousel"}}
+				%ol.card-carousel-indicators
+					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
+						%object.icon{:type=>"image/svg+xml", :data=>cards[0].icon}
+					-(1..8).each do |i|
+						%li{:data=>{:target=>"#care-cards", :slide=>{:to=>"#{i}"}}}
+							%object.icon{:type=>"image/svg+xml", :data=>cards[i].icon}
+				.carousel-inner{:role=>"listbox"}
+					.item.active
+						.container-fluid
+							.row
+								.col-md-6
+									%img.care-card-img{:src=>cards[0].img}
+								.col-md-6
+									%h5=cards[0].header
+					-(1..8).each do |j|
+						.item
+							.container-fluid
+								.row
+									.col-md-6
+										%img.care-card-img{:src=>cards[j].img}
+									.col-md-6
+										%h5=cards[j].header
+
+	.part.three			
 		%h1 How do they work?
 		.careplan-diagram
 			%ul.nav.nav-tabs#tabs
@@ -68,7 +111,7 @@
 					= partial("features/careplans/diagram", :locals => {:index=>1} )
 				.tab-pane{:id=> "3"}
 					= partial("features/careplans/diagram", :locals => {:index=>2} )
-	.item.four			
+	.part.four			
 		%h1 How did they start?
 	.credit-wrapper
 		.row

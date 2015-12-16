@@ -1,0 +1,56 @@
+[
+	{
+		"header":"Nutrition",
+		"content":"",
+		"img":"../../images/careplans/care_cards/2_EatFood.jpg",
+		"icon":"../../images/careplans/icons/nutrition.svg"
+	},
+	{
+		"header":"Physical Activity",
+		"content":"",
+		"img":"../../images/careplans/care_cards/4_ExerciseIsMedicine.jpg",
+		"icon":"../../images/careplans/icons/activity.svg"
+	},
+	{
+		"header":"Sleep",
+		"content":"",
+		"img":"../../images/careplans/care_cards/5_GetMoreSleep.jpg",
+		"icon":"../../images/careplans/icons/sleep.svg"
+	},
+	{
+		"header":"Mental Resilience",
+		"content":"",
+		"img":"../../images/careplans/care_cards/24_TellSomeone.jpg",
+		"icon":"../../images/careplans/icons/mental.svg"
+	},
+	{
+		"header":"Managing Medication",
+		"content":"",
+		"img":"../../images/careplans/care_cards/11_TakeYourMedsOnTime.jpg",
+		"icon":"../../images/careplans/icons/medication.svg"
+	},
+	{
+		"header":"Sexual Health",
+		"content":"",
+		"img":"../../images/careplans/care_cards/13_WrapItBeforeYouTapIt.jpg",
+		"icon":"../../images/careplans/icons/sex.svg"
+	},
+	{
+		"header":"Cessation of Bad Habits",
+		"content":"",
+		"img":"../../images/careplans/care_cards/10_Quit-Smoking.jpg",
+		"icon":"../../images/careplans/icons/habits.svg"
+	},
+	{
+		"header":"Tracking Vitals",
+		"content":"",
+		"img":"../../images/careplans/care_cards/19_KnowYourNumbers.jpg",
+		"icon":"../../images/careplans/icons/vitals.svg"
+	},
+	{
+		"header":"Managing ADLs",
+		"content":"",
+		"img":"../../images/careplans/care_cards/7_Don'tRushTheBrush.jpg",
+		"icon":"../../images/careplans/icons/adls.svg"
+	}
+]

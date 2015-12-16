@@ -82,7 +82,7 @@ a {
 
 #feature-article{
 	width: 100%;
-	
+	font-family: 'Work Sans', sans-serif;
 	.overall-header {
 	    width: 100%;
 	    font-size: 3.5em;
@@ -135,6 +135,39 @@ a {
 	}
 }
 
+.content-carousel{
+	ol {
+	    display: inline-block;
+	    list-style: none;
+		width: 100%;
+	    z-index: 15;
+	    text-align: center;
+	}
+	ol li {
+	    display: inline-block;
+		width: 80px;
+		margin: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		background-color: transparent;
+		border: none;
+		&.active > object {
+			width: 100px;
+		}
+	}
+
+	.item {
+		width: 60%;
+		margin: auto;
+	}
+
+	.care-card-img {
+		max-height: 400px;
+	}
+
+}
+
 .profile {
 /*	//display: table;
 	//max-height: 800px;
@@ -156,7 +189,7 @@ a {
 	}
 }
 
-.item {
+.part {
 	min-height: 400px;
 	width: 100%;
 	padding: 0 5% 40px 5%;
