@@ -135,7 +135,26 @@ a {
 	}
 }
 
-.content-carousel{
+.component-chart {
+	padding: 40px 10%;
+
+	#components {
+		border: solid rgb(11, 94, 148) 2px;
+		border-radius: 5px;
+	
+		#summary {
+			border-bottom: solid rgb(11, 94, 148) 2px;	
+		}
+		#care-team {
+			border-top: solid rgb(11, 94, 148) 2px;
+		}
+		#col {
+			border-right: solid rgb(11, 94, 148) 2px;
+		}
+	}
+}
+
+.content-carousel {
 	ol {
 	    display: inline-block;
 	    list-style: none;
@@ -158,12 +177,11 @@ a {
 	}
 
 	.carousel-inner {
-		padding: 20px 80px 20px 80px;
+		padding: 20px 10%;
 		background-color: rgb(190, 190, 190);
 	}
 
 	.item{
-		width: 80%;
 		margin: auto;
 	}
 
@@ -189,11 +207,22 @@ a {
 
 }
 
+#tabs > li {
+	width: 33.33%;
+	text-align: center;
+}
+
+#tabs > li > a {
+	color: rgb(0,0,0);
+}
+
+#tabs > li.active > a {
+	background-color: rgb(11, 94, 148);
+	border-color: rgb(11, 94, 148);
+	color: white;
+}
+
 .profile {
-/*	//display: table;
-	//max-height: 800px;
-	//height: 100%;
-	//width: 100%;*/
 	.row {
 		height: 100%;
 		max-height: 250px;
@@ -211,14 +240,13 @@ a {
 }
 
 .part {
-	min-height: 400px;
 	width: 100%;
-	padding: 0 5% 40px 5%;
+	padding: 40px 10% 40px 10%;
 
 	&.one {
+		padding: 40px 10%;
 		background-color: rgb(11, 94, 148);
 		color: white;
-		height: 200px;
 	}
 	&.two {
 		padding: 0;

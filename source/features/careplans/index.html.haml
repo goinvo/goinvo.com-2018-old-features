@@ -46,25 +46,44 @@
 			%a.three{:href => "#"} How do they work?
 			%a.four{:href => "#"} How did they start?
 	.part.one			
-		%h1 What are they?
+		%p 
+			A 
+			%strong care plan
+			is a 
+			%strong synthesis 
+			of all plans of care produced by you and your providers to manage your health 
+			%strong day to day
+			=". It serves as a continuous, conceptual" 
+			%strong framework 
+			shared by all of your care team members to 
+			%strong guide
+			your care. 
 	.part.two			
-		%h1 What's in them?
 		.component-chart
-			%h4 A chart will live here. 
-			.container-fluid
-				.row
+			%p Care plans usually consist of these universal components: 
+			.container-fluid#components
+				.row#summary
 					.col-md-12
-						%span See,
+						%h6 Patient Summary
+						%p Summarized history includes basic information such as demographics (name, age, contact info, ethnic or religious beliefs), health metrics (weight, blood pressure, etc), allergies, or medications and therapies. It can also contain past health history such as past hospitalizations.
 				.row
-					.col-md-4
-						%span I
-					.col-md-4
-						%span am
-					.col-md-4
-						%span a
-				.row
+					.col-md-2#col
+						%h6 Health Concerns
+						%p These can include a variety of issues such as medical, surgical, behavioral, cognition, mood, environmental factors, financial, and more.
+					.col-md-3#col
+						%h6 Goals
+						%p Goals are used to measure progress. They give a care plan direction and are the first indicator of what path a patient is taking to manage their health concerns. Care plans are typically made up of a few high level goals that consist of many smaller short-term goals.
+					.col-md-5#col
+						%h6 Instructions & Interventions
+						%p Information or directions given to you and your other providers make up the instructions of your care plan. This can include how to care for a condition, what to do at home, when to call for help, or changes to the medication. Interventions are actions taken, most often by you, to work toward achieving care plan goals. This can include symptom and medication management, community/social services, and removal of barriers to success.
+					.col-md-2
+						%h6 Review
+						%p You and your provider evaluate the effectiveness of the care plan, and make adjustments where appropriate.
+				.row#care-team
 					.col-md-12
-						%span chart.
+						%h6 Care Team
+						%p Your care team is everyone who manages or provides care, including yourself. Medical practitioners, nurses, social workers, and caregivers are just a few examples. 
+			%p While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
 			#care-cards.carousel.slide{:data=>{:ride=>"carousel"}}
@@ -98,7 +117,8 @@
 						%span >
 
 	.part.three			
-		%h1 How do they work?
+		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
+		%p Explore how the care plan changes these factors across the three individuals below.
 		.careplan-diagram
 			%ul.nav.nav-tabs#tabs
 				%li.active{:role=> "presentation"}
