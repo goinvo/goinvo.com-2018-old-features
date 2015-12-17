@@ -352,6 +352,7 @@ a {
 		padding-left: 5px;
 		padding-right: 5px;
 		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
+		position: relative; 
 	}
 	.selected {
 		background-color: #2A5E81;
@@ -407,6 +408,7 @@ a {
 		left: 12.5rem;
 		width: 450px;
 		height: 305px;
+		position: absolute;
 	}
 	#nurse_popup_img {
 		width: 50%;
