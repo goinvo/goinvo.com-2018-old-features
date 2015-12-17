@@ -157,9 +157,9 @@ a {
 		}
 	}
 
-	.item {
-		width: 60%;
-		margin: auto;
+	.carousel-inner {
+		padding: 20px 80px 20px 80px;
+		background-color: rgb(190, 190, 190);
 	}
 
 	.care-card-img {
@@ -198,6 +198,9 @@ a {
 		background-color: rgb(11, 94, 148);
 		color: white;
 		height: 200px;
+	}
+	&.two {
+		padding: 0;
 	}
 }
 
