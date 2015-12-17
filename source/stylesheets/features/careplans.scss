@@ -403,10 +403,10 @@ a {
 	}
 	//popup content for each case study
 	#nurse_popup {
-		bottom: 81.5rem;
+		bottom: 82.5rem;
 		left: 12.5rem;
 		width: 450px;
-		height: 300px;
+		height: 305px;
 	}
 	#nurse_popup_img {
 		width: 50%;
@@ -425,10 +425,10 @@ a {
 		bottom: 76.5rem;
 		left: 4.5rem;
 		width: 530px;
-		height: 270px;
+		height: 275px;
 	}
 	#life_care_planning_popup_img {
-		width: 20rem;
+		width: 20.4rem;
 	}
 	#life_care_planning_popup_header {
 		padding: 5px 5px;
@@ -441,11 +441,11 @@ a {
 	#EAB_popup {
 		bottom: 75.1rem;
 		left: 4.5rem;
-		width: 620px;
-		height: 253px;
+		width: 635px;
+		height: 263px;
 	}
 	#EAB_popup_img {
-		width: 20rem;
+		width: 20.7rem;
 	}
 	#EAB_popup_header {
 		padding: 5px 5px;
@@ -459,11 +459,11 @@ a {
 	#developmental_psychology_popup {
 		bottom: 75.1rem;
 		left: 10.5rem;
-		width: 680px;
-		height: 253px;
+		width: 720px;
+		height: 270px;
 	}
 	#developmental_psychology_popup_img {
-		width: 23.6rem;
+		width: 25.3rem;
 	}
 	#developmental_psychology_popup_header {
 		padding: 5px 5px;
@@ -472,7 +472,43 @@ a {
 	}
 	#developmental_psychology_popup_content {
 		padding-left: 1.5rem;
+		width: 290px;
+	}
+	#case_management_popup {
+		bottom: 75.1rem;
+		left: 12.5rem;
+		width: 690px;
+		height: 273px;
+	}
+	#case_management_popup_img {
+		width: 24.7rem;
+	}
+	#case_management_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#case_management_popup_content {
+		padding-left: 1.5rem;
 		width: 280px;
+	}
+	#litigation_popup {
+		bottom: 68.3rem;
+		left: 7.5rem;
+		width: 670px;
+		height: 244px;
+	}
+	#litigation_popup_img {
+		width: 22.8rem;
+	}
+	#litigation_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#litigation_popup_content {
+		padding-left: 1.5rem;
+		width: 285px;
 	}
 	//triangle positioning for each case study
 	#nursing_triangle {
@@ -485,13 +521,23 @@ a {
 	}
 	#EAB_triangle {
 		left: 5.7rem;
-		top: 16rem;
+		top: 16.3rem;
 		color: #444;
 	}
 	#developmental_psychology_triangle {
 		left: 7.7rem;
-		top: 16rem;
+		top: 16.8rem;
 		color: #C9A799;
+	}
+	#case_management_triangle {
+		left: 17.7rem;
+		top: 17rem;
+		color: #14252F;
+	}
+	#litigation_triangle {
+		left: 25.7rem;
+		top: 15.2rem;
+		color: #efefef;
 	}
 }
 
