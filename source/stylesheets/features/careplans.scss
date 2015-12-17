@@ -333,13 +333,16 @@ a {
 		font-size: 14px;
 		font-weight: bolder;
 		line-height: 45px;
+		font-family: work sans, sans-serif;
 	}
 	.history-item__content {
 		color: black;
 		font-size: 14px;
 		line-height: 21px;
-		padding-left: 3.6%;
+		padding-left: 2.1rem;
 		margin-bottom: 0;
+		font-weight: 300;
+		font-family: work sans, sans-serif;
 	}
 	span {
 		background-color: #EFEFEF;
@@ -350,33 +353,145 @@ a {
 		padding-right: 5px;
 		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
 	}
+	.selected {
+		background-color: #2A5E81;
+		color: white;
+		font-weight: bold;
+		border-radius: 3px;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
+	}
 
 //popup interactivity
-	#nurse_popup {
+	//popup shape
+	.popup {
 		position: absolute;
-		bottom: 80rem;
-		left: 30rem;
-		width: 380px;
-		height: 240px;
 		background-color: #EFEFEF;
 		display: none;
+		border-radius: 5px;
+		box-shadow: 1.5px 1.5px 1px 1px #c6c6c6;
 	}
-	#nurse_popup_img {
+	.popup_img {
 		float: left;
-		width: 50%;
-		height: 100%;
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
 	}
+	.triangle_down {
+		position: absolute;
+		color: #efefef;
+		width: 15px;
+		text-shadow: -0.2px -1.2px 0.01px #c6c6c6;
+		transform: rotate(180deg) scaleX(4.8) scaleY(2.2);
+	}
+	//popup content classes
 	.popup_text_header {
 		color: #0B5E94;
-		padding: 5px 5px;
-		padding: 1rem 7.2rem 1rem 0rem;
-		margin-bottom: 0;
-		float: right;
+		float: left;
+		font-size: 14px;
+		font-weight: bold;
+		font-family: work sans, sans-serif;
 	}
 	.popup_text_content {
 		float: left;
 		color: black;
-		padding-left: 1rem;
+		font-size: 14px;
+		font-weight: 300;
+		width: 200px;
+		font-family: work sans, sans-serif;
+		line-height: 21px;
+	}
+	//popup content for each case study
+	#nurse_popup {
+		bottom: 81.5rem;
+		left: 12.5rem;
+		width: 450px;
+		height: 300px;
+	}
+	#nurse_popup_img {
+		width: 50%;
+		height: 100%;
+	}
+	#nursing_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#nursing_popup_content {
+		padding-left: 1.5rem;
+		width: 14em;
+	}
+	#life_care_planning_popup {
+		bottom: 76.5rem;
+		left: 4.5rem;
+		width: 530px;
+		height: 270px;
+	}
+	#life_care_planning_popup_img {
+		width: 20rem;
+	}
+	#life_care_planning_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#life_care_planning_popup_content {
+		padding-left: 1.5rem;
+	}
+	#EAB_popup {
+		bottom: 75.1rem;
+		left: 4.5rem;
+		width: 620px;
+		height: 253px;
+	}
+	#EAB_popup_img {
+		width: 20rem;
+	}
+	#EAB_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#EAB_popup_content {
+		padding-left: 1.5rem;
+		width: 280px;
+	}
+	#developmental_psychology_popup {
+		bottom: 75.1rem;
+		left: 10.5rem;
+		width: 680px;
+		height: 253px;
+	}
+	#developmental_psychology_popup_img {
+		width: 23.6rem;
+	}
+	#developmental_psychology_popup_header {
+		padding: 5px 5px;
+		padding: 1rem 1rem 0.8rem 1.5rem;
+		margin-bottom: 0;
+	}
+	#developmental_psychology_popup_content {
+		padding-left: 1.5rem;
+		width: 280px;
+	}
+	//triangle positioning for each case study
+	#nursing_triangle {
+		left: 20.5rem;
+		top: 18.9rem;
+	}
+	#life_care_planning_triangle {
+		left: 25.7rem;
+		top: 17.1rem;
+	}
+	#EAB_triangle {
+		left: 5.7rem;
+		top: 16rem;
+		color: #444;
+	}
+	#developmental_psychology_triangle {
+		left: 7.7rem;
+		top: 16rem;
+		color: #C9A799;
 	}
 }
 
