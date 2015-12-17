@@ -15,7 +15,7 @@ body {
 }
 
 a {
-	display: inline;	
+	display: inline;
 }
 
 #main-container {
@@ -29,7 +29,7 @@ a {
 }
 
 .bold {
-	font-weight: 800;	
+	font-weight: 800;
 }
 
 .scroll-nav {
@@ -51,7 +51,7 @@ a {
 	a {
 		padding-top: 10px;
 		padding-bottom: 8px;
-		color: black;	
+		color: black;
 		font-weight: 100;
 		margin-right: 10px;
 		margin-left: 10px;
@@ -60,12 +60,12 @@ a {
 			text-decoration: underline;
 			color: rgba(230, 230, 230, .65);
 		}
-		
+
 		&:hover {
-			color: rgba(190, 190, 190, .65);	
+			color: rgba(190, 190, 190, .65);
 		}
 	}
-	
+
 	&.scroll-nav {
 		position: fixed;
 		top: 55px;
@@ -77,7 +77,7 @@ a {
 	&.stuck {
 
 	}
-	
+
 }
 
 #feature-article{
@@ -93,7 +93,7 @@ a {
 	    background-size: 100%;
 	    height: 80vh;
 		.title {
-			
+
 		}
 		video#bgVideo{
 			max-height: 300px;
@@ -110,7 +110,7 @@ a {
 		@media only screen and (max-width: 768px) {
 
 		}
-		
+
 		.mobile {
 			visibility: hidden;
 			width: 100%;
@@ -121,7 +121,7 @@ a {
 				display: block;
 			}
 		}
-		
+
 		.desktop {
 			display: none;
 			@media only screen and (max-width: 1129px) {
@@ -162,8 +162,29 @@ a {
 		background-color: rgb(190, 190, 190);
 	}
 
+	.item{
+		width: 80%;
+		margin: auto;
+	}
+
 	.care-card-img {
-		max-height: 400px;
+		max-height: 325px;
+	}
+
+	.control {
+		position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    width: 10%;
+	    font-size: 50px;
+	    color: #fff;
+	    text-align: center;
+	    &.left {
+	    	left: 0;
+	    }
+	    &.right {
+	    	right: 0;
+	    }
 	}
 
 }
@@ -171,7 +192,7 @@ a {
 .profile {
 /*	//display: table;
 	//max-height: 800px;
-	//height: 100%; 
+	//height: 100%;
 	//width: 100%;*/
 	.row {
 		height: 100%;
@@ -270,6 +291,65 @@ a {
 	background-color: rgba(0,0,0,.03);
 	padding: 60px 0px;
 	border-top: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.item.four {
+	//main history content
+	.history-item {
+		color: blue;
+		font-size: 14px;
+		list-style-type: none;
+	}
+	.history-item__title {
+		color: #0B5E94;
+		font-size: 14px;
+		font-weight: bolder;
+		line-height: 45px;
+	}
+	.history-item__content {
+		color: black;
+		font-size: 14px;
+		line-height: 21px;
+		padding-left: 3.6%;
+		margin-bottom: 0;
+	}
+	span {
+		background-color: #EFEFEF;
+		color: #0B5E94;
+		font-weight: bold;
+		border-radius: 3px;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
+	}
+
+//popup interactivity
+	#nurse_popup {
+		position: absolute;
+		bottom: 80rem;
+		left: 30rem;
+		width: 380px;
+		height: 240px;
+		background-color: #EFEFEF;
+		display: none;
+	}
+	#nurse_popup_img {
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+	.popup_text_header {
+		color: #0B5E94;
+		padding: 5px 5px;
+		padding: 1rem 7.2rem 1rem 0rem;
+		margin-bottom: 0;
+		float: right;
+	}
+	.popup_text_content {
+		float: left;
+		color: black;
+		padding-left: 1rem;
+	}
 }
 
 #credits {
@@ -375,7 +455,7 @@ a {
 			}
 		}
 	}
-	
+
 	@media only screen and (max-width: 978px) {
 		padding-left: 3em;
 		padding-right: 3em;
