@@ -141,7 +141,8 @@ a {
 	#components {
 		border: solid rgb(11, 94, 148) 2px;
 		border-radius: 5px;
-	
+		margin-bottom: 1em;
+
 		#summary {
 			border-bottom: solid rgb(11, 94, 148) 2px;	
 		}
@@ -152,6 +153,9 @@ a {
 			border-right: solid rgb(11, 94, 148) 2px;
 		}
 	}
+	p#bottom {
+			margin: 0;
+		}
 }
 
 .content-carousel {
@@ -171,8 +175,11 @@ a {
 		background-size: 100%;
 		background-color: transparent;
 		border: none;
-		&.active > object {
-			width: 100px;
+		&.active > svg{
+			fill: rgb(11, 94, 148);
+		}
+		svg:hover {
+			fill: rgb(11, 94, 148);
 		}
 	}
 
@@ -251,6 +258,10 @@ a {
 	&.two {
 		padding: 0;
 	}
+}
+
+.part.one > p {
+	margin: 0;
 }
 
 

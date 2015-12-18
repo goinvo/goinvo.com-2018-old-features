@@ -10,9 +10,8 @@
 	= javascript_include_tag "vendor/jquery.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
 	= javascript_include_tag "features/careplans/tab.js"
+	= javascript_include_tag "features/careplans/svg.js"
 	= javascript_include_tag "features/careplans-scroll.js"
-	= javascript_include_tag "invo-time-feature"
-	= javascript_include_tag "vendor/responsiveslides.min.js"
 
 	- meta = page_for_meta("careplans")
 	%meta{:name => "description", :content => "#{meta.description}" }
@@ -83,16 +82,16 @@
 					.col-md-12
 						%h6 Care Team
 						%p Your care team is everyone who manages or provides care, including yourself. Medical practitioners, nurses, social workers, and caregivers are just a few examples. 
-			%p While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
+			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
-			#care-cards.carousel.slide{:data=>{:ride=>"carousel"}}
+			#care-cards.carousel.slide
 				%ol.card-carousel-indicators
 					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
-						%object.icon{:type=>"image/svg+xml", :data=>cards[0].icon}
+						%img.svg{:src=>cards[0].icon}
 					-(1..8).each do |i|
 						%li{:data=>{:target=>"#care-cards", :slide=>{:to=>"#{i}"}}}
-							%object.icon{:type=>"image/svg+xml", :data=>cards[i].icon}
+							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
 						.container-fluid
