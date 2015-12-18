@@ -1,11 +1,11 @@
-
-var nurse = $('#nurse_popup');
+var nursing = $('#nursing_popup');
 $('#nursing_span').click(function(){
-	if($(nurse).is(':visible')){
-		nurse.fadeOut(100);
-	} else {
-		nurse.fadeIn(100);
-	}
+	nursing.toggle(100);
+});
+
+var life_care_planning = $('#life_care_planning_content');
+$('#').click(function(){
+	nursing.toggle(100);
 });
 
 var life_care_planning = $('#life_care_planning_popup');
