@@ -399,6 +399,17 @@ a {
 		padding-right: 5px;
 		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
 		position: relative;
+		cursor: pointer;
+	}
+	.selected_span {
+		background-color: #0B5E94;
+		color: white;
+		font-weight: bold;
+		border-radius: 3px;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
+		position: relative;
 	}
 	.selected {
 		background-color: #2A5E81;
@@ -412,24 +423,10 @@ a {
 
 //popup interactivity
 	//popup shape
-	.popup {
-		position: absolute;
-		background-color: #EFEFEF;
-		display: none;
-		border-radius: 5px;
-		box-shadow: 1.5px 1.5px 1px 1px #c6c6c6;
-	}
 	.popup_img {
 		float: left;
 		border-bottom-left-radius: 5px;
 		border-top-left-radius: 5px;
-	}
-	.triangle_down {
-		position: absolute;
-		color: #efefef;
-		width: 15px;
-		text-shadow: -0.2px -1.2px 0.01px #c6c6c6;
-		transform: rotate(180deg) scaleX(4.8) scaleY(2.2);
 	}
 	//popup classes
 	.popup_content {
@@ -446,7 +443,6 @@ a {
 		margin: 0 0 20px 0;
 		width: 0;
 		height: 0;
-		border-top: 20px solid #efefef;
 		border-left: 35px solid transparent;
 		border-right: 35px solid transparent;
 		transform: scaleX(0.65) scaleY(1);
@@ -500,6 +496,7 @@ a {
 		span:nth-child(2) {
 			top: 19.1rem;
 			left: 19.8rem;
+			border-top: 20px solid #efefef;
 		}
 		//header
 		span:nth-child(4) {
@@ -511,117 +508,134 @@ a {
 			width: 13rem;
 		}
 	}
-	#life_care_planning_popup_img {
-		width: 20.4rem;
-	}
-	#life_care_planning_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#life_care_planning_popup_content {
-		padding-left: 1.5rem;
+	#life_care_planning_popup {
+		top: -15.2rem;
+		left: -18rem;
+		width: 29.2rem;
+		img {
+			width: 16rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 13.6rem;
+			left: 20rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 13.4rem;
+			left: 20rem;
+			border-top: 20px solid #efefef;
+		}
+		//header
+		span:nth-child(4) {
+		}
+		//text content
+		span:nth-child(5) {
+		}
 	}
 	#EAB_popup {
-		bottom: 75.1rem;
-		left: 4.5rem;
-		width: 635px;
-		height: 263px;
-	}
-	#EAB_popup_img {
-		width: 20.7rem;
-	}
-	#EAB_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#EAB_popup_content {
-		padding-left: 1.5rem;
-		width: 280px;
+		top: -19.8rem;
+		left: -6rem;
+		width: 41rem;
+		img {
+			width: 23rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 18.4rem;
+			left: 5.4rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 18.2rem;
+			left: 5.4rem;
+			border-top: 20px solid #4A3C33;
+		}
+		//header
+		span:nth-child(4) {
+		}
+		//text content
+		span:nth-child(5) {
+			width: 270px;
+		}
 	}
 	#developmental_psychology_popup {
-		bottom: 75.1rem;
-		left: 10.5rem;
-		width: 720px;
-		height: 270px;
-	}
-	#developmental_psychology_popup_img {
-		width: 25.3rem;
-	}
-	#developmental_psychology_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#developmental_psychology_popup_content {
-		padding-left: 1.5rem;
-		width: 290px;
+		top: -21.7rem;
+		left: -1rem;
+		width: 46rem;
+		img {
+			width: 30rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 20.2rem;
+			left: 5rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 20rem;
+			left: 5rem;
+			border-top: 20px solid #B39180;
+		}
+		//header
+		span:nth-child(4) {
+		}
+		//text content
+		span:nth-child(5) {
+			width: 15rem;
+		}
 	}
 	#case_management_popup {
-		bottom: 75.1rem;
-		left: 12.5rem;
-		width: 690px;
-		height: 273px;
-	}
-	#case_management_popup_img {
-		width: 24.7rem;
-	}
-	#case_management_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#case_management_popup_content {
-		padding-left: 1.5rem;
-		width: 280px;
+		top: -22.4rem;
+		left: -10rem;
+		width: 47rem;
+		img {
+			width: 30rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 20.9rem;
+			left: 12.5rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 20.7rem;
+			left: 12.5rem;
+			border-top: 20px solid black;
+		}
+		//header
+		span:nth-child(4) {
+		}
+		//text content
+		span:nth-child(5) {
+			width: 16rem;
+		}
 	}
 	#litigation_popup {
-		bottom: 68.3rem;
-		left: 7.5rem;
-		width: 670px;
-		height: 244px;
-	}
-	#litigation_popup_img {
-		width: 22.8rem;
-	}
-	#litigation_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#litigation_popup_content {
-		padding-left: 1.5rem;
-		width: 285px;
-	}
-	//triangle positioning for each case study
-	#nursing_triangle {
-		left: 20.5rem;
-		top: 18.9rem;
-	}
-	#life_care_planning_triangle {
-		left: 25.7rem;
-		top: 17.1rem;
-	}
-	#EAB_triangle {
-		left: 5.7rem;
-		top: 16.3rem;
-		color: #444;
-	}
-	#developmental_psychology_triangle {
-		left: 7.7rem;
-		top: 16.8rem;
-		color: #C9A799;
-	}
-	#case_management_triangle {
-		left: 17.7rem;
-		top: 17rem;
-		color: #14252F;
-	}
-	#litigation_triangle {
-		left: 25.7rem;
-		top: 15.2rem;
-		color: #efefef;
+		top: -21.6rem;
+		left: -22rem;
+		width: 47rem;
+		img {
+			width: 30rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 20.2rem;
+			left: 22.2rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 20rem;
+			left: 22.2rem;
+			border-top: 20px solid #381813;
+		}
+		//header
+		span:nth-child(4) {
+		}
+		//text content
+		span:nth-child(5) {
+			width: 16rem;
+		}
 	}
 }
 
