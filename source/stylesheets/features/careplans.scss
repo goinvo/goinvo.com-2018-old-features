@@ -141,17 +141,32 @@ a {
 	#components {
 		border: solid rgb(11, 94, 148) 2px;
 		border-radius: 5px;
-
+		margin-bottom: 1em;
+		h6{
+			font-size: 1.375em;
+		}
+		p {
+			font-size: 1em;
+		}
 		#summary {
 			border-bottom: solid rgb(11, 94, 148) 2px;
 		}
 		#care-team {
 			border-top: solid rgb(11, 94, 148) 2px;
 		}
+		.row {
+			display: -ms-flex;
+			display: -webkit-flex;
+			display: flex;
+		}
 		#col {
 			border-right: solid rgb(11, 94, 148) 2px;
+			height: inherit;
 		}
 	}
+	p#bottom {
+			margin: 0;
+		}
 }
 
 .content-carousel {
@@ -164,15 +179,29 @@ a {
 	}
 	ol li {
 	    display: inline-block;
-		width: 80px;
-		margin: 10px;
+		width: 60px;
+		margin: 10px 30px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 100%;
 		background-color: transparent;
 		border: none;
-		&.active > object {
-			width: 100px;
+		&.active {
+			border: solid 2px #898989;
+			border-radius: 40px;
+			svg {
+				fill: rgb(11, 94, 148);
+			}
+		}
+		svg:hover {
+			fill: rgb(11, 94, 148);
+		}
+	}
+
+	.card-carousel-indicators {
+		margin-bottom: 40px;
+		.circle {
+			position: absolute;
 		}
 	}
 
@@ -223,15 +252,22 @@ a {
 }
 
 .profile {
+	border: 2px solid rgb(11, 94, 148);
 	.row {
-		height: 100%;
-		max-height: 250px;
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+		border-bottom: 2px solid rgb(11, 94, 148);
 	}
 	#col {
-		display: table-cell;
-		border: 2px solid rgb(11, 94, 148);
-		height: 100%;
+		height: inherit;
 		padding: 10px;
+		&.left {
+			border-right: 1px solid rgb(11, 94, 148);
+		}
+		&.right {
+			border-left: 1px solid rgb(11, 94, 148);
+		}
 	}
 	td > p {
 		margin: 0;
@@ -251,6 +287,10 @@ a {
 	&.two {
 		padding: 0;
 	}
+}
+
+.part.one > p {
+	margin: 0;
 }
 
 

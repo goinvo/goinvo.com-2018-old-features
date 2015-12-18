@@ -3,11 +3,13 @@
 - careplan = profile["care plan"]
 .container-fluid.profile{:data=>{:index=> index, :patient=> profile.name}}
   .row
-    #col.col-md-12
+    .col-md-3
+      %img
+    .col-md-9
       %h6 Patient Summary
-      %p.summary=profile.summary.html_safe
+      %span.summary=profile.summary.html_safe
   .row
-    #col.col-md-6
+    #col.left.col-md-6
       %h6 Health Concerns (Choose 2)
       .col-md-6
         .checkbox
@@ -29,7 +31,7 @@
         .checkbox
           %label
             %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe
-    #col.col-md-6
+    #col.right.col-md-6
       %h6 Care Team
       %p.care-team=profile["care team"].html_safe
   .row
