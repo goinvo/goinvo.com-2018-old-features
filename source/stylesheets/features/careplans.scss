@@ -141,9 +141,9 @@ a {
 	#components {
 		border: solid rgb(11, 94, 148) 2px;
 		border-radius: 5px;
-	
+
 		#summary {
-			border-bottom: solid rgb(11, 94, 148) 2px;	
+			border-bottom: solid rgb(11, 94, 148) 2px;
 		}
 		#care-team {
 			border-top: solid rgb(11, 94, 148) 2px;
@@ -321,7 +321,7 @@ a {
 	border-top: 3px solid rgba(0, 0, 0, 0.4);
 }
 
-.item.four {
+.part.four {
 	//main history content
 	.history-item {
 		color: blue;
@@ -344,7 +344,7 @@ a {
 		font-weight: 300;
 		font-family: work sans, sans-serif;
 	}
-	span {
+	.clickable_span {
 		background-color: #EFEFEF;
 		color: #0B5E94;
 		font-weight: bold;
@@ -352,7 +352,7 @@ a {
 		padding-left: 5px;
 		padding-right: 5px;
 		box-shadow: 2px 2px 0px 0px rgba(200,200,200,1);
-		position: relative; 
+		position: relative;
 	}
 	.selected {
 		background-color: #2A5E81;
@@ -385,13 +385,47 @@ a {
 		text-shadow: -0.2px -1.2px 0.01px #c6c6c6;
 		transform: rotate(180deg) scaleX(4.8) scaleY(2.2);
 	}
-	//popup content classes
+	//popup classes
+	.popup_content {
+		box-shadow: 2.5px 2.5px 4px 0px rgba(198,198,198,1);
+		background-color: #EFEFEF;
+		color: #0B5E94;
+		position: absolute;
+		border-radius: 3px;
+		display: none;
+	}
+	.popup_triangle {
+		display: block;
+		position: absolute;
+		margin: 0 0 20px 0;
+		width: 0;
+		height: 0;
+		border-top: 20px solid #efefef;
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+		transform: scaleX(0.65) scaleY(1);
+	}
+	.popup_triangle_shadow {
+		display: block;
+		position: absolute;
+		margin: 0 0 20px 0;
+		width: 0;
+		height: 0;
+		border-top: 20px solid #c6c6c6;
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+		transform: scaleX(0.65) scaleY(1);
+		-webkit-filter: blur(1.5px);
+	}
 	.popup_text_header {
 		color: #0B5E94;
 		float: left;
 		font-size: 14px;
 		font-weight: bold;
 		font-family: work sans, sans-serif;
+		padding-left: 1.2rem;
+		padding-top: 1rem;
+		padding-bottom: 0.6rem;
 	}
 	.popup_text_content {
 		float: left;
@@ -401,33 +435,35 @@ a {
 		width: 200px;
 		font-family: work sans, sans-serif;
 		line-height: 21px;
+		padding-left: 1.2rem;
 	}
 	//popup content for each case study
-	#nurse_popup {
-		bottom: 82.5rem;
-		left: 12.5rem;
-		width: 450px;
-		height: 305px;
-		position: absolute;
-	}
-	#nurse_popup_img {
-		width: 50%;
-		height: 100%;
-	}
-	#nursing_popup_header {
-		padding: 5px 5px;
-		padding: 1rem 1rem 0.8rem 1.5rem;
-		margin-bottom: 0;
-	}
-	#nursing_popup_content {
-		padding-left: 1.5rem;
-		width: 14em;
-	}
-	#life_care_planning_popup {
-		bottom: 76.5rem;
-		left: 4.5rem;
-		width: 530px;
-		height: 275px;
+	#nursing_popup {
+		top: -21rem;
+		left: -20rem;
+		width: 29rem;
+		img {
+			width: 15rem;
+		}
+		//triangle shadow
+		span:nth-child(1) {
+			top: 19.3rem;
+			left: 19.8rem;
+		}
+		//triangle
+		span:nth-child(2) {
+			top: 19.1rem;
+			left: 19.8rem;
+		}
+		//header
+		span:nth-child(4) {
+			float: left;
+		}
+		//text content
+		span:nth-child(5) {
+			float: left;
+			width: 13rem;
+		}
 	}
 	#life_care_planning_popup_img {
 		width: 20.4rem;
