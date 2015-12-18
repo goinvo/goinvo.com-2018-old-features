@@ -142,15 +142,26 @@ a {
 		border: solid rgb(11, 94, 148) 2px;
 		border-radius: 5px;
 		margin-bottom: 1em;
-
+		h6{
+			font-size: 1.375em;
+		}
+		p {
+			font-size: 1em;
+		}
 		#summary {
 			border-bottom: solid rgb(11, 94, 148) 2px;	
 		}
 		#care-team {
 			border-top: solid rgb(11, 94, 148) 2px;
 		}
+		.row {
+			display: -ms-flex; 
+			display: -webkit-flex; 
+			display: flex; 			
+		}
 		#col {
 			border-right: solid rgb(11, 94, 148) 2px;
+			height: inherit;
 		}
 	}
 	p#bottom {
@@ -168,18 +179,29 @@ a {
 	}
 	ol li {
 	    display: inline-block;
-		width: 80px;
-		margin: 10px;
+		width: 60px;
+		margin: 10px 30px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 100%;
 		background-color: transparent;
 		border: none;
-		&.active > svg{
-			fill: rgb(11, 94, 148);
+		&.active {
+			border: solid 2px #898989;
+			border-radius: 40px;
+			svg {
+				fill: rgb(11, 94, 148);
+			}
 		}
 		svg:hover {
 			fill: rgb(11, 94, 148);
+		}
+	}
+
+	.card-carousel-indicators {
+		margin-bottom: 40px;
+		.circle {
+			position: absolute;
 		}
 	}
 
@@ -332,7 +354,7 @@ a {
 	border-top: 3px solid rgba(0, 0, 0, 0.4);
 }
 
-.item.four {
+.part.four {
 	//main history content
 	.history-item {
 		color: blue;
