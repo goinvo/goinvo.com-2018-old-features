@@ -262,12 +262,18 @@ a {
 	#col {
 		height: inherit;
 		padding: 10px;
+		&.care-plan {
+			padding: 0;
+		}
 		&.left {
 			border-right: 1px solid rgb(11, 94, 148);
 		}
 		&.right {
 			border-left: 1px solid rgb(11, 94, 148);
 		}
+	}
+	.table {
+		margin: 0;
 	}	
 	td > p {
 		margin: 0;
