@@ -373,14 +373,14 @@ a {
     position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
     /* use padding-bottom instead of margin-bottom.*/
     margin-bottom: 0; /* This overrides previously specified margin-bottom */
-    padding-bottom: 2.5em;
+    padding-bottom: 1.5em;
 	}
 	ul.history-items li:after {
     /* bullets */
-    //content: url('http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/RedDisc.svg/20px-RedDisc.svg.png');
+    content: url(../../../images/careplans/circle.png);
     position: absolute;
-    left: -1px; /*adjust manually*/
-    top: 7px;
+    left: 1.5px; /*adjust manually*/
+    top: 13px;
 	}
 	ul.history-items li:before {
     /* lines */
@@ -393,11 +393,11 @@ a {
 	}
 	ul.history-items li:first-child:before {
    /* first li's line */
-   top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+   top: 14px; /* moves the line down so that it disappears under the bullet. Adjust manually */
   }
 	ul.history-items li:last-child:before {
     /* last li's line */
-   height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+   height: 14px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
 	}
 
 	padding-bottom: 6rem;
@@ -516,6 +516,7 @@ a {
 		top: -21rem;
 		left: -20rem;
 		width: 29rem;
+		z-index: 3;
 		img {
 			width: 15rem;
 		}
@@ -544,6 +545,7 @@ a {
 		top: -15.2rem;
 		left: -18rem;
 		width: 29.2rem;
+		z-index: 4;
 		img {
 			width: 16rem;
 		}
@@ -569,6 +571,7 @@ a {
 		top: -19.8rem;
 		left: -6rem;
 		width: 41rem;
+		z-index: 2;
 		img {
 			width: 23rem;
 		}
@@ -591,36 +594,94 @@ a {
 			width: 270px;
 		}
 	}
-	#developmental_psychology_popup {
-		top: -21.7rem;
-		left: -1rem;
-		width: 46rem;
-		img {
-			width: 30rem;
+	#developmental_psychology_popup{
+		@media only screen and (min-width: 1442px) {
+			top: -21.7rem;
+			left: -35rem;
+			width: 46rem;
+			z-index: 5;
+			img {
+				width: 30rem;
+			}
+			//triangle shadow
+			span:nth-child(1) {
+				top: 20.2rem;
+				left: 40rem;
+			}
+			//triangle
+			span:nth-child(2) {
+				top: 20rem;
+				left: 40rem;
+				border-top: 20px solid #B39180;
+			}
+			//header
+			span:nth-child(4) {
+			}
+			//text content
+			span:nth-child(5) {
+				width: 15rem;
+			}
 		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 20.2rem;
-			left: 5rem;
+		@media only screen and (min-width: 1171px) and (max-width: 1441px){
+			top: -21.7rem;
+			left: 0rem;
+			width: 46rem;
+			z-index: 5;
+			img {
+				width: 30rem;
+			}
+			//triangle shadow
+			span:nth-child(1) {
+				top: 20.2rem;
+				left: 5rem;
+			}
+			//triangle
+			span:nth-child(2) {
+				top: 20rem;
+				left: 5rem;
+				border-top: 20px solid #B39180;
+			}
+			//header
+			span:nth-child(4) {
+			}
+			//text content
+			span:nth-child(5) {
+				width: 15rem;
+			}
 		}
-		//triangle
-		span:nth-child(2) {
-			top: 20rem;
-			left: 5rem;
-			border-top: 20px solid #B39180;
-		}
-		//header
-		span:nth-child(4) {
-		}
-		//text content
-		span:nth-child(5) {
-			width: 15rem;
+		@media only screen and (max-width: 1170px) {
+			top: -21.7rem;
+			left: -20rem;
+			width: 46rem;
+			z-index: 5;
+			img {
+				width: 30rem;
+			}
+			//triangle shadow
+			span:nth-child(1) {
+				top: 20.2rem;
+				left: 20rem;
+			}
+			//triangle
+			span:nth-child(2) {
+				top: 20rem;
+				left: 20rem;
+				border-top: 20px solid #B39180;
+			}
+			//header
+			span:nth-child(4) {
+			}
+			//text content
+			span:nth-child(5) {
+				width: 15rem;
+			}
 		}
 	}
 	#case_management_popup {
 		top: -22.4rem;
 		left: -10rem;
 		width: 47rem;
+		z-index: 6;
 		img {
 			width: 30rem;
 		}
@@ -647,6 +708,7 @@ a {
 		top: -21.6rem;
 		left: -22rem;
 		width: 47rem;
+		z-index: 7;
 		img {
 			width: 30rem;
 		}
