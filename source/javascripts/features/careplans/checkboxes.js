@@ -18,10 +18,10 @@ function addCondition (id) {
     	var condition = data[0][id];
     	if (condition != undefined) {
 	    	if( $(".tab-pane.active").find('.summary > .'+id).length == 0 ){
-		    	$('.summary').append("<span class="+id+">"+condition["summary"]+"</span>");
+		    	$('.active .summary').append("<span class="+id+">"+condition["summary"]+"</span>");
 		    }
 	    	if( $(".tab-pane.active").find('.care-team > .'+id).length == 0 ){
-		    	$('.care-team').append("<span class="+id+">"+condition["care team"]+"</span>");
+		    	$('.active .care-team').append("<span class="+id+">"+condition["care team"]+"</span>");
 		    }
 	    	$.each(condition["care plan"], function(component, content) {
 	    		component = component.replace(/\s/g, '');

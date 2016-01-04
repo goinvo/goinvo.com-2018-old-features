@@ -225,12 +225,12 @@ a {
 	}
 
 	.carousel-inner {
-		padding: 20px 10%;
-		background-color: rgb(190, 190, 190);
+		background-color: $bg-gray;
 	}
 
 	.item{
 		margin: auto;
+		padding: 50px 10%;
 	}
 
 	.care-card-img {
@@ -239,18 +239,25 @@ a {
 
 	.control {
 		position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    width: 10%;
+	    top: 45%;
+	    width: 50px;
+	    height: 50px;
+	    border-radius: 25px;
+	    background-color: rgb(11, 94, 148);
 	    font-size: 50px;
-	    color: #fff;
+	    color: white;
 	    text-align: center;
 	    &.left {
-	    	left: 0;
+	    	left: 30px;
 	    }
 	    &.right {
-	    	right: 0;
+	    	right: 30px;
 	    }
+	}
+	.control:visited,
+	.control:hover,
+	.control:active {
+		text-decoration: none;
 	}
 
 }
@@ -262,30 +269,45 @@ a {
 
 #tabs > li > a {
 	color: rgb(0,0,0);
+	padding: 20px 0;
 }
 
-#tabs > li.active > a {
-	background-color: rgb(11, 94, 148);
-	border-color: rgb(11, 94, 148);
-	color: white;
+#tabs > li.active {
+	a {
+		color: white;
+		border-color: rgb(11, 94, 148);
+		background-color: rgb(11, 94, 148);
+	}
 }
 
 .profile {
-	border: 2px solid rgb(11, 94, 148);
 	.row {
 		display: -ms-flex;
 		display: -webkit-flex;
 		display: flex;
-		border-bottom: 2px solid rgb(11, 94, 148);
+		border: 2px solid rgb(11, 94, 148);
+		border-bottom: none;
+	}
+	.row:last-child {
+		border: 1px solid rgb(11, 94, 148);
+	}
+	.row:first-child div {
+		padding: 15px;
+	}
+	h6 {
+		font-weight: normal;
 	}
 	#col {
 		height: inherit;
-		padding: 10px;
+		padding: 15px;
 		&.care-plan {
 			padding: 0;
 		}
 		&.left {
 			border-right: 1px solid rgb(11, 94, 148);
+			div {
+				padding: 0;
+			}
 		}
 		&.right {
 			border-left: 1px solid rgb(11, 94, 148);
@@ -293,6 +315,9 @@ a {
 	}
 	.table {
 		margin: 0;
+	}
+	.table tbody td {
+		border-color: rgb(11, 94, 148);
 	}
 	td > p {
 		margin: 0;
