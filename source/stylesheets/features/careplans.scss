@@ -90,11 +90,27 @@ a {
 	    padding: 17% 60px 5%;
 	    color: rgb(255, 255, 255);
 	    background-color: rgb(11, 94, 148);
-	    background-image: image-url("../../../images/careplans/FeatureBanner.jpg");
-	    background-size: 100%;
-	    height: 80vh;
+	    height: 700px;
+	    overflow-y: hidden;
+	    position: relative;
 		.title {
-
+			position: absolute;
+			right: 10%;
+			top: 45%;
+		}
+		.big-title {
+			margin: 0;
+			font-weight: bold;
+		}
+		.sub-title {
+			font-size: 30px;
+			//text-align: right;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-height: 700px;
 		}
 		video#bgVideo{
 			max-height: 300px;
