@@ -8,6 +8,7 @@ $blue: #51697b;
 $yellow: #ddb40a;
 $tan: #dfd6c3;
 $bluegray: mix($blue, $gray, 50%);
+$bg-gray: #f5f5f5;
 
 body {
 	color: #58504A;
@@ -147,21 +148,34 @@ a {
 		}
 		p {
 			font-size: 1em;
+			margin-bottom: 0;
 		}
 		#summary {
 			border-bottom: solid rgb(11, 94, 148) 2px;
+			padding: 10px 15px;
+			div {
+				padding: 0;
+			}
 		}
 		#care-team {
 			border-top: solid rgb(11, 94, 148) 2px;
+			padding: 10px 15px;
+			background-color: $bg-gray;
+			div {
+				padding: 0;
+			}
 		}
 		.row {
 			display: -ms-flex;
 			display: -webkit-flex;
 			display: flex;
 		}
-		#col {
+		.col {
 			border-right: solid rgb(11, 94, 148) 2px;
-			height: inherit;
+			padding: 10px 15px;
+		}
+		.col:last-child {
+			border-right: none;
 		}
 	}
 	p#bottom {
@@ -179,22 +193,27 @@ a {
 	}
 	ol li {
 	    display: inline-block;
-		width: 60px;
-		margin: 10px 30px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 100%;
-		background-color: transparent;
-		border: none;
+		width: 96px;
+		height: 96px;
+		padding-top: 15px;
+		//margin: 10px 30px;
+		svg{
+			width:  60px;
+			height: 60px;
+			fill: #898989;
+			stroke: #898989;
+		}
 		&.active {
-			border: solid 2px #898989;
-			border-radius: 40px;
+			border: solid 2px rgb(11, 94, 148);
+			border-radius: 48px;
 			svg {
 				fill: rgb(11, 94, 148);
+				stroke: rgb(11, 94, 148);
 			}
 		}
 		svg:hover {
 			fill: rgb(11, 94, 148);
+			stroke: rgb(11, 94, 148);
 		}
 	}
 
