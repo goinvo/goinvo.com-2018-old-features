@@ -42,22 +42,22 @@ $(window).on('scroll', function () {
 $(document).ready(function() {
 	$('a.one').click ( function () {
 		$('html, body').animate({
-            scrollTop: $(".item.one").offset().top-89
+            scrollTop: $("div.part.one").offset().top-89
         }, 500);
 	});
 	$('a.two').click ( function () {
 		$('html, body').animate({
-            scrollTop: $(".item.two").offset().top-89
+            scrollTop: $("div.part.two").offset().top-89
         }, 500);
 	});
 	$('a.three').click ( function () {
 		$('html, body').animate({
-            scrollTop: $(".item.three").offset().top-89
+            scrollTop: $("div.part.three").offset().top-89
         }, 500);
 	});
 	$('a.four').click ( function () {
 		$('html, body').animate({
-            scrollTop: $(".item.four").offset().top-89
+            scrollTop: $("div.part.four").offset().top-89
         }, 500);
 	});
 });

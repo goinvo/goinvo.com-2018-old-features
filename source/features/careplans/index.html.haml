@@ -40,17 +40,17 @@
 	/ 	%img.mobile{:src => ""}
 	%header.nav-wrapper.stuck
 		%nav.main-nav
-			%a.one{:href => "#one"} What are they?
-			%a.two{:href => "#two"} What's in them?
-			%a.three{:href => "#three"} How do they work?
-			%a.four{:href => "#four"} How did they start?
+			%a.one{:href => "javascript:void(0)"} What are they?
+			%a.two{:href => "javascript:void(0)"} What's in them?
+			%a.three{:href => "javascript:void(0)"} How do they work?
+			%a.four{:href => "javascript:void(0)"} How did they start?
 	%header.nav-wrapper.scroll-nav
 		%nav.main-nav
-			%a.one{:href => "#one"} What are they?
-			%a.two{:href => "#two"} What's in them?
-			%a.three{:href => "#three"} How do they work?
-			%a.four{:href => "#four"} How did they start?
-	.part.one#one
+			%a.one{:href => "javascript:void(0)"} What are they?
+			%a.two{:href => "javascript:void(0)"} What's in them?
+			%a.three{:href => "javascript:void(0)"} How do they work?
+			%a.four{:href => "javascript:void(0)"} How did they start?
+	.part.one
 		%p
 			A
 			%strong care plan
@@ -63,7 +63,7 @@
 			shared by all of your care team members to
 			%strong guide
 			your care.
-	.part.two#two
+	.part.two
 		.component-chart
 			%p Care plans usually consist of these universal components:
 			.container-fluid#components
@@ -123,7 +123,7 @@
 					%a.right.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
 
-	.part.three#three
+	.part.three
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
 		%p Explore how the care plan changes these factors across the three individuals below.
 		.careplan-diagram
@@ -144,7 +144,7 @@
 					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
 				.tab-pane{:id=> "3"}
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
-	.part.four#four
+	.part.four
 		//main content
 		%h5 How did they start?
 		%ul.history-items
