@@ -5,13 +5,12 @@
 	= stylesheet_link_tag "features/careplans"
 	= stylesheet_link_tag "feature-elements"
 	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
-
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "vendor/jquery.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
 	= javascript_include_tag "features/careplans/tab.js"
 	= javascript_include_tag "features/careplans/svg.js"
-	= javascript_include_tag "features/careplans-scroll.js"
+	= javascript_include_tag "features/careplans/careplans-scroll.js"
 
 	- meta = page_for_meta("careplans")
 	%meta{:name => "description", :content => "#{meta.description}" }
@@ -122,7 +121,6 @@
 						%span <
 					%a.right.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
-
 	.part.three
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
 		%p Explore how the care plan changes these factors across the three individuals below.
