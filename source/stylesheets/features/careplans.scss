@@ -91,7 +91,7 @@ a {
 	    color: rgb(255, 255, 255);
 	    background-color: rgb(11, 94, 148);
 	    height: 700px;
-	    overflow-y: hidden;
+	    overflow: hidden;
 	    position: relative;
 		.title {
 			position: absolute;
@@ -193,13 +193,19 @@ a {
 			display: -ms-flex;
 			display: -webkit-flex;
 			display: flex;
+			flex-wrap: wrap;
 		}
 		.col {
-			border-right: solid rgb(11, 94, 148) 2px;
 			padding: 10px 15px;
+			border-right: solid rgb(11, 94, 148) 2px;
 		}
 		.col:last-child {
 			border-right: none;
+		}
+		@media only screen and (max-width:991px) {
+			.col {
+				border-right: none;
+			}
 		}
 	}
 	p#bottom {
