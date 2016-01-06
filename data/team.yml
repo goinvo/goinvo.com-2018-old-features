@@ -123,16 +123,6 @@
   email: "brian@goinvo.com"
   photo: brian_liston.jpg
 
-- first_name: Courtney
-  last_name: McGorrill
-  title: Engineering Intern
-  bio: Courtney McGorrill is a computer science undergraduate at the Rochester Institute of Technology (RIT) and joins the studio for a fall coop. She's wrangling pixels and code while learning system engineering.
-  linkedin_url: "https://www.linkedin.com/in/courtneymcgorrill"
-  github_username: "cmcgorrill"
-  twitter_username: "court_mcgort"
-  email: "courtney@goinvo.com"
-  photo: courtney_mcgorrill.jpg
-
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
