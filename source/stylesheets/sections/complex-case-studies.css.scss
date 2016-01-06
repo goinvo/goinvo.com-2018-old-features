@@ -1,30 +1,30 @@
 @import "../base/core";
 
 article#complex-case {
-	
+
 	.no-top-margin {
-		margin-top: 0px !important;	
+		margin-top: 0px !important;
 	}
 	.no-bottom-margin {
-		margin-bottom: 0px !important;	
+		margin-bottom: 0px !important;
 	}
-	
+
 	.small-bottom-margin {
-		margin-bottom: 3em !important;	
+		margin-bottom: 3em !important;
 	}
-	
+
 	.small-top-margin {
-		margin-top: 5em !important;	
+		margin-top: 5em !important;
 	}
-	
+
 	.very-small-top-margin {
-		margin-top: 3.5em !important;	
+		margin-top: 3.5em !important;
 	}
-	
+
 	.large-bottom-margin {
-		margin-bottom: 8em !important;	
+		margin-bottom: 8em !important;
 	}
-	
+
 	&.three-m {
 		header.hero {
 			background-image: url('../../images/clients/3m/3m-user-interface-sketches-grid.jpg');
@@ -97,12 +97,12 @@ article#complex-case {
 
 	#mainContent {
 		padding-top: 60px;
-		
+
 		ul {
-			font-size: 1.375em;	
-			
+			font-size: 1.375em;
+
 			li {
-				margin-bottom: .75em;	
+				margin-bottom: .75em;
 			}
 		}
 
@@ -147,7 +147,7 @@ article#complex-case {
 			color: $gray;
 			margin-top: 7px;
 			margin-bottom: 5em;
-			
+
 			&.bottom {
 				margin-bottom:30px;
 			}
@@ -172,11 +172,10 @@ article#complex-case {
 			}
 		}
 
-
 		figure, figure.center-image.content, .center-image-content {
 			margin: 2em auto;
 			padding-left: 10px;
-			padding-right: 10px; 
+			padding-right: 10px;
 			position: relative;
 			display: table;
 			max-width: 640px;
@@ -204,6 +203,13 @@ article#complex-case {
 		.center-graph-content {
 			padding: 3em;
 			position: relative;
+			&.no-vertical-padding {
+				padding: 0 3rem;
+			}
+			svg {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 
 		.full-two-images {
