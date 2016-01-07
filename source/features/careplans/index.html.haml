@@ -101,22 +101,16 @@
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
-						.container-fluid
-							.row
-								.col-md-4
-									%img.care-card-img{:src=>cards[0].img}
-								.col-md-8
-									%h5=cards[0].header
-									%p=cards[0].content
+						%img.care-card-img{:src=>cards[0].img}
+						%div.instruction
+							%h6=cards[0].header
+							%p=cards[0].content
 					-(1..8).each do |j|
 						.item
-							.container-fluid
-								.row
-									.col-md-4
-										%img.care-card-img{:src=>cards[j].img}
-									.col-md-8
-										%h5=cards[j].header
-										%p=cards[j].content
+							%img.care-card-img{:src=>cards[j].img}
+							%div.instruction
+								%h6=cards[j].header
+								%p=cards[j].content
 					%a.left.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"prev"}}
 						%span <
 					%a.right.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"next"}}
@@ -144,7 +138,7 @@
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
 	.part.four
 		//main content
-		%h5 How did they start?
+		%h6 How did they start?
 		%ul.history-items
 			%li.history-item
 				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2" fill="white"/></svg> 31st BC-15th Century
