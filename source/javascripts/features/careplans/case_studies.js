@@ -12,20 +12,17 @@ $('.clickable_span').click(function(){
 function setCarouselHeight(){
 	var tallest = 0;
 	if($(window).width()>769) {
-		var $array1 = $(".carousel.desktop").find(".item").find(".instruction");
-		for(var i = 1;i<=$array1.length;i++) {
-			if(tallest < $array1.height())
-				tallest = $array1.height();
+		for(var i = 1;i<=$(".carousel.desktop .item").find(".instruction").length;i++) {
+			if(tallest < $(".carousel.desktop .item:nth-child("+i+")").find(".instruction").height())
+				tallest = $(".carousel.desktop .item:nth-child("+i+")").find(".instruction").height();
 		}
-		var $array2 = $(".carousel.desktop").find(".item").find(".image");
-		if(tallest < $array2.height())
-				tallest = $array2.height();
+		if(tallest < $(".carousel.desktop .item").find(".image").height())
+				tallest = $(".carousel.desktop .item").find(".image").height();
 	}
 	else {
-		var $array = $(".carousel.mobile").find(".item");
-		for(var i = 1;i<=$array.length;i++) {
-			if(tallest < $array.height())
-				tallest = $array.height();
+		for(var i = 1;i<=$(".carousel.mobile .item").length;i++) {
+			if(tallest < $(".carousel.mobile .item:nth-child("+i+")").height())
+				tallest = $(".carousel.mobile .item:nth-child("+i+")").height();
 		}
 	}
 	return tallest+100;

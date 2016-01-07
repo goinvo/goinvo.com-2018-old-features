@@ -92,12 +92,12 @@
 			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
-			#care-cards.carousel.slide.desktop
+			.care-cards.carousel.slide.desktop
 				%ol.card-carousel-indicators
-					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
+					%li.active{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
 					-(1..8).each do |i|
-						%li{:data=>{:target=>"#care-cards", :slide=>{:to=>"#{i}"}}}
+						%li{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"#{i}"}}}
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
@@ -117,12 +117,12 @@
 						%span <
 					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
-			#care-cards.carousel.slide.mobile
+			.care-cards.carousel.slide.mobile
 				%ol.card-carousel-indicators
-					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
+					%li.active{:data=>{:target=>".carousel.slide.mobile", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
 					-(1..8).each do |i|
-						%li{:data=>{:target=>"#care-cards", :slide=>{:to=>"#{i}"}}}
+						%li{:data=>{:target=>".carousel.slide.mobile", :slide=>{:to=>"#{i}"}}}
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
