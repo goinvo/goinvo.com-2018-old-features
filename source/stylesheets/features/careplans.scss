@@ -34,7 +34,9 @@ a {
 }
 #feature-article p,
 #feature-article a,
-#feature-article span {
+#feature-article span,
+#feature-article label,
+#feature-article td {
 	font-size: 18px;
 	line-height: 1.5em;
 	margin-bottom: 0;
@@ -110,8 +112,8 @@ a {
 	    position: relative;
 		.title {
 			position: absolute;
-			right: 10%;
-			top: 45%;
+			left: 6%;
+			top: 48%;
 			z-index: 2;
 			p {
 				font-size: 4em;
@@ -184,6 +186,7 @@ a {
 	#components {
 		border: solid rgb(11, 94, 148) 2px;
 		border-radius: 5px;
+		margin: 30px 0;
 		p {
 			margin-bottom: 0;
 		}
@@ -262,6 +265,7 @@ a {
 
 	.card-carousel-indicators {
 		margin-bottom: 40px;
+		padding: 0 10%;
 		.circle {
 			position: absolute;
 		}
@@ -279,25 +283,43 @@ a {
 	.care-card-img {
 		max-height: 325px;
 		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		overflow:hidden;
-		-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
-	}
-	h5 {
-		margin-bottom: 10px;
 	}
 	p {
 		margin-bottom: 0;
 	}
-	.care-card-img, div.instruction {
-		display: inline-block;
-		float: left;
+	.desktop {
+		div.image, div.instruction {
+			display: inline-block;
+			float: left;
+		}
+		div.image {
+			width: 25%;
+		}
+		div.instruction {
+			width: 75%;
+			padding-left: 20px;
+		}
+		.control {
+			top: 45%;
+		}
+		
 	}
-
+	.mobile {
+		h6 {
+			text-align: center;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.control {
+			top: 30px;
+		}
+	}
 	.control {
 		position: absolute;
-	    top: 45%;
 	    width: 50px;
 	    height: 50px;
 	    border-radius: 25px;
@@ -306,10 +328,10 @@ a {
 	    color: white;
 	    text-align: center;
 	    &.left {
-	    	left: 30px;
+	    	left: 20px;
 	    }
 	    &.right {
-	    	right: 30px;
+	    	right: 20px;
 	    }
 	}
 	.control:visited,
@@ -318,6 +340,26 @@ a {
 	:link, :visited {
 		text-decoration: none;
 	}
+}
+@media only screen and (min-width: 769px) {
+	.carousel.desktop {
+		display: block;
+	}
+	.carousel.mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.carousel.desktop {
+		display: none;
+	}
+	.carousel.mobile {
+		display: block;
+	}
+}
+
+#feature-article .three > p {
+	margin-bottom: 30px;
 }
 
 #tabs > li {
@@ -525,6 +567,7 @@ a {
 		font-weight: bolder;
 		line-height: 45px;
 		font-family: work sans, sans-serif;
+		font-size: 18px;
 	}
 	.history-item__content {
 		color: black;

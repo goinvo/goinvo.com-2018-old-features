@@ -11,9 +11,22 @@ $('.clickable_span').click(function(){
 
 function setCarouselHeight(){
 	var tallest = 0;
-	for(var i = 1;i<=$(".item").length;i++) {
-		if(tallest < $(".item:nth-child("+i+")").height())
-			tallest = $(".item:nth-child("+i+")").height();
+	if($(window).width()>769) {
+		var $array1 = $(".carousel.desktop").find(".item").find(".instruction");
+		for(var i = 1;i<=$array1.length;i++) {
+			if(tallest < $array1.height())
+				tallest = $array1.height();
+		}
+		var $array2 = $(".carousel.desktop").find(".item").find(".image");
+		if(tallest < $array2.height())
+				tallest = $array2.height();
+	}
+	else {
+		var $array = $(".carousel.mobile").find(".item");
+		for(var i = 1;i<=$array.length;i++) {
+			if(tallest < $array.height())
+				tallest = $array.height();
+		}
 	}
 	return tallest+100;
 }

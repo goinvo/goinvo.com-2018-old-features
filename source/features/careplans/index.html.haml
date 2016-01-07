@@ -92,7 +92,7 @@
 			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
-			#care-cards.carousel.slide
+			#care-cards.carousel.slide.desktop
 				%ol.card-carousel-indicators
 					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
@@ -101,19 +101,42 @@
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
-						%img.care-card-img{:src=>cards[0].img}
+						.image
+							%img.care-card-img{:src=>cards[0].img}
 						%div.instruction
 							%h6=cards[0].header
 							%p=cards[0].content
 					-(1..8).each do |j|
 						.item
-							%img.care-card-img{:src=>cards[j].img}
+							.image
+								%img.care-card-img{:src=>cards[j].img}
 							%div.instruction
 								%h6=cards[j].header
 								%p=cards[j].content
-					%a.left.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"prev"}}
+					%a.left.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"prev"}}
 						%span <
-					%a.right.control{:href=>"#care-cards", :role=>"button", :data=>{:slide=>"next"}}
+					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
+						%span >
+			#care-cards.carousel.slide.mobile
+				%ol.card-carousel-indicators
+					%li.active{:data=>{:target=>"#care-cards", :slide=>{:to=>"0"}}}
+						%img.svg{:src=>cards[0].icon}
+					-(1..8).each do |i|
+						%li{:data=>{:target=>"#care-cards", :slide=>{:to=>"#{i}"}}}
+							%img.svg{:src=>cards[i].icon}
+				.carousel-inner{:role=>"listbox"}
+					.item.active
+						%h6=cards[0].header
+						%p=cards[0].content
+						%img.care-card-img{:src=>cards[0].img}
+					-(1..8).each do |j|
+						.item
+							%h6=cards[j].header
+							%p=cards[j].content
+							%img.care-card-img{:src=>cards[j].img}
+					%a.left.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"prev"}}
+						%span <
+					%a.right.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
 	.part.three
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
