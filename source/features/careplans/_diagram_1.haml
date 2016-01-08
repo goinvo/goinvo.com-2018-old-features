@@ -1,7 +1,7 @@
 = javascript_include_tag "features/careplans/checkboxes.js"
 - profile = data.features.careplans.profiles[index]
 - careplan = profile["care plan"]
-.container-fluid.profile{:data=>{:index=> index, :patient=> profile.name}}
+.container-fluid.profile.desktop{:data=>{:index=> index, :patient=> profile.name}}
   .row
     .col-md-3
       %img
@@ -49,3 +49,17 @@
               -selector = "."+component[0]+"."+content[0]
               %td.content{:id=> "#{content[0]}"}
                 %p=content[1].html_safe
+.profile.mobile{:data=>{:index=> index, :patient=> profile.name}}
+  %div.filter.row
+    %div.col-md-6.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Isabella</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuName"><li data-id="1"><a href="javascrip:void(0)">Isabella</a></li><li data-id="2"><a href="javascrip:void(0)">Reggie</a></li><li data-id="3"><a href="javascrip:void(0)">Donna</a></li></ul>
+    %div.col-md-6.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selection">Health Concern</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuSelection"><li><a href="javascrip:void(0)"><input type="checkbox" id="depression">&nbsp;<span>Depression</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="smoking">&nbsp;<span>Smoking</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="option0">&nbsp;<span>Orthopedic Injury</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="obesity">&nbsp;<span>Obesity</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="diabites">&nbsp;<span>Type II Diabetes</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="option1">&nbsp;<span>Puberty</span></a></li></ul>
+  - careplan.each do |component|
+    - row_id = component[0].strip.delete(' ')
+    %div.content-table{:id=> "#{row_id}"}
+      %p.header=component[0].html_safe
+      - data.features.careplans.globals[0]["content headers"].each do |category|
+        %p.category=category.html_safe
+        - component[1].each do |content|
+          -selector = "."+component[0]+"."+content[0]
+          %p.content{:id=> "#{content[0]}"}
+            =content[1].html_safe

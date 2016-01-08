@@ -50,6 +50,9 @@ a {
 	font-size: 45px;
 	line-height: 45px;
 }
+#feature-article .content-table .category {
+	font-weight: normal;
+}
 
 .scroll-nav {
 	box-shadow: 0 5px 15px -8px #000
@@ -70,10 +73,10 @@ a {
 		width: 100%;
 	}
 	a {
-		padding: 10px 0;
+		padding: 10px 5px;
 		color: black;
 		font-weight: 100;
-		width: 24%;
+		width: 23%;
 		display: inline-block;
 		text-align: center;
 		// margin-right: 10px;
@@ -319,7 +322,7 @@ a {
 			margin-top: 20px;
 		}
 		.control {
-			top: 30px;
+			top: 20px;
 		}
 	}
 	.control {
@@ -386,7 +389,28 @@ a {
 	}
 }
 
-.profile {
+@media only screen and (min-width: 769px) {
+	.careplan-diagram.desktop,
+	.profile.desktop {
+		display: block;
+	}
+	.careplan-diagram.mobile,
+	.profile.mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.careplan-diagram.desktop,
+	.profile.desktop {
+		display: none;
+	}
+	.careplan-diagram.mobile,
+	.profile.mobile {
+		display: block;
+	}
+}
+
+.profile.desktop {
 	.row {
 		display: -ms-flex;
 		display: -webkit-flex;
@@ -439,6 +463,62 @@ a {
 	}
 	td > p {
 		margin: 0;
+	}
+}
+
+.careplan-diagram.mobile {
+	padding: 0;
+	.filter {
+		margin: 0;
+		margin-bottom: 15px;
+
+		span.dropdown-toggle {
+			display: inline-block;
+			width: 100%;
+			padding: 15px 10px;
+		}
+		.col-md-6 {
+			padding: 0;
+			background-color: #f5f5f5;
+			border: 1px solid #e3e1e1;
+			box-shadow: 0px 2px 2px rgba(225,225,225,0.8);
+			cursor: pointer;
+		}
+		.col-md-6:first-child {
+			margin-bottom: 10px;
+		}
+		ul.dropdown-menu {
+			width: 	100%;
+			min-width: 0;
+		}
+		span.caret {
+			float: right;
+			margin-top: 13px;
+			color: gray;
+		}
+	}
+	.content-table {
+		border: 1px solid #e3e1e1;
+		margin-bottom: 15px;
+		&>p {
+			padding: 8px 10px;
+		}
+		p {
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		.category {
+			border-top: 1px solid #e3e1e1;
+		}
+		.header {
+			text-transform: uppercase;
+		}
+	}
+	.profile-pane {
+		display: none;
+		&.active {
+			display: block;
+		}
 	}
 }
 

@@ -141,7 +141,7 @@
 	.part.three
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
 		%p Explore how the care plan changes these factors across the three individuals below.
-		.careplan-diagram
+		.careplan-diagram.desktop
 			%ul.nav.nav-tabs#tabs
 				%li.active{:role=> "presentation"}
 					%a{:href=> "#1", :data=> {:toggle=> "tab"}}
@@ -159,6 +159,15 @@
 					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
 				.tab-pane{:id=> "3"}
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
+		.careplan-diagram.mobile.container-fluid
+			%div.profile-content
+				.profile-pane.active
+					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
+				.profile-pane
+					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
+				.profile-pane
+					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
+
 	.part.four
 		//main content
 		%h6 How did they start?
