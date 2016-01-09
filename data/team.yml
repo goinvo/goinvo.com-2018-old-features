@@ -123,6 +123,14 @@
   email: "brian@goinvo.com"
   photo: brian_liston.jpg
 
+- first_name: Lily
+  last_name: Fan
+  title: "Intern"
+  bio: "Lily is an Industrial Design student at the Rhode Island School of Design (RISD). Lily is interested in the collision of the physical, emotional, and digital. She is advancing her software design chops during the winter semester."
+  linkedin_url: "https://www.linkedin.com/in/lily-fan-07008a58"
+  email: "lily@goinvo.com"
+  photo: lily_fan.jpg
+
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
