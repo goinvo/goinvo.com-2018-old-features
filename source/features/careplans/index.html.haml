@@ -64,6 +64,7 @@
 			your care.
 	.part.two
 		.component-chart
+			%h1 <strong>What's</strong> is a Care Plan
 			%p Care plans usually consist of these universal components:
 			.container-fluid#components
 				.row#summary
@@ -103,6 +104,7 @@
 					.item.active
 						.image
 							%img.care-card-img{:src=>cards[0].img}
+							%p View more at <a href="http://carecards.me">carecards.me</a>
 						%div.instruction
 							%h6=cards[0].header
 							%p=cards[0].content
@@ -110,6 +112,7 @@
 						.item
 							.image
 								%img.care-card-img{:src=>cards[j].img}
+								%p View more at <a href="http://carecards.me">carecards.me</a>
 							%div.instruction
 								%h6=cards[j].header
 								%p=cards[j].content
@@ -129,16 +132,19 @@
 						%h6=cards[0].header
 						%p=cards[0].content
 						%img.care-card-img{:src=>cards[0].img}
+						%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
 					-(1..8).each do |j|
 						.item
 							%h6=cards[j].header
 							%p=cards[j].content
 							%img.care-card-img{:src=>cards[j].img}
+							%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
 					%a.left.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"prev"}}
 						%span <
 					%a.right.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
 	.part.three
+		%h1 How Care Plans <strong>Work</strong>
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
 		%p Explore how the care plan changes these factors across the three individuals below.
 		.careplan-diagram.desktop
@@ -170,7 +176,7 @@
 
 	.part.four
 		//main content
-		%h6 How did they start?
+		%h1 How Care Plans <strong>Started</strong>
 		%ul.history-items
 			%li.history-item
 				.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2" fill="white"/></svg> 31st BC-15th Century
