@@ -151,13 +151,16 @@
 			%ul.nav.nav-tabs#tabs
 				%li.active{:role=> "presentation"}
 					%a{:href=> "#1", :data=> {:toggle=> "tab"}}
-						= partial("features/careplans/profile_tab", :locals => {:index=>0} )
+						%img{:src=>"../../images/careplans/isabella_norm.png"}
+						%h6 Isabella, 13
 				%li{:role=> "presentation"}
 					%a{:href=> "#2", :data=> {:toggle=> "tab"}}
-						= partial("features/careplans/profile_tab", :locals => {:index=>1} )
+						%img{:src=>"../../images/careplans/reggie_norm.png"}
+						%h6 Reggie, 35
 				%li{:role=> "presentation"}
 					%a{:href=> "#3", :data=> {:toggle=> "tab"}}
-						= partial("features/careplans/profile_tab", :locals => {:index=>2} )
+						%img{:src=>"../../images/careplans/donna_norm.png"}
+						%h6 Donna, 68
 			.tab-content
 				.tab-pane.active{:id=> "1"}
 					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
@@ -167,11 +170,11 @@
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
 		.careplan-diagram.mobile.container-fluid
 			%div.profile-content
-				.profile-pane.active
+				.profile-pane.active#1
 					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
-				.profile-pane
+				.profile-pane#2
 					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
-				.profile-pane
+				.profile-pane#3
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
 
 	.part.four

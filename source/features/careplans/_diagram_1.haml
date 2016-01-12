@@ -13,23 +13,23 @@
       %h6 Health Concerns (Choose 2)
       .col-md-6
         .checkbox
-          %label
+          %label.depression
             %input{:type=> "checkbox", :id=>"depression"} Depression
         .checkbox
-          %label
+          %label.smoking
             %input{:type=> "checkbox", :id=>"smoking"} Smoking
         .checkbox
-          %label
+          %label.option0
             %input{:type=> "checkbox", :id=>"option0"}=profile.options[0].html_safe
       .col-md-6
         .checkbox
-          %label
+          %label.obesity
             %input{:type=> "checkbox", :id=>"obesity"} Obesity
         .checkbox  
-          %label
+          %label.diabetes
             %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes
         .checkbox
-          %label
+          %label.option1
             %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe
     #col.right.col-md-6
       %h6 Care Team
@@ -52,7 +52,7 @@
 .profile.mobile{:data=>{:index=> index, :patient=> profile.name}}
   %div.filter.row
     %div.col-md-6.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Isabella</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuName"><li data-id="1"><a href="javascrip:void(0)">Isabella</a></li><li data-id="2"><a href="javascrip:void(0)">Reggie</a></li><li data-id="3"><a href="javascrip:void(0)">Donna</a></li></ul>
-    %div.col-md-6.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selection">Health Concern</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuSelection"><li><a href="javascrip:void(0)"><input type="checkbox" id="depression">&nbsp;<span>Depression</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="smoking">&nbsp;<span>Smoking</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="option0">&nbsp;<span>Orthopedic Injury</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="obesity">&nbsp;<span>Obesity</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="diabites">&nbsp;<span>Type II Diabetes</span></a></li><li><a href="javascrip:void(0)"><input type="checkbox" id="option1">&nbsp;<span>Puberty</span></a></li></ul>
+    %div.col-md-6.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selection">Health Concern</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuSelection"><li><a href="javascrip:void(0)" class="depression"><input type="checkbox" id="depression">&nbsp;<span>Depression</span></a></li><li><a href="javascrip:void(0)" class="smoking"><input type="checkbox" id="smoking">&nbsp;<span>Smoking</span></a></li><li><a href="javascrip:void(0)" class="option0"><input type="checkbox" id="option0">&nbsp;<span>Caregiver</span></a></li><li><a href="javascrip:void(0)" class="obesity"><input type="checkbox" id="obesity">&nbsp;<span>Obesity</span></a></li><li><a href="javascrip:void(0)" class="diabetes"><input type="checkbox" id="diabites">&nbsp;<span>Type II Diabetes</span></a></li><li><a href="javascrip:void(0)" class="option1"><input type="checkbox" id="option1">&nbsp;<span>Chlamydia</span></a></li></ul>
   - careplan.each do |component|
     - row_id = component[0].strip.delete(' ')
     %div.content-table{:id=> "#{row_id}"}

@@ -402,9 +402,17 @@ a {
 }
 #tabs > li > a {
 	color: rgb(0,0,0);
-	padding: 20px 0;
+	padding: 0;
+	height: 85px;
 	h6 {
 		margin-bottom: 0;
+		padding: 30px 0;
+		vertical-align: top;
+	}
+	img {
+		height: 84px;
+		width: 84px;
+		display: inline-block;
 	}
 }
 
@@ -412,7 +420,11 @@ a {
 	a {
 		color: white;
 		border-color: rgb(11, 94, 148);
+		border-bottom: none;
 		background-color: rgb(11, 94, 148);
+	}
+	img {
+		display: none;
 	}
 }
 
@@ -475,9 +487,15 @@ a {
 	}
 	.table tbody td {
 		border-color: rgb(225, 225, 225);
+		&.blank {
+			border-right: none;
+		}
 		&.header {
 			background-color: rgb(250, 250, 250);
 		}
+	}
+	.table tbody tr:first-child td:nth-child(2) {
+		border-left: none;
 	}
 	.table tbody tr:first-child td {
 		border-top: 2px solid rgb(11, 94, 148);
@@ -495,7 +513,81 @@ a {
 		margin: 0;
 	}
 }
-
+.profile {
+	.depression {
+		color: #4a79b1;
+		input[type="checkbox"]:focus {
+			outline-color: #4a79b1;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #4a79b1;
+		}
+	}
+	.smoking {
+		color: #cd4b4b;
+		input[type="checkbox"]:focus {
+			outline-color: #cd4b4b;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #cd4b4b;
+		}
+	}
+	.obesity {
+		color: #9765ac;
+		input[type="checkbox"]:focus {
+			outline-color: #9765ac;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #9765ac;
+		}
+	}
+	.diabetes {
+		color: #cf8e37;
+		input[type="checkbox"]:focus {
+			outline-color: #cf8e37;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #cf8e37;
+		}
+	}
+	.option1, .option11, .option12, .option13 {
+		color: #5aaa60;
+		input[type="checkbox"]:focus {
+			outline-color: #5aaa60;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #5aaa60;
+		}
+	}
+	.option0, .option01, .option02, .option03 {
+		color: #847e79;
+		input[type="checkbox"]:focus {
+			outline-color: #847e79;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #847e79;
+		}
+	}
+	input[type="checkbox"] {
+		top: 2px;
+		-webkit-appearance: none;
+		appearance: none;
+	    width: 16px;
+	    height: 16px;
+	    border-radius: 4px;
+	    border: 1px solid;
+	}
+	input[type="checkbox"]:checked:after {
+		content: '';
+	    display: block;
+	    width: 7px;
+	    height: 10px;
+	    margin-left: 3px;
+	    border: solid #ffffff;
+	    border-width: 0 2px 2px 0;
+	    transform: rotate(45deg);
+	}
+}
 .careplan-diagram.mobile {
 	padding: 0;
 	.filter {
@@ -548,6 +640,26 @@ a {
 		display: none;
 		&.active {
 			display: block;
+		}
+	}
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+		&.depression {
+			color: #4a79b1;
+		}
+		&.smoking {
+			color: #cd4b4b;
+		}
+		&.obesity {
+			color: #9765ac;
+		}
+		&.diabetes {
+			color: #cf8e37;
+		}
+		&.option1 {
+			color: #5aaa60;
+		}
+		&.option0 {
+			color: #847e79;
 		}
 	}
 }

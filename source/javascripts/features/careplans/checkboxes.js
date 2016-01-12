@@ -7,9 +7,27 @@ $(document).ready(function(){
 		    }
 		    if (this.checked){
 			    addCondition(id);
+			    if (id == "obesity") {
+			    	if($(".tab-pane.active").attr("id") == "1")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/isabella_obese.png");
+			    	if($(".tab-pane.active").attr("id") == "2")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/reggie_obese.png");
+			    	if($(".tab-pane.active").attr("id") == "3")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/donna_obese.png");
+			    }
 			}
 			else {
-				$(".tab-pane.active").find("."+id).remove();
+				$(".tab-pane.active table").find("."+id).remove();
+				$(".tab-pane.active .right").find("."+id).remove();
+				$(".tab-pane.active .summary").find("."+id).remove();
+				if (id == "obesity") {
+			    	if($(".tab-pane.active").attr("id") == "1")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/isabella_norm.png");
+			    	if($(".tab-pane.active").attr("id") == "2")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/reggie_norm.png");
+			    	if($(".tab-pane.active").attr("id") == "3")
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/donna_norm.png");
+			    }
 			}
 	    }
 	    else {
@@ -20,7 +38,7 @@ $(document).ready(function(){
 			    addCondition(id);
 			}
 			else {
-				$(".profile-pane.active").find("."+id).remove();
+				$(".profile-pane.active .content-table").find("."+id).remove();
 			}
 	    }
 	});
@@ -34,14 +52,6 @@ $(document).ready(function(){
 		$(".profile-pane:nth-child("+id+")").addClass('active');
 	});
 
-	$(".careplan-diagram.mobile .filter .dropdown:last-child ul input[type='checkbox']").change(function() {
-		/* Act on the event */
-		var $currentText = $(".careplan-diagram.mobile .filter .dropdown:last-child .selection");
-		if (this.checked){
-		    var selection = $(this).parent().find("span").text();
-		}
-		
-	});
 })
 
 function addCondition (id) {
@@ -58,8 +68,8 @@ function addCondition (id) {
 		    	$.each(condition["care plan"], function(component, content) {
 		    		component = component.replace(/\s/g, '');
 		    		$.each(content, function(key, val){
-		    			if (val != "" && $(".tab-pane.active").find('#'+component+' > #'+key+' > .'+id).length == 0) {
-		    				$(".tab-pane.active").find("#"+component+" > #"+key).append("<p class="+id+">"+val+"</p>");
+		    			if (val != "" && $(".tab-pane.active table").find('#'+component+' > #'+key+' > .'+id).length == 0) {
+		    				$(".tab-pane.active table").find("#"+component+" > #"+key).append("<p class="+id+">"+val+"</p>");
 		    			}
 		    		});
 		    	});
@@ -68,8 +78,8 @@ function addCondition (id) {
     			$.each(condition["care plan"], function(component, content) {
 		    		component = component.replace(/\s/g, '');
 		    		$.each(content, function(key, val){
-		    			if (val != "" && $(".profile-pane.active").find('#'+component+' > #'+key+' > .'+id).length == 0) {
-		    				$(".profile-pane.active").find("#"+component+" > #"+key).append("<p class="+id+">"+val+"</p>");
+		    			if (val != "" && $(".profile-pane.active .content-table#"+component+" > #"+key+" > ."+id).length == 0) {
+		    				$(".profile-pane.active .content-table#"+component+" > #"+key).append("<p class="+id+">"+val+"</p>");
 		    			}
 		    		});
 		    	});
