@@ -82,7 +82,7 @@
   bio: Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.
   photo: yanyang_zhou.jpg
   github_username: "yvonnechow"
-  email: "yangyang@goinvo.com"
+  email: "yanyang@goinvo.com"
   linkedin_url: "https://www.linkedin.com/in/zhouyanyang"
 
 
@@ -123,15 +123,13 @@
   email: "brian@goinvo.com"
   photo: brian_liston.jpg
 
-- first_name: Courtney
-  last_name: McGorrill
-  title: Engineering Intern
-  bio: Courtney McGorrill is a computer science undergraduate at the Rochester Institute of Technology (RIT) and joins the studio for a fall coop. She's wrangling pixels and code while learning system engineering.
-  linkedin_url: "https://www.linkedin.com/in/courtneymcgorrill"
-  github_username: "cmcgorrill"
-  twitter_username: "court_mcgort"
-  email: "courtney@goinvo.com"
-  photo: courtney_mcgorrill.jpg
+- first_name: Lily
+  last_name: Fan
+  title: "Intern"
+  bio: "Lily is an Industrial Design student at the Rhode Island School of Design (RISD). Lily is interested in the collision of the physical, emotional, and digital. She is advancing her software design chops during the winter semester."
+  linkedin_url: "https://www.linkedin.com/in/lily-fan-07008a58"
+  email: "lily@goinvo.com"
+  photo: lily_fan.jpg
 
 - first_name: Dirk
   last_name: Knemeyer

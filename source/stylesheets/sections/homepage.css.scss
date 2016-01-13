@@ -22,19 +22,18 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 // Heros (keep old for features web page)
 #digital-healthcare {
+    &.block {
+        background-color: white;
+    }
 	.photo-container {
-		@media only screen and (max-width: 768px) {
-			background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(11, 94, 148, 0.6) 100%) , image-url('features/digital-healthcare/digital_health_cover_mobile.gif') rgba(255, 255, 255, 0.62);
-			background-size: 100% auto;
-		}
-		background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(11, 94, 148, 0.6) 100%) , image-url('features/digital-healthcare/digital_health_cover_transp.gif') rgba(255, 255, 255, 0.62);
+		background: linear-gradient(rgba(11, 94, 148, 0.3) 0%, rgba(11, 94, 148, 1) 100%) , image-url('features/digital-healthcare/digital_health_cover_transp.gif') rgba(255, 255, 255, 0.62);
 		background-size: auto 100%;
     	background-repeat: no-repeat;
     	background-position: right;
 	}
     .title {
 	   color: white;
-	
+
 	}
 }
 
@@ -51,8 +50,9 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 #from-bathroom-to-healthroom {
 	background-color: rgba(0,0,0,.5);
 	.photo-container {
-		background:rgba(0, 0, 0, 0.5) image-url('home/bathroom.jpg');
+		background:rgba(0, 0, 0, 0.5) image-url('home/bathroom.png');
 		background-size: cover;
+        background-position: center center;
 	}
 
 	.title {
@@ -239,7 +239,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 
 	.photo-container, .video-container {
-		background-image: image-url('home/hp-1.png');
+		// background-image: image-url('home/hp-1.png');
 		min-height: 578px;
 		background-size: cover;
 		background-position-y: bottom;

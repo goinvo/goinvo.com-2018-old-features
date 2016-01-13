@@ -3,34 +3,29 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="6912px" height="2592px" viewBox="0 0 6912 2592" enable-background="new 0 0 6912 2592" xml:space="preserve">
-<g id="Layer_1_1_" display="none">
-	
-		<image display="inline" overflow="visible" enable-background="new    " width="1153" height="235" xlink:href="1D104D08DEBCD80F.png"  transform="matrix(5.9586 0 0 5.9586 20.8555 595.8633)">
-	</image>
-</g>
 <g id="new">
-	<text transform="matrix(1 0 0 1 20.8555 956.3125)" font-family="'AJensonPro-Bold'" font-size="105.5492">Envision</text>
-	<text transform="matrix(1 0 0 1 966.2891 894.7383)" font-family="'AJensonPro-Bold'" font-size="105.5492">Envision, Craft</text>
-	<text transform="matrix(1 0 0 1 1911.7246 670.2969)" font-family="'AJensonPro-Bold'" font-size="105.5492">Envision, Blueprint, Craft, Build, Support</text>
-	<text transform="matrix(1 0 0 1 5733.1855 771.5938)" font-family="'AJensonPro-Bold'" font-size="105.5492">Craft, Build, Support</text>
+	<text transform="matrix(1 0 0 1 20.8555 956.3125)" font-family="'adobe-jenson-pro'" font-size="105.5492">Envision</text>
+	<text transform="matrix(1 0 0 1 966.2891 894.7383)" font-family="'adobe-jenson-pro'" font-size="105.5492">Envision, Craft</text>
+	<text transform="matrix(1 0 0 1 1911.7246 670.2969)" font-family="'adobe-jenson-pro'" font-size="105.5492">Envision, Blueprint, Craft, Build, Support</text>
+	<text transform="matrix(1 0 0 1 5733.1855 771.5938)" font-family="'adobe-jenson-pro'" font-size="105.5492">Craft, Build, Support</text>
 	<g>
-		<text transform="matrix(1 0 0 1 5733.1836 998.0234)" font-family="'AJensonPro-Bold'" font-size="105.5492">12w, 2.25FTE</text>
+		<text transform="matrix(1 0 0 1 5733.1836 998.0234)" font-family="'adobe-jenson-pro'" font-size="105.5492">12w, 2.25FTE</text>
 	</g>
-	<text transform="matrix(1 0 0 1 1911.7227 894.7383)" font-family="'AJensonPro-Bold'" font-size="105.5492">32w, 3FTE</text>
-	<text transform="matrix(1 0 0 1 20.8555 1180.7539)" font-family="'AJensonPro-Bold'" font-size="105.5492">8w, 1FTE</text>
-	<text transform="matrix(1 0 0 1 966.2891 1113.2227)" font-family="'AJensonPro-Bold'" font-size="105.5492">8w, 1.5FTE</text>
-	<line fill="none" stroke="#ECECEC" stroke-miterlimit="10" x1="1273.357" y1="1373.462" x2="1273.357" y2="1726.809"/>
-	<line fill="none" stroke="#ECECEC" stroke-miterlimit="10" x1="1911.525" y1="1373.462" x2="1911.525" y2="1726.809"/>
-	<line fill="none" stroke="#ECECEC" stroke-miterlimit="10" x1="5277.551" y1="1373.462" x2="5277.551" y2="1726.809"/>
-	<line fill="none" stroke="#ECECEC" stroke-miterlimit="10" x1="5706.57" y1="1373.462" x2="5706.57" y2="1726.809"/>
-	<text transform="matrix(1 0 0 1 269.084 1834.2617)" font-family="'AJensonPro-Bold'" font-size="105.5492">Product vision realized,</text>
-	<text transform="matrix(1 0 0 1 199.9648 1961.1797)" font-family="'AJensonPro-Bold'" font-size="105.5492">sales team hits pavement.</text>
-	<text transform="matrix(1 0 0 1 1911.7246 1834.2617)" font-family="'AJensonPro-Bold'" font-size="105.5492">Prototype captures first</text>
-	<text transform="matrix(1 0 0 1 1911.7246 1961.1797)" font-family="'AJensonPro-Bold'" font-size="105.5492">customer, production begins.</text>
-	<text transform="matrix(1 0 0 1 4345.1533 1834.2617)" font-family="'AJensonPro-Bold'" font-size="105.5492">CodeRyte sold to 3M.</text>
-	<text transform="matrix(1 0 0 1 5706.374 1834.2617)" font-family="'AJensonPro-Bold'" font-size="105.5492">v01 launched, 50% </text>
-	<text transform="matrix(1 0 0 1 5706.374 1961.1797)" font-family="'AJensonPro-Bold'" font-size="105.5492">efficiency gains.</text>
-	<polygon fill="#DA3C35" points="5706.57,1043.95 5706.57,933.716 1911.525,933.716 1911.525,1161.335 966.488,1161.335 
+	<text transform="matrix(1 0 0 1 1911.7227 894.7383)" font-family="'adobe-jenson-pro'" font-size="105.5492">32w, 3FTE</text>
+	<text transform="matrix(1 0 0 1 20.8555 1180.7539)" font-family="'adobe-jenson-pro'" font-size="105.5492">8w, 1FTE</text>
+	<text transform="matrix(1 0 0 1 966.2891 1113.2227)" font-family="'adobe-jenson-pro'" font-size="105.5492">8w, 1.5FTE</text>
+	<line fill="none" stroke="#DCDCDC" stroke-width="5" stroke-miterlimit="10" x1="1273.357" y1="1373.462" x2="1273.357" y2="1726.809"/>
+	<line fill="none" stroke="#DCDCDC" stroke-width="5" stroke-miterlimit="10" x1="1911.525" y1="1373.462" x2="1911.525" y2="1726.809"/>
+	<line fill="none" stroke="#DCDCDC" stroke-width="5" stroke-miterlimit="10" x1="5277.551" y1="1373.462" x2="5277.551" y2="1726.809"/>
+	<line fill="none" stroke="#DCDCDC" stroke-width="5" stroke-miterlimit="10" x1="5706.57" y1="1373.462" x2="5706.57" y2="1726.809"/>
+	<text transform="matrix(1 0 0 1 269.084 1834.2617)" font-family="'adobe-jenson-pro'" font-size="105.5492">Product vision realized,</text>
+	<text transform="matrix(1 0 0 1 199.9648 1961.1797)" font-family="'adobe-jenson-pro'" font-size="105.5492">sales team hits pavement.</text>
+	<text transform="matrix(1 0 0 1 1911.7246 1834.2617)" font-family="'adobe-jenson-pro'" font-size="105.5492">Prototype captures first</text>
+	<text transform="matrix(1 0 0 1 1911.7246 1961.1797)" font-family="'adobe-jenson-pro'" font-size="105.5492">customer, production begins.</text>
+	<text transform="matrix(1 0 0 1 4345.1533 1834.2617)" font-family="'adobe-jenson-pro'" font-size="105.5492">CodeRyte sold to 3M.</text>
+	<text transform="matrix(1 0 0 1 5706.374 1834.2617)" font-family="'adobe-jenson-pro'" font-size="105.5492">v01 launched, 50% </text>
+	<text transform="matrix(1 0 0 1 5706.374 1961.1797)" font-family="'adobe-jenson-pro'" font-size="105.5492">efficiency gains.</text>
+	<polygon fill="#DA3C35" points="5706.57,1043.95 5706.57,933.716 1911.525,933.716 1911.525,1161.335 966.488,1161.335
 		966.488,1231.646 20.855,1231.646 20.855,1373.462 6891.145,1373.462 6891.145,1043.95 	"/>
 </g>
 </svg>
