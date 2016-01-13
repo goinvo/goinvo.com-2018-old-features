@@ -37,17 +37,17 @@ a {
 #feature-article span,
 #feature-article label,
 #feature-article td {
-	font-size: 18px;
+	font-size: 1rem;
 	line-height: 1.5em;
 	margin-bottom: 0;
 	font-weight: lighter;
 }
 #feature-article h6 {
-	font-size: 24px;
+	font-size: 1.4rem;
 	font-weight: normal;
 }
 #feature-article h1 {
-	font-size: 40px;
+	font-size: 2.2rem;
 	font-weight: normal;
 	color: #898989;
 	strong {
@@ -216,7 +216,7 @@ a {
 		}
 		#summary {
 			border-bottom: solid rgb(11, 94, 148) 2px;
-			padding: 20px 15px;
+			padding: 10px 15px 15px 15px;
 			background-color: $bg-gray;
 			div {
 				padding: 0;
@@ -224,7 +224,7 @@ a {
 		}
 		#care-team {
 			border-top: solid rgb(11, 94, 148) 2px;
-			padding: 10px 15px;
+			padding: 10px 15px 15px 15px;
 			background-color: $bg-gray;
 			div {
 				padding: 0;
@@ -237,7 +237,7 @@ a {
 			flex-wrap: wrap;
 		}
 		.col {
-			padding: 10px 15px;
+			padding: 10px 15px 15px 15px;
 			border-right: solid rgb(11, 94, 148) 2px;
 		}
 		.col:last-child {
@@ -340,10 +340,10 @@ a {
 		img {
 			display: block;
 			margin: 0 auto;
-			margin-top: 20px;
+			margin-top: 40px;
 		}
 		.control {
-			top: 20px;
+			top: 35px;
 		}
 		.carecards-link {
 			text-align: center;
@@ -790,7 +790,7 @@ a {
 	}
 	.history-item__title {
 		color: #0B5E94;
-		font-weight: bolder;
+		//font-weight: bolder;
 		line-height: 45px;
 		font-family: work sans, sans-serif;
 		font-size: 18px;
@@ -836,283 +836,77 @@ a {
 
 //popup interactivity
 	//popup classes
-	.popup_img {
-		float: left;
-		border-bottom-left-radius: 5px;
-		border-top-left-radius: 5px;
+	ul.history-items {
+		position: relative;
 	}
-	.popup_content {
-		box-shadow: 2.5px 2.5px 4px 0px rgba(198,198,198,1);
-		background-color: #EFEFEF;
-		color: #0B5E94;
+	div.popup-box {
 		position: absolute;
-		border-radius: 3px;
+		border: 1px solid #f5f5f5;
+		background-color: #f5f5f5;
+		padding: 15px 20px;
+		border-radius: 4px;
+		box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
 		display: none;
-	}
-	.popup_triangle {
-		display: block;
-		position: absolute;
-		margin: 0 0 20px 0;
-		width: 0;
-		height: 0;
-		border-left: 35px solid transparent;
-		border-right: 35px solid transparent;
-		transform: scaleX(0.65) scaleY(1);
-	}
-	.popup_triangle_shadow {
-		display: block;
-		position: absolute;
-		margin: 0 0 20px 0;
-		width: 0;
-		height: 0;
-		border-top: 20px solid #c6c6c6;
-		border-left: 35px solid transparent;
-		border-right: 35px solid transparent;
-		transform: scaleX(0.65) scaleY(1);
-		-webkit-filter: blur(1.5px);
-	}
-	.popup_text_header {
-		color: #0B5E94;
-		float: left;
-		font-weight: bold;
-		font-family: work sans, sans-serif;
-		padding-left: 1.2rem;
-		padding-top: 1rem;
-		padding-bottom: 0.6rem;
-	}
-	.popup_text_content {
-		float: left;
-		color: black;
-		font-weight: 300;
-		width: 200px;
-		font-family: work sans, sans-serif;
-		line-height: 21px;
-		padding-left: 1.2rem;
-	}
-	//popup content for each case study
-	#nursing_popup {
-		top: -21rem;
-		left: -20rem;
-		width: 29rem;
-		z-index: 3;
-		img {
-			width: 15rem;
-		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 19.3rem;
-			left: 19.8rem;
-		}
-		//triangle
-		span:nth-child(2) {
-			top: 19.1rem;
-			left: 19.8rem;
-			border-top: 20px solid #efefef;
-		}
-		//header
-		span:nth-child(4) {
-			float: left;
-		}
-		//text content
-		span:nth-child(5) {
-			float: left;
-			width: 13rem;
+		h6 {
+			color: #0B5E94;
 		}
 	}
-	#life_care_planning_popup {
-		top: -15.2rem;
-		left: -18rem;
-		width: 29.2rem;
-		z-index: 4;
-		img {
-			width: 16rem;
-		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 13.6rem;
-			left: 20rem;
-		}
-		//triangle
-		span:nth-child(2) {
-			top: 13.4rem;
-			left: 20rem;
-			border-top: 20px solid #efefef;
-		}
-		//header
-		span:nth-child(4) {
-		}
-		//text content
-		span:nth-child(5) {
-		}
+	div.arrow {
+		content: "";
+	    position: absolute;
+	    bottom: -10px;
+	    //right: 10px;
+	    width: 18px;
+	    height: 18px;
+	    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+	    transform: rotate(45deg);
+	    background-color: #f5f5f5;
 	}
-	#EAB_popup {
-		top: -19.8rem;
-		left: -6rem;
-		width: 41rem;
-		z-index: 2;
-		img {
-			width: 23rem;
-		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 18.4rem;
-			left: 5.4rem;
-		}
-		//triangle
-		span:nth-child(2) {
-			top: 18.2rem;
-			left: 5.4rem;
-			border-top: 20px solid #4A3C33;
-		}
-		//header
-		span:nth-child(4) {
-		}
-		//text content
-		span:nth-child(5) {
-			width: 270px;
-		}
-	}
-	#developmental_psychology_popup{
-		@media only screen and (min-width: 1442px) {
-			top: -21.7rem;
-			left: -35rem;
-			width: 46rem;
-			z-index: 5;
-			img {
-				width: 30rem;
-			}
-			//triangle shadow
-			span:nth-child(1) {
-				top: 20.2rem;
-				left: 40rem;
-			}
-			//triangle
-			span:nth-child(2) {
-				top: 20rem;
-				left: 40rem;
-				border-top: 20px solid #B39180;
-			}
-			//header
-			span:nth-child(4) {
-			}
-			//text content
-			span:nth-child(5) {
-				width: 15rem;
-			}
-		}
-		@media only screen and (min-width: 1171px) and (max-width: 1441px){
-			top: -21.7rem;
-			left: 0rem;
-			width: 46rem;
-			z-index: 5;
-			img {
-				width: 30rem;
-			}
-			//triangle shadow
-			span:nth-child(1) {
-				top: 20.2rem;
-				left: 5rem;
-			}
-			//triangle
-			span:nth-child(2) {
-				top: 20rem;
-				left: 5rem;
-				border-top: 20px solid #B39180;
-			}
-			//header
-			span:nth-child(4) {
-			}
-			//text content
-			span:nth-child(5) {
-				width: 15rem;
-			}
-		}
-		@media only screen and (max-width: 1170px) {
-			top: -21.7rem;
-			left: -20rem;
-			width: 46rem;
-			z-index: 5;
-			img {
-				width: 30rem;
-			}
-			//triangle shadow
-			span:nth-child(1) {
-				top: 20.2rem;
-				left: 20rem;
-			}
-			//triangle
-			span:nth-child(2) {
-				top: 20rem;
-				left: 20rem;
-				border-top: 20px solid #B39180;
-			}
-			//header
-			span:nth-child(4) {
-			}
-			//text content
-			span:nth-child(5) {
-				width: 15rem;
-			}
-		}
-	}
-	#case_management_popup {
-		top: -22.4rem;
-		left: -10rem;
-		width: 47rem;
-		z-index: 6;
-		img {
-			width: 30rem;
-		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 20.9rem;
-			left: 12.5rem;
-		}
-		//triangle
-		span:nth-child(2) {
-			top: 20.7rem;
-			left: 12.5rem;
-			border-top: 20px solid black;
-		}
-		//header
-		span:nth-child(4) {
-		}
-		//text content
-		span:nth-child(5) {
-			width: 16rem;
-		}
-	}
-	#litigation_popup {
-		top: -21.6rem;
-		left: -22rem;
-		width: 47rem;
-		z-index: 7;
-		img {
-			width: 30rem;
-		}
-		//triangle shadow
-		span:nth-child(1) {
-			top: 20.2rem;
-			left: 22.2rem;
-		}
-		//triangle
-		span:nth-child(2) {
-			top: 20rem;
-			left: 22.2rem;
-			border-top: 20px solid #381813;
-		}
-		//header
-		span:nth-child(4) {
-		}
-		//text content
-		span:nth-child(5) {
-			width: 16rem;
-		}
-	}
+	// div.popup-box:after {
+	// 	content: "";
+	//     position: absolute;
+	//     bottom: -16px;
+	//     right: 8px;
+	//     width: 0;
+	//     height: 0;
+	//     border-bottom: none;
+	//     border-left: 10px solid transparent;
+	//     border-right: 10px solid transparent;
+	//     border-top: 15px solid #f5f5f5;
+	// }
+
 	#next_article {
 		padding-top: 0.2rem;
 		font-weight: 700;
 	}
+}
+@media only screen and (min-width: 769px) {
+	div.popup-box img, div.popup-content {
+		display: inline-block;
+		float: left;
+	}
+	div.popup-box {
+		bottom: 0;
+		left: 0;
+		max-width: 800px;
+	}
+	div.popup-box img {
+		width: 45%;
+	}
+	div.popup-content {
+		width: 55%;
+		padding-left: 20px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.popup-box img {
+		display: none;
+	}
+	div.popup-box {
+		width: 100%;
+		left: 0;
+	}
+
 }
 
 #credits {
