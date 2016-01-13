@@ -35,7 +35,7 @@
       full_time_staff: 2
       service_names: "Envision, Craft"
 
-- client: "Health Axioms"
+- client: "Care Cards"
   practice_area_names: "Consumer"
   description: ""
   budget: 20000 #Verify
