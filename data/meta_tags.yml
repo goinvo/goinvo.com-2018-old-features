@@ -1,3 +1,11 @@
+- page: "articles"
+  description: "Involution Studios articles"
+  keywords: "articles healthcare involution"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Involution Studios Articles"
+  # twitterimage: ""
+
 - page: "homepage"
   description: "Involution Studios is a Boston user experience design firm. We design, build, and ship beautiful software for companies of all sizes. The software we design helps progressive healthcare companies create new markets and exploit future tech."
   keywords: "boston ux design, boston user experience design, boston ui design, boston user interface design, boston software design, healthcare design"

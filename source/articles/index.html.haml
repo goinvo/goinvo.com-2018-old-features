@@ -1,0 +1,33 @@
+- content_for(:title) do
+	= "Involution Studios Articles"
+- content_for(:page_head) do
+	= stylesheet_link_tag "articles/index"
+	- meta = page_for_meta("articles")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+%header.latest-article
+	.outer-container
+		.inner-container
+			Feature: January 2016
+			%h1 Digital Healthcare in 2016
+
+.feature-article-list-container
+	.feature-list-title Features
+	%ul.feature-article-list
+		-# - data.features.each do |article|
+		-# 	- style = article.image.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,0.85) 0%, rgba(2,0,0,0.55) 24%, rgba(255,255,255,0.01) 68%, rgba(255,255,255,0) 69%),url(../../#{article.image}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,0.85)), color-stop(24%,rgba(2,0,0,0.55)), color-stop(68%,rgba(255,255,255,0.01)), color-stop(69%,rgba(255,255,255,0))),url(../../images/#{article.image}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/#{article.image}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/#{article.image}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/#{article.image}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/#{article.image}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9020000', endColorstr='#00ffffff',GradientType=1 ),url(../../images/#{article.image}); /* IE6-9 */ background-size:cover;"
+		-# 	%li
+		-# 		%h1= article.title
+		-# 		.feature-label= article.date
+	%a.show-all-features Show all features
+
+.blog-article-list-container
+	%ul.blog-article-list
+		%li Derp
+		%li Derp 2
