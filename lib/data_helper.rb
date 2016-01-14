@@ -1,3 +1,5 @@
+require 'date'
+
 module DataHelper
   def client_for_name(client_name)
     match = data.clients.detect { |c| c.name == client_name }
@@ -17,10 +19,16 @@ module DataHelper
     project.practice_area_names.split(',').map(&:strip)
   end
 
-  def most_recent_article()
-    match = data.features.articles.detect { |a| a.is_most_recent }
-    puts "Couldn't find most recent article" if match.nil?
+  # Feature articles yaml helpers
+  def feature_articles_sorted_by_date()
+    data.features.articles.sort { |a,b| a.date <=> b.date }.reverse
+  end
 
-    match
+  def most_recent_feature_article()
+    feature_articles_sorted_by_date.first
+  end
+
+  def feature_article_date(article)
+    Date.parse(article.date).strftime("%B %Y")
   end
 end
