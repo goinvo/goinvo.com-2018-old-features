@@ -2,7 +2,7 @@
 	margin-top: 55px;
 	// min-height: calc(100% - 55px);
 }
-.latest-article {
+.most-recent-article {
 	position: relative;
 	width: 100%;
 	height: 500px;
@@ -11,19 +11,19 @@
 	background-repeat: no-repeat;
 	background-position: right;
 }
-.latest-article .outer-container {
+.most-recent-article .outer-container {
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 }
-.latest-article .inner-container,
+.most-recent-article .inner-container,
 .feature-article-list-container {
 	padding: 0 3rem;
 	max-width: 1200px;
 	margin: 0 auto;
 }
-.latest-article .inner-container {
+.most-recent-article .inner-container {
 	padding: 3rem;
 }
 .feature-article-list {
