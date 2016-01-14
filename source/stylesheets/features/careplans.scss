@@ -49,10 +49,19 @@ a {
 #feature-article h1 {
 	font-size: 2.2rem;
 	font-weight: normal;
-	color: #898989;
+	color: #676767;
 	strong {
 		font-weight: bold;
 	}
+}
+#feature-article .coming-soon-box .title {
+	font-weight: normal;
+	font-size: 1.2rem;
+}
+#feature-article .coming-soon-box .subtitle {
+	font-weight: normal;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
 }
 #feature-article .control span {
 	font-size: 45px;
@@ -126,13 +135,16 @@ a {
 	    background-color: rgb(11, 94, 148);
 	    height: 700px;
 	    overflow: hidden;
-	    background-image: url("../../images/careplans/FeatureBanner.png");
+	    background-image: url("../../images/features/careplans/FeatureBanner.png");
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	    position: relative;
 		.title {
 			text-align: center;
 			color: #676767;
+			position: absolute;
+			width: 100%;
+			z-index: 5;
 			p {
 				font-size: 6rem;
 				line-height: 5rem;
@@ -154,7 +166,17 @@ a {
 			right: 30px;
 			bottom: 10px;
 			color: #000000;
+			font-size: 0.8rem;
+			z-index: 5;
 		}
+	}
+	.bg-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,0));
 	}
 
 	.small-screen-cover {
@@ -293,7 +315,7 @@ a {
 
 	.item{
 		margin: 0 auto;
-		padding: 50px 10%;
+		padding: 30px 10%;
 	}
 
 	.care-card-img {
@@ -327,6 +349,7 @@ a {
 	.mobile {
 		h6 {
 			text-align: center;
+			margin-bottom: 20px;
 		}
 		img {
 			display: block;
@@ -334,7 +357,7 @@ a {
 			margin-top: 40px;
 		}
 		.control {
-			top: 35px;
+			top: 15px;
 		}
 		.carecards-link {
 			text-align: center;
@@ -734,32 +757,32 @@ a {
 	text-align: center;
 }
 
-.credit-wrapper {
-	background-color: rgba(0,0,0,.03);
-	padding: 60px 0px;
-	border-top: 3px solid rgba(0, 0, 0, 0.4);
-}
-
 .part.four {
-
+	ul.history-items {
+		list-style: none;
+	}
 	ul.history-items li {
     position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
     /* use padding-bottom instead of margin-bottom.*/
     margin-bottom: 0; /* This overrides previously specified margin-bottom */
     padding-bottom: 1.5em;
 	}
-	ul.history-items li:after {
+	ul.history-items li:nth-child(6) {
+		padding-bottom: 5rem;
+	}
+	ul.history-items li.history-item::after {
     /* bullets */
-    content: url(../../../images/careplans/circle.png);
+    content: url(../../../images/features/careplans/circle.png);
     position: absolute;
     left: 1.5px; /*adjust manually*/
     top: 13px;
 	}
-	ul.history-items li:before {
+	ul.history-items li.history-item:before {
     /* lines */
     content:"";
     position: absolute;
     left: 9px; /* adjust manually */
+    top: -52px;
     border-left: 1px solid #B5C7D3;
     height: 100%;
     width: 1px;
@@ -768,9 +791,28 @@ a {
    /* first li's line */
    top: 14px; /* moves the line down so that it disappears under the bullet. Adjust manually */
   }
-	ul.history-items li:last-child:before {
-    /* last li's line */
-   height: 14px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+	
+	.coming-soon-box {
+		margin-left: 2.1rem;	
+		border-radius: 4px;
+    	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    	background-color: #f5f5f5;
+		padding: 20px;
+		width: 100%;
+
+		img {
+			border: 1px solid #898989;
+		}
+		.col-md-6 {
+			padding: 0;
+		}
+		.coming-soon-content {
+			padding-right: 20px;
+			padding-bottom: 20px;
+		}
+		p.title, p.subtitle {
+			color: #898989;
+		}
 	}
 
 	padding-bottom: 6rem;
@@ -853,19 +895,6 @@ a {
 	    transform: rotate(45deg);
 	    background-color: #f5f5f5;
 	}
-	// div.popup-box:after {
-	// 	content: "";
-	//     position: absolute;
-	//     bottom: -16px;
-	//     right: 8px;
-	//     width: 0;
-	//     height: 0;
-	//     border-bottom: none;
-	//     border-left: 10px solid transparent;
-	//     border-right: 10px solid transparent;
-	//     border-top: 15px solid #f5f5f5;
-	// }
-
 	#next_article {
 		padding-top: 0.2rem;
 		font-weight: 700;
@@ -900,122 +929,38 @@ a {
 
 }
 
-#credits {
-	margin: 0 auto 0 auto;
-    max-width: 645px;
-    width: 60%;
-	@include clearfix();
+#feature-article #credits {
+	padding: 40px 10%;
+	background-color: #f5f5f5;
+	border-top: 2px solid #e1e1e1;
 
-	@media only screen and (max-width: 768px) {
-		width: 100%;
-	}
-	.author, .contributors {
-		float: left;
-	}
-	h2 {
-		margin-bottom: 0;
-		font-weight: 400;
-	}
-	h3 {
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 1em;
-		color: #888;
-		margin-bottom: 0;
-		padding-bottom: 0.25em;
-	}
-	small {
-		font-size: 20px;
-	}
-	p {
-		font-size: 20px;
-		line-height: 1.3em;
-	}
-	a {
-		color: $gray;
-		&:hover {
-			color: $lightgray;
-		}
-		@media only screen and (max-width: 768px) {
-			font-size: 16px;
-		}
-	}
-	.author {
-		width: 65%;
-		padding-right: 3em;
-		color: #444;
-		//margin: 0 auto;
-	}
-	.author-content {
-		position: relative;
-		//margin-top: -25%;
-		background: $white;
-		padding: 2em;
-		border-color: $blue;
-		border-width: 0 3px 3px;
-		border-style: solid;
-		p {
-			margin-bottom: 0;
-		}
-	}
-	.contributors.download-links {
-		margin-top: 20px;
-		font-size: 24px;
-	}
 	.contributors {
-		padding: 2em;
-		border: 3px solid rgb(11, 94, 148);
-		h3 {
-			font-size: 22px;
-			padding-bottom: 0.5em;
-		}
-		p {
-			font-size: 34px;
-			line-height: 1em;
-			margin-bottom: 0;
-			@media only screen and (max-width: 768px) {
-				font-size: 28px;
-			}
-		}
-		hr {
-			width: 2em;
-			margin: 1.5em 0;
-			border-width: 5px;
-			border-color: rgb(11, 94, 148);
-		}
-		.contributor {
-			&.left {
-				float: left;
-			}
-			&.right {
-				float: right;
-			}
-			@include clearfix();
-			.image, .info {
-				float: left;
-			}
-			.image {
-				width: 20%;
-			}
-			.info {
-				padding-left: 1em;
-				width: 80%;
-			}
-		}
+		margin-bottom: 60px;
 	}
-
-	@media only screen and (max-width: 978px) {
-		padding-left: 3em;
-		padding-right: 3em;
-		.author {
-			padding-right: 0;
-			margin-bottom: 2em;
-		}
-		.author, .contributors {
-			width: 100%;
-		}
-		.contributor {
-			margin-bottom: 1.5em;
-		}
+	.contributor {
+		margin-bottom: 20px;
+	}
+	.contributor .image {
+		width: 80px;
+		display: inline-block;
+	}
+	.contributor p {
+		line-height: 1.5rem;
+	}
+	.contributor p.name {
+		font-size: 1.8rem;
+		font-weight: normal;
+	}
+	.contributor .info {
+		display: inline-block;
+		margin-left: 20px;
+		vertical-align: top;
+		color: #676767;
+	}
+	.reference a{
+		color: #000000;
+		text-decoration: underline;
+		margin-bottom: 10px;
+		display: block;
 	}
 }

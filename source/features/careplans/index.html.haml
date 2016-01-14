@@ -33,6 +33,7 @@
 			%p.sub-title
 				PART I: Overview
 		%a.background-copyright{:href => "https://www.flickr.com/photos/com_salud/13866052723", :target => "_blank"} Photo by COM SALUD
+		%div.bg-cover
 	%header.nav-wrapper.stuck
 		%nav.main-nav
 			%a.one{:href => "javascript:void(0)"} Care Plans
@@ -147,15 +148,15 @@
 			%ul.nav.nav-tabs#tabs
 				%li.active{:role=> "presentation"}
 					%a{:href=> "#1", :data=> {:toggle=> "tab"}}
-						%img{:src=>"../../images/careplans/isabella_norm.png"}
+						%img{:src=>"../../images/features/careplans/isabella_norm.png"}
 						%h6 Isabella, 13
 				%li{:role=> "presentation"}
 					%a{:href=> "#2", :data=> {:toggle=> "tab"}}
-						%img{:src=>"../../images/careplans/reggie_norm.png"}
+						%img{:src=>"../../images/features/careplans/reggie_norm.png"}
 						%h6 Reggie, 35
 				%li{:role=> "presentation"}
 					%a{:href=> "#3", :data=> {:toggle=> "tab"}}
-						%img{:src=>"../../images/careplans/donna_norm.png"}
+						%img{:src=>"../../images/features/careplans/donna_norm.png"}
 						%h6 Donna, 68
 			.tab-content
 				.tab-pane.active{:id=> "1"}
@@ -196,9 +197,13 @@
 				%h6.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2" fill="white"/></svg> 2000s
 				%p.history-item__content The breadth of professionals and care providers within life care planning expanded, with individuals coming from rehabilitation counseling, rehabilitation nursing, physiatry, and case management professions. Both paper based and digital technology based care plans were regularly being used by patients and their care providers. A proliferation of digital technology based care plans also began to take hold in later years. Healthtap, Amwell, Better., HelloDoctor, HealthKit, My Chart, Practice Fusion, Health Vault, AskMD, Happify, and Healarium are all more well known examples.
 			%li.history-item
-				%h6.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2" fill="white"/></svg> Where are care plans now?
-				%p.history-item__content Check back next month for part II of our care plan series:
-				%p.history-item__content#next_article Care Plans: The Current Landscape
+				%h6.history-item__title <svg height="17" width="30"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2" fill="white"/></svg> Coming soon!
+			%div.coming-soon-box.row
+				%div.coming-soon-content.col-md-6
+					%p.title Care Plans
+					%p.subtitle PII: Curent Landscape
+					%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
+				%img.col-md-6{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.png"}
 			%div.popup-box
 				%img
 				%div.popup-content
@@ -213,31 +218,81 @@
 			- # BEGIN Credits: Copy from this line.
 		#credits
 			.contributors
+				%h1 Authors
 				.contributor
 					.image
-						= image_tag 'features/digital-healthcare/contrib/beth.jpg'
+						%img{:src =>'../../images/features/careplans/contrib/beth.jpg'}
 					.info
-						%h3 Contributing Author & Illustrator
-						%p Beth Herlin<br><small><a href="https://twitter.com/beth11herlin">@beth11herlin</a></small>
-				%hr
+						%p Contributing Author & Illustrator
+						%p.name Beth Herlin<br><small><a href="https://twitter.com/beth11herlin" target="_blank">@beth11herlin</a></small>
 				.contributor
 					.image
-						= image_tag 'features/digital-healthcare/contrib/jon.jpg'
+						%img{:src =>'../../images/features/careplans/contrib/edwin.jpg'}
 					.info
-						%h3 Contributing Author
-						%p Jon Follett<br><small><a href="https://twitter.com/jonfollett">@jonfollett</a></small>
-				%hr
+						%p Contributing Author & Illustrator
+						%p.name Edwin Choi
 				.contributor
 					.image
-						= image_tag 'features/digital-healthcare/contrib/courtney.jpg'
+						%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
 					.info
-						%h3 Web Developer & Designer
-						%p Courtney McGorrill<br><small><a href="http://twitter.com/court_mcgort">@court_mcgort</a></small>
-				%hr
+						%p Web Designer & Developer
+						%p.name Yanyang Zhou
 				.contributor
 					.image
-						= image_tag 'features/democracy/contrib/juhan.jpg'
+						%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
 					.info
-						%h3 Contributing Author
-						%p Juhan Sonin<br><small><a href="http://twitter.com/jsonin">@jsonin</a></small>
+						%p Contributing Author
+						%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
+			.reference
+				%h1 References
+				%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/ Stage2_EPCore_15_SummaryCare.pdf", :target=>"_blank"} https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/ Stage2_EPCore_15_SummaryCare.pdf
+				%a{:href => "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ ChronicCareManagement.pdf", :target=>"_blank"} https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ ChronicCareManagement.pdf
+				%a{:href => "http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx", :target=>"_blank"} http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx
+				%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf", :target=>"_blank"} https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
+				%a{:href => "https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399", :target=>"_blank"} https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399
+				%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment", :target=>"_blank"} https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment
+				%a{:href => "http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977
+				%a{:href => "http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/", :target=>"_blank"} http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/
+				%a{:href => "http://www.medicinenet.com/emotional_eating/page4.htm", :target=>"_blank"} http://www.medicinenet.com/emotional_eating/page4.htm
+				%a{:href => "http://www.kcbj.com/2013/10/knee-motion-machine-do-you-need-it-after-surgery/", :target=>"_blank"} http://www.kcbj.com/2013/10/knee-motion-machine-do-you-need-it-after-surgery/
+				%a{:href => "http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html", :target=>"_blank"} http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html
+				%a{:href => "http://www.moveforwardpt.com/symptomsconditionsdetail.aspx? cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4", :target=>"_blank"} http://www.moveforwardpt.com/symptomsconditionsdetail.aspx? cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4
+				%a{:href => "http://www.diabetes.org/", :target=>"_blank"} http://www.diabetes.org/
+				%a{:href => "http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/", :target=>"_blank"} http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/
+				%a{:href => "http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx", :target=>"_blank"} http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx
+				%a{:href => "http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834
+				%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1", :target=>"_blank"} http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1
+				%a{:href => "http://www.cdc.gov/healthyschools/obesity/facts.htm", :target=>"_blank"} http://www.cdc.gov/healthyschools/obesity/facts.htm
+				%a{:href => "http://carecards.me", :target=>"_blank"} carecards.me
+				%a{:href => "http://www.heart.org/HEARTORG/", :target=>"_blank"} http://www.heart.org/HEARTORG/
+				%a{:href => "http://www.aafp.org/afp/2005/0201/p469.html", :target=>"_blank"} http://www.aafp.org/afp/2005/0201/p469.html
+				%a{:href => "http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580
+				%a{:href => "http://www.cdc.gov/std/tg2015/chlamydia.htm", :target=>"_blank"} http://www.cdc.gov/std/tg2015/chlamydia.htm
+				%a{:href => "http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf", :target=>"_blank"} http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf
+				%a{:href => "http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf", :target=>"_blank"} http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf
+				%a{:href => "http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring", :target=>"_blank"} http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring
+				%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel
+				%a{:href => "https://www.nia.nih.gov/health/publication/sexuality-later-life", :target=>"_blank"} https://www.nia.nih.gov/health/publication/sexuality-later-life
+				%a{:href => "http://www.alz.org/alzheimers_disease_10429.asp", :target=>"_blank"} http://www.alz.org/alzheimers_disease_10429.asp
+				%a{:href => "https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149", :target=>"_blank"} https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149
+				%a{:href => "http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor", :target=>"_blank"} http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor
+				%a{:href => "http://teens.webmd.com/girls/facts-about-puberty-girls", :target=>"_blank"} http://teens.webmd.com/girls/facts-about-puberty-girls
+				%a{:href => "http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/", :target=>"_blank"} http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/
+				%a{:href => "http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html", :target=>"_blank"} http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html
+				%a{:href => "https://en.wikipedia.org/wiki/Activities_of_daily_living", :target=>"_blank"} https://en.wikipedia.org/wiki/Activities_of_daily_living
+				%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm", :target=>"_blank"} http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm
+				%a{:href => "https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive- Health-Care", :target=>"_blank"} https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive- Health-Care
+				%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx", :target=>"_blank"} https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx
+				%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx", :target=>"_blank"} https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx
+				%a{:href => "http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins", :target=>"_blank"} http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins
+				%a{:href => "https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need", :target=>"_blank"} https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need
+				%a{:href => "http://www.webmd.com/parenting/raising-fit-kids/recharge/reduce-teen-screen-time?page=3", :target=>"_blank"} http://www.webmd.com/parenting/raising-fit-kids/recharge/reduce-teen-screen-time?page=3
+				%a{:href => "http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html", :target=>"_blank"} http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html
+				%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf", :target=>"_blank"} http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf
+				%a{:href => "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3267340/", :target=>"_blank"} http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3267340/
+				%a{:href => "http://www.webmd.com/alzheimers/tc/dementia-medications", :target=>"_blank"} http://www.webmd.com/alzheimers/tc/dementia-medications
+				%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel
+				%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456", :target=>"_blank"} http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456
+				%a{:href => "http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436", :target=>"_blank"} http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436
+
 		- # END Credits. Copy to this %%%%%line.

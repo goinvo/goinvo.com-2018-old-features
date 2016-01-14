@@ -9,11 +9,11 @@ $(document).ready(function(){
 			    addCondition(id);
 			    if (id == "obesity") {
 			    	if($(".tab-pane.active").attr("id") == "1")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/isabella_obese.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/isabella_obese.png");
 			    	if($(".tab-pane.active").attr("id") == "2")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/reggie_obese.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/reggie_obese.png");
 			    	if($(".tab-pane.active").attr("id") == "3")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/donna_obese.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/donna_obese.png");
 			    }
 			}
 			else {
@@ -22,11 +22,11 @@ $(document).ready(function(){
 				$(".tab-pane.active .summary").find("."+id).remove();
 				if (id == "obesity") {
 			    	if($(".tab-pane.active").attr("id") == "1")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/isabella_norm.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/isabella_norm.png");
 			    	if($(".tab-pane.active").attr("id") == "2")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/reggie_norm.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/reggie_norm.png");
 			    	if($(".tab-pane.active").attr("id") == "3")
-			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/careplans/donna_norm.png");
+			    		$(".tab-pane.active .profile.desktop .row:first-child img").attr("src", "../../../images/features/careplans/donna_norm.png");
 			    }
 			}
 	    }

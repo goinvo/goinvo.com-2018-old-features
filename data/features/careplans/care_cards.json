@@ -2,55 +2,55 @@
 	{
 		"header":"Nutrition",
 		"content":"A nutrition plan must recognize the current problems in eating habits and consider chronic conditions/symptoms, food preparation capabilities, and dietary restrictions of the individual. The outer aisles of the supermarket are where the healthiest foods are: greens, fruits, poultry, nuts, grains, and dairy. Fill up the cart.<br>Meals at home and a brownbag lunch at work are more nutritious than eating out. Families who eat the evening meal together eat healthier.",
-		"img":"../../images/careplans/care_cards/2_EatFood.jpg",
-		"icon":"../../images/careplans/icons/nutrition.svg"
+		"img":"../../images/features/careplans/care_cards/2_EatFood.jpg",
+		"icon":"../../images/features/careplans/icons/nutrition.svg"
 	},
 	{
 		"header":"Physical Activity",
 		"content":"Regular physical activity is especially important for those with conditions like diabetes, high blood pressure, or high cholesterol. The goal is to get active and STAY doing enjoyable and, therefore, sustainable activities. Exercising regularly can lower your blood glucose, blood pressure, and cholesterol levels, and even reduce stress. An increase in light activity increases fitness, so fidget and putter and do housework. Make walking a daily habit — for your commute, errands, stairs, and fitness — and get that step count going up.",
-		"img":"../../images/careplans/care_cards/4_ExerciseIsMedicine.jpg",
-		"icon":"../../images/careplans/icons/activity.svg"
+		"img":"../../images/features/careplans/care_cards/4_ExerciseIsMedicine.jpg",
+		"icon":"../../images/features/careplans/icons/activity.svg"
 	},
 	{
 		"header":"Sleep",
 		"content":"The amount of sleep a patient gets is a significant factor on their overall wellbeing. Healthy adults need 7-8 hours of sleep a day for optimal performance, and children and teens need more. Prolonged inadequate sleep can cause high blood pressure, heart attack, obesity, stroke, depression, mental impairment, and generally poor quality of life. Maintaining a consistent sleep schedule helps keep your cycles regular and promotes better quality sleep. Create a relaxing bedtime ritual and keep laptops out of the bedroom. Beds are for sex and rest. Recognizing problems with sleep behaviors and outlining the steps to improvement are an important part of the care plan.",
-		"img":"../../images/careplans/care_cards/5_GetMoreSleep.jpg",
-		"icon":"../../images/careplans/icons/sleep.svg"
+		"img":"../../images/features/careplans/care_cards/5_GetMoreSleep.jpg",
+		"icon":"../../images/features/careplans/icons/sleep.svg"
 	},
 	{
 		"header":"Mental Resilience",
 		"content":"Management of stress and any mental, cognitive, or mood symptoms is another, very complex part of the care plan. Prolonged exposure to stress can be unhealthy, and cause or make it difficult to manage conditions like diabetes, high blood pressure, high cholesterol, and psychiatric illnesses. Chronic stress can negatively impact on your immune, digestive, renal (kidneys), and reproductive systems. It is essential to take the proper steps eliminate or cope with stressors in an effective way, as well as manage any symptoms of mental illness.",
-		"img":"../../images/careplans/care_cards/24_TellSomeone.jpg",
-		"icon":"../../images/careplans/icons/mental.svg"
+		"img":"../../images/features/careplans/care_cards/24_TellSomeone.jpg",
+		"icon":"../../images/features/careplans/icons/mental.svg"
 	},
 	{
 		"header":"Medication Management",
 		"content":"Recognizing a need for change in the medication regimen allows for the creation of a treatment plan. A vital part of incorporating this into the care plan is ensuring the adherence to the prescribed medication. Patients who stick to their medications have better outcomes. Quitting early means health suffers.<br>It is important to ask and understand why a medication is necessary, how to properly take it, what side effects are causes for alarm, and who to talk to if issues arise. ",
-		"img":"../../images/careplans/care_cards/11_TakeYourMedsOnTime.jpg",
-		"icon":"../../images/careplans/icons/medication.svg"
+		"img":"../../images/features/careplans/care_cards/11_TakeYourMedsOnTime.jpg",
+		"icon":"../../images/features/careplans/icons/medication.svg"
 	},
 	{
 		"header":"Prioritize Sexual Health",
 		"content":"Good health bolsters your sex life; your sex life bolsters your health. Regular sex — once a week or more — is associated with greater immunity, less stress, fewer heart attacks, longer life, and unleashes mood-boosting endorphins. If worries or physical challenges are hindering your enjoyment of sex, talk to your partner and possibly a doctor for reassurance and advice. To avoid HIV infection and sexually transmitted diseases (STDs), a condom is the first line of defense. It forms a barrier between the penis and anus, vagina, or mouth. Bodily fluids cannot get past it. For safer oral sex, there are dental dams.",
-		"img":"../../images/careplans/care_cards/13_WrapItBeforeYouTapIt.jpg",
-		"icon":"../../images/careplans/icons/sex.svg"
+		"img":"../../images/features/careplans/care_cards/13_WrapItBeforeYouTapIt.jpg",
+		"icon":"../../images/features/careplans/icons/sex.svg"
 	},
 	{
 		"header":"Kick Bad Habits",
 		"content":"It’s important to identify and recognize the impact of bad habits such as smoking, alcohol over consumption, substance use, and even consumption of harmful foods. Care plans can outline the steps to stop these behaviors that can lead to a variety of poor health conditions.",
-		"img":"../../images/careplans/care_cards/10_Quit-Smoking.jpg",
-		"icon":"../../images/careplans/icons/habits.svg"
+		"img":"../../images/features/careplans/care_cards/10_Quit-Smoking.jpg",
+		"icon":"../../images/features/careplans/icons/habits.svg"
 	},
 	{
 		"header":"Know Your Numbers",
 		"content":"A few minutes of daily head-to-toe visual checks helps you notice changes, like a new freckle or unusual hair growth or loss. Monthly checks of skin and your male or female parts give you information to share with your doctor. Especially relevant to patients managing chronic conditions, monitoring of relevant vitals (such as weight, blood pressure, daily steps, blood sugar, etc.) is an essential part of a care plan and self care.",
-		"img":"../../images/careplans/care_cards/19_KnowYourNumbers.jpg",
-		"icon":"../../images/careplans/icons/vitals.svg"
+		"img":"../../images/features/careplans/care_cards/19_KnowYourNumbers.jpg",
+		"icon":"../../images/features/careplans/icons/vitals.svg"
 	},
 	{
 		"header":"Manage Your Daily Activities",
 		"content":"Any other problems that affect the patient’s general wellbeing can be relevant to the care plan. These can be things such as personal hygiene, functioning around the house, management of finances, transportation, safety behaviors, etc.",
-		"img":"../../images/careplans/care_cards/7_Don'tRushTheBrush.jpg",
-		"icon":"../../images/careplans/icons/adls.svg"
+		"img":"../../images/features/careplans/care_cards/7_Don'tRushTheBrush.jpg",
+		"icon":"../../images/features/careplans/icons/adls.svg"
 	}
 ]
