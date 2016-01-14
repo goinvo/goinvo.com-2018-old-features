@@ -18,6 +18,10 @@
   primary_color: "#d63366"
   logo: "arlington-visual-budget.jpg"
 
+- name: "Care Cards"
+  primary_color: "#67B0BF"
+  logo: "healthaxioms.jpg"
+
 - name: "Curl"
   primary_color: "#058386"
   logo: "curl.jpg"
@@ -25,7 +29,7 @@
 - name: "DataXu"
   primary_color: "#0e4474"
   logo: "dataxu.jpg"
- 
+
 - name: "The Digital Life"
   primary_color: "#0e4474"
   logo: "the-digital-life.jpg"
@@ -33,7 +37,7 @@
 - name: "DNC"
   primary_color: "#006AD8"
   logo: "dnc.jpg"
-  
+
 - name: "Design Axioms"
   primary_color: "#9e3d2d"
   logo: "design-axioms.jpg"
@@ -41,14 +45,10 @@
 - name: "Empirix"
   primary_color: "#83B63C"
   logo: "empirix.jpg"
-  
+
 - name: "Facio"
   primary_color: "#83B63C"
   logo: "facio.jpg"
-
-- name: "Health Axioms"
-  primary_color: "#67B0BF"
-  logo: "healthaxioms.jpg"
 
 - name: "hGraph"
   primary_color: "#97BE8C"
@@ -81,11 +81,11 @@
 - name: "Oracle"
   primary_color: "#FF0000"
   logo: "oracle.jpg"
-  
+
 - name: "PainTrackr"
   primary_color: "#FF0000"
   logo: "paintrackr.jpg"
-  
+
 - name: "Partners GeneInsight"
   primary_color: "#D77E48"
   logo: "PartnersGeneInsight.jpg"
@@ -113,7 +113,7 @@
 - name: "StaffPlan"
   primary_color: "#5e9b69"
   logo: "staffplan.jpg"
-  
+
 - name: "Tabeeb"
   primary_color: "#4BACD9"
   logo: "PartnersGeneInsight.jpg"
@@ -129,7 +129,7 @@
 - name: "University of Missouri"
   primary_color: "#f1b82d"
   logo: "universityofmissouri.jpg"
-  
+
 - name: "Visual Budget"
   primary_color: "#0D7EC9"
   logo: "vivox.jpg"

@@ -349,6 +349,8 @@ redirect '/the-digital-life-apple-googleand-the-state-of-mhealth', 'http://yes.g
 redirect '/new-inspired-ehrs-e-book-features-involution-design', 'http://yes.goinvo.com/articles/new-inspired-ehrs-e-book-features-involution-design'
 redirect '/the-war-on-self-understanding', 'http://yes.goinvo.com/articles/the-war-on-self-understanding'
 redirect '/oscon-14-sneak-peek-involution-interview-on-opensource-com', 'http://yes.goinvo.com/articles/oscon-14-sneak-peek-involution-interview-on-opensource-com'
+redirect '/products/health-axioms', '/products/care-cards'
+redirect '/healthcare/health-axioms', '/products/care-cards'
 
 # Methods defined in the helpers block are available in templates
 # helpers do

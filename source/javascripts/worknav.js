@@ -3,7 +3,7 @@
 
 $( document ).ready(function() {
 	var current = document.URL;
-	
+
 	var projects = {
 		"healthcare" : {
 			"hgraph" : {
@@ -58,11 +58,11 @@ $( document ).ready(function() {
 				"title" : "Tabeeb",
 				"url" : "/healthcare/tabeeb/",
 				"image" : "tabeeb.jpg",
-				"next-id" : "health-axioms"
+				"next-id" : "care-cards"
 			},
-			"health-axioms" : {
-				"title" : "Health Axioms",
-				"url" : "/healthcare/health-axioms/",
+			"care-cards" : {
+				"title" : "Care Cards",
+				"url" : "/products/care-cards/",
 				"image" : "health-axioms.jpg",
 				"next-id" : "enterprise"
 			},
@@ -141,17 +141,17 @@ $( document ).ready(function() {
 				"url" : "/products/hgraph/",
 				"image" : "hgraph.jpg",
 				"next-id" : "visual-government"
-				
+
 			},
 			"visual-government" : {
 				"title" : "Visual Government",
 				"url" : "/products/visual-government/",
 				"image" : "visual-government.png",
-				"next-id" : "health-axioms"
+				"next-id" : "care-cards"
 			},
-			"health-axioms" : {
-				"title" : "Health Axioms",
-				"url" : "/products/health-axioms/",
+			"care-cards" : {
+				"title" : "Care Cards",
+				"url" : "/products/care-cards/",
 				"image" : "health-axioms.jpg",
 				"next-id" : "design-axioms"
 			},
@@ -198,7 +198,7 @@ $( document ).ready(function() {
 				"next-id" : "healthcare"
 			}
 		}
-		
+
 	};
 
 	var next = $('#next-project');
@@ -206,49 +206,49 @@ $( document ).ready(function() {
 	var nextTitle = $('div.next-title span');
 
 	var imgURL = "";
-	
+
 	var nextID = "";
 	var currentID = "";
 	var currentCat = "";
-	
+
 	if(current.indexOf('healthcare') >=0) {
 		currentCat = 'healthcare';
 	}
 	else if(current.indexOf('enterprise') >= 0) {
-		currentCat = 'enterprise';	
+		currentCat = 'enterprise';
 	}
 	else if(current.indexOf('products') >= 0) {
-		currentCat = 'products';	
+		currentCat = 'products';
 	}
-	
+
 	i = current.indexOf(currentCat + '/');
 	i = i + currentCat.length + 1;
 	currentID = current.substring(i);
-	
+
 	i = currentID.indexOf('/');
 	if(i >= 0)
 		currentID = currentID.substring(0, i);
-	
+
 	i = currentID.indexOf('#');
 	if(i >= 0)
 		currentID = currentID.substring(0, i);
-	
+
 	i = currentID.indexOf('?');
 	if(i >= 0)
 		currentID = currentID.substring(0,i);
-	
+
 	i = currentID.indexOf('~');
 	if(i >= 0)
 		currentID = currentID.substring(0,i);
-	
+
 	console.log(currentCat);
 	console.log(currentID);
 	console.log(projects[currentCat][currentID]);
 	nextID = projects[currentCat][currentID]['next-id'];
-	
+
 	console.log(nextID);
-	
-	
+
+
 	if(nextID != "enterprise" && nextID != "healthcare") {
 		imgURL = "../../images/clients/next-case-study/" + projects[currentCat][nextID]['image'];
 
@@ -265,9 +265,9 @@ $( document ).ready(function() {
 			   window.location.href = '../..' + projects[nextID][nextID]['url'];
 		});
 		nextArea.html('<span id="next">See our work in ' + projects[nextID][nextID]['title'] + '</span>');
-		
+
 		imgURL = "../../images/clients/next-case-study/" + projects[nextID][nextID]['image'];
-		
+
 		next.css({
 			"background-image": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(" + imgURL + ")"
 		})
