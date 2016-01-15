@@ -12,7 +12,7 @@ $bg-gray: #f5f5f5;
 
 body {
 	color: #58504A;
-	background: #FFF;
+	background: #ffffff;
 }
 
 a {
@@ -943,6 +943,7 @@ a {
 	.contributor .image {
 		width: 80px;
 		display: inline-block;
+		margin-right: 20px;
 	}
 	.contributor p {
 		line-height: 1.5rem;
@@ -953,7 +954,6 @@ a {
 	}
 	.contributor .info {
 		display: inline-block;
-		margin-left: 20px;
 		vertical-align: top;
 		color: #676767;
 	}
