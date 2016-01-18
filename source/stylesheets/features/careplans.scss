@@ -487,6 +487,9 @@ a {
 	.row:first-child div:last-child {
 		padding: 15px;
 	}
+	.row:first-child .col-md-3 {
+		width: 25%;
+	}
 	h6 {
 		font-weight: normal;
 	}
