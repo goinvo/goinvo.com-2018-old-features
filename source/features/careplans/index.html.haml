@@ -166,13 +166,12 @@
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
 		.careplan-diagram.mobile.container-fluid
 			%div.profile-content
-				.profile-pane.active#1
-					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
-				.profile-pane#2
-					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
-				.profile-pane#3
-					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
-
+				.profile-pane.active
+					= partial("diagram_0", :locals => {:index=>0} )
+				.profile-pane
+					= partial("diagram_1", :locals => {:index=>1} )
+				.profile-pane
+					= partial("diagram_2", :locals => {:index=>2} )
 	.part.four
 		//main content
 		%h1 How Care Plans <strong>Started</strong>
