@@ -43,11 +43,10 @@ $(document).ready(function(){
 	    }
 	});
 
-	$(".careplan-diagram.mobile .filter .dropdown:first-child ul li").click(function() {
+	$(".careplan-diagram.mobile .dropdown:first-child ul li").click(function() {
 		/* Act on the event */
 		var name = $(this).find("a").text();
 		var id = $(this).attr("data-id");
-		$(".careplan-diagram.mobile .filter .dropdown:first-child .name").text(name);
 		$(".profile-pane.active").removeClass("active");
 		$(".profile-pane:nth-child("+id+")").addClass('active');
 	});

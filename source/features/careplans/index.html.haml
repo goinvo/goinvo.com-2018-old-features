@@ -166,13 +166,12 @@
 					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
 		.careplan-diagram.mobile.container-fluid
 			%div.profile-content
-				.profile-pane.active#1
-					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
-				.profile-pane#2
-					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
-				.profile-pane#3
-					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
-
+				.profile-pane.active
+					= partial("diagram_0", :locals => {:index=>0} )
+				.profile-pane
+					= partial("diagram_1", :locals => {:index=>1} )
+				.profile-pane
+					= partial("diagram_2", :locals => {:index=>2} )
 	.part.four
 		//main content
 		%h1 How Care Plans <strong>Started</strong>
@@ -201,7 +200,7 @@
 				%div.coming-soon-box.row
 					%div.coming-soon-content.col-md-6
 						%p.title Care Plans
-						%p.subtitle PII: Curent Landscape
+						%p.subtitle PII: Current Landscape
 						%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
 					%img.col-md-6{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.png"}
 			%div.popup-box

@@ -107,13 +107,19 @@ function setCarouselHeight(){
 				tallest = $(".carousel.mobile .item:nth-child("+i+")").height();
 		}
 	}
+	console.log(tallest)
 	return tallest + 60;
 }
 
 $(window).resize(function(event) {
 	/* Act on the event */
-	$(".carousel-inner").height(setCarouselHeight());
-
+	if($(window).width()>769) {
+		$(".carousel.desktop .carousel-inner").height(setCarouselHeight());
+	}
+	else {
+		$(".carousel.mobile .carousel-inner").height(setCarouselHeight());
+	}
+	
 	// for popup box
 	if($(".popup-box").is(':visible')) {
 		if($(window).width()>769) {
@@ -163,8 +169,13 @@ $(window).resize(function(event) {
 });
 
 $(document).ready(function(){
-	$(".carousel-inner").height(setCarouselHeight());
-	
+	if($(window).width()>769) {
+		$(".carousel.desktop .carousel-inner").height(setCarouselHeight());
+	}
+	else {
+		$(".carousel.mobile .carousel-inner").height(setCarouselHeight());
+
+	}
 	$(".popup-box").click(function(event) {
 		/* Act on the event */
 		$(this).fadeOut(200);
