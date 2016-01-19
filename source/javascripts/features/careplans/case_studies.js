@@ -1,5 +1,7 @@
-$('.clickable_span').click(function(){
+$('.clickable_span').click(function(e){
 	//$(".popup_content").fadeOut(100);
+	 e.stopPropagation();
+
 	if($(this).hasClass('selected_span')) {
 		$(this).removeClass('selected_span');
 		if($(".popup-box").is(':visible')){
@@ -22,21 +24,87 @@ $('.clickable_span').click(function(){
 			if($(this).height() > $(".clickable_span").height()) {
 				popupBoxBottom = popupBoxBottom - $(".clickable_span").height();
 			}
-			if((historySectionWidth - distanceToLeft) >= 500) {
-				$(".popup-box").css({"left": distanceToLeft, "bottom": popupBoxBottom});
-				$(".popup-box .arrow").css({"left": "10px"});
+			if((historySectionWidth - distanceToLeft) >= 500) {	
+				if($(this).attr("id") == "nursing_span") {
+					$("#nursing").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#nursing .arrow").css({"left": "10px"});
+				}
+				if($(this).attr("id") == "life_care_planning_span") {
+					$("#life_care").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#life_care .arrow").css({"left": "10px"});
+				}
+				if($(this).attr("id") == "EAB_span") {
+					$("#EAB").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#EAB .arrow").css({"left": "10px"});
+				}
+				if($(this).attr("id") == "developmental_psychology_span") {
+					$("#developmental").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#developmental .arrow").css({"left": "10px"});
+				}
+				if($(this).attr("id") == "case_management_span") {
+					$("#case_management").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#case_management .arrow").css({"left": "10px"});
+				}
+				if($(this).attr("id") == "litigation_span") {
+					$("#litigation").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#litigation .arrow").css({"left": "10px"});
+				}
 			}
 			else {
 				if(distanceToLeft >= 500) {
 					var popupBoxLeft = distanceToLeft + $(this).width() - 500;
-					$(".popup-box").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
-					$(".popup-box .arrow").css({"left": "465px"});
+					if($(this).attr("id") == "nursing_span") {
+						$("#nursing").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#nursing .arrow").css({"left": "465px"});
+					}
+					if($(this).attr("id") == "life_care_planning_span") {
+						$("#life_care").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#life_care .arrow").css({"left": "465px"});
+					}
+					if($(this).attr("id") == "EAB_span") {
+						$("#EAB").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#EAB .arrow").css({"left": "465px"});
+					}
+					if($(this).attr("id") == "developmental_psychology_span") {
+						$("#developmental").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#developmental .arrow").css({"left": "465px"});
+					}
+					if($(this).attr("id") == "case_management_span") {
+						$("#case_management").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#case_management .arrow").css({"left": "465px"});
+					}
+					if($(this).attr("id") == "litigation_span") {
+						$("#litigation").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#litigation .arrow").css({"left": "465px"});
+					}
 				}
 				else {
 					var popupBoxLeft = historySectionWidth/2 - 250;
-					$(".popup-box").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
 					var arrowLeft = distanceToLeft - popupBoxLeft + $(this).width()/2;
-					$(".popup-box .arrow").css({"left": arrowLeft});
+					if($(this).attr("id") == "nursing_span") {
+						$("#nursing").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#nursing .arrow").css({"left": arrowLeft});
+					}
+					if($(this).attr("id") == "life_care_planning_span") {
+						$("#life_care").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#life_care .arrow").css({"left": arrowLeft});
+					}
+					if($(this).attr("id") == "EAB_span") {
+						$("#EAB").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#EAB .arrow").css({"left": arrowLeft});
+					}
+					if($(this).attr("id") == "developmental_psychology_span") {
+						$("#developmental").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#developmental .arrow").css({"left": arrowLeft});
+					}
+					if($(this).attr("id") == "case_management_span") {
+						$("#case_management").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#case_management .arrow").css({"left": arrowLeft});
+					}
+					if($(this).attr("id") == "litigation_span") {
+						$("#litigation").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#litigation .arrow").css({"left": arrowLeft});
+					}
 				}
 			}
 		}
@@ -51,42 +119,53 @@ $('.clickable_span').click(function(){
 			else {
 				distanceToLeft = $(this).position().left + ($(this).width())/2;
 			}
-			$(".popup-box .arrow").css({"left": distanceToLeft});
-			$(".popup-box").css({"bottom": popupBoxBottom});
+
+			if($(this).attr("id") == "nursing_span") {
+				$("#nursing").css({"left": 0, "bottom": popupBoxBottom});
+				$("#nursing .arrow").css({"left": distanceToLeft});
+			}
+			if($(this).attr("id") == "life_care_planning_span") {
+				$("#life_care").css({"left": 0, "bottom": popupBoxBottom});
+				$("#life_care .arrow").css({"left": distanceToLeft});
+			}
+			if($(this).attr("id") == "EAB_span") {
+				$("#EAB").css({"left": 0, "bottom": popupBoxBottom});
+				$("#EAB .arrow").css({"left": distanceToLeft});
+			}
+			if($(this).attr("id") == "developmental_psychology_span") {
+				$("#developmental").css({"left": 0, "bottom": popupBoxBottom});
+				$("#developmental .arrow").css({"left": distanceToLeft});
+			}
+			if($(this).attr("id") == "case_management_span") {
+				$("#case_management").css({"left": 0, "bottom": popupBoxBottom});
+				$("#case_management .arrow").css({"left": distanceToLeft});
+			}
+			if($(this).attr("id") == "litigation_span") {
+				$("#litigation").css({"left": 0, "bottom": popupBoxBottom});
+				$("#litigation .arrow").css({"left": distanceToLeft});
+			}
+
 		}
+
 
 		if($(this).attr("id") == "nursing_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/nursing_img.jpg");
-			$(".popup-box h6").text("Nursing");
-			$(".popup-box p").text("Virginia Henderson, “The Nightingale of Modern Nursing”, was a clinically recognized nurse and instructor in the 1900s. She designed the basic nursing curriculum for the National League for Nursing that taught a patient- centered approach focused on nursing problems rather than medical diagnoses.");
+			$("#nursing").fadeIn(200);
 		}
 		if($(this).attr("id") == "life_care_planning_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/life_care_planning_img.jpg");
-			$(".popup-box h6").text("Life Care Planning");
-			$(".popup-box p").text("Life care plans started to develop in the 1970s after the convergence of research within several fields. Catastrophic disability research in the mid 70s paved the way for the modern life care plan.");
+			$("#life_care").fadeIn(200);
 		}
 		if($(this).attr("id") == "EAB_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/EAB_img.jpg");
-			$(".popup-box h6").text("Experimental Analysis of Behavior");
-			$(".popup-box p").text("This subspecialty of psychology provided research in charting behavioral changes over long periods of time. These behaviors could then be deconstructed into discrete actions that could be analyzed by the researcher. The technique of charting provided the case management professional with a tool in identifying individual components of care for a specific patient.");
+			$("#EAB").fadeIn(200);
 		}
 		if($(this).attr("id") == "developmental_psychology_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/developmental_psychology_img.jpg");
-			$(".popup-box h6").text("Developmental Psychology");
-			$(".popup-box p").text("Developmental psychology provided a practical role in the development of life care planning. Through conducting research on children with cerebral palsy, it was discovered that the overwhelming complexity of the needs of the patient required that a structured reference tool be provided as a roadmap of care. This provided the beginning of the framework for life care planning.");
+			$("#developmental").fadeIn(200);
 		}
 		if($(this).attr("id") == "case_management_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/case_management_img.jpg");
-			$(".popup-box h6").text("Case Management");
-			$(".popup-box p").text("Case management is the collaborative process of assessing, planning, implementing, and evaluating the options and services for a person’s health needs. In the early 1970s, the case management field began seeing the value of a detailed life care plan and became more involved with providing integrated services for those with long-term medical needs.");
+			$("#case_management").fadeIn(200);
 		}
 		if($(this).attr("id") == "litigation_span") {
-			$(".popup-box img").attr("src","../../../images/features/careplans/litigation_img.jpg");
-			$(".popup-box h6").text("Litigation");
-			$(".popup-box p").text("Virginia Henderson, “The Nightingale of Modern Nursing”, was a clinically recognized nurse and instructor in the 1900s. She designed the basic nursing curriculum for the National League for Nursing that taught a patient- centered approach focused on nursing problems rather than medical diagnoses.");
+			$("#litigation").fadeIn(200);
 		}
-
-		$(".popup-box").fadeIn(200);
 		$(this).addClass('selected_span');
 	}
 });
@@ -132,21 +211,87 @@ $(window).resize(function(event) {
 			if($(".selected_span").height() > $(".clickable_span").height()) {
 				popupBoxBottom = popupBoxBottom - $(".clickable_span").height();
 			}
-			if((historySectionWidth - distanceToLeft) >= 500) {
-				$(".popup-box").css({"left": distanceToLeft, "bottom": popupBoxBottom});
-				$(".popup-box .arrow").css({"left": "10px"});
+			if((historySectionWidth - distanceToLeft) >= 500) {	
+				if($(".selected_span").attr("id") == "nursing_span") {
+					$("#nursing").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#nursing .arrow").css({"left": "10px"});
+				}
+				if($(".selected_span").attr("id") == "life_care_planning_span") {
+					$("#life_care").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#life_care .arrow").css({"left": "10px"});
+				}
+				if($(".selected_span").attr("id") == "EAB_span") {
+					$("#EAB").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#EAB .arrow").css({"left": "10px"});
+				}
+				if($(".selected_span").attr("id") == "developmental_psychology_span") {
+					$("#developmental").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#developmental .arrow").css({"left": "10px"});
+				}
+				if($(".selected_span").attr("id") == "case_management_span") {
+					$("#case_management").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#case_management .arrow").css({"left": "10px"});
+				}
+				if($(".selected_span").attr("id") == "litigation_span") {
+					$("#litigation").css({"left": distanceToLeft, "bottom": popupBoxBottom});
+					$("#litigation .arrow").css({"left": "10px"});
+				}
 			}
 			else {
 				if(distanceToLeft >= 500) {
 					var popupBoxLeft = distanceToLeft + $(".selected_span").width() - 500;
-					$(".popup-box").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
-					$(".popup-box .arrow").css({"left": "465px"});
+					if($(".selected_span").attr("id") == "nursing_span") {
+						$("#nursing").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#nursing .arrow").css({"left": "465px"});
+					}
+					if($(".selected_span").attr("id") == "life_care_planning_span") {
+						$("#life_care").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#life_care .arrow").css({"left": "465px"});
+					}
+					if($(".selected_span").attr("id") == "EAB_span") {
+						$("#EAB").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#EAB .arrow").css({"left": "465px"});
+					}
+					if($(".selected_span").attr("id") == "developmental_psychology_span") {
+						$("#developmental").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#developmental .arrow").css({"left": "465px"});
+					}
+					if($(".selected_span").attr("id") == "case_management_span") {
+						$("#case_management").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#case_management .arrow").css({"left": "465px"});
+					}
+					if($(".selected_span").attr("id") == "litigation_span") {
+						$("#litigation").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#litigation .arrow").css({"left": "465px"});
+					}
 				}
 				else {
 					var popupBoxLeft = historySectionWidth/2 - 250;
-					$(".popup-box").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
 					var arrowLeft = distanceToLeft - popupBoxLeft + $(".selected_span").width()/2;
-					$(".popup-box .arrow").css({"left": arrowLeft});
+					if($(".selected_span").attr("id") == "nursing_span") {
+						$("#nursing").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#nursing .arrow").css({"left": arrowLeft});
+					}
+					if($(".selected_span").attr("id") == "life_care_planning_span") {
+						$("#life_care").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#life_care .arrow").css({"left": arrowLeft});
+					}
+					if($(".selected_span").attr("id") == "EAB_span") {
+						$("#EAB").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#EAB .arrow").css({"left": arrowLeft});
+					}
+					if($(".selected_span").attr("id") == "developmental_psychology_span") {
+						$("#developmental").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#developmental .arrow").css({"left": arrowLeft});
+					}
+					if($(".selected_span").attr("id") == "case_management_span") {
+						$("#case_management").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#case_management .arrow").css({"left": arrowLeft});
+					}
+					if($(".selected_span").attr("id") == "litigation_span") {
+						$("#litigation").css({"left": popupBoxLeft, "bottom": popupBoxBottom});
+						$("#litigation .arrow").css({"left": arrowLeft});
+					}
 				}
 			}
 		}
@@ -155,14 +300,37 @@ $(window).resize(function(event) {
 			var popupBoxBottom = $("ul.history-items").height() - distanceToTop + $(".clickable_span").height();
 			var distanceToLeft;
 			if($(".selected_span").height() > $(".clickable_span").height()) {
-					distanceToLeft = 40;
+				distanceToLeft = 40;
 				popupBoxBottom = popupBoxBottom - $(".clickable_span").height();
 			}
 			else {
 				distanceToLeft = $(".selected_span").position().left + ($(".selected_span").width())/2;
 			}
-			$(".popup-box .arrow").css({"left": distanceToLeft});
-			$(".popup-box").css({"bottom": popupBoxBottom});
+
+			if($(".selected_span").attr("id") == "nursing_span") {
+				$("#nursing").css({"left": 0, "bottom": popupBoxBottom});
+				$("#nursing .arrow").css({"left": distanceToLeft});
+			}
+			if($(".selected_span").attr("id") == "life_care_planning_span") {
+				$("#life_care").css({"left": 0, "bottom": popupBoxBottom});
+				$("#life_care .arrow").css({"left": distanceToLeft});
+			}
+			if($(".selected_span").attr("id") == "EAB_span") {
+				$("#EAB").css({"left": 0, "bottom": popupBoxBottom});
+				$("#EAB .arrow").css({"left": distanceToLeft});
+			}
+			if($(".selected_span").attr("id") == "developmental_psychology_span") {
+				$("#developmental").css({"left": 0, "bottom": popupBoxBottom});
+				$("#developmental .arrow").css({"left": distanceToLeft});
+			}
+			if($(".selected_span").attr("id") == "case_management_span") {
+				$("#case_management").css({"left": 0, "bottom": popupBoxBottom});
+				$("#case_management .arrow").css({"left": distanceToLeft});
+			}
+			if($(".selected_span").attr("id") == "litigation_span") {
+				$("#litigation").css({"left": 0, "bottom": popupBoxBottom});
+				$("#litigation .arrow").css({"left": distanceToLeft});
+			}
 		}
 
 	}
@@ -180,5 +348,9 @@ $(document).ready(function(){
 		/* Act on the event */
 		$(this).fadeOut(200);
 		$(".clickable_span").removeClass("selected_span");
+	});
+	$("body").click(function(){
+	  $(".popup-box").fadeOut();
+	  $(".clickable_span").removeClass("selected_span");
 	});
 });
