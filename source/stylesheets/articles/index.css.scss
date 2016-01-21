@@ -2,11 +2,16 @@
 	margin-top: 55px;
 	// min-height: calc(100% - 55px);
 }
+.most-recent-article-link {
+  width: 100%;
+  height: 500px;
+}
 .most-recent-article {
 	position: relative;
 	width: 100%;
-	height: 500px;
-	background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%),url("../../images/features/digital-healthcare/digital_health_cover_transp.gif?1452623449") rgba(255,255,255,1);
+	height: 100%;
+  color: black;
+  background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%),url("../../images/features/digital-healthcare/digital_health_cover_transp.gif?1452623449") rgba(255,255,255,1);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -24,21 +29,25 @@
 	margin: 0 auto;
 }
 .most-recent-article .inner-container {
-	padding: 3rem;
+	padding: 3rem 3rem 6rem 3rem;
 }
 .feature-article-list {
 	list-style: none;
 }
-.feature-article-list li {
+.feature-article-list a {
 	width: 100%;
 	height: 400px;
 	margin-bottom: 2rem;
-	padding: 1rem;
-	// background-image: image-url("team_photos/craig_mcginley.jpg");
+	@media only screen and (min-width: 500px) {
+		height: 200px;
+	}
+}
+.feature-block {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	@media only screen and (min-width: 768px) {
-		height: 200px;
-	}
 }

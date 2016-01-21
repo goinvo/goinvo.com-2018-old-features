@@ -13,21 +13,24 @@
     %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 - feature_articles = feature_articles_sorted_by_date()
 - most_recent_feature = most_recent_feature_article()
-%header.most-recent-article
-  .outer-container
-    .inner-container
-      %span
-        Feature:
-        = feature_article_date(most_recent_feature)
-      %h1= most_recent_feature.title
+%a.most-recent-article-link{ :href => "/features/#{most_recent_feature.url}" }
+  %header.most-recent-article
+    .outer-container
+      .inner-container
+        %span
+          Feature:
+          = feature_article_date(most_recent_feature)
+        %h1= most_recent_feature.title
 .feature-article-list-container
   .feature-list-title Features
   %ul.feature-article-list
     - feature_articles.each do |article|
       - if !(article == most_recent_feature)
-        %li{ :style => "background-image: url('/images/#{article.image}')" }
-          %h1= article.title
-          .feature-label= feature_article_date(article)
+        %li
+          %a{ :href => "/features/#{article.url}" }
+            .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
+              %h1= article.title
+              .feature-label= feature_article_date(article)
   %a.show-all-features Show all features
 
 .blog-article-list-container
