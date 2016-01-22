@@ -32,6 +32,9 @@ a {
 .bold {
 	font-weight: 600;
 }
+.blue {
+	color: rgb(11, 94, 148);
+}
 #feature-article p,
 #feature-article a,
 #feature-article span,
@@ -51,6 +54,9 @@ a {
 	#feature-article .nav-wrapper a {
 		font-size: 0.7rem;
 	}
+}
+#feature-article strong {
+	font-weight: normal;
 }
 #feature-article h6 {
 	font-size: 1.4rem;
@@ -188,40 +194,73 @@ a {
 		left: 0;
 		background-image: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,0));
 	}
-
-	.small-screen-cover {
-		display: none;
-
-		@media only screen and (max-width: 1129px) {
-			display: block;
-		}
-
-		@media only screen and (max-width: 768px) {
-
-		}
-
-		.mobile {
-			visibility: hidden;
-			width: 100%;
-			@media only screen and (max-width: 1129px) {
-				display: none;
+	.hero{
+		height: 700px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		min-height: 0;
+		.title {
+			z-index: 4;
+			color: #ffffff;
+			text-align: center;
+			position: absolute;
+			width: auto;
+			right: 10%;
+			top: 30%;
+			text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+			p {
+				font-size: 6rem;
+				line-height: 5rem;
 			}
-			@media only screen and (max-width: 768px) {
-				display: block;
+			.big-title {
+				margin: 0;
+				font-weight: normal;
 			}
-		}
-
-		.desktop {
-			display: none;
-			@media only screen and (max-width: 1129px) {
-				display: block;
+			.big-title:first-child {
+				font-size: 7.3rem;
 			}
-			@media only screen and (max-width: 768px) {
-				display: none;
+			.sub-title {
+				font-size: 1.1rem;
+				line-height: 2rem;
 			}
-			width: 100%;
 		}
 	}
+	.background {
+		background: url("../../images/features/careplans/FeatureBanner_v02_back.jpg") no-repeat;
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 1;
+		background-size: 100% 100%;
+	}
+
+	@keyframes heroLoop {
+		from { background-position: 0 0; }
+		to { background-position: -15000px 0; }
+	}
+
+	.midground {
+		background: url("../../images/features/careplans/FeatureBanner_v02_careplan.png") repeat-x;
+		opacity: 0.4;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 2;
+		height: 100%;
+		animation: heroLoop 75s linear infinite;
+	}
+
+	.foreground {
+		background: url("../../images/features/careplans/FeatureBanner_v02.png") no-repeat;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 3;
+		width: 100%;
+		height: auto;
+		background-size: cover;
+	}
+
 }
 
 .component-chart {
@@ -687,20 +726,32 @@ a {
 
 .part {
 	width: 100%;
-	padding: 40px 10% 40px 10%;
+	padding: 40px 10%;
 
 	&.one {
-		padding: 40px 10%;
 		background-color: rgb(11, 94, 148);
 		color: white;
 	}
 	&.two {
 		padding: 0;
+		.text {
+			padding: 40px 10%;
+		}
 	}
+}
+.part.two .process {
+	background-color: #f5f5f5;
+}
+#feature-article .two .text p {
+	margin-bottom: 10px;
 }
 
 .part.one > p {
 	margin: 0;
+	a {
+		color: white;
+		text-decoration: underline;
+	}
 }
 
 
@@ -789,10 +840,14 @@ a {
     content:"";
     position: absolute;
     left: 9px; /* adjust manually */
-    top: -52px;
+    top: 0;
     border-left: 1px solid #B5C7D3;
     height: 100%;
     width: 1px;
+	}
+	ul.history-items li.last-year:before {
+		width: 0;
+		height: 5%;
 	}
 	ul.history-items li:first-child:before {
    /* first li's line */
@@ -804,7 +859,7 @@ a {
     	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     	background-color: #f5f5f5;
 		padding: 20px;
-		margin-left: 2.1rem;
+		margin-left: 0;
 		width: calc(100% - 2.1rem);
 
 		img {
@@ -941,25 +996,28 @@ a {
 	background-color: #f5f5f5;
 	border-top: 2px solid #e1e1e1;
 
-	.contributors {
-		margin-bottom: 60 px;
+	.contributors, .authors {
+		margin-bottom: 60px;
 	}
-	.contributor {
+	.contributor, .author {
 		margin-bottom: 20px;
 	}
-	.contributor .image {
-		width: 80px;
+	.contributor .image, .author .image {
+		width: 100px;
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 40px;
 	}
-	.contributor p {
+	.author .image {
+		width: 190px;
+	}
+	.contributor p, .author p {
 		line-height: 1.5rem;
 	}
-	.contributor p.name {
+	.contributor p.name, .author p.name {
 		font-size: 1.8rem;
 		font-weight: normal;
 	}
-	.contributor .info {
+	.contributor .info, .author .info {
 		display: inline-block;
 		vertical-align: top;
 		color: #676767;
@@ -972,7 +1030,9 @@ a {
 	}
 	.reference a {
 		color: #000000;
-		text-decoration: underline;
+	}
+	.reference a, .reference span {
 		word-break: break-word;
+		display: inline;
 	}
 }

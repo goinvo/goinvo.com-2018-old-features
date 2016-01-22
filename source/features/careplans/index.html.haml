@@ -57,7 +57,7 @@
 			your care.
 	.part.two
 		.component-chart
-			%h1 <strong>What's</strong> in a Care Plan
+			%h1 What's in a Care Plan
 			%p Care plans usually consist of these universal components:
 			.container-fluid#components
 				.row#summary
@@ -137,7 +137,7 @@
 					%a.right.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"next"}}
 						%span >
 	.part.three
-		%h1 How Care Plans <strong>Work</strong>
+		%h1 How Care Plans Work
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
 		%p Explore how the care plan changes these factors across the three individuals below.
 		.careplan-diagram.desktop
@@ -171,7 +171,7 @@
 					= partial("diagram_2", :locals => {:index=>2} )
 	.part.four
 		//main content
-		%h1 How Care Plans <strong>Started</strong>
+		%h1 How Care Plans Started
 		%ul.history-items
 			%li.history-item
 				%h6.history-item__title 31st BC-15th Century
@@ -188,18 +188,9 @@
 			%li.history-item
 				%h6.history-item__title 1980s
 				%p.history-item__content Starting in the 1980s and in the following decades, life care planners were involved in consultations with insurance carriers and also with attorneys involved in litigation. Life care planning played a huge initial role in the field of <span id="litigation_span" class="clickable_span">litigation</span>. It has since expanded into elder care, chronic illness and discharge planning. It has also expanded the number and types of professions who can each be involved in a part of care planning.
-			%li.history-item
+			%li.history-item.last-year
 				%h6.history-item__title 2000s
 				%p.history-item__content The breadth of professionals and care providers within life care planning expanded, with individuals coming from rehabilitation counseling, rehabilitation nursing, physiatry, and case management professions. Both paper based and digital technology based care plans were regularly being used by patients and their care providers. A proliferation of digital technology based care plans also began to take hold in later years. Healthtap, Amwell, Better., HelloDoctor, HealthKit, My Chart, Practice Fusion, Health Vault, AskMD, Happify, and Healarium are all more well known examples.
-			%li.history-item
-				%h6.history-item__title Part II: Current Landscape coming on Friday, Feb 12, 2016
-			%li.coming-soon
-				%div.coming-soon-box.row
-					%div.coming-soon-content.col-md-6
-						%p.title Care Plans
-						%p.subtitle PII: Current Landscape
-						%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
-					%img.col-md-6{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.png"}
 			%div.popup-box#nursing
 				%img{:src => "../../../images/features/careplans/nursing_img.jpg"}
 				%div.popup-content
@@ -234,8 +225,16 @@
 				%img{:src => "../../../images/features/careplans/litigation_img.jpg"}
 				%div.popup-content
 					%h6 Litigation
-					%p Virginia Henderson, “The Nightingale of Modern Nursing”, was a clinically recognized nurse and instructor in the 1900s. She designed the basic nursing curriculum for the National League for Nursing that taught a patient- centered approach focused on nursing problems rather than medical diagnoses.
+					%p Beginning in the 1980s, Life care plans began to gain greater acknowledgement through the help of the litigation field in cases involving debilitating injury. Damages in Tort Actions (1981) was the first published reference to life care planning through the analysis of personal injury cases.
 				%div.arrow
+		%div.coming-soon
+			%h6.blue Coming soon!
+			%div.coming-soon-box.row
+				%div.coming-soon-content.col-md-6
+					%p.title Care Plans
+					%p.subtitle PII: Current Landscape
+					%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
+				%img.col-md-6{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.png"}
 
 	.credit-wrapper
 		.row
@@ -243,132 +242,290 @@
 		%script(src="../../../javascripts/features/careplans/case_studies.js")
 			- # BEGIN Credits: Copy from this line.
 		#credits
-			.contributors
+			.authors.row
 				%h1 Authors
-				.contributor
+				.author.col-md-6
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/beth.jpg'}
 					.info
-						%p Contributing Author & Illustrator
+						%p Involution Studios
 						%p.name Beth Herlin<br><small><a href="https://twitter.com/beth11herlin" target="_blank">@beth11herlin</a></small>
-				.contributor
+				.author.col-md-6
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/edwin.jpg'}
 					.info
-						%p Contributing Author & Illustrator
+						%p Involution Studios
 						%p.name Edwin Choi
-				.contributor
+			.contributors.row
+				%h1 Contributors
+				.contributor.col-md-6
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
 					.info
 						%p Web Designer & Developer
 						%p.name Yanyang Zhou
-				.contributor
+				.contributor.col-md-6
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
 					.info
-						%p Contributing Author
+						%p Involution Studios, MIT
 						%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
 			.reference
 				%h1 References
 				%ul
 					%li
-						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/ Stage2_EPCore_15_SummaryCare.pdf", :target=>"_blank"} https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/ Stage2_EPCore_15_SummaryCare.pdf
+						%span 1.
+						%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf"}“Key Elements to Include in a Coordinated Care Plan”.
+						%span OMA. (2014, June). Retrieved November/December, 2015, from https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
 					%li
-						%a{:href => "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ ChronicCareManagement.pdf", :target=>"_blank"} https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ ChronicCareManagement.pdf
+						%span 2.
+						%a{:href => "http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd"}“LCC Longitudinal Care Plan (LCP) SWG”.
+						%span S&I Framework. Retrieved from http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd
 					%li
-						%a{:href => "http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx", :target=>"_blank"} http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx
+						%span 3.
+						%a{:href => "http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx"}“NHS Guide to long-term conditions and self care: What is a care plan?”
+						%span (n.d.).Retrieved December 21, 2015, from http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx
 					%li
-						%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf", :target=>"_blank"} https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
+						%span 4.
+						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf"}“Stage 2 Meaningful Use Core Measures”.
+						%span (2015, August). Retrieved from https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf
 					%li
-						%a{:href => "https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399", :target=>"_blank"} https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399
+						%span 5. United States, Department of Health and Human Services.
+						%a{:href => "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf"}“Chronic Care Management Services”.
+						%span (2015, May). Centers for Medicare and Medicaid Services. Retrieved from https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf
 					%li
-						%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment", :target=>"_blank"} https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment
+						%span 6.
+						%a{:href => "http://www.cdc.gov/aging/advancecareplanning/"}“Give Peace of Mind: Advance Care Planning”.
+						%span (2014, Mar). Centers for Disease Control and Prevention. Retrieved 2016, Jan. from http://www.cdc.gov/aging/advancecareplanning/
 					%li
-						%a{:href => "http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977
+						%span 7.
+						%a{:href => "https://www.urmc.rochester.edu/strong-memorial/patients-families/health-care-team.aspx"}“Your Healthcare Team”.
+						%span URMC (2016). Retrieved 2016, Jan. from https://www.urmc.rochester.edu/strong-memorial/patients-families/health-care-team.aspx
 					%li
-						%a{:href => "http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/", :target=>"_blank"} http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/
+						%span 8.
+						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf"}“Stage 2 Eligible Professional Meaningful Use Core Measures Measure 15 of 17”.
+						%span (2015, Aug). CMS. Retrieved from https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf
 					%li
-						%a{:href => "http://www.medicinenet.com/emotional_eating/page4.htm", :target=>"_blank"} http://www.medicinenet.com/emotional_eating/page4.htm
+						%span 9. Involution Studios.
+						%a{:href => "http://www.carecards.me"}“Care Cards”
+						%span (2016). Retrieved from www.carecards.me
 					%li
-						%a{:href => "http://www.kcbj.com/2013/10/knee-motion-machine-do-you-need-it-after-surgery/", :target=>"_blank"} http://www.kcbj.com/2013/10/knee-motion-machine-do-you-need-it-after-surgery/
+						%span 10.
+						%a{:href => "https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399"}“Depression”.
+						%span National Institutes of Health. Retrieved from https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399
 					%li
-						%a{:href => "http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html", :target=>"_blank"} http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html
+						%span 11.
+						%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment"}“Depression”.
+						%span (2016). National Alliance on Mental Illness. Retrieved from https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment
 					%li
-						%a{:href => "http://www.moveforwardpt.com/symptomsconditionsdetail.aspx? cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4", :target=>"_blank"} http://www.moveforwardpt.com/symptomsconditionsdetail.aspx? cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4
+						%span 12.
+						%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment"}“Depression (Major Depressive Disorder)”.
+						%span (2015, Jul. 22). Mayo Clinic. Retrieved from http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977
 					%li
-						%a{:href => "http://www.diabetes.org/", :target=>"_blank"} http://www.diabetes.org/
+						%span 13.
+						%a{:href => "http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/"}“How to Fight Depression Fatigue”.
+						%span Everyday Health. http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/
 					%li
-						%a{:href => "http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/", :target=>"_blank"} http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/
+						%span 14.
+						%a{:href => "http://www.medicinenet.com/emotional_eating/page4.htm"}“Emotional Eating cont’d”.
+						%span (2014, Dec. 11). MedicineNet.  Retrieved from http://www.medicinenet.com/emotional_eating/page4.htm
 					%li
-						%a{:href => "http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx", :target=>"_blank"} http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx
+						%span 15.
+						%a{:href => "http://www.kcbj.com/knee/typical-knee-conditions/ligament-tear-acl-mcl-lcl-and-pcl/"}“Ligament Tear: A Closer Look”.
+						%span (2016) Kansas City Bone and Joint Clinic. http://www.kcbj.com/knee/typical-knee-conditions/ligament-tear-acl-mcl-lcl-and-pcl/
 					%li
-						%a{:href => "http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834
+						%span 16.
+						%a{:href => "http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html"}“Patient Education Program: Surgical Recovery.”
+						%span (2016) Emory Healthcare. http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html
 					%li
-						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1", :target=>"_blank"} http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1
+						%span 17.
+						%a{:href => "http://www.moveforwardpt.com/symptomsconditionsdetail.aspx?cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4"}http://www.moveforwardpt.com/symptomsconditionsdetail.aspx?cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4
 					%li
-						%a{:href => "http://www.cdc.gov/healthyschools/obesity/facts.htm", :target=>"_blank"} http://www.cdc.gov/healthyschools/obesity/facts.htm
+						%span 18.
+						%a{:href => "http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/choosing-what-to-eat.html"}“Choosing What, How Much, and When to Eat”.
+						%span (2016). American Diabetes Association. Retrieved from http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/choosing-what-to-eat.html
 					%li
-						%a{:href => "http://carecards.me", :target=>"_blank"} carecards.me
+						%span 19.
+						%a{:href => "http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/getting-active.html"}“Getting Active”.
+						%span (2016) American Diabetes Association. Retrieved from http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/getting-active.html
 					%li
-						%a{:href => "http://www.heart.org/HEARTORG/", :target=>"_blank"} http://www.heart.org/HEARTORG/
+						%span 20.
+						%a{:href => "http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/"}“What I need to know about diabetes medicines”.
+						%span NIH: National Institute of Diabetes and Digestive Kidney Disease. http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/
 					%li
-						%a{:href => "http://www.aafp.org/afp/2005/0201/p469.html", :target=>"_blank"} http://www.aafp.org/afp/2005/0201/p469.html
+						%span 21.
+						%a{:href => "http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx"}“Step 3: Manage your diabetes”.
+						%span NIH: National Institute of Diabetes and Digestive Kidney Disease. Retrieved from: http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx
 					%li
-						%a{:href => "http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580
+						%span 22.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834"}“Obesity: Treatment an Drugs”.
+						%span (2015, Jun. 10) Mayo Clinic. http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834
 					%li
-						%a{:href => "http://www.cdc.gov/std/tg2015/chlamydia.htm", :target=>"_blank"} http://www.cdc.gov/std/tg2015/chlamydia.htm
+						%span 23.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1"}“Slideshow: Low-Calorie-Density Foods for Weight Loss”.
+						%span (2016). Mayo Clinic. Retrieved from http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1
 					%li
-						%a{:href => "http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf", :target=>"_blank"} http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf
+						%span 24.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1"}“Childhood Obesity Facts”.
+						%span (2015, Aug. 27). Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/obesity/facts.htm
 					%li
-						%a{:href => "http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf", :target=>"_blank"} http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf
+						%span 25.
+						%a{:href => "http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/PreventionTreatmentofHighBloodPressure/Prevention-Treatment-of-High-Blood-Pressure_UCM_002054_Article.jsp#.VqGlp1MrIdU"}“Prevention and treatment of high blood pressure”.
+						%span (2016). American Heart Association. Retrieved from http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/PreventionTreatmentofHighBloodPressure/Prevention-Treatment-of-High-Blood-Pressure_UCM_002054_Article.jsp#.VqGlp1MrIdU
 					%li
-						%a{:href => "http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring", :target=>"_blank"} http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring
+						%span 26. Dickerson L.M. , PHARM.D., and Gibson, MV M.D., PH.D., Medical University of South Carolina, Charleston, South Carolina. 
+						%a{:href => "http://www.aafp.org/afp/2005/0201/p469.html"}“Management of hypertension in older persons”.
+						%span Am Fam Physician. 2005 Feb 1;71(3):469-476. Retrieved from http://www.aafp.org/afp/2005/0201/p469.html
 					%li
-						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel
+						%span 27.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580"}“High blood pressure (hypertension)”.
+						%span (2015, Nov. 10) Mayo Clinic. http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580
 					%li
-						%a{:href => "https://www.nia.nih.gov/health/publication/sexuality-later-life", :target=>"_blank"} https://www.nia.nih.gov/health/publication/sexuality-later-life
+						%span 28.
+						%a{:href => "http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring"}“Checking your blood pressure at home.”
+						%span WebMD. http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring
 					%li
-						%a{:href => "http://www.alz.org/alzheimers_disease_10429.asp", :target=>"_blank"} http://www.alz.org/alzheimers_disease_10429.asp
+						%span 29. Godman, H. (2013, Jul.3). 
+						%a{:href => "http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436"}“Checking blood pressure at home pays off.”
+						%span Harvard Health Publications, Harvard Medical School. Retrieved from http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436
 					%li
-						%a{:href => "https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149", :target=>"_blank"} https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149
+						%span 30.
+						%a{:href => "http://www.cdc.gov/std/tg2015/chlamydia.htmh.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436"}“Chlamydial Infections in Adolescents and Adults.”
+						%span (2015. Jun. 4) Centers for Disease Control and Prevention. Retrived from http://www.cdc.gov/std/tg2015/chlamydia.htm
 					%li
-						%a{:href => "http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor", :target=>"_blank"} http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor
+						%span 31. Adler, R., Mehta, R. (2010).
+						%a{:href => "http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf"}“Catalyzing Technology to Support Family Caregiving.”
+						%span The National Alliance for Caregiving. Retrieved from http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf
 					%li
-						%a{:href => "http://teens.webmd.com/girls/facts-about-puberty-girls", :target=>"_blank"} http://teens.webmd.com/girls/facts-about-puberty-girls
+						%span 32. Fox, S., Brenner, J. (2012).
+						%a{:href => "http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf"}“Family Caregivers Online.”
+						%span Pew Research Center. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf
 					%li
-						%a{:href => "http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/", :target=>"_blank"} http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/
+						%span 33.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Dementia.”
+						%span Mayo Clinic. (2014. Nov, 22). Retrieved from http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
 					%li
-						%a{:href => "http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html", :target=>"_blank"} http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html
+						%span 34.
+						%a{:href => "http://www.alz.org/alzheimers_disease_10429.asple&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Treatments for Sleep Changes.”
+						%span Alzheimer’s Association.  (2016). Retrieved from http://www.alz.org/alzheimers_disease_10429.asple&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
 					%li
-						%a{:href => "https://en.wikipedia.org/wiki/Activities_of_daily_living", :target=>"_blank"} https://en.wikipedia.org/wiki/Activities_of_daily_living
+						%span 35.
+						%a{:href => "https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149"}“Eating and Drinking.”
+						%span Alzheimer’s Society. Retrieved from https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149
 					%li
-						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm", :target=>"_blank"} http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm
+						%span 36.
+						%a{:href => "http://www.webmd.com/alzheimers/tc/dementia-medications"}“Alzheimer’s Disease Health Center.”
+						%span WebMD. Retrieved from http://www.webmd.com/alzheimers/tc/dementia-medications
 					%li
-						%a{:href => "https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive- Health-Care", :target=>"_blank"} https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive- Health-Care
+						%span 37.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Dementia: Treatment and Drugs.”
+						%span Mayo Clinic. (2014. Nov, 22). Retrieved from http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
 					%li
-						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx", :target=>"_blank"} https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx
+						%span 38.
+						%a{:href => "http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor"}“Growth and Development, Ages 11 to 14 Years - When to Call a Doctor.”
+						%span WebMD. (2014. Sep, 9). Retrieved from http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor
 					%li
-						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx", :target=>"_blank"} https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx
+						%span 39.
+						%a{:href => "http://teens.webmd.com/girls/facts-about-puberty-girls"}“Girls and Puberty.”
+						%span WebMD. Retrieved from http://teens.webmd.com/girls/facts-about-puberty-girls
 					%li
-						%a{:href => "http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins", :target=>"_blank"} http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins
+						%span 40. Cespedes, A. (2015. Dec.11). 
+						%a{:href => "http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/"}“Diet and Exercise Plan for a 30-Year-Old Man.”
+						%span Livestrong.com. Retrieved from http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/
 					%li
-						%a{:href => "https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need", :target=>"_blank"} https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need
+						%span 41.
+						%a{:href => "http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.htm"}“Men: Stay Healthy at Any Age.”
+						%span Agency for Healthcare Research and Quality. Retrieved from http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html
 					%li
-						%a{:href => "http://www.webmd.com/parenting/raising-fit-kids/recharge/reduce-teen-screen-time?page=3", :target=>"_blank"} http://www.webmd.com/parenting/raising-fit-kids/recharge/reduce-teen-screen-time?page=3
+						%span 42.
+						%a{:href => "https://en.wikipedia.org/wiki/Activities_of_daily_living"}“Activities of Daily Living.”
+						%span Wikipedia. Retrieved from https://en.wikipedia.org/wiki/Activities_of_daily_living
 					%li
-						%a{:href => "http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html", :target=>"_blank"} http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html
+						%span 43.
+						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm"}“Youth Physical Activity Guidelines Toolkit.”
+						%span Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm
 					%li
-						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf", :target=>"_blank"} http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf
+						%span 44.
+						%a{:href => "https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive-Health-Care"}“Teen Health Issues and Preventative Care.”
+						%span Cleveland Clinic Children’s. Retrieved from https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive-Health-Care
 					%li
-						%a{:href => "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3267340/", :target=>"_blank"} http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3267340/
+						%span 45.
+						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx"}“A Teenager’s Nutritional Needs.”
+						%span American Academy of Pediatrics. Retrieved from https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx
 					%li
-						%a{:href => "http://www.webmd.com/alzheimers/tc/dementia-medications", :target=>"_blank"} http://www.webmd.com/alzheimers/tc/dementia-medications
+						%span 46.
+						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx"}“How Teens Can Stay Fit.”
+						%span American Academy of Pediatrics. Retrieved from https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx
 					%li
-						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel", :target=>"_blank"} http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399? utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel
+						%span 47.
+						%a{:href => "http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins"}“Vitamins for Kids: Do Health Kids Need Supplements?” 
+						%span WebMD. Retrieved from http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins
 					%li
-						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456", :target=>"_blank"} http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456
+						%span 48.
+						%a{:href => "https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need"}“How Much Sleep Do We Really Need?” 
+						%span National Sleep Foundation. Retrieved from https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need
 					%li
-						%a{:href => "http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436", :target=>"_blank"} http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436
+						%span 49.
+						%a{:href => "http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html"}“Recomended Immunization Schedule for Persons Aged 0 Through 18 Years.”
+						%span (2015). Centers for Disease Control and Prevention.  Retrieved from http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html
+					%li
+						%span 50.
+						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf"}“The Physical Activity Guidelines for Children and Adolescents.”
+						%span Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf
+					%li
+						%span 51. Kalra, G., Subramanyam, A., Pinto, C. “Sexuality: Desire, Activity, and intimacy in the elderly.” Indian J Psychiatry. 2011 Oct-Dec; 53(4): 300–306. doi: 
+						%a{:href => "http://www.indianjpsychiatry.org/article.asp?issn=0019-5545;year=2011;volume=53;issue=4;spage=300;epage=306;aulast=Kalra"}10.4103/0019-5545.91902
+					%li
+						%span 52.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456"}“DASH diet: Healthy eating to lower your blood pressure.”
+						%span (2013. May, 15). Mayo Clinic. Retrieved from http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456
+					%li
+						%span 53.
+						%a{:href => "https://www.nia.nih.gov/health/publication/sexuality-later-life"}“Sexuality later in life.”
+						%span National Institute on Aging. Retrieved from https://www.nia.nih.gov/health/publication/sexuality-later-life
+					%li
+						%span 54.
+						%a{:href => "https://en.wikipedia.org/wiki/Medieval_medicine_of_Western_Europe"}“Medieval medicine of Western Europe.”
+						%span Wikipedia. Retrieved 2016. Jan, 22 from https://en.wikipedia.org/wiki/Medieval_medicine_of_Western_Europe
+					%li
+						%span 55. Webster, Charles (2008). Paracelsus: Medicine, Magic, and Mission at the End of Time. Yale Univ. Press
+					%li
+						%span 56. Presti, Roberto Lo (2010). Presti, Roberto Lo (2010). "Anatomy as Epistemology: The Body of Man and the Body of Medicine in Vesalius and his Ancient Sources". Renaissance and Reformation/Renaissance et Reforme
+					%li
+						%span 57.
+						%a{:href => "http://www.britannica.com/topic/history-of-medicine"}Encyclopædia Britannica. 
+						%span Retrieved October 11, 2015 from http://www.britannica.com/topic/history-of-medicine
+					%li
+						%span 58.
+						%a{:href => "https://en.wikipedia.org/wiki/Nursing care plan"}"Nursing care plan"
+						%span Wikipedia 28 Sep. 2015. Retrieved from https://en.wikipedia.org/wiki/Nursing care plan
+					%li
+						%span 59.
+						%a{:href => "http://www.nursingcenter.com/pdfjournal?AID=798082&an=00000446-200806000-00002&Journal_ID=54030&Issue_ID=798079"}"Death to Nursing Care Plans!"
+						%span Lippincott Nursing Center 28 Sep. 2015. Retrieved from http://www.nursingcenter.com/pdfjournal?AID=798082&an=00000446-200806000-00002&Journal_ID=54030&Issue_ID=798079
+					%li
+						%span 60. Exchange, Center for International Rehabilitation Research Information and. 
+						%a{:href => "http://cirrie.buffalo.edu/encyclopedia/en/article/18/"} "Life Care Planning | International Encyclopedia of Rehabilitation".
+						%span cirrie.buffalo.edu. Retrieved 2015-10-02.
+					%li
+						%span 61.
+						%a{:href => "http://www.rehabpro.org/sections/ialcp/focus/standards/ialcpSOP_pdf"}"International Academy of Life Care Planners Standards of Practice"
+						%span IARP 28 Sep. 2015 Retrieved from http://www.rehabpro.org/sections/ialcp/focus/standards/ialcpSOP_pdf
+					%li
+						%span 62. Deutsch, P.M. (2002) 
+						%a{:href => "http://archive.scijournal.com/doi/pdf/10.1310/UH3C-RUF5-EV1K-869D"}"Historical Perspective of Life Care Planning"
+						%span Top Spinal Cord Inj Rehabil2002;7(4):1-4
+					%li
+						%span 63.
+						%a{:href => "http://cirrie.buffalo.edu/encyclopedia/en/article/18/"}"Life Care Planning"
+						%span International Encyclopedia of Rehabilitation 28 Sep. 2015. Retrieved from http://cirrie.buffalo.edu/encyclopedia/en/article/18/
+					%li
+						%span 64.
+						%a{:href => "https://en.wikipedia.org/w/index.php?title=Experimental_analysis_of_behavior&oldid=682715574"}“Experimental Analysis of Behavior.”
+						%span Retrieved 2016, Jan. from https://en.wikipedia.org/w/index.php?title=Experimental_analysis_of_behavior&oldid=682715574
+					%li
+						%span 65.
+						%a{:href => "http://currentnursing.com/nursing_theory/Henderson.html"}“Current Nursing: Nursing Theories”.
+						%span  Retrieved from  http://currentnursing.com/nursing_theory/Henderson.html
 
 / - # END Credits. Copy to this %%%%%line.
