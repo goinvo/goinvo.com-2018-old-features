@@ -6,11 +6,11 @@
     .col-md-3
       %img{:src=>"../../../images/features/careplans/donna_norm.png"}
     .col-md-9
-      %h6 Patient Summary
+      %h6.blue Patient Summary
       %span.summary=profile.summary.html_safe
   .row
     #col.left.col-md-6
-      %h6 Health Concerns (Choose 2)
+      %h6.blue Health Concerns (Choose 2)
       .col-md-6
         .checkbox
           %label.depression
@@ -32,7 +32,7 @@
           %label.option1
             %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe
     #col.right.col-md-6
-      %h6 Care Team
+      %h6.blue Care Team
       %p.care-team=profile["care team"].html_safe
   .row
     #col.col-md-12.care-plan  
@@ -40,11 +40,11 @@
         %tr.headers
           %td.header.blank
           - data.features.careplans.globals[0]["content headers"].each do |header|
-            %td.header=header.html_safe
+            %td.header.blue=header.html_safe
         - careplan.each do |component|
           - row_id = component[0].strip.delete(' ')
           %tr{:id=> "#{row_id}"}
-            %td.header=component[0].html_safe
+            %td.header.blue=component[0].html_safe
             - component[1].each do |content|
               -selector = "."+component[0]+"."+content[0]
               %td.content{:id=> "#{content[0]}"}
