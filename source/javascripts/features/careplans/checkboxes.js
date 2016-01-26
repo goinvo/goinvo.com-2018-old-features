@@ -51,6 +51,21 @@ $(document).ready(function(){
 		$(".profile-pane:nth-child("+id+")").addClass('active');
 	});
 
+
+	// big title scroll to change
+	$( window ).scroll(function() {
+		if($(window).scrollTop() < 50) {
+			$(".title2").fadeOut(function() {
+				$(".title1").fadeIn();
+			});
+		}
+		else {
+			$(".title1").fadeOut(function() {
+				$(".title2").fadeIn();
+			});
+		}
+	});
+
 })
 
 function addCondition (id) {
