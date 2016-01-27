@@ -186,7 +186,7 @@ function setCarouselHeight(){
 				tallest = $(".carousel.mobile .item:nth-child("+i+")").height();
 		}
 	}
-	console.log(tallest)
+	//console.log(tallest)
 	return tallest + 60;
 }
 
