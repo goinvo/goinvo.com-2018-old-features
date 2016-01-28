@@ -1047,8 +1047,8 @@ Feature II: Process Mobile
     margin-bottom: 0; /* This overrides previously specified margin-bottom */
     padding-bottom: 1.5em;
 	}
-	ul.history-items li:nth-child(6) {
-		padding-bottom: 5rem;
+	ul.history-items li:nth-child(7) {
+		padding-bottom: 3rem;
 	}
 	ul.history-items li.history-item::after {
     /* bullets */
@@ -1075,7 +1075,10 @@ Feature II: Process Mobile
    /* first li's line */
    top: 14px; /* moves the line down so that it disappears under the bullet. Adjust manually */
   	}
-	
+
+	.coming-soon {
+		margin-top: 3rem;
+	}
 	.coming-soon-box {
 		border-radius: 4px;
     	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
