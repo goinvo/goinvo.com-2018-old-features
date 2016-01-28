@@ -14,7 +14,7 @@
       .col-md-6
         .checkbox
           %label.depression
-            %input{:type=> "checkbox", :id=>"depression"} Depression
+            %input{:type=> "checkbox", :id=>"depression"} Depression<span class="superscript">10-14</span>
         .checkbox
           %label.smoking
             %input{:type=> "checkbox", :id=>"smoking"} Smoking
@@ -24,10 +24,10 @@
       .col-md-6
         .checkbox
           %label.obesity
-            %input{:type=> "checkbox", :id=>"obesity"} Obesity
+            %input{:type=> "checkbox", :id=>"obesity"} Obesity<span class="superscript">22-24</span>
         .checkbox  
           %label.diabetes
-            %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes
+            %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes<span class="superscript">18-21</span>
         .checkbox
           %label.option1
             %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe

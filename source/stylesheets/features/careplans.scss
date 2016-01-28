@@ -55,6 +55,12 @@ a {
 		font-size: 0.7rem;
 	}
 }
+#feature-article span.superscript {
+	vertical-align: super;
+	font-size: 0.6rem;
+	text-decoration: none;
+	cursor: pointer;
+}
 #feature-article strong {
 	font-weight: normal;
 }
@@ -164,7 +170,7 @@ a {
 			left: 0;
 		}
 		.title2 {
-			width: 50%;
+			width: 45%;
 			margin: 0 auto;
 			text-align: left;
 			display: none;
@@ -752,19 +758,23 @@ a {
 		}
 	}
 }
+
+/*************
+Feature II: Process
+*****************/
 @media only screen and (min-width: 769px) {
-	.process.desktop {
+	.part.two .process.desktop {
 		display: block;
 	}
-	.process.mobile {
+	.part.two .process.mobile {
 		display: none;
 	}
 }
 @media only screen and (max-width: 768px) {
-	.process.desktop {
+	.part.two .process.desktop {
 		display: none;
 	}
-	.process.mobile {
+	.part.two .process.mobile {
 		display: block;
 	}
 }
@@ -781,10 +791,10 @@ a {
 	width: 100%;
 	margin-bottom: 150px;
 }
-.part.two .process .process-box h6 {
+.part.two .process.desktop .process-box h6 {
 	color: rgb(11, 94, 148);
 }
-.part.two .process .process-box {
+.part.two .process.desktop .process-box {
 	position: absolute;
 	width: 45%;
 	background-color: #ffffff;
@@ -792,78 +802,80 @@ a {
 	border-radius: 10px;
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 	z-index: 3;
-	max-width: 500px;
+	//max-width: 500px;
 }
-.part.two .process .process-box1 {
+.part.two .process.desktop .process-box1 {
 	left: 10%;
 	top: 3%;
 }
-.part.two .process .process-box2 {
+.part.two .process.desktop .process-box2 {
 	right: 10%;
 	top: 18%;
 }
-.part.two .process .process-box3 {
+.part.two .process.desktop .process-box3 {
 	left: 10%;
 	top: 33%;
 }
-.part.two .process .process-box4 {
+.part.two .process.desktop .process-box4 {
 	right: 10%;
 	top: 48%;
 }
-.part.two .process .process-box5 {
+.part.two .process.desktop .process-box5 {
 	left: 10%;
 	top: 63%;
 }
-.part.two .process .process-box6 {
+.part.two .process.desktop .process-box6 {
 	right: 10%;
 	top: 78%;
 }
-.part.two .process .process-box7 {
+.part.two .process.desktop .process-box7 {
 	left: 10%;
 	bottom: 1%;
 }
-.part.two .process .connect-box {
+.part.two .process.desktop .connect-box {
 	width: 50%;
 	height: calc( 15% + 50px);
 	position: absolute;
 	border: 15px solid rgba(11, 94, 148,.3);
 	border-radius: 25px;
 }
-.part.two .process .connect-box1 {
-	top: calc( 3% + 200px );
+.part.two .process.desktop .connect-box1 {
+	top: calc( 3% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process .connect-box2 {
-	top: calc( 18% + 200px );
+.part.two .process.desktop .connect-box2 {
+	top: calc( 18% + 100px );
 	border-right: none;
 	border-bottom: none;
 	left: 15%;
 }
-.part.two .process .connect-box3 {
-	top: calc( 33% + 200px );
+.part.two .process.desktop .connect-box3 {
+	top: calc( 33% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process .connect-box4 {
-	top: calc( 48% + 200px );
+.part.two .process.desktop .connect-box4 {
+	top: calc( 48% + 100px );
 	border-right: none;
 	border-bottom: none;
 	left: 15%;
 }
-.part.two .process .connect-box5 {
-	top: calc( 63% + 200px );
+.part.two .process.desktop .connect-box5 {
+	top: calc( 63% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process .connect-box6 {
-	top: calc( 78% + 200px );
+.part.two .process.desktop .connect-box6 {
+	top: calc( 78% + 100px );
 	border-right: none;
 	border-bottom: none;
+	border-bottom-left-radius: 0;
 	left: 15%;
+	height: calc(21% - 100px);
 }
 .part.two .process.desktop .circle {
 	position: absolute;
@@ -877,7 +889,7 @@ a {
 	z-index: 5;
 }
 .part.two .process.desktop .circle1 {
-	top: 180px;
+	top: 80px;
 	right: -25px;
 }
 .part.two .process.desktop .circle2 {
@@ -904,6 +916,35 @@ a {
 	bottom: calc(1%);
 	left: calc(15% - 18px);
 }
+/************
+Feature II: Process Mobile
+**************/
+.part.two .process.mobile {
+	margin-top: 50px;
+}
+.part.two .process.mobile .circle {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(11, 94, 148);
+	color: #ffffff;
+	border-radius: 25px;
+	padding: 8px 15px;
+	font-size: 2rem;
+	position: absolute;
+	top: -25px;
+	left: calc(50% - 25px);
+}
+.part.two .process.mobile .process-box {
+	border-top: 1px solid #d1d1d1;
+	padding: 50px 10% 80px 10%;
+	margin-top: -25px;
+	position: relative;
+
+	h6 {
+		color: rgb(11, 94, 148);
+	}
+}
+
 
 .part.two .process.mobile .section {
 	position: relative;
