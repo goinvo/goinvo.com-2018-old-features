@@ -60,4 +60,25 @@ $(document).ready(function() {
             scrollTop: $("div.part.four").offset().top-89
         }, 500);
 	});
+
+	// superscript
+	$(".superscript").click(function(event) {
+		/* Act on the event */
+		var index;
+		if($(this).text().indexOf('-') != -1) {
+			index = $(this).text().split("-");
+			index = index[0];
+		}
+		else if($(this).text().indexOf(',') != -1) {
+			var index = $(this).text().split(",");
+			index = index[0];
+		}
+		else {
+			index = $(this).text();
+		}
+		var anchor = "reference"+index;
+		$('html, body').animate({
+            scrollTop: $("li#"+anchor+"").offset().top-100
+        }, 500);
+	});
 });
