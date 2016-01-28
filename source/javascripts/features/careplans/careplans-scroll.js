@@ -60,4 +60,13 @@ $(document).ready(function() {
             scrollTop: $("div.part.four").offset().top-89
         }, 500);
 	});
+	$(".superscript").click(function(event) {
+		/* Act on the event */
+		var index = $(this).text().split(",");
+		index = index[0];
+		var anchor = "reference"+index;
+		$('html, body').animate({
+            scrollTop: $("#"+anchor+"").offset().top-100
+        }, 500);
+	});
 });
