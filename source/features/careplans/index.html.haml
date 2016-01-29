@@ -24,21 +24,20 @@
 
 %article#feature-article
 	.overall-header
-		%div.title
-			%div.title1
-				%p.big-title
-					CARE 
-				%p.big-title
-					PLANS
-				%p.sub-title
-					PART I: Overview
-			%div.title2
-				%p.sub-title“Self-care in health is the new black.
-				%p We’re digitally DIY’ing life, scheduling our own travel and booking restaurant tables, curating our photographs and trading stocks. People are morphing into health consumers, and that requires health engagement which means getting smart about our bodies, our selves, our numbers, and our treatment options. CarePlans is an on-ramp to shared and sound decision-making for self-health.”
-				%p.text-right - Jane Sarasohn-Kahn, MA (Econ.), MHSA
-				%p.text-right Health Economist, Advisor, Trend Weaver
-				%p.text-right THINK-Health, Health Populi blog, Huffington Post
-				%p.text-right Healthy Living
+		%div.title.title1
+			%p.big-title
+				CARE 
+			%p.big-title
+				PLANS
+			%p.sub-title
+				PART I: Overview
+		%div.title.title2
+			%p.sub-title“Self-care in health is the new black.
+			%p We’re digitally DIY’ing life, scheduling our own travel and booking restaurant tables, curating our photographs and trading stocks. People are morphing into health consumers, and that requires health engagement which means getting smart about our bodies, our selves, our numbers, and our treatment options. CarePlans is an on-ramp to shared and sound decision-making for self-health.”
+			%p.text-right - Jane Sarasohn-Kahn, MA (Econ.), MHSA
+			%p.text-right Health Economist, Advisor, Trend Weaver
+			%p.text-right THINK-Health, Health Populi blog, Huffington Post
+			%p.text-right Healthy Living
 		%a.background-copyright{:href => "https://www.flickr.com/photos/com_salud/13866052723", :target => "_blank"} Photo by COM SALUD
 		%div.bg-cover
 	%header.nav-wrapper.stuck
@@ -153,15 +152,15 @@
 				%li.active{:role=> "presentation"}
 					%a.tab{:href=> "#1", :data=> {:toggle=> "tab"}}
 						%img{:src=>"../../images/features/careplans/isabella_norm.png"}
-						%h6 Isabella<span class="superscript">43-50</span>, 13
+						%h6 Isabella<span class="superscript">43-50</span>
 				%li{:role=> "presentation"}
 					%a.tab{:href=> "#2", :data=> {:toggle=> "tab"}}
 						%img{:src=>"../../images/features/careplans/reggie_norm.png"}
-						%h6 Reggie<span class="superscript">40-42</span>, 35
+						%h6 Reggie<span class="superscript">40-42</span>
 				%li{:role=> "presentation"}
 					%a.tab{:href=> "#3", :data=> {:toggle=> "tab"}}
 						%img{:src=>"../../images/features/careplans/donna_norm.png"}
-						%h6 Donna<span class="superscript">51-53</span>, 68
+						%h6 Donna<span class="superscript">51-53</span>
 			.tab-content
 				.tab-pane.active{:id=> "1"}
 					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
@@ -201,39 +200,50 @@
 				%p.history-item__content The breadth of professionals and care providers within life care planning expanded, with individuals coming from rehabilitation counseling, rehabilitation nursing, physiatry, and case management professions. Both paper based and digital technology based care plans were regularly being used by patients and their care providers. A proliferation of digital technology based care plans also began to take hold in later years. Healthtap, Amwell, Better., HelloDoctor, HealthKit, My Chart, Practice Fusion, Health Vault, AskMD, Happify, and Healarium are all more well known examples.<span class='superscript'>61</span>
 			%li.history-item.last-year
 				%h6.history-item__title Current
-				%p.history-item__content As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans.  is has encouraged the growth of digital care planning services that aid chronic care management, such as CareSync, Wellframe, Bridge Patient Portal, and others. Many providers also utilize physical care planning materials like handouts and pamphlets for specific conditions.  e pamphlet example below is a care plan for controlling high cholesterol. Inside are education about the diagnosis, room for high-level goal setting, slots to insert Care Cards for individal step goals, and the contractual agreement of the care team to better the patient’s health.
+				%p.history-item__content As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans.  is has encouraged the growth of digital care planning services that aid chronic care management, such as CareSync, Wellframe, Bridge Patient Portal, and others. Many providers also utilize physical care planning materials like handouts and pamphlets for specific conditions.  e pamphlet example below is a care plan for controlling high cholesterol. Inside are education about the diagnosis, room for high-level goal setting, slots to insert Care Cards for individal step goals, and the contractual agreement of the care team to better the patient’s health.<span class="superscript">5</span>
 			%div.popup-box#nursing
-				%img{:src => "../../../images/features/careplans/nursing_img.jpg"}
+				%div.image	
+					%img{:src => "../../../images/features/careplans/nursing_img.jpg"}
 				%div.popup-content
 					%h6 Nursing
 					%p Virginia Henderson, “The Nightingale of Modern Nursing”, was a clinically recognized nurse and instructor in the 1900s. She designed the basic nursing curriculum for the National League for Nursing that taught a patient- centered approach focused on nursing problems rather than medical diagnoses.<span class='superscript'>65</span>
 				%div.arrow
 			%div.popup-box#life_care
-				%img{:src => "../../../images/features/careplans/life_care_planning_img.jpg"}
+				%div.image
+					%img{:src => "../../../images/features/careplans/life_care_planning_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/dominikgolenia/527517137"} Photo by Golenia, Dominik
 				%div.popup-content
 					%h6 Life Care Planning
 					%p Life care plans started to develop in the 1970s after the convergence of research within several fields. Catastrophic disability research in the mid 70s paved the way for the modern life care plan.<span class='superscript'>62,63</span>
 				%div.arrow
 			%div.popup-box#EAB
-				%img{:src => "../../../images/features/careplans/EAB_img.jpg"}
+				%div.image
+					%img{:src => "../../../images/features/careplans/EAB_img.jpg"}
+					%a{:href => "https://commons.wikimedia.org/wiki/File:Speech_Client_WEB_(5).jpg"} Photo by Madmike1952
 				%div.popup-content
 					%h6 Experimental Analysis of Behavior
 					%p This subspecialty of psychology provided research in charting behavioral changes over long periods of time. These behaviors could then be deconstructed into discrete actions that could be analyzed by the researcher. The technique of charting provided the case management professional with a tool in identifying individual components of care for a specific patient.<span class='superscript'>64</span>
 				%div.arrow
 			%div.popup-box#developmental
-				%img{:src => "../../../images/features/careplans/developmental_psychology_img.jpg"}
+				%div.image
+					%img{:src => "../../../images/features/careplans/developmental_psychology_img.jpg"}
+					%a{:href => "https://commons.wikimedia.org/wiki/File:US_Army_50899_Child_Development_Center_III_receives_national_accreditation.jpg"} Photo by Rhodes, Lisa R
 				%div.popup-content
 					%h6 Developmental Psychology
 					%p Developmental psychology provided a practical role in the development of life care planning. Through conducting research on children with cerebral palsy, it was discovered that the overwhelming complexity of the needs of the patient required that a structured reference tool be provided as a roadmap of care. This provided the beginning of the framework for life care planning.<span class='superscript'>60</span>
 				%div.arrow
 			%div.popup-box#case_management
-				%img{:src => "../../../images/features/careplans/case_management_img.jpg"}
+				%div.image
+					%img{:src => "../../../images/features/careplans/case_management_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/usdagov/8423828231"} Photo by USDA
 				%div.popup-content
 					%h6 Case Management
 					%p Case management is the collaborative process of assessing, planning, implementing, and evaluating the options and services for a person’s health needs. In the early 1970s, the case management field began seeing the value of a detailed life care plan and became more involved with providing integrated services for those with long-term medical needs.<span class='superscript'>61</span>
 				%div.arrow
 			%div.popup-box#litigation
-				%img{:src => "../../../images/features/careplans/litigation_img.jpg"}
+				%div.image
+					%img{:src => "../../../images/features/careplans/litigation_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/truthrevealed/12293483405"} Photo by Michael
 				%div.popup-content
 					%h6 Litigation
 					%p Beginning in the 1980s, Life care plans began to gain greater acknowledgement through the help of the litigation field in cases involving debilitating injury. Damages in Tort Actions (1981) was the first published reference to life care planning through the analysis of personal injury cases.<span class='superscript'>60</span>
@@ -241,7 +251,7 @@
 		%img{:src => "../../../images/features/careplans/Pamphlet.png"}
 		%div.coming-soon
 			%h6.blue Coming soon!
-			%a{:href => "careplans/part-2.html"}
+			%a{:href => "/features/careplans/part-2.html"}
 				%div.coming-soon-box.row
 					%div.coming-soon-content.col-md-6
 						%p.title Care Plans
