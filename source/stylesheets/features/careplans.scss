@@ -333,14 +333,21 @@ a {
 		}
 		.col {
 			padding: 10px 15px 15px 15px;
-			border-right: solid rgb(11, 94, 148) 2px;
 		}
 		.col:last-child {
 			border-right: none;
 		}
-		@media only screen and (max-width:991px) {
+		@media only screen and (max-width:768) {
 			.col {
 				border-right: none;
+			}
+			.col:last-child {
+				width: calc(16.7% - 3px);
+			}
+		}
+		@media only screen and (min-width:769) {
+			.col {
+				border-right: solid rgb(11, 94, 148) 2px;
 			}
 		}
 	}
@@ -395,14 +402,30 @@ a {
 		ol li {
 			width: 50px;
 			height: 50px;
-			padding-top: 6px;
+			padding-top: 5px;
 			svg{
 				width:  35px;
 				height: 35px;
 			}
 		}
 	}
-
+	.carousel-indicators {
+		left: 0;
+		margin-left: 0;
+		top: -160px;
+		li {
+			background: transparent;
+			width: 50px;
+			height: 50px;
+			margin: 0;
+			border: none;
+			padding-top: 5px;
+		}
+		svg {
+			position: absolute;
+			margin-left: -18px;
+		}
+	}
 	.card-carousel-indicators {
 		margin-bottom: 40px;
 		padding: 0 10%;
@@ -449,6 +472,7 @@ a {
 		
 	}
 	.mobile {
+		margin-top: 150px;
 		h6 {
 			text-align: center;
 			margin-bottom: 20px;
@@ -476,9 +500,15 @@ a {
 	    text-align: center;
 	    &.left {
 	    	left: 20px;
+	    	svg {
+	    		transform: scaleX(-1);
+	    	}
 	    }
 	    &.right {
 	    	right: 20px;
+	    }
+	    svg {
+	    	margin-top: 10px;
 	    }
 	}
 	.control:visited,
@@ -1281,9 +1311,11 @@ Feature II: Process Mobile
 	}
 	.contributor p, .author p {
 		line-height: 1.5rem;
+		word-break: break-word;
 	}
 	.contributor p.name, .author p.name {
 		font-size: 1.8rem;
+		line-height: 2rem;
 		font-weight: normal;
 	}
 	.contributor .info, .author .info {

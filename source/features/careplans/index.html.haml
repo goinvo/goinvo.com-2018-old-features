@@ -117,32 +117,32 @@
 								%h6=cards[j].header
 								%p=cards[j].content
 					%a.left.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"prev"}}
-						%span <
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
-						%span >
-			.care-cards.carousel.slide.mobile
-				%ol.card-carousel-indicators
-					%li.active{:data=>{:target=>".carousel.slide.mobile", :slide=>{:to=>"0"}}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+			.care-cards.carousel.slide.mobile#carousel-mobile
+				%ol.carousel-indicators.card-carousel-indicators
+					%li.active{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
-					-(1..8).each do |i|
-						%li{:data=>{:target=>".carousel.slide.mobile", :slide=>{:to=>"#{i}"}}}
-							%img.svg{:src=>cards[i].icon}
+					-(1..8).each do |m|
+						%li{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"#{m}"}}}
+							%img.svg{:src=>cards[m].icon}
 				.carousel-inner{:role=>"listbox"}
 					.item.active
 						%h6=cards[0].header
 						%p=cards[0].content
 						%img.care-card-img{:src=>cards[0].img}
 						%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
-					-(1..8).each do |j|
+					-(1..8).each do |n|
 						.item
-							%h6=cards[j].header
-							%p=cards[j].content
-							%img.care-card-img{:src=>cards[j].img}
+							%h6=cards[n].header
+							%p=cards[n].content
+							%img.care-card-img{:src=>cards[n].img}
 							%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
 					%a.left.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"prev"}}
-						%span <
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 					%a.right.control{:href=>".carousel.slide.mobile", :role=>"button", :data=>{:slide=>"next"}}
-						%span >
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 	.part.three
 		%h1 How Care Plans Work
 		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
@@ -267,27 +267,51 @@
 		#credits
 			.authors.row
 				%h1 Authors
-				.author.col-md-6
+				.author.col-md-4
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/beth.jpg'}
 					.info
 						%p Involution Studios
 						%p.name Beth Herlin<br><small><a href="https://twitter.com/beth11herlin" target="_blank">@beth11herlin</a></small>
-				.author.col-md-6
+				.author.col-md-4
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/edwin.jpg'}
 					.info
 						%p Involution Studios
 						%p.name Edwin Choi
+				.author.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/jeffbelden.jpg'}
+					.info
+						%p University of Missouri | toomanyclicks.com 
+						%p.name ​Jeff Belden MD<br><small><a href="https://twitter.com/jeffbelden" target="_blank">@jeffbelden</a></small>
+				.author.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+					.info
+						%p University of Michigan
+						%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
+				.author.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/janesarasohnkahn.jpg'}
+					.info
+						%p THINK-Health | Health Populi blog | Huffington Post
+						%p.name ​​Jane Sarasohn-Kahn, MA, MHSA<br><small><a href="https://twitter.com/healthythinker">@healthythinker</a></small>
 			.contributors.row
 				%h1 Contributors
-				.contributor.col-md-6
+				.contributor.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
+					.info
+						%p Web Designer & Developer
+						%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
+				.contributor.col-md-4
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
 					.info
 						%p Web Designer & Developer
 						%p.name Yanyang Zhou
-				.contributor.col-md-6
+				.contributor.col-md-4
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
 					.info
