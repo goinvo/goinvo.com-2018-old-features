@@ -56,22 +56,24 @@ $(document).ready(function(){
 	var lastScrollTop = 0;
 	$( window ).scroll(function() {
 		var st = $(this).scrollTop();
-	    if (st > lastScrollTop){
-	       // downscroll code
-	       disableScroll();
-			$(".title1").fadeOut(function() {
-				$(".title2").fadeIn();
-				enableScroll();
-			});
-	    } else {
-	      // upscroll code
-	      if($(window).scrollTop()< 50 && $(".title2").is(":visible")) {
-	      	$(".title2").fadeOut(function() {
-				$(".title1").fadeIn();
-			});
-	      }
-	    }
-	    lastScrollTop = st;
+		if(st>0) {
+		    if (st > lastScrollTop){
+		       // downscroll code
+		       disableScroll();
+				$(".title1").fadeOut(function() {
+					$(".title2").fadeIn();
+					enableScroll();
+				});
+		    } else {
+		      // upscroll code
+		      if($(window).scrollTop()< 100 && $(".title2").is(":visible")) {
+		      	$(".title2").fadeOut(function() {
+					$(".title1").fadeIn();
+				});
+		      }
+		    }
+		    lastScrollTop = st;
+		}
 	});
 
 })
