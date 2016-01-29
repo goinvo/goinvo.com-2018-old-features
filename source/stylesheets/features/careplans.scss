@@ -337,17 +337,21 @@ a {
 		.col:last-child {
 			border-right: none;
 		}
-		@media only screen and (max-width:768) {
+		@media only screen and (max-width:768px) {
 			.col {
 				border-right: none;
+				background-color: #ffffff;
+			}
+			.col:last-child {
+				width: 100%;
+			}
+		}
+		@media only screen and (min-width:769px) {
+			.col {
+				border-right: solid rgb(11, 94, 148) 2px;
 			}
 			.col:last-child {
 				width: calc(16.7% - 3px);
-			}
-		}
-		@media only screen and (min-width:769) {
-			.col {
-				border-right: solid rgb(11, 94, 148) 2px;
 			}
 		}
 	}
@@ -475,6 +479,9 @@ a {
 		margin-top: 150px;
 		h6 {
 			text-align: center;
+			width: 80%;
+			display: block;
+			margin: 0 auto;
 			margin-bottom: 20px;
 		}
 		img {
@@ -499,13 +506,13 @@ a {
 	    color: white;
 	    text-align: center;
 	    &.left {
-	    	left: 20px;
+	    	left: 10px;
 	    	svg {
 	    		transform: scaleX(-1);
 	    	}
 	    }
 	    &.right {
-	    	right: 20px;
+	    	right: 10px;
 	    }
 	    svg {
 	    	margin-top: 10px;
@@ -1131,9 +1138,18 @@ Feature II: Process Mobile
     height: 100%;
     width: 1px;
 	}
-	ul.history-items li.last-year:before {
-		width: 0;
-		height: 5%;
+	
+	@media only screen and (min-width: 769px) {
+		ul.history-items li.last-year:before {
+			width: 0;
+			height: 6%;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		ul.history-items li.last-year:before {
+			width: 0;
+			height: 3%;
+		}
 	}
 	ul.history-items li:first-child:before {
    /* first li's line */
