@@ -58,18 +58,22 @@ $(document).ready(function(){
 		var st = $(this).scrollTop();
 		if(st>0) {
 		    if (st > lastScrollTop){
-		       // downscroll code
-		       disableScroll();
-				$(".title1").fadeOut(function() {
-					$(".title2").fadeIn();
-					enableScroll();
-				});
+		    	if($(".title1").is(":visible")) {
+		    		// downscroll code
+			       disableScroll();
+			       $(".title1").hide();
+			       $(".title2").show();
+			       setTimeout(function(){
+				    //do something special
+				    enableScroll();
+				  }, 200);
+			   }
+				
 		    } else {
 		      // upscroll code
 		      if($(window).scrollTop()< 100 && $(".title2").is(":visible")) {
-		      	$(".title2").fadeOut(function() {
-					$(".title1").fadeIn();
-				});
+		      	$(".title2").hide();
+		      	$(".title1").show();
 		      }
 		    }
 		    lastScrollTop = st;
