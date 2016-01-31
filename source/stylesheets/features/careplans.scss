@@ -440,6 +440,7 @@ a {
 
 	.carousel-inner {
 		background-color: $bg-gray;
+		z-index: 50;
 	}
 
 	.item{
@@ -505,6 +506,7 @@ a {
 	    font-size: 50px;
 	    color: white;
 	    text-align: center;
+	    z-index: 50;
 	    &.left {
 	    	left: 10px;
 	    	svg {
