@@ -831,6 +831,9 @@ a {
 		}
 	}
 }
+#feature-article .part.two .text p {
+	margin-bottom: 10px;
+}
 
 /*************
 Feature II: Process
@@ -1097,6 +1100,50 @@ Feature II: Process Mobile
 		color: white;
 		text-decoration: underline;
 	}
+}
+
+/*************************
+Feature II: Product Landscape
+*****************************/
+@media only screen and (min-width: 769px) {
+	.part.two.desktop {
+		display: block;
+	}
+	.part.two.mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.part.two.desktop {
+		display: none;
+	}
+	.part.two.mobile {
+		display: block;
+	}
+}
+#feature-article .part.two .text p {
+	margin-bottom: 10px;
+}
+.part.two.desktop .product-matrix .table-bordered {
+	border: none;
+}
+.part.two.desktop .product-matrix .table-bordered > tbody > tr > td:first-child {
+	background-color: #ffffff;
+}
+.part.two.desktop .product-matrix .table-bordered > tbody > tr > td:first-child {
+	width: 120px;
+
+	img {
+		height: 30px;
+		margin: 0 auto;
+	}
+}
+.part.two.desktop .product-matrix .table-bordered > tbody > tr > td:last-child {
+	width: 120px;
+}
+.part.two.desktop .product-matrix .table-bordered > tbody > tr > td {
+	text-align: center;
+	vertical-align: middle;
 }
 
 

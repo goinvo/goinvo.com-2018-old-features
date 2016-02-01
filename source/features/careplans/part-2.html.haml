@@ -36,14 +36,14 @@
 	%header.nav-wrapper.stuck
 		%nav.main-nav
 			%a.one{:href => "javascript:void(0)"} Process
-			%a.two{:href => "javascript:void(0)"} Barriers 
-			%a.three{:href => "javascript:void(0)"} Product
+			%a.two{:href => "javascript:void(0)"}  Product
+			%a.three{:href => "javascript:void(0)"} Barriers
 			%a.four{:href => "javascript:void(0)"} Next Steps
 	%header.nav-wrapper.scroll-nav
 		%nav.main-nav
 			%a.one{:href => "javascript:void(0)"} Process
-			%a.two{:href => "javascript:void(0)"} Barriers
-			%a.three{:href => "javascript:void(0)"} Product
+			%a.two{:href => "javascript:void(0)"} Product
+			%a.three{:href => "javascript:void(0)"} Barriers
 			%a.four{:href => "javascript:void(0)"} Next Steps
 	.part.one
 		%p This piece is a continuation of the Care Plan series. While <a href="/features/careplans/">Part I</a> focused on what care plans are and how they came about, this article will explore how care plans are currently being used in the health space.
@@ -137,12 +137,268 @@
 			%div.process-box.tail
 				%img{:src => "../../images/features/careplans/part2/careplan_journey_arrow_mobile.png"}
 				%p The process is a cycle. Patients live the care plan until the next medical encounter.
-	.part.two
+	.part.two.desktop
 		.text
 			%h1 The Care Plan Product Landscape
 			%p As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Now, physicians, certified nurse specialists, nurse practitioners, and physician assistants are incentivized to perform 20 minutes of non-face-to-face care coordination services for every Medicare-qualifying patient each month. This can include tasks such as recording and coordinating patient health information (even from outside their own practice), managing care transitions (such as discharge from a hospitalization), coordinating clinical home or community services, systematic assessments of patient needs, and finally, the creation and review of a perpetually accessible comprehensive care plan. Now that Medicare has begun this transition, other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans. As a result, many care planning services have emerged to address the software needs of care management.
 			%p This matrix aims to explore the effectiveness of current care plan services based on defined criteria. Each service was scored based on the percentage of criteria met in each of the eleven topic areas. A 0 means that none of the criteria points were fulfilled. Click on each criteria at the top of the matrix to break down what subcriteria were used for scoring. The final score, out of 100, is the average of the service’s scores in each criteria area.
 		.product-matrix
+			%table.table.table-bordered.table-striped
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_wellframe.png"}
+					%td 50 
+					%td 50 
+					%td 80 
+					%td 60 
+					%td 25 
+					%td 50  
+					%td 75 
+					%td 43 
+					%td 0   
+					%td 100
+					%td 50 
+					%td 53.00
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_healarium.png"}
+					%td 33
+					%td 25
+					%td 60
+					%td 80
+					%td 50
+					%td 50 
+					%td 75
+					%td 0
+					%td 0
+					%td 75
+					%td 75
+					%td 47.55
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_healthtap.png"}
+					%td 20
+					%td 25
+					%td 60
+					%td 80
+					%td 0
+					%td 0
+					%td 75
+					%td 86
+					%td 17
+					%td 50
+					%td 100
+					%td 46.64
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_amwell.png"}
+					%td 40
+					%td 75
+					%td 20
+					%td 0
+					%td 25
+					%td 0
+					%td 75
+					%td 71
+					%td 0
+					%td 75
+					%td 100
+					%td 43.73
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_carezone.png"}
+					%td 20
+					%td 50
+					%td 0
+					%td 40
+					%td 0
+					%td 0
+					%td 50
+					%td 14
+					%td 66
+					%td 0
+					%td 30
+					%td 24.55
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_caresync.png"}
+					%td 80
+					%td 100
+					%td 20
+					%td 40
+					%td 50
+					%td 0
+					%td 100
+					%td 29
+					%td 83
+					%td 25
+					%td 100
+					%td 57.00
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_caringinplace.png"}
+					%td 0
+					%td 50
+					%td 20
+					%td 80
+					%td 0
+					%td 0
+					%td 75
+					%td 0
+					%td 100
+					%td 25
+					%td 30
+					%td 34.55
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_bridge.png"}
+					%td 100
+					%td 75
+					%td 40
+					%td 20
+					%td 0
+					%td 0
+					%td 75
+					%td 57
+					%td 0
+					%td 50
+					%td 70
+					%td 44.27
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_inxite.png"}
+					%td 40
+					%td 100
+					%td 25
+					%td 20
+					%td 0
+					%td 0
+					%td 75
+					%td 29
+					%td 0
+					%td 0
+					%td 70
+					%td 32.64
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_medfusionplus.png"}
+					%td 80
+					%td 75
+					%td 40
+					%td 0
+					%td 25
+					%td 0
+					%td 50
+					%td 43
+					%td 0
+					%td 0
+					%td 70
+					%td 34.82
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_intelichart.png"}
+					%td 80
+					%td 50
+					%td 0
+					%td 0
+					%td 25
+					%td 0
+					%td 75
+					%td 29
+					%td 0
+					%td 50
+					%td 80
+					%td 35.36
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_healthvault.png"}
+					%td 80
+					%td 50
+					%td 20
+					%td 60
+					%td 100
+					%td 0
+					%td 100
+					%td 29
+					%td 0
+					%td 50
+					%td 100
+					%td 53.55
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_askmd.png"}
+					%td 0
+					%td 25
+					%td 40
+					%td 0
+					%td 25
+					%td 50
+					%td 75
+					%td 29
+					%td 0
+					%td 0
+					%td 80
+					%td 29.45
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_patientFusion.png"}
+					%td 83
+					%td 75
+					%td 20
+					%td 20
+					%td 25
+					%td 0
+					%td 100
+					%td 29
+					%td 0
+					%td 50
+					%td 70
+					%td 42.91
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_mychart.png"}
+					%td 60
+					%td 50
+					%td 0
+					%td 0
+					%td 50
+					%td 0
+					%td 75
+					%td 29
+					%td 0
+					%td 0
+					%td 70
+					%td 30.36
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_happify.png"}
+					%td 0
+					%td 0
+					%td 60
+					%td 60
+					%td 25
+					%td 0
+					%td 50
+					%td 0
+					%td 0
+					%td 25
+					%td 10
+					%td 20.91
+				%tr
+					%td
+						%img{:src => "../../images/features/careplans/part2/careplan_matrix_healthkit.png"}
+					%td 33
+					%td 25
+					%td 0
+					%td 0
+					%td 75
+					%td 0
+					%td 50
+					%td 0
+					%td 0
+					%td 0
+					%td 100
+					%td 25.73
 		.text
 			%p There is a clear distinction between patient portal services (Bridge, Patient Fusion, Intelichart) focused on data interoperability, health history, and professional care team communication; and the less clinical services (CareZone, Healthtap, Wellframe, Healarium) focused on patient engagement, goal setting, and non-professional care team communication. Wellframe, CareSync, and HealthVault are the few services that attempt to bridge the gap between those two focuses, putting them at the top of ranking as the more successful care plan services.
 			%p However, certain deficits seem to be shared by almost all of these services. While interoperability is a growing focus, there still seems to be trouble in adopting a universal data standard for content and holding services to consistent clinical quality metrics. Many services successfully incorporate data tracking and visualizations, though there is virtually no presence of actual insight from this data. Users are not receiving projected outcomes or recommendatons for behavior change based on collected data. Similarly, while users can access all of their health data, they rarely get to ‘own’ it. This means being presented the raw data for export, sharing, and personal documentation.
@@ -192,16 +448,16 @@
 				%h1 Contributors
 				.contributor.col-md-4
 					.image
-						%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
-					.info
-						%p Web Designer & Developer
-						%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
-				.contributor.col-md-4
-					.image
 						%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
 					.info
 						%p Web Designer & Developer
 						%p.name Yanyang Zhou
+				.contributor.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
+					.info
+						%p Web Designer & Developer
+						%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
 				.contributor.col-md-4
 					.image
 						%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
