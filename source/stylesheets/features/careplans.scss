@@ -1051,7 +1051,21 @@ Feature II: Process Mobile
 		color: rgb(11, 94, 148);
 	}
 }
-
+.part.journey .process.mobile .tail {
+	padding: 0;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #d1d1d1;
+	img {
+		margin: 0 auto;
+	}
+	p {
+		position: absolute;
+		top: 200px;
+		left: calc(50% - 80px);
+		width: 160px;
+		text-align: center;
+	}
+}
 
 .part.journey .process.mobile .section {
 	position: relative;
