@@ -836,38 +836,44 @@ a {
 Feature II: Process
 *****************/
 @media only screen and (min-width: 769px) {
-	.part.two .process.desktop {
+	.part.journey .process.desktop {
 		display: block;
 	}
-	.part.two .process.mobile {
+	.part.journey .process.mobile {
 		display: none;
 	}
 }
 @media only screen and (max-width: 768px) {
-	.part.two .process.desktop {
+	.part.journey .process.desktop {
 		display: none;
 	}
-	.part.two .process.mobile {
+	.part.journey .process.mobile {
 		display: block;
 	}
 }
-.part.two .process.desktop {
+.part.journey  {
+	padding: 0;
+}
+.part.journey .text {
+	padding: 40px 10%;
+}
+.part.journey .process.desktop {
 	background-color: #f5f5f5;
 	position: relative;
 	height: 100%;
 	padding-bottom: 200px;
 }
-#feature-article .two .text p {
+#feature-article .journey .text p {
 	margin-bottom: 10px;
 }
-.part.two .process.desktop img {
+.part.journey .process.desktop img {
 	width: 100%;
 	margin-bottom: 150px;
 }
-.part.two .process.desktop .process-box h6 {
+.part.journey .process.desktop .process-box h6 {
 	color: rgb(11, 94, 148);
 }
-.part.two .process.desktop .process-box {
+.part.journey .process.desktop .process-box {
 	position: absolute;
 	width: 45%;
 	background-color: #ffffff;
@@ -875,74 +881,102 @@ Feature II: Process
 	border-radius: 10px;
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 	z-index: 3;
-	//max-width: 500px;
+	max-width: 500px;
 }
-.part.two .process.desktop .process-box1 {
+.part.journey .process.desktop .process-box1 {
 	left: 10%;
 	top: 3%;
 }
-.part.two .process.desktop .process-box2 {
+.part.journey .process.desktop .process-box2 {
 	right: 10%;
 	top: 18%;
 }
-.part.two .process.desktop .process-box3 {
+.part.journey .process.desktop .process-box3 {
 	left: 10%;
 	top: 33%;
 }
-.part.two .process.desktop .process-box4 {
+.part.journey .process.desktop .process-box4 {
 	right: 10%;
 	top: 48%;
 }
-.part.two .process.desktop .process-box5 {
+.part.journey .process.desktop .process-box5 {
 	left: 10%;
 	top: 63%;
 }
-.part.two .process.desktop .process-box6 {
+.part.journey .process.desktop .process-box6 {
 	right: 10%;
 	top: 78%;
 }
-.part.two .process.desktop .process-box7 {
+.part.journey .process.desktop .process-box7 {
 	left: 10%;
 	bottom: 1%;
 }
-.part.two .process.desktop .connect-box {
-	width: 50%;
+.part.journey .process.desktop .tail {
+	width: 400px;
+	position: absolute;
+	right: 10%;
+	bottom: 1%;
+	margin: 0;
+
+	img {
+		margin: 0;
+	}
+	p {
+		position: absolute;
+		top: 70px;
+		right: 50px;
+		width: 160px;
+		text-align: center;
+	}
+}
+.part.journey .process.desktop .tail-connect {
+	content: ' ';
+	width: calc(80% - 300px);
+	min-width: 0;
+	height: 11px;
+	background-color: #a4c5de;
+	position: absolute;
+	left: 10%;
+	bottom: calc(1% + 120px);
+}
+.part.journey .process.desktop .connect-box {
+	width: 70%;
 	height: calc( 15% + 50px);
 	position: absolute;
 	border: 15px solid rgba(11, 94, 148,.3);
 	border-radius: 25px;
 }
-.part.two .process.desktop .connect-box1 {
+.part.journey .process.desktop .connect-box1 {
 	top: calc( 3% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process.desktop .connect-box2 {
+.part.journey .process.desktop .connect-box2 {
 	top: calc( 18% + 100px );
 	border-right: none;
 	border-bottom: none;
 	left: 15%;
 }
-.part.two .process.desktop .connect-box3 {
+.part.journey .process.desktop .connect-box3 {
 	top: calc( 33% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process.desktop .connect-box4 {
+.part.journey .process.desktop .connect-box4 {
 	top: calc( 48% + 100px );
 	border-right: none;
 	border-bottom: none;
 	left: 15%;
 }
-.part.two .process.desktop .connect-box5 {
+.part.journey .process.desktop .connect-box5 {
 	top: calc( 63% + 100px );
 	border-left: none;
 	border-bottom: none;
 	right: 15%;
 }
-.part.two .process.desktop .connect-box6 {
+.part.journey .process.desktop .connect-box6 {
 	top: calc( 78% + 100px );
 	border-right: none;
 	border-bottom: none;
@@ -950,7 +984,7 @@ Feature II: Process
 	left: 15%;
 	height: calc(21% - 100px);
 }
-.part.two .process.desktop .circle {
+.part.journey .process.desktop .circle {
 	position: absolute;
 	width: 50px;
 	height: 50px;
@@ -961,41 +995,41 @@ Feature II: Process
 	font-size: 2rem;
 	z-index: 5;
 }
-.part.two .process.desktop .circle1 {
+.part.journey .process.desktop .circle1 {
 	top: 80px;
 	right: -25px;
 }
-.part.two .process.desktop .circle2 {
+.part.journey .process.desktop .circle2 {
 	top: calc(18% - 25px);
 	right: calc(15% - 18px);
 }
-.part.two .process.desktop .circle3 {
+.part.journey .process.desktop .circle3 {
 	top: calc(33% - 25px);
 	left: calc(15% - 18px);
 }
-.part.two .process.desktop .circle4 {
+.part.journey .process.desktop .circle4 {
 	top: calc(48% - 25px);
 	right: calc(15% - 18px);
 }
-.part.two .process.desktop .circle5 {
+.part.journey .process.desktop .circle5 {
 	top: calc(63% - 25px);
 	left: calc(15% - 18px);
 }
-.part.two .process.desktop .circle6 {
+.part.journey .process.desktop .circle6 {
 	top: calc(78% - 25px);
 	right: calc(15% - 18px);
 }
-.part.two .process.desktop .circle7 {
+.part.journey .process.desktop .circle7 {
 	bottom: calc(1%);
 	left: calc(15% - 18px);
 }
 /************
 Feature II: Process Mobile
 **************/
-.part.two .process.mobile {
+.part.journey .process.mobile {
 	margin-top: 50px;
 }
-.part.two .process.mobile .circle {
+.part.journey .process.mobile .circle {
 	width: 50px;
 	height: 50px;
 	background-color: rgb(11, 94, 148);
@@ -1007,7 +1041,7 @@ Feature II: Process Mobile
 	top: -25px;
 	left: calc(50% - 25px);
 }
-.part.two .process.mobile .process-box {
+.part.journey .process.mobile .process-box {
 	border-top: 1px solid #d1d1d1;
 	padding: 50px 10% 80px 10%;
 	margin-top: -25px;
@@ -1019,14 +1053,14 @@ Feature II: Process Mobile
 }
 
 
-.part.two .process.mobile .section {
+.part.journey .process.mobile .section {
 	position: relative;
 }
-.part.two .process.mobile .process-content {
+.part.journey .process.mobile .process-content {
 	padding: 50px 10%;
 	border-top: 1px solid #898989;
 }
-.part.two .process.mobile .circle {
+.part.journey .process.mobile .circle {
 	width: 50px;
 	height: 50px;
 	background-color: rgb(11, 94, 148);
@@ -1041,6 +1075,7 @@ Feature II: Process Mobile
 	left: calc( 50% - 25px);
 }
 
+
 .part.one > p {
 	margin: 0;
 	a {
@@ -1048,6 +1083,7 @@ Feature II: Process Mobile
 		text-decoration: underline;
 	}
 }
+
 
 
 .social-buttons {
@@ -1166,8 +1202,8 @@ Feature II: Process Mobile
     	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     	background-color: #f5f5f5;
 		padding: 20px;
-		margin-left: 0;
-		width: calc(100% - 2.1rem);
+		margin: 0;
+		width: 100%;
 
 		img {
 			border: 1px solid #898989;

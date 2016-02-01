@@ -36,21 +36,21 @@
 	%header.nav-wrapper.stuck
 		%nav.main-nav
 			%a.one{:href => "javascript:void(0)"} Process
-			%a.two{:href => "javascript:void(0)"} Barriers
-			%a.three{:href => "javascript:void(0)"} Product Landscape
+			%a.two{:href => "javascript:void(0)"} Barriers 
+			%a.three{:href => "javascript:void(0)"} Product
 			%a.four{:href => "javascript:void(0)"} Next Steps
 	%header.nav-wrapper.scroll-nav
 		%nav.main-nav
 			%a.one{:href => "javascript:void(0)"} Process
 			%a.two{:href => "javascript:void(0)"} Barriers
-			%a.three{:href => "javascript:void(0)"} Product Landscape
+			%a.three{:href => "javascript:void(0)"} Product
 			%a.four{:href => "javascript:void(0)"} Next Steps
 	.part.one
 		%p This piece is a continuation of the Care Plan series. While <a href="/features/careplans/">Part I</a> focused on what care plans are and how they came about, this article will explore how care plans are currently being used in the health space.
-	.part.two
+	.part.journey
 		.text
 			%h1 The Process of a Care Plan
-			%p There is not yet any clinically recognized universal standard for care plan creation and implementation. But using elements derived from CMS’s Meaningful Use Stage 2 requirements, the Coordinated Care Plan documentation from the Ontario Medical Association, the traditional nursing care plan structure, and the Care Plan Glossary from the ONC’s Standards and Interoperability Framework, we have created a generalized care plan journey map below.
+			%p There is not yet any clinically recognized universal standard for care plan creation and implementation. But using elements derived from CMS’s Meaningful Use Stage 2 requirements,<span class='superscript'>1,2</span> the Coordinated Care Plan documentation from the Ontario Medical Association,<span class='superscript'>3</span> the traditional nursing care plan structure,<span class='superscript'>4</span> and the Care Plan Glossary from the ONC’s Standards and Interoperability Framework,<span class='superscript'>5</span> we have created a generalized care plan journey map below.
 			%p The journey begins with a patient visiting his primary care doctor.
 		.process.desktop
 			%img{:src => "../../images/features/careplans/part2/careplan_journey_health_history_web.png"}
@@ -93,6 +93,10 @@
 			%div.process-box.process-box7
 				%h6 Live the Care Plan
 				%p The most important part of the care plan process is how the patient implements it. They must translate guidance from their brief interactions with clinicians into sustained lifestyle behaviors to improve their own health. Self care makes up over 99% of healthcare, and it is only successful with a good care plan.
+			%div.tail
+				%img{:src => "../../images/features/careplans/part2/careplan_journey_arrow.png"}
+				%p The process is a cycle. Patients live the care plan until the next medical encounter.
+			%div.tail-connect
 			%div.circle.circle7 7
 		.process.mobile
 			%div.process-box
@@ -130,7 +134,7 @@
 				%h6 Live the Care Plan
 				%img{:src => "../../images/features/careplans/part2/careplan_journey_live_care_plan_mobile.png"}
 				%p The most important part of the care plan process is how the patient implements it. They must translate guidance from their brief interactions with clinicians into sustained lifestyle behaviors to improve their own health. Self care makes up over 99% of healthcare, and it is only successful with a good care plan.
-	.part.three
+	.part.two
 		.text
 			%h1 The Care Plan Product Landscape
 			%p As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Now, physicians, certified nurse specialists, nurse practitioners, and physician assistants are incentivized to perform 20 minutes of non-face-to-face care coordination services for every Medicare-qualifying patient each month. This can include tasks such as recording and coordinating patient health information (even from outside their own practice), managing care transitions (such as discharge from a hospitalization), coordinating clinical home or community services, systematic assessments of patient needs, and finally, the creation and review of a perpetually accessible comprehensive care plan. Now that Medicare has begun this transition, other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans. As a result, many care planning services have emerged to address the software needs of care management. 
@@ -140,8 +144,8 @@
 			%p There is a clear distinction between patient portal services (Bridge, Patient Fusion, Intelichart) focused on data interoperability, health history, and professional care team communication; and the less clinical services (CareZone, Healthtap, Wellframe, Healarium) focused on patient engagement, goal setting, and non-professional care team communication. Wellframe, CareSync, and HealthVault are the few services that attempt to bridge the gap between those two focuses, putting them at the top of ranking as the more successful care plan services.
 			%p However, certain deficits seem to be shared by almost all of these services.  While interoperability is a growing focus, there still seems to be trouble in adopting a universal data standard for content and holding services to consistent clinical quality metrics.  Many services successfully incorporate data tracking and visualizations, though there is virtually no presence of actual insight from this data. Users are not receiving projected outcomes or recommendatons for behavior change based on collected data. Similarly, while users can access all of their health data, they rarely get to ‘own’ it. This means being presented the raw data for export, sharing, and personal documentation.
 			%p These limitations, and others collected through secondary literature research are explored further below.
+	.part.three
 	.part.four
-	.part.five
 		.text
 			%h1 The Next Steps for Care Plans
 			%p Care plans have come a long way since their conception. We have created a somewhat systematic approach to a patient health guide, yet have not standardized it for consistant communication and delivery of care. We have established appropriate intervention steps for a variety of diagnosed conditions, yet have not mastered the format and delivery of these steps so that they are effective and engaging to patients. We have figured out collect massive amounts of crucial patient health data, yet we have not offered to the patient to carry with them and share throughout their diverse medical encounters. We are only on the cusp of health technology wave, and care plans have a bright future ahead of them. Want a glimpse? Check out our next feature.
@@ -201,8 +205,130 @@
 					.info
 						%p Involution Studios, MIT
 						%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
+				.contributor.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/jeffbelden.jpg'}
+					.info
+						%p University of Missouri | toomanyclicks.com 
+						%p.name ​Jeff Belden MD<br><small><a href="https://twitter.com/jeffbelden" target="_blank">@jeffbelden</a></small>
+				.contributor.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+					.info
+						%p University of Michigan
+						%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
+				.contributor.col-md-4
+					.image
+						%img{:src =>'../../images/features/careplans/contrib/janesarasohnkahn.jpg'}
+					.info
+						%p THINK-Health | Health Populi blog | Huffington Post
+						%p.name ​​Jane Sarasohn-Kahn, MA, MHSA<br><small><a href="https://twitter.com/healthythinker">@healthythinker</a></small>
 			.reference
 				%h1 References
 				%ul
+					%li#reference1
+						%span 1.
+						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf"}“Stage 2 Meaningful Use Core Measures”.
+						%span (2015, August). Retrieved from https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf
+					%li#reference2
+						%span 2. United States, Department of Health and Human Services.
+						%a{:href => "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf"}“Chronic Care Management Services”.
+						%span S(2015, May). Centers for Medicare and Medicaid Services. Retrieved from https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf
+					%li#reference3
+						%span 3.
+						%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf"}“Key Elements to Include in a Coordinated Care Plan”.
+						%span OMA. (2014, June). Retrieved November/December, 2015, from https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
+					%li#reference4
+						%span 4.
+						%a{:href => "http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx"}“NHS Guide to long-term conditions and self care: What is a care plan?”
+						%span (n.d.). Retrieved December 21, 2015, from http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx
+					%li#reference5
+						%span 5.
+						%a{:href => "http://wiki.siframework.org/LCC Longitudinal Care Plan (LCP) SWG "}General Information.
+						%span (n.d.). Retrieved December 25, 2015, from http://wiki.siframework.org/LCC Longitudinal Care Plan (LCP) SWG
+					%li#reference6
+						%span 6.
+						%a{:href => "https://www.ipc.on.ca/images/Resources/circle-of-care.pdf"}Circle of Care.
+						%span (2015, August). Retrieved December 25, 2015, from https://www.ipc.on.ca/images/Resources/circle-of-care.pdf
+					%li#reference7
+						%span 7. Palmieri, J. J., & Stern, T. A. (2009). Lies in the Doctor-Patient Relationship. Prim. Care Companion J. Clin. Psychiatry The Primary Care Companion to The Journal of Clinical Psychiatry,11(4), 163-168
+					%li#reference8
+						%span 8.
+						%a{:href => "https://med.stanford.edu/news/all-news/2014/12/better-communication-between-caregivers-reduces-medical-errors.html"}Better communication between caregivers reduces medical errors, study finds.
+						%span (n.d.). Retrieved December 20, 2015, from https://med.stanford.edu/news/all-news/2014/12/better-communication-between-caregivers-reduces-medical-errors.html
+					%li#reference9
+						%span 9.
+						%a{:href => "https://www.hl7.org/fhir/careplan.html"}Resource Careplan.
+						%span (n.d.). Retrieved December 20, 2015, from https://www.hl7.org/fhir/careplan.html
+					%li#reference10
+						%span 10.
+						%a{:href => "http://www.brainline.org/content/2009/06/how-to-deal-with-conflicting-advice-from-healthcare-professionals.html"}How to Deal with Conflicting Advice from Healthcare Professionals.
+						%span (n.d.). Retrieved January 25, 2016, from http://www.brainline.org/content/2009/06/how-to-deal-with-conflicting-advice-from-healthcare-professionals.html
+					%li#reference11
+						%span 11. Garson, A., Green, D. M., Rodriguez, L., Beech, R., & Nye, C. (2012). A New Corps Of Trained Grand-Aides Has The Potential To Extend Reach Of Primary Care Workforce And Save Money. Health Affairs, 31(5), 1016-1021.
+					%li#reference12
+						%span 12.
+						%a{:href => "http://www.wellframe.com/"}Wellframe.
+						%span (n.d.). Retrieved December 19, 2015, from http://www.wellframe.com/
+					%li#reference13
+						%span 13.
+						%a{:href => "http://www.healarium.com/"}Healarium.
+						%span  (n.d.). Retrieved December 15, 2015, from http://www.healarium.com/
+					%li#reference14
+						%span 14.
+						%a{:href => "https://www.healthtap.com/"}HealthTap.
+						%span (n.d.). Retrieved December 17, 2015, from https://www.healthtap.com/
+					%li#reference15
+						%span 15.
+						%a{:href => "https://amwell.com/"}Amwell.
+						%span (n.d.). Retrieved December 21, 2015, from https://amwell.com/
+					%li#reference16
+						%span 16.
+						%a{:href => "https://carezone.com/home"}CareZone | Easily organize health information in one place.
+						%span (n.d.). Retrieved December 22, 2015, from https://carezone.com/home
+					%li#reference17
+						%span 17.
+						%a{:href => "http://www.caresync.com/"}Caresync.
+						%span (n.d.). Retrieved December 20, 2015, from http://www.caresync.com/
+					%li#reference18
+						%span 18.
+						%a{:href => "http://caringinplace.com/website/index.html"}Caring in Place.
+						%span  (n.d.). Retrieved December 20, 2015, from http://caringinplace.com/website/index.html
+					%li#reference19
+						%span 19.
+						%a{:href => "http://www.bridgepatientportal.com/"}Patient Portal Software for Hospitals and Physicians :: Bridge Patient Portal.
+						%span (n.d.). Retrieved December 19, 2015, from http://www.bridgepatientportal.com/
+					%li#reference20
+						%span 20.
+						%a{:href => "https://www.inxitehealth.com/"}Inxite Health Systems.
+						%span (n.d.). Retrieved December 20, 2015, from https://www.inxitehealth.com/
+					%li#reference21
+						%span 21.
+						%a{:href => "http://www.journeyforward.org/planning-tools/my-care-plan"}My Care Plan.
+						%span (n.d.). Retrieved December 17, 2015, from http://www.journeyforward.org/planning-tools/my-care-plan
+					%li#reference22
+						%span 22.
+						%a{:href => "http://www.intelichart.com/"}Online Patient Portal Software - InteliChart.
+						%span (n.d.). Retrieved December 22, 2015, from http://www.intelichart.com/
+					%li#reference23
+						%span 23.
+						%a{:href => "https://www.healthvault.com/us/en"}Microsoft HealthVault.
+						%span (n.d.). Retrieved December 20, 2015, from https://www.healthvault.com/us/en
+					%li#reference24
+						%span 24.
+						%a{:href => "https://www.patientfusion.com/"}Patient Fusion.
+						%span  (n.d.). Retrieved December 18, 2015, from https://www.patientfusion.com/
+					%li#reference25
+						%span 25.
+						%a{:href => "https://www.epic.com/software-phr.php"}Epic: Mobile Applications and Portals.
+						%span  (n.d.). Retrieved December 20, 2015, from https://www.epic.com/software-phr.php
+					%li#reference26
+						%span 26.
+						%a{:href => "https://www.sharecare.com/askmd/get-started"}AskMD.
+						%span  (n.d.). Retrieved December 28, 2015, from https://www.sharecare.com/askmd/get-started
+					%li#reference27
+						%span 27.
+						%a{:href => "http://www.medfusion.com/solutions/medfusion-plus/"}Medfusion Plus - Medfusion.
+						%span (n.d.). Retrieved December 21, 2015, from http://www.medfusion.com/solutions/medfusion-plus/
 
 / - # END Credits. Copy to this %%%%%line.
