@@ -6,7 +6,7 @@
 	= stylesheet_link_tag "feature-elements"
 	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
-	= javascript_include_tag "vendor/jquery.js"
+	= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
 	= javascript_include_tag "features/careplans/careplans-scroll.js"
 	= javascript_include_tag "features/careplans/careplanII.js"
@@ -142,19 +142,19 @@
 			%h1 The Care Plan Product Landscape
 			%p As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Now, physicians, certified nurse specialists, nurse practitioners, and physician assistants are incentivized to perform 20 minutes of non-face-to-face care coordination services for every Medicare-qualifying patient each month. This can include tasks such as recording and coordinating patient health information (even from outside their own practice), managing care transitions (such as discharge from a hospitalization), coordinating clinical home or community services, systematic assessments of patient needs, and finally, the creation and review of a perpetually accessible comprehensive care plan. Now that Medicare has begun this transition, other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans. As a result, many care planning services have emerged to address the software needs of care management.
 			%p This matrix aims to explore the effectiveness of current care plan services based on defined criteria. Each service was scored based on the percentage of criteria met in each of the eleven topic areas. A 0 means that none of the criteria points were fulfilled. Click on each criteria at the top of the matrix to break down what subcriteria were used for scoring. The final score, out of 100, is the average of the service’s scores in each criteria area.
-		.product-matrix
+		.product-matrix 
 			%table.table.table-bordered.table-striped
 				%tr
 					%td
 						%img{:src => "../../images/features/careplans/part2/careplan_matrix_wellframe.png"}
-					%td 50 
-					%td 50 
-					%td 80 
-					%td 60 
-					%td 25 
-					%td 50  
-					%td 75 
-					%td 43 
+					%td <span tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" title="Interoperability" data-content='+ "Clinicians communicate with their patients through a HIPAA-compliant channel from Wellframe’s web-based Clinician Dashboard"'>50</span> 
+					%td <span tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" title="History" data-content='+ "Tracks amount of tasks and instructions completed."'>50</span> 
+					%td <span tabindex="0" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" title="Education" data-html="true" data-content='+ "Customized to individual populations based on gender, age, cultural and socio-economic factors" <br> + Updated relevant health news tailored towards patient. <br> + Customized content for patient, sent from care provider professional. <br> + Checklist of tasks. <br> + Short term goals available, such as "walk for 5 minutes".'>80</span>  
+					%td <span tabindex="0" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" title="Goal Setting" data-html="true" data-content='+ "a care manager can make adjustments to the care plan in order to maximize patient adherence" using biometric data, which is automatically reported to care managers. <br> + Daily health checklists which dynamically adjust based on patient adherence. <br> - Lacking information about how patients can more directly engage with their own goals. Lots of emphasis on professional care providers ability to access and change patient plans.'>60</span>   
+					%td <span>25</span> 
+					%td <span tabindex="0" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" title="Dynamic Intervention" data-html="true" data-content='• "providing clinicians with real-time alerts, allowing them to prioritize patient interventions." <br> • "Clinicians receive real time alerts, allowing them to prioritize interventions."'>50</span>   
+					%td <span tabindex="0" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" title="Access" data-html="true" data-content='+ iOS & android app <br> + Patients can view care plan, tasks, reminders, and health data, etc. <br> + Health information is updated by care manager and/or patient <br> - no mention of exporting health record'>75</span>
+					%td <span tabindex="0" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" title="Professional Care team communication" data-html="true" data-content='+ "Clinicians communicate with their patients through a HIPAA-compliant channel from Wellframe’s web-based Clinician Dashboard"'>43</span>
 					%td 0   
 					%td 100
 					%td 50 
@@ -426,7 +426,6 @@
 					%img.col-md-2{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.png"}
 	.credit-wrapper
 		.row
-		%script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 		%script(src="../../../javascripts/features/careplans/case_studies.js")
 			- # BEGIN Credits: Copy from this line.
 		#credits

@@ -1,6 +1,8 @@
 // careplans II
 $(document).ready(function(){
 	setCircle7Position();
+	
+	$('[data-toggle="popover"]').popover(); 
 });
 
 $(window).resize(function(event) {
