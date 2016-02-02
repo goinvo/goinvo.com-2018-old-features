@@ -213,10 +213,17 @@ a {
 		}
 	}
 	@media only screen and (max-width: 768px) {
-		.title2 {
+		 .title2 {
 			width: 100%;
-			top: 2%;
+			top: 150px;
 			padding: 0 20px;
+			.sub-title {
+				font-weight: normal;
+				font-size: 1rem;
+			}
+			.text-right {
+				font-size: 0.7rem
+			}
 		}
 	}
 	.bg-cover {
@@ -1124,11 +1131,24 @@ Feature II: Product Landscape
 #feature-article .part.two .text p {
 	margin-bottom: 10px;
 }
+.part.two.desktop .product-matrix .table-bordered > tbody > tr > td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+
+	span {
+		padding: 6px;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+}
 .part.two.desktop .product-matrix .table-bordered {
 	border: none;
 }
 .part.two.desktop .product-matrix .table-bordered > tbody > tr > td:first-child {
 	background-color: #ffffff;
+	padding: 6px;
 }
 .part.two.desktop .product-matrix .table-bordered > tbody > tr > td:first-child {
 	width: 120px;
@@ -1143,10 +1163,7 @@ Feature II: Product Landscape
 	font-weight: normal;
 	background-color: #f9f9f9;
 }
-.part.two.desktop .product-matrix .table-bordered > tbody > tr > td {
-	text-align: center;
-	vertical-align: middle;
-}
+
 
 
 
