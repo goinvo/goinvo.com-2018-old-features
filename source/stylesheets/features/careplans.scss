@@ -1478,11 +1478,22 @@ Feature II: Product Landscape
 	.author .image {
 		width: 190px;
 	}
-	.author .info {
-		width: calc( 100% - 230px);
+	
+	@media only screen and (min-width: 769px) {
+		.author .info {
+			width: calc( 100% - 230px);
+		}
+		.contributor .info {
+			width: calc( 100% - 140px);
+		}
 	}
-	.contributor .info {
-		width: calc( 100% - 140px);
+	@media only screen and (max-width: 768px) {
+		.author .info {
+			width: 100%;
+		}
+		.contributor .info {
+			width: 100%;
+		}
 	}
 	.contributor p, .author p {
 		line-height: 1.5rem;
