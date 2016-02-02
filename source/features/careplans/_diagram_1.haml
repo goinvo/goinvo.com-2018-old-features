@@ -56,9 +56,7 @@
     - row_id = component[0].strip.delete(' ')
     %div.content-table{:id=> "#{row_id}"}
       %p.header=component[0].html_safe
-      - data.features.careplans.globals[0]["content headers"].each do |category|
-        %p.category=category.html_safe
-        - component[1].each do |content|
-          -selector = "."+component[0]+"."+content[0]
-          %p.content{:id=> "#{content[0]}"}
-            =content[1].html_safe
+      - component[1].each do |content|
+        -selector = "."+component[0]+"."+content[0]
+        %p.content{:id=> "#{content[0]}"}
+          =content[1].html_safe

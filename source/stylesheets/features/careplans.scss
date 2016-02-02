@@ -1138,8 +1138,10 @@ Feature II: Product Landscape
 		margin: 0 auto;
 	}
 }
-.part.two.desktop .product-matrix .table-bordered > tbody > tr > td:last-child {
+#feature-article .part.two.desktop .product-matrix .table-bordered > tbody > tr > td:last-child {
 	width: 120px;
+	font-weight: normal;
+	background-color: #f9f9f9;
 }
 .part.two.desktop .product-matrix .table-bordered > tbody > tr > td {
 	text-align: center;

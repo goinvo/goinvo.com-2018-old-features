@@ -51,6 +51,10 @@ $(document).ready(function(){
 		$(".profile-pane:nth-child("+id+")").addClass('active');
 	});
 
+	$("p.category").remove();
+	$(".careplan-diagram.mobile #goals").before('<p class="category">Goals</p>')
+	$(".careplan-diagram.mobile #instruction").before('<p class="category">Instructions & Interventions</p>')
+	$(".careplan-diagram.mobile #review").before('<p class="category">Review</p>')
 
 	// big title scroll to change
 	var lastScrollTop = 0;
