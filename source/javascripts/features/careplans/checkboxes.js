@@ -51,6 +51,10 @@ $(document).ready(function(){
 		$(".profile-pane:nth-child("+id+")").addClass('active');
 	});
 
+	$("p.category").remove();
+	$(".careplan-diagram.mobile #goals").before('<p class="category">Goals</p>')
+	$(".careplan-diagram.mobile #instruction").before('<p class="category">Instructions & Interventions</p>')
+	$(".careplan-diagram.mobile #review").before('<p class="category">Review</p>')
 
 	// big title scroll to change
 	var lastScrollTop = 0;
@@ -61,8 +65,10 @@ $(document).ready(function(){
 		    	if($(".title1").is(":visible")) {
 		    		// downscroll code
 			       disableScroll();
-			       $(".title1").hide();
-			       $(".title2").show();
+			       $(".title1").fadeOut('200', function() {
+			       	$(".title2").show();
+			       });
+			       
 			       setTimeout(function(){
 				    //do something special
 				    enableScroll();
@@ -77,6 +83,10 @@ $(document).ready(function(){
 		      }
 		    }
 		    lastScrollTop = st;
+		}
+		else {
+			$(".title2").hide();
+		    $(".title1").show();
 		}
 	});
 
