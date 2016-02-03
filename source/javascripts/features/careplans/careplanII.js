@@ -3,6 +3,12 @@ $(document).ready(function(){
 	setCircle7Position();
 	
 	$('[data-toggle="popover"]').popover(); 
+
+	$(".part.two .mobile .carousel.mobile .carousel-inner .item .score").each(function() {
+		$(this).css({
+			width: $(this).attr("data")+"%"
+		});
+	});
 });
 
 $(window).resize(function(event) {
