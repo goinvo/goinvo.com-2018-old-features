@@ -142,8 +142,22 @@
 			%h1 The Care Plan Product Landscape
 			%p As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Now, physicians, certified nurse specialists, nurse practitioners, and physician assistants are incentivized to perform 20 minutes of non-face-to-face care coordination services for every Medicare-qualifying patient each month. This can include tasks such as recording and coordinating patient health information (even from outside their own practice), managing care transitions (such as discharge from a hospitalization), coordinating clinical home or community services, systematic assessments of patient needs, and finally, the creation and review of a perpetually accessible comprehensive care plan. Now that Medicare has begun this transition, other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans. As a result, many care planning services have emerged to address the software needs of care management.
 			%p This matrix aims to explore the effectiveness of current care plan services based on defined criteria. Each service was scored based on the percentage of criteria met in each of the eleven topic areas. A 0 means that none of the criteria points were fulfilled. Click on each criteria at the top of the matrix to break down what subcriteria were used for scoring. The final score, out of 100, is the average of the service’s scores in each criteria area.
-		.product-matrix 
+		.product-matrix
 			%table.table.table-bordered.table-striped
+				%tr{:style => "background:#ffffff"}
+					%td
+					%td Interoperability
+					%td Patient Summary
+					%td Education
+					%td Goal Setting
+					%td Vitals Tracking
+					%td Dynamic Intervention
+					%td Data Ownership
+					%td Prof. Team Comm.
+					%td Non-prof. Team Comm.
+					%td Clinical Validity
+					%td Content Breadth
+					%td Average
 				%tr
 					%td
 						%img{:src => "../../images/features/careplans/part2/careplan_matrix_wellframe.png"}
@@ -403,6 +417,25 @@
 			%p There is a clear distinction between patient portal services (Bridge, Patient Fusion, Intelichart) focused on data interoperability, health history, and professional care team communication; and the less clinical services (CareZone, Healthtap, Wellframe, Healarium) focused on patient engagement, goal setting, and non-professional care team communication. Wellframe, CareSync, and HealthVault are the few services that attempt to bridge the gap between those two focuses, putting them at the top of ranking as the more successful care plan services.
 			%p However, certain deficits seem to be shared by almost all of these services. While interoperability is a growing focus, there still seems to be trouble in adopting a universal data standard for content and holding services to consistent clinical quality metrics. Many services successfully incorporate data tracking and visualizations, though there is virtually no presence of actual insight from this data. Users are not receiving projected outcomes or recommendatons for behavior change based on collected data. Similarly, while users can access all of their health data, they rarely get to ‘own’ it. This means being presented the raw data for export, sharing, and personal documentation.
 			%p These limitations, and others collected through secondary literature research are explored further below.
+	.part.two.mobile
+		.text
+			%h1 The Care Plan Product Landscape
+			%p This matrix aims to explore the effectiveness of current care plan services based on defined criteria. Each service was scored based on the percentage of criteria met in each of the eleven topic areas. A 0 means that none of the criteria points were fulfilled. Click on each criteria at the top of the matrix to break down what subcriteria were used for scoring. The final score, out of 100, is the average of the service’s scores in each criteria area.
+		.content-carousel
+			.carousel.slide.mobile#carousel-mobile
+				.carousel-inner{:role=>"listbox"}
+					.item.active
+						.content
+							%h6 Interogerability
+							%p Criteria areas included: interoperability, patient summary, education, goal setting, vitals tracking, dynamic intervention, data ownership, profession and non-professional care team communication, clinical validity, and content breadth. The average score of all areas is show below. Scroll left or right to view individual criteria scores.
+					.item
+						.content
+							%h6 Interogerability
+							%p Criteria areas included: interoperability, patient summary, education, goal setting, vitals tracking, dynamic intervention, data ownership, profession and non-professional care team communication, clinical validity, and content breadth. The average score of all areas is show below. Scroll left or right to view individual criteria scores.
+					%a.left.control{:href=>"#carousel-mobile", :role=>"button", :data=>{:slide=>"prev"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+					%a.right.control{:href=>"#carousel-mobile", :role=>"button", :data=>{:slide=>"next"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 	.part.three
 	.part.four
 		.text

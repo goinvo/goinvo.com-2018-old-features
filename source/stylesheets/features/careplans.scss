@@ -1149,6 +1149,7 @@ Feature II: Product Landscape
 }
 .part.two.desktop .product-matrix .table-bordered {
 	border: none;
+	margin-top: 80px;
 }
 .part.two.desktop .product-matrix .table-bordered > tbody > tr > td:first-child {
 	background-color: #ffffff;
@@ -1166,6 +1167,43 @@ Feature II: Product Landscape
 	width: 120px;
 	font-weight: normal;
 	background-color: #f9f9f9;
+}
+.part.two.desktop .product-matrix .table-bordered .popover {
+	z-index: 50;
+}
+#feature-article .part.two.desktop .product-matrix .table-bordered > tbody > tr:first-child > td {
+	border: none;
+	background-color: #ffffff;
+	font-weight: normal;
+
+	&:not(:last-child) {
+		transform-origin: center center;
+		transform: translate(10px,-60px) rotate(-60deg);
+		color: rgb(11, 94, 148);
+		line-height: 1rem;
+		background: transparent;
+	}
+	&:last-child {
+		transform: translate(0px,-30px)
+	}
+}
+/***************************************
+Feature II: Product Landscape mobile
+*******************************************/
+.part.two.mobile .carousel.mobile {
+	margin-top: 0;
+}
+.part.two.mobile .carousel.mobile .control img {
+	margin-top: 10px;
+}
+.part.two.mobile .carousel.mobile .control.left {
+	left: 10px;
+	img {
+		transform: scaleX(-1);
+	}
+}
+.part.two.mobile .carousel.mobile .control.right {
+	right: 10px;
 }
 
 
