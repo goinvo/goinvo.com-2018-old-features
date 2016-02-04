@@ -1219,6 +1219,18 @@ Feature II: Product Landscape mobile
 	padding: 30px 10%;
 	background-color: #f5f5f5;
 }
+.part.two .mobile .carousel.mobile .carousel-inner .item .table-tick {
+	background-color: #f5f5f5;
+	span {
+		display: inline-block;
+		width: calc(50% - 60px);
+		text-align: right;
+		color: #898989;
+	}
+	span:first-child {
+		margin-left: 114px;
+	}
+}
 .part.two .mobile .carousel.mobile .carousel-inner .item .table-bordered > tbody > tr > td {
 	padding-left: 0;
 	padding-right: 0;
