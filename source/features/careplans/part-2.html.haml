@@ -413,7 +413,7 @@
 					.carousel-inner{:role=>"listbox"}
 						.item.active
 							.content
-								%h6 Interogerability
+								%h6 interoperability
 								%ul
 									%li Complies with meaningful use requirements.
 									%li Meets CDA and/or FHIR data standards to integrate with EHRs.
@@ -2503,6 +2503,45 @@
 	.part.three
 		.text
 			%h1 The Barriers to Care Planning
+		.carousel.slide#carousel-barriers
+			%div.carousel-bg
+				%ol.carousel-indicators
+					%li.active.one{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"0"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+					%li.two{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"1"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+					%li.three{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"2"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+					%li.four{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"3"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+					%li.five{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"4"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+					%li.six{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"5"}}}
+						%img{:src => "../../images/features/careplans/part2/circle_desktop.png"}
+				%img{:src => "../../images/features/careplans/part2/barriers_to_care_planning_web_and_mobile.jpg"}
+			.carousel-inner{:role=>"listbox"}
+				.item.active
+					%h6 Episodic Review
+					%p Implementation of care plans are not always straightforward, and information must be updated in a fluid manner in order for it to be an effective plan. However, difficulties can arise when there is a lack of ability within a patient’s circle of care providers to access and update care plans. One factor can include difficulty in using the tool or application to update care plans.<span class="superscript">3</span>
+				.item
+					%h6 Inaccurate Information
+					%p The Change Foundation in Ontario found that up to a ⅓ of providers regularly relied on the caregiver and client to pass along information that was relevant to building the care plan.<span class="superscript">3</span> This can be an issue when human error, both on the client and care provider side, may cause inaccurate recording of an individual’s information. Patients at times may give inaccurate information regarding medications currently being taken. Care providers also oftentimes misjudge a patient’s capacity to manage themselves within a home environment.<span class="superscript">7</span>
+				.item
+					%h6 Creation in isolation
+					%p There is no current standardization of care plan content across health and social care organizations, as each functions under their own methods for care plan creation.<span class="superscript">9</span> This creates a lack of consistency across the medical community, and increases the potential for medical error when organizations must interface on behalf of a patient. Not to mention patients receiving different medical advice and instruction for the same illnesses across organizations will likely struggle with understanding and consequently, compliance.<span class="superscript">10</span>
+				.item
+					%h6 Communication issues
+					%p Patients and their medical providers suffer from poor information transfer, due to issues such as lack of time, lack of a standardized communication tool, the need to incorporate care planning and communication into the workflow, lack of compatible information technology across organizations, and privacy concerns of caregivers and patients. As healthcare IT systems are still in a relatively nascent stage and must adhere to a variety of patient confidentiality regulations, effective communication is still a crucial limitation.<span class="superscript">8</span>
+				.item
+					%h6 Privacy concerns
+					%p Many situations can arise where it’s difficult to know who to share the patient’s information with without causing privacy issues. An issue that causes problems in communication is that the caregivers themselves are sometimes reluctant to share information with care providers due to privacy concerns.<span class="superscript">6</span>
+				.item
+					%h6 Patient Noncompliance
+					%p Patient compliance is a difficult issue to address, and may be part of the reason that new roles such as grand-aides are beginning to appear in the healthcare landscape.<span class="superscript">11</span> Some patients are not motivated to set goals. Others have issues complying with their medication and diet requirements. Those with mental illnesses are even more prone to discontinue medications without consulting a care provider.<span class="superscript">3</span>
+				%a.left.control{:href=>"#carousel-barriers", :role=>"button", :data=>{:slide=>"prev"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+				%a.right.control{:href=>"#carousel-barriers", :role=>"button", :data=>{:slide=>"next"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 	.part.four.featureII
 		.text
 			%h1 The Next Steps for Care Plans
@@ -2512,7 +2551,7 @@
 				%div.coming-soon-box
 					%img.svg{:src => "../../images/features/careplans/icons/arrow-gray.svg"}
 					%div.coming-soon-content
-						%p.title Care Plans PI:
+						%p.title Care Plans P I:
 						%p.title An Overview
 					%img{:src => "../../images/features/careplans/donna_norm.png"}
 			%a{:href => "javascript:void(0)"}
@@ -2520,7 +2559,7 @@
 				%div.coming-soon-box
 					%div.coming-soon-content
 						%p.title Care Plans
-						%p.title PIII: The Future
+						%p.title P III: The Future
 						%p The third and final feature will explore what opportunitues for improvement and innovation exist in the future of care planning.
 					%img{:src => "../../images/features/careplans/part2/careplan_cm_communication.png"}
 		.coming-soon-ii.mobile
@@ -2562,38 +2601,39 @@
 			%h1 Contributors
 			.contributors.container-fluid
 				.row
-					.contributor.col-md-4
+					.contributor.col-md-6
 						.image
 							%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
 						.info
 							%p Web Designer & Developer
 							%p.name Yanyang Zhou
-					.contributor.col-md-4
+					.contributor.col-md-6
 						.image
 							%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
 						.info
 							%p Web Designer & Developer
 							%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
-					.contributor.col-md-4
+				.row
+					.contributor.col-md-6
 						.image
 							%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
 						.info
 							%p Involution Studios, MIT
 							%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
-				.row
-					.contributor.col-md-4
-						.image
-							%img{:src =>'../../images/features/careplans/contrib/jeffbelden.jpg'}
-						.info
-							%p University of Missouri | toomanyclicks.com 
-							%p.name ​Jeff Belden MD<br><small><a href="https://twitter.com/jeffbelden" target="_blank">@jeffbelden</a></small>
-					.contributor.col-md-4
+					.contributor.col-md-6
 						.image
 							%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
 						.info
 							%p University of Michigan
 							%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
-					.contributor.col-md-4
+				.row
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+						.info
+							%p University of Michigan
+							%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
+					.contributor.col-md-6
 						.image
 							%img{:src =>'../../images/features/careplans/contrib/janesarasohnkahn.jpg'}
 						.info
