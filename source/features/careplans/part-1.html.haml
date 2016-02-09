@@ -1,0 +1,584 @@
+- content_for(:title) do
+	= "Care Plans"
+- content_for(:page_head) do
+	= stylesheet_link_tag "vendor/bootstrap.min.css"
+	= stylesheet_link_tag "features/careplans"
+	= stylesheet_link_tag "feature-elements"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "vendor/jquery.js"
+	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/careplans/tab.js"
+	= javascript_include_tag "features/careplans/svg.js"
+	= javascript_include_tag "features/careplans/careplans-scroll.js"
+
+	- meta = page_for_meta("careplans")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%article#feature-article
+	.overall-header
+		%div.title.title1
+			%p.big-title
+				CARE 
+			%p.big-title
+				PLANS
+			%p.sub-title
+				PART I: Overview
+		%div.title.title2
+			%p.sub-title“Self-care in health is the new black.
+			%p We’re digitally DIY’ing life, scheduling our own travel and booking restaurant tables, curating our photographs and trading stocks. People are morphing into health consumers, and that requires health engagement which means getting smart about our bodies, our selves, our numbers, and our treatment options. CarePlans is an on-ramp to shared and sound decision-making for self-health.”
+			%p.text-right - Jane Sarasohn-Kahn, MA (Econ.), MHSA
+			%p.text-right Health Economist, Advisor, Trend Weaver
+			%p.text-right THINK-Health, Health Populi blog, Huffington Post
+			%p.text-right Healthy Living
+		%a.background-copyright{:href => "https://www.flickr.com/photos/com_salud/13866052723", :target => "_blank"} Photo by COM SALUD
+		%div.bg-cover
+	%header.nav-wrapper.stuck
+		%nav.main-nav
+			%a.one{:href => "javascript:void(0)"} Care Plans
+			%a.two{:href => "javascript:void(0)"} Content
+			%a.three{:href => "javascript:void(0)"} Application
+			%a.four{:href => "javascript:void(0)"} History
+	%header.nav-wrapper.scroll-nav
+		%nav.main-nav
+			%a.one{:href => "javascript:void(0)"} Care Plans
+			%a.two{:href => "javascript:void(0)"} Content
+			%a.three{:href => "javascript:void(0)"} Application
+			%a.four{:href => "javascript:void(0)"} History
+	.part.one
+		%p
+			A <strong>care plan</strong> is a
+			%strong synthesis
+			of all plans of care produced by you and your providers to manage your health
+			<strong>day to day</strong>. It serves as a continuous, conceptual
+			%strong framework
+			shared by all of your care team members to
+			%strong guide
+			your care.<span class="superscript">1,2,3</span>
+	.part.two
+		.component-chart
+			%h1 What's in a Care Plan
+			%p Care plans usually consist of these universal components<span class="superscript">1,2</span>:
+			.container-fluid#components
+				.row#summary
+					.col-md-3
+						%h6 Patient Summary
+					.col-md-9
+						%p Summarized history includes basic information such as demographics (name, age, contact info, ethnic or religious beliefs), health metrics (weight, blood pressure, etc), allergies, or medications and therapies. It can also contain past health history such as past hospitalizations.<span class="superscript">1</span>
+				.row.middle
+					.col-md-2.col
+						%h6 Health Concerns
+						%p These can include a variety of issues such as medical, surgical, behavioral, cognition, mood, environmental factors, financial, and more.<span class="superscript">2,4</span>
+					.col-md-3.col
+						%h6 Goals
+						%p Goals are used to measure progress. They give a care plan direction and  are the first indicator of what path a patient is taking to manage their health concerns. Care plans are typically made up of a few high level goals that consist of many smaller short-term goals.<span class="superscript">1,2</span>
+					.col-md-5.col
+						%h6 Instructions & Interventions
+						%p Information or directions given to you and your other providers make up the instructions of your care plan. This can include how to care for a condition, what to do at home, when to call for help, or changes to the medication. Interventions are actions taken, most often by you, to work toward achieving care plan goals. This can include symptom and medication management, community/social services, and removal of barriers to success.<span class="superscript">1,2,5</span>
+					.col-md-2.col
+						%h6 Review
+						%p You and your provider evaluate the effectiveness of the care plan, and make adjustments where appropriate.<span class="superscript">1</span>
+				.row#care-team
+					.col-md-3
+						%h6 Care Team
+					.col-md-9
+						%p Your care team is everyone who manages or provides care, including yourself. Medical practitioners, nurses, social workers, and caregivers are just a few examples.<span class="superscript">2,7</span>
+			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
+		.content-carousel
+			-cards = data.features.careplans.care_cards
+			.care-cards.carousel.slide.desktop
+				%ol.card-carousel-indicators
+					%li.active{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"0"}}}
+						%img.svg{:src=>cards[0].icon}
+					-(1..8).each do |i|
+						%li{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"#{i}"}}}
+							%img.svg{:src=>cards[i].icon}
+				.carousel-inner{:role=>"listbox"}
+					.item.active
+						.image
+							%img.care-card-img{:src=>cards[0].img}
+							%p View more at <a href="http://carecards.me">carecards.me</a>
+						%div.instruction
+							%h6=cards[0].header
+							%p=cards[0].content
+					-(1..8).each do |j|
+						.item
+							.image
+								%img.care-card-img{:src=>cards[j].img}
+								%p View more at <a href="http://carecards.me">carecards.me</a>
+							%div.instruction
+								%h6=cards[j].header
+								%p=cards[j].content
+					%a.left.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"prev"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+			.care-cards.carousel.slide.mobile#carousel-mobile
+				%ol.carousel-indicators.card-carousel-indicators
+					%li.active{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"0"}}}
+						%img.svg{:src=>cards[0].icon}
+					-(1..8).each do |m|
+						%li{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"#{m}"}}}
+							%img.svg{:src=>cards[m].icon}
+				.carousel-inner{:role=>"listbox"}
+					.item.active
+						%h6=cards[0].header
+						%p=cards[0].content
+						%img.care-card-img{:src=>cards[0].img}
+						%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
+					-(1..8).each do |n|
+						.item
+							%h6=cards[n].header
+							%p=cards[n].content
+							%img.care-card-img{:src=>cards[n].img}
+							%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
+					%a.left.control{:href=>"#carousel-mobile", :role=>"button", :data=>{:slide=>"prev"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+					%a.right.control{:href=>"#carousel-mobile", :role=>"button", :data=>{:slide=>"next"}}
+						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+	.part.three
+		%h1 How Care Plans Work
+		%p A care plan applies the different areas of concern (i.e. physical activity, nutrition, etc.) across the universal components (i.e. goals, instructions, etc.). There is a baseline care plan that exists for general healthy living, and this baseline becomes more customized to a person as more information is collected. Factors such as sex, age, ethnicity, activities, conditions, etc. influence what content goes in a care plan, and how important those areas are to the person.
+		%p Explore how the care plan changes these factors across the three individuals below.
+		.careplan-diagram.desktop
+			%ul.nav.nav-tabs#tabs
+				%li.active{:role=> "presentation"}
+					%a.tab{:href=> "#1", :data=> {:toggle=> "tab"}}
+						%img{:src=>"../../images/features/careplans/isabella_norm.png"}
+						%h6 Isabella<span class="superscript">43-50</span>
+				%li{:role=> "presentation"}
+					%a.tab{:href=> "#2", :data=> {:toggle=> "tab"}}
+						%img{:src=>"../../images/features/careplans/reggie_norm.png"}
+						%h6 Reggie<span class="superscript">40-42</span>
+				%li{:role=> "presentation"}
+					%a.tab{:href=> "#3", :data=> {:toggle=> "tab"}}
+						%img{:src=>"../../images/features/careplans/donna_norm.png"}
+						%h6 Donna<span class="superscript">51-53</span>
+			.tab-content
+				.tab-pane.active{:id=> "1"}
+					= partial("features/careplans/diagram_0", :locals => {:index=>0} )
+				.tab-pane{:id=> "2"}
+					= partial("features/careplans/diagram_1", :locals => {:index=>1} )
+				.tab-pane{:id=> "3"}
+					= partial("features/careplans/diagram_2", :locals => {:index=>2} )
+		.careplan-diagram.mobile.container-fluid
+			%div.profile-content
+				.profile-pane.active
+					= partial("diagram_0", :locals => {:index=>0} )
+				.profile-pane
+					= partial("diagram_1", :locals => {:index=>1} )
+				.profile-pane
+					= partial("diagram_2", :locals => {:index=>2} )
+	.part.four
+		//main content
+		%h1 How Care Plans Started
+		%ul.history-items
+			%li.history-item
+				%h6.history-item__title 31st BC-15th Century
+				%p.history-item__content Much of medical history was focused in reactive care, rather than taking preventative measures for the individual’s health. In the middle ages especially, the idea of preventative care could also have been stunted by the explanations of medical phenomena connected to spirituality and religious belief systems. Preceding modern medicine, most of the care regimens provided to patients were focused on either external symptoms, or a spiritual or magical basis.<span class='superscript'>54</span>
+			%li.history-item
+				%h6.history-item__title 6th-19th Century
+				%p.history-item__content The 16th to 19th century was a period of heavy scientific discovery, leading to the transition of supernatural explanations to natural explanations for disease and illness.<span class='superscript'>55</span> People began to see illness as something that could eventually be eradicated, and saw health as a natural state of the body that should be maintained and protected, further stepping away from traditional notions of supernatural explanations or divine punishment.<span class='superscript'>56,57</span>
+			%li.history-item
+				%h6.history-item__title 1930s
+				%p.history-item__content The 1930s marked the entry of clinically driven care plans into the <span id="nursing_span" class="clickable_span">nursing</span> field. When stays in the hospital were longer, there was time to implement written plans.<span class='superscript'>58</span> Nursing team leads would also use care plans as a guide for the less-educated members of the team.<span class='superscript'>59</span>
+			%li.history-item
+				%h6.history-item__title 1970s
+				%p.history-item__content There were many fields involved in the emergence of<span id="life_care_planning_span" class="clickable_span">life care planning</span>during this time. The converging principles of the fields of experimental analysis of behavior<span id="EAB_span" class="clickable_span">(EAB)</span>,<span id='developmental_psychology_span' class="clickable_span">developmental psychology</span>, and<span id="case_management_span" class="clickable_span">case management</span>established life care planning factors: a summative statement, communication tool, preventative planning, basic components, individualized plans, and needs come first ideology.<span class='superscript'>60</span>
+			%li.history-item
+				%h6.history-item__title 1980s
+				%p.history-item__content Starting in the 1980s and in the following decades, life care planners were involved in consultations with insurance carriers and also with attorneys involved in litigation. Life care planning played a huge initial role in the field of <span id="litigation_span" class="clickable_span">litigation</span>. It has since expanded into elder care, chronic illness and discharge planning. It has also expanded the number and types of professions who can each be involved in a part of care planning.<span class='superscript'>61</span>
+			%li.history-item
+				%h6.history-item__title 2000s
+				%p.history-item__content The breadth of professionals and care providers within life care planning expanded, with individuals coming from rehabilitation counseling, rehabilitation nursing, physiatry, and case management professions. Both paper based and digital technology based care plans were regularly being used by patients and their care providers. A proliferation of digital technology based care plans also began to take hold in later years. Healthtap, Amwell, Better., HelloDoctor, HealthKit, My Chart, Practice Fusion, Health Vault, AskMD, Happify, and Healarium are all more well known examples.<span class='superscript'>61</span>
+			%li.history-item.last-year
+				%h6.history-item__title Current
+				%p.history-item__content As of January 2015, CMS transitioned Medicare to the more quality-based practice of reinbursing for care management of eligible patients with 2 or more chronic conditions. Other private insurance companies are beginning to follow suit to prioritize consistent, preventative care facilitated by patient-accessible care plans.  is has encouraged the growth of digital care planning services that aid chronic care management, such as CareSync, Wellframe, Bridge Patient Portal, and others. Many providers also utilize physical care planning materials like handouts and pamphlets for specific conditions.  e pamphlet example below is a care plan for controlling high cholesterol. Inside are education about the diagnosis, room for high-level goal setting, slots to insert Care Cards for individal step goals, and the contractual agreement of the care team to better the patient’s health.<span class="superscript">5</span>
+			%div.popup-box#nursing
+				%div.image	
+					%img{:src => "../../../images/features/careplans/nursing_img.jpg"}
+				%div.popup-content
+					%h6 Nursing
+					%p Virginia Henderson, “The Nightingale of Modern Nursing”, was a clinically recognized nurse and instructor in the 1900s. She designed the basic nursing curriculum for the National League for Nursing that taught a patient- centered approach focused on nursing problems rather than medical diagnoses.<span class='superscript'>65</span>
+				%div.arrow
+			%div.popup-box#life_care
+				%div.image
+					%img{:src => "../../../images/features/careplans/life_care_planning_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/dominikgolenia/527517137"} Photo by Golenia, Dominik
+				%div.popup-content
+					%h6 Life Care Planning
+					%p Life care plans started to develop in the 1970s after the convergence of research within several fields. Catastrophic disability research in the mid 70s paved the way for the modern life care plan.<span class='superscript'>62,63</span>
+				%div.arrow
+			%div.popup-box#EAB
+				%div.image
+					%img{:src => "../../../images/features/careplans/EAB_img.jpg"}
+					%a{:href => "https://commons.wikimedia.org/wiki/File:Speech_Client_WEB_(5).jpg"} Photo by Madmike1952
+				%div.popup-content
+					%h6 Experimental Analysis of Behavior
+					%p This subspecialty of psychology provided research in charting behavioral changes over long periods of time. These behaviors could then be deconstructed into discrete actions that could be analyzed by the researcher. The technique of charting provided the case management professional with a tool in identifying individual components of care for a specific patient.<span class='superscript'>64</span>
+				%div.arrow
+			%div.popup-box#developmental
+				%div.image
+					%img{:src => "../../../images/features/careplans/developmental_psychology_img.jpg"}
+					%a{:href => "https://commons.wikimedia.org/wiki/File:US_Army_50899_Child_Development_Center_III_receives_national_accreditation.jpg"} Photo by Rhodes, Lisa R
+				%div.popup-content
+					%h6 Developmental Psychology
+					%p Developmental psychology provided a practical role in the development of life care planning. Through conducting research on children with cerebral palsy, it was discovered that the overwhelming complexity of the needs of the patient required that a structured reference tool be provided as a roadmap of care. This provided the beginning of the framework for life care planning.<span class='superscript'>60</span>
+				%div.arrow
+			%div.popup-box#case_management
+				%div.image
+					%img{:src => "../../../images/features/careplans/case_management_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/usdagov/8423828231"} Photo by USDA
+				%div.popup-content
+					%h6 Case Management
+					%p Case management is the collaborative process of assessing, planning, implementing, and evaluating the options and services for a person’s health needs. In the early 1970s, the case management field began seeing the value of a detailed life care plan and became more involved with providing integrated services for those with long-term medical needs.<span class='superscript'>61</span>
+				%div.arrow
+			%div.popup-box#litigation
+				%div.image
+					%img{:src => "../../../images/features/careplans/litigation_img.jpg"}
+					%a{:href => "https://www.flickr.com/photos/truthrevealed/12293483405"} Photo by Michael
+				%div.popup-content
+					%h6 Litigation
+					%p Beginning in the 1980s, Life care plans began to gain greater acknowledgement through the help of the litigation field in cases involving debilitating injury. Damages in Tort Actions (1981) was the first published reference to life care planning through the analysis of personal injury cases.<span class='superscript'>60</span>
+				%div.arrow
+		%img{:src => "../../../images/features/careplans/Pamphlet.png"}
+		%div.coming-soon
+			%h6.blue Coming soon!
+			- #/features/careplans/part-2.html
+			%a{:href => "javascript:void(0)"}
+				%div.coming-soon-box.row
+					%div.coming-soon-content.col-md-6
+						%p.title Care Plans
+						%p.subtitle PII: Current Landscape
+						%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
+					%img.col-md-6{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.jpg"}
+
+	.credit-wrapper
+		.row
+		%script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+		%script(src="../../../javascripts/features/careplans/case_studies.js")
+			- # BEGIN Credits: Copy from this line.
+		#credits
+			%h1 Authors
+			.authors.container-fluid
+				.row
+					.author.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/beth.jpg'}
+						.info
+							%p Involution Studios
+							%p.name Beth Herlin, MPD<br><small><a href="https://twitter.com/beth11herlin" target="_blank">@beth11herlin</a></small>
+							%p.bio Beth is designer, product strategist, and researcher. She concentrates on designing beautiful and surprising health services and systems from the skintop to celltop to desktop. She holds bachelors of arts in psychology and studio art from Rice University and a master of product development from Carnegie Mellon University. She has worked on design and service strategy for companies such as Seniorlink, Johnson & Johnson, and Updox Patient Portals.
+					.author.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/edwin.jpg'}
+						.info
+							%p Involution Studios
+							%p.name  Edwin Choi, MA
+							%p.bio Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University. He has worked on projects for companies including Partners Healthcare and Notovox.
+			%h1 Contributors
+			.contributors.container-fluid
+				.row
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
+						.info
+							%p Web Designer & Developer
+							%p.name Yanyang Zhou
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
+						.info
+							%p Web Designer & Developer
+							%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
+						.info
+							%p Involution Studios, MIT
+							%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
+				.row
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/jeffbelden.jpg'}
+						.info
+							%p University of Missouri | toomanyclicks.com 
+							%p.name ​Jeff Belden MD<br><small><a href="https://twitter.com/jeffbelden" target="_blank">@jeffbelden</a></small>
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+						.info
+							%p University of Michigan
+							%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
+					.contributor.col-md-4
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/janesarasohnkahn.jpg'}
+						.info
+							%p THINK-Health | Health Populi blog | Huffington Post
+							%p.name ​​Jane Sarasohn-Kahn, MA, MHSA<br><small><a href="https://twitter.com/healthythinker">@healthythinker</a></small>
+			.reference
+				%h1 References
+				%ul
+					%li#reference1
+						%span 1.
+						%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf"}“Key Elements to Include in a Coordinated Care Plan”.
+						%span OMA. (2014, June). Retrieved November/December, 2015, from https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
+					%li#reference2
+						%span 2.
+						%a{:href => "http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd"}“LCC Longitudinal Care Plan (LCP) SWG”.
+						%span S&I Framework. Retrieved from http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd
+					%li#reference3
+						%span 3.
+						%a{:href => "http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx"}“NHS Guide to long-term conditions and self care: What is a care plan?”
+						%span (n.d.).Retrieved December 21, 2015, from http://www.nhs.uk/Planners/Yourhealth/Pages/Careplan.aspx
+					%li#reference4
+						%span 4.
+						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf"}“Stage 2 Meaningful Use Core Measures”.
+						%span (2015, August). Retrieved from https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf
+					%li#reference5
+						%span 5. United States, Department of Health and Human Services.
+						%a{:href => "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf"}“Chronic Care Management Services”.
+						%span (2015, May). Centers for Medicare and Medicaid Services. Retrieved from https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/ChronicCareManagement.pdf
+					%li#reference6
+						%span 6.
+						%a{:href => "http://www.cdc.gov/aging/advancecareplanning/"}“Give Peace of Mind: Advance Care Planning”.
+						%span (2014, Mar). Centers for Disease Control and Prevention. Retrieved 2016, Jan. from http://www.cdc.gov/aging/advancecareplanning/
+					%li#reference7
+						%span 7.
+						%a{:href => "https://www.urmc.rochester.edu/strong-memorial/patients-families/health-care-team.aspx"}“Your Healthcare Team”.
+						%span URMC (2016). Retrieved 2016, Jan. from https://www.urmc.rochester.edu/strong-memorial/patients-families/health-care-team.aspx
+					%li#reference8
+						%span 8.
+						%a{:href => "https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf"}“Stage 2 Eligible Professional Meaningful Use Core Measures Measure 15 of 17”.
+						%span (2015, Aug). CMS. Retrieved from https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/downloads/Stage2_EPCore_15_SummaryCare.pdf
+					%li#reference9
+						%span 9. Involution Studios.
+						%a{:href => "http://www.carecards.me"}“Care Cards”
+						%span (2016). Retrieved from www.carecards.me
+					%li#reference10
+						%span 10.
+						%a{:href => "https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399"}“Depression”.
+						%span National Institutes of Health. Retrieved from https://www.nimh.nih.gov/health/topics/depression/index.shtml#part_145399
+					%li#reference11
+						%span 11.
+						%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment"}“Depression”.
+						%span (2016). National Alliance on Mental Illness. Retrieved from https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment
+					%li#reference12
+						%span 12.
+						%a{:href => "https://www.nami.org/Learn-More/Mental-Health-Conditions/Depression/Treatment"}“Depression (Major Depressive Disorder)”.
+						%span (2015, Jul. 22). Mayo Clinic. Retrieved from http://www.mayoclinic.org/diseases-conditions/depression/basics/lifestyle-home-remedies/con-20032977
+					%li#reference13
+						%span 13.
+						%a{:href => "http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/"}“How to Fight Depression Fatigue”.
+						%span Everyday Health. http://www.everydayhealth.com/hs/major-depression-living-well/fight-depression-fatigue/
+					%li#reference14
+						%span 14.
+						%a{:href => "http://www.medicinenet.com/emotional_eating/page4.htm"}“Emotional Eating cont’d”.
+						%span (2014, Dec. 11). MedicineNet.  Retrieved from http://www.medicinenet.com/emotional_eating/page4.htm
+					%li#reference15
+						%span 15.
+						%a{:href => "http://www.kcbj.com/knee/typical-knee-conditions/ligament-tear-acl-mcl-lcl-and-pcl/"}“Ligament Tear: A Closer Look”.
+						%span (2016) Kansas City Bone and Joint Clinic. http://www.kcbj.com/knee/typical-knee-conditions/ligament-tear-acl-mcl-lcl-and-pcl/
+					%li#reference16
+						%span 16.
+						%a{:href => "http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html"}“Patient Education Program: Surgical Recovery.”
+						%span (2016) Emory Healthcare. http://www.emoryhealthcare.org/acl-program/surgical-recovery/acl-rehab-expectations.html
+					%li#reference17
+						%span 17.
+						%a{:href => "http://www.moveforwardpt.com/symptomsconditionsdetail.aspx?cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4"}http://www.moveforwardpt.com/symptomsconditionsdetail.aspx?cid=d8e73ca8-71f4-48a7-92f8-675bca38232c#.VmtPJBorLa4
+					%li#reference18
+						%span 18.
+						%a{:href => "http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/choosing-what-to-eat.html"}“Choosing What, How Much, and When to Eat”.
+						%span (2016). American Diabetes Association. Retrieved from http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/choosing-what-to-eat.html
+					%li#reference19
+						%span 19.
+						%a{:href => "http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/getting-active.html"}“Getting Active”.
+						%span (2016) American Diabetes Association. Retrieved from http://www.diabetes.org/living-with-diabetes/recently-diagnosed/where-do-i-begin/getting-active.html
+					%li#reference20
+						%span 20.
+						%a{:href => "http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/"}“What I need to know about diabetes medicines”.
+						%span NIH: National Institute of Diabetes and Digestive Kidney Disease. http://diabetes.niddk.nih.gov/dm/pubs/medicines_ez/
+					%li#reference21
+						%span 21.
+						%a{:href => "http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx"}“Step 3: Manage your diabetes”.
+						%span NIH: National Institute of Diabetes and Digestive Kidney Disease. Retrieved from: http://ndep.nih.gov/i-have-diabetes/manageyourdiabetes.aspx
+					%li#reference22
+						%span 22.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834"}“Obesity: Treatment an Drugs”.
+						%span (2015, Jun. 10) Mayo Clinic. http://www.mayoclinic.org/diseases-conditions/obesity/basics/treatment/con-20014834
+					%li#reference23
+						%span 23.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1"}“Slideshow: Low-Calorie-Density Foods for Weight Loss”.
+						%span (2016). Mayo Clinic. Retrieved from http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1
+					%li#reference24
+						%span 24.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/weight-loss/multimedia/low-calorie-foods/sls-20076175?s=1"}“Childhood Obesity Facts”.
+						%span (2015, Aug. 27). Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/obesity/facts.htm
+					%li#reference25
+						%span 25.
+						%a{:href => "http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/PreventionTreatmentofHighBloodPressure/Prevention-Treatment-of-High-Blood-Pressure_UCM_002054_Article.jsp#.VqGlp1MrIdU"}“Prevention and treatment of high blood pressure”.
+						%span (2016). American Heart Association. Retrieved from http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/PreventionTreatmentofHighBloodPressure/Prevention-Treatment-of-High-Blood-Pressure_UCM_002054_Article.jsp#.VqGlp1MrIdU
+					%li#reference26
+						%span 26. Dickerson L.M. , PHARM.D., and Gibson, MV M.D., PH.D., Medical University of South Carolina, Charleston, South Carolina. 
+						%a{:href => "http://www.aafp.org/afp/2005/0201/p469.html"}“Management of hypertension in older persons”.
+						%span Am Fam Physician. 2005 Feb 1;71(3):469-476. Retrieved from http://www.aafp.org/afp/2005/0201/p469.html
+					%li#reference27
+						%span 27.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580"}“High blood pressure (hypertension)”.
+						%span (2015, Nov. 10) Mayo Clinic. http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/basics/risk-factors/con-20019580
+					%li#reference28
+						%span 28.
+						%a{:href => "http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring"}“Checking your blood pressure at home.”
+						%span WebMD. http://www.webmd.com/hypertension-high-blood-pressure/guide/hypertension-home-monitoring
+					%li#reference29
+						%span 29. Godman, H. (2013, Jul.3). 
+						%a{:href => "http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436"}“Checking blood pressure at home pays off.”
+						%span Harvard Health Publications, Harvard Medical School. Retrieved from http://www.health.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436
+					%li#reference30
+						%span 30.
+						%a{:href => "http://www.cdc.gov/std/tg2015/chlamydia.htmh.harvard.edu/blog/checking-blood-pressure-at-home-pays-off-201307036436"}“Chlamydial Infections in Adolescents and Adults.”
+						%span (2015. Jun. 4) Centers for Disease Control and Prevention. Retrived from http://www.cdc.gov/std/tg2015/chlamydia.htm
+					%li#reference31
+						%span 31. Adler, R., Mehta, R. (2010).
+						%a{:href => "http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf"}“Catalyzing Technology to Support Family Caregiving.”
+						%span The National Alliance for Caregiving. Retrieved from http://www.caregiving.org/wp-content/uploads/2010/01/Catalyzing-Technology-to-Support-Family-Caregiving_FINAL.pdf
+					%li#reference32
+						%span 32. Fox, S., Brenner, J. (2012).
+						%a{:href => "http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf"}“Family Caregivers Online.”
+						%span Pew Research Center. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/2012/PIP_Family_Caregivers_Online.pdf
+					%li#reference33
+						%span 33.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Dementia.”
+						%span Mayo Clinic. (2014. Nov, 22). Retrieved from http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
+					%li#reference34
+						%span 34.
+						%a{:href => "http://www.alz.org/alzheimers_disease_10429.asple&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Treatments for Sleep Changes.”
+						%span Alzheimer’s Association.  (2016). Retrieved from http://www.alz.org/alzheimers_disease_10429.asple&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
+					%li#reference35
+						%span 35.
+						%a{:href => "https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149"}“Eating and Drinking.”
+						%span Alzheimer’s Society. Retrieved from https://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=149
+					%li#reference36
+						%span 36.
+						%a{:href => "http://www.webmd.com/alzheimers/tc/dementia-medications"}“Alzheimer’s Disease Health Center.”
+						%span WebMD. Retrieved from http://www.webmd.com/alzheimers/tc/dementia-medications
+					%li#reference37
+						%span 37.
+						%a{:href => "http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel"}“Dementia: Treatment and Drugs.”
+						%span Mayo Clinic. (2014. Nov, 22). Retrieved from http://www.mayoclinic.org/diseases-conditions/dementia/basics/definition/con-20034399?utm_source=Google&utm_medium=abstract&utm_content=Dementia&utm_campaign=Knowledge-panel 
+					%li#reference38
+						%span 38.
+						%a{:href => "http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor"}“Growth and Development, Ages 11 to 14 Years - When to Call a Doctor.”
+						%span WebMD. (2014. Sep, 9). Retrieved from http://www.webmd.com/children/tc/growth-and-development-ages-11-to-14-years-when-to-call-a-doctor
+					%li#reference39
+						%span 39.
+						%a{:href => "http://teens.webmd.com/girls/facts-about-puberty-girls"}“Girls and Puberty.”
+						%span WebMD. Retrieved from http://teens.webmd.com/girls/facts-about-puberty-girls
+					%li#reference40
+						%span 40. Cespedes, A. (2015. Dec.11). 
+						%a{:href => "http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/"}“Diet and Exercise Plan for a 30-Year-Old Man.”
+						%span Livestrong.com. Retrieved from http://www.livestrong.com/article/429657-diet-exercise-plan-for-a-30-year-old-male/
+					%li#reference41
+						%span 41.
+						%a{:href => "http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.htm"}“Men: Stay Healthy at Any Age.”
+						%span Agency for Healthcare Research and Quality. Retrieved from http://www.ahrq.gov/patients-consumers/patient-involvement/healthy-men/healthy-men.html
+					%li#reference42
+						%span 42.
+						%a{:href => "https://en.wikipedia.org/wiki/Activities_of_daily_living"}“Activities of Daily Living.”
+						%span Wikipedia. Retrieved from https://en.wikipedia.org/wiki/Activities_of_daily_living
+					%li#reference43
+						%span 43.
+						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm"}“Youth Physical Activity Guidelines Toolkit.”
+						%span Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm
+					%li#reference44
+						%span 44.
+						%a{:href => "https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive-Health-Care"}“Teen Health Issues and Preventative Care.”
+						%span Cleveland Clinic Children’s. Retrieved from https://my.clevelandclinic.org/childrens-hospital/health-info/ages-stages/adolescence/hic-Teen-Issues-and-Preventive-Health-Care
+					%li#reference45
+						%span 45.
+						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx"}“A Teenager’s Nutritional Needs.”
+						%span American Academy of Pediatrics. Retrieved from https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx
+					%li#reference46
+						%span 46.
+						%a{:href => "https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx"}“How Teens Can Stay Fit.”
+						%span American Academy of Pediatrics. Retrieved from https://www.healthychildren.org/English/ages-stages/teen/fitness/Pages/How-Teens-Can-Stay-Fit.aspx
+					%li#reference47
+						%span 47.
+						%a{:href => "http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins"}“Vitamins for Kids: Do Health Kids Need Supplements?” 
+						%span WebMD. Retrieved from http://www.webmd.com/parenting/vitamins-for-kids-do-healthy-kids-need-vitamins
+					%li#reference48
+						%span 48.
+						%a{:href => "https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need"}“How Much Sleep Do We Really Need?” 
+						%span National Sleep Foundation. Retrieved from https://sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need
+					%li#reference49
+						%span 49.
+						%a{:href => "http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html"}“Recomended Immunization Schedule for Persons Aged 0 Through 18 Years.”
+						%span (2015). Centers for Disease Control and Prevention.  Retrieved from http://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent-shell.html
+					%li#reference50
+						%span 50.
+						%a{:href => "http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf"}“The Physical Activity Guidelines for Children and Adolescents.”
+						%span Centers for Disease Control and Prevention. Retrieved from http://www.cdc.gov/healthyschools/physicalactivity/toolkit/youth_pa_guidelines_communities.pdf
+					%li#reference51
+						%span 51. Kalra, G., Subramanyam, A., Pinto, C. “Sexuality: Desire, Activity, and intimacy in the elderly.” Indian J Psychiatry. 2011 Oct-Dec; 53(4): 300–306. doi: 
+						%a{:href => "http://www.indianjpsychiatry.org/article.asp?issn=0019-5545;year=2011;volume=53;issue=4;spage=300;epage=306;aulast=Kalra"}10.4103/0019-5545.91902
+					%li#reference52
+						%span 52.
+						%a{:href => "http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456"}“DASH diet: Healthy eating to lower your blood pressure.”
+						%span (2013. May, 15). Mayo Clinic. Retrieved from http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20048456
+					%li#reference53
+						%span 53.
+						%a{:href => "https://www.nia.nih.gov/health/publication/sexuality-later-life"}“Sexuality later in life.”
+						%span National Institute on Aging. Retrieved from https://www.nia.nih.gov/health/publication/sexuality-later-life
+					%li#reference54
+						%span 54.
+						%a{:href => "https://en.wikipedia.org/wiki/Medieval_medicine_of_Western_Europe"}“Medieval medicine of Western Europe.”
+						%span Wikipedia. Retrieved 2016. Jan, 22 from https://en.wikipedia.org/wiki/Medieval_medicine_of_Western_Europe
+					%li#reference55
+						%span 55. Webster, Charles (2008). Paracelsus: Medicine, Magic, and Mission at the End of Time. Yale Univ. Press
+					%li#reference56
+						%span 56. Presti, Roberto Lo (2010). Presti, Roberto Lo (2010). "Anatomy as Epistemology: The Body of Man and the Body of Medicine in Vesalius and his Ancient Sources". Renaissance and Reformation/Renaissance et Reforme
+					%li#reference57
+						%span 57.
+						%a{:href => "http://www.britannica.com/topic/history-of-medicine"}Encyclopædia Britannica. 
+						%span Retrieved October 11, 2015 from http://www.britannica.com/topic/history-of-medicine
+					%li#reference58
+						%span 58.
+						%a{:href => "https://en.wikipedia.org/wiki/Nursing care plan"}"Nursing care plan"
+						%span Wikipedia 28 Sep. 2015. Retrieved from https://en.wikipedia.org/wiki/Nursing care plan
+					%li#reference59
+						%span 59.
+						%a{:href => "http://www.nursingcenter.com/pdfjournal?AID=798082&an=00000446-200806000-00002&Journal_ID=54030&Issue_ID=798079"}"Death to Nursing Care Plans!"
+						%span Lippincott Nursing Center 28 Sep. 2015. Retrieved from http://www.nursingcenter.com/pdfjournal?AID=798082&an=00000446-200806000-00002&Journal_ID=54030&Issue_ID=798079
+					%li#reference60
+						%span 60. Exchange, Center for International Rehabilitation Research Information and. 
+						%a{:href => "http://cirrie.buffalo.edu/encyclopedia/en/article/18/"} "Life Care Planning | International Encyclopedia of Rehabilitation".
+						%span cirrie.buffalo.edu. Retrieved 2015-10-02.
+					%li#reference61
+						%span 61.
+						%a{:href => "http://www.rehabpro.org/sections/ialcp/focus/standards/ialcpSOP_pdf"}"International Academy of Life Care Planners Standards of Practice"
+						%span IARP 28 Sep. 2015 Retrieved from http://www.rehabpro.org/sections/ialcp/focus/standards/ialcpSOP_pdf
+					%li#reference62
+						%span 62. Deutsch, P.M. (2002) 
+						%a{:href => "http://archive.scijournal.com/doi/pdf/10.1310/UH3C-RUF5-EV1K-869D"}"Historical Perspective of Life Care Planning"
+						%span Top Spinal Cord Inj Rehabil2002;7(4):1-4
+					%li#reference63
+						%span 63.
+						%a{:href => "http://cirrie.buffalo.edu/encyclopedia/en/article/18/"}"Life Care Planning"
+						%span International Encyclopedia of Rehabilitation 28 Sep. 2015. Retrieved from http://cirrie.buffalo.edu/encyclopedia/en/article/18/
+					%li#reference64
+						%span 64.
+						%a{:href => "https://en.wikipedia.org/w/index.php?title=Experimental_analysis_of_behavior&oldid=682715574"}“Experimental Analysis of Behavior.”
+						%span Retrieved 2016, Jan. from https://en.wikipedia.org/w/index.php?title=Experimental_analysis_of_behavior&oldid=682715574
+					%li#reference65
+						%span 65.
+						%a{:href => "http://currentnursing.com/nursing_theory/Henderson.html"}“Current Nursing: Nursing Theories”.
+						%span  Retrieved from  http://currentnursing.com/nursing_theory/Henderson.html
+
+/ - # END Credits. Copy to this %%%%%line.
