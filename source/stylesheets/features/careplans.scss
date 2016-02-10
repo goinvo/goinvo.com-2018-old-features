@@ -1476,6 +1476,7 @@ Feature II: Barriers
 
 		img {
 			border: 1px solid #898989;
+			width: 100%;
 		}
 		.col-md-6 {
 			padding: 0;
@@ -1726,6 +1727,7 @@ Feature II: Next Steps
 	}
 	img:not(.svg) {
 		height: 220px;
+		width: 220px;
 		position: absolute;
 		bottom: 0;
 		left:  calc(50% - 110px);
@@ -1875,7 +1877,7 @@ contributor and reference
 	}
 	.contributor p:first-child, .contributor p.name,
 	.author p:first-child, .author p.name {
-		word-break: break-all;
+		// word-break: break-all;
 	}
 	.contributor .info, .author .info {
 		display: inline-block;
@@ -1895,7 +1897,7 @@ contributor and reference
 		color: #000000;
 	}
 	.reference a, .reference span {
-		word-break: break-word;
+		word-break: break-all;
 		display: inline;
 	}
 }
