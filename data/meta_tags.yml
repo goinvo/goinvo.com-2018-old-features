@@ -249,13 +249,21 @@
   twittersite: "@goinvo"
   twittertitle: "Involution Studios - Featured Articles"
   
-- page: "careplans"
+- page: "careplans-part1"
   description: "What is a care plan, and how did they start?"
   keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 1"
-  twitterimage: ""
+  twitterimage: "http://www.goinvo.com/images/features/careplans/part-1_twitter.png"
+
+- page: "careplans-part2"
+  description: ""
+  keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Care Plans: Part 2"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/FeatureBanner.jpg"
 
 - page: "digital-healthcare"
   description: "8 health tech trends to look for in the upcoming year."
