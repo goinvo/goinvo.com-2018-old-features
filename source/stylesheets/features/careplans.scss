@@ -875,7 +875,10 @@ Feature II: Process
 }
 .part.journey .process.desktop img {
 	width: 100%;
-	margin-bottom: 150px;
+	margin-bottom: 0px;
+}
+.part.journey .process.desktop img:nth-child(6) {
+	margin-bottom: 100px;
 }
 .part.journey .process.desktop .process-box h6 {
 	color: rgb(11, 94, 148);
