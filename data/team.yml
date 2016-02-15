@@ -62,9 +62,9 @@
   last_name: Choi
   title: Designer
   bio: Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University.
-  photo: edwin_choi.jpg
-  email: "edwin@goinvo.com"
   linkedin_url: "https://www.linkedin.com/in/edwinchoi1"
+  email: "edwin@goinvo.com"
+  photo: edwin_choi.jpg
 
 - first_name: Michael
   last_name: Bester
@@ -80,11 +80,10 @@
   last_name: Zhou
   title: Engineer
   bio: Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.
-  photo: yanyang_zhou.jpg
   github_username: "yvonnechow"
-  email: "yanyang@goinvo.com"
   linkedin_url: "https://www.linkedin.com/in/zhouyanyang"
-
+  email: "yanyang@goinvo.com"
+  photo: yanyang_zhou.jpg
 
 - first_name: Jon
   last_name: Follett
@@ -95,15 +94,6 @@
   github_username: "jonfollett"
   email: "jon@goinvo.com"
   photo: jon_follett.jpg
-
-- first_name: Emily
-  last_name: Twaddell
-  title: Doyenne de l'Atelier
-  bio: "Emily is a mentor and leader specializing in instructional design. Since joining Invo in 2013 as studio manager, Emily manages daily operations, writes for the blog, consults on design, and creates whimsical art installations. Emily holds degrees from Trinity College, Lesley University, and The Center for Digital Imaging Arts at Boston University."
-  twitter_username: "MimiTwaddell"
-  linkedin_url: "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
-  email: "emily@goinvo.com"
-  photo: emily_twaddell.jpg
 
 - first_name: Craig
   last_name: McGinley
@@ -122,14 +112,6 @@
   twitter_username: lliissttoonn
   email: "brian@goinvo.com"
   photo: brian_liston.jpg
-
-- first_name: Lily
-  last_name: Fan
-  title: "Intern"
-  bio: "Lily is an Industrial Design student at the Rhode Island School of Design (RISD). Lily is interested in the collision of the physical, emotional, and digital. She is advancing her software design chops during the winter semester."
-  linkedin_url: "https://www.linkedin.com/in/lily-fan-07008a58"
-  email: "lily@goinvo.com"
-  photo: lily_fan.jpg
 
 - first_name: Dirk
   last_name: Knemeyer
