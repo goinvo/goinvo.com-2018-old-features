@@ -732,6 +732,7 @@ img.scale-with-grid {
 	padding-top: 4rem;
 	h2 {
 		text-align: center;
+		margin: 2rem 0;
 	}
 	#traveled, #now {
 		padding: 0;
@@ -761,7 +762,7 @@ img.scale-with-grid {
 			.no-caps {
 				text-transform: none;
 				font-family: $font-family;
-				font-size: 2.4rem;
+				font-size: 1.5rem;
 			}
 		}
 		.row {
@@ -786,6 +787,9 @@ img.scale-with-grid {
 			padding: 0;
 			display: inline-block;
 		}
+		li {
+			margin: 10px 0;
+		}
 	}
 }
 
@@ -795,7 +799,7 @@ img.scale-with-grid {
 	border-top:$border-base;
 	h2 {
 		text-align: center;
-		margin: 1.5rem;
+		margin: 2rem;
 	}
 	ul {
 		list-style: none;
