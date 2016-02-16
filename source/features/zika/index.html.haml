@@ -1,0 +1,45 @@
+- content_for(:title) do
+	= "Understanding Zika"
+- content_for(:page_head) do
+	= stylesheet_link_tag "vendor/bootstrap.min.css"
+	= stylesheet_link_tag "features/zika"
+	= stylesheet_link_tag "feature-elements"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300,700"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/zika/zika.js"
+
+	- meta = page_for_meta("zika")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%article#feature-article
+	%div.container
+		%nav.inner
+			%div.menu
+				%ul
+					%li#expand &equiv;
+					%li#page-title ZIKA
+					%li <a href="#what-is-zika">Overview</a>
+					%li <a href="#where-is-zika">Infected Areas</a>
+					%li <a href="#transmission">Transmission</a>
+					%li <a href="#prevention">Prevention</a>
+					%li <a href="#zika-symptoms">Symptoms</a>
+					%li <a href="#treatments">Treatment</a>
+					%li <a href="#action-plan">Action Plan</a>
+					%li <a href="../../images/features/zika/understanding_zika.pdf" target="blank">Download</a>
+					%li <a href="mailto:zika@goinvo.com?subject=Feedback for Understanding Zika">Feedback</a>
+		%div.header
+			%h1.title
+				%span#title-understanding Understanding
+				%span#title-zika Zika
+			%div.header-note Images from USDA &amp; Felipe Dana/AP
