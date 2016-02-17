@@ -388,6 +388,7 @@ img.scale-with-grid {
 			display: inline-block;
 			margin: 0;
 			padding: 0;
+			width: 100%;
 
 			@media (max-width: 480px) {
 				height: 100%;
@@ -403,7 +404,7 @@ img.scale-with-grid {
 			li {
 				display:inline-block;
 				cursor: pointer;
-				padding: 1.4rem 1rem;
+				padding: 0.8rem;
 				line-height: 1.2rem; 
 				box-sizing: border-box;
 				@media (max-width: 1240px) {
@@ -437,9 +438,8 @@ img.scale-with-grid {
 						display: inline-block;
 					}
 					&#expand {
-						padding-left: 1rem;
+						padding-left: 2rem;
 						padding-right: 1rem;
-						margin-left: 1rem;
 					}
 					&#page-title {
 						padding-left: 1rem;
