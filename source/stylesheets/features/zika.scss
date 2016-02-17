@@ -805,13 +805,12 @@ img.scale-with-grid {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		padding-left: 5rem;
 		li {
 			display:inline-block;
-			width: 22rem;
+			width: 25rem;
 			margin-bottom: 5rem;
 			vertical-align: top;
-			margin-left: 2rem;
+			padding: 0 50px;
 			span.year {
 				font-family: $font-family-title;
 				font-weight: 300;
@@ -825,13 +824,16 @@ img.scale-with-grid {
 			}
 			.timeline-image {
 				height: 15rem;
-				width: 22rem;
+				width: 100%;
 				border: solid #000 1px;
 				img {
 					height: 15rem;
-					width: 22rem;
+					width: 100%;
 					object-fit: cover;
 				}
+			}
+			@media (max-width: $phone) {
+				width: 100%;
 			}
 		}
 	}
