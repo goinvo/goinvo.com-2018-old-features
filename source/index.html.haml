@@ -14,20 +14,50 @@
 						posts.push(e);
 					});
 				}
-				// ***Code goes here***
 
-				// Randomizing the homepage header
-				var randNum = Math.floor((Math.random() * 2) + 1);
-				if( randNum === 1) {
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
-				} else  {
-					// Some stuff that should probably be in css but is instead here -- for the iphone header (w/ eric's face)
-					$('#homepage-hero').css('background-color', '#f9f9f9');
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
-					$('#homepage-hero').toggleClass('iphone-images-style', 'true');
-					$('#homepage-hero .photo-container').css('background-size', '90%');
-					$('#homepage-hero .photo-container').css('background-position-x', 'center');
-				}
+				// Randomizing the homepage top banner
+				var randNum = Math.floor((Math.random() * 4));
+
+				var homepageHeaderContent = [
+					{
+						backgroundImage: '/images/home/family-doctor-visit.jpg',
+						headerText: 'Design better outcomes',
+						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+						portfolioImage: '/images/home/homepage-image-01.png',
+						portfolioText: 'hGraph visualizes patient health in one picture.',
+						caseStudyUrl: 'healthcare/hgraph/'
+					},
+					{
+						backgroundImage: '/images/home/homepage-02.png',
+						headerText: 'Design better efficiency',
+						subHeaderText: 'We reimagine processes and services to streamline healthcare.',
+						portfolioImage: '/images/home/homepage-image-02.png',
+						portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
+						caseStudyUrl: 'healthcare/3m/'
+					},
+					{
+						backgroundImage: '/images/home/homepage-03.png',
+						headerText: 'Design better access',
+						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+						portfolioImage: '/images/home/homepage-image-03.png',
+						portfolioText: 'Big pharma weaves Cognitive Behavior Therapy (CBT) into everyday life.',
+						caseStudyUrl: 'contact'
+					},
+					{
+						backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
+						headerText: 'Make healthcare fun',
+						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+						portfolioImage: '',
+						portfolioText: 'Contact us today to discuss your next healthcare project',
+						caseStudyUrl: 'contact'
+					}
+				]
+
+				$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeaderContent[randNum].backgroundImage + ")");
+				$('#homepage-hero .actual-title').text(homepageHeaderContent[randNum].headerText);
+				$('#homepage-hero .actual-content').append(homepageHeaderContent[randNum].subHeaderText);
+				$('#homepage-hero .actual-button').append('View Case Study');
+				$('#homepage-hero').attr('href', homepageHeaderContent[randNum].caseStudyUrl);
 
 				// Grabs the first image in the blog post
 				var currentString = posts[0].encoded;
@@ -61,12 +91,12 @@
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%a#homepage-hero.block.bar{:href => "healthcare"}
+%a#homepage-hero.block.bar{:href => ""}
 	.photo-container
 	.title
-		.actual-title Magical Software for Personalized Medicine
-		.actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
-		.actual-button See our work
+		.actual-title 
+		.actual-content 
+		.actual-button 
 .clients
 	%table.non-mobile
 		%tbody
