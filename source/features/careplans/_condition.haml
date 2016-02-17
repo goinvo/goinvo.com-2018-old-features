@@ -1,0 +1,10 @@
+- condition = data.features.careplans.conditions[id]
+- html = condition["care plan"][component][content].html_safe
+	- if html != ""
+		%span=html
+/ - profile["care plan"].each do |component|
+/           %tr{:id=> "#{component[0]}"}
+/             %td.header=component[0].html_safe
+/             - component[1].each do |content|
+/               %td.content{:id=> "#{content[0]}"}
+/                 %span=content[1].html_safe

@@ -1,0 +1,62 @@
+= javascript_include_tag "features/careplans/checkboxes.js"
+- profile = data.features.careplans.profiles[index]
+- careplan = profile["care plan"]
+.container-fluid.profile.desktop{:data=>{:index=> index, :patient=> profile.name}}
+  .row
+    .col-md-3
+      %img{:src=>"../../../images/features/careplans/isabella_norm.png"}
+    .col-md-9
+      %h6.blue Patient Summary
+      %span.summary=profile.summary.html_safe
+  .row
+    #col.left.col-md-6
+      %h6.blue Health Concerns (Choose 2)
+      .col-md-6
+        .checkbox
+          %label.depression
+            %input{:type=> "checkbox", :id=>"depression"} Depression<span class="superscript">10-14</span>
+        .checkbox
+          %label.smoking
+            %input{:type=> "checkbox", :id=>"smoking"} Smoking
+        .checkbox
+          %label.option0
+            %input{:type=> "checkbox", :id=>"option0"}=profile.options[0].html_safe
+      .col-md-6
+        .checkbox
+          %label.obesity
+            %input{:type=> "checkbox", :id=>"obesity"} Obesity<span class="superscript">22-24</span>
+        .checkbox  
+          %label.diabetes
+            %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes<span class="superscript">18-21</span>
+        .checkbox
+          %label.option1
+            %input{:type=> "checkbox", :id=>"option1"}=profile.options[1].html_safe
+    #col.right.col-md-6
+      %h6.blue Care Team
+      %p.care-team=profile["care team"].html_safe
+  .row
+    #col.col-md-12.care-plan  
+      %table.table.table-bordered
+        %tr.headers
+          %td.header.blank
+          - data.features.careplans.globals[0]["content headers"].each do |header|
+            %td.header.blue=header.html_safe
+        - careplan.each do |component|
+          - row_id = component[0].strip.delete(' ')
+          %tr{:id=> "#{row_id}"}
+            %td.header.blue=component[0].html_safe
+            - component[1].each do |content|
+              -selector = "."+component[0]+"."+content[0]
+              %td.content{:id=> "#{content[0]}"}
+                %p=content[1].html_safe
+.profile.mobile{:data=>{:index=> index, :patient=> profile.name}}
+  %div.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Isabella</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuName"><li data-id="1"><a href="javascript:void(0)">Isabella</a></li><li data-id="2"><a href="javascript:void(0)">Reggie</a></li><li data-id="3"><a href="javascript:void(0)">Donna</a></li></ul>
+  %div.dropdown <span class="dropdown-toggle" type="button" id="dropdownMenuSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selection">Health Concern</span><span class="caret"></span></span><ul class="dropdown-menu" aria-labelledby="dropdownMenuSelection"><li><a href="javascript:void(0)" class="depression"><input type="checkbox" id="depression">&nbsp;<span>Depression</span></a></li><li><a href="javascript:void(0)" class="smoking"><input type="checkbox" id="smoking">&nbsp;<span>Smoking</span></a></li><li><a href="javascript:void(0)" class="option0"><input type="checkbox" id="option0">&nbsp;<span>Orthopedic Injury</span></a></li><li><a href="javascript:void(0)" class="obesity"><input type="checkbox" id="obesity">&nbsp;<span>Obesity</span></a></li><li><a href="javascript:void(0)" class="diabetes"><input type="checkbox" id="diabites">&nbsp;<span>Type II Diabetes</span></a></li><li><a href="javascript:void(0)" class="option1"><input type="checkbox" id="option1">&nbsp;<span>Puberty</span></a></li></ul>
+  - careplan.each do |component|
+    - row_id = component[0].strip.delete(' ')
+    %div.content-table{:id=> "#{row_id}"}
+      %p.header=component[0].html_safe
+      - component[1].each do |content|
+        -selector = "."+component[0]+"."+content[0]
+        %p.content{:id=> "#{content[0]}"}
+          =content[1].html_safe

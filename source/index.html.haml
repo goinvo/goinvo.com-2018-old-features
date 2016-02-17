@@ -1,72 +1,55 @@
 - content_for(:page_head) do
-	= stylesheet_link_tag "sections/homepage", :async => true
-	:javascript
-		posts = [];
-		var randNum = Math.ceil(Math.random()*3);
-		$.ajax({
-			// Maybe make this better soon
-			url      : "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%20%3D%20'http%3A%2F%2Fyes.goinvo.com%2Farticles%2Frss.xml'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",
-			dataType : 'json',
-			success  : function (data) {
-				if (data['query'] && data['query']['results']) {
-					// Wow
-					$.each(data['query']['results']['rss']['channel']['item'], function (i, e) {
-						posts.push(e);
-					});
-				}
-				// ***Code goes here***
+  = stylesheet_link_tag "sections/homepage", :async => true
+  :javascript
+    posts = [];
+    var randNum = Math.ceil(Math.random()*3);
 
-				// Randomizing the homepage header
-				var randNum = Math.floor((Math.random() * 2) + 1);
-				if( randNum === 1) {
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
-				} else  {
-					// Some stuff that should probably be in css but is instead here -- for the iphone header (w/ eric's face)
-					$('#homepage-hero').css('background-color', '#f9f9f9');
-					$('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
-					$('#homepage-hero').toggleClass('iphone-images-style', 'true');
-					$('#homepage-hero .photo-container').css('background-size', '90%');
-					$('#homepage-hero .photo-container').css('background-position-x', 'center');
-				}
+    function makeBlogPostBottom(posts) {
+      // Grabs the first image in the blog post
+      var currentString = posts[0].encoded;
+      var sIndex = currentString.indexOf('<img');
+      currentString = currentString.substr(sIndex + 4);
+      sIndex = currentString.indexOf('src=');
+      currentString = currentString.substr(sIndex + 5);
+      sIndex = currentString.indexOf('"');
+      currentString = currentString.substr(0, sIndex);
 
-				// Grabs the first image in the blog post
-				var currentString = posts[0].encoded;
-				var sIndex = currentString.indexOf('<img');
-				currentString = currentString.substr(sIndex + 4);
-				sIndex = currentString.indexOf('src=');
-				currentString = currentString.substr(sIndex + 5);
-				sIndex = currentString.indexOf('"');
-				currentString = currentString.substr(0, sIndex);
+      // Set the recent blog post section
+      $('#oracle').removeClass('bar').addClass('half');
+      $('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
+      $('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+    }
 
-				// Set the recent blog post section
-				$('#oracle').removeClass('bar').addClass('half');
-				$('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
-				$('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+    // Randomizing the homepage header
+    var randNum = Math.floor((Math.random() * 2) + 1);
+    if( randNum === 1) {
+      $('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
+    } else  {
+      // Some stuff that should probably be in css but is instead here -- for the iphone header (w/ eric's face)
+      $('#homepage-hero').css('background-color', '#f9f9f9');
+      $('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
+      $('#homepage-hero').toggleClass('iphone-images-style', 'true');
+      $('#homepage-hero .photo-container').css('background-size', '90%');
+      $('#homepage-hero .photo-container').css('background-position-x', 'center');
+    }
 
-			},
-			error: function(a,b,c) {
-				console.log(a);
-				console.log(b);
-				console.log(c);
-			}
-		});
 
-	- meta = page_for_meta("homepage")
-	%meta{:name => "description", :content => "#{meta.description}" }
-	%meta{:name => "keywords", :content => "#{meta.keywords}" }
-	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
-	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
-	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
-	%meta{:name => "twitter:description", :content => "#{meta.description}"}
-	- if (meta.twitterimage)
-		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+  - meta = page_for_meta("homepage")
+  %meta{:name => "description", :content => "#{meta.description}" }
+  %meta{:name => "keywords", :content => "#{meta.keywords}" }
+  %meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+  %meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+  %meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+  %meta{:name => "twitter:description", :content => "#{meta.description}"}
+  - if (meta.twitterimage)
+    %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
 %a#homepage-hero.block.bar{:href => "healthcare"}
-	.photo-container
-	.title
-		.actual-title Magical Software for Personalized Medicine
-		.actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
-		.actual-button See our work
+  .photo-container
+  .title
+    .actual-title Magical Software for Personalized Medicine
+    .actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
+    .actual-button See our work
 .clients
 	%table.non-mobile
 		%tbody
@@ -92,82 +75,88 @@
 				%td
 					%a{:href => "healthcare/hgraph"}
 						%img{:src => "/images/healthcare/partners/wallgreen.png"}
-						
-%a#digital-healthcare.block.bar{:href => "features/digital-healthcare"}
+
+%a#zika.block.bar{:href => "http://understandingzika.org/", :target => "_blank"}
 	.photo-container
 	.title
-		%h5.tag January 2016 Feature
-		%h2.name Digital Healthcare in 2016
-		%h3.sub-name 8 guidelines to drive engagement in future healthcare services
+		%h5.tag March 2016 Feature
+		%h2.name Understanding Zika
+		%h3.sub-name There are an estimated 1.6 Million cases of Zika virus in 33 Countries
+%a#digital-healthcare.block.bar{:href => "features/digital-healthcare"}
+  .photo-container
+  .title
+    %h5.tag January 2016 Feature
+    %h2.name Digital Healthcare in 2016
+    %h3.sub-name 8 guidelines to drive engagement in future healthcare services
 
 .double
-	%a#three-m.block.half{:href => "healthcare/3m"}
-		.photo-container
-		.title
-			%h5.tag Client Story: 3M
-			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
-	%a#culture.block.half{:href => "studio/careers"}
-		.photo-container
-		.title
-			%h5.tag Our Culture
-			%h2 Radical transparency is just part of our story&hellip;
+  %a#three-m.block.half{:href => "healthcare/3m"}
+    .photo-container
+    .title
+      %h5.tag Client Story: 3M
+      %h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
+  %a#culture.block.half{:href => "studio/careers"}
+    .photo-container
+    .title
+      %h5.tag Our Culture
+      %h2 Radical transparency is just part of our story&hellip;
 .news
-	.small-title Our work has been showcased by
-	%ul.mobile
-		%li
-			%a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
-				%img{:src => "/images/news/logo-the-boston-globe@2x.png", width: "204", height: "28"}
-				"Blood biomarkers are the key to understanding fitness and well-being."
-		%li
-			%a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
-				%img{:src => "/images/news/logo-new-scientist@2x.png", width: "177", height: "26"}
-				"Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
-		%li
-			%a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
-				%img{:src => "/images/news/logo-npr@2x.png", width: "177", height: "56"}
-				"The Care Card deck exudes their own geeky charm."
-		%li
-			%a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
-				%img{:src => "/images/news/logo-ted@2x.png", width: "132", height: "48"}
-				Stephen Friend presents The Resilience Project.
-		%li
-			%a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
-				%img{:src => "/images/news/logo-wired@2x.png", width: "186", height: "38"}
-				"hGraph might be just what the doctor will order."
-	%table.non-mobile
-		%tbody
-			%tr
-				%td
-					%a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
-						%img{:src => "/images/news/logo-the-boston-globe.png", alt: "The Boston Globe"}
-				%td
-					%a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
-						%img{:src => "/images/news/logo-new-scientist.png"}
-				%td
-					%a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
-						%img{:src => "/images/news/logo-npr.png"}
-				%td
-					%a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
-						%img{:src => "/images/news/logo-ted.png"}
-				%td
-					%a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
-						%img{:src => "/images/news/logo-wired.png"}
-			%tr
-				%td
-					"Blood biomarkers are the key to understanding fitness and well-being."
-				%td
-					"Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
-				%td
-					"The Care Card deck exudes their own geeky charm."
-				%td
-					"Stephen Friend presents The Resilience Project."
-				%td
-					"hGraph might be just what the doctor will order."
+  .small-title Our work has been showcased by
+  %ul.mobile
+    %li
+      %a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
+        %img{:src => "/images/news/logo-the-boston-globe@2x.png", width: "204", height: "28"}
+        "Blood biomarkers are the key to understanding fitness and well-being."
+    %li
+      %a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
+        %img{:src => "/images/news/logo-new-scientist@2x.png", width: "177", height: "26"}
+        "Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
+    %li
+      %a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
+        %img{:src => "/images/news/logo-npr@2x.png", width: "177", height: "56"}
+        "The Care Card deck exudes their own geeky charm."
+    %li
+      %a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
+        %img{:src => "/images/news/logo-ted@2x.png", width: "132", height: "48"}
+        Stephen Friend presents The Resilience Project.
+    %li
+      %a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
+        %img{:src => "/images/news/logo-wired@2x.png", width: "186", height: "38"}
+        "hGraph might be just what the doctor will order."
+  %table.non-mobile
+    %tbody
+      %tr
+        %td
+          %a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
+            %img{:src => "/images/news/logo-the-boston-globe.png", alt: "The Boston Globe"}
+        %td
+          %a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
+            %img{:src => "/images/news/logo-new-scientist.png"}
+        %td
+          %a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
+            %img{:src => "/images/news/logo-npr.png"}
+        %td
+          %a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
+            %img{:src => "/images/news/logo-ted.png"}
+        %td
+          %a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
+            %img{:src => "/images/news/logo-wired.png"}
+      %tr
+        %td
+          "Blood biomarkers are the key to understanding fitness and well-being."
+        %td
+          "Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
+        %td
+          "The Care Card deck exudes their own geeky charm."
+        %td
+          "Stephen Friend presents The Resilience Project."
+        %td
+          "hGraph might be just what the doctor will order."
 
 .recent-blog-post.dynamic
 
 %a#from-bathroom-to-healthroom.block.bar{:href => "features/from-bathroom-to-healthroom/"}
-	.photo-container
-	.title
-		%h2.name From Bathroom to Healthroom
-		%h3.sub-name How magical technology will revolutionize human health
+  .photo-container
+  .title
+    %h2.name From Bathroom to Healthroom
+    %h3.sub-name How magical technology will revolutionize human health

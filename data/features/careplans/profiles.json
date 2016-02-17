@@ -1,0 +1,182 @@
+[
+	// isabella
+	{
+		"id":"#1",
+		"name":"Isabella",
+		"age":"13",
+		"sex":"Female",
+		"height":"60 inches",
+		"weight":"104 lbs",
+		"summary":"Isabella is a 13 year old, active 7th grader who plays the flute and is a defender on the girls soccer team. Isabella snacks throughout the day and she does not like meat very much.",
+		"options_summaries":["Isabella recently tore her ACL during a soccer game and underwent surgery to repair the ligament. It has been 3 weeks since the surgery, and she is now in the rehabilitation process.","Isabella started her first menstrual cycle last month."],
+		"options":["ACL Tear<span class='superscript'>15-17</span>", "Puberty<span class='superscript'>40-42</span>"],
+		"care team":"Mom, Dad, Pediatrician, Coach",
+		"care plan":{
+			"Nutrition":{
+				"goals":"Develop and maintain healthy eating habits and routines. <br>Promote bone strength and growth.",
+				"instruction":"Eat breakfast every day to boosts the body's metabolism, improve energy and alertness, and reduce risk of obesity. <br>Avoid junk and processed foods.<br>Get 4 servings of calcium every day for bone growth and strength.<br>Consume vitamin D enriched milk, eggs, and fatty fish like salmon to improve absorption of calcium.",
+				"review":"Review eating habits next check-up.<br>Assess for any barriers to nutrition plan adherence. "
+			},
+			"Physical Activity":{
+				"goals":"Maintain regular physical activity.<br>Strengthen bones and muscles.<br>Ensure adequate time for rest and relaxation.",
+				"instruction":"Get at least 60 minutes of mostly aerobic exercise.<br>Get muscle and bone strengthening exercise 3 days a week.",
+				"review":"Review weight trend and adjust plan accordingly.<br>Assess for barriers to exercise plan adherence."
+			},
+			"Sleep":{
+				"goals":"Get enough sleep.<br>Get on a regular sleep schedule.",
+				"instruction":"Prioritize 8-10 hours of sleep for active, growing bodies.<br>Avoid sleeping in weekend to maintain a consistent routine.<br>Stop using computer, phone, and TV 1 hour before bed for a better quality sleep. ",
+				"review":"Assess general morning energy levels at next check-up."
+			},
+			"Mental Resilience":{
+				"goals":"",
+				"instruction":"",
+				"review":""
+			},
+			"Managing Medication":{
+				"goals":"Ensure vaccinations are received.",
+				"instruction":"Schedule next HPV vaccination in 3 months.<br>Get influenza vaccine in the fall.",
+				"review":"Assess upcoming vaccinations."
+			},
+			"Sexual Health":{
+				"goals":"",
+				"instruction":"",
+				"review":""
+			},
+			"Cessation of Bad Habits":{
+				"goals":"Get less screen time.<br>Reduce bad snacking behaviors.",
+				"instruction":"Spend less than 2 hours of continuous time on screens - try timers, parental controls.<br>Keep only healthy snacks (fruits, vegetables, nuts, whole grains) in the house.",
+				"review":"Assess for barriers to achieving goal screen time.<br>Review satisfaction/adherence to snacking goals."
+			},
+			"Tracking Vitals":{
+				"goals":"Track height and weight.",
+				"instruction":"Track height and weight once a month with phone application or pencil and paper.",
+				"review":"Schedule yearly physical exams with pediatrician.<br>Test regularly for anemia."
+			},
+			"Managing ADLs":{
+				"goals":"Remembering to brush teeth daily. ",
+				"instruction":"Leave a reminder on the bathroom sink, or set an alarm.",
+				"review":""
+			}
+		}
+	},
+	// reggie
+	{
+		"id":"#2",
+		"name":"Reggie",
+		"age":"35",
+		"sex":"Male",
+		"height":"72 inches",
+		"weight":"180 lbs",
+		"summary":"Reggie is a 35 year old, successful, driven accountant who works 8am-6pm in downtown Boston and commutes home to a nearby suburb. He enjoys gaming and occasionally going out to drink at bars or clubs with friends during the week. On the weekends, Reggie likes to swim at the local fitness center or go on walks with his labradoodle. Reggie is in long distance relationship, and sees his boyfriend about once every 2 weeks.",
+		"options_summaries":["Reggie's mother was recently moved to an intensive memory-care unit at an assisted living facility after her Alzheimer's progressed. Reggie arranges all of his mother's medical concerns, and goes to visit with her every other night and during the day on weekends.","Reggie was also recently diagnosed with Chlamydia by his doctor."],
+		"options":["Caregiver<span class='superscript'>31-32</span>","Chlamydia<span class='superscript'>30</span>"],
+		"care team":"Primary Care Physician, Boyfriend, Mother, Friends",
+		"care plan":{
+			"Nutrition":{
+				"goals":"Eat a healthier, plant-based diet.",
+				"instruction":"Eat more vegetables, fruit, nuts, beans, and whole grains, less meat.<br>Avoid red meats, processed meats, or cured meats.<br>Eat 2-3 servings to fish a week (for the fish oils).<br>Replace the fatty snacks consumed when gaming, with a fresh fruit.<br>Avoid the free high-fat snack foods at the accounting firm.<br>Meatless Mondays.",
+				"review":"Review eating habits next check-up.<br>Assess for any barriers to nutrition plan adherence. "
+			},
+			"Physical Activity":{
+				"goals":"Sit less and maintain current body weight by staying active.",
+				"instruction":"Get 30 minutes of physical activity a day.<br>Join a local swim team that meets twice a week.<br>Use a bike for the 30 minute work commute.<br>Find alternate bike paths to stay motivated and interested in the exercise.",
+				"review":"Review weight trend and adjust plan accordingly.<br>Assess for barriers to exercise plan adherence."
+			},
+			"Sleep":{
+				"goals":"Feel more awake in the mornings for work. ",
+				"instruction":"Turn the games/computer off at least an hour before bed.<br>Go to bed by midnight to sleep at least 8 hours for the 8am job.",
+				"review":"Review general morning energy levels a month from now."
+			},
+			"Mental Resilience":{
+				"goals":"Reduce the stress from partner often being absent.",
+				"instruction":"Call partner by next month, and communicate the reason for the stress.<br>If interest in hobbies are still lacking two weeks from now, seek appointment with specialized mental health professional.<br>Focus on meeting with friends more often. ",
+				"review":"Review mental stress condition with a care provider."
+			},
+			"Managing Medication":{
+				"goals":"Get vitamin D levels up to the normal range to lower the risk of depression.",
+				"instruction":"Take 2000IUs of vitamin D3 every day.<br>Place daily vitamins by the coffee maker to incorporate them into daily routine.",
+				"review":"Review vitamin D levels every 3 months. "
+			},
+			"Sexual Health":{
+				"goals":"Have an understanding of personal sexual health status.<br>Understand how to avoid HIV infection and other sexually transmitted diseases (STDs).",
+				"instruction":"Conduct monthly self-exams for testicular cancer.<br>Make appointment this month with primary provider for HIV screening.<br>Use condoms to form a barrier between the penis and anus, or mouth.",
+				"review":"Review results from HIV screening."
+			},
+			"Cessation of Bad Habits":{
+				"goals":"Reduce alcohol intake by half of current consumption.",
+				"instruction":"To limit alcohol consumption, drink water for every other friend meeting.",
+				"review":"Review general alcohol consumption levels."
+			},
+			"Tracking Vitals":{
+				"goals":"Be able to consistently keep track of current body weight.",
+				"instruction":"Place the bathroom scale in front of the counter as a daily reminder to check body weight.",
+				"review":"Review trends in body weight with a primary care provider."
+			},
+			"Managing ADLs":{
+				"goals":"Manage time to bike to work in the mornings. ",
+				"instruction":"Set an alarm to wake up half an hour earlier than usual.",
+				"review":"Review biking frequency in the commute."
+			}
+		}
+	},
+	// donna
+	{
+		"id":"#3",
+		"name":"Donna",
+		"age":"68",
+		"sex":"Female",
+		"height":"66 inches",
+		"weight":"130 lbs",
+		"summary":"Donna is a 68 year old, retired bank clerk living in downtown Chicago with her husband. She enjoys doing crossword puzzles and watching TV at night, and therefore doesn't leave the apartment much. Donna often feels isolated and lonely, and suffers from chronic neck pain from sitting for long periods of time.",
+		"options_summaries":["Donna has also been displaying early symptoms of dementia and has recently met with her doctor to address this issue.","Donna was recently diagnosed with hypertension at her last annual check-up."],
+		"options":["Dementia<span class='superscript'>33-37</span>", "Hypertension<span class='superscript'>25-29</span>"],
+		"care team":"Primary Care Physician, Daughter, Husband, Neighbor",
+		"care plan":{
+			"Nutrition":{
+				"goals":"Eat a healthier, plant-based diet.",
+				"instruction":"Eat more vegetables, fruit, nuts, beans, and whole grains, less meat.<br>Avoid red meats, processed meats, or cured meats.<br>Avoid processed meals by signing up for Meals on Wheels delivery once a week to help deliver healthier groceries to cook with.",
+				"review":"Review eating habits next month.<br>Review any barriers to nutrition plan adherence. "
+			},
+			"Physical Activity":{
+				"goals":"Get more active.",
+				"instruction":"Begin with a local community center that offers exercise classes for seniors and has sessions at least 3 times a week.",
+				"review":"Review mobility and movement changes 4 months from now."
+			},
+			"Sleep":{
+				"goals":"Reduce the time it takes to get to sleep.",
+				"instruction":"Buy soft earplugs for daily use to reduce noise coming from the windows.<br>Turn off all TV lighting at least an hour before sleeping.",
+				"review":"Review quality of sleep next month and consider a sleep aid."
+			},
+			"Mental Resilience":{
+				"goals":"Increase social interaction and community involvement.",
+				"instruction":"Join a local community organization to social engage with people around a hobby.",
+				"review":"Review satisfaction with community involvement or barriers to social interaction."
+			},
+			"Managing Medication":{
+				"goals":"Improve vitamin B6, B12, and Folate deficiencies by taking supplements regularly.",
+				"instruction":"Improve vitamin B6, B12, and Folate deficiencies by taking supplements regularly.",
+				"review":"Test vitamin levels every 6 months and adjust dosage accordingly."
+			},
+			"Sexual Health":{
+				"goals":"Increase sexual activity with husband.",
+				"instruction":"Consider having sex in the mornings, or at times of day when both parties are most rested.",
+				"review":"Review satisfaction with sexual activity or barriers to satisfaction."
+			},
+			"Cessation of Bad Habits":{
+				"goals":"Reduce unhealthy snacking when bored.<br>Improve posture to reduce neck pain and stiffness.",
+				"instruction":"Keep only health snacks (fruits, vegetables, nuts) in the house.<br>Find hobbies that occupy the hands to fill periods of boredom.<br>Purchase a chair with strong ergonomic back support to prevent hunching forward when watching TV at night.<br>Purchase neck support pillow for daily use when sleeping.",
+				"review":"Review quality of neck posture in 6 months, refer to Orthopedic if no improvement."
+			},
+			"Tracking Vitals":{
+				"goals":"Track weight, blood pressure, cholesterol, and blood sugar levels to screen for common chronic conditions.",
+				"instruction":"Schedule next annual check-up. ",
+				"review":"Review results from check-up with a care provider to determine additional steps that may be needed."
+			},
+			"Managing ADLs":{
+				"goals":"Prevent future dental problems by prioritizing regular dental hygiene.",
+				"instruction":"Set a daily automatic alarm as a reminder to brush teeth. A digital device, a clock, or watch reminder may all be used.",
+				"review":"Review dental health in 6 months."
+			}
+		}
+	}
+]
