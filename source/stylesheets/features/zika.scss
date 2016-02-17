@@ -883,11 +883,10 @@ img.scale-with-grid {
 	}
 	.column {
 		border: none;
-		padding: 1.5rem 5rem 1.5rem 0;
+		padding: 1.5rem 3rem 1.5rem 0;
 		
 		.image {
-			height: 9rem;
-			margin-bottom: 2rem;
+			margin-bottom: 20px;
 			img {
 				display: block;	
     			margin: 0 auto;
@@ -904,6 +903,7 @@ img.scale-with-grid {
 	padding-right: 0;
 	width: 22%;
 	height: 100%;
+	padding: 3rem;
 	a { 
 		word-break: break-all;
 		&:hover {
@@ -922,16 +922,17 @@ img.scale-with-grid {
 			text-transform: none;
 			line-height: $font-size-base + 1rem;
 			word-break: break-all;
+			font-size: 1.5rem;
 		}
 	}
-	h3, p {padding-right: 5rem;}
+	// h3, p {padding-right: 5rem;}
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		li {
-			width: 28%;
-			padding: 0 2rem 2rem 0;
+			width: 48%;
+			padding: 0 1rem 1rem 0;
 			display: inline-block;
 			@media (max-width: $tablet) {
 				width: 15%;
