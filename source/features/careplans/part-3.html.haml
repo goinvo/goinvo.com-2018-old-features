@@ -1,0 +1,42 @@
+- content_for(:title) do
+	= "Care Plans"
+- content_for(:page_head) do
+	= stylesheet_link_tag "vendor/bootstrap.min.css"
+	= stylesheet_link_tag "features/careplans"
+	= stylesheet_link_tag "feature-elements"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/careplans/careplans-scroll.js"
+	= javascript_include_tag "features/careplans/careplanIII.js"
+
+	- meta = page_for_meta("careplans-part3")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%article#feature-article
+	.hero-bg
+		%img{:src => "../../images/features/careplans/part3/hero_image.jpg"}
+	%button.see-the-future{:type => "button", :class => "btn btn-primary"} SEE THE FUTURE
+	.part.one.featureIII
+		%h1 Digital is Better
+		.carousel.slide
+			.carousel-inner{:role=>"listbox"}
+				.item.active.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide1.png"}
+						%div.col-sm-6
+							%p The “Magic Mirror” on the wall is not just a fantasy anymore. Using facial recogition and mood sensing, blood pressure and heart rate sensing through skin pigmentation, and other technology, we can imbue the ordinary bathroom mirror with interactive qualities to help monitor our health.
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				%a.left.control{:href=>"#carousel-barriers", :role=>"button", :data=>{:slide=>"prev"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+				%a.right.control{:href=>"#carousel-barriers", :role=>"button", :data=>{:slide=>"next"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}

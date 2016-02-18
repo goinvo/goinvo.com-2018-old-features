@@ -1904,3 +1904,62 @@ contributor and reference
 		display: inline;
 	}
 }
+
+/***************************************
+Feature III
+*******************************************/
+#feature-article button.see-the-future {
+	background-color: rgba(34, 82, 118, .85);
+	font-size: 1.3rem;
+	padding: 10px 50px;
+	font-weight: normal;
+	margin: 30px auto;
+	display: block;
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+#feature-article .part.one.featureIII {
+	background-image: url("../../images/features/careplans/part3/part1_bg.png");
+	background-size: cover;
+	background-position: bottom right;
+}
+#feature-article .part.one.featureIII h1 {
+	color: #ffffff;
+}
+#feature-article .part.one.featureIII .carousel .item {
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+#feature-article .part.one.featureIII .carousel .container-fluid,
+#feature-article .part.one.featureIII .carousel .item .row,
+#feature-article .part.one.featureIII .carousel .item .col-sm-6 {
+	padding: 0;
+	margin: 0;
+}
+#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child img {
+	width: 100%;
+	border-top-left-radius: 10px;
+	@media  (max-width: 767px) {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 10px;
+	}
+	@media  (min-width: 768px) {
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 0;
+	}
+}
+#feature-article .part.one.featureIII .carousel .item .col-sm-6:last-child {
+	color: #000000;
+	padding: 30px 30px 10px 30px;
+
+	a {
+		font-size: 0.8rem;
+		font-weight: normal;
+		margin-top: 10px;
+		img {
+			display: inline-block;
+			height: 0.6rem;
+			margin-right: 10px;
+		}
+	}
+}
