@@ -24,9 +24,8 @@
 						headerText: 'Design better outcomes',
 						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
 						portfolioImage: '/images/home/hgraph-visualize-health.png',
-						portfolioText: 'Seeing your health in one picture.',
+						portfolioText: 'See your health in one picture.',
 						caseStudyUrl: 'healthcare/hgraph/',
-						buttonText: '',
 						longTextClass: false
 					},
 					{
@@ -36,7 +35,6 @@
 						portfolioImage: '/images/home/homepage-image-02.png',
 						portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
 						caseStudyUrl: 'healthcare/3m/',
-						buttonText: '',
 						longTextClass: false
 					},
 					{
@@ -51,31 +49,32 @@
 					},
 					{
 						backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
-						headerText: 'Make healthcare fun',
+						headerText: 'Patient tested. Clinician approved.',
 						subHeaderText: 'We design magical experiences to change behavior for good.',
-						portfolioImage: '',
-						portfolioText: '',
 						caseStudyUrl: 'healthcare',
 						buttonText: 'See Our Work',
 						longTextClass: false
 					}
 				]
 
-				if(homepageHeaderContent[randNum].longTextClass == true) {
+				if(homepageHeaderContent[randNum].longTextClass) {
 					$('a#homepage-hero').addClass("long-text");
 				}
 
 				$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeaderContent[randNum].backgroundImage + ")");
 				$('#homepage-hero .actual-title').text(homepageHeaderContent[randNum].headerText);
 				
-				if(homepageHeaderContent[randNum].portfolioImage.length > 0) {
+				if(homepageHeaderContent[randNum].portfolioImage) {
 					$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeaderContent[randNum].portfolioImage + " />");
 				}
 
 				$('#homepage-hero .actual-content').append(homepageHeaderContent[randNum].subHeaderText);
-				$('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeaderContent[randNum].portfolioText + "</p>");
 
-				if(homepageHeaderContent[randNum].buttonText.length > 0) {
+				if(homepageHeaderContent[randNum].portfolioText) {
+					$('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeaderContent[randNum].portfolioText + "</p>");
+				}
+
+				if(homepageHeaderContent[randNum].buttonText) {
 					$('#homepage-hero .actual-button').append(homepageHeaderContent[randNum].buttonText);
 				} else {
 					$('#homepage-hero .actual-button').append('View Case Study');

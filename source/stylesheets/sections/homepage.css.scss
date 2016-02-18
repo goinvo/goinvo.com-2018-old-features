@@ -224,47 +224,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		}
 	}
 
-	&.iphone-images-style {
-		min-height: 700px;
-
-		.photo-container {
-			min-height: 700px;
-			background-position: center bottom;
-		}
-
-		.title {
-			padding: 1em 3em;
-		}
-
-		.actual-content {
-			margin: 0 auto;
-			margin-top: 12px;
-		}
-
-		@media only screen and (min-width: 1175px) {
-			.photo-container {
-				background-size: 1050px !important;
-				background-position: center bottom;
-			}
-		}
-
-		@media only screen and (max-width: 800px) {
-			.photo-container {
-				background-size: 140% !important;
-				background-position: center bottom;
-			}
-		}
-
-		@media only screen and (max-width: 750px) {
-			.title {
-				.actual-content {
-					margin-top: 1em;
-					margin-bottom: .5em;
-				}
-			}
-		}
-	}
-
 	&:hover {
 		.photo-container, .video-container {
 			transform: none;
@@ -284,41 +243,28 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	.title {
 		top: 18px;
-
-		@media only screen and (max-width: 750px){
-			top: 10px;
-		}
 	}
 
-
 	.actual-title {
-		font-size: 75px;
+		font-size: 70px;
 		@media only screen and (max-width: 1380px)  and (min-width: 1213px){
-			font-size: 65px;
-			line-height: 75px;
 		}
 
-		@media only screen and (max-width: 1213px) and (min-width: 750px){
+		@media only screen and (max-width: 980px) and (min-width: 750px){
 			font-size: 60px;
-			line-height: 70px;
+			line-height: 63px;
 		}
 
 		@media only screen and (max-width: 750px){
 			font-size: 50px;
 			line-height: 52px;
 		}
-
-
 	}
 
 	.actual-content {
 		font-size: 28px;
 		margin-top: 14px;
-
-		@media only screen and (max-width: 750px){
-			font-size: 26px;
-			line-height: 36px;
-		}
+		line-height: 36px;
 	}
 
 	.actual-portfolio {
