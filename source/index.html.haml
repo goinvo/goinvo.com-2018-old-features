@@ -3,7 +3,6 @@
   :javascript
     posts = [];
     var randNum = Math.ceil(Math.random()*3);
-
     function makeBlogPostBottom(posts) {
       // Grabs the first image in the blog post
       var currentString = posts[0].encoded;
@@ -13,13 +12,11 @@
       currentString = currentString.substr(sIndex + 5);
       sIndex = currentString.indexOf('"');
       currentString = currentString.substr(0, sIndex);
-
       // Set the recent blog post section
       $('#oracle').removeClass('bar').addClass('half');
       $('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
       $('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
     }
-
     // Randomizing the homepage header
     var randNum = Math.floor((Math.random() * 2) + 1);
     if( randNum === 1) {
@@ -32,8 +29,6 @@
       $('#homepage-hero .photo-container').css('background-size', '90%');
       $('#homepage-hero .photo-container').css('background-position-x', 'center');
     }
-
-
   - meta = page_for_meta("homepage")
   %meta{:name => "description", :content => "#{meta.description}" }
   %meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -51,37 +46,36 @@
     .actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
     .actual-button See our work
 .clients
-	%table.non-mobile
-		%tbody
-			%tr
-				%td
-					%a{:href => "healthcare/partners-gene-insight"}
-						%img{:src => "/images/healthcare/partners/partners.png"}
-				%td
-					%a{:href => "healthcare/3m"}
-						%img{:src => "/images/healthcare/partners/3m.png"}
-				%td
-					%a{:href => "healthcare/inspired-ehrs"}
-						%img{:src => "/images/healthcare/partners/nih.png"}
-				%td
-					%a{:href => "healthcare/mount-sinai"}
-						%img{:src => "/images/healthcare/partners/mtsinai.png"}
-				%td
-					%a{:href => "healthcare"}
-						%img{:src => "/images/healthcare/partners/jandj.png"}
-				%td
-					%a{:href => "healthcare/personal-genome-project"}
-						%img{:src => "/images/healthcare/partners/pgp.png"}
-				%td
-					%a{:href => "healthcare/hgraph"}
-						%img{:src => "/images/healthcare/partners/wallgreen.png"}
-
+  %table.non-mobile
+    %tbody
+      %tr
+        %td
+          %a{:href => "healthcare/partners-gene-insight"}
+            %img{:src => "/images/healthcare/partners/partners.png"}
+        %td
+          %a{:href => "healthcare/3m"}
+            %img{:src => "/images/healthcare/partners/3m.png"}
+        %td
+          %a{:href => "healthcare/inspired-ehrs"}
+            %img{:src => "/images/healthcare/partners/nih.png"}
+        %td
+          %a{:href => "healthcare/mount-sinai"}
+            %img{:src => "/images/healthcare/partners/mtsinai.png"}
+        %td
+          %a{:href => "healthcare"}
+            %img{:src => "/images/healthcare/partners/jandj.png"}
+        %td
+          %a{:href => "healthcare/personal-genome-project"}
+            %img{:src => "/images/healthcare/partners/pgp.png"}
+        %td
+          %a{:href => "healthcare/hgraph"}
+            %img{:src => "/images/healthcare/partners/wallgreen.png"}
 %a#zika.block.bar{:href => "http://understandingzika.org/", :target => "_blank"}
-	.photo-container
-	.title
-		%h5.tag March 2016 Feature
-		%h2.name Understanding Zika
-		%h3.sub-name There are an estimated 1.6 Million cases of Zika virus in 33 Countries
+  .photo-container
+  .title
+    %h5.tag March 2016 Feature
+    %h2.name Understanding Zika
+    %h3.sub-name There are an estimated 1.6 Million cases of Zika virus in 33 Countries
 %a#digital-healthcare.block.bar{:href => "features/digital-healthcare"}
   .photo-container
   .title

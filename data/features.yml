@@ -1,10 +1,15 @@
 articles:
+  - title: "Understanding Zika"
+    tag_line: "There are an estimated 1.6 million cases of Zika virus in 33 countries"
+    date: "2016-02-01"
+    image: "features/zika/map.png"
+    url: "zika"
+    
   - title: "Digital Healthcare in 2016"
     tag_line: "8 guidelines to drive engagement in future healthcare services"
     date: "2016-01-01"
     image: "features/digital-healthcare/digital_health_cover_transp.gif"
     url: "digital-healthcare"
-    is_most_recent: true
 
   - title: "Healing U.S. Healthcare"
     tag_line: "How do we save an ailing system?"

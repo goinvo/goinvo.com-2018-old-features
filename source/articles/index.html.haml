@@ -14,7 +14,7 @@
 - feature_articles = feature_articles_sorted_by_date()
 - most_recent_feature = most_recent_feature_article()
 %a.most-recent-article-link{ :href => "/features/#{most_recent_feature.url}" }
-  %header.most-recent-article
+  %header.most-recent-article{ :style => "background-image: url('/images/#{most_recent_feature.image}');" }
     .outer-container
       .inner-container
         %span
@@ -35,5 +35,5 @@
 
 .blog-article-list-container
   %ul.blog-article-list
-    %li Derp
+    %li Derp 1
     %li Derp 2
