@@ -23,9 +23,11 @@
 						backgroundImage: '/images/home/family-doctor-visit.jpg',
 						headerText: 'Design better outcomes',
 						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
-						portfolioImage: '/images/home/homepage-image-01.png',
-						portfolioText: 'hGraph visualizes patient health in one picture.',
-						caseStudyUrl: 'healthcare/hgraph/'
+						portfolioImage: '/images/home/hgraph-visualize-health.png',
+						portfolioText: 'Seeing your health in one picture.',
+						caseStudyUrl: 'healthcare/hgraph/',
+						buttonText: '',
+						longTextClass: false
 					},
 					{
 						backgroundImage: '/images/home/homepage-02.png',
@@ -33,30 +35,52 @@
 						subHeaderText: 'We reimagine processes and services to streamline healthcare.',
 						portfolioImage: '/images/home/homepage-image-02.png',
 						portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
-						caseStudyUrl: 'healthcare/3m/'
+						caseStudyUrl: 'healthcare/3m/',
+						buttonText: '',
+						longTextClass: false
 					},
 					{
 						backgroundImage: '/images/home/homepage-03.png',
-						headerText: 'Design better access',
-						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+						headerText: 'Magical software for personalized medicine',
+						subHeaderText: 'The software we design helps progressive healthcare companies create new markets and exploit future tech.',
 						portfolioImage: '/images/home/homepage-image-03.png',
-						portfolioText: 'Big pharma weaves Cognitive Behavior Therapy (CBT) into everyday life.',
-						caseStudyUrl: 'contact'
+						portfolioText: 'Outpatient care weaves Cognitive Behavior Therapy (CBT) into everyday life.',
+						caseStudyUrl: 'healthcare',
+						buttonText: 'See Our Work',
+						longTextClass: true
 					},
 					{
 						backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
 						headerText: 'Make healthcare fun',
-						subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+						subHeaderText: 'We design magical experiences to change behavior for good.',
 						portfolioImage: '',
-						portfolioText: 'Contact us today to discuss your next healthcare project',
-						caseStudyUrl: 'contact'
+						portfolioText: '',
+						caseStudyUrl: 'healthcare',
+						buttonText: 'See Our Work',
+						longTextClass: false
 					}
 				]
 
+				if(homepageHeaderContent[randNum].longTextClass == true) {
+					$('a#homepage-hero').addClass("long-text");
+				}
+
 				$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeaderContent[randNum].backgroundImage + ")");
 				$('#homepage-hero .actual-title').text(homepageHeaderContent[randNum].headerText);
+				
+				if(homepageHeaderContent[randNum].portfolioImage.length > 0) {
+					$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeaderContent[randNum].portfolioImage + " />");
+				}
+
 				$('#homepage-hero .actual-content').append(homepageHeaderContent[randNum].subHeaderText);
-				$('#homepage-hero .actual-button').append('View Case Study');
+				$('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeaderContent[randNum].portfolioText + "</p>");
+
+				if(homepageHeaderContent[randNum].buttonText.length > 0) {
+					$('#homepage-hero .actual-button').append(homepageHeaderContent[randNum].buttonText);
+				} else {
+					$('#homepage-hero .actual-button').append('View Case Study');
+				}
+
 				$('#homepage-hero').attr('href', homepageHeaderContent[randNum].caseStudyUrl);
 
 				// Grabs the first image in the blog post
@@ -96,7 +120,9 @@
 	.title
 		.actual-title 
 		.actual-content 
-		.actual-button 
+		.actual-portfolio 
+		.actual-portfolio-description 
+			.actual-button 
 .clients
 	%table.non-mobile
 		%tbody
