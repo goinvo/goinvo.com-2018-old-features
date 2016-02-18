@@ -249,6 +249,14 @@
   twittersite: "@goinvo"
   twittertitle: "Involution Studios - Featured Articles"
   
+- page: "zika"
+  description: "An easy-to-digest, visual guide to understanding the Zika virus."
+  keywords: "understanding zika disease design prevetion spray syptoms history area transmission technologies health mobile medical"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Understanding Zika"
+  twitterimage: "http://www.goinvo.com/images/features/zika/zika-twitter-card.jpg"
+
 - page: "careplans-part1"
   description: "What is a care plan, and how did they start?"
   keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
