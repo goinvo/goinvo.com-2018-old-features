@@ -1908,6 +1908,23 @@ contributor and reference
 /***************************************
 Feature III
 *******************************************/
+#feature-article .hero-bg {
+	height: 700px;
+	background-image: url("../../images/features/careplans/part3/hero_image.jpg");
+	background-size: cover;
+	position: relative;
+
+	p {
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		padding: 20px;
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.6));
+	}
+}
 #feature-article button.see-the-future {
 	background-color: rgba(34, 82, 118, .85);
 	font-size: 1.3rem;
