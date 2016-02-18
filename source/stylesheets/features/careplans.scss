@@ -1720,7 +1720,6 @@ Feature II: Next Steps
 	width: 35%;
 	// max-width: 323px;
 	position: relative;
-	margin-top: 2.1rem;
 	.coming-soon-box {
 		padding-bottom: 0;
 	}
@@ -1762,6 +1761,7 @@ Feature II: Next Steps
 	}
 }
 #feature-article .part.four .coming-soon-ii.mobile {
+	margin-top: 50px;
 	a {
 		width: 48%;
 	}
@@ -1782,7 +1782,6 @@ Feature II: Next Steps
 		color: #ffffff;
 	}
 	a:first-child {
-		margin-top: 2.1rem;
 		.coming-soon-box {
 			border-top-right-radius: 10px;
 			border-bottom-right-radius: 10px;
@@ -1796,7 +1795,7 @@ Feature II: Next Steps
 		.coming-soon-box {
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
-			background-color: #c6d4de;
+			// background-color: #c6d4de;
 		}
 		img {
 			float: right;
@@ -1926,7 +1925,7 @@ Feature III
 	}
 }
 #feature-article button.see-the-future {
-	background-color: rgba(34, 82, 118, .85);
+	background-color: #426b8a;
 	font-size: 1.3rem;
 	padding: 10px 50px;
 	font-weight: normal;
@@ -1934,7 +1933,13 @@ Feature III
 	display: block;
 	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
 }
+#feature-article .part.featureIII {
+	padding: 40px 10%;
+}
 
+/******************************
+Feature III: Part One
+******************************/
 #feature-article .part.one.featureIII {
 	background-image: url("../../images/features/careplans/part3/part1_bg.png");
 	background-size: cover;
@@ -1942,14 +1947,47 @@ Feature III
 }
 #feature-article .part.one.featureIII h1 {
 	color: #ffffff;
+	line-height: 2.5rem;
 }
 #feature-article .part.one.featureIII .carousel .item {
 	background-color: #ffffff;
 	border-radius: 10px;
 }
-#feature-article .part.one.featureIII .carousel .container-fluid,
-#feature-article .part.one.featureIII .carousel .item .row,
-#feature-article .part.one.featureIII .carousel .item .col-sm-6 {
+#feature-article .part.one.featureIII .carousel {
+	margin-bottom: 40px;
+}
+#feature-article .part.one.featureIII .carousel .control {
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+	background-color: #426b8a;
+	padding: 10px 0 0 18px;
+	position: absolute;
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+	img {width: 15px;}
+	@media  (max-width: 767px) {
+		top: 230px;
+	}
+	@media  (min-width: 768px) {
+		bottom: 30px;
+	}
+
+	&.left {
+		left: 20px;
+		padding-left: 13px;
+		img {
+			transform: scaleX(-1);
+		}
+    }
+    &.right {
+    	right: 20px;
+    }
+}
+#feature-article .part.featureIII .container-fluid,
+#feature-article .part.featureIII .row,
+#feature-article .part.featureIII .col-sm-6,
+#feature-article .part.featureIII .col-sm-4,
+#feature-article .part.featureIII .col-sm-8 {
 	padding: 0;
 	margin: 0;
 }
@@ -1980,3 +2018,230 @@ Feature III
 		}
 	}
 }
+
+/******************************
+Feature III: Part Two
+******************************/
+#feature-article .part.two.featureIII {
+	background-image: url("../../images/features/careplans/part3/part2_bg.png");
+	background-size: cover;
+	background-position: bottom right;
+}
+#feature-article .part.two.featureIII h1 {
+	color: #ffffff;
+	line-height: 2.5rem;
+	float: left;
+	width: calc(100% - 115px);
+}
+#feature-article .part.two.featureIII p {
+	color: #ffffff;
+}
+#feature-article .part.two.featureIII .content {
+	@media  (max-width: 767px) {
+		width: calc(100% - 115px);
+		float: left;
+		margin-bottom: 20px;
+	}
+}
+#feature-article .part.two.featureIII .col-sm-4 {
+	@media  (min-width: 768px) {
+		padding-right: 20px;
+	}
+}
+#feature-article .part.two.featureIII img {
+	margin-bottom: 30px;
+	width: 100%;
+}
+#feature-article .part.two.featureIII a {
+	font-size: 0.8rem;
+	line-height: 1rem;
+	background-color: #ffffff;
+	padding: 10px 15px;
+	color: #426b8a;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	float: right;
+	width: 106px;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+
+/******************************
+Feature III: Part Three
+******************************/
+#feature-article .part.three.featureIII {
+	background-image: url("../../images/features/careplans/part3/part3_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 20%;
+}
+#feature-article .part.three.featureIII h1 {
+	text-align: right;
+}
+#feature-article .part.three.featureIII img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+#feature-article .part.three.featureIII .content {
+	@media  (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+}
+#feature-article .part.three.featureIII .col-sm-4 {
+	@media  (min-width: 768px) {
+		padding-right: 20px;
+	}
+}
+/******************************
+Feature III: Part Four
+******************************/
+#feature-article .part.four.featureIII {
+	background-image: url("../../images/features/careplans/part3/part4_bg.png");
+	background-size: cover;
+}
+#feature-article .part.four.featureIII h1 {
+	color: #ffffff;
+	line-height: 2.5rem;
+}
+@media  (max-width: 767px) {
+	#feature-article .part.four.featureIII .tabs  {
+		display: none;
+	}
+	#feature-article .part.four.featureIII #carousel-part4 {
+		display: block;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article .part.four.featureIII .tabs {
+		display: block;
+	}
+	#feature-article .part.four.featureIII #carousel-part4 {
+		display: none;
+	}
+}
+#feature-article .part.four.featureIII .tabs .nav-tabs {
+	border-bottom: none;
+	width: 200px;
+	float: left;
+}
+#feature-article .part.four.featureIII .tabs li {
+	float: none;
+	margin-bottom: 20px;
+	height: 60px;
+}
+#feature-article .part.four.featureIII .tabs li a{
+	color: #ffffff;
+	margin: 0;
+	line-height: 1.2rem;
+	border: none;
+	border-radius: 0;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	height: 60px;
+
+	img {
+		width: 1.2rem;
+		vertical-align: top;
+		margin-top: 12px;
+	}
+	img.circle_tick {
+		display: none;
+	}
+	img.circle_hollow {
+		display: inline-block;
+	}
+	div {
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+#feature-article .part.four.featureIII .tabs li:not(.active) a:hover {
+	background: transparent;
+}
+#feature-article .part.four.featureIII .tabs li.active a {
+	color: #4C8D90;
+	img.circle_tick {
+		display: inline-block;
+	}
+	img.circle_hollow {
+		display: none;
+	}
+}
+#feature-article .part.four.featureIII .tabs .tab-content {
+	width: calc(100% - 200px);
+	float: left;
+	padding-left: 20px;
+	border-left: 1px solid #ffffff;
+	margin-bottom: 30px;
+}
+#feature-article .part.four.featureIII p {
+	color: #ffffff;
+}
+#feature-article .part.four.featureIII .content {
+	@media  (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+}
+#feature-article .part.four.featureIII .col-sm-4 {
+	@media  (min-width: 768px) {
+		padding-right: 20px;
+	}
+}
+#feature-article .part.four.featureIII img {
+	width: 100%;
+}
+#feature-article .part.four.featureIII #carousel-part4 h1 {
+	text-align: center;
+	margin-top: 15px;
+	padding: 0 50px;
+	font-size: 1.8rem;
+}
+#feature-article .part.four.featureIII #carousel-part4 .control {
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+	background-color: rgba(255,255,255,.4);
+	padding: 10px 0 0 18px;
+	position: absolute;
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+	img {width: 15px;}
+	bottom: 15px;
+
+	&.left {
+		left: 0px;
+		padding-left: 13px;
+		img {
+			transform: scaleX(-1);
+		}
+    }
+    &.right {
+    	right: 0px;
+    }
+}
+
+
+
+
+
+
+
+/******************************
+Clearfix Hack
+******************************/
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
