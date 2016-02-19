@@ -20,8 +20,6 @@
 	- currentPage = current_page.path
 	- if currentPage.include? "healthcare"
 		- bodyClass = "healthcare"
-	- elsif currentPage.include? "enterprise"
-		- bodyClass = "enterprise"
 	- elsif currentPage.include? "products"
 		- bodyClass = "products"
 	- elsif currentPage.include? "studio"
@@ -48,8 +46,6 @@
 						%nav#nav-buttons
 							%a.nav-button.healthcare{:href => asset_url('healthcare')} 
 								.nav-element Healthcare
-							%a.nav-button.enterprise{:href => asset_url('enterprise')} 
-								.nav-element Enterprise
 							%a.nav-button.products{:href => asset_url('products')} 
 								.nav-element Products
 							%a.nav-button.studio{:href => asset_url('studio/team')}
@@ -63,8 +59,6 @@
 					%nav#nav-buttons-mobile
 						%a.nav-button.healthcare{:href => asset_url('healthcare')} 
 							.nav-element Healthcare
-						%a.nav-button.enterprise{:href => asset_url('enterprise')}
-							.nav-element Enterprise
 						%a.nav-button.products{:href => asset_url('products')} 
 							.nav-element Products
 						%a.nav-button.studio{:href => asset_url('studio/team')}
