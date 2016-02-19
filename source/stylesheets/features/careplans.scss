@@ -1912,8 +1912,9 @@ Feature III
 	background-image: url("../../images/features/careplans/part3/hero_image.jpg");
 	background-size: cover;
 	position: relative;
+	background-position: top left;
 
-	p {
+	p.description {
 		position: absolute;
 		bottom: 0;
 		text-align: center;
@@ -1922,6 +1923,34 @@ Feature III
 		font-size: 1.5rem;
 		line-height: 1.8rem;
 		background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.6));
+	}
+	.title {
+		text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+		@media  (max-width: 767px) {
+			text-align: center;
+			padding-top: 100px;
+		}
+		@media  (min-width: 768px) {
+			right: 20%;
+			position: absolute;
+			top: 100px; 
+		}
+	}
+	.title h1 {
+		color: #ffffff;
+		font-size: 5rem;
+		margin-bottom: 0;
+		line-height: 5rem;
+
+		&:first-child {
+			font-size: 6.1rem;
+		}
+	}
+	.title p {
+		color: #ffffff;
+		font-size: 1.6rem;
+		padding-left: 0.3rem;
+		font-weight: normal;
 	}
 }
 #feature-article button.see-the-future {
@@ -2078,6 +2107,13 @@ Feature III: Part Three
 	background-repeat: no-repeat;
 	background-size: 100%;
 	padding-top: 20%;
+	position: relative;
+}
+#feature-article .part.three.featureIII .copyright {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 0.7rem;
 }
 #feature-article .part.three.featureIII h1 {
 	text-align: right;
@@ -2199,6 +2235,7 @@ Feature III: Part Four
 	margin-top: 15px;
 	padding: 0 50px;
 	font-size: 1.8rem;
+	line-height: 2rem;
 }
 #feature-article .part.four.featureIII #carousel-part4 .control {
 	width: 44px;
@@ -2209,7 +2246,7 @@ Feature III: Part Four
 	position: absolute;
 	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
 	img {width: 15px;}
-	bottom: 15px;
+	bottom: 25px;
 
 	&.left {
 		left: 0px;
@@ -2223,7 +2260,20 @@ Feature III: Part Four
     }
 }
 
-
+/******************************
+Feature III: Part Five
+******************************/
+#feature-article .part.five.featureIII {
+	background-image: url("../../images/features/careplans/part3/part5_bg.png");
+	background-size: cover;
+}
+#feature-article .part.five.featureIII h1,
+#feature-article .part.five.featureIII p {
+	color: #ffffff;
+}
+#feature-article .part.five.featureIII p {
+	margin-bottom: 10px;
+}
 
 
 

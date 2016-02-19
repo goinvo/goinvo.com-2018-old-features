@@ -151,7 +151,7 @@ $font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-title: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
 $font-size-small: 1rem; /* =12px */
 $font-size-base: 1.2rem; /* =20pt */
-$font-size-small-title: 2.0rem; /* =14px */
+$font-size-small-title: 1.6rem; /* =14px */
 $font-size-title: 2.5rem; /* =38px */
 $font-size-large-title: 2.2rem; /* = 24px*/
 $line-height-base: 1.8rem; /*=16px*/
@@ -1009,12 +1009,13 @@ img.scale-with-grid {
 		li {
 			margin-bottom: 10px;
 			line-height: 1.5rem;
+			font-size: 1.2rem;
 		}
 	}
 
 	.treatment-plan {
 		border-left: $border-base;
-		padding: 3rem;
+		padding: 2rem 4rem;
 	}
 	#treatment-adults {
 		.treatment-image img{
