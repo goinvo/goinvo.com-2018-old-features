@@ -1965,6 +1965,10 @@ Feature III
 #feature-article .part.featureIII {
 	padding: 40px 10%;
 }
+#feature-article .part.featureIII h1 {
+	margin-bottom: 30px;
+	line-height: 2.5rem;
+}
 
 /******************************
 Feature III: Part One
@@ -2088,7 +2092,7 @@ Feature III: Part Two
 	padding: 10px 15px;
 	color: #426b8a;
 	border-radius: 6px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	float: right;
 	width: 106px;
 
@@ -2144,32 +2148,32 @@ Feature III: Part Four
 	line-height: 2.5rem;
 }
 @media  (max-width: 767px) {
-	#feature-article .part.four.featureIII .tabs  {
+	#feature-article .part.featureIII .tabs  {
 		display: none;
 	}
-	#feature-article .part.four.featureIII #carousel-part4 {
+	#feature-article .part.featureIII .mobile {
 		display: block;
 	}
 }
 @media  (min-width: 768px) {
-	#feature-article .part.four.featureIII .tabs {
+	#feature-article .part.featureIII .tabs {
 		display: block;
 	}
-	#feature-article .part.four.featureIII #carousel-part4 {
+	#feature-article .part.featureIII .mobile {
 		display: none;
 	}
 }
-#feature-article .part.four.featureIII .tabs .nav-tabs {
+#feature-article .part.featureIII .tabs .nav-tabs {
 	border-bottom: none;
 	width: 200px;
 	float: left;
 }
-#feature-article .part.four.featureIII .tabs li {
+#feature-article .part.featureIII .tabs li {
 	float: none;
 	margin-bottom: 20px;
 	height: 60px;
 }
-#feature-article .part.four.featureIII .tabs li a{
+#feature-article .part.featureIII .tabs li a{
 	color: #ffffff;
 	margin: 0;
 	line-height: 1.2rem;
@@ -2195,10 +2199,10 @@ Feature III: Part Four
 		margin-left: 10px;
 	}
 }
-#feature-article .part.four.featureIII .tabs li:not(.active) a:hover {
+#feature-article .part.featureIII .tabs li:not(.active) a:hover {
 	background: transparent;
 }
-#feature-article .part.four.featureIII .tabs li.active a {
+#feature-article .part.featureIII .tabs li.active a {
 	color: #4C8D90;
 	img.circle_tick {
 		display: inline-block;
@@ -2207,7 +2211,7 @@ Feature III: Part Four
 		display: none;
 	}
 }
-#feature-article .part.four.featureIII .tabs .tab-content {
+#feature-article .part.featureIII .tabs .tab-content {
 	width: calc(100% - 200px);
 	float: left;
 	padding-left: 20px;
@@ -2230,14 +2234,14 @@ Feature III: Part Four
 #feature-article .part.four.featureIII img {
 	width: 100%;
 }
-#feature-article .part.four.featureIII #carousel-part4 h1 {
+#feature-article .part.featureIII .carousel.mobile h1 {
 	text-align: center;
 	margin-top: 15px;
-	padding: 0 50px;
+	padding: 0 45px;
 	font-size: 1.8rem;
 	line-height: 2rem;
 }
-#feature-article .part.four.featureIII #carousel-part4 .control {
+#feature-article .part.featureIII .carousel.mobile .control {
 	width: 44px;
 	height: 44px;
 	border-radius: 22px;
@@ -2246,7 +2250,7 @@ Feature III: Part Four
 	position: absolute;
 	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
 	img {width: 15px;}
-	bottom: 25px;
+	bottom: 10%;
 
 	&.left {
 		left: 0px;
@@ -2274,7 +2278,210 @@ Feature III: Part Five
 #feature-article .part.five.featureIII p {
 	margin-bottom: 10px;
 }
+#feature-article .part.five.featureIII .col-sm-6:last-child {
+	padding-left: 50px;
+	img.desktop {max-height: 600px;float: right;}
+}
+#feature-article .part.five.featureIII img.mobile {
+	max-width: 35%;
+	display: inline-block;
+	float: left;
+	margin-bottom: 20px;
+}
+@media  (max-width: 767px) {
+	#feature-article .part.five.featureIII img.desktop  {
+		display: none;
+	}
+	#feature-article .part.five.featureIII img.mobile {
+		display: block;
+	}
+	#feature-article .part.five.featureIII .col-sm-6 > div > div {
+		width: 60%;
+		float: right;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article .part.five.featureIII img.desktop {
+		display: block;
+	}
+	#feature-article .part.five.featureIII img.mobile {
+		display: none;
+	}
+}
 
+
+/******************************
+Feature III: Part Six
+******************************/
+#feature-article .part.six.featureIII {
+	background-image: url("../../images/features/careplans/part3/part6_bg.png");
+	background-size: cover;
+}
+#feature-article .part.six.featureIII h1,
+#feature-article .part.six.featureIII p {
+	color: #ffffff;
+}
+#feature-article .part.six.featureIII .content {
+	@media  (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+}
+#feature-article .part.six.featureIII .col-sm-4 {
+	@media  (min-width: 768px) {
+		padding-right: 20px;
+	}
+}
+#feature-article .part.six.featureIII .tabs li.active a {
+	color: #265775;
+}
+#feature-article .part.six.featureIII button {
+	float: right;
+	color: #265775;
+	margin-bottom: 20px;
+}
+@media  (max-width: 767px) {
+	#feature-article .part.six.featureIII button {
+		display: none;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article .part.six.featureIII button {
+		display: block;
+	}
+}
+
+/******************************
+Feature III: Part Seven
+******************************/
+#feature-article .part.seven.featureIII {
+	background-image: url("../../images/features/careplans/part3/part7_bg.png");
+	background-size: cover;
+}
+#feature-article .part.seven.featureIII h1,
+#feature-article .part.seven.featureIII p {
+	color: #ffffff;
+}
+#feature-article .part.seven.featureIII p {
+	margin-bottom: 10px;
+}
+#feature-article .part.seven.featureIII img {
+	margin: 30px auto;
+}
+@media  (max-width: 767px) {
+	#feature-article .part.seven.featureIII img.desktop {
+		display: none;
+	}
+	#feature-article .part.seven.featureIII img.mobile {
+		display: block;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article .part.seven.featureIII img.desktop {
+		display: block;
+	}
+	#feature-article .part.seven.featureIII img.mobile {
+		display: none;
+	}
+}
+
+/******************************
+Feature III: Part Eight
+******************************/
+#feature-article .part.eight.featureIII {
+	background-image: url("../../images/features/careplans/part3/part8_bg.png");
+	background-size: cover;
+}
+#feature-article .part.eight.featureIII p {
+	margin-bottom: 10px;
+	&.title {
+		font-weight: normal;
+		color: #265775;
+	}
+}
+#feature-article .part.eight.featureIII .container-fluid {
+	margin: 20px 0;
+}
+@media (min-width: 768px) {
+	#feature-article .part.eight.featureIII .container-fluid .row .col-sm-4:first-child {
+		padding-right: 20px;
+	}
+	#feature-article .part.eight.featureIII .container-fluid .row .col-sm-4:nth-child(2) {
+		padding: 0 20px;
+	}
+	#feature-article .part.eight.featureIII .container-fluid .row .col-sm-4:last-child {
+		padding-left: 20px;
+	}
+	#feature-article .part.eight.featureIII .container-fluid img {
+		display: block;
+	}
+}
+@media (max-width: 767px) {
+	#feature-article .part.eight.featureIII .container-fluid .row .col-sm-4 {
+		margin-bottom: 20px;
+	}
+	#feature-article .part.eight.featureIII .container-fluid img {
+		display: none;
+	}
+}
+#feature-article .part.eight.featureIII ul {
+	padding-left: 1.2rem;
+	list-style-image: url('../../images/features/careplans/part3/list_style_image.png');
+}
+#feature-article .part.eight.featureIII ul li {
+	line-height: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: lighter;
+}
+
+/******************************
+Feature III: Part Night
+******************************/
+#feature-article .part.night.featureIII {
+	border-top: 2px solid #e1e1e1;
+}
+#feature-article .part.night.featureIII .container-fluid {
+	margin: 20px 0;
+}
+#feature-article .part.night.featureIII .container-fluid h6 {
+	color: #265775;
+}
+#feature-article .part.night.featureIII .container-fluid .row {
+	margin-bottom: 40px;
+}
+#feature-article .part.night.featureIII ul {
+	padding-left: 1.2rem;
+	list-style-image: url('../../images/features/careplans/part3/list_style_image.png');
+}
+#feature-article .part.night.featureIII ul li {
+	line-height: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: lighter;
+}
+@media  (max-width: 767px) {
+	#feature-article .part.night.featureIII img.desktop {
+		display: none;
+	}
+	#feature-article .part.night.featureIII img.mobile {
+		display: inline-block;
+		width: 25%;
+	}
+	#feature-article .part.night.featureIII h6 {
+		display: inline-block;
+		width: 68%;
+		font-size: 1.2rem;
+		padding-left: 10px;
+		padding-top: 10px;
+		vertical-align: top;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article .part.night.featureIII img.desktop {
+		display: block;
+	}
+	#feature-article .part.night.featureIII img.mobile {
+		display: none;
+	}
+}
 
 
 
