@@ -681,7 +681,7 @@
 	background-color: #F9F9F9;
 	text-align: center;
 	padding-bottom: 30px; 
-	
+	color: #9B9B9B;	
 	
 	.small-title {
 		color: #9B9B9B;
@@ -758,6 +758,40 @@
 	
 }
 
+.enterprise-banner {
+	color: #9B9B9B;
+	background-color: #F9F9F9;
+	border-top: 1px solid #edecec;
+	text-align: center;
+	max-height: 360px;
+	padding-top: 30px;
+	overflow: hidden;
+
+	img {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 1000px;
+	}
+
+	a {
+		display: block;
+		margin: 10px 0;
+	}
+
+	.button {
+		color: #9B9B9B;
+		padding: 18px 20px 16px 20px;
+		height: auto;
+		display: inline-block;
+		font-size: 25px;
+		border-radius: 3px;
+		display: block;
+		border: 1px solid #9B9B9B;
+		cursor: pointer;
+		width: 340px;
+		margin: 0 auto;
+	}
+}
 
 .hero-video-container {
 	width: 100%;
