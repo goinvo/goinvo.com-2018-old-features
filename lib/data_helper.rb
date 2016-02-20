@@ -24,10 +24,6 @@ module DataHelper
     data.features.articles.sort { |a,b| a.date <=> b.date }.reverse
   end
 
-  def most_recent_feature_article()
-    feature_articles_sorted_by_date.first
-  end
-
   def feature_article_date(article)
     Date.parse(article.date).strftime("%B %Y")
   end

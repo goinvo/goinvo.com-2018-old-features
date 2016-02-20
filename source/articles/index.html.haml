@@ -2,6 +2,23 @@
   = "Involution Studios Articles"
 - content_for(:page_head) do
   = stylesheet_link_tag "articles/index"
+  = javascript_include_tag "get_hubspot_blog_posts"
+  :javascript
+    function renderBlogPosts(posts) {
+      if (!posts) return;
+      var blogArticleList = $('ul.blog-article-list');
+      $.each(posts, function(i, post) {
+        var currentString = post.encoded;
+        var sIndex = currentString.indexOf('<img');
+        currentString = currentString.substr(sIndex + 4);
+        sIndex = currentString.indexOf('src=');
+        currentString = currentString.substr(sIndex + 5);
+        sIndex = currentString.indexOf('"');
+        currentString = currentString.substr(0, sIndex);
+        blogArticleList.append('<li><a href=' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
+      });
+    }
+    getHubspotBlogPosts(renderBlogPosts);
   - meta = page_for_meta("articles")
   %meta{:name => "description", :content => "#{meta.description}" }
   %meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -12,9 +29,9 @@
   - if (meta.twitterimage)
     %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 - feature_articles = feature_articles_sorted_by_date()
-- most_recent_feature = most_recent_feature_article()
+- most_recent_feature = feature_articles.first
 %a.most-recent-article-link{ :href => "/features/#{most_recent_feature.url}" }
-  %header.most-recent-article{ :style => "background-image: url('/images/#{most_recent_feature.image}');" }
+  %header.most-recent-article{ :id => most_recent_feature.url, :style => "background-image: url('/images/#{most_recent_feature.image}');" }
     .outer-container
       .inner-container
         %span
@@ -26,7 +43,7 @@
   %ul.feature-article-list
     - feature_articles.each do |article|
       - if !(article == most_recent_feature)
-        %li
+        %li{ :id => article.url }
           %a{ :href => "/features/#{article.url}" }
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
               %h1= article.title
@@ -35,5 +52,3 @@
 
 .blog-article-list-container
   %ul.blog-article-list
-    %li Derp 1
-    %li Derp 2

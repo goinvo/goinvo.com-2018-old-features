@@ -1,10 +1,26 @@
+# Array of feature articles
+  # Used to create lists on homepage and articles landing
+
+# Format:
+  # title: {string} Title of article
+  # tag_line: {string} Subheader for the feature
+  # date: {string} Date of the article in YYYY-MM-DD format
+  # image: {string} Path to the banner image relative from /images/
+  # url: {string} Path to the feature relative from /features/
+
+# Special styling
+  # An 'id' attribute equal to the url is applied to each container
+  # for a feature item.
+  # You can use this to override default styles or apply special
+  # style rules for background images and the likes.
+
 articles:
   - title: "Understanding Zika"
     tag_line: "There are an estimated 1.6 million cases of Zika virus in 33 countries"
     date: "2016-02-01"
     image: "features/zika/map.png"
     url: "zika"
-    
+
   - title: "Digital Healthcare in 2016"
     tag_line: "8 guidelines to drive engagement in future healthcare services"
     date: "2016-01-01"
