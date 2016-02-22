@@ -60,6 +60,21 @@ $(document).ready(function() {
             scrollTop: $("div.part.four").offset().top-89
         }, 500);
 	});
+	$('a.five').click ( function () {
+		$('html, body').animate({
+            scrollTop: $("div.part.five").offset().top-89
+        }, 500);
+	});
+	$('a.six').click ( function () {
+		$('html, body').animate({
+            scrollTop: $("div.part.six").offset().top-89
+        }, 500);
+	});
+	$('a.seven').click ( function () {
+		$('html, body').animate({
+            scrollTop: $("div.part.seven").offset().top-89
+        }, 500);
+	});
 
 	// superscript
 	$(".superscript").click(function(event) {

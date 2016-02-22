@@ -1,0 +1,504 @@
+- content_for(:title) do
+	= "Care Plans"
+- content_for(:page_head) do
+	= stylesheet_link_tag "vendor/bootstrap.min.css"
+	= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	= stylesheet_link_tag "features/careplans"
+	= stylesheet_link_tag "feature-elements"
+	= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Work+Sans:400,300,700"
+	= javascript_include_tag "//platform.twitter.com/widgets.js"
+	= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/careplans/careplans-scroll.js"
+	= javascript_include_tag "features/careplans/careplanIII.js"
+
+	- meta = page_for_meta("careplans-part3")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%article#feature-article
+	.hero-bg
+		%div.title
+			%h1 CARE 
+			%h1 PLANS
+			%p PART III: The Future
+		%p.description How can mobile phones and other technology make us healthier?
+	%button.see-the-future{:type => "button", :class => "btn btn-primary"} SEE THE FUTURE
+	%header.nav-wrapper.stuck.featureIII.desktop
+		%div.progress
+			%a.one.circle
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.two.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.three.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.four.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.five.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.six.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.seven.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+		%nav.main-nav
+			%a.one{:href => "javascript:void(0)"} Digitized
+			%a.two{:href => "javascript:void(0)"}  Standardized
+			%a.three{:href => "javascript:void(0)"} Data-Rich
+			%a.four{:href => "javascript:void(0)"} Empowering
+			%a.five{:href => "javascript:void(0)"} Dynamic
+			%a.six{:href => "javascript:void(0)"} Care Team
+			%a.seven{:href => "javascript:void(0)"} Health Shift
+	%header.nav-wrapper.scroll-nav.featureIII.desktop
+		%div.progress
+			%a.one.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.two.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.three.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.four.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.five.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.six.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+			%a.seven.circle.none
+				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
+				%div.circle_solid.none
+		%nav.main-nav
+			%a.one{:href => "javascript:void(0)"} Digitized
+			%a.two{:href => "javascript:void(0)"} Standardized
+			%a.three{:href => "javascript:void(0)"} Data-Rich
+			%a.four{:href => "javascript:void(0)"} Empowering
+			%a.five{:href => "javascript:void(0)"} Dynamic
+			%a.six{:href => "javascript:void(0)"} Care Team
+			%a.seven{:href => "javascript:void(0)"} Health Shift
+	.part.one.featureIII
+		%h1 Digital is Better
+		.carousel.slide#carousel-part1
+			.carousel-inner{:role=>"listbox"}
+				.item.active.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide1.png"}
+						%div.col-sm-6
+							%p The “Magic Mirror” on the wall is not just a fantasy anymore. Using facial recogition and mood sensing, blood pressure and heart rate sensing through skin pigmentation, and other technology, we can imbue the ordinary bathroom mirror with interactive qualities to help monitor our health.
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				.item.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide2.png"}
+						%div.col-sm-6
+							%p Conversational user interfaces, driven by advances in voice recognition technology and artificial intelligence, are capable of understanding the content and context of patient concerns. These can be incorporated into mHealth apps for motivating health and fitness engagement, digital prescription treatment plans, or interactive systems for outpatient education.
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				.item.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide3.png"}
+						%div.col-sm-6
+							%p Contextual engagement breeds adherence to self care goals. Using mobile phone sensors like the gyroscope, accelerometer, light sensor, camera, microphone, GPS, wifi, and other connected devices, we can start to provide realtime education and recommendations based on current behavior and the environment.
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				.item.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide4.png"}
+						%div.col-sm-6
+							%p Virtual helpers will leverage human-modeled artificial intelligence to provide both health coaching and resources to motivate patients. Such mHealth companions will assist people in adhering to their care plans, their prescription regimens, and even outpatient treatment for complex, chronic conditions. These helpers might expand past the 2D mobile platform, seeping into other more physical services such as Echo, Nest, and Jibo.
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				.item.container-fluid
+					%div.row
+						%div.col-sm-6
+							%img{:src => "../../images/features/careplans/part3/part1_slide5.png"}
+						%div.col-sm-6
+							%p Solving the complex problem of medication adherence could have a huge impact on lowering cost of care. The basics of digital adherence — self-reporting, tracking refills and chronic disease outcomes, etc. — will receive a boost from the use of sensors to collect confirming data, whether it’s via breath analysis, urine sampling, or another non-invasive method.  
+							%a{:href => "javascript:void(0)"} <img src="../../images/features/careplans/part3/part1_learn_more_icon.png">Learn More
+				%a.left.control{:href=>"#carousel-part1", :role=>"button", :data=>{:slide=>"prev"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+				%a.right.control{:href=>"#carousel-part1", :role=>"button", :data=>{:slide=>"next"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+
+		%p Distance and remote based care is growing with the continuing expansion of smartphone device consumption and installation of broadband services into homes and businesses.<span class='superscript'>1,2</span> Expansion of free internet services, such as in the UK, where the National Health Service (NHS) will be converted into a free wi-fi zone, are also a driver of this digitization trend.<span class='superscript'>3</span> With better connectivity, internet speeds, and smart monitoring devices, there may soon be a shift from the traditionally episodic, face-to-face care to a model where the immediate, remote, and individualized care plan is possible.<span class='superscript'>4</span>  Patients will be able to more consistently access, collaborate on, and adjust their care plans at home, work, school, while traveling, and in mobile clinics.<span class='superscript'>5</span> This shift is especially important for less mobile and more vulnerable demographics such as new borns, physically disabled people, or seniors.<span class='superscript'>6,7</span>
+
+	.part.two.featureIII
+		%h1 Standardized, Interoperable Content
+		%a.desktop{:href => "https://github.com/intervention-engine", :target => "_blank"} CMS-funded<br>Intervention<br>Engine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594;
+		%img{:src => "../../images/features/careplans/part3/part2.jpg"}
+		.container-fluid
+			.row
+				.col-sm-4
+					.content
+						%p There must be more consensus on care plan content. All this variation leads to miscommunication and errors in the transfer of care.” 
+						%p - c
+					%a.mobile{:href => "javascript:void(0)"} CMS-funded<br>Intervention<br>Engine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594;
+				.col-sm-8
+					%p Standardization of care plans throughout the spectrum of health concerns will aid in communication and collaboration across care team members over time, providing high-quality longitudinal care with reduced risk for medical error.<span class='superscript'>2,8,9</span> If medical community leaders converge to develop clinical pathways into a library of robust care plan templates, they can then be customized to each patient’s needs while still being interoperable among all care organizations.<span class='superscript'>10,11,12</span> Using consistent quality metrics, the effectiveness of these templates can be assessed to identify how they must evolve and improve.
+	.part.three.featureIII
+		%p.copyright Photo by Philips Communications
+		%h1 "Give Me My Data"
+		%img{:src => "../../images/features/careplans/part3/part3.jpg"}
+		.container-fluid
+			.row
+				.col-sm-4
+					.content
+						%p There needs to be an EMR system that can aggregate medical records, lab tests and scans, genomic data, and all other health data (including patient-generated) and analyze them in a meaningful way.
+				.col-sm-8
+					%p Patients will have an unlimited and ever-evolving reservoir of data collected from embedded devices, mobile phones, and other sensors that is then synthesized into an understandable personal health score.<span class='superscript'>13</span> Predictive analytics will help identify patterns in this data to create actionable insights and recommendations for care plan adjustments. With the advent of human genome mapping, we can further fine tune care plans according to patient's family medical history and genetic predispositions. In a broader context, we can look at the population's genetic data comparatively to differentially diagnose various health conditions.14 Once we can move past the stigma of sharing health record information with patients and the complexity of securing the information from harm, we can approach the ideal world where patients are the rightful owner of their health data, using it maintain a holistic view of their health.<span class='superscript'>6,13,15</span>
+	.part.four.featureIII
+		%h1 Empowered Patients are<br>Activated Patients
+		%div.tabs.clearfix
+			%ul.nav.nav-tabs{:role => "tablist"}
+				%li.active{:role => "presentation"}
+					%a{:href=>"#goal-setting", :aria=>{:controls=>"goal-setting"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Goal<br>Setting</div>
+				%li{:role => "presentation"}
+					%a{:href=>"#goal-execution", :aria=>{:controls=>"goal-execution"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Goal<br>Execution</div>
+				%li{:role => "presentation"}
+					%a{:href=>"#insight-adjustment", :aria=>{:controls=>"insight-adjustment"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Insight &<br>Adjustment</div>
+			%div.tab-content
+				%div.fade.in.tab-pane.active#goal-setting{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part3_goal_setting.png"}
+				%div.fade.tab-pane#goal-execution{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part3_goal_exec.png"}
+				%div.fade.tab-pane#insight-adjustment{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part3_adjustment.png"}
+		.carousel.slide#carousel-part4.mobile
+			.carousel-inner{:role=>"listbox"}
+				.item.active
+					%img{:src => "../../images/features/careplans/part3/part3_goal_setting.png"}
+					%h1 Goal<br>Setting
+				.item
+					%img{:src => "../../images/features/careplans/part3/part3_goal_exec.png"}
+					%h1 Goal<br>Execution
+				.item
+					%img{:src => "../../images/features/careplans/part3/part3_adjustment.png"}
+					%h1 Insight &<br>Adjustment
+				%a.left.control{:href=>"#carousel-part4", :role=>"button", :data=>{:slide=>"prev"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+				%a.right.control{:href=>"#carousel-part4", :role=>"button", :data=>{:slide=>"next"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+		.container-fluid
+			.row
+				.col-sm-4
+					.content
+						%p We need care plans to be more than list of instructions. They need to serve as a continuous source of diagnosis, relevant education,  informative insights, and encouragement to take action.
+				.col-sm-8
+					%p Patients should never leave a doctor’s office empty handed. Building an accessible digital care plan together with their provider will allow for both a more active discussion and a more empowered patient. When the patient feels a part of the decision making process and concludes a medical encounter feeling valued, knowledgeable, and supported by an accessible digital care plan, their likelihood of compliance to healthier 'self care' behaviors will grow.<span class='superscript'>13</span> Similar engagement of caregivers will grow compliance even further as these more consistently present care team members are informed and empowered to help implement the care plan.<span class='superscript'>10</span>
+	.part.five.featureIII
+		.container-fluid
+			.row
+				.col-sm-6
+					%div.clearfix
+						%img.mobile{:src => "../../images/features/careplans/part3/careteam.png"}
+						%div 
+							%h1 Expanding the Meaning of Care Team 
+							%p “A more holistic approach to care planning suggests a greater need for cohesive inclusion of the patient's direct network into their care team.” - Credit
+					%p In order to achieve better engagement and adherence to care plans, non-professional caregivers (friends and family) will be incorporated into the care team.16,17 These team members have the highest degree of access to the patient, and the most incentive to provide care. Services that expand education and engagement to both the patient AND these members will emerge to fully utilize this component of the care team.<span class='superscript'>18</span>
+					%p Another important presence in this expanding care team is the online community. We will start to see services that incorporate community forums and population analytics to take advantage of the the wealth of knowledge and experience of similar patients.<span class='superscript'>18</span>
+					%p The advancement of digital care plans has surfaced the need for new healthcare roles that bridge the gap between providers and patient-facing technology. One emerging role, the nurse extender clinical aide, or grand-aide, interacts more frequently with patients to ensure adherence to the care plan and keeps the more highly-trained providers informed about the status of the patient.<span class='superscript'>19</span>
+				.col-sm-6
+					%img.desktop{:src => "../../images/features/careplans/part3/careteam.png"}
+	.part.six.featureIII
+		%h1 Dynamic Plans Evolve <br>With the Patient
+		%a{:href => "../../images/features/careplans/part3/intervention_engine_poster_final.pdf",:type => "submit", :class => "btn btn-default", :target => "_blank"} <span class="glyphicon glyphicon-download-alt"></span> Full Poster
+		%div.clearfix
+		%div.tabs.clearfix
+			%ul.nav.nav-tabs{:role => "tablist"}
+				%li.active{:role => "presentation"}
+					%a{:href=>"#intervention-system", :aria=>{:controls=>"#intervention-system"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick_blue.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Intervention<br>System</div>
+				%li{:role => "presentation"}
+					%a{:href=>"#patient-intervention", :aria=>{:controls=>"patient-intervention"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick_blue.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Patient<br>Intervention</div>
+				%li{:role => "presentation"}
+					%a{:href=>"#clinician-intervention", :aria=>{:controls=>"clinician-intervention"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick_blue.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>Clinician<br>Intervention</div>
+				%li{:role => "presentation"}
+					%a{:href=>"#national-intervention", :aria=>{:controls=>"national-intervention"}, :data=>{:toggle=>"tab"}} <img class="circle_tick" src="../../images/features/careplans/part3/circle_tick_blue.png"/><img class="circle_hollow" src="../../images/features/careplans/part3/circle_hollow.png"/><div>National<br>Intervention</div>
+			%div.tab-content
+				%div.fade.in.tab-pane.active#intervention-system{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part6_intervention_system.png"}
+				%div.fade.tab-pane#patient-intervention{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part6_patient_intervention.png"}
+				%div.fade.tab-pane#clinician-intervention{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part6_clinician_intervention.png"}
+				%div.fade.tab-pane#national-intervention{:role => "tabpanel"}
+					%img{:src => "../../images/features/careplans/part3/part6_national_intervention.png"}
+		.carousel.slide#carousel-part6.mobile
+			.carousel-inner{:role=>"listbox"}
+				.item.active
+					%img{:src => "../../images/features/careplans/part3/part6_intervention_system.png"}
+					%h1 Intervention<br>System
+				.item
+					%img{:src => "../../images/features/careplans/part3/part6_patient_intervention.png"}
+					%h1 Patient<br>Intervention
+				.item
+					%img{:src => "../../images/features/careplans/part3/part6_clinician_intervention.png"}
+					%h1 Clinician<br>Intervention
+				.item
+					%img{:src => "../../images/features/careplans/part3/part6_national_intervention.png"}
+					%h1 National<br>Intervention
+				%a.left.control{:href=>"#carousel-part6", :role=>"button", :data=>{:slide=>"prev"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+				%a.right.control{:href=>"#carousel-part6", :role=>"button", :data=>{:slide=>"next"}}
+					%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
+		.container-fluid
+			.row
+				.col-sm-4
+					.content
+						%p Patients need more diagnosis, goal setting, and guidance than an annual check up with their doctor in order to engage in effective, preventative self care.
+				.col-sm-8
+					%p As digital care plans gain the ability to deliver personalized health content (including goals) and collect relevant metrics, the opportunity arises to coalesce these functions into a feedback loop.<span class='superscript'>15</span> This means the care plan will facilitate a prescribed or selected care plan with specified goals, assess relevant data from vitals sensors, the environment, or behaviors, to determine if the goal criteria is met, and then auto-adjust the care plan goals and education accordingly. Health scores and predictive analytics will be used to aid engagement and understanding of the care plan and any changes to it.  The use of patient health projections and relevant recommendations creates a kind of intervention engine that could behave autonomously from medical providers, though it could always be augmented and further personalized when clinician input is available. However, the concept of an intervention engine is dependant on a clinically-validated database of interoperable care plans.
+	.part.seven.featureIII
+		%h1 Health Care is Shifting
+		%p The U.S. will need about 52,000 more primary care physicians by 2025 due to population growth, the expansion of insurance, and aging. With this impending strain on hospital and clinic capacity, greater efficiency in providing preventative care is crucial.
+		%img.desktop{:src => "../../images/features/careplans/part3/part7_desktop.png"}
+		%img.mobile{:src => "../../images/features/careplans/part3/part7_mobile.png"}
+		%p The expansion of health coverage and the growing influx of patients will force a significant shift in the way healthcare is provided.<span class='superscript'>21,22</span> More patients means a need for more providers. This will expand the roles and responsibilities of nurses, physician’s assistants, and other lesser-trained professionals, to provide more continuous care to more patients at one time.<span class='superscript'>21</span> It also illuminates the benefit of utilizing the non-professional side of the care team, such as family caregivers and the online community in the care plan. 
+		%p Healthcare payers are transitioning from a volume-based to value-based payment model, meaning that medical professionals will only get paid for the success of care, rather than for conducting the care itself.<span class='superscript'>23</span> This shift requires quality metrics to assess outcomes, which can only be achieved through consistently delivered care plans and comprehensive health data tracking. When the feedback loop of an intervention engine is achieved, effectiveness of standardized interventions can be understood to accurately provide reimbursement and improve national healthcare as a whole. 
+		%p Digital, standardized, dynamic, care plans will both augment effectiveness of our limited supply of medical professionals, and empower patients to engage in cost-effective, preventive self care behaviors.<span class='superscript'>24</span>
+	.part.eight.featureIII
+		%h1 So… How Do We Get There? 
+		%p It is unreasonable to expect to implement all of these care plan elements at once. Cost, both in conducting and implementing the future of care plans, also require further consideration. Below is a strategic view of what needs to be done.
+		.container-fluid
+			%img{:src => "../../images/features/careplans/part3/part8_image.png"}
+			.row
+				.col-sm-4
+					%p.title Push for a Culture Shift
+					%ul
+						%li Patients are the most important part of their care team, include them in the care planning process.
+						%li Transparency in all medical encounters, give patients their data.
+						%li The non-clinical part of the care team such as health coaches, family caregivers, and other networks are just as important. Rope them into the process more.
+				.col-sm-4
+					%p.title Establish National Standards
+					%ul
+						%li Synthesize research in the medical community and nationally establish a library of condition-specific care plans which can be consistently implemented in a patient-clinician encounter, and independently by the patient and other care team members.
+				.col-sm-4
+					%p.title Advance Technology
+					%ul
+						%li Make digital health sensors and devices that help track complex chronic conditions more affordable. 
+						%li Grow engaging health software solutions that improve accessibility and quality of care and actually get people to change behavior.
+						%li Utilize payers’ risk scoring to create clinically valid patient-facing health score.
+		%img.title{:src => "../../images/features/careplans/part3/gears.png"}
+		%p.title Create an Intervention Engine
+		%p In conjuction with the development of these technological advancements and national standards, we can start to create an autonomous engine that collects data relevant to chronic conditions, synthesizes it into meaningful information, interfaces with the national care plan library to select appropriate adjustments and recommendations, and delivers these recommendations along with any manual clinician input in an engaging way to patient and their care team. This engine is not meant to replace interaction with clinicians, but rather, augment it by providing continuous care in between medical encounters. Crucial to such an engine is the ability to compare assessed outcomes with interventions made to understand effictiveness across the entire population of patients. This will allow the engine to ‘learn’ and evolve, providing better and better care.
+	.part.night.featureIII
+		%h1 A Call to Action 
+		%p To be successful on our journey towards digital care plans, we need your help.
+		.container-fluid
+			.row
+				.col-sm-3
+					%img.desktop{:src => "../../images/features/careplans/part3/part9_card1.png"}
+				.col-sm-9
+					%div
+						%img.mobile{:src => "../../images/features/careplans/part3/part9_card1.png"}
+						%h6 Patients, Otherwise Known as “People”
+					%ul
+						%li Take part in building your care plan with your doctor. You’re the most knowledgable part of your care team.
+						%li Ask questions. Be informed.
+						%li Take responsibility for your own health. Live your care plan.
+			.row
+				.col-sm-3
+					%img.desktop{:src => "../../images/features/careplans/part3/part9_card2.png"}
+				.col-sm-9
+					%div
+						%img.mobile{:src => "../../images/features/careplans/part3/part9_card2.png"}
+						%h6 Healthcare Designers & Entrepreneurs
+					%ul
+						%li Adopt <a href="javascrtip:void(0)">FHIR</a>. It’s the lesser of all evils for now. Data MUST be interoperable.
+						%li Know the clinical workflow. Your product should be a no-brainer for doctors, patients, and proxies.
+						%li Give patients and their team authorship in the care plan process.
+			.row
+				.col-sm-3
+					%img.desktop{:src => "../../images/features/careplans/part3/part9_card3.png"}
+				.col-sm-9
+					%div
+						%img.mobile{:src => "../../images/features/careplans/part3/part9_card3.png"}
+						%h6 Medical Community
+					%ul
+						%li Patient engagement is worth the investment. Activated patients behave in healthier ways. 
+						%li Transparent communication and complete accessbility to data make for more informed, healthier patients.
+						%li Consider building a broader care team for the patient that leverages the expertise of health coaches, family, and community networks, and facilitates communication between clinic visits.
+						%li Collect evidence and adjust care to get better outcomes. Value-based care is taking over Medicare payments (50% by 2018).
+			.row
+				.col-sm-3
+					%img.desktop{:src => "../../images/features/careplans/part3/part9_card4.png"}
+				.col-sm-9
+					%div
+						%img.mobile{:src => "../../images/features/careplans/part3/part9_card4.png"}
+						%h6 Policy Makers
+					%ul
+						%li Single payer - We can’t better health until there is equal accessibility to care. 
+						%li Single standard - Meaningful Use 4 (or the next ONC health guidance as MU might be replaced) needs to dictate a national health data standard.
+						%li National Care Plan Database - There should be clinical standards of care.
+						%li Cost of Care Plans - Determine cost of ownership and creation of these future Care Plans, to contribute a standardized financial benchmark within a national care plan database. 
+	.credit-wrapper
+		#credits
+			%h1 Authors
+			.authors.container-fluid
+				.row
+					.author.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/beth.jpg'}
+						.info
+							%p Involution Studios
+							%p.name Beth Herlin, MPD<br><small><a href="https://twitter.com/beth11herlin" target="_blank">@beth11herlin</a></small>
+							%p.bio Beth is designer, product strategist, and researcher. She concentrates on designing beautiful and surprising health services and systems from the skintop to celltop to desktop. She holds bachelors of arts in psychology and studio art from Rice University and a master of product development from Carnegie Mellon University. She has worked on design and service strategy for companies such as Seniorlink, Johnson & Johnson, and Updox Patient Portals.
+					.author.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/edwin.jpg'}
+						.info
+							%p Involution Studios
+							%p.name  Edwin Choi, MA
+							%p.bio Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University. He has worked on projects for companies including Partners Healthcare and Notovox.
+			%h1 Contributors
+			.contributors.container-fluid
+				.row
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/yanyang.jpg'}
+						.info
+							%p Web Designer & Developer
+							%p.name Yanyang Zhou
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/jenn.jpg'}
+						.info
+							%p Web Designer & Developer
+							%p.name Jennifer Patel<br><small><a href="https://twitter.com/catamariface" target="_blank">@catamariface</a></small>
+				.row
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/juhan.jpg'}
+						.info
+							%p Involution Studios, MIT
+							%p.name Juhan Sonin<br><small><a href="http://twitter.com/jsonin" target="_blank">@jsonin</a></small>
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/jeffbelden.jpg'}
+						.info
+							%p University of Missouri | <a href="http://toomanyclicks.com" target="_blank">toomanyclicks.com</a>
+							%p.name Jeff Belden, MD<br><small><a href="https://twitter.com/jeffbelden">@jeffbelden</a></small>
+				.row
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+						.info
+							%p University of Michigan
+							%p.name ​​Joyce Lee, MD, MPH<br><small><a href="https://twitter.com/joyclee">@joyclee</a></small>
+					.contributor.col-md-6
+						.image
+							%img{:src =>'../../images/features/careplans/contrib/janesarasohnkahn.jpg'}
+						.info
+							%p THINK-Health | Health Populi blog | Huffington Post
+							%p.name ​​Jane Sarasohn-Kahn, MA, MHSA<br><small><a href="https://twitter.com/healthythinker">@healthythinker</a></small>
+				.row
+					.contributor.col-md-6
+						.image
+							/ %img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+						.info
+							%p The MITRE Corporation
+							%p.name ​​Harry Sleeper
+			.reference
+				%h1 References
+				%ul
+					%li#reference1
+						%span 1.
+						%a{:href => "http://www.pewinternet.org/data-trend/mobile/device-ownership/"}Device Ownership Over Time. 
+						%span (2013). Retrieved November 19, 2015, from http://www.pewinternet.org/data-trend/mobile/device-ownership/
+					%li#reference2
+						%span 2.
+						%a{:href => "http://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/"}U.S. Smartphone Use in 2015. 
+						%span (2015). Retrieved October 10, 2015, from http://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/
+					%li#reference3
+						%span 3.
+						%a{:href => "http://www.nhsconfed.org/~/media/Confederation/Files/Publications/Documents/the-futures-digital.pdf"}Mental Health Network. (2014).
+						%span [Brochure]. Author. Retrieved September 28, 2015, from http://www.nhsconfed.org/~/media/Confederation/Files/Publications/Documents/the-futures-digital.pdf
+					%li#reference4
+						%span 4. Aronson, L., Bautista, C. A., & Covinsky, K. (2015). Medicare and Care Coordination. Jama, 313(8), 797.
+					%li#reference5
+						%span 5. Lee, V. C. (2014). Mobile Devices and Apps for Health Care Professionals: Uses and Benefits.Pharmacy and Therapeutics, 39(4), 356-364.
+					%li#reference6
+						%span 6.
+						%a{:href => "https://www.england.nhs.uk/2015/06/tim-kelsey-10/"}NHS England » Putting digital to work for patients
+						%span Tim Kelsey. (n.d.). Retrieved September 28, 2015, from https://www.england.nhs.uk/2015/06/tim-kelsey-10/
+					%li#reference7
+						%span 7. Center for Technology and Aging. (2009). Technologies for Remote Patient Monitoring in Older Adults [Brochure]. 
+					%li#reference8
+						%span 8.
+						%a{:href => "http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd"}“LCC Longitudinal Care Plan (LCP) SWG”.
+						%span S&I Framework. Retrieved from http://wiki.siframework.org/LCC+Longitudinal+Care+Plan+%28LCP%29+SWG?responseToken=09cf7263041efc0aaad547d5b2bd401fd
+					%li#reference9
+						%span 9.
+						%a{:href => "http://nursingworld.org/DocumentVault/NursingPractice/Life-Care-Planning-Scope-and-Standards.pdf"}American Association of Nurse Life Care Planners. 
+						%span (2015). Scope and Standards of Practice[Brochure]. Author. Retrieved September 28, 2015, from http://nursingworld.org/DocumentVault/NursingPractice/Life-Care-Planning-Scope-and-Standards.pdf
+					%li#reference10
+						%span 10.
+						%a{:href => "https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf"}Key Elements to Include in a Coordinated Care Plan
+						%span [Brochure]. (2014). Retrieved from https://www.oma.org/Resources/Documents/CoordinatedCarePlan_June2014.pdf
+					%li#reference11
+						%span 11. 
+						%a{:href => "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/384650/NIB_Report.pdf"}National Information Board of the UK.
+						%span (2014). Personalised Health and Care 2020[Brochure]. Author. Retrieved from https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/384650/NIB_Report.pdf
+					%li#reference12
+						%span 12.
+						%a{:href => "http://www.healthworkscollective.com/charles-settles/317786/most-innovative-patient-portal-features"}The Most Innovative Patient Portal Features.
+						%span (n.d.). Retrieved October 30, 2014, from http://www.healthworkscollective.com/charles-settles/317786/most-innovative-patient-portal-features
+					%li#reference13
+						%span 13. Topol, E. J. (n.d.). The patient will see you now: The future of medicine is in your hands.
+					%li#reference14
+						%span 14. Winslow, R. (2015, May 10).
+						%a{:href => "http://www.wsj.com/articles/SB10001424052702303404704577311421888663472"}The WIreless Revolution Hits Medicine.
+						%span The Wall Street Journal. Retrieved from http://www.wsj.com/articles/SB10001424052702303404704577311421888663472
+					%li#reference15
+						%span 15. Kish, L. J., & Topol, E. J. (2015). Unpatients—why patients should own their medical data. Nat Biotechnol Nature Biotechnology, 33(9), 921-924. Retrieved October 30, 2015.
+					%li#reference16
+						%span 16.
+						%a{:href => "http://wiki.hl7.org/index.php?title=Care_Plan_Project_2012"}Care Plan Project 2012.
+						%span (2012). Retrieved from http://wiki.hl7.org/index.php?title=Care_Plan_Project_2012
+					%li#reference17
+						%span 17.
+						%a{:href => "http://www.nga.org/files/live/sites/NGA/files/pdf/2015/1501TheExpandingRoleOfPharmacists.pdf"}The Expanding Role of Pharmacists in a Transformed Health Care System.
+						%span (n.d.). Retrieved from http://www.nga.org/files/live/sites/NGA/files/pdf/2015/1501TheExpandingRoleOfPharmacists.pdf
+					%li#reference18
+						%span 18. Neal, L. (2007). Online health Communities. Proceedings of the Conference on Human Computer Interaction, 444-447.com/website/index.html
+					%li#reference19
+						%span 19. Phillips, L. (2015, April 21).
+						%a{:href => "http://www.hfma.org/Leadership/E-Bulletins/2015/April/What_Will_Health_Care_Look_Like_in_5-15_Years_/"}What Will Health Care Look Like in 5-15 Years?
+						%span Retrieved September 27, 2015, from http://www.hfma.org/Leadership/E-Bulletins/2015/April/What_Will_Health_Care_Look_Like_in_5-15_Years_/
+					%li#reference20
+						%span 20.
+						%a{:href => "http://www.healthaffairs.org/healthpolicybriefs/brief.php?brief_id=79"}Nurse Practitioners and Primary Care.
+						%span (n.d.). Retrieved October 30, 2015, from http://www.healthaffairs.org/healthpolicybriefs/brief.php?brief_id=79
+					%li#reference21
+						%span 21. Heyworth, L., Rozenblum, R., Burgess, J. F., Baker, E., Meterko, M., Prescott, D., . . . Simon, S. R. (2014). Influence of Shared Medical Appointments on Patient Satisfaction: A Retrospective 3-Year Study. The Annals of Family Medicine, 12(4), 324-330.
+					%li#reference22
+						%span 22. M. O. (n.d.)
+						%a{:href => "http://health.usnews.com/health-news/patient-advice/articles/2015/03/09/is-a-medical-home-in-your-future"}Is a medical home in your future. 
+						%span Retrieved September 28, 2015, from http://health.usnews.com/health-news/patient-advice/articles/2015/03/09/is-a-medical-home-in-your-future
+					%li#reference23
+						%span 23.
+						%a{:href => "http://www.modernhealthcare.com/article/20150128/NEWS/301289952"}Where healthcare is now on march to value-based pay. 
+						%span (n.d.). Retrieved October 30, 2015, from http://www.modernhealthcare.com/article/20150128/NEWS/301289952
+					%li#reference24
+						%span 24. Benjamin, R. M. (n.d.).
+						%a{:href => "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185312/"}The National Prevention Strategy: Shifting the Nation's Health-Care System.
+						%span Public Health Rep. Retrieved October 30, 2015, from http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185312/
+					%li#reference25
+						%span 25. Involution Studios.
+						%a{:href => "http://www.carecards.me"}“Care Cards”
+						%span (2016). Retrieved from www.carecards.me
