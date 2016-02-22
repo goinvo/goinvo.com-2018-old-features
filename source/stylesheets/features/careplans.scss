@@ -1913,10 +1913,10 @@ Feature III
 		bottom: 0;
 		text-align: center;
 		width: 100%;
-		padding: 50px 20px 20px 20px;
+		padding: 100px 20px 20px 20px;
 		font-size: 1.5rem;
 		line-height: 1.8rem;
-		background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255, 1));
+		background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
 	}
 	.title {
 		text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
@@ -1979,7 +1979,7 @@ Feature III: Navigation
 		color: #ffffff;
 	}
 	@media  (min-width: 768px) {
-		width: 11%;
+		width: 11.5%;
 	}
 }
 @media  (max-width: 767px) {
@@ -2003,7 +2003,7 @@ Feature III: Navigation
 	border-radius: 10px;
 	.circle {
 		display: inline-block;
-		width: 11%;
+		width: 11.5%;
 		position: relative;
 	}	
 	.circle:before {
