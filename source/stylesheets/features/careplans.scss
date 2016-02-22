@@ -1960,7 +1960,7 @@ Feature III
 	padding: 40px 10%;
 }
 #feature-article .part.featureIII h1 {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	line-height: 2.5rem;
 }
 
@@ -2065,7 +2065,6 @@ Feature III: Part One
 }
 #feature-article .part.one.featureIII h1 {
 	color: #ffffff;
-	line-height: 2.5rem;
 }
 #feature-article .part.one.featureIII .carousel .item {
 	background-color: #ffffff;
@@ -2109,19 +2108,7 @@ Feature III: Part One
 	padding: 0;
 	margin: 0;
 }
-#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child img {
-	width: 100%;
-	border-top-left-radius: 10px;
-	@media  (max-width: 767px) {
-		border-bottom-left-radius: 0;
-		border-top-right-radius: 10px;
-	}
-	@media  (min-width: 768px) {
-		border-bottom-left-radius: 10px;
-		border-top-right-radius: 0;
-	}
-}
-#feature-article .part.one.featureIII .carousel .item .col-sm-6:last-child {
+#feature-article .part.one.featureIII .carousel .item .col-sm-6 {
 	color: #000000;
 	padding: 30px 30px 10px 30px;
 
@@ -2136,6 +2123,72 @@ Feature III: Part One
 		}
 	}
 }
+#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child img{
+	border-top-left-radius: 10px;
+	@media  (max-width: 767px) {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 10px;
+	}
+	@media  (min-width: 768px) {
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 0;
+	}
+}
+
+@media  (min-width: 900px) {
+	#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child {
+		padding: 0;
+		p, a {
+			display: none;
+		}
+	}
+}
+@media  (max-width: 768px) {
+	#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child {
+		p,a {
+			display: none;
+		}
+		padding: 0;
+	}
+}
+@media  (max-width: 901px) and (min-width: 768px) {
+	#feature-article .part.one.featureIII .carousel .item .col-sm-6:first-child {
+		padding: 0;
+		img {
+			display: none;
+		}
+		p, a {
+			opacity: 0;
+			width: 100%;
+		}
+		p {
+			padding: 30px 30px 10px 30px;
+		}
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	#feature-article .part.one.featureIII .carousel .item:first-child .col-sm-6:first-child {
+		background-image: url("../../images/features/careplans/part3/part1_slide1.png");
+		background-size: cover;
+	}
+	#feature-article .part.one.featureIII .carousel .item:nth-child(2) .col-sm-6:first-child {
+		background-image: url("../../images/features/careplans/part3/part1_slide2.png");
+		background-size: cover;
+	}
+	#feature-article .part.one.featureIII .carousel .item:nth-child(3) .col-sm-6:first-child {
+		background-image: url("../../images/features/careplans/part3/part1_slide3.png");
+		background-size: cover;
+	}
+	#feature-article .part.one.featureIII .carousel .item:nth-child(4) .col-sm-6:first-child {
+		background-image: url("../../images/features/careplans/part3/part1_slide4.png");
+		background-size: cover;
+	}
+	#feature-article .part.one.featureIII .carousel .item:nth-child(5) .col-sm-6:first-child {
+		background-image: url("../../images/features/careplans/part3/part1_slide5.png");
+		background-size: cover;
+	}
+}
+
 
 /******************************
 Feature III: Part Two
@@ -2147,7 +2200,6 @@ Feature III: Part Two
 }
 #feature-article .part.two.featureIII h1 {
 	color: #ffffff;
-	line-height: 2.5rem;
 	float: left;
 	width: calc(100% - 115px);
 }
@@ -2230,7 +2282,6 @@ Feature III: Part Four
 }
 #feature-article .part.four.featureIII h1 {
 	color: #ffffff;
-	line-height: 2.5rem;
 }
 @media  (max-width: 767px) {
 	#feature-article .part.featureIII .tabs  {
