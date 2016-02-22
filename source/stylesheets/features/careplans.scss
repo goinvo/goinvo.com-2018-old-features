@@ -108,8 +108,6 @@ a {
 		width: 23%;
 		display: inline-block;
 		text-align: center;
-		// margin-right: 10px;
-		// margin-left: 10px;
 		transition: 300ms ease-in-out;
 		&.active {
 			text-decoration: underline;
@@ -126,10 +124,6 @@ a {
 		top: 55px;
 		left: 0;
 		display: none;
-
-	}
-
-	&.stuck {
 
 	}
 
@@ -1970,6 +1964,97 @@ Feature III
 	line-height: 2.5rem;
 }
 
+
+/******************************
+Feature III: Navigation
+******************************/
+#feature-article header.nav-wrapper.featureIII.desktop a {
+	padding: 2px 0 0 0;
+	&:hover {
+		cursor: pointer;
+	}
+	@media  (max-width: 767px) {
+		width: 23%;
+		padding: 8px 0;
+		color: #ffffff;
+	}
+	@media  (min-width: 768px) {
+		width: 13%;
+	}
+}
+@media  (max-width: 767px) {
+	#feature-article header.nav-wrapper.featureIII.desktop nav.main-nav {
+		background-color: #426b8a;
+	}
+	#feature-article header.nav-wrapper.featureIII.desktop {
+		padding: 0;
+	}
+}
+#feature-article header.nav-wrapper.featureIII.desktop .progress {
+	@media  (max-width: 767px) {
+		display: none;
+	}
+	@media  (min-width: 768px) {
+		display: block;
+	}
+	background-color: #426b8a;
+	margin-bottom: 0;
+	margin-top: 10px;
+	border-radius: 10px;
+	.circle {
+		display: inline-block;
+		width: 13%;
+		position: relative;
+	}	
+	.circle:before {
+		content: ' ';
+		width: calc(100% - 16px);
+		height: 10px;
+		background-color: #91a6b6;
+		position: absolute;
+		left: calc(-50% + 5px);
+		top: 5px;
+	}	
+	.circle.none:before {
+		display: none;
+	}
+	.circle:first-child:before {
+		content: ' ';		
+		width: calc(50% - 15px);
+		height: 10px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		top: 5px;
+		left: 5px;
+		display: inline-block;
+	}
+	.circle:last-child:after {
+		content: ' ';
+		width: 0;
+	}
+
+	img {
+		width: 18px;
+		margin: 0 auto;
+		display: inline-block;
+		&.none {
+			display: none;
+		}
+	}
+	.circle_solid {
+		width: 16px;
+		height: 16px;
+		margin: 0 auto;
+		background-color: #ffffff;
+		border-radius: 8px;
+
+		&.none {
+			display: none;
+		}
+	}
+}
+
+
 /******************************
 Feature III: Part One
 ******************************/
@@ -2334,18 +2419,18 @@ Feature III: Part Six
 #feature-article .part.six.featureIII .tabs li.active a {
 	color: #265775;
 }
-#feature-article .part.six.featureIII button {
+#feature-article .part.six.featureIII .btn {
 	float: right;
 	color: #265775;
 	margin-bottom: 20px;
 }
 @media  (max-width: 767px) {
-	#feature-article .part.six.featureIII button {
+	#feature-article .part.six.featureIII .btn {
 		display: none;
 	}
 }
 @media  (min-width: 768px) {
-	#feature-article .part.six.featureIII button {
+	#feature-article .part.six.featureIII .btn {
 		display: block;
 	}
 }
@@ -2413,6 +2498,7 @@ Feature III: Part Eight
 	}
 	#feature-article .part.eight.featureIII .container-fluid img {
 		display: block;
+		width: 70%;
 	}
 }
 @media (max-width: 767px) {
@@ -2431,6 +2517,15 @@ Feature III: Part Eight
 	line-height: 1.5rem;
 	margin-bottom: 10px;
 	font-weight: lighter;
+}
+#feature-article .part.eight.featureIII img.title {
+	display: inline-block;
+	height: 1.5rem;
+	margin: 0 5px 0 0;
+}
+#feature-article .part.eight.featureIII p.title {
+	display: inline-block;
+	vertical-align: top;
 }
 
 /******************************
