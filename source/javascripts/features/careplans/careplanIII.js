@@ -74,7 +74,7 @@ $(document).ready(function() {
 	        $(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(-n+6) .circle_solid").removeClass('none');
 	       	$(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(n+7) .circle_solid").addClass('none');
 	   }
-	   else if($(window).scrollTop() >= $("div.part.seven").offset().top-101) {
+	   else if($(window).scrollTop() >= $("div.part.seven").offset().top-101 && $(window).scrollTop() < $("div.part.eight").offset().top-101) {
 	     	// Feature III Nav
 	        $(".nav-wrapper.scroll-nav.featureIII.desktop .circle:nth-child(-n+7)").removeClass('none');
 	        $(".nav-wrapper.scroll-nav.featureIII.desktop .circle:nth-child(n+8)").addClass('none');
@@ -82,6 +82,15 @@ $(document).ready(function() {
 	       	$(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(n+8) img").removeClass('none');
 	        $(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(-n+7) .circle_solid").removeClass('none');
 	       	$(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(n+8) .circle_solid").addClass('none');
+	   }
+	    else if($(window).scrollTop() >= $("div.part.eight").offset().top-101) {
+	     	// Feature III Nav
+	        $(".nav-wrapper.scroll-nav.featureIII.desktop .circle:nth-child(-n+8)").removeClass('none');
+	        $(".nav-wrapper.scroll-nav.featureIII.desktop .circle:nth-child(n+9)").addClass('none');
+	        $(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(-n+8) img").addClass('none');
+	       	$(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(n+9) img").removeClass('none');
+	        $(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(-n+8) .circle_solid").removeClass('none');
+	       	$(".nav-wrapper.scroll-nav.featureIII.desktop a:nth-child(n+9) .circle_solid").addClass('none');
 	   }
 	});
 

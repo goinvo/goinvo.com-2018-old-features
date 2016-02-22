@@ -75,6 +75,11 @@ $(document).ready(function() {
             scrollTop: $("div.part.seven").offset().top-89
         }, 500);
 	});
+	$('a.eight').click ( function () {
+		$('html, body').animate({
+            scrollTop: $("div.part.eight").offset().top-89
+        }, 500);
+	});
 
 	// superscript
 	$(".superscript").click(function(event) {
