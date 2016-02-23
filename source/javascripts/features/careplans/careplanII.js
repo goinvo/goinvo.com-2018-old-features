@@ -60,10 +60,10 @@ function setCircle7Position() {
 function updateBarriersCircle() {
 	$("#carousel-barriers .carousel-indicators li").each(function(index, el) {
 		if($(this).hasClass('active')){
-			$(this).find("img").attr("src","../../images/features/careplans/part2/circle_desktop_active.png");
+			$(this).find("img").attr("src","../../images/features/careplans/part2/circle_desktop.png");
 		}
 		else {
-			$(this).find("img").attr("src","../../images/features/careplans/part2/circle_desktop.png");
+			$(this).find("img").attr("src","../../images/features/careplans/part2/circle_desktop_active.png");
 		}
 	});
 }
