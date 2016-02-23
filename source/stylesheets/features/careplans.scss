@@ -1463,6 +1463,14 @@ Feature II: Barriers
 	.coming-soon {
 		margin-top: 3rem;
 	}
+	.coming-soon a{
+		@media  (max-width: 767px) {
+			width: 100%;
+		}
+		@media  (min-width: 768px) {
+			width: 60%;
+		}
+	}
 	.coming-soon-box {
 		border-radius: 4px;
     	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
@@ -1475,12 +1483,17 @@ Feature II: Barriers
 			border: 1px solid #898989;
 			width: 100%;
 		}
-		.col-md-6 {
+		.col-sm-4, .col-sm-8 {
 			padding: 0;
 		}
-		.coming-soon-content {
-			padding-right: 20px;
-			padding-bottom: 20px;
+		.col-sm-8 {
+			@media  (max-width: 767px) {
+				padding-top: 20px;
+			}
+			@media  (min-width: 768px) {
+				padding-left: 20px;
+				padding-bottom: 20px;
+			}
 		}
 		p {
 			color: #000000;
@@ -1488,6 +1501,15 @@ Feature II: Barriers
 		p.title, p.subtitle {
 			color: #898989;
 		}
+	}
+	.col-sm-8 .content {
+		display: inline-block;
+		width: calc(100% - 30px);
+	}
+	.col-sm-8 svg {
+		vertical-align: top;
+		margin-top: 2rem;
+		float: right;
 	}
 
 	padding-bottom: 6rem;
@@ -1647,7 +1669,8 @@ Feature II: Next Steps
 }
 #feature-article .coming-soon-box .subtitle {
 	font-weight: normal;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
+	line-height: 2rem;
 	margin-bottom: 10px;
 }
 #feature-article .coming-soon-ii .coming-soon-content .title:first-child {
@@ -1706,9 +1729,12 @@ Feature II: Next Steps
 		color: rgb(11, 94, 148);
 	}
 }
+.part.four .coming-soon-ii .coming-soon-box {
+	width: 100%;
+}
 .part.four .coming-soon-ii.desktop a,
 .part.four .coming-soon-ii.desktop a > div {
-	height: 350px;
+	height: 316px;
 }
 .part.four .coming-soon-ii.desktop a:first-child {
 	width: 35%;
@@ -1720,6 +1746,7 @@ Feature II: Next Steps
 	.coming-soon-box .coming-soon-content {
 		padding: 0;
 		display: inline-block;
+		width: calc(100% - 31px);
 	}
 	img:not(.svg) {
 		height: 220px;
@@ -1746,12 +1773,26 @@ Feature II: Next Steps
 		width: 50%;
 		max-width: 242px;
 		display: inline-block;
-		float: right;
+		//float: right;
 	}
 	.coming-soon-content {
 		display: inline-block;
 		width: 48%;
 		vertical-align: top;
+		padding: 0;
+		float: right;
+
+		div {
+			width: calc(100% - 30px);
+			display: inline-block;
+		}
+	}
+	img.svg {
+		height: 16px;
+		width: 16px;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 1.2rem;
 	}
 }
 #feature-article .part.four .coming-soon-ii.mobile {
