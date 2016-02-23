@@ -21,7 +21,7 @@ module DataHelper
 
   # Feature articles yaml helpers
   def feature_articles_sorted_by_date()
-    data.features.articles.sort { |a,b| a.date <=> b.date }.reverse
+    data.feature_articles.articles.sort { |a,b| a.date <=> b.date }.reverse
   end
 
   def feature_article_date(article)
