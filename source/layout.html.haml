@@ -20,8 +20,6 @@
 	- currentPage = current_page.path
 	- if currentPage.include? "healthcare"
 		- bodyClass = "healthcare"
-	- elsif currentPage.include? "enterprise"
-		- bodyClass = "enterprise"
 	- elsif currentPage.include? "products"
 		- bodyClass = "products"
 	- elsif currentPage.include? "studio"
@@ -46,30 +44,26 @@
 							= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
 							%span.tag-line Designing the future of healthcare.
 						%nav#nav-buttons
-							%a.nav-button.healthcare{:href => asset_url('healthcare')} 
-								.nav-element Healthcare
-							%a.nav-button.enterprise{:href => asset_url('enterprise')} 
-								.nav-element Enterprise
-							%a.nav-button.products{:href => asset_url('products')} 
+							%a.nav-button.healthcare{:href => asset_url('healthcare')}
+								.nav-element Work
+							%a.nav-button.products{:href => asset_url('products')}
 								.nav-element Products
 							%a.nav-button.studio{:href => asset_url('studio/team')}
 								.nav-element Studio
-							%a.nav-button.articles{:href => asset_url('http://yes.goinvo.com/articles')}
+							%a.nav-button.articles{:href => asset_url('articles')}
 								.nav-element Articles
 							%a.nav-button.contact{:href => asset_url('contact')}
 								.nav-element Contact
 					#mobile-hamburger
 						=image_tag('hamburger.svg');
 					%nav#nav-buttons-mobile
-						%a.nav-button.healthcare{:href => asset_url('healthcare')} 
+						%a.nav-button.healthcare{:href => asset_url('healthcare')}
 							.nav-element Healthcare
-						%a.nav-button.enterprise{:href => asset_url('enterprise')}
-							.nav-element Enterprise
-						%a.nav-button.products{:href => asset_url('products')} 
+						%a.nav-button.products{:href => asset_url('products')}
 							.nav-element Products
 						%a.nav-button.studio{:href => asset_url('studio/team')}
 							.nav-element Studio
-						%a.nav-button.articles{:href => asset_url('http://goinvo.hs-sites.com/articles')}
+						%a.nav-button.articles{:href => asset_url('articles')}
 							.nav-element Articles
 						%a.nav-button.contact{:href => asset_url('contact')}
 							.nav-element Contact
@@ -130,4 +124,3 @@
 				(function(d,s,i,r) {if (d.getElementById(i)){return;} var n=d.createElement(s),e=d.getElementsByTagName(s)[0]; n.id=i;n.src='http://js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/356419.js'; e.parentNode.insertBefore(n, e); })(document,"script","hs-analytics",300000);
 			:javascript
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-10273473-2', 'auto'); ga('send', 'pageview');
-      

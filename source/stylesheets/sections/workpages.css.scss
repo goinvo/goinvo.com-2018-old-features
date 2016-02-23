@@ -6,7 +6,6 @@
 	height: auto;
 	background-color: #f9f9f9;
 	position: relative;
-	min-height: 810px;
 
 	.header-image {
 		width:auto;
@@ -117,11 +116,13 @@
 	text-align: center;
 	font-style: italic;
 	font-size: 32px;
-	padding: 150px 10px;
+	padding: 120px 10px;
 	line-height: 42px;
+
 	@media only screen and (max-width: 560px) {
 		font-size: 23px;
 		line-height: 28px;
+		padding: 50px 10px;
 	}
 	
 	&.small-bottom-padding {
@@ -185,9 +186,13 @@
 	margin: 0 auto;
 	max-width: 1100px;
 	text-align: center;
-	padding: 150px 10px;
+	padding: 120px 10px;
 	margin-bottom: 40px;
 	margin-top: 40px;
+
+	@media only screen and (max-width: 560px) {
+		padding: 50px 10px;
+	}
 
 	.quote-content {
 		font-size: 55px;
@@ -455,15 +460,7 @@
 	width: 100%;
 	background-color: #F6F7F6;
 	position: relative;
-	height: 575px;
-	
-	&:hover {
-		.left-content .button {
-			transform: scale(1.1, 1.1);	
-		}
-	}
-	
-	
+	height: 575px;	
 	
 	@media  only screen and (max-width: 1100px) {
 			height: 500px;
@@ -530,14 +527,8 @@
 			display: inline-block;
 			padding: 5px 15px;
 			cursor: pointer;
-			transform: scale(1,1);
-			transition: 300ms ease-in-out;
 			margin-top: 50px;
 			text-align: center;
-			
-			&:hover {
-				transform: scale(1.15, 1.15);		
-			}
 			
 			@media  only screen and (max-width: 960px) {
 				font-size: 18px;
@@ -681,7 +672,7 @@
 	background-color: #F9F9F9;
 	text-align: center;
 	padding-bottom: 30px; 
-	
+	color: #9B9B9B;	
 	
 	.small-title {
 		color: #9B9B9B;
@@ -758,6 +749,40 @@
 	
 }
 
+.enterprise-banner {
+	color: #9B9B9B;
+	background-color: #F9F9F9;
+	border-top: 1px solid #edecec;
+	text-align: center;
+	max-height: 360px;
+	padding-top: 30px;
+	overflow: hidden;
+
+	img {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 950px;
+	}
+
+	a {
+		display: block;
+		margin: 10px 0;
+	}
+
+	.button {
+		color: #9B9B9B;
+		padding: 18px 20px 16px 20px;
+		height: auto;
+		display: inline-block;
+		font-size: 25px;
+		border-radius: 3px;
+		display: block;
+		border: 1px solid #9B9B9B;
+		cursor: pointer;
+		width: 340px;
+		margin: 0 auto;
+	}
+}
 
 .hero-video-container {
 	width: 100%;

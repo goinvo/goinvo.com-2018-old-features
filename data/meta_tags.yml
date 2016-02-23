@@ -281,6 +281,14 @@
   twittertitle: "Care Plans: Part 2"
   twitterimage: "http://www.goinvo.com/images/features/careplans/FeatureBanner_twitter.jpg"
 
+- page: "careplans-part3"
+  description: "what is the future of care plans?"
+  keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Care Plans: Part 3"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/featureIII_twitter_image.jpg"
+
 - page: "digital-healthcare"
   description: "8 health tech trends to look for in the upcoming year."
   keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"

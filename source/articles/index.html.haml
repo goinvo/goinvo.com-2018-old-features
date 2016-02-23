@@ -2,7 +2,7 @@
   = "Involution Studios Articles"
 - content_for(:page_head) do
   = stylesheet_link_tag "articles/index"
-  = javascript_include_tag "get_hubspot_blog_posts"
+  = javascript_include_tag "hubspot_blog_posts"
   :javascript
     function renderBlogPosts(posts) {
       if (!posts) return;
@@ -52,3 +52,4 @@
 
 .blog-article-list-container
   %ul.blog-article-list
+%a{ :href => "http://yes.goinvo.com" }All blog posts

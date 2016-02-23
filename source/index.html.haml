@@ -1,34 +1,74 @@
 - content_for(:page_head) do
   = stylesheet_link_tag "sections/homepage", :async => true
+  = javascript_include_tag "hubspot_blog_posts"
   :javascript
-    posts = [];
-    var randNum = Math.ceil(Math.random()*3);
     function makeBlogPostBottom(posts) {
-      // Grabs the first image in the blog post
-      var currentString = posts[0].encoded;
-      var sIndex = currentString.indexOf('<img');
-      currentString = currentString.substr(sIndex + 4);
-      sIndex = currentString.indexOf('src=');
-      currentString = currentString.substr(sIndex + 5);
-      sIndex = currentString.indexOf('"');
-      currentString = currentString.substr(0, sIndex);
+      var post = posts[0];
       // Set the recent blog post section
-      $('#oracle').removeClass('bar').addClass('half');
-      $('.recent-blog-post.dynamic').append('<a href="' + posts[0].link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + posts[0].title + '</h2></div></a>');
-      $('#blog .photo-container').css('background-image', 'url(' + currentString + ')');
+      $('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + post.title + '</h2></div></a>');
+      $('#blog .photo-container').css('background-image', 'url(' + findFirstBlogPostImage(post) + ')');
     }
-    // Randomizing the homepage header
-    var randNum = Math.floor((Math.random() * 2) + 1);
-    if( randNum === 1) {
-      $('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-rooms2.png')");
-    } else  {
-      // Some stuff that should probably be in css but is instead here -- for the iphone header (w/ eric's face)
-      $('#homepage-hero').css('background-color', '#f9f9f9');
-      $('#homepage-hero .photo-container').css('background-image', "url('/images/home/homepage-image-03.png')");
-      $('#homepage-hero').toggleClass('iphone-images-style', 'true');
-      $('#homepage-hero .photo-container').css('background-size', '90%');
-      $('#homepage-hero .photo-container').css('background-position-x', 'center');
-    }
+    getHubspotBlogPosts(makeBlogPostBottom);
+    var homepageHeaderContent = [
+      {
+        backgroundImage: '/images/home/family-doctor-visit.jpg',
+        headerText: 'Design better outcomes',
+        subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+        portfolioImage: '/images/home/hgraph-visualize-health.png',
+        portfolioText: 'See your health in one picture.',
+        caseStudyUrl: 'healthcare/hgraph/',
+        longTextClass: false
+      },
+      {
+        backgroundImage: '/images/home/homepage-02.png',
+        headerText: 'Design better efficiency',
+        subHeaderText: 'We reimagine processes and services to streamline healthcare.',
+        portfolioImage: '/images/home/homepage-image-02.png',
+        portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
+        caseStudyUrl: 'healthcare/3m/',
+        longTextClass: false
+      },
+      {
+        backgroundImage: '/images/home/homepage-03.png',
+        headerText: 'Magical software for personalized medicine',
+        subHeaderText: 'The software we design helps progressive healthcare companies create new markets and exploit future tech.',
+        portfolioImage: '/images/home/homepage-image-03.png',
+        portfolioText: 'Outpatient care weaves Cognitive Behavior Therapy (CBT) into everyday life.',
+        caseStudyUrl: 'healthcare',
+        buttonText: 'See Our Work',
+        longTextClass: true
+      },
+      {
+        backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
+        headerText: 'Patient tested. Clinician approved.',
+        subHeaderText: 'We design magical experiences to change behavior for good.',
+        caseStudyUrl: 'healthcare',
+        buttonText: 'See Our Work',
+        longTextClass: false
+      }
+    ];
+    var homepageHeader = homepageHeaderContent[Math.floor(Math.random() * 4)];
+    $(function() {
+      $('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
+      $('#homepage-hero .actual-title').text(homepageHeader.headerText);
+      $('#homepage-hero .actual-content').append(homepageHeader.subHeaderText);
+      if(homepageHeader.longTextClass) {
+        $('#homepage-hero').addClass("long-text");
+      }
+      if(homepageHeader.portfolioImage) {
+        $('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeader.portfolioImage + " />");
+      }
+      if(homepageHeader.portfolioText) {
+        $('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeader.portfolioText + "</p>");
+      }
+      if(homepageHeader.buttonText) {
+        $('#homepage-hero .actual-button').text(homepageHeader.buttonText);
+      } else {
+        $('#homepage-hero .actual-button').text('View Case Study');
+      }
+      $('#homepage-hero').attr('href', homepageHeader.caseStudyUrl);
+    });
+
   - meta = page_for_meta("homepage")
   %meta{:name => "description", :content => "#{meta.description}" }
   %meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -39,12 +79,14 @@
   - if (meta.twitterimage)
     %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%a#homepage-hero.block.bar{:href => "healthcare"}
+%a.block.bar#homepage-hero{:href => ""}
   .photo-container
   .title
-    .actual-title Magical Software for Personalized Medicine
-    .actual-content The software we design helps progressive healthcare companies create new markets and exploit future tech.
-    .actual-button See our work
+    .actual-title
+    .actual-content
+    .actual-portfolio
+    .actual-portfolio-description
+      .actual-button
 .clients
   %table.non-mobile
     %tbody
@@ -70,19 +112,16 @@
         %td
           %a{:href => "healthcare/hgraph"}
             %img{:src => "/images/healthcare/partners/wallgreen.png"}
-%a#zika.block.bar{:href => "http://understandingzika.org/", :target => "_blank"}
-  .photo-container
-  .title
-    %h5.tag March 2016 Feature
-    %h2.name Understanding Zika
-    %h3.sub-name There are an estimated 1.6 Million cases of Zika virus in 33 Countries
-%a#digital-healthcare.block.bar{:href => "features/digital-healthcare"}
-  .photo-container
-  .title
-    %h5.tag January 2016 Feature
-    %h2.name Digital Healthcare in 2016
-    %h3.sub-name 8 guidelines to drive engagement in future healthcare services
 
+- feature_articles_sorted_by_date().first(2).each do |article|
+  %a.block.bar{ :href => "features/#{article.url}", :id => article.url }
+    - # Should still be setting bg images in CSS, because of varying gradients.
+    - # At least for now...
+    .photo-container
+    .title
+      %h5.tag= feature_article_date(article) + " Feature"
+      %h2.name= article.title
+      %h3.sub-name= article.tag_line
 .double
   %a#three-m.block.half{:href => "healthcare/3m"}
     .photo-container
@@ -146,9 +185,7 @@
           "Stephen Friend presents The Resilience Project."
         %td
           "hGraph might be just what the doctor will order."
-
 .recent-blog-post.dynamic
-
 %a#from-bathroom-to-healthroom.block.bar{:href => "features/from-bathroom-to-healthroom/"}
   .photo-container
   .title
