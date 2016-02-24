@@ -19,6 +19,17 @@
       });
     }
     getHubspotBlogPosts(renderBlogPosts);
+    $(function() {
+      $('.feature-article-list-container').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd',
+        function() {
+          $(this).removeClass('transitioning');
+        }
+      );
+      $('#show-all-features').click(function() {
+        $('.feature-article-list-container').addClass('transitioning');
+        $('.feature-article-list-container').toggleClass('show-all')
+      });
+    });
   - meta = page_for_meta("articles")
   %meta{:name => "description", :content => "#{meta.description}" }
   %meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -48,7 +59,7 @@
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
               %h1= article.title
               .feature-label= feature_article_date(article)
-  %a.show-all-features Show all features
+%a#show-all-features Show all features
 
 .blog-article-list-container
   %ul.blog-article-list

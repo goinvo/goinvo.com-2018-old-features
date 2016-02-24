@@ -40,6 +40,22 @@
 .most-recent-article .inner-container {
 	padding: 3rem 3rem 6rem 3rem;
 }
+.feature-article-list-container {
+  max-height: 480px;
+  overflow: hidden;
+  @media only screen and (max-width: 500px) {
+    max-height: 880px;
+  }
+}
+.feature-article-list-container.transitioning {
+  transition: max-height 500ms;
+}
+.feature-article-list-container.show-all {
+  max-height: 3000px;
+  @media only screen and (max-width: 500px) {
+    max-height: 5000px;
+  }
+}
 .feature-article-list {
 	list-style: none;
 }
