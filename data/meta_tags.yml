@@ -271,7 +271,7 @@
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 1"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP1.png"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP1.jpg"
 
 - page: "careplans-part2"
   description: "How are care plans being used?"
@@ -279,7 +279,7 @@
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 2"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP2.png"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP2.jpg"
 
 - page: "careplans-part3"
   description: "What is the future of care plans?"
@@ -287,7 +287,7 @@
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 3"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP3.png"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/_twitter_CP3.jpg"
 
 - page: "digital-healthcare"
   description: "8 health tech trends to look for in the upcoming year."
