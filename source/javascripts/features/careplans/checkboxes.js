@@ -150,6 +150,7 @@ function addCondition (id) {
     			$.each(condition["care plan"], function(component, content) {
 		    		component = component.replace(/\s/g, '');
 		    		$.each(content, function(key, val){
+		    			console.log(id)
 		    			if (val != "" && $(".profile-pane.active .content-table#"+component+" > #"+key+" > ."+id).length == 0) {
 		    				$(".profile-pane.active .content-table#"+component+" > #"+key).append("<p class="+id+">"+val+"</p>");
 		    			}
