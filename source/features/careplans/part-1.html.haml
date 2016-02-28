@@ -93,7 +93,7 @@
 			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
-			.care-cards.carousel.slide.desktop
+			.care-cards.carousel.slide.desktop{ :data => { :interval => "false" }}
 				%ol.card-carousel-indicators
 					%li.active{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
@@ -120,7 +120,7 @@
 						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
 						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
-			.care-cards.carousel.slide.mobile#carousel-mobile
+			.care-cards.carousel.slide.mobile#carousel-mobile{ :data => { :interval => "false" }}
 				%ol.carousel-indicators.card-carousel-indicators
 					%li.active{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}

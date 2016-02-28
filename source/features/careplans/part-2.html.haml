@@ -409,7 +409,7 @@
 				%h1 The Care Plan Product Landscape
 				%p This matrix aims to explore the effectiveness of current care plan services based on defined criteria. Each service was scored based on the percentage of criteria met in each of the eleven topic areas. A 0 means that none of the criteria points were fulfilled. Click on each criteria at the top of the matrix to break down what subcriteria were used for scoring. The final score, out of 100, is the average of the service’s scores in each criteria area.
 			.content-carousel
-				.carousel.slide.mobile#carousel-mobile
+				.carousel.slide.mobile#carousel-mobile{ :data => { :interval => "false" }}
 					.carousel-inner{:role=>"listbox"}
 						.item.active
 							.content
@@ -602,7 +602,7 @@
 								%h6 History
 								%ul
 									%li Provides overview of general health condition.
-									%li Provides overview of general health condition.
+									%li Service takes into account patients individual health concerns.
 									%li Provides comprehensive medical history.
 									%li Ease of obtaining medical record or medical history information.
 							%div.table-tick
@@ -2503,7 +2503,7 @@
 	.part.three
 		.text
 			%h1 The Barriers to Care Planning
-		.carousel.slide#carousel-barriers
+		.carousel.slide#carousel-barriers{ :data => { :interval => "false" }}
 			%div.carousel-bg
 				%ol.carousel-indicators
 					%li.active.one{:data=>{:target=>"#carousel-barriers", :slide=>{:to=>"0"}}}
@@ -2547,6 +2547,8 @@
 			%h1 The Next Steps for Care Plans
 			%p Care plans have come a long way since their conception. We have created a somewhat systematic approach to a patient health guide, yet have not standardized it for consistant communication and delivery of care. We have established appropriate intervention steps for a variety of diagnosed conditions, yet have not mastered the format and delivery of these steps so that they are effective and engaging to patients. We have figured out collect massive amounts of crucial patient health data, yet we have not offered to the patient to carry with them and share throughout their diverse medical encounters. We are only on the cusp of health technology wave, and care plans have a bright future ahead of them. Want a glimpse? Check out our next feature.
 		.coming-soon.coming-soon-ii.desktop
+			%div.forecast.clearfix 
+				%p Live on 11 March 2016.
 			%a{:href => "/features/careplans/part-1.html"}
 				%div.coming-soon-box
 					%img.svg{:src => "../../images/features/careplans/icons/arrow-gray.svg"}
@@ -2555,7 +2557,7 @@
 						%p.subtitle An Overview
 					%img{:src => "../../images/features/careplans/donna_norm.png"}
 			%a{:href => "javascript:void(0)"}
-				%div.coming-soon-box
+				%div.coming-soon-box.clearfix
 					%img{:src => "../../images/features/careplans/part2/careplan_cm_communication.png"}
 					%div.coming-soon-content
 						%div.content
@@ -2563,10 +2565,11 @@
 							%p.subtitle The Future
 						%img.svg{:src => "../../images/features/careplans/icons/arrow-gray.svg"}
 						%p The third and final feature will explore what opportunitues for improvement and innovation exist in the future of care planning.
-						%p Live on 11 March 2016.
-		.coming-soon-ii.mobile
+		.coming-soon-ii.mobile.clearfix
+			%div.forecast.clearfix 
+				%p Live on 11 March 2016.
 			%a{:href => "/features/careplans/part-1.html"}
-				%div.coming-soon-box
+				%div.coming-soon-box.clearfix
 					%img.svg{:src => "../../images/features/careplans/icons/arrow-gray.svg"}
 					%div.coming-soon-content
 						%p.title Care Plans Part 1:
