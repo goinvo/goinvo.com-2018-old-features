@@ -285,6 +285,11 @@ a {
 		width: 100%;
 		height: auto;
 		background-size: cover;
+		@media  (max-width: 767px) {
+			background-position: 40% 50px;
+		}
+		@media  (min-width: 768px) {
+		}
 	}
 
 }
