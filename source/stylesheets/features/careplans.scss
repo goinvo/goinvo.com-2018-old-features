@@ -1997,6 +1997,9 @@ Feature III
 	margin-bottom: 15px;
 	line-height: 2.5rem;
 }
+#feature-article .part.featureIII p.quote {
+	font-weight: bold;
+}
 
 
 /******************************
@@ -2302,7 +2305,7 @@ Feature III: Part Three
 		margin-bottom: 20px;
 	}
 }
-#feature-article .part.three.featureIII .col-sm-4 {
+#feature-article .part.three.featureIII .col-sm-8{
 	@media  (min-width: 768px) {
 		padding-right: 20px;
 	}
