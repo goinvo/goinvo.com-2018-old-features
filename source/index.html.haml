@@ -29,7 +29,7 @@
 						longTextClass: false
 					},
 					{
-						backgroundImage: '/images/home/homepage-02.png',
+						backgroundImage: '/images/home/homepage-02.jpg',
 						headerText: 'Design better efficiency',
 						subHeaderText: 'We reimagine processes and services to streamline healthcare.',
 						portfolioImage: '/images/home/homepage-image-02.png',
@@ -38,7 +38,7 @@
 						longTextClass: false
 					},
 					{
-						backgroundImage: '/images/home/homepage-03.png',
+						backgroundImage: '/images/home/homepage-03.jpg',
 						headerText: 'Magical software for personalized medicine',
 						subHeaderText: 'The software we design helps progressive healthcare companies create new markets and exploit future tech.',
 						portfolioImage: '/images/home/homepage-image-03.png',
@@ -65,7 +65,7 @@
 				$('#homepage-hero .actual-title').text(homepageHeaderContent[randNum].headerText);
 				
 				if(homepageHeaderContent[randNum].portfolioImage) {
-					$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeaderContent[randNum].portfolioImage + " />");
+					$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeaderContent[randNum].portfolioImage + " alt='healthcare ux design' />");
 				}
 
 				$('#homepage-hero .actual-content').append(homepageHeaderContent[randNum].subHeaderText);
