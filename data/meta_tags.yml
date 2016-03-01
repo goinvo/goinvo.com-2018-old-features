@@ -30,6 +30,14 @@
   twittertitle: "Involution Studios - Healthcare - Care Cards"
   twitterimage: "http://www.goinvo.com/images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"
 
+- page: "paintrackr"
+  description: "PainTrackr allow you to easily track pain on a mobile device."
+  keywords: "PainTrackr, track pain, pain track, pain tracker, log pain, ios app, healthcare design"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Involution Studios - Products - PainTrackr"
+  twitterimage: "http://www.goinvo.com/images/clients/paintrackr/paintrackr-track-pain-ios-app.jpg"
+
 - page: "hgraph"
   description: "hGraph, your health in one picture, Improves Health and Healthcare with Agile Design and Big Data Analytics"
   keywords: "hgraph, health visualization, big data, patient health, health score, hscore, healthcare application"
