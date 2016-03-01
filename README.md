@@ -39,9 +39,9 @@ There can (and will) be many instances of these temporary branches. These branch
 #### Feature
 Feature Branches must be branched off of the `develop` branch.
 
-A `feature` branch is where most of your time will be spent. You should create a new `feature` branch when adding some sort of functionality to the website (that includes feature articles). When you are done with your feature (and have tested it), merge your `feature` branch back into the `develop` branch. Continue to test in the `develop` branch and when you are ready to go live, merge into `master`.
+A `feature` branch is where most of your time will be spent. You should create a new `feature` branch when adding some sort of functionality to the website (that includes feature articles). When you are done with your feature (and have tested it), merge 'develop' (make sure it's up to date) into your 'feature' branch then merge the 'feature' branch back into the `develop` branch. Continue to test in the `develop` branch and when you are ready to go live, merge into `master`.
 
-Naming Convention: `feature-[feature description]`
+Naming Convention: `feature-[feature-description]`
 
 #### Hotfix
 A `hotfix` branch must be branched off of the `master` branch.
@@ -53,18 +53,18 @@ Naming Convention: `hotfix-[hotfix description]`
 ### Git Scenarioes
 
 #### Developing a Feature Article
-1. Make a new `feature` branch by branching off of `develop`. The title of this branch should be in the format `feature-[feature description]`.
-2. Do all of your development and testing in your `feature-[feature description]` branch. You may upload to stage at any point.
+1. Make a new `feature` branch by branching off of `develop`. The title of this branch should be in the format `feature-[feature-description]`.
+2. Do all of your development and testing in your `feature-[feature-description]` branch. You may upload to stage at any point.
 3. When you're done developing and have fully tested in your isolated branch, merge into `develop`.
 4. Do more testing in the `develop` branch. You may want to upload to stage to perform more testing.
 5. When you believe you're ready to push live, merge the `develop` branch into the `master` branch. This will upload to S3 automatically and your feature is now live.
-6. You can now delete your `feature-[feature description]` branch as its entire history is now in the `develop` and `master` branches.
+6. You can now delete your `feature-[feature-description]` branch as its entire history is now in the `develop` and `master` branches.
 
 #### Making a Quick Fix
-1. Make a new `hotfix` branch by branching off of `master`. The title of this branch should be in the format`hotfix-[hotfix description]`.
-2. Do all of your development and testing in your `hotfix-[hotfix description]` branch. You may want to upload to stage at any point.
-3. When you're done developing and have fully tested your fix (100% fully tested, we don't want bad code to go live), you will merge `hotfix-[hotfix description]` into `master` AND you will merge `hotfix-[hotfix description]` into `develop`.
-4. You can now delete your `hotfix-[hotfix description]` branch as its entire history is now in the `develop` and `master` branches.
+1. Make a new `hotfix` branch by branching off of `master`. The title of this branch should be in the format`hotfix-[hotfix-description]`.
+2. Do all of your development and testing in your `hotfix-[hotfix-description]` branch. You may want to upload to stage at any point.
+3. When you're done developing and have fully tested your fix (100% fully tested, we don't want bad code to go live), you will merge `hotfix-[hotfix-description]` into `master` AND you will merge `hotfix-[hotfix-description]` into `develop`.
+4. You can now delete your `hotfix-[hotfix-description]` branch as its entire history is now in the `develop` and `master` branches.
 
 
 ## Generate Static Site
@@ -82,7 +82,7 @@ Codeship now handles deployment to Amazon S3 for the live site. Any push to `mas
 
 If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_sync gem as described below. The appropriate s3 bucket can be targeted with the `s3_bucket` variable in `config.rb`.  
 
-Codeship does not sync to `stage.goinvo.com`. That must be done manually.
+Codeship does not sync to `staging.goinvo.com`. That must be done manually.
 
 ### AWS Setup
 
