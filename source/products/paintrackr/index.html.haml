@@ -3,7 +3,7 @@
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/simple-case-studies"
 	= javascript_include_tag 'worknav'
-	- meta = page_for_meta("care-cards")
+	- meta = page_for_meta("paintrackr")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
 	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
@@ -57,7 +57,7 @@
 
 		%div
 			%img.with-caption <video autoplay muted loop preload><source type="video/mp4" src="../../videos/paintrackr-ios-app-demo.mp4"></video>
-		%p.caption Demo of PainTrackr app. Available in the <a href="https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8">iOS App Store</a>.
+		%p.caption Demo of the <a href="https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8">PainTrackr iOS app</a>.
 
 		%div
 			%img.with-caption{alt: "Next version of PainTrackr could evolve into painting your pain.", src: "../../images/clients/paintrackr/paintrackr-ios-app-painting-pain-concepts.jpg"}/
