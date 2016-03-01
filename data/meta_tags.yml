@@ -222,6 +222,14 @@
   twittertitle: "Apply for a job at Involution Studios!"
   twitterimage: "http://www.goinvo.com/images/careers/dawa-chung-ui-designer.jpg"
 
+- page: "open-office-hours"
+  description: "Our studio is open for anyone needing design advice, every Thursday from 4-6p."
+  keywords: "open office hours, design critiques, portfolio reviews, boston design studio, ux design, ux design studio"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Stop by for Open Office Hours"
+  twitterimage: "http://www.goinvo.com/images/open-office-hours/open-studio.jpg"
+
 - page: "history"
   description: "An interactive timeline of Invo's history"
   keywords: "ui, ux, design, studio, history, timeline, javascript"
