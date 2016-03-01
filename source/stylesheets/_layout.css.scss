@@ -121,6 +121,12 @@ body {
 		font-size: inherit;
 		background-color: darken($off_white, 1%);
 
+		a {
+			width: 100%;
+			max-height: 225px;
+			overflow: hidden;
+		}
+
 		img {
 			width: 100%;
 			border-top-left-radius: 5px;

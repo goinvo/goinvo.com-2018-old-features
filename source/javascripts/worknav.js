@@ -183,7 +183,7 @@ $( document ).ready(function() {
 				"title" : "StaffPlan",
 				"url" : "/products/staff-plan/",
 				"image" : "staffplan.png",
-				"next-id" : "healthcare"
+				"next-id" : "paintrackr"
 			},
 //			"runnan" : {
 //				"title" : "Runnan",
@@ -191,6 +191,12 @@ $( document ).ready(function() {
 //				"image" : "runnan.jpg",
 //				"next-id" : "healthcare"
 //			},
+			"paintrackr" : {
+				"title" : "PainTrackr",
+				"url" : "/products/paintrackr/",
+				"image" : "paintrackr.jpg",
+				"next-id" : "healthcare"
+			},
 			"products" : {
 				"title" : "Products",
 				"url" : "/products/",
