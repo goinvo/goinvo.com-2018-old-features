@@ -335,21 +335,22 @@ a {
 		.col:last-child {
 			border-right: none;
 		}
-		@media only screen and (max-width:768px) {
+		
+		@media only screen and (min-width:992px) {
+			.col {
+				border-right: solid rgb(11, 94, 148) 2px;
+			}
+			.col:last-child {
+				width: calc(16.7% - 3px);
+			}
+		}
+		@media only screen and (max-width:991px) {
 			.col {
 				border-right: none;
 				background-color: #ffffff;
 			}
 			.col:last-child {
 				width: 100%;
-			}
-		}
-		@media only screen and (min-width:769px) {
-			.col {
-				border-right: solid rgb(11, 94, 148) 2px;
-			}
-			.col:last-child {
-				width: calc(16.7% - 3px);
 			}
 		}
 	}
