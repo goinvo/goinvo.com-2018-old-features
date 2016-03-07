@@ -45,6 +45,8 @@ $(document).ready(function(){
 		updateBarriersCircle();
 	});
 
+
+	
 });
 
 $(window).resize(function(event) {

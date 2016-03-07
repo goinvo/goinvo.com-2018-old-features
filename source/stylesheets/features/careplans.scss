@@ -1177,7 +1177,7 @@ Feature II: Product Landscape
 #feature-article .part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td {
 	position: relative;
 	.table-header {
-		width: 270px;
+		width: 250px;
 		text-align: left;
 		position: absolute;
 		display: inline-block;
@@ -1193,7 +1193,32 @@ Feature II: Product Landscape
 		font-weight: normal;
 		top: -30px;
 		left: 0;
-	}
+	}	
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td .table-header + .popover {
+	top: -300px !important;
+	left: -90px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(4) .table-header + .popover {
+	top: -380px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(6) .table-header + .popover {
+	top: -380px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(7) .table-header + .popover {
+	top: -350px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(9) .table-header + .popover {
+	top: -460px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(10) .table-header + .popover {
+	top: -410px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(11) .table-header + .popover {
+	top: -270px !important;
+}
+.part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td:nth-child(12) .table-header + .popover {
+	top: -330px !important;
 }
 /***************************************
 Feature II: Product Landscape mobile
