@@ -250,3 +250,8 @@ redirect '/the-war-on-self-understanding', 'http://yes.goinvo.com/articles/the-w
 redirect '/oscon-14-sneak-peek-involution-interview-on-opensource-com', 'http://yes.goinvo.com/articles/oscon-14-sneak-peek-involution-interview-on-opensource-com'
 redirect '/products/health-axioms', '/products/care-cards'
 redirect '/healthcare/health-axioms', '/products/care-cards'
+redirect '/internships', '/studio/careers'
+redirect '/africa-the-next-frontier/comment-page-1', 'http://yes.goinvo.com/articles/africa-the-next-frontier'
+redirect '/techtalks/', 'http://yes.goinvo.com/articles/around-the-studio-tech-talks'
+redirect '/car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/', 'http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz'
+redirect '/work/personalgenomeproject/', '/healthcare/personal-genome-project/'
