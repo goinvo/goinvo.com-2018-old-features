@@ -2705,10 +2705,13 @@ Feature III: Part Night
 /******************************
 Intro Page
 ******************************/
-#feature-article header.intro {
+#feature-article.intro .hero-image {
+	width: 100%;
+}
+#feature-article.intro header.intro {
 	background-color: rgb(31,86,122);
 }
-#feature-article header.nav-wrapper.stuck.intro a {
+#feature-article.intro header.nav-wrapper.stuck.intro a {
 	
 	color: #ffffff;
 	padding: 10px 5px;
@@ -2718,7 +2721,7 @@ Intro Page
 		font-weight: normal;
 	}
 	span {
-		font-weight: normal;
+		font-weight: bold;
 		opacity: 0.6;
 	}
 	@media  (max-width: 767px) {
@@ -2740,14 +2743,114 @@ Intro Page
 		width: 32%;
 	}
 }
-#feature-article header.nav-wrapper.scroll-nav.intro a {
+#feature-article.intro header.nav-wrapper.scroll-nav.intro a {
 	color: #ffffff;
 	font-weight: normal;
-	width: 32%;
+	
+	@media  (max-width: 767px) {
+		width: 32%;
+		img {
+			display: none;
+		}
+		&:last-child {
+			display: none;
+		}
+	}
+	@media  (min-width: 768px) {
+		width: 30%;
+		img {
+			height: 1.2rem;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&:last-child {
+			width: 7%;
+			display: inline-block;
+		}
+	}
 }
 #feature-article.intro p {
 	margin-bottom: 1rem;
 }
+#feature-article.intro h1 {
+	margin-bottom: 2rem;
+}
+#feature-article.intro .download-ebook {
+	@media  (min-width: 768px) {
+		float: right;
+	}
+}
+#feature-article.intro .download-ebook p {
+	color: #000000;
+	line-height: 1.2rem;
+	font-weight: normal;
+	display: inline-block;
+}
+#feature-article.intro .download-ebook img {
+	display: inline-block;
+	height: 2.2rem;
+}
+#feature-article.intro .btn {
+	color: #6195CF;
+	font-weight: normal;
+	border: none;
+	background-color: #ebebeb;
+	@media  (max-width: 767px) {
+		width: 100%;
+	}
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}
+#feature-article.intro .container-fluid {
+	//padding: 0;
+	margin-top: 3rem;
+}
+#feature-article.intro .container-fluid .col-sm-6 {
+	padding: 0;
+}
+#feature-article.intro .container-fluid .col-sm-6:first-child img {
+	@media  (min-width: 768px) {
+		display: none;
+	}
+	@media  (max-width: 767px) {
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+#feature-article.intro .container-fluid .col-sm-6:last-child {
+	@media  (min-width: 768px) {
+		padding-left: 50px;
+	}
+	p {
+		font-weight: normal;
+	}
+	&>img {
+		margin-bottom: 20px;
+		@media  (min-width: 768px) {
+			display: block;
+		}
+		@media  (max-width: 767px) {
+			display: none;
+		}
+	}
+	div > img {
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: top;
+		margin-top: 5px;
+	}
+	div > p {
+		display: inline-block;
+		width: calc(100% - 40px);
+		float: right;
+	}
+}
+
+
+
 
 
 /******************************
