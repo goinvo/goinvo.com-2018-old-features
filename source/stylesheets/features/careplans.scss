@@ -113,10 +113,6 @@ a {
 			text-decoration: underline;
 			color: rgba(230, 230, 230, .65);
 		}
-
-		&:hover {
-			color: rgba(190, 190, 190, .65);
-		}
 	}
 
 	&.scroll-nav {
@@ -127,6 +123,11 @@ a {
 
 	}
 
+}
+#feature-article header.nav-wrapper:not(.featureIII) a:hover,
+#feature-article header.nav-wrapper:not(.featureIII) a.selected {
+	text-decoration: none;
+	background-color: #f5f5f5;
 }
 
 #feature-article{
@@ -2710,6 +2711,9 @@ Intro Page
 }
 #feature-article.intro header.intro {
 	background-color: rgb(31,86,122);
+}
+#feature-article.intro header.intro.nav-wrapper a:hover {
+	background-color: #377ba7;
 }
 #feature-article.intro header.nav-wrapper.stuck.intro a {
 	
