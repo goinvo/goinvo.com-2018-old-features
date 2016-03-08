@@ -8,8 +8,9 @@
 	= javascript_include_tag "//platform.twitter.com/widgets.js"
 	= javascript_include_tag "vendor/jquery.js"
 	= javascript_include_tag "vendor/bootstrap.min.js"
+	= javascript_include_tag "features/careplans/careplans-scroll.js"
 
-	- meta = page_for_meta("careplans-part1")
+	- meta = page_for_meta("careplans-intro")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
 	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
