@@ -148,6 +148,10 @@ a {
 			z-index: 5;
 			position: absolute;
 		}
+		.index-title {
+			top: 10%;
+			width: 100%;
+		}
 		.title1 {
 			top: 20%;
 			width: 100%;
@@ -214,6 +218,10 @@ a {
 		top: 0;
 		left: 0;
 		background-image: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.2));
+	}
+	.index-bg-cover {
+		background-color: #ffffff;
+		opacity: 0.7;
 	}
 	.hero{
 		height: 700px;
@@ -2693,6 +2701,53 @@ Feature III: Part Night
 }
 
 
+
+/******************************
+Intro Page
+******************************/
+#feature-article header.intro {
+	background-color: rgb(31,86,122);
+}
+#feature-article header.nav-wrapper.stuck.intro a {
+	
+	color: #ffffff;
+	padding: 10px 5px;
+
+	h4 {
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+	span {
+		font-weight: normal;
+		opacity: 0.6;
+	}
+	@media  (max-width: 767px) {
+		text-align: left;
+		width: 100%;
+		&:not(:last-child) {
+			border-bottom: 1px solid #9bb4c4;
+		}
+		h4 {
+			display: inline-block;
+			margin-left: 1rem;
+		}
+		h4, span {
+			font-size: 1.2rem;
+		}
+
+	}
+	@media  (min-width: 768px) {
+		width: 32%;
+	}
+}
+#feature-article header.nav-wrapper.scroll-nav.intro a {
+	color: #ffffff;
+	font-weight: normal;
+	width: 32%;
+}
+#feature-article.intro p {
+	margin-bottom: 1rem;
+}
 
 
 /******************************
