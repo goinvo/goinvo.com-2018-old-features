@@ -4,9 +4,9 @@ $(window).on('scroll', function () {
 	var fixed = $('.nav-wrapper.scroll-nav');
 	var scrollTop = $(window).scrollTop();
 	var width = $(window).width();
-	if (top <= scrollTop && fixed.css('display') != 'block') {
+	if (top <= scrollTop) {
 		fixed.css('display', 'block');
-	} else if (top > scrollTop && fixed.css('display') != 'none') {
+	} else if (top > scrollTop) {
 		fixed.css('display', 'none');
 	}
 

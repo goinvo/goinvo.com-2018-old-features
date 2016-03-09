@@ -2715,8 +2715,13 @@ Intro Page
 #feature-article.intro header.intro.nav-wrapper a:hover {
 	background-color: #29668e;
 }
+@media (max-width: 768px) {
+	#feature-article.intro header.nav-wrapper.stuck.intro {
+		padding: 0;
+	}
+}
+
 #feature-article.intro header.nav-wrapper.stuck.intro a {
-	
 	color: #ffffff;
 	padding: 10px 5px;
 
@@ -2728,49 +2733,70 @@ Intro Page
 		font-weight: bold;
 		opacity: 0.6;
 	}
-	@media  (max-width: 767px) {
-		text-align: left;
-		width: 100%;
-		&:not(:last-child) {
-			border-bottom: 1px solid #9bb4c4;
-		}
-		h4 {
-			display: inline-block;
-			margin-left: 1rem;
-		}
-		h4, span {
-			font-size: 1.2rem;
-		}
+	width: 32%;
+}
+#feature-article.intro header.nav-wrapper.stuck.intro .desktop a:last-child {
+	display: none;
+}
+@media  (max-width: 767px) {
+	#feature-article.intro header.nav-wrapper.stuck.intro .desktop {
+		display: none;
+	}
+	#feature-article.intro header.nav-wrapper.stuck.intro .mobile {
+		display: block;
+	}
+}
+@media  (min-width: 768px) {
+	#feature-article.intro header.nav-wrapper.stuck.intro .desktop {
+		display: block;
+	}
+	#feature-article.intro header.nav-wrapper.stuck.intro .mobile {
+		display: none;
+	}
+}
+#feature-article.intro header.nav-wrapper.stuck.intro .mobile  div {
+	border-bottom: 1px solid #13446f;
+}
+#feature-article.intro header.nav-wrapper.stuck.intro .mobile a {
+	text-align: left;
+	width: 48%;
+	padding: 15px;
 
+	h4, span, p {
+		font-size: 1rem;
 	}
-	@media  (min-width: 768px) {
-		width: 32%;
+	&:last-child {
+		border-left: 1px solid #13446f;
 	}
+	&:hover {
+		background-color: rgb(31,86,122);
+	}
+	img, p {
+		display: inline-block;
+		margin: 0;
+	}
+	img {
+		height: 1.2rem;
+		vertical-align: top;
+		margin-top: 1rem;
+	}
+	
 }
 #feature-article.intro header.nav-wrapper.scroll-nav.intro a {
 	color: #ffffff;
 	font-weight: normal;
-	
-	@media  (max-width: 767px) {
-		width: 32%;
-		img {
-			display: none;
-		}
-		&:last-child {
-			display: none;
-		}
+	width: 29%;
+	padding: 10px 0;
+	img {
+		width: 100%;
+		max-width: 20px;
+		display: inline-block;
+		vertical-align: middle;
 	}
-	@media  (min-width: 768px) {
-		width: 30%;
-		img {
-			height: 1.2rem;
-			display: inline-block;
-			vertical-align: middle;
-		}
-		&:last-child {
-			width: 7%;
-			display: inline-block;
-		}
+	&:last-child {
+		width: 5%;
+		display: inline-block;
+		padding: 0;
 	}
 }
 #feature-article.intro p {
@@ -2808,36 +2834,33 @@ Intro Page
 		margin-right: 10px;
 	}
 }
-#feature-article.intro .container-fluid {
+#feature-article.intro .work-with-us {
 	//padding: 0;
-	margin-top: 3rem;
+	margin: 2rem 0;
 }
-#feature-article.intro .container-fluid .col-sm-6 {
+#feature-article.intro .work-with-us .col-sm-6 {
 	padding: 0;
 }
-#feature-article.intro .container-fluid .col-sm-6:first-child img {
+#feature-article.intro .work-with-us .col-sm-6:first-child img {
 	@media  (min-width: 768px) {
-		display: none;
-	}
-	@media  (max-width: 767px) {
 		display: block;
 		margin-bottom: 20px;
 	}
+	@media  (max-width: 767px) {
+		display: none;
+	}
 }
-#feature-article.intro .container-fluid .col-sm-6:last-child {
+#feature-article.intro .work-with-us .col-sm-6:last-child {
 	@media  (min-width: 768px) {
 		padding-left: 50px;
-	}
-	p {
-		font-weight: normal;
 	}
 	&>img {
 		margin-bottom: 20px;
 		@media  (min-width: 768px) {
-			display: block;
+			display: none;
 		}
 		@media  (max-width: 767px) {
-			display: none;
+			display: block;
 		}
 	}
 	div > img {
@@ -2846,12 +2869,45 @@ Intro Page
 		vertical-align: top;
 		margin-top: 5px;
 	}
-	div > p {
+	p {
 		display: inline-block;
 		width: calc(100% - 40px);
 		float: right;
+		font-weight: normal;
+		color: #6195CF;
 	}
 }
+#feature-article.intro .feature-intro {
+	padding: 0;
+	margin-top: 2rem;
+}
+#feature-article.intro .feature-intro a {
+	color: #000000;
+	margin-bottom: 2rem;
+	border-radius: 10px;
+	img {
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+		width: 100%;
+
+		@media  (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+		@media  (min-width: 768px) {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+	}
+	.col-sm-6:last-child {
+		padding: 20px;
+	}
+	&:hover {
+		text-decoration: none;
+		background: #f5f5f5;
+	}
+}
+
 
 
 

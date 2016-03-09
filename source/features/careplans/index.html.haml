@@ -23,10 +23,23 @@
 %article#feature-article.intro
 	%img.hero-image{:src => "../../images/features/careplans/home_hero.jpg"}
 	%header.nav-wrapper.stuck.intro
-		%nav.main-nav
-			%a{:href => "/features/careplans/part-1.html"} <span>Part1</span><h4>Overview</h4>
-			%a{:href => "/features/careplans/part-2.html"} <span>Part2</span><h4>Landscape</h4>
-			%a{:href => "/features/careplans/part-3.html"} <span>Part3</span><h4>Future</h4>
+		.desktop
+			%nav.main-nav
+				%a{:href => "/features/careplans/part-1.html"} <span>Part1</span><h4>Overview</h4>
+				%a{:href => "/features/careplans/part-2.html"} <span>Part2</span><h4>Landscape</h4>
+				%a{:href => "/features/careplans/part-3.html"} <span>Part3</span><h4>Future</h4>
+				%a{:href => "../../images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf", :target => "_blank"} 
+					%img{:src => "../../images/features/careplans/intro_icons/book_white.png"}
+		.mobile
+			%nav.main-nav
+				%div
+					%a{:href => "/features/careplans/part-1.html"} <span>Part1</span><h4>Overview</h4>
+					%a{:href => "/features/careplans/part-2.html"} <span>Part2</span><h4>Landscape</h4>
+				%div
+					%a{:href => "/features/careplans/part-3.html"} <span>Part3</span><h4>Future</h4>
+					%a{:href => "../../images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf", :target => "_blank"} 
+						%img{:src => "../../images/features/careplans/intro_icons/book_white.png"}
+						%p Download<br/>eBook
 	%header.nav-wrapper.scroll-nav.intro
 		%nav.main-nav
 			%a{:href => "/features/careplans/part-1.html"} P1. Overview
@@ -41,29 +54,40 @@
 			%p Download<br/>eBook
 		%h1 The Care Plan Series
 		%p Overwhelmed. It is how most patients feel at one point or another as they leave that sterile-smelling, fluorescent-lit doctor’s office. They have just spent 10-25 minutes being hastily examined, diagnosed, and, if they are lucky, educated about how to address their medical problem. They either leave the office empty-handed, or they walk out holding a generic pamphlet, which will likely end up under an unmanageable pile of papers or in the trash. Unless there was a major change in their treatment plan, many patients go home, forget what the doctor ordered, and continue on their usual journey of whatever harmful behaviors landed them at the doctor’s office in the first place. And without a clear, tangible plan for how to better their health, how are they supposed to behave any differently?
-		%p There is a loose, under-utilized semblance of a "plan of care" in most health data sets. You'll find them mentioned in the standard Continuity of Care Document (CCD), the FHIR framework, and CMS's recent chronic care management code documentation.  Yet, somehow no one really knows what you are talking about when you say the words "care" and "plan" together in a sentence. So, we set out to understand everything we could about care plans to then visualize our findings in a 3-part feature series. With the help of designers and engineers at Involution and field experts, we examined how the concept of a care plan came to be and our understanding of it today (see <a href="/features/careplans/part-1.html"><strong>Part One</strong></a>), the current care planning process and limitations, and existing care plan-related services (see <a href="/features/careplans/part-2.html"><strong>Part Two</strong></a>), and finally, what all of that means for the future of care plans and our shifting healthcare system (Part Three coming March 11th!)
+		%p There is a loose, under-utilized semblance of a "plan of care" in most health data sets. You'll find them mentioned in the standard Continuity of Care Document (CCD), the FHIR framework, and CMS's recent chronic care management code documentation. Yet, somehow no one really knows what you are talking about when you say the words "care" and "plan" together in a sentence. So, with the help of designers, engineers, and field experts, we set out to understand everything we could about care plans to then visualize our findings in a 3-part feature series.
+		.container-fluid.feature-intro
+			%a{:href => "/features/careplans/part-1.html"}
+				.row
+					.col-sm-6 
+						%img{:src => "../../images/features/careplans/twitter_CP1.jpg"}	
+					.col-sm-6
+						%p <strong>The first feature</strong> examines how the concept of a care plan came to be and our understanding of it today.
+			%a{:href => "/features/careplans/part-2.html"}	
+				.row
+					.col-sm-6 
+						%img{:src => "../../images/features/careplans/twitter_CP2.jpg"}	
+					.col-sm-6
+						%p <strong>The second feature</strong> visualizes the current care planning process and limitations, and evaluates existing care plan- related services.
+			%a{:href => "/features/careplans/part-3.html"}	
+				.row
+					.col-sm-6 
+						%img{:src => "../../images/features/careplans/twitter_CP3.jpg"}	
+					.col-sm-6
+						%p <strong>The third feature</strong> visualizes the current care planning process and limitations, and evaluates existing care plan- related services.
 		%p Our feature series has three goals. We aim to spread both awareness to the general public about the benefit of care planning, as well as empowerment to demand such practices from doctors. We aim to inspire healthcare designers, entrepreneurs, and providers to prioritize care plans in their innovative products and practices. And we aim to encourage health policymakers to both establish a care plan database, and examine the cost of incorporating care planning into standard practice. Only in a new era of digital, standardized, adaptive care plans can we truly promote preventative self care.
-		%p Sincerely,<br/>Beth Herlin, MPD<br/>Product Designer at Involution Studios
-	.part 
-		%h1 In Short...
-		%p A care plan is a synthesis of all plans of care produced by the patient and his or her providers to manage the patient’s day-to-day health. It serves as a shared conceptual framework to guide all care team members. This article explores the history, current state, and opportunities for improvement of care plans.
-		%p Care plans are comprised of the universal components of a health history, health concerns, goals, instructions and interventions, review, and the care team. While care plans share these components, they can address a multitude of content areas such as nutrition, physical activity, medication management, and more. Certain content areas are more important to some patients than others.
-		%p As care plans receive more focus from payers and practitioners, digital services that help with implementation have started to emerge. Some of these services are assessed based on patient and clinician needs, and the findings are discussed. Currently care plans face the barriers of: creation in isolation, miscommunication, episodic review, patient non-adherence, and issues with privacy and accuracy of information.
-		%p In consideration of our shifting healthcare system and the identified barriers, pathways to an improved care plan are proposed. These include care plan digitization, standardization of content, patient data ownership, patient empowerment, an intervention framework, and expansion of the care team. Priority is given to these pathways, and a call to action is made to patients, clinicians, designers and entrepreneurs, and policy makers.
+		%p Sincerely,
+		%p Beth Herlin and Edwin Choi
 		
 	.part 
 		%h1 Want to Work Together?
 		%p Want to take your healthcare or care plan product to the next level? Contact the authors at Involution Studios:
 		%a.btn.btn-primary{:type => "button", :href => "mailto:info@goinvo.com"} 
 			%img{:src => "../../images/features/careplans/intro_icons/email.png"} careplans@goinvo.com
-		.container-fluid
+		.container-fluid.work-with-us
 			.row
 				.col-sm-6 
-					%img{:src => "../../images/features/careplans/work_together.jpg"}
-					%p At Involution Studios, we’re known for our unique, industry-leading approach to healthcare user experience. We design, build, and ship beautiful software for companies of all sizes, from the market leaders of today — including Apple, Johnson and Johnson, Partners HealthCare, and Walgreens — to the micro startups that will create the markets of the future.
-					%p Founded in 2004, we specialize in design for genomics, healthcare IT, mHealth, wearables, and other emerging technologies. We’ve produced high- quality, usable, beautiful applications that are used every day by over 150 million users.
+					%img{:src => "../../images/features/careplans/work_together.jpg"}	
 				.col-sm-6
-					%img{:src => "../../images/features/careplans/work_together.jpg"}
 					%div.clearfix
 						%img{:src => "../../images/features/careplans/intro_icons/email.png"}
 						%p info@goinvo.com
@@ -73,6 +97,9 @@
 					%div.clearfix
 						%img{:src => "../../images/features/careplans/intro_icons/address.png"}
 						%p 661 Massachusetts Ave, 3rd Floor, Arlington MA, 02476
+					%img{:src => "../../images/features/careplans/work_together.jpg"}	
+		%p At Involution Studios, we’re known for our unique, industry-leading approach to healthcare user experience. We design, build, and ship beautiful software for companies of all sizes, from the market leaders of today — including Apple, Johnson and Johnson, Partners HealthCare, and Walgreens — to the micro startups that will create the markets of the future.
+		%p Founded in 2004, we specialize in design for genomics, healthcare IT, mHealth, wearables, and other emerging technologies. We’ve produced high- quality, usable, beautiful applications that are used every day by over 150 million users.
 
 
 	.credit-wrapper
