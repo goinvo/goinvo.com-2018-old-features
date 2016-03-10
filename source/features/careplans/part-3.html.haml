@@ -28,9 +28,9 @@
 			%h1 CARE 
 			%h1 PLANS
 			%p PART 3: The Future
-	/ 	%p.description How can mobile phones and other technology make us healthier?
+		%p.description 
 	/ %button.see-the-future{:type => "button", :class => "btn btn-primary"} SEE THE FUTURE
-	%header.nav-wrapper.stuck.featureIII.desktop
+	%header.nav-wrapper.stuck.featureIII
 		%div.progress
 			%a.one.circle
 				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
@@ -56,7 +56,7 @@
 			%a.eight.circle.none
 				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
 				%div.circle_solid.none
-		%nav.main-nav
+		%nav.main-nav.desktop
 			%a.one{:href => "javascript:void(0)"} Digitized
 			%a.two{:href => "javascript:void(0)"}  Standardized
 			%a.three{:href => "javascript:void(0)"} Data-Rich
@@ -64,8 +64,10 @@
 			%a.five{:href => "javascript:void(0)"} Dynamic
 			%a.six{:href => "javascript:void(0)"} Care Team
 			%a.seven{:href => "javascript:void(0)"} Health Shift
-			%a.eight{:href => "javascript:void(0)"} Roadmap
-	%header.nav-wrapper.scroll-nav.featureIII.desktop
+			%a.eight{:href => "javascript:void(0)"} Conclusions
+		%nav.main-nav.mobile
+			%a.one{:href => "javascript:void(0)"} Digitized
+	%header.nav-wrapper.scroll-nav.featureIII
 		%div.progress
 			%a.one.circle.none
 				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
@@ -91,7 +93,7 @@
 			%a.eight.circle.none
 				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
 				%div.circle_solid.none
-		%nav.main-nav
+		%nav.main-nav.desktop
 			%a.one{:href => "javascript:void(0)"} Digitized
 			%a.two{:href => "javascript:void(0)"} Standardized
 			%a.three{:href => "javascript:void(0)"} Data-Rich
@@ -99,7 +101,16 @@
 			%a.five{:href => "javascript:void(0)"} Dynamic
 			%a.six{:href => "javascript:void(0)"} Care Team
 			%a.seven{:href => "javascript:void(0)"} Health Shift
-			%a.eight{:href => "javascript:void(0)"} Roadmap
+			%a.eight{:href => "javascript:void(0)"} Conclusions
+		%nav.main-nav.mobile
+			%a.one.selected{:href => "javascript:void(0)"} Digitized
+			%a.two{:href => "javascript:void(0)"} Standardized
+			%a.three{:href => "javascript:void(0)"} Data-Rich
+			%a.four{:href => "javascript:void(0)"} Empowering
+			%a.five{:href => "javascript:void(0)"} Dynamic
+			%a.six{:href => "javascript:void(0)"} Care Team
+			%a.seven{:href => "javascript:void(0)"} Health Shift
+			%a.eight{:href => "javascript:void(0)"} Conclusions
 	.part.one.featureIII
 		%h1 Digital is Better
 		.carousel.slide#carousel-part1{ :data => { :interval => "false" }}
@@ -175,6 +186,8 @@
 		.container-fluid
 			.row
 				.col-sm-8
+					.content
+						%p.quote There needs to be an EMR system that can aggregate medical records, lab tests and scans, genomic data, and all other health data (including patient-generated) and analyze them in a meaningful way.
 					%p Patients will have an unlimited and ever-evolving reservoir of data collected from embedded devices, mobile phones, and other sensors that is then synthesized into an understandable personal health score.<span class='superscript'>13</span> Predictive analytics will help identify patterns in this data to create actionable insights and recommendations for care plan adjustments. With the advent of human genome mapping, we can further fine tune care plans according to patient's family medical history and genetic predispositions. In a broader context, we can look at the population's genetic data comparatively to differentially diagnose various health conditions.14 Once we can move past the stigma of sharing health record information with patients and the complexity of securing the information from harm, we can approach the ideal world where patients are the rightful owner of their health data, using it maintain a holistic view of their health.<span class='superscript'>6,13,15</span>
 				.col-sm-4
 					.content
@@ -222,11 +235,9 @@
 		.container-fluid
 			.row
 				.col-sm-6
-					%div.clearfix
-						%img.mobile{:src => "../../images/features/careplans/part3/careteam.gif"}
-						%div 
-							%h1 Expanding the Meaning of Care Team 
-							%p.quote A more holistic approach to care planning suggests a greater need for cohesive inclusion of the patient's direct network into their care team.
+					%h1 Expanding the Meaning of Care Team 
+					%p.quote A more holistic approach to care planning suggests a greater need for cohesive inclusion of the patient's direct network into their care team.
+					%img.mobile{:src => "../../images/features/careplans/part3/careteam.gif"}
 					%p In order to achieve better engagement and adherence to care plans, non-professional caregivers (friends and family) will be incorporated into the care team.16,17 These team members have the highest degree of access to the patient, and the most incentive to provide care. Services that expand education and engagement to both the patient AND these members will emerge to fully utilize this component of the care team.<span class='superscript'>18</span>
 					%p Another important presence in this expanding care team is the online community. We will start to see services that incorporate community forums and population analytics to take advantage of the the wealth of knowledge and experience of similar patients.<span class='superscript'>18</span>
 					%p The advancement of digital care plans has surfaced the need for new healthcare roles that bridge the gap between providers and patient-facing technology. One emerging role, the nurse extender clinical aide, or grand-aide, interacts more frequently with patients to ensure adherence to the care plan and keeps the more highly-trained providers informed about the status of the patient.<span class='superscript'>19</span>
@@ -282,7 +293,6 @@
 					%p As digital care plans gain the ability to deliver personalized health content (including goals) and collect relevant metrics, the opportunity arises to coalesce these functions into a feedback loop.<span class='superscript'>15</span> This means the care plan will facilitate a prescribed or selected care plan with specified goals, assess relevant data from vitals sensors, the environment, or behaviors, to determine if the goal criteria is met, and then auto-adjust the care plan goals and education accordingly. Health scores and predictive analytics will be used to aid engagement and understanding of the care plan and any changes to it.  The use of patient health projections and relevant recommendations creates a kind of intervention engine that could behave autonomously from medical providers, though it could always be augmented and further personalized when clinician input is available. However, the concept of an intervention engine is dependant on a clinically-validated database of interoperable care plans.
 	.part.seven.featureIII
 		%h1 Health Care is Shifting
-		%p.quote The U.S. will need about 52,000 more primary care physicians by 2025 due to population growth, the expansion of insurance, and aging. With this impending strain on hospital and clinic capacity, greater efficiency in providing preventative care is crucial.
 		%img.desktop{:src => "../../images/features/careplans/part3/part7_desktop.png"}
 		%img.mobile{:src => "../../images/features/careplans/part3/part7_mobile.png"}
 		%p The expansion of health coverage and the growing influx of patients will force a significant shift in the way healthcare is provided.<span class='superscript'>21,22</span> More patients means a need for more providers. This will expand the roles and responsibilities of nurses, physician’s assistants, and other lesser-trained professionals, to provide more continuous care to more patients at one time.<span class='superscript'>21</span> It also illuminates the benefit of utilizing the non-professional side of the care team, such as family caregivers and the online community in the care plan. 
@@ -295,17 +305,17 @@
 			%img{:src => "../../images/features/careplans/part3/part8_image.png"}
 			.row
 				.col-sm-4
-					%p.title Push for a Culture Shift
+					%p.title Culture Shift
 					%ul
 						%li Patients are the most important part of their care team, include them in the care planning process.
 						%li Transparency in all medical encounters, give patients their data.
 						%li The non-clinical part of the care team such as health coaches, family caregivers, and other networks are just as important. Rope them into the process more.
 				.col-sm-4
-					%p.title Establish National Standards
+					%p.title National Standards
 					%ul
 						%li Synthesize research in the medical community and nationally establish a library of condition-specific care plans which can be consistently implemented in a patient-clinician encounter, and independently by the patient and other care team members.
 				.col-sm-4
-					%p.title Advance Technology
+					%p.title Technology & Accessibility
 					%ul
 						%li Make digital health sensors and devices that help track complex chronic conditions more affordable. 
 						%li Grow engaging health software solutions that improve accessibility and quality of care and actually get people to change behavior.
@@ -319,10 +329,9 @@
 		.container-fluid
 			.row
 				.col-sm-3
-					%img.desktop{:src => "../../images/features/careplans/part3/part9_card1.png"}
+					%img{:src => "../../images/features/careplans/part3/part9_card1.png"}
 				.col-sm-9
 					%div
-						%img.mobile{:src => "../../images/features/careplans/part3/part9_card1.png"}
 						%h6 Patients, Otherwise Known as “People”
 					%ul
 						%li Take part in building your care plan with your doctor. You’re the most knowledgable part of your care team.
@@ -330,10 +339,9 @@
 						%li Take responsibility for your own health. Live your care plan.
 			.row
 				.col-sm-3
-					%img.desktop{:src => "../../images/features/careplans/part3/part9_card2.png"}
+					%img{:src => "../../images/features/careplans/part3/part9_card2.png"}
 				.col-sm-9
 					%div
-						%img.mobile{:src => "../../images/features/careplans/part3/part9_card2.png"}
 						%h6 Healthcare Designers & Entrepreneurs
 					%ul
 						%li Adopt <a href="https://www.hl7.org/fhir/" target="_blank">FHIR</a>. It’s the lesser of all evils for now. Data MUST be interoperable.
@@ -341,10 +349,9 @@
 						%li Give patients and their team authorship in the care plan process.
 			.row
 				.col-sm-3
-					%img.desktop{:src => "../../images/features/careplans/part3/part9_card3.png"}
+					%img{:src => "../../images/features/careplans/part3/part9_card3.png"}
 				.col-sm-9
 					%div
-						%img.mobile{:src => "../../images/features/careplans/part3/part9_card3.png"}
 						%h6 Medical Community
 					%ul
 						%li Patient engagement is worth the investment. Activated patients behave in healthier ways. 
@@ -353,10 +360,9 @@
 						%li Collect evidence and adjust care to get better outcomes. Value-based care is taking over Medicare payments (50% by 2018).
 			.row
 				.col-sm-3
-					%img.desktop{:src => "../../images/features/careplans/part3/part9_card4.png"}
+					%img{:src => "../../images/features/careplans/part3/part9_card4.png"}
 				.col-sm-9
 					%div
-						%img.mobile{:src => "../../images/features/careplans/part3/part9_card4.png"}
 						%h6 Policy Makers
 					%ul
 						%li Single payer - We can’t better health until there is equal accessibility to care. 
