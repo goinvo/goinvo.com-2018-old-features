@@ -2767,45 +2767,48 @@ Feature III: Part Eight
 }
 
 /******************************
-Feature III: Part Night
+Feature III: Part Nine
 ******************************/
-#feature-article .part.night.featureIII {
+#feature-article .part.nine.featureIII {
 	border-top: 2px solid #e1e1e1;
 }
-#feature-article .part.night.featureIII .container-fluid {
+#feature-article .part.nine.featureIII .container-fluid {
 	margin: 20px 0;
 }
-#feature-article .part.night.featureIII .container-fluid h6 {
+#feature-article .part.nine.featureIII .container-fluid h6 {
 	color: #265775;
 }
-#feature-article .part.night.featureIII .container-fluid .row {
+#feature-article .part.nine.featureIII .container-fluid .row {
 	margin-bottom: 40px;
 }
-#feature-article .part.night.featureIII .container-fluid .row .col-sm-3 {
+#feature-article .part.nine.featureIII .container-fluid .row .col-sm-3 {
 	padding-left: 0;
 }
  
-#feature-article .part.night.featureIII ul {
+#feature-article .part.nine.featureIII ul {
 	padding-left: 1.2rem;
 	list-style-image: url('../../images/features/careplans/part3/list_style_image.png');
 }
-#feature-article .part.night.featureIII ul li {
+#feature-article .part.nine.featureIII ul li {
 	line-height: 1.5rem;
 	margin-bottom: 10px;
 	font-weight: lighter;
 }
 @media  (max-width: 767px) {
-	#feature-article .part.night.featureIII img {
+	#feature-article .part.nine.featureIII img {
 		width: 25%;
 		margin: 0 auto;
 		margin-bottom: 10px;
 	}
-	#feature-article .part.night.featureIII .container-fluid .row .col-sm-9 {
+	#feature-article .part.nine.featureIII .container-fluid .row .col-sm-9 {
 		padding: 0;
+		h6 {
+			text-align: center;
+		}
 	}
 }
 @media  (min-width: 768px) {
-	#feature-article .part.night.featureIII img {
+	#feature-article .part.nine.featureIII img {
 		display: block;
 	}
 }
