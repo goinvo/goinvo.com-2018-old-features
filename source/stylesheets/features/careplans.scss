@@ -2736,6 +2736,10 @@ Feature III: Part Night
 #feature-article .part.night.featureIII .container-fluid .row {
 	margin-bottom: 40px;
 }
+#feature-article .part.night.featureIII .container-fluid .row .col-sm-3 {
+	padding-left: 0;
+}
+ 
 #feature-article .part.night.featureIII ul {
 	padding-left: 1.2rem;
 	list-style-image: url('../../images/features/careplans/part3/list_style_image.png');
@@ -2751,6 +2755,9 @@ Feature III: Part Night
 		margin: 0 auto;
 		margin-bottom: 10px;
 	}
+	#feature-article .part.night.featureIII .container-fluid .row .col-sm-9 {
+		padding: 0;
+	}
 }
 @media  (min-width: 768px) {
 	#feature-article .part.night.featureIII img {
@@ -2759,6 +2766,9 @@ Feature III: Part Night
 }
 
 
+#feature-article #credits.featureIII {
+	padding: 40px 6%;
+}
 
 /******************************
 Intro Page
