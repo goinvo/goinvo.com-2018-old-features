@@ -101,7 +101,7 @@
 						%li{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"#{i}"}}}
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
-					.item.active
+					.item.active.clearfix
 						.image
 							%img.care-card-img{:src=>cards[0].img}
 							%p View more at <a href="http://carecards.me">carecards.me</a>
@@ -109,7 +109,7 @@
 							%h6=cards[0].header
 							%p=cards[0].content
 					-(1..8).each do |j|
-						.item
+						.item.clearfix
 							.image
 								%img.care-card-img{:src=>cards[j].img}
 								%p View more at <a href="http://carecards.me">carecards.me</a>
@@ -128,13 +128,13 @@
 						%li{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"#{m}"}}}
 							%img.svg{:src=>cards[m].icon}
 				.carousel-inner{:role=>"listbox"}
-					.item.active
+					.item.active.clearfix
 						%h6=cards[0].header
 						%p=cards[0].content
 						%img.care-card-img{:src=>cards[0].img}
 						%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
 					-(1..8).each do |n|
-						.item
+						.item.clearfix
 							%h6=cards[n].header
 							%p=cards[n].content
 							%img.care-card-img{:src=>cards[n].img}

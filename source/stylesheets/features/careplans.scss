@@ -2809,6 +2809,9 @@ Intro Page
 	@media  (min-width: 768px) {
 		float: right;
 	}
+	@media  (max-width: 767px) {
+		display: none;
+	}
 }
 #feature-article.intro .download-ebook p {
 	color: #000000;
