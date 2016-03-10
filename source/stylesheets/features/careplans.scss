@@ -2376,6 +2376,23 @@ Feature III: Part Three
 }
 #feature-article .part.three.featureIII h1 {
 	text-align: right;
+	
+	@media  (min-width: 768px) {
+		span:first-child {
+			font-size: 2.5rem;
+		}
+		span:nth-child(2) {
+			font-size: 3rem;
+		}
+		strong {
+			font-size: 3.5rem;
+		}
+	}
+	@media  (max-width: 767px) {
+		span {
+			font-size: 2.2rem;
+		}
+	}
 }
 #feature-article .part.three.featureIII img {
 	width: 100%;
@@ -2416,6 +2433,13 @@ Feature III: Part Four
 }
 #feature-article .part.four.featureIII h1 {
 	color: #ffffff;
+	
+	@media  (min-width: 768px) {
+		strong {
+			font-size: 3rem;
+		}
+	}
+
 }
 @media  (max-width: 767px) {
 	#feature-article .part.featureIII .tabs  {
@@ -2541,6 +2565,13 @@ Feature III: Part Five
 	background-image: url("../../images/features/careplans/part3/part5_bg.png");
 	background-size: cover;
 }
+#feature-article .part.five.featureIII h1 {
+	@media  (min-width: 768px) {
+		strong {
+			font-size: 3rem;
+		}
+	}
+}
 #feature-article .part.five.featureIII h1,
 #feature-article .part.five.featureIII p {
 	color: #ffffff;
@@ -2578,6 +2609,13 @@ Feature III: Part Six
 #feature-article .part.six.featureIII {
 	background-image: url("../../images/features/careplans/part3/part6_bg.png");
 	background-size: cover;
+}
+#feature-article .part.six.featureIII h1 {
+	@media  (min-width: 768px) {
+		strong {
+			font-size: 3rem;
+		}
+	}
 }
 #feature-article .part.six.featureIII h1,
 #feature-article .part.six.featureIII p {
@@ -2618,6 +2656,13 @@ Feature III: Part Seven
 #feature-article .part.seven.featureIII {
 	background-image: url("../../images/features/careplans/part3/part7_bg.png");
 	background-size: cover;
+}
+#feature-article .part.seven.featureIII h1 {
+	@media  (min-width: 768px) {
+		strong {
+			font-size: 3rem;
+		}
+	}
 }
 #feature-article .part.seven.featureIII h1,
 #feature-article .part.seven.featureIII p {
