@@ -317,3 +317,6 @@ DEPENDENCIES
   middleman-s3_sync (= 3.3.5)
   middleman-smusher
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.11.2
