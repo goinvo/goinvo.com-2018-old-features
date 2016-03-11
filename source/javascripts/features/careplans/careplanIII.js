@@ -116,7 +116,6 @@ $(document).ready(function() {
 //       deviceWidth = Math.max(480, screen.height);
 //     } else {
 //       deviceWidth = screen.width;
-//       console.log(screen.width)
 //     }
 //     return window.innerWidth / deviceWidth;
 // }

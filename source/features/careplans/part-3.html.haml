@@ -25,8 +25,9 @@
 %article#feature-article
 	.hero-bg
 		%div.title
-			%h1 CARE 
-			%h1 PLANS
+			%a{:href => "/features/careplans"}
+				%h1 CARE 
+				%h1 PLANS
 			%p PART 3: The Future
 		%p.description 
 	/ %button.see-the-future{:type => "button", :class => "btn btn-primary"} SEE THE FUTURE
@@ -67,7 +68,7 @@
 			%a.eight{:href => "javascript:void(0)"} Conclusions
 		%nav.main-nav.mobile
 			%a.one{:href => "javascript:void(0)"} Digitized
-	%header.nav-wrapper.scroll-nav.featureIII
+	%header.nav-wrapper.scroll-nav.featureIII.device-fixed-height
 		%div.progress
 			%a.one.circle.none
 				%img{:src => "../../images/features/careplans/part3/progress_bar_circle_hollow.png"}
@@ -102,7 +103,7 @@
 			%a.six{:href => "javascript:void(0)"} Care Team
 			%a.seven{:href => "javascript:void(0)"} Health Shift
 			%a.eight{:href => "javascript:void(0)"} Conclusions
-		%nav.main-nav.mobile
+		%nav.main-nav.mobile.device-fixed-width
 			%a.one.selected{:href => "javascript:void(0)"} Digitized
 			%a.two{:href => "javascript:void(0)"} Standardized
 			%a.three{:href => "javascript:void(0)"} Data-Rich
