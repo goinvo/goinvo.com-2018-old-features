@@ -1111,13 +1111,17 @@ img.scale-with-grid {
 }
 
 #references {
+	padding-top: 4rem;
 	ol {
 		margin: 0;
-		padding: 0;		
+		padding: 0;
 		color: $font-color-secondary;
 		.li-color {
 			color: #fff;
 			line-height: 1.8rem;
+		}
+		li {
+			
 		}
 	}
 	a {
