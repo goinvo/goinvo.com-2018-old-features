@@ -59,8 +59,9 @@
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
               %h1= article.title
               .feature-label= feature_article_date(article)
-%a#show-all-features Show all features
+.feature-article-list-container
+  %a#show-all-features Show All Features
 
 .blog-article-list-container
   %ul.blog-article-list
-%a{ :href => "http://yes.goinvo.com" }All blog posts
+  %a#show-all-articles{ :href => "http://yes.goinvo.com" }Show All Articles
