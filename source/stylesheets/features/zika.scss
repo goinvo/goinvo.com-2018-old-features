@@ -155,7 +155,7 @@ $font-size-small-title: 1.6rem; /* =14px */
 $font-size-title: 2.5rem; /* =38px */
 $font-size-large-title: 2.2rem; /* = 24px*/
 $line-height-base: 1.8rem; /*=16px*/
-$line-height-title: $font-size-title; /*22px*/
+$line-height-title: 2.6rem; /*22px*/
 $line-height-title-large: 2.4rem; /* 28px */
 
 body {
@@ -241,6 +241,8 @@ body {
 .warning {
 	color: $font-color-deep-pink;
 	text-transform: uppercase;
+	line-height: 1.6rem;
+	padding-bottom: 1.8rem;
 }
 .arrow {
 	color: $font-color-deep-pink;
@@ -466,8 +468,6 @@ img.scale-with-grid {
 	}
 }
 
-
-
 #feature-article .header {
 	z-index: 1;
 	position: relative;
@@ -553,25 +553,6 @@ img.scale-with-grid {
 	}
 }
 
-
-/* Larger than mobile */
-//@media (max-width: 480px) {
-//}
-
-/* Larger than tablet */
-//@media (max-width: 760px) {
-	
-//}
-
-/* Larger than desktop */
-//@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-//@media (min-width: 1200px) {
-//}
-
-
-
 #spread {
 	.way_spread {
 		display: inline-block;
@@ -633,7 +614,7 @@ img.scale-with-grid {
 		margin-botto: -0.5rem;
 	}
 }
-.row#zika-symptoms {
+.row#zika-symptoms, .row#guillain-barre-syndrome, .row#symptoms-microcephaly {
 	.column {
 		border-left: none;
 	}
@@ -645,6 +626,20 @@ img.scale-with-grid {
 		img, p {
 			display: block;
 		}
+	}
+	.signs-image {
+		@include gradient-right;
+		height: 100%;
+	}
+	@media (max-width: $tablet) {
+		.column.signs-image {
+			border-top: none;
+			background: transparent;
+		}
+	}
+}
+.row#zika-symptoms {
+	.para {
 		img {
 			width: 50%;
 			vertical-align: top;
@@ -657,19 +652,8 @@ img.scale-with-grid {
 			width: 60%;
 		}
 	}
-	.signs-image {
-		@include gradient-right;
-		//margin-bottom: -7rem;
-	}
 	@media (max-width: $tablet) {
-		.column.signs-image {
-			border-top: none;
-			background: transparent;
-		}
 		.para {
-			img, p {
-				display: block;
-			}
 			img {
 				width: 100%;
 				max-width: 23rem;
@@ -686,18 +670,12 @@ img.scale-with-grid {
 	}
 }
 .row#symptoms-microcephaly {
-	.column {
-		border-left: none;
-	}
-	.warning {
-		margin-bottom: 3rem;
-		line-height: 2rem;
-	}
 	.microceph-image {
 		@include gradient-left;
 		
 	}
 	.graph {
+		padding-top: 2rem;
 		h3 {
 			padding-right: 50px;
 			font-size: 1.5rem;
@@ -793,7 +771,7 @@ img.scale-with-grid {
 		margin: 0;
 		li {
 			display:inline-block;
-			width: 25rem;
+			width: 33%;
 			margin-bottom: 5rem;
 			vertical-align: top;
 			padding: 0 50px;
@@ -818,7 +796,7 @@ img.scale-with-grid {
 					object-fit: cover;
 				}
 			}
-			@media (max-width: $phone) {
+			@media (max-width: $tablet) {
 				width: 100%;
 			}
 		}
@@ -962,7 +940,7 @@ img.scale-with-grid {
 }
 
 #feature-article #treatments {
-	padding-top: 6rem;
+	padding-top: 2rem;
 	.column {
 		padding: 0;
 		margin: 0;
@@ -1121,7 +1099,7 @@ img.scale-with-grid {
 			line-height: 1.8rem;
 		}
 		li {
-			
+
 		}
 	}
 	a {
