@@ -15,6 +15,12 @@
   # style rules for background images and the likes.
 
 articles:
+  - title: "Care Plans"
+    tag_line: "Explore the past, present, and future of Care Plans."
+    date: "2016-03-01"
+    image: "features/careplans/part3/hero_image.jpg"
+    url: "careplans"
+
   - title: "Understanding Zika"
     tag_line: "There are an estimated 1.6 million cases of Zika virus in 33 countries"
     date: "2016-02-01"
