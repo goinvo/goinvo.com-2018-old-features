@@ -27,7 +27,10 @@
       );
       $('#show-all-features').click(function() {
         $('.feature-article-list-container').addClass('transitioning');
-        $('.feature-article-list-container').toggleClass('show-all')
+        $('.feature-article-list-container').toggleClass('show-all');
+        $(this).text(function(i, text){
+          return text === "Show All Features" ? "Minimize Features" : "Show All Features";
+        });
       });
     });
   - meta = page_for_meta("articles")
@@ -59,7 +62,7 @@
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
               %h1= article.title
               .feature-label= feature_article_date(article)
-.feature-article-list-container
+.show-features-link-container
   %a#show-all-features Show All Features
 
 .blog-article-list-container

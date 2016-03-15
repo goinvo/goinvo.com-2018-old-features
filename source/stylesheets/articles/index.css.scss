@@ -51,6 +51,11 @@
     max-height: 880px;
   }
 }
+.show-features-link-container {
+  padding: 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .feature-article-list-container.transitioning {
   transition: max-height 500ms;
 }
