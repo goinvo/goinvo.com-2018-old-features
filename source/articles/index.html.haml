@@ -15,7 +15,7 @@
         currentString = currentString.substr(sIndex + 5);
         sIndex = currentString.indexOf('"');
         currentString = currentString.substr(0, sIndex);
-        blogArticleList.append('<li><a href=' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
+        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
       });
     }
     getHubspotBlogPosts(renderBlogPosts);
