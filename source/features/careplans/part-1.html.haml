@@ -25,12 +25,13 @@
 %article#feature-article
 	.overall-header
 		%div.title.title1
-			%p.big-title
-				CARE 
-			%p.big-title
-				PLANS
+			%a{:href => "/features/careplans"}
+				%p.big-title
+					CARE 
+				%p.big-title
+					PLANS
 			%p.sub-title
-				PART I: Overview
+				PART 1: Overview
 		%div.title.title2
 			%p.sub-title“Self-care in health is the new black.
 			%p We’re digitally DIY’ing life, scheduling our own travel and booking restaurant tables, curating our photographs and trading stocks. People are morphing into health consumers, and that requires health engagement which means getting smart about our bodies, our selves, our numbers, and our treatment options. CarePlans is an on-ramp to shared and sound decision-making for self-health.”
@@ -93,7 +94,7 @@
 			%p#bottom While a general consensus is being reached on the universal components of a care plan, the actual content that these components address is still largely unstandardized. In the future, there will be always-evolving care plan templates with evidence-based content for the full spectrum of human conditions. For now, we can categorize the areas of concern into commonly used categories.
 		.content-carousel
 			-cards = data.features.careplans.care_cards
-			.care-cards.carousel.slide.desktop
+			.care-cards.carousel.slide.desktop{ :data => { :interval => "false" }}
 				%ol.card-carousel-indicators
 					%li.active{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
@@ -101,7 +102,7 @@
 						%li{:data=>{:target=>".carousel.slide.desktop", :slide=>{:to=>"#{i}"}}}
 							%img.svg{:src=>cards[i].icon}
 				.carousel-inner{:role=>"listbox"}
-					.item.active
+					.item.active.clearfix
 						.image
 							%img.care-card-img{:src=>cards[0].img}
 							%p View more at <a href="http://carecards.me">carecards.me</a>
@@ -109,7 +110,7 @@
 							%h6=cards[0].header
 							%p=cards[0].content
 					-(1..8).each do |j|
-						.item
+						.item.clearfix
 							.image
 								%img.care-card-img{:src=>cards[j].img}
 								%p View more at <a href="http://carecards.me">carecards.me</a>
@@ -120,7 +121,7 @@
 						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
 					%a.right.control{:href=>".carousel.slide.desktop", :role=>"button", :data=>{:slide=>"next"}}
 						%img.svg{:src => "../../images/features/careplans/icons/arrow.svg"}
-			.care-cards.carousel.slide.mobile#carousel-mobile
+			.care-cards.carousel.slide.mobile#carousel-mobile{ :data => { :interval => "false" }}
 				%ol.carousel-indicators.card-carousel-indicators
 					%li.active{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"0"}}}
 						%img.svg{:src=>cards[0].icon}
@@ -128,13 +129,13 @@
 						%li{:data=>{:target=>"#carousel-mobile", :slide=>{:to=>"#{m}"}}}
 							%img.svg{:src=>cards[m].icon}
 				.carousel-inner{:role=>"listbox"}
-					.item.active
+					.item.active.clearfix
 						%h6=cards[0].header
 						%p=cards[0].content
 						%img.care-card-img{:src=>cards[0].img}
 						%p.carecards-link View more at <a href="http://carecards.me">carecards.me</a>
 					-(1..8).each do |n|
-						.item
+						.item.clearfix
 							%h6=cards[n].header
 							%p=cards[n].content
 							%img.care-card-img{:src=>cards[n].img}
@@ -253,12 +254,14 @@
 			- #/features/careplans/part-2.html
 			%a{:href => "/features/careplans/part-2.html"}
 				%div.coming-soon-box.row
-					%div.coming-soon-content.col-md-6
-						%p.title Care Plans
-						%p.subtitle P II: Current Landscape
-						%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
-					%div.col-md-6
-						%img{:src => "../../images/features/careplans/careplan-journey_care-team_feature-preview.jpg"}
+					%div.col-sm-4
+						%img{:src => "../../images/features/careplans/next_feature.png"}
+					%div.coming-soon-content.col-sm-8
+						%div.content
+							%p.title Care Plans
+							%p.subtitle Part 2: Current Landscape
+							%p In the second of this three part series, the Care Planning process and who is involved will be seen in detail. Barriers still exist in it’s implementation and current form, and a range of digital products will be compared to gain a general view of the current state of care planning.
+						%img.svg{:src => "../../images/features/careplans/icons/arrow-gray.svg"}
 
 	.credit-wrapper
 		.row
@@ -327,10 +330,10 @@
 				.row
 					.contributor.col-md-6
 						.image
-							/ %img{:src =>'../../images/features/careplans/contrib/joycelee.jpeg'}
+							%img{:src =>'../../images/features/careplans/contrib/harrysleeper.jpg'}
 						.info
-							%p Healthcare Provacteur
-							%p.name ​​Harry Sleeper
+							%p Healthcare Provocateur
+							%p.name ​​Harry Sleeper<br><small><a href="https://twitter.com/harrysleeper">@harrysleeper</a></small>
 			.reference
 				%h1 References
 				%ul

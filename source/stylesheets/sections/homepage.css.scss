@@ -35,7 +35,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 }
 #careplans {
 	.photo-container {
-		background: linear-gradient(rgba(2, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) , image-url('features/careplans/feature_bg.jpg') rgba(0, 0, 0, 0.62);
+		background: linear-gradient(rgba(2, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) , image-url('features/careplans/feature_page_1.jpg') rgba(0, 0, 0, 0.62);
 		background-size: 100%, cover;
 	}
     .title {
@@ -242,6 +242,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	.title {
 		top: 18px;
+		padding-top: 0;
 	}
 
 	.actual-title {
@@ -272,6 +273,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+		padding: 0 10px;
 	}
 
 	.actual-portfolio img {
@@ -502,7 +504,12 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 	// Styling
 	.title {
-		padding: .6em 3em 2em;
+		@media only screen and (max-width: 600px) {
+	        padding: 6em 1em 2em;
+	     }
+		@media only screen and (min-width: 601px) {
+	        padding: 6em 3em 2em;
+	     }
 		font-size: 1.25em;
 		color: $white;
 		position:absolute;
@@ -568,7 +575,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 				font-size: 14px;
 			}
 			.name {
-				font-size: 60px;
+				font-size: 52px;
 			}
 			.sub-name {
 				font-size: 26px;

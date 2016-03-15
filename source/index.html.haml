@@ -1,193 +1,193 @@
 - content_for(:page_head) do
-  = stylesheet_link_tag "sections/homepage", :async => true
-  = javascript_include_tag "hubspot_blog_posts"
-  :javascript
-    function makeBlogPostBottom(posts) {
-      var post = posts[0];
-      // Set the recent blog post section
-      $('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + post.title + '</h2></div></a>');
-      $('#blog .photo-container').css('background-image', 'url(' + findFirstBlogPostImage(post) + ')');
-    }
-    getHubspotBlogPosts(makeBlogPostBottom);
-    var homepageHeaderContent = [
-      {
-        backgroundImage: '/images/home/family-doctor-visit.jpg',
-        headerText: 'Design better outcomes',
-        subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
-        portfolioImage: '/images/home/hgraph-visualize-health.png',
-        portfolioText: 'See your health in one picture.',
-        caseStudyUrl: 'healthcare/hgraph/',
-        longTextClass: false
-      },
-      {
-        backgroundImage: '/images/home/homepage-02.png',
-        headerText: 'Design better efficiency',
-        subHeaderText: 'We reimagine processes and services to streamline healthcare.',
-        portfolioImage: '/images/home/homepage-image-02.png',
-        portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
-        caseStudyUrl: 'healthcare/3m/',
-        longTextClass: false
-      },
-      {
-        backgroundImage: '/images/home/homepage-03.png',
-        headerText: 'Magical software for personalized medicine',
-        subHeaderText: 'The software we design helps progressive healthcare companies create new markets and exploit future tech.',
-        portfolioImage: '/images/home/homepage-image-03.png',
-        portfolioText: 'Outpatient care weaves Cognitive Behavior Therapy (CBT) into everyday life.',
-        caseStudyUrl: 'healthcare',
-        buttonText: 'See Our Work',
-        longTextClass: true
-      },
-      {
-        backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
-        headerText: 'Patient tested. Clinician approved.',
-        subHeaderText: 'We design magical experiences to change behavior for good.',
-        caseStudyUrl: 'healthcare',
-        buttonText: 'See Our Work',
-        longTextClass: false
-      }
-    ];
-    var homepageHeader = homepageHeaderContent[Math.floor(Math.random() * 4)];
-    $(function() {
-      $('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
-      $('#homepage-hero .actual-title').text(homepageHeader.headerText);
-      $('#homepage-hero .actual-content').append(homepageHeader.subHeaderText);
-      if(homepageHeader.longTextClass) {
-        $('#homepage-hero').addClass("long-text");
-      }
-      if(homepageHeader.portfolioImage) {
-        $('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeader.portfolioImage + " />");
-      }
-      if(homepageHeader.portfolioText) {
-        $('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeader.portfolioText + "</p>");
-      }
-      if(homepageHeader.buttonText) {
-        $('#homepage-hero .actual-button').text(homepageHeader.buttonText);
-      } else {
-        $('#homepage-hero .actual-button').text('View Case Study');
-      }
-      $('#homepage-hero').attr('href', homepageHeader.caseStudyUrl);
-    });
+	= stylesheet_link_tag "sections/homepage", :async => true
+	= javascript_include_tag "hubspot_blog_posts"
+	:javascript
+		function makeBlogPostBottom(posts) {
+			var post = posts[0];
+			// Set the recent blog post section
+			$('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + post.title + '</h2></div></a>');
+			$('#blog .photo-container').css('background-image', 'url(' + findFirstBlogPostImage(post) + ')');
+		}
+		getHubspotBlogPosts(makeBlogPostBottom);
+		var homepageHeaderContent = [
+			{
+				backgroundImage: '/images/home/family-doctor-visit.jpg',
+				headerText: 'Design better outcomes',
+				subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
+				portfolioImage: '/images/home/hgraph-visualize-health.png',
+				portfolioText: 'See your health in one picture.',
+				caseStudyUrl: 'healthcare/hgraph/',
+				longTextClass: false
+			},
+			{
+				backgroundImage: '/images/home/homepage-02.jpg',
+				headerText: 'Design better efficiency',
+				subHeaderText: 'We reimagine processes and services to streamline healthcare.',
+				portfolioImage: '/images/home/homepage-image-02.png',
+				portfolioText: '3M’s Natural Language Processing (NLP) ICD coding revolution.',
+				caseStudyUrl: 'healthcare/3m/',
+				longTextClass: false
+			},
+			{
+				backgroundImage: '/images/home/homepage-03.jpg',
+				headerText: 'Magical software for personalized medicine',
+				subHeaderText: 'The software we design helps progressive healthcare companies create new markets and exploit future tech.',
+				portfolioImage: '/images/home/homepage-image-03.png',
+				portfolioText: 'Outpatient care weaves Cognitive Behavior Therapy (CBT) into everyday life.',
+				caseStudyUrl: 'healthcare',
+				buttonText: 'See Our Work',
+				longTextClass: true
+			},
+			{
+				backgroundImage: '/images/home/family-doctor-visit-diabetes.jpg',
+				headerText: 'Patient tested. Clinician approved.',
+				subHeaderText: 'We design magical experiences to change behavior for good.',
+				caseStudyUrl: 'healthcare',
+				buttonText: 'See Our Work',
+				longTextClass: false
+			}
+		];
+		var homepageHeader = homepageHeaderContent[Math.floor(Math.random() * 4)];
+		$(function() {
+			$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
+			$('#homepage-hero .actual-title').text(homepageHeader.headerText);
+			$('#homepage-hero .actual-content').append(homepageHeader.subHeaderText);
+			if(homepageHeader.longTextClass) {
+				$('#homepage-hero').addClass("long-text");
+			}
+			if(homepageHeader.portfolioImage) {
+				$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeader.portfolioImage + " />");
+			}
+			if(homepageHeader.portfolioText) {
+				$('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeader.portfolioText + "</p>");
+			}
+			if(homepageHeader.buttonText) {
+				$('#homepage-hero .actual-button').text(homepageHeader.buttonText);
+			} else {
+				$('#homepage-hero .actual-button').text('View Case Study');
+			}
+			$('#homepage-hero').attr('href', homepageHeader.caseStudyUrl);
+		});
 
-  - meta = page_for_meta("homepage")
-  %meta{:name => "description", :content => "#{meta.description}" }
-  %meta{:name => "keywords", :content => "#{meta.keywords}" }
-  %meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
-  %meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
-  %meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
-  %meta{:name => "twitter:description", :content => "#{meta.description}"}
-  - if (meta.twitterimage)
-    %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+	- meta = page_for_meta("homepage")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%a.block.bar#homepage-hero{:href => ""}
-  .photo-container
-  .title
-    .actual-title
-    .actual-content
-    .actual-portfolio
-    .actual-portfolio-description
-      .actual-button
+%a#homepage-hero.block.bar{:href => ""}
+	.photo-container
+	.title
+		.actual-title 
+		.actual-content 
+		.actual-portfolio 
+		.actual-portfolio-description 
+			.actual-button 
 .clients
-  %table.non-mobile
-    %tbody
-      %tr
-        %td
-          %a{:href => "healthcare/partners-gene-insight"}
-            %img{:src => "/images/healthcare/partners/partners.png"}
-        %td
-          %a{:href => "healthcare/3m"}
-            %img{:src => "/images/healthcare/partners/3m.png"}
-        %td
-          %a{:href => "healthcare/inspired-ehrs"}
-            %img{:src => "/images/healthcare/partners/nih.png"}
-        %td
-          %a{:href => "healthcare/mount-sinai"}
-            %img{:src => "/images/healthcare/partners/mtsinai.png"}
-        %td
-          %a{:href => "healthcare"}
-            %img{:src => "/images/healthcare/partners/jandj.png"}
-        %td
-          %a{:href => "healthcare/personal-genome-project"}
-            %img{:src => "/images/healthcare/partners/pgp.png"}
-        %td
-          %a{:href => "healthcare/hgraph"}
-            %img{:src => "/images/healthcare/partners/wallgreen.png"}
+	%table.non-mobile
+		%tbody
+			%tr
+				%td
+					%a{:href => "healthcare/partners-gene-insight"}
+						%img{:src => "/images/healthcare/partners/partners.png"}
+				%td
+					%a{:href => "healthcare/3m"}
+						%img{:src => "/images/healthcare/partners/3m.png"}
+				%td
+					%a{:href => "healthcare/inspired-ehrs"}
+						%img{:src => "/images/healthcare/partners/nih.png"}
+				%td
+					%a{:href => "healthcare/mount-sinai"}
+						%img{:src => "/images/healthcare/partners/mtsinai.png"}
+				%td
+					%a{:href => "healthcare"}
+						%img{:src => "/images/healthcare/partners/jandj.png"}
+				%td
+					%a{:href => "healthcare/personal-genome-project"}
+						%img{:src => "/images/healthcare/partners/pgp.png"}
+				%td
+					%a{:href => "healthcare/hgraph"}
+						%img{:src => "/images/healthcare/partners/wallgreen.png"}
 
 - feature_articles_sorted_by_date().first(2).each do |article|
-  %a.block.bar{ :href => "features/#{article.url}", :id => article.url }
-    - # Should still be setting bg images in CSS, because of varying gradients.
-    - # At least for now...
-    .photo-container
-    .title
-      %h5.tag= feature_article_date(article) + " Feature"
-      %h2.name= article.title
-      %h3.sub-name= article.tag_line
+	%a.block.bar{ :href => "features/#{article.url}", :id => article.url }
+		- # Should still be setting bg images in CSS, because of varying gradients.
+		- # At least for now...
+		.photo-container
+		.title
+			%h5.tag= feature_article_date(article) + " Feature"
+			%h2.name= article.title
+			%h3.sub-name= article.tag_line
 .double
-  %a#three-m.block.half{:href => "healthcare/3m"}
-    .photo-container
-    .title
-      %h5.tag Client Story: 3M
-      %h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
-  %a#culture.block.half{:href => "studio/careers"}
-    .photo-container
-    .title
-      %h5.tag Our Culture
-      %h2 Radical transparency is just part of our story&hellip;
+	%a#three-m.block.half{:href => "healthcare/3m"}
+		.photo-container
+		.title
+			%h5.tag Client Story: 3M
+			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
+	%a#culture.block.half{:href => "studio/careers"}
+		.photo-container
+		.title
+			%h5.tag Our Culture
+			%h2 Radical transparency is just part of our story&hellip;
 .news
-  .small-title Our work has been showcased by
-  %ul.mobile
-    %li
-      %a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
-        %img{:src => "/images/news/logo-the-boston-globe@2x.png", width: "204", height: "28"}
-        "Blood biomarkers are the key to understanding fitness and well-being."
-    %li
-      %a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
-        %img{:src => "/images/news/logo-new-scientist@2x.png", width: "177", height: "26"}
-        "Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
-    %li
-      %a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
-        %img{:src => "/images/news/logo-npr@2x.png", width: "177", height: "56"}
-        "The Care Card deck exudes their own geeky charm."
-    %li
-      %a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
-        %img{:src => "/images/news/logo-ted@2x.png", width: "132", height: "48"}
-        Stephen Friend presents The Resilience Project.
-    %li
-      %a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
-        %img{:src => "/images/news/logo-wired@2x.png", width: "186", height: "38"}
-        "hGraph might be just what the doctor will order."
-  %table.non-mobile
-    %tbody
-      %tr
-        %td
-          %a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
-            %img{:src => "/images/news/logo-the-boston-globe.png", alt: "The Boston Globe"}
-        %td
-          %a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
-            %img{:src => "/images/news/logo-new-scientist.png"}
-        %td
-          %a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
-            %img{:src => "/images/news/logo-npr.png"}
-        %td
-          %a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
-            %img{:src => "/images/news/logo-ted.png"}
-        %td
-          %a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
-            %img{:src => "/images/news/logo-wired.png"}
-      %tr
-        %td
-          "Blood biomarkers are the key to understanding fitness and well-being."
-        %td
-          "Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
-        %td
-          "The Care Card deck exudes their own geeky charm."
-        %td
-          "Stephen Friend presents The Resilience Project."
-        %td
-          "hGraph might be just what the doctor will order."
+	.small-title Our work has been showcased by
+	%ul.mobile
+		%li
+			%a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
+				%img{:src => "/images/news/logo-the-boston-globe@2x.png", width: "204", height: "28"}
+				"Blood biomarkers are the key to understanding fitness and well-being."
+		%li
+			%a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
+				%img{:src => "/images/news/logo-new-scientist@2x.png", width: "177", height: "26"}
+				"Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
+		%li
+			%a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
+				%img{:src => "/images/news/logo-npr@2x.png", width: "177", height: "56"}
+				"The Care Card deck exudes their own geeky charm."
+		%li
+			%a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
+				%img{:src => "/images/news/logo-ted@2x.png", width: "132", height: "48"}
+				Stephen Friend presents The Resilience Project.
+		%li
+			%a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
+				%img{:src => "/images/news/logo-wired@2x.png", width: "186", height: "38"}
+				"hGraph might be just what the doctor will order."
+	%table.non-mobile
+		%tbody
+			%tr
+				%td
+					%a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
+						%img{:src => "/images/news/logo-the-boston-globe.png", alt: "The Boston Globe"}
+				%td
+					%a{:href => "http://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases.html#.VRluFDt4rIQ"}
+						%img{:src => "/images/news/logo-new-scientist.png"}
+				%td
+					%a{:href => "http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"}
+						%img{:src => "/images/news/logo-npr.png"}
+				%td
+					%a{:href => "https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"}
+						%img{:src => "/images/news/logo-ted.png"}
+				%td
+					%a{:href => "http://www.wired.com/2013/01/medical-record-redesign/"}
+						%img{:src => "/images/news/logo-wired.png"}
+			%tr
+				%td
+					"Blood biomarkers are the key to understanding fitness and well-being."
+				%td
+					"Diving deeper into genetics in this way, we stand a chance of fighting disease before we even have symptoms."
+				%td
+					"The Care Card deck exudes their own geeky charm."
+				%td
+					"Stephen Friend presents The Resilience Project."
+				%td
+					"hGraph might be just what the doctor will order."
 .recent-blog-post.dynamic
 %a#from-bathroom-to-healthroom.block.bar{:href => "features/from-bathroom-to-healthroom/"}
-  .photo-container
-  .title
-    %h2.name From Bathroom to Healthroom
-    %h3.sub-name How magical technology will revolutionize human health
+	.photo-container
+	.title
+		%h2.name From Bathroom to Healthroom
+		%h3.sub-name How magical technology will revolutionize human health

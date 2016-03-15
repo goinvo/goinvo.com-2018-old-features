@@ -620,34 +620,17 @@ img.scale-with-grid {
 }
 .column#signs {
 	padding-right: 0;
+	padding-bottom: 0;
 	@include gradient-right;
-	.text {
-		width: 30%;
-		padding-right: 2rem;
+	.text, .signs-image {
+		display: block;
+		width: 90%;
 	}
 	.signs-image {
 		position: relative;
-		width: 60%;
-		height: 100px;
 		z-index: 4;
-		
-		@media (max-width: $tablet) {
-			min-height: 42rem;
-		}
-		@media (max-width: 575px) {
-			min-height: 38rem;
-		}
-		@media (max-width: $phone) {
-			min-height: 30rem;	
-		}
-	}
-	.text, .signs-image {
-		display: inline-block;
-		vertical-align: top;
-		@media (max-width: $tablet) {
-			display: block;
-			width: 90%;
-		}
+		padding-top: 2.5rem;
+		margin-botto: -0.5rem;
 	}
 }
 .row#zika-symptoms {
@@ -1024,6 +1007,16 @@ img.scale-with-grid {
 			bottom: 0;
 			padding-right: 2rem;
 		}
+		@media (max-width: 1302px) {
+			.treatment-header {
+ 				height: 10.25rem;
+ 			}
+ 		}
+ 		@media (max-width: $tablet) {
+			.treatment-header {
+ 				height: auto;
+ 			}
+ 		}
 	}
 	#treatment-pregnant {
 		h2 {
@@ -1131,5 +1124,3 @@ img.scale-with-grid {
 		word-break: normal;
 	}
 }
-
-

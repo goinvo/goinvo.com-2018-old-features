@@ -170,35 +170,9 @@ $('.clickable_span').click(function(e){
 	}
 });
 
-function setCarouselHeight(){
-	var tallest = 0;
-	if($(window).width()>769) {
-		for(var i = 1;i<=$(".carousel.desktop .item").find(".instruction").length;i++) {
-			if(tallest < $(".carousel.desktop .item:nth-child("+i+")").find(".instruction").height())
-				tallest = $(".carousel.desktop .item:nth-child("+i+")").find(".instruction").height();
-		}
-		if(tallest < $(".carousel.desktop .item").find(".image").height())
-				tallest = $(".carousel.desktop .item").find(".image").height();
-	}
-	else {
-		for(var i = 1;i<=$(".carousel.mobile .item").length;i++) {
-			if(tallest < $(".carousel.mobile .item:nth-child("+i+")").height())
-				tallest = $(".carousel.mobile .item:nth-child("+i+")").height();
-		}
-	}
-	//console.log(tallest)
-	return tallest + 60;
-}
 
 $(window).resize(function(event) {
 	/* Act on the event */
-	if($(window).width()>769) {
-		$(".carousel.desktop .carousel-inner").height(setCarouselHeight());
-	}
-	else {
-		$(".carousel.mobile .carousel-inner").height(setCarouselHeight());
-	}
-	
 	// for popup box
 	if($(".popup-box").is(':visible')) {
 		if($(window).width()>769) {
@@ -337,13 +311,6 @@ $(window).resize(function(event) {
 });
 
 $(document).ready(function(){
-	if($(window).width()>769) {
-		$(".carousel.desktop .carousel-inner").height(setCarouselHeight());
-	}
-	else {
-		$(".carousel.mobile .carousel-inner").height(setCarouselHeight());
-
-	}
 	$(".popup-box").click(function(event) {
 		/* Act on the event */
 		$(this).fadeOut(200);

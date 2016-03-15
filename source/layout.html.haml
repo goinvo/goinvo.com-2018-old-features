@@ -97,6 +97,15 @@
 									.studio-head-item#live
 										.image-box
 										.studio-title Live
+							%a{:href => "/studio/open-office-hours"}
+								-if currentPage.include? "open-office-hours"
+									.studio-head-item.active-studio#open-office-hours
+										.image-box
+										.studio-title Office Hours
+								-else
+									.studio-head-item#open-office-hours
+										.image-box
+										.studio-title Office Hours
 							%a{:href => "/studio/history"}
 								-if currentPage.include? "history"
 									.studio-head-item.active-studio#history

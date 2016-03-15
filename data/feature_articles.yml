@@ -16,10 +16,10 @@
 
 articles:
   - title: "Care Plans"
-    tag_line: "Explore the past, present, and future of Care Plans."
+    tag_line: "Part 1: Definition and History"
     date: "2016-03-01"
-    image: "features/careplans/part3/hero_image.jpg"
-    url: "careplans"
+    image: "features/careplans/feature_page_1.jpg"
+    url: "careplans/part-1.html"
 
   - title: "Understanding Zika"
     tag_line: "There are an estimated 1.6 million cases of Zika virus in 33 countries"

@@ -7,19 +7,19 @@
   # twitterimage: ""
 
 - page: "homepage"
-  description: "Involution Studios is a Boston user experience design firm. We design, build, and ship beautiful software for companies of all sizes. The software we design helps progressive healthcare companies create new markets and exploit future tech."
-  keywords: "boston ux design, boston user experience design, boston ui design, boston user interface design, boston software design, healthcare design"
+  description: "goinvo is a Boston user experience design firm. The software we design helps progressive healthcare companies create new markets and exploit future tech."
+  keywords: "boston ux design, boston user experience design, boston ui design, boston user interface design, boston software design, healthcare ux, healthcare design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Magical Software for Personalized Medicine"
-  twitterimage: "http://www.goinvo.com/images/home/bathroom.jpg"
+  twittertitle: "goinvo - Magical Software for Personalized Medicine"
+  twitterimage: "http://www.goinvo.com/images/home/homepage-twitter-card.jpg"
 
 - page: "healthcare"
   description: "We help healthcare organizations make clinical strength software for high-test, high stress environments."
   keywords: "healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare"
+  twittertitle: "goinvo - Healthcare"
   twitterimage: "http://www.goinvo.com/images/healthcare/ipad_hero.png"
 
 - page: "3m"
@@ -27,7 +27,7 @@
   keywords: "nlp, icd-9, icd-10, hospital coding, his, 3m, natural language processing, prototype, software development, ui design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - 3M: CodeRyte"
+  twittertitle: "goinvo - Healthcare - 3M: CodeRyte"
   twitterimage: "/images/clients/3m/3m-user-interface-sketches-grid.jpg"
 
 - page: "care-cards"
@@ -35,15 +35,23 @@
   keywords: "Care Cards, design health, design healthcare, designing health, ux health, ui health, design behavior change"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Care Cards"
+  twittertitle: "goinvo - Healthcare - Care Cards"
   twitterimage: "http://www.goinvo.com/images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"
+
+- page: "paintrackr"
+  description: "PainTrackr allow you to easily track pain on a mobile device."
+  keywords: "PainTrackr, track pain, pain track, pain tracker, log pain, ios app, healthcare design"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - Products - PainTrackr"
+  twitterimage: "http://www.goinvo.com/images/clients/paintrackr/paintrackr-track-pain-ios-app.jpg"
 
 - page: "hgraph"
   description: "hGraph, your health in one picture, Improves Health and Healthcare with Agile Design and Big Data Analytics"
   keywords: "hgraph, health visualization, big data, patient health, health score, hscore, healthcare application"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - hGraph"
+  twittertitle: "goinvo - Healthcare - hGraph"
   twitterimage: "http://www.goinvo.com/images/healthcare/ipad_hero.png"
 
 - page: "inspired-ehrs"
@@ -51,7 +59,7 @@
   keywords: "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Inspired EHRs"
+  twittertitle: "goinvo - Healthcare - Inspired EHRs"
   twitterimage: "http://www.goinvo.com/images/clients/ehr/interactive-medications-table.jpg"
 
 - page: "mount-sinai"
@@ -59,7 +67,7 @@
   keywords: "mount sinai, genomics, genetic reporting design, sage bionetworks, resilience project, electronic consent, user interface design, ui design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Mount Sinai: A Search for Unexpected Genetic Heroes."
+  twittertitle: "goinvo - Healthcare - Mount Sinai: A Search for Unexpected Genetic Heroes."
   twitterimage: "http://www.goinvo.com/images/clients/mount-sinai/resilience-project-sample-genetic-report.jpg"
 
 - page: "numera"
@@ -67,7 +75,7 @@
   keywords: "facebook app, ios design, mobile design, boston user interface design, boston ui design, boston application design, software design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Numera Health"
+  twittertitle: "goinvo - Healthcare - Numera Health"
   twitterimage: "http://www.goinvo.com/images/clients/numera/numera-iphone-app-design.jpg"
 
 - page: "partners-gene-insight"
@@ -75,7 +83,7 @@
   keywords: "partners geneinsight, healthcare, partners"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Partner's Healthcare: Personalized Genetic Medicine (PCPGM)"
+  twittertitle: "goinvo - Healthcare - Partner's Healthcare: Personalized Genetic Medicine (PCPGM)"
   twitterimage: "http://www.goinvo.com/images/clients/pgi/partners_report_draft.png"
 
 - page: "personal-genome-project"
@@ -83,7 +91,7 @@
   keywords: "personalized health, genomics, user experience, user interface, workshop, product architecture, product strategy"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - The Personal Genome Project (PGP)"
+  twittertitle: "goinvo - Healthcare - The Personal Genome Project (PGP)"
   twitterimage: "http://www.goinvo.com/images/clients/personal-genome-project/pgp-openhumans-ecosystem-white.png"
 
 - page: "segterra"
@@ -91,7 +99,7 @@
   keywords: "segterra, InsideTracker, blood test, healthcare, user experience, user interface"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Segterra: InsideTracker"
+  twittertitle: "goinvo - Healthcare - Segterra: InsideTracker"
   twitterimage: "http://www.goinvo.com/images/clients/segterra/segterra_one.png"
 
 - page: "tabeeb"
@@ -99,7 +107,7 @@
   keywords: "tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user eperience"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Healthcare - Tabeeb"
+  twittertitle: "goinvo - Healthcare - Tabeeb"
   twitterimage: "http://www.goinvo.com/images/clients/tabeeb/tabeeb-open-case-ux-design.png"
 
 - page: "enterprise"
@@ -107,7 +115,7 @@
   keywords: "enterprise ui design, enterprise ux, enterprise software, boston software design, boston ux design, boston user experience"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Enterprise"
+  twittertitle: "goinvo - Enterprise"
   twitterimage: "http://www.ussenterprise.co.uk/enterprise/entd/other/entdscs.jpg"
 
 - page: "dataxu"
@@ -115,7 +123,7 @@
   keywords: "big data ui design, big data ux design, online advertising, data visualization"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Enterprise - DataXu"
+  twittertitle: "goinvo - Enterprise - DataXu"
   twitterimage: "http://www.goinvo.com/images/clients/dataxu/dataxu-campaign-dashboard-user-interface.jpg"
 
 - page: "dnc"
@@ -123,7 +131,7 @@
   keywords: "application design, user interface design, voter registration, democratic national committee, involution, boston user interface design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Enterprise - Democratic National Committee: Voter Registration"
+  twittertitle: "goinvo - Enterprise - Democratic National Committee: Voter Registration"
   twitterimage: "http://www.goinvo.com/images/clients/dnc/democratic-national-committee-voter-registration-UI-design.jpg"
 
 - page: "mcafee"
@@ -131,7 +139,7 @@
   keywords: "mcafee total protection suite, boston user interface design, boston ui design, boston application design, software design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Enterprise - McAfee: Total Protection"
+  twittertitle: "goinvo - Enterprise - McAfee: Total Protection"
   twitterimage: "http://www.goinvo.com/images/clients/mcafee/mcafee-total-protection-desktop-app-design.jpg"
 
 - page: "microsoft"
@@ -139,7 +147,7 @@
   keywords: "application design, user interface design, designer tools, developer tools, microsoft, expression, involution, boston user interface design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Enterprise - Microsoft: Expression Studio"
+  twittertitle: "goinvo - Enterprise - Microsoft: Expression Studio"
   twitterimage: "http://www.goinvo.com/images/clients/microsoft/microsoft-expression-studio-redesign.jpg"
 
 - page: "nielsen"
@@ -147,7 +155,7 @@
   keywords: "marketing optimization, ui design, ux design, frontend development, prototyping, affinnova, nielsen, user experience"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Nielsen: Concept Studio"
+  twittertitle: "goinvo - Nielsen: Concept Studio"
   twitterimage: "http://www.goinvo.com/images/clients/affinnova/concept-studio-early-ui-redesign.jpg"
 
 - page: "oracle"
@@ -155,7 +163,7 @@
   keywords: "application design, user interface design, user interface development, agile, plm, product lifecycle management, oracle, involution, boston user interface design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Oracle: Agile PLM Web Application"
+  twittertitle: "goinvo - Oracle: Agile PLM Web Application"
   twitterimage: "http://www.goinvo.com/images/clients/oracle/oracle-agile-plm-ui-design-early-prototype.jpg"
 
 - page: "ruelala"
@@ -163,7 +171,7 @@
   keywords: "product strategy, systemic design, ui design, ux design, research"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Rue La La"
+  twittertitle: "goinvo - Rue La La"
   twitterimage: "http://www.goinvo.com/images/clients/ruelala/ruelala-calendar-info-visualization.jpg"
 
 - page: "scskcorporation"
@@ -171,7 +179,7 @@
   keywords: "ui engineering, ux design, ux prototype, ui prototype, curl, scsk corporation"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - SCSK Corporation: eyeDecide"
+  twittertitle: "goinvo - SCSK Corporation: eyeDecide"
   twitterimage: "http://www.goinvo.com/images/clients/scskcorporation/curl-information-visualization.jpg"
 
 - page: "telerik"
@@ -179,7 +187,7 @@
   keywords: "application design, user interface design, involution, boston, telerik"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Telerik"
+  twittertitle: "goinvo - Telerik"
   twitterimage: "http://www.goinvo.com/images/clients/telerik/invo_telerik_report_purchaseproducts.jpg"
 
 - page: "products"
@@ -187,7 +195,7 @@
   keywords: "application design, involution studios"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Products"
+  twittertitle: "goinvo - Products"
   twitterimage: "http://www.goinvo.com/images/products/hero.png"
 
 - page: "design-axioms"
@@ -195,7 +203,7 @@
   keywords: "design axioms, design, ruleset, cards, axiom"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Products - Design Axioms"
+  twittertitle: "goinvo - Products - Design Axioms"
   twitterimage: "http://www.goinvo.com/images/clients/design-axioms/all_cards.jpg"
 
 - page: "staffplan"
@@ -203,7 +211,7 @@
   keywords: "staffplan, time, tracking, metrics, design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Products - StaffPlan"
+  twittertitle: "goinvo - Products - StaffPlan"
   twitterimage: "http://www.goinvo.com/images/clients/staffplan/staffplan_ss_rollup.png"
 
 - page: "visual-government"
@@ -211,7 +219,7 @@
   keywords: "government, budget, town, city, visual, graphics, charts, money"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Products - Visual Government"
+  twittertitle: "goinvo - Products - Visual Government"
   twitterimage: "http://www.goinvo.com/images/clients/arlington-visual-budget/arlington_visual_budget_home.png"
 
 - page: "careers"
@@ -221,6 +229,14 @@
   twittersite: "@goinvo"
   twittertitle: "Apply for a job at Involution Studios!"
   twitterimage: "http://www.goinvo.com/images/careers/dawa-chung-ui-designer.jpg"
+
+- page: "open-office-hours"
+  description: "Our studio is open for anyone needing design advice, every Thursday from 4-6p."
+  keywords: "open office hours, design critiques, portfolio reviews, boston design studio, ux design, ux design studio"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Stop by for Open Office Hours"
+  twitterimage: "http://www.goinvo.com/images/open-office-hours/open-studio.jpg"
 
 - page: "history"
   description: "An interactive timeline of Invo's history"
@@ -255,7 +271,7 @@
   keywords: "silicon valley ui design, boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
-  twittertitle: "Involution Studios - Featured Articles"
+  twittertitle: "goinvo - Featured Articles"
   
 - page: "zika"
   description: "An easy-to-digest, visual guide to understanding the Zika virus."
@@ -265,13 +281,21 @@
   twittertitle: "Understanding Zika"
   twitterimage: "http://www.goinvo.com/images/features/zika/zika-twitter-card.jpg"
 
+- page: "careplans-intro"
+  description: "The three-part series"
+  keywords: "design future emerging technologies health mobile careplans introduction care plan ui ux user experience medical records predictive health"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "The three-part series"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/home_hero.jpg"
+
 - page: "careplans-part1"
   description: "What is a care plan, and how did they start?"
   keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 1"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/part-1_twitter.png"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/twitter_CP1.jpg"
 
 - page: "careplans-part2"
   description: "How are care plans being used?"
@@ -279,15 +303,15 @@
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 2"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/FeatureBanner_twitter.jpg"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/twitter_CP2.jpg"
 
 - page: "careplans-part3"
-  description: "what is the future of care plans?"
+  description: "What is the future of care plans?"
   keywords: "design future emerging technologies health mobile careplans care plan ui ux user experience medical records predictive health"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Care Plans: Part 3"
-  twitterimage: "http://www.goinvo.com/images/features/careplans/featureIII_twitter_image.jpg"
+  twitterimage: "http://www.goinvo.com/images/features/careplans/twitter_CP3.jpg"
 
 - page: "digital-healthcare"
   description: "8 health tech trends to look for in the upcoming year."

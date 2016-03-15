@@ -751,7 +751,7 @@
 
 .enterprise-banner {
 	color: #9B9B9B;
-	background-color: #F9F9F9;
+	background: radial-gradient(100% 80% at bottom, #8DA1B7, #F9F9F9);
 	border-top: 1px solid #edecec;
 	text-align: center;
 	max-height: 360px;
@@ -959,8 +959,8 @@
 				padding-left: 20px;
 				margin-left: 0px;
 				margin: 0 auto;
-				font-size: 45px;
-				padding-top: 350px;
+				font-size: 40px;
+				padding-top: 80px;
 			}
 			a {
 				width: 80%;	
