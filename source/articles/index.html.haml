@@ -60,8 +60,9 @@
         %li{ :id => article.url }
           %a{ :href => "/features/#{article.url}" }
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
-              %h1= article.title
               .feature-label= feature_article_date(article)
+              %h1= article.title
+              %h3= article.tag_line
 .show-features-link-container
   %a#show-all-features Show All Features
 
