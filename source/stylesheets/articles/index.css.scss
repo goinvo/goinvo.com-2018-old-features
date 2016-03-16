@@ -36,9 +36,15 @@
 	padding: 0 3rem;
 	max-width: 1200px;
 	margin: 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 1rem;
+  }
 }
 .most-recent-article .inner-container {
 	padding: 3rem 3rem 6rem 3rem;
+  @media only screen and (max-width: 500px) {
+    padding: 3rem 1rem 6rem;
+  }
 }
 .most-recent-article .inner-container {
   color: white;
@@ -55,6 +61,9 @@
   padding: 0 3rem;
   max-width: 1200px;
   margin: 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 1rem;
+  }
 }
 .feature-article-list-container.transitioning {
   transition: max-height 500ms;
@@ -118,6 +127,9 @@
   max-width: 1200px;
   padding: 0 calc(3rem - 10px); // Hack to get items to line up with above content
   margin: 50px auto 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 calc(1rem - 10px);
+  }
 }
 .blog-article-list {
   list-style: none;
