@@ -114,7 +114,7 @@
 						%img{:src => "/images/healthcare/partners/wallgreen.png"}
 
 - feature_articles_sorted_by_date().first(2).each do |article|
-	%a.block.bar{ :href => "features/#{article.url}", :id => article.url }
+	%a.block.bar{ :href => "features/#{article.url}", :id => article.id }
 		- # Should still be setting bg images in CSS, because of varying gradients.
 		- # At least for now...
 		.photo-container
