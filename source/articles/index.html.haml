@@ -1,0 +1,71 @@
+- content_for(:title) do
+  = "Involution Studios Articles"
+- content_for(:page_head) do
+  = stylesheet_link_tag "articles/index"
+  = javascript_include_tag "hubspot_blog_posts"
+  :javascript
+    function renderBlogPosts(posts) {
+      if (!posts) return;
+      var blogArticleList = $('ul.blog-article-list');
+      $.each(posts, function(i, post) {
+        var currentString = post.encoded;
+        var sIndex = currentString.indexOf('<img');
+        currentString = currentString.substr(sIndex + 4);
+        sIndex = currentString.indexOf('src=');
+        currentString = currentString.substr(sIndex + 5);
+        sIndex = currentString.indexOf('"');
+        currentString = currentString.substr(0, sIndex);
+        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
+      });
+    }
+    getHubspotBlogPosts(renderBlogPosts);
+    $(function() {
+      $('.feature-article-list-container').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd',
+        function() {
+          $(this).removeClass('transitioning');
+        }
+      );
+      $('#show-all-features').click(function() {
+        $('.feature-article-list-container').addClass('transitioning');
+        $('.feature-article-list-container').toggleClass('show-all');
+        $(this).text(function(i, text){
+          return text === "Show All Features" ? "Minimize Features" : "Show All Features";
+        });
+      });
+    });
+  - meta = page_for_meta("articles")
+  %meta{:name => "description", :content => "#{meta.description}" }
+  %meta{:name => "keywords", :content => "#{meta.keywords}" }
+  %meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+  %meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+  %meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+  %meta{:name => "twitter:description", :content => "#{meta.description}"}
+  - if (meta.twitterimage)
+    %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+- feature_articles = feature_articles_sorted_by_date()
+- most_recent_feature = feature_articles.first
+%a.most-recent-article-link{ :href => "/features/#{most_recent_feature.url}" }
+  %header.most-recent-article{ :id => most_recent_feature.url, :style => "background-image: url('/images/#{most_recent_feature.image}');" }
+    .outer-container
+      .inner-container
+        %span
+          Feature:
+          = feature_article_date(most_recent_feature)
+        %h1= most_recent_feature.title
+.feature-article-list-container
+  .feature-list-title Features
+  %ul.feature-article-list
+    - feature_articles.each do |article|
+      - if !(article == most_recent_feature)
+        %li{ :id => article.url }
+          %a{ :href => "/features/#{article.url}" }
+            .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
+              .feature-label= feature_article_date(article)
+              %h1= article.title
+              %h3= article.tag_line
+.show-features-link-container
+  %a#show-all-features Show All Features
+
+.blog-article-list-container
+  %ul.blog-article-list
+  %a#show-all-articles{ :href => "http://yes.goinvo.com" }Show All Articles
