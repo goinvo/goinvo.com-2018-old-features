@@ -34,7 +34,7 @@ $( document ).ready(function() {
 				"title" : "Mount Sinai: A search for unexpected genetic heroes.",
 				"url" : "/healthcare/mount-sinai/",
 				"image" : "mount-sinai.jpg",
-				"next-id" : "health-axioms"
+				"next-id" : "care-cards"
 			},
 			"partners-gene-insight" : {
 				"title" : "Partners Gene Insight",
