@@ -66,16 +66,6 @@
   email: "edwin@goinvo.com"
   photo: edwin_choi.jpg
 
-- first_name: Michael
-  last_name: Bester
-  title: Engineer
-  bio: "Michael is a design-savvy software developer focussed on building humane user interfaces for screens of all shapes and sizes. Having worked with companies as diverse as Novartis, Warner Music and Playboy, he has been crafting code with Invo since 2011. A graduate of the University of Miami Frost School of Music, Michael is also a guitarist who enjoys playing jazz, rock and more recently, classical repertoire."
-  flickr_username: "michaelbester"
-  twitter_username: "mibester"
-  github_username: "kimili"
-  email: "michael@goinvo.com"
-  photo: michael_bester.jpg
-
 - first_name: Yanyang
   last_name: Zhou
   title: Engineer
