@@ -24,6 +24,8 @@
 		- bodyClass = "products"
 	- elsif currentPage.include? "studio"
 		- bodyClass = "studio"
+	- elsif currentPage.include? "articles"
+		- bodyClass = "articles"
 	- elsif currentPage.include? "contact"
 		- bodyClass = "contact"
 	%body{:class => bodyClass}
