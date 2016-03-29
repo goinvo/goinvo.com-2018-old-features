@@ -110,6 +110,14 @@
   twittertitle: "goinvo - Healthcare - Tabeeb"
   twitterimage: "http://www.goinvo.com/images/clients/tabeeb/tabeeb-open-case-ux-design.png"
 
+- page: "diabetes"
+  description: "Our thoughts on design, technology, and healthcare."
+  keywords: "healthcare design, ux design, health ux design, boston ux design, designing for healthcare, boston ui design"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - Type I and II Diabetes"
+  twitterimage: "http://www.goinvo.com/images/careers/designing-physical-user-experience.jpg"
+
 - page: "enterprise"
   description: "We’ve designed massive bottom line impact for our clients."
   keywords: "enterprise ui design, enterprise ux, enterprise software, boston software design, boston ux design, boston user experience"

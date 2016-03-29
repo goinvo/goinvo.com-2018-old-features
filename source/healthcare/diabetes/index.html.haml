@@ -1,0 +1,108 @@
+- content_for(:title) do
+	= "Type I and II Diabetes"
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	- meta = page_for_meta("tabeeb")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+- client = client_for_name("Tabeeb")
+
+#content-area.caseStudyContent
+	.projectData
+		%h1.client{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Type I and II Diabetes:
+		%h5.client.title-with-sub{style: "color: #{client.primary_color}; font-weight: 100;"} ---
+
+		%h6.subheader Results
+
+		%p ---
+
+		%h6.subheader Details
+
+		%p ---
+
+		%h6.subheader Practice Areas
+		%p.small-bottom-margin Healthcare
+
+		%h6.subheader Project Type
+		%p.small-bottom-margin Design Acceleration, Strategic Consulting, Design Direction
+
+		%h6.subheader Process
+		%p.small-bottom-margin Learn, Envision, Blueprint, Craft, Prototype
+
+		%h6.subheader Price
+		%p $100k &ndash; $200k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%h1 Live your life, not the condition.
+
+		%h5 We understand living with, treating, and designing for Type I and Type II Diabetes. 
+
+		%div
+			%img.with-caption{alt: "User experience workflow setting up a patient case.", src: "../../images/clients/diabetes/diabetes-needs-map.jpg"}/
+
+		/ Live a careplan.
+		/ Not the disease.
+		/ Focus on the human and their care.<br />Not managing the disease.
+
+		%h5 We have researched, tested, and validated chronic condition management software and hardware that drive life-critical medical decisions.
+
+		%div
+			%img.with-caption{alt: "Concept sketches for telemedicine application.", src: "../../images/clients/diabetes/ux-diabetes-research.jpg"}/
+
+		%div
+			%img.with-caption{alt: "Patient diagnosis user experience design", src: "../../images/clients/diabetes/early-concept-sketches.jpg"}/
+
+		%div
+			%img.with-caption{alt: "User experience workflow setting up a patient case.", src: "../../images/clients/diabetes/user-testing-diabetes-devices.jpg"}/
+
+		%h5 We've conducted market and gap analysis to steer business, technology, and design requirements.
+
+		%div
+			%img.with-caption{alt: "Concept sketches for telemedicine application.", src: "../../images/clients/diabetes/technology-exploration.jpg"}/
+
+		%h5 We've designed battle-tested and FDA approved medical services.
+
+		%div
+			%img.with-caption{alt: "Patient diagnosis user experience design", src: "../../images/clients/diabetes/diabetes-device-concept.jpg"}/
+
+		%div
+			%img{alt: "Remote diagnosis user experience design.", src: "../../images/clients/diabetes/ux-diabetes-device.jpg"}
+
+
+
+		
+		%p.caption How do you change the behavior of an uninformed and unengaged patient. 
+
+		
+		%p.caption Before designing the diabetes device, we explored emerging technology that the product could benefit from.
+
+		
+		%p.caption Concept sketching the combination of hardware and software for managing diabetes.
+
+		
+		%p.caption A concept for people managing their diabetes.
+
+		%p.caption Gathering feedback early and often on our designs.
+
+		
+		%p.caption Using a 3D printer, we tested various form factors for a diabetes management device.
+
+		
+		%p.caption Processing our notes from a user feedback session.
+
+#next-project.row
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%span#next
