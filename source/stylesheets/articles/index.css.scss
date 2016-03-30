@@ -129,6 +129,7 @@
 .inner-container h1, .feature-block h1 {
   font-size: 75px;
   font-weight: normal;
+  margin-bottom: 0;
   @media only screen and (max-width: 500px) {
     font-size: 52px;
   }
