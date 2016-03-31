@@ -30,6 +30,10 @@
   primary_color: "#0e4474"
   logo: "dataxu.jpg"
 
+- name: "Diabetes"
+  primary_color: "#0e4474"
+  logo:
+
 - name: "The Digital Life"
   primary_color: "#0e4474"
   logo: "the-digital-life.jpg"
