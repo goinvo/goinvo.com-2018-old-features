@@ -189,14 +189,28 @@ div.value {
 		&.hide-me {
 			height: 0px;	
 		}
+		@media (max-width: 769px) {
+			height: auto;
+		}
 		
 		.studio-head-container {
 			width: auto;
-			min-width: 1325px; //change this number if we add more items to the nav
-			height: 60px;
-			padding: 15px 3.125em;
+			@media (min-width: 769px) {
+				min-width: 1325px; //change this number if we add more items to the nav
+			}
+			height: 40px;
+			padding: 10px 3.125em;
 			position: relative;
 			border-radius: 3px;
+			@media (max-width: 769px) {
+				min-width: auto;
+				padding-left: 2.125em;
+				padding-right: 2.125em;
+
+				& a:nth-child(3) {
+					display: none;
+				}
+			}
 			
 			.studio-head-item {
 				height: 50px;
@@ -207,9 +221,21 @@ div.value {
 				position: relative;
 				overflow: hidden;
 				border-radius: 3px;
+				@media (max-width: 769px) {
+					width: auto;
+					height: auto;
+					background: none;
+					border: none;
+				}
 				
 				&.active-studio {
 					border: 2px solid white;	
+					@media (max-width: 769px) {
+						border-top: none;
+						border-left: none;
+						border-right: none;
+						border-radius: 0;
+					}
 				}
 				
 				.image-box {
@@ -218,6 +244,9 @@ div.value {
 					height: 107px;
 					transform: scale(1,1);
 					transition: 300ms ease-in-out;
+					@media (max-width: 769px) {
+						display: none;
+					}
 				}
 				
 				&:hover {
@@ -254,13 +283,30 @@ div.value {
 				}
 				
 				.studio-title {
-					position: absolute;
-					bottom: 5px;
-					left: 25px;
-					font-size: 1.3em;
 					color: #fdfdfd;
 					transform: scale(1,1);
 					transition: 300ms ease-in-out;
+					@media (min-width: 769px) {
+						font-size: 1.3em;
+						position: absolute;
+						bottom: 5px;
+						left: 25px;
+						&.desktop {
+							display: inline-block;
+						}
+						&.mobile {
+							display: none;
+						}
+					}
+					@media (max-width: 769px) {
+						font-size: 1em;
+						&.mobile {
+							display: inline-block;
+						}
+						&.desktop {
+							display: none;
+						}
+					}
 				}
 			}
 		}

@@ -103,11 +103,13 @@
 								-if currentPage.include? "open-office-hours"
 									.studio-head-item.active-studio#open-office-hours
 										.image-box
-										.studio-title Office Hours
+										.studio-title.desktop Office Hours
+										.studio-title.mobile Visit
 								-else
 									.studio-head-item#open-office-hours
 										.image-box
-										.studio-title Office Hours
+										.studio-title.desktop Office Hours
+										.studio-title.mobile Visit
 							%a{:href => "/studio/history"}
 								-if currentPage.include? "history"
 									.studio-head-item.active-studio#history
