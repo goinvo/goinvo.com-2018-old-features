@@ -34,6 +34,7 @@
 					%li <a href="#transmission">Transmission</a>
 					%li <a href="#prevention">Prevention</a>
 					%li <a href="#zika-symptoms">Symptoms</a>
+					%li <a href="#guillain-barre-syndrome">Guillain Barr&eacute Syndrome</a>
 					%li <a href="#treatments">Treatment</a>
 					%li <a href="#action-plan">Action Plan</a>
 					%li <a href="../../images/features/zika/understanding_zika.pdf" target="blank">Download</a>
@@ -63,11 +64,11 @@
 					%div.row
 						%div.way_spread.column.one-half
 							%div.image
-								%img.scale-with-grid{:src => "../../images/features/zika/spread-partner.png", :alt => "person to partner"}
-							%p Person <span class="arrow">&rarr;</span> sexual partner
+								%img.scale-with-grid{:src => "../../images/features/zika/spread-partner.png", :alt => "man to partner"}
+							%p Man <span class="arrow">&rarr;</span> sexual partner
 						%div.way_spread.column.one-half
 							%div.image
-								%img.scale-with-grid{:src => "../../images/features/zika/spread-bloodbank.png", :alt => "person to partner"}
+								%img.scale-with-grid{:src => "../../images/features/zika/spread-bloodbank.png", :alt => "person to bloodbank to person"}
 							%p Person <span class="arrow">&rarr;</span> blood bank <span class="arrow">&rarr;</span> person
 
 			%div.row
@@ -96,7 +97,7 @@
 						%p If you have been exposed to a Zika-infected area, watch for these signs of Zika Disease.
 						%p Incubation period is likely a few days to one week. Symptoms are usually mild and last several days to a week.
 						%p Only about 1 in 5 infected people develop symptoms
-						%img.scale-with-grid{:src => "../../images/features/zika/1in5.png", :alt => "1 in 5 infected people"}
+						%img.scale-with-grid{:src => "../../images/features/zika/1in5.svg", :onerror => "this.src='../../images/features/zika/1in5.png'", :alt => "1 in 5 infected people"}
 					%div.signs-image
 						%img.scale-with-grid{:src => "../../images/features/zika/zika-symptoms.png", :alt => "headache, fever, painful or red eyes, joint pain, itching/rash, muscle pain"}
 
@@ -153,14 +154,26 @@
 							%p Five South American countries advised women to postpone getting pregnant until more is known about the risks, prompting criticism from women's health organizations and general public.<sup><a href="#ref-5">5</a>, <a href="#ref-26">26</a></sup>
 					%li
 						%div.timeline-image
+							%img.scale-with-grid{:src => "../../images/features/zika/2016-who-representative.jpg", :alt => "representative from the w.h.o."}
+						%span.year 1 Feb 2016
+						%div.description
+							%p Based on advice from the Emergency Committee about the potential association of Zika virus with microcephaly, GBS, and other neurological disorders, the Director-General of the World Health Organization declared a Public Health Emergency of International Concern (PHEIC) on 1 February 2016.<sup><a href="#ref-1">1</a>, <a href="#ref-41">41</a></sup>
+					%li
+						%div.timeline-image
 							%img.scale-with-grid{:src => "../../images/features/zika/2016-sexual-travel-cases.jpg", :alt => "zika test tube"}
 						%span.year 2 Feb 2016
 						%div.description
 							%p 31 isolated cases in the US, in 11 states and DC. These were all travel associated cases with the exception of one case of sexual transmission in Dallas, TX. Travel-related cases were also reported in Spain, the UK, Ireland, and others.<sup><a href="#ref-3">3</a>, <a href="#ref-12">12</a>, <a href="#ref-20">20</a>, <a href="#ref-27">27</a></sup>
+					%li
+						%div.timeline-image
+							%img.scale-with-grid{:src => "../../images/features/zika/2016-white-house.jpg", :alt => "white-house"}
+						%span.year 8 Feb 2016
+						%div.description
+							%p The White House announced that it is asking Congress for more than $1.8 billion in emergency funding to enhance ongoing efforts to prepare for and respond to the Zika virus, both domestically and internationally.<sup><a  href="#ref-42">42</a></sup>
 			%div.row#where-is-zika
 				%div#traveled
 					%h2 Zika Virus Cases<sup><a href="#ref-17">17</a>, <a href="#ref-18">18</a>, <a href="#ref-22">22</a></sup>
-					%div.map.scale-with-grid <svg width="96" height="96"><image xlink:href="map.svg" src="map.png" longdesc="Uganda in 1947, Gabon in 1975, Senegal in 1988, Malaysia in 1969, Yap Island in 2007, Cambodia in 2010, French Polynesia in 2014, Mexico in 2015, Brazil in 2015, and Texas in 2016" /></svg>
+					%img.map.scale-with-grid{:src => "../../images/features/zika/map.svg", :onerror => "this.src='../../images/features/zika/map.png'", :longdesc => "Uganda in 1947, Gabon in 1975, Senegal in 1988, Malaysia in 1969, Yap Island in 2007, Cambodia in 2010, French Polynesia in 2014, Mexico in 2015, Brazil in 2015, and Texas in 2016"}
 				%div#now
 					%div#where-list
 						%h2 <span class="no-caps">There are an estimated</span> 1.6 Million <span class="no-caps">cases of Zika virus in </span>33 Countries<sup><a href="#ref-30">30</a></sup>
@@ -193,7 +206,7 @@
 									%li Nicaragua
 									%li Panama
 									%li Paraguay
-									%li Puerto Rico
+									%li Puerto Ricofwe don
 								%ul.columns.three
 									%li Saint Martin
 									%li Saint Vincent & the Grenadines
@@ -236,12 +249,12 @@
 							%p Zika virus can spread from an infected mother to the placenta and their unborn baby. The virus will not infect infants conceived after the virus has cleared from the blood.<sup><a href="#ref-2">2</a></sup> There is no evidence suggesting a risk for future birth defects.<sup><a href="#ref-1">1</a></sup>
 						%div.way_spread.columns.three
 							%div.image
-								%img.scale-with-grid{:src => "../../images/features/zika/spread-partner.png", :alt => "person to partner"}
-							%h3 Person <span class="arrow">&rarr;</span> sexual partner
+								%img.scale-with-grid{:src => "../../images/features/zika/spread-partner.png", :alt => "man to partner"}
+							%h3 Man <span class="arrow">&rarr;</span> sexual partner
 							%p Transmission of Zika during sex is possible but rare. If an infected male partner has the virus in their blood stream, their semen can be contagious. It is unknown how long Zika can live in semen. Infected individuals should abstain from sex or use a condom for 6 months after the infection.<sup><a href="#ref-10">10</a></sup>
 						%div.way_spread.columns.three
 							%div.image
-								%img.scale-with-grid{:src => "../../images/features/zika/spread-bloodbank.png", :alt => "person to partner"}
+								%img.scale-with-grid{:src => "../../images/features/zika/spread-bloodbank.png", :alt => "person to bloodbank to person"}
 							%h3 Person <span class="arrow">&rarr;</span> blood bank <span class="arrow">&rarr;</span> person
 							%p There may also be a chance of transmission through blood transfusions, but no conclusive evidence has been found.<sup><a href="#ref-10">10</a></sup>
 
@@ -281,7 +294,7 @@
 					%div.row
 						%div.column.one-third#prevent-net
 							%div.image
-								%img{:src => "../../images/features/zika/prevent-net.png", :alt => "put mosqiuto netting on beds"}
+								%img{:src => "../../images/features/zika/prevent-net.png", :alt => "put mosquito netting on beds"}
 							%p Choose a WHOPES-approved bed net with 156 holes per square inch that is long enough to tuck under the mattress. Permethrin-treated nets help kill mosquitoes; do not wash them or expose them to sunlight.<sup><a href="#ref-2">2</a>, <a href="#ref-14">14</a></sup>
 						%div.column.one-third#prevent-directions
 							%div.image
@@ -337,10 +350,10 @@
 				%div.column.one-half
 					%h2 Symptoms of Zika Disease<sup><a href="#ref-1">1</a></sup>
 					%div.para
-						%img.scale-with-grid{:src => "../../images/features/zika/1in5.png", :alt => "1 in 5 infected people"}
+						%img.scale-with-grid{:src => "../../images/features/zika/1in5.svg", :onerror => "this.src='../../images/features/zika/1in5.png'", :alt => "1 in 5 infected people"}
 						%p About 1 in 5 people infected with Zika virus actually become ill.<sup><a href="#ref-3">3</a></sup>
 					%div.para
-						%img.scale-with-grid#incubation{:src => "../../images/features/zika/incubation.png", :alt => "1 in 5 infected people"}
+						%img.scale-with-grid#incubation{:src => "../../images/features/zika/incubation.svg", :onerror => "this.src='../../images/features/zika/incubation.png'", :alt => "1 in 5 infected people"}
 						%p Incubation period is unknown but is likely a few days to one week. Symptoms are usually mild and last several days to a week.<sup><a href="#ref-3">3</a></sup>
 					%p Hospitalization is uncommon. Zika is not known to be deadly, but those with preexisting health problems can have fatal complications.<sup><a href="#ref-3">3</a></sup> There have also been cases of Guillain-Barr&eacute; Syndrome following suspected Zika infection, but the relationship is not known.<sup><a href="#ref-4">4</a></sup>
 				%div.column.one-half.signs-image
@@ -350,7 +363,7 @@
 			%div.row#symptoms-microcephaly
 				%div.column.one-half.microceph-image
 					%div.warning If you have been to a Zika-infected area and are pregnant or recently gave birth, contact your doctor.
-					%img.scale-with-grid{:src => "../../images/features/zika/symptoms-microcephalacy.png", :alt => "seizures,small head size, coordination difficulties, dwarfism/short stature, backward-sloping forehead, hyperactivity, facial distortions, delays in speech and movement"}
+					%img.scale-with-grid{:src => "../../images/features/zika/symptoms-microcephaly.png", :alt => "seizures,small head size, coordination difficulties, dwarfism/short stature, backward-sloping forehead, hyperactivity, facial distortions, delays in speech and movement"}
 				%div.column.one-half
 					%h2 Symptoms of Microcephaly
 					%p There is an unconfirmed link between birth complications such as microcephaly and Zika infection during pregnancy.<sup><a href="#ref-3">3</a></sup>
@@ -359,6 +372,18 @@
 					%div.graph
 						%h3 Suspected Cases of Microcephaly in Brazil 2010-2015
 						%img.scale-with-grid{:src => "../../images/features/zika/microcephaly_cases_brazil.png", :alt => "153 in 2010, 139 in 2011, 175 in 2012, 167 in 2013, 147 in 2014, and 3174 in 2015"}
+
+			%div.row#guillain-barre-syndrome
+				%div.column.one-half
+					%h2 Symptoms of Zika Disease<sup><a href="#ref-1">1</a></sup>
+					%div.para
+						%p Guillain-Barr&eacute Syndrome (GBS) is an uncommon illness of the nervous system in which the person’s own immune system damages nerve cells. It usually occurs after an infection.<sup><a href="#ref-36">36</a></sup>
+						%p There is strong evidence of a possible causal link between Zika virus infection GBS. During 2013-14 outbreak in French Polynesia, 42 out of 8,750 suspected Zika cases presented GBS (a 20-fold increase from previous 4 years). 41 of the 42 GBS cases also showed antibodies against Zika virus.<sup><a href="#ref-37">37</a>, <a href="#ref-38">38</a></sup>
+						%p A number of Latin American countries with current Zika outbreaks have started reporting higher prevalence of GBS cases.<sup><a href="#ref-37">37</a></sup> Between April and July of 2015, Salvador, Brazil saw a seven-fold increase in rates of GBS, and Columbia has already seen 3 GBS-related deaths.<sup><a href="#ref-40">40</a></sup> More information is needed to determine if this is due to higher surveillance.<sup><a href="#ref-37">37</a></sup>
+						%p Symptoms last a few weeks to several months. Most people fully recover from GBS, but some have permanent damage, and 1 out of 20 cases have led to death.<sup><a href="#ref-36">36</a>, <a href="#ref-39">39</a></sup>
+				%div.column.one-half.signs-image
+					%div.warning If you have been to a Zika-infected area and have at least 2 symptoms, contact your doctor.
+					%img.scale-with-grid{:src => "../../images/features/zika/gbs_symptoms.png", :alt => "difficulty moving eyes or swallowing, choking on saliva, symmetrical muscle weakness and lack of coordination, slowness or shortness of breath, abnormal or fast heart rate, paralysis, pins and needles that begin in feet, hands, or face"}
 
 			%div.row#treatments
 				%div.column.one-half#treatment-adults
@@ -412,10 +437,10 @@
 					%div.columns.three
 						%img.scale-with-grid{:src => "../../images/features/zika/dontknow.png", :alt => "?"}
 					%div.columns.nine
-						%p We don't know for sure if Zika is the cause of the increase in microcephaly.<sup><a href="#ref-28">28</a></sup>
-						%p We don't know for sure how many of the more than 4,700 reported cases of microcephaly in Brazil are related to Zika, as it is difficult to diagnose and can have other causes.
-						%p We don't know for sure if Zika is the cause of the increase in Guillain-Barr&eacute; Syndrome.<sup<a href="#ref-28">28</a></sup>
-						%p The possible connection of Zika with microcephaly and Guillain-Barr&eacute; Syndrome suggest mutation in the virus to become more pathogenic to humans. We don't know exactly what has changed about Zika virus and why.<sup><a href="#ref-28">28</a></sup>
+						%p We don’t know for sure if Zika is the cause of the increase microcephaly in Brazil.<sup><a href="#ref-28">28</a></sup>
+						%p We don’t know for sure how many of the more than 4,700 cases reported cases of microcephaly in Brazil are related to Zika, as it is difficult to diagnose and can have other causes.
+						%p Though we know that Zika was the cause of a Guillain-Barr&eacute Syndrome surgence in French Polynesia in 2013-14, we don’t yet know definitively if the current Zika outbreak is the cause of the increase of GBS in South American countries.<sup><a href="#ref-28">28</a>, <a href="#ref-36">36</a></sup>
+						%p The possible connection of Zika with microcephaly and GBS suggest mutation in the virus to become more pathogenic to humans. We don’t know what exactly has changed about Zika virus and why.<sup><a href="#ref-28">28</a></sup>
 
 			%div.row#action-plan
 				%div.column
@@ -463,51 +488,51 @@
 					%h2 References
 					%ol
 						%li#ref-1
-							%span.li-color Roberts, M. (2016. Feb, 1). “<a href="http://www.bbc.com/news/health-35459797" target="blank">Zika-linked condition: WHO declares global emergency</a>.” BBC News Online.
+							%span.li-color Roberts, M. (2016. Feb, 1). "<a href="http://www.bbc.com/news/health-35459797" target="blank">Zika-linked condition: WHO declares global emergency</a>." BBC News Online.
 						%li#ref-2
-							%span.li-color Gallagher, J. (2015, Feb, 5). “<a href="http://www.bbc.com/news/health-35441675" target="blank">Zika outbreak: Travel advice</a>” BBC News Online.
+							%span.li-color Gallagher, J. (2015, Feb, 5). "<a href="http://www.bbc.com/news/health-35441675" target="blank">Zika outbreak: Travel advice</a>" BBC News Online.
 						%li#ref-3
-							%span.li-color Centers for Disease Control and Prevention (2016). “<a href="http://www.cdc.gov/zika/" target="blank">Zika Virus</a>.”
+							%span.li-color Centers for Disease Control and Prevention (2016). "<a href="http://www.cdc.gov/zika/" target="blank">Zika Virus</a>."
 						%li#ref-4
-							%span.li-color Wikipedia (2016) “<a href="https://en.wikipedia.org/wiki/Zika_virus" target="blank">Zika Virus</a>.”
+							%span.li-color Wikipedia (2016) "<a href="https://en.wikipedia.org/wiki/Zika_virus" target="blank">Zika Virus</a>."
 						%li#ref-5
-							%span.li-color “<a href="http://www.bbc.com/news/world-latin-america-35388842" target="blank">Zika virus triggers pregnancy delay calls</a>.” (2016. Jan, 23).
+							%span.li-color "<a href="http://www.bbc.com/news/world-latin-america-35388842" target="blank">Zika virus triggers pregnancy delay calls</a>." (2016. Jan, 23).
 						%li#ref-6
-							%span.li-color “<a href="http://www.mayoclinic.org/diseases-conditions/microcephaly/basics/symptoms/con-20034823" target="blank">Microcephaly</a>.” (2016). Mayo Clinic.
+							%span.li-color "<a href="http://www.mayoclinic.org/diseases-conditions/microcephaly/basics/symptoms/con-20034823" target="blank">Microcephaly</a>." (2016). Mayo Clinic.
 						%li#ref-7
-							%span.li-color Centers for Disease Control and Prevention (2016). “<a href="http://www.cdc.gov/zika/hc-providers/clinicalevaluation.html" target="blank">Zika virus: clinical evaluation &amp; disease</a>”.
+							%span.li-color Centers for Disease Control and Prevention (2016). "<a href="http://www.cdc.gov/zika/hc-providers/clinicalevaluation.html" target="blank">Zika virus: clinical evaluation &amp; disease</a>".
 						%li#ref-8
-							%span.li-color World Health Organization. (2016. Jan). “<a href="http://www.who.int/mediacentre/factsheets/zika/en/" target="blank">Zika virus</a>.”
+							%span.li-color World Health Organization. (2016. Jan). "<a href="http://www.who.int/mediacentre/factsheets/zika/en/" target="blank">Zika virus</a>."
 						%li#ref-9
-							%span.li-color Swails, B., McKenzie, D. (2016. Feb, 3). “<a href="http://www.cnn.com/2016/02/02/health/zika-forest-viral-birthplace/" target="blank">Uganda's Zika Forest, birthplace of the Zika virus</a>.”
+							%span.li-color Swails, B., McKenzie, D. (2016. Feb, 3). "<a href="http://www.cnn.com/2016/02/02/health/zika-forest-viral-birthplace/" target="blank">Uganda's Zika Forest, birthplace of the Zika virus</a>."
 						%li#ref-10
-							%span.li-color Szabo, Liz. (2016. Feb, 5). “<a href="http://www.usatoday.com/story/news/2016/02/03/zika-q-and-a/79751476/" target="blank">Zika Q&amp;A: What you need to know about sex, saliva, sperm banks</a>.”
+							%span.li-color Szabo, Liz. (2016. Feb, 5). "<a href="http://www.usatoday.com/story/news/2016/02/03/zika-q-and-a/79751476/" target="blank">Zika Q&amp;A: What you need to know about sex, saliva, sperm banks</a>."
 						%li#ref-11
-							%span.li-color March of Dimes. (2016. Feb). “<a href="http://www.marchofdimes.org/complications/zika-virus-and-pregnancy.aspx" target="blank">Zika virus and pregnancy</a>.”
+							%span.li-color March of Dimes. (2016. Feb). "<a href="http://www.marchofdimes.org/complications/zika-virus-and-pregnancy.aspx" target="blank">Zika virus and pregnancy</a>."
 						%li#ref-12
-							%span.li-color “<a href="http://www.bbc.com/news/uk-35391712" target="blank">Zika virus: Three Britons infected, say health officials</a>.” (2016. Jan, 23). BBC News.
+							%span.li-color "<a href="http://www.bbc.com/news/uk-35391712" target="blank">Zika virus: Three Britons infected, say health officials</a>." (2016. Jan, 23). BBC News.
 						%li#ref-13
-							%span.li-color Dick, GWA, et. al. (1952). “Zika virus isolations and serological specificity.” Trans R Soc Trop Med Hyg (1952) 46 (5): 509-520. doi: 10.1016/0035-9203(52)90042-4
+							%span.li-color Dick, GWA, et. al. (1952). "Zika virus isolations and serological specificity." Trans R Soc Trop Med Hyg (1952) 46 (5): 509-520. doi: 10.1016/0035-9203(52)90042-4
 						%li#ref-14
-							%span.li-color Centers for Disease Control and Prevention (2016). “<a hrefe="http://www.cdc.gov/zika/prevention/index.html" target="blank">Zika virus: prevention</a>”.
+							%span.li-color Centers for Disease Control and Prevention (2016). "<a hrefe="http://www.cdc.gov/zika/prevention/index.html" target="blank">Zika virus: prevention</a>".
 						%li#ref-15
-							%span.li-color Carless, W. (2016. Feb, 3). “<a href="http://www.usatoday.com/story/news/world/2016/02/03/brazil-zika-birth-defect-drop-hospital-microcephaly/79791768/" target="blank">On Brazil's Zika front lines, cases of microcephaly are actually dropping</a>.” USA Today.
+							%span.li-color Carless, W. (2016. Feb, 3). "<a href="http://www.usatoday.com/story/news/world/2016/02/03/brazil-zika-birth-defect-drop-hospital-microcephaly/79791768/" target="blank">On Brazil's Zika front lines, cases of microcephaly are actually dropping</a>." USA Today.
 						%li#ref-16
-							%span.li-color Centers for Disease Control and Prevention (2016). “<a href="http://www.cdc.gov/mmwr/volumes/65/wr/mm6502e1.htm" target="blank">Interim Guidelines for Pregnant Women During a Zika Virus Outbreak — United States, 2016</a>.”
+							%span.li-color Centers for Disease Control and Prevention (2016). "<a href="http://www.cdc.gov/mmwr/volumes/65/wr/mm6502e1.htm" target="blank">Interim Guidelines for Pregnant Women During a Zika Virus Outbreak — United States, 2016</a>."
 						%li#ref-17
-							%span.li-color Phillips, s. (2016. Feb, 4). “<a href="http://fox5sandiego.com/2016/02/04/blood-bank-rejecting-donors-who-visited-zika-areas/" target="blank">Blood bank rejecting donors who visited Zika areas</a>.” Fox5 San Diego News.
+							%span.li-color Phillips, s. (2016. Feb, 4). "<a href="http://fox5sandiego.com/2016/02/04/blood-bank-rejecting-donors-who-visited-zika-areas/" target="blank">Blood bank rejecting donors who visited Zika areas</a>." Fox5 San Diego News.
 						%li#ref-18
-							%span.li-color Withnall, A. (2016. Jan, 28). “<a href="http://www.independent.co.uk/life-style/health-and-families/health-news/zika-how-virus-spread-around-world-a6839101.html" target="blank">How the Zika virus spread around the world</a>.” Independent.
+							%span.li-color Withnall, A. (2016. Jan, 28). "<a href="http://www.independent.co.uk/life-style/health-and-families/health-news/zika-how-virus-spread-around-world-a6839101.html" target="blank">How the Zika virus spread around the world</a>." Independent.
 						%li#ref-19 
-							%span.li-color Musso, D., (2015). “Zika Virus Transmission from French Polynesia to Brazil.” Emerg Infect Dis. 2015 Oct; 21(10): 1887. doi:  10.3201/eid2110.151125
+							%span.li-color Musso, D., (2015). "Zika Virus Transmission from French Polynesia to Brazil." Emerg Infect Dis. 2015 Oct; 21(10): 1887. doi:  10.3201/eid2110.151125
 						%li#ref-20
-							%span.li-color Fox, M. (2016. Feb, 2). “<a href="http://www.nbcnews.com/storyline/zika-virus-outbreak/zika-virus-can-spread-sexual-contact-health-officials-dallas-confirm-n510076" target="blank">Dallas Reports First Case of Sexual Transmission of Zika Virus</a>.”
+							%span.li-color Fox, M. (2016. Feb, 2). "<a href="http://www.nbcnews.com/storyline/zika-virus-outbreak/zika-virus-can-spread-sexual-contact-health-officials-dallas-confirm-n510076" target="blank">Dallas Reports First Case of Sexual Transmission of Zika Virus</a>."
 						%li#ref-21
-							%span.li-color Wilcox, E. (2010). “<a href="http://www.wpafb.af.mil/news/story.asp?id=123219950" target="blank">Lt Col Mark Duffy of USAF School of Aerospace Medicine Receives the 2010 James H. Nakano Citation for the Article ‘Zika Virus Outbreak on Yap Island, Federated States of Micronesia.</a>’”
+							%span.li-color Wilcox, E. (2010). <a href="http://www.wpafb.af.mil/news/story.asp?id=123219950" target="blank">"Lt Col Mark Duffy of USAF School of Aerospace Medicine Receives the 2010 James H. Nakano Citation for the Article ‘Zika Virus Outbreak on Yap Island, Federated States of Micronesia.’"</a>
 						%li#ref-22
-							%span.li-color Parry, L. (2016. Feb, 2).“'<a href="http://www.dailymail.co.uk/health/article-3428938/Game-changing-Zika-virus-scary-gets-warns-expert.html" target="blank">Game-changing' Zika virus is about as scary as it gets, warns expert</a>.” Daily Mail, UK.
+							%span.li-color Parry, L. (2016. Feb, 2)."'<a href="http://www.dailymail.co.uk/health/article-3428938/Game-changing-Zika-virus-scary-gets-warns-expert.html" target="blank">Game-changing' Zika virus is about as scary as it gets, warns expert</a>." Daily Mail, UK.
 						%li#ref-23
-							%span.li-color Seibel, M. (2016. Feb, 4). “<a href="http://www.star-telegram.com/news/nation-world/world/article58432243.html" target="blank">French researcher says Zika link to Guillain-Barré Syndrome is ‘almost certain’</a>.”
+							%span.li-color Seibel, M. (2016. Feb, 4). "<a href="http://www.star-telegram.com/news/nation-world/world/article58432243.html" target="blank">French researcher says Zika link to Guillain-Barr&eacute Syndrome is ‘almost certain’</a>."
 						%li#ref-24
 							%span.li-color Photo by <a href="https://www.flickr.com/photos/miguel_discart/14277835198/in/photolist-nKFCYo-nP7mSE-nKFDRA-nKFxqb-o3aYkK-nKGkM6-o5C7hb-o5MLFq-o5U33D-o6iALK-nQkEjG-o1GHhg-odQhcb-ocwyAx-nYyX5w-iM51KQ-nYsCxL-p6MRxa-nYPw55-o8o3UZ-o28ycW-f57byo-nPfKEA-dkULi9-nZiRMw-jJ2yZn-nNUwQj-pH6vQb-p3Gi3e-nJcLbJ-pXkmPj-oRNZJG-dkUNjN-oDPBzR-oaA85i-o5U2uz-o3Rzas-o5U22k-oiGbnm-o21QXk-qf7GTa-odAyNb-okRozr-nXbJw1-o4mMDk-nG1xTF-nrbBtj-o7wXiK-nNpnAf-nNpzZx" target="blank">Miguel Discart</a>.
 						%li#ref-25
@@ -517,20 +542,34 @@
 						%li#ref-27
 							%span.li-color Image retrieved from <a href="https://publichealthwatch.wordpress.com/2016/02/03/texas-reports-first-case-of-sexually-transmitted-zika-virus-in-u-s/" target="blank">Public Health Watch</a>.
 						%li#ref-28
-							%span.li-color Roeder, A., (2016). “<a href="http://www.hsph.harvard.edu/news/features/zika-virus-in-brazil-may-be-mutated-strain/?utm_source=Twitter&utm_medium=Social&utm_campaign=Chan-Twitter-General" target="blank">Zika virus in Brazil may be mutated strain</a>.” Harvard T.H. Chan School of Public Health.
+							%span.li-color Roeder, A., (2016). "<a href="http://www.hsph.harvard.edu/news/features/zika-virus-in-brazil-may-be-mutated-strain/?utm_source=Twitter&utm_medium=Social&utm_campaign=Chan-Twitter-General" target="blank">Zika virus in Brazil may be mutated strain</a>." Harvard T.H. Chan School of Public Health.
 						%li#ref-29
-							%span.li-color Wapps, J. (2016. Feb, 5). “<a href="http://www.cidrap.umn.edu/news-perspective/2016/02/who-local-zika-cases-33-nations-gbs-numbers-climb" target="blank">WHO: Local Zika cases in 33 nations as GBS numbers climb</a>.” University of Minnesota Center for Infectious Disease Research and Policy.
+							%span.li-color Wapps, J. (2016. Feb, 5). "<a href="http://www.cidrap.umn.edu/news-perspective/2016/02/who-local-zika-cases-33-nations-gbs-numbers-climb" target="blank">WHO: Local Zika cases in 33 nations as GBS numbers climb</a>." University of Minnesota Center for Infectious Disease Research and Policy.
 						%li#ref-30
-							%span.li-color “<a href="https://en.wikipedia.org/wiki/Zika_virus_outbreak_(2015%E2%80%93present)" target="blank">Zika virus outbreak (2015–present)</a>.” Wikipedia.
+							%span.li-color "<a href="https://en.wikipedia.org/wiki/Zika_virus_outbreak_(2015%E2%80%93present)" target="blank">Zika virus outbreak (2015–present)</a>." Wikipedia.
 						%li#ref-31
-							%span.li-color Mackenzie, J. (2016. Feb, 4). “<a href="http://theconversation.com/zika-dengue-yellow-fever-what-are-flaviviruses-53969" target="blank">Zika, dengue, yellow fever: what are flaviviruses?</a>” The Conversation.
+							%span.li-color Mackenzie, J. (2016. Feb, 4). "<a href="http://theconversation.com/zika-dengue-yellow-fever-what-are-flaviviruses-53969" target="blank">Zika, dengue, yellow fever: what are flaviviruses?</a>" The Conversation.
 						%li#ref-32
-							%span.li-color “<a href="http://www.who.int/mediacentre/factsheets/fs100/en/" target="blank">Yellow Fever</a>.” (2014. March). World Health Organization.
+							%span.li-color "<a href="http://www.who.int/mediacentre/factsheets/fs100/en/" target="blank">Yellow Fever</a>." (2014. March). World Health Organization.
 						%li#ref-33
-							%span.li-color “<a href="http://www.who.int/mediacentre/factsheets/fs117/en/" target="blank">Dengue and severe dengue</a>.”  (2015. May). World Health Organization.
+							%span.li-color "<a href="http://www.who.int/mediacentre/factsheets/fs117/en/" target="blank">Dengue and severe dengue</a>."  (2015. May). World Health Organization.
 						%li#ref-34
-							%span.li-color “<a href="http://www.foxnews.com/health/2013/01/16/dengue-is-fastest-spreading-tropical-disease-who-says.html" target="blank">Dengue is fastest-spreading tropical disease, WHO says</a>.” (2013) Fox News Health.
+							%span.li-color "<a href="http://www.foxnews.com/health/2013/01/16/dengue-is-fastest-spreading-tropical-disease-who-says.html" target="blank">Dengue is fastest-spreading tropical disease, WHO says</a>." (2013) Fox News Health.
 						%li#ref-35
-							%span.li-color World Economic Forum (2015. Jan, 4). “<a href="http://www.weforum.org/agenda/2016/01/how-close-are-we-to-beating-dengue" target="blank">How close are we to beating dengue?</a>”
+							%span.li-color World Economic Forum (2015. Jan, 4). "<a href="http://www.weforum.org/agenda/2016/01/how-close-are-we-to-beating-dengue" target="blank">How close are we to beating dengue?</a>"
+						%li#ref-36
+							%span.li-color Centers for Disease Control and Prevention (2016). "<a href="http://www.cdc.gov/zika/qa/gbs-qa.html" target="blank">Zika virus: Guillain-Barr&eacute syndrome Q & A</a>."
+						%li#ref-37
+							%span.li-color World Health Organization. (2016. Mar 7). "<a href="http://www.who.int/csr/don/7-march-2016-gbs-french-polynesia/en/" target="blank"> Guillain-Barr&eacute syndrome – France - French Polynesia."</a>
+						%li#ref-38
+							%span.li-color European Centre for Disease Prevention and Control. (2015. Dec 10). <a href="http://ecdc.europa.eu/en/publications/Publications/zika-virus-americas-association-with-microcephaly-rapid-risk-assessment.pdf" target="blank">"Zika virus epidemic in the Americas: potential association with microcephaly and Guillain-Barr&eacute syndrome."</a>
+						%li#ref-39
+							%span.li-color "<a href="http://www.mayoclinic.org/diseases-conditions/guillain-barre-syndrome/basics/symptoms/con-20025832" target="blank">Guillain-Barr&eacute syndrome</a>." Mayo Clinic (2016)
+						%li#ref-40
+							%span.li-color Sifferlin, A. (2016. Feb 8). "<a href="http://time.com/4209612/zika-guillain-barre-syndrome-cdc/" target="blank">Here’s the Other Zika Problem Experts Are Worried About</a>." Time.
+						%li#ref-41
+							%span.li-color World Health Organization. (2016. Feb 1). "<a href="http://www.who.int/mediacentre/news/statements/2016/1st-emergency-committee-zika/en/" target="blank">WHO statement on the first meeting of the International Health Regulations (2005) (IHR 2005) Emergency Committee on Zika virus and observed increase in neurological disorders and neonatal malformations."</a>
+						%li#ref-42
+							%span.li-color <a href="https://www.whitehouse.gov/the-press-office/2016/02/08/fact-sheet-preparing-and-responding-zika-virus-home-and-abroad" target="blank">https://www.whitehouse.gov/the-press-office/2016/02/08/fact-sheet-preparing-and-responding-zika-virus-home-and-abroad</a>
 
 		%div.footer <span>Licensed under Creative Commons Attribution v3 | Created by <a href="http://www.goinvo.com" target="blank">Goinvo</a> | Send us <a href="mailto:zika@goinvo.com?subject=Feedback for Understanding Zika">Feedback</a> | Check out the <a href="https://github.com/goinvo/InvoUnderstandingZika/" target="blank">GitHub Repo</a></span>

@@ -38,6 +38,14 @@
   twittertitle: "goinvo - Healthcare - Care Cards"
   twitterimage: "http://www.goinvo.com/images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"
 
+- page: "diabetes"
+  description: "We understand living with, treating, and designing for Type I and Type II Diabetes."
+  keywords: "design for diabetes, design healthcare, designing health, ux health, ui health, design behavior change, boston ux design"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - Healthcare - Designing for Type I and Type II Diabetes"
+  twitterimage: "http://www.goinvo.com/images/clients/diabetes/diabetes-needs-map.jpg"
+
 - page: "paintrackr"
   description: "PainTrackr allow you to easily track pain on a mobile device."
   keywords: "PainTrackr, track pain, pain track, pain tracker, log pain, ios app, healthcare design"
@@ -109,6 +117,14 @@
   twittersite: "@goinvo"
   twittertitle: "goinvo - Healthcare - Tabeeb"
   twitterimage: "http://www.goinvo.com/images/clients/tabeeb/tabeeb-open-case-ux-design.png"
+
+- page: "diabetes"
+  description: "Our thoughts on design, technology, and healthcare."
+  keywords: "healthcare design, ux design, health ux design, boston ux design, designing for healthcare, boston ui design"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - Type I and II Diabetes"
+  twitterimage: "http://www.goinvo.com/images/careers/designing-physical-user-experience.jpg"
 
 - page: "enterprise"
   description: "We’ve designed massive bottom line impact for our clients."

@@ -34,7 +34,7 @@ $( document ).ready(function() {
 				"title" : "Mount Sinai: A search for unexpected genetic heroes.",
 				"url" : "/healthcare/mount-sinai/",
 				"image" : "mount-sinai.jpg",
-				"next-id" : "care-cards"
+				"next-id" : "partners-gene-insight"
 			},
 			"partners-gene-insight" : {
 				"title" : "Partners Gene Insight",
@@ -46,12 +46,12 @@ $( document ).ready(function() {
 				"title" : "InsideTracker",
 				"url" : "/healthcare/segterra/",
 				"image" : "segterra.png",
-				"next-id" : "numera"
+				"next-id" : "diabetes"
 			},
-			"numera" : {
-				"title" : "Numera",
-				"url" : "/healthcare/numera/",
-				"image" : "numera.jpg",
+			"diabetes" : {
+				"title" : "Type I and Type II Diabetes",
+				"url" : "/healthcare/diabetes/",
+				"image" : "diabetes.jpg",
 				"next-id" : "tabeeb"
 			},
 			"tabeeb" : {
@@ -64,6 +64,12 @@ $( document ).ready(function() {
 				"title" : "Care Cards",
 				"url" : "/products/care-cards/",
 				"image" : "health-axioms.jpg",
+				"next-id" : "numera"
+			},
+			"numera" : {
+				"title" : "Numera",
+				"url" : "/healthcare/numera/",
+				"image" : "numera.jpg",
 				"next-id" : "enterprise"
 			},
 			"healthcare" : {
@@ -126,7 +132,7 @@ $( document ).ready(function() {
 				"title" : "Telerik",
 				"url" : "/enterprise/telerik/",
 				"image" : "telerik.jpg",
-				"next-id" : "healthcare"
+				"next-id" : "products"
 			},
 			"enterprise" : {
 				"title" : "Enterprise",
@@ -141,7 +147,6 @@ $( document ).ready(function() {
 				"url" : "/products/hgraph/",
 				"image" : "hgraph.jpg",
 				"next-id" : "visual-government"
-
 			},
 			"visual-government" : {
 				"title" : "Visual Government",
@@ -155,42 +160,18 @@ $( document ).ready(function() {
 				"image" : "health-axioms.jpg",
 				"next-id" : "design-axioms"
 			},
-//			"the-digital-life" : {
-//				"title" : "The Digital Life",
-//				"url" : "/products/the-digital-life/",
-//				"image" : "digital-life.jpg",
-//				"next-id" : "facio"
-//			},
-//			"facio" : {
-//				"title" : "Facio",
-//				"url" : "/products/facio/",
-//				"image" : "facio.jpg",
-//				"next-id" : "design-axioms"
-//			},
 			"design-axioms" : {
 				"title" : "Design Axioms",
 				"url" : "/products/design-axioms/",
 				"image" : "design-axioms.jpg",
 				"next-id" : "staff-plan"
 			},
-//			"paintrackr" : {
-//				"title" : "PainTrackr",
-//				"url" : "/products/paintrackr/",
-//				"image" : "paintrackr.jpg",
-//				"next-id" : "staff-plan"
-//			},
 			"staff-plan" : {
 				"title" : "StaffPlan",
 				"url" : "/products/staff-plan/",
 				"image" : "staffplan.png",
 				"next-id" : "paintrackr"
 			},
-//			"runnan" : {
-//				"title" : "Runnan",
-//				"url" : "/products/runnan/",
-//				"image" : "runnan.jpg",
-//				"next-id" : "healthcare"
-//			},
 			"paintrackr" : {
 				"title" : "PainTrackr",
 				"url" : "/products/paintrackr/",

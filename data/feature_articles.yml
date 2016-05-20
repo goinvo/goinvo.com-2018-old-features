@@ -16,10 +16,10 @@
 
 articles:
   - title: "Care Plans"
-    tag_line: "Part 1: Definition and History"
+    tag_line: "A 3-Part Series"
     date: "2016-03-01"
     image: "features/careplans/feature_page_1.jpg"
-    url: "careplans/part-1.html"
+    url: "careplans"
     id: "careplans"
 
   - title: "Understanding Zika"
