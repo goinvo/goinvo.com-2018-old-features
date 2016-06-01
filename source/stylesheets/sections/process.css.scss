@@ -1,17 +1,10 @@
 @import "../base/core";
 
-#main-container {
-	padding-top: 75px;
-	@media only screen and (max-width: 768px) {
-		font-size: 0.85em;
-	}
-}
-
 .nav-menu {
 	position: relative;
 	z-index: 20;
 	nav {
-		padding: 1em 0 3em;
+		padding: 5em 0 3em;
 		text-align: center;
 	}
 	a {
@@ -30,11 +23,14 @@
 	}
 }
 
-a.next {
-	display: block;
+.content-area {
+	@include clearfix();
+	margin: 0 auto;
+	border: solid red 1px;
 }
 
-section {
+section.process-section {
+	border: solid blue 1px;
 	padding: 0 2em;
 	img {
 		position: relative;
@@ -73,30 +69,6 @@ section {
 			}
 		}
 	}
-	&.learning, &.blueprint, &.craft, &.training {
-		img {
-			max-width: 40%;
-		}
-	}
-	&.envision {
-		img {
-			margin-bottom: -10em;
-		}
-		.section-header {
-			@media screen and  (max-width: 1024px) {
-				padding-top: 8em;
-			}
-			@media screen and  (max-width: 640px) {
-				background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
-			}
-		}
-	}
-	&.communication, &.support {
-		img {
-			max-width: 35%;
-			margin-bottom: -20em;
-		}
-	}
 	&.next-section {
 		width: 100%;
 		padding: 4em 2em;
@@ -109,6 +81,43 @@ section {
 			padding: 0;
 			color: #444;
 		}
+		a.next {
+			padding-left: 21%;
+			@media screen and  (max-width: 640px) {
+				padding-left: 0;
+			}
+		}
+	}
+	.sidebar {
+		img {
+			max-width: 100%;
+			margin: 0 auto 0;
+		}
+	}
+}
+
+.learning, .blueprint, .craft, .training {
+	img {
+		max-width: 40%;
+	}
+}
+.envision {
+	img {
+		margin-bottom: -10em;
+	}
+	.section-header {
+		@media screen and  (max-width: 1024px) {
+			padding-top: 8em;
+		}
+		@media screen and  (max-width: 640px) {
+			background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
+		}
+	}
+}
+.communication, .support {
+	img {
+		max-width: 35%;
+		margin-bottom: -20em;
 	}
 }
 
@@ -167,10 +176,44 @@ h2 {
 	}
 }
 
+.process-section {
+	max-width: 80rem;
+	margin: 0 auto;
+	@include clearfix();
+	position: relative;
+}
+
+.left, .right, .section-content {
+	display: inline-block;
+	@media screen and  (max-width: 640px) {
+		display: block;
+	}
+	
+}
+.left, .right {
+	width: 20%;
+	@media screen and  (max-width: 640px) {
+		width: 100%;
+	}
+	border: solid white 1px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
 .section-content {
 	position: relative;
 	z-index: 20;
 	background: $white;
+	width: 60%;
+	padding: 0 1.25em;
+	line-height: 30px;
+	@media screen and  (max-width: 640px) {
+		width: 100%;
+	}
 	h3, h4, p, ul, ol {
 		max-width: 500px;
 		max-width: 50rem;

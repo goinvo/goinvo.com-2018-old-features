@@ -17,23 +17,32 @@
 			%a.nav-link.current{:href => asset_url('process/support')} 6. Support
 			%a.nav-link{:href => asset_url('process/communication')} Communication
 			%a.nav-link{:href => asset_url('process/training')} Training
-%section.process-section.support
-	= image_tag('process/jpg/process6.jpg')
-	%header.section-header
-		%h1 6. Support
-		%h2 After our core work is over, your hard work is just beginning.
-	.section-content
-		%h3 Everyone budgets for the party. It&rsquo;s the next day you don&rsquo;t plan for.
-		%p Once the project is &ldquo;done&rdquo; a new phase begins: Evolutionary improvements. Bug fixing. Customer service. This brings other parts of your company into contact with the product organization. It calls on your key team members to engage in a variety of design, engineering and communication activities, in order to keep the ongoing 360 experience consistent with the audacity of the vision we started with.
-		%p Our team is accustomed to staying with our customers beyond the launch, often in a more part-time capacity, to take advantage of our deep experience being part of hundreds of software launches and the many knotty things that come after.
-
-		%h3 Support services give your team:
-		%ul
-			%li Fresh design and code on an ongoing basis: digital products should always evolve
-			%li Insight into post-launch management at top digital companies
-			%li Outside help to downstream tasks to so they can focus on higher value activities
-		%p Planning ahead for after the launch is what separates the best companies from those that disappoint.
-%a.next{:href => asset_url('process/communication')}
-	%section.process-section.next-section
-		%h3 Next step:
-		%h1 Communication
+.content-area.support
+	%section.process-section
+		= image_tag('process/6_support.jpg')
+		%header.section-header
+			%h1 6. Support
+			%h2 After our core work is over, your hard work is just beginning.
+	%section.process-section
+		.section-content
+			%h3 Everyone budgets for the party. It&rsquo;s the next day you don&rsquo;t plan for.
+			%p Once the project is &ldquo;done&rdquo; a new phase begins: Evolutionary improvements. Bug fixing. Customer service. This brings other parts of your company into contact with the product organization. It calls on your key team members to engage in a variety of design, engineering and communication activities, in order to keep the ongoing 360 experience consistent with the audacity of the vision we started with.
+			%p Our team is accustomed to staying with our customers beyond the launch, often in a more part-time capacity, to take advantage of our deep experience being part of hundreds of software launches and the many knotty things that come after.
+		%aside.sidebar.left
+		%aside.sidebar.right
+	%section.process-section
+		.section-content
+			%h3 Support services give your team:
+			%ul
+				%li Fresh design and code on an ongoing basis: digital products should always evolve
+				%li Insight into post-launch management at top digital companies
+				%li Outside help to downstream tasks to so they can focus on higher value activities
+			%p Planning ahead for after the launch is what separates the best companies from those that disappoint.
+		%aside.sidebar.left
+		%aside.sidebar.right
+	%section.process-section
+		.section-content 
+	%a.next{:href => asset_url('process/communication')}
+		%section.process-section.next-section
+			%h3 Next step:
+			%h1 Communication

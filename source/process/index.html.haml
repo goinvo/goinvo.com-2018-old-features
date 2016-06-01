@@ -16,14 +16,17 @@
 			%a.nav-link{:href => asset_url('process/support')} 6. Support
 			%a.nav-link{:href => asset_url('process/communication')} Communication
 			%a.nav-link{:href => asset_url('process/training')} Training
-%section.process-section.intro
-	= image_tag('process/jpg/intro.jpg')
-	%header.section-header
-		%h1 The Invo Process
-		%h2 Our process depends on you.
-	.section-content
-		%p We&rsquo;ve helped every imaginable type of customer make software a core differentiator in their business. The process we outline and the tools we bring to bear depends entirely on the client; on you. It is a product of what your objectives with us are, how you do business, and the particulars of the engagement.
-%a.next{:href => asset_url('process/learning')}
+.content-area.intro
+	%section.process-section
+		= image_tag('process/0_intro.jpg')
+		%header.section-header
+			%h1 The Invo Process
+			%h2 Our process depends on you.
+		.section-content
+			%p We&rsquo;ve helped every imaginable type of customer make software a core differentiator in their business. The process we outline and the tools we bring to bear depends entirely on the client; on you. It is a product of what your objectives with us are, how you do business, and the particulars of the engagement.
+		%aside.sidebar.left
+		%aside.sidebar.right
 	%section.process-section.next-section
-		%h3 Next step:
-		%h1 Learning
+		%a.next{:href => asset_url('process/learning')}
+			%h3 Next step:
+			%h1 Learning
