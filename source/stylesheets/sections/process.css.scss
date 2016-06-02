@@ -26,11 +26,9 @@
 .content-area {
 	@include clearfix();
 	margin: 0 auto;
-	border: solid red 1px;
 }
 
 section.process-section {
-	border: solid blue 1px;
 	padding: 0 2em;
 	img {
 		position: relative;
@@ -96,31 +94,6 @@ section.process-section {
 	}
 }
 
-.learning, .blueprint, .craft, .training {
-	img {
-		max-width: 40%;
-	}
-}
-.envision {
-	img {
-		margin-bottom: -10em;
-	}
-	.section-header {
-		@media screen and  (max-width: 1024px) {
-			padding-top: 8em;
-		}
-		@media screen and  (max-width: 640px) {
-			background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
-		}
-	}
-}
-.communication, .support {
-	img {
-		max-width: 35%;
-		margin-bottom: -20em;
-	}
-}
-
 hr {
 	width: 20%;
 	margin: 0 auto;
@@ -169,8 +142,8 @@ h2 {
 	}
 	h2 {
 		line-height: 1em;
-		max-width: 500px;
-		max-width: 50rem;
+		max-width: 430px;
+		max-width: 43rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -246,5 +219,30 @@ h2 {
 		@media screen and (max-width: 640px) {
 			font-size: 1.3em;
 		}
+	}
+}
+
+.learning, .blueprint, .craft, .training {
+	img {
+		max-width: 40%;
+	}
+}
+.envision {
+	img {
+		margin-bottom: -10em;
+	}
+	.section-header {
+		@media screen and  (max-width: 1024px) {
+			padding-top: 8em;
+		}
+		@media screen and  (max-width: 640px) {
+			background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
+		}
+	}
+}
+.communication, .support {
+	img {
+		max-width: 35%;
+		margin-bottom: -20em;
 	}
 }
