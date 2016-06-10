@@ -55,26 +55,34 @@
 	%section.process-section
 		.section-content
 			%h3 User research
-			%p This is where the gems come from. The unexpected. The surprisingly simple. The &ldquo;We never thought of that!&rdquo; It also reinforces or invalidates things you think you already know. We prefer to immerse ourselves into users’ natural habitats, go out and meet them, observe how they operate, have a conversation with them in context and with their constituents. Then we step back to reflect, identify what’s important and why. We do this to better understand users’ needs and problems, beyond the boundaries of immediate desired features and make sure we are solving the right problem. Then we bring back a summary of what we&rsquo;ve heard as a nimble report to share throughout your organization.
+			%p This is where the gems come from. The unexpected. The surprisingly simple. The &ldquo;We never thought of that!&rdquo; It also reinforces or invalidates things you think you already know. We prefer to immerse ourselves into users’ natural habitats, go out and meet them, observe how they operate, have a conversation with them in context of how your product fits in with their lives, rather than in a room isolated away from the world. Then we step back to reflect, identify what’s important and why. We do this to better understand user needs and problems, beyond the boundaries of immediate desired features and make sure we are solving the right problems. We bring this all back to you as a summary of what we&rsquo;ve heard to share throughout your organization.
 		%aside.sidebar.left
 			.photo
 				= link_to( image_tag('process/learning/jnj_needs_map.jpg'), '/process/learning/jnj_needs_map.pdf' )
 				%h3 Needs Map
 				%p.caption We take what we learn from your product and your users to create a profile and highlight what users need in order to reach their goal with your service.
 		%aside.sidebar.right
-			.photo
-				= image_tag('process/learning/user_shadow_session.jpg')
+			.photo.lightbox
+				= link_to( image_tag('process/learning/user_shadow_session.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'")
+				#light1.box_content
+					= link_to( "close", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
+					= image_tag('process/learning/user_shadow_session.jpg')
+				#fade1.black_overlay
 				%h3 Up Close and Personal
-				%p.caption We shadow users to get an idea not only how they use the product, but how the product integrates into their daily work. We get to witness nuanced behaviours and analog workarounds that we wouldn't see in a formal user interview.
+				%p.caption We shadow users to get an idea not only how they use your product, but how your service integrates into their daily work. We get to witness nuanced behaviours and analog workarounds that we wouldn't see or hear about in a formal user interview.
 	%section.process-section
 		.section-content
 			%h3 Competitive research
 			%p We know great software. We&rsquo;re also familiar with bad software. What we may not be familiar with is the software of your competitors. In order to baseline the software you are competing against, and to gain insights into different ways people are trying to solve the same problems you are, we strongly recommend a healthy dose of competitive research. It synthesizes our expertise in general software with the software landscape you live in. This activity is accompanied by an in-depth report dissecting the software we are able to review.
 		%aside.sidebar.left
-			.photo
-				= image_tag('process/learning/CompetitorAnalysis-2.jpg')
+			.photo.lightbox
+				= link_to( image_tag('process/learning/CompetitorAnalysis-2.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'")
+				#light2.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'")
+					= image_tag('process/learning/CompetitorAnalysis-2.jpg')
+				#fade2.black_overlay
 				%h3 Depth and Breadth
-				%p.caption We get to know your competitors as well as we get to know you. This gives us a better understanding of your particular industry and the nuances therein and allows us to craft for you a strong solution.
+				%p.caption We get to know your competitors as well as we get to know you. This gives us a better understanding of the field in play as well as details that allow us to craft for you a strong solution.
 		%aside.sidebar.right
 
 	%section.process-section
@@ -100,7 +108,7 @@
 				%li Objective analysis of competitive UX landscape
 				%li Deep insight into your current/potential users
 			%p
-			%p Beyond just informing the consulting and/or design work we do for you, this data has a breadth of uses among your executive team, product professionals, and marketing organization.
+			%p Beyond just informing the consulting and design work we do for you, this data has a breadth of uses among your executive team, product professionals, and marketing organization.
 		%aside.sidebar.left
 		%aside.sidebar.right
 	%section.process-section.next-section

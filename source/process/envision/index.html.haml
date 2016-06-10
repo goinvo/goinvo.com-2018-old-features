@@ -64,8 +64,12 @@
 			%p Sometimes you have new people you want to involve in our work, or you want to socialize our work to a broader set of people. They, too, can lend their knowledge and insights to the things we&rsquo;re doing together. While similar to group meetings, our role changes in focus to facilitation. We&rsquo;re still going to contribute our smarts, but we&rsquo;re now focused on educating and encouraging members of your crew to get all-in with our work.
 		%aside.sidebar.left
 		%aside.sidebar.right
-			.photo
-				= image_tag('process/envision/health_vision_map.jpg')
+			.photo.lightbox
+				= link_to( image_tag('process/envision/health_vision_map.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'")
+				#light1.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
+					= image_tag('process/envision/health_vision_map.jpg')
+				#fade1.black_overlay
 				%h3 Vision Maps
 				%p.caption A vision map is a great way to quickly jot down and connect ideas that offer direction for areas of research, feature focus, and future goals.
 	%section.process-section

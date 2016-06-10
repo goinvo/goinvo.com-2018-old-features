@@ -34,8 +34,12 @@
 			%p This is the fun stuff, the stuff that shifts &ldquo;What an amazing plan!&rdquo; to &ldquo;Holy &*!#! We&rsquo;re really going to do this!&rdquo; It is the art and design that will make sweet, sweet lovin&rsquo; with the engineering and fabrication to literally change the world.
 			%p In case it isn&rsquo;t obvious? This is the stuff we live for.
 		%aside.sidebar.left
-			.photo
-				= image_tag('process/craft/sprout_MBTI_visual_systems.jpg')
+			.photo.lightbox
+				= link_to( image_tag('process/craft/sprout_MBTI_visual_systems.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'")
+				#light1.box_content
+					= link_to( "close", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
+					= image_tag('process/craft/sprout_MBTI_visual_systems.jpg')
+				#fade1.black_overlay
 				%h3 Design with Data
 				%p.caption We work with real data and really dig in to gain deep understand in order to construct comprehensive visualizations.
 		%aside.sidebar.right
@@ -66,8 +70,12 @@
 			%p Mix in more research, iteration, rinse, and repeat so that the designs can be refined and fortified in quick cycles.
 		%aside.sidebar.left
 		%aside.sidebar.right
-			.photo
-				= image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg')
+			.photo.lightbox
+				= link_to( image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'")
+				#light2.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'")
+					= image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg')
+				#fade2.black_overlay
 				%h3 Translating complex data
 				%p.caption We specialize in taking large amounts of complex information and designing human-readable interfaces that improve user experiences.
 	%section.process-section
