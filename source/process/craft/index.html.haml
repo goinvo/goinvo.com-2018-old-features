@@ -37,14 +37,13 @@
 			.photo.lightbox
 				= link_to( image_tag('process/craft/sprout_MBTI_visual_systems.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'")
 				#light1.box_content
-					= link_to( "close", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
 					= image_tag('process/craft/sprout_MBTI_visual_systems.jpg')
 				#fade1.black_overlay
 				%h3 Design with Data
 				%p.caption We work with real data and really dig in to gain deep understand in order to construct comprehensive visualizations.
 		%aside.sidebar.right
-			.photo
-				%p.caption project example
+			.photo.lightbox
 				= link_to( image_tag('process/craft/healthaxioms_process.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'")
 				#light2.box_content
 					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'")
@@ -52,19 +51,20 @@
 				#fade2.black_overlay
 				%h3 From birth to life
 				%p.caption We iterate in rapid cycles, taking you every step of the way, getting feedback from you, stakeholders, and key users in order to design the best product for you.
-				= link_to( 'View Project', 'http://www.goinvo.com/products/care-cards/' )
+				%p.caption
+					= link_to( 'View Project', 'http://www.goinvo.com/products/care-cards/' )
 	%section.process-section
 		.section-content
 			%h4 Sketching
 			%p The handcrafting of gorgeous, custom concepts to enhance or serve as the core for your interfaces. We employ professional illustrators - the kind of people who work at Pixar or Disney - who have a specialization in interface design but were trained with the top illustrators in the world. Their work takes time, but is always worth it.
 		%aside.sidebar.left
 			.photo
-				= link_to( image_tag('process/craft/jnj_patient_careplan_sketches.jpg'), 'process/craft/jnj_patient_careplan_sketches.pdf' )
+				= link_to( image_tag('process/craft/jnj_patient_careplan_sketches.jpg'), 'craft/jnj_patient_careplan_sketches.pdf' )
 				%h3 UI Sketching
 				%p.caption We sketch concepts and screens to quickly iterate through many versions of ideas so we can get the most out of the execution of the designs later.
 			
 		%aside.sidebar.right
-			.photo
+			.photo.lightbox
 				= link_to( image_tag('process/craft/personal_device_states_sketch.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'")
 				#light3.box_content
 					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light3').style.display='none';document.getElementById('fade3').style.display='none'")
@@ -72,7 +72,8 @@
 				#fade3.black_overlay
 				%h3 Concept Sketching
 				%p.caption Our design thinking doesn't stop at the screen. The shape of a device and how it fits into everyday life can be as impactful if not more than the interface itself.
-				= link_to( 'View Case Study', 'http://www.goinvo.com/healthcare/diabetes/' )
+				%p.caption
+					= link_to( 'View Case Study', 'http://www.goinvo.com/healthcare/diabetes/' )
 	%section.process-section
 		.section-content
 			%h4 Design
@@ -96,15 +97,27 @@
 			%p As important but less understood is using prototypes to test design concepts. Early prototypes need to be viewed like design comps: working toward the right solution but can easily be thrown away. It is a classic case of the process, not the outcome, being the important thing. Some prototype will represent the product that gets built, but it is likely not the first. It may be, but it also may be the second. Or the fifth. That is the process to get to world-class digital products.
 			%p Our designers understand the fundamentals of engineering. Some are reformed engineers who used to wrangle silicon, math or bits and bytes. Often times, they can&rsquo;t help but turn their work into something that actually, well, works. Prototypes can be explicit deliverables as part of our projects, or just something our designers know will help the process so they kick them out on their own. Yeah, they&rsquo;re getting a little crazy. But it&rsquo;s that good kind of crazy, the kind that brings digital products fully to life.
 		%aside.sidebar.left
-			.photo
-				= link_to( image_tag('process/craft/hgraph.jpg'), 'http://www.goinvo.com/healthcare/hgraph/' )
+			.photo.lightbox
+				= link_to( image_tag('process/craft/hgraph.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light5').style.display='block';document.getElementById('fade5').style.display='block'")
+				#light5.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light5').style.display='none';document.getElementById('fade5').style.display='none'")
+					= image_tag('process/craft/hgraph.jpg')
+				#fade5.black_overlay
 				%h3 hGraph
 				%p.caption Interaction and transitions can't be communicated well by images alone. Prototypes are meant to be played with and refined.
+				%p.caption
+					= link_to( 'Read Case Study', 'http://www.goinvo.com/healthcare/hgraph/' )
 		%aside.sidebar.right
-			.photo
-				= link_to( image_tag('process/craft/medication_timeline.jpg'), 'http://www.goinvo.com/healthcare/inspired-ehrs/' )
+			.photo.lightbox
+				= link_to( image_tag('process/craft/medication_timeline.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light6').style.display='block';document.getElementById('fade6').style.display='block'")
+				#light6.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light6').style.display='none';document.getElementById('fade6').style.display='none'")
+					= image_tag('process/craft/medication_timeline.jpg')
+				#fade6.black_overlay
 				%h3 Medication Timeline
 				%p.caption Issues can come up, issues that would not have been noticeable from a mockup image. We can address these issues earlier rather than if they'd come up further down the line in production.
+				%p.caption
+					= link_to( 'Read Case Study', 'http://www.goinvo.com/healthcare/inspired-ehrs/' )
 	%section.process-section
 		.section-content
 			%h3 Our Craft has a big impact on your business in ways large and small:

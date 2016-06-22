@@ -36,10 +36,16 @@
 			%p Once lightweight prototypes point us toward a compelling solution, they can be used as a production tool. Depending on the project, the code may or may not be intended as part of the final production stack, but we write it with accessibility, responsiveness, and validation in mind. Our prototypes are coded to be relevant throughout the production process, serving as a visual spec and crafted with quality code that is leveragable by your engineering team.
 		%aside.sidebar.left
 		%aside.sidebar.right
-			.photo
-				= link_to( image_tag('process/build/3m-hospital-enterprise-software-animation.gif' ), 'http://www.goinvo.com/healthcare/3m/' )
+			.photo.lightbox
+				= link_to( image_tag('process/build/3m-hospital-enterprise-software-animation.gif'), 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'")
+				#light1.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'")
+					= image_tag('process/build/3m-hospital-enterprise-software-animation.gif')
+				#fade1.black_overlay
 				%h3 CodeRyte (3m acquisition)
 				%p.caption A solution for hospital coders, saving millions in terms of dollars and time.
+				%p.caption
+					= link_to( 'Read Case Study', 'http://www.goinvo.com/healthcare/3m/' )
 	%section.process-section
 		.section-content
 			%h4 Development Cycles
