@@ -44,9 +44,15 @@
 				%p.caption We work with real data and really dig in to gain deep understand in order to construct comprehensive visualizations.
 		%aside.sidebar.right
 			.photo
-				= link_to( image_tag('process/craft/healthaxioms_process.jpg'), 'http://www.goinvo.com/products/care-cards/' )
+				%p.caption project example
+				= link_to( image_tag('process/craft/healthaxioms_process.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'")
+				#light2.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'")
+					= image_tag('process/craft/healthaxioms_process.jpg')
+				#fade2.black_overlay
 				%h3 From birth to life
 				%p.caption We iterate in rapid cycles, taking you every step of the way, getting feedback from you, stakeholders, and key users in order to design the best product for you.
+				= link_to( 'View Project', 'http://www.goinvo.com/products/care-cards/' )
 	%section.process-section
 		.section-content
 			%h4 Sketching
@@ -59,9 +65,14 @@
 			
 		%aside.sidebar.right
 			.photo
-				= link_to( image_tag('process/craft/personal_device_states_sketch.jpg'), 'http://www.goinvo.com/healthcare/diabetes/' )
+				= link_to( image_tag('process/craft/personal_device_states_sketch.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'")
+				#light3.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light3').style.display='none';document.getElementById('fade3').style.display='none'")
+					= image_tag('process/craft/personal_device_states_sketch.jpg')
+				#fade3.black_overlay
 				%h3 Concept Sketching
 				%p.caption Our design thinking doesn't stop at the screen. The shape of a device and how it fits into everyday life can be as impactful if not more than the interface itself.
+				= link_to( 'View Case Study', 'http://www.goinvo.com/healthcare/diabetes/' )
 	%section.process-section
 		.section-content
 			%h4 Design
@@ -71,11 +82,11 @@
 		%aside.sidebar.left
 		%aside.sidebar.right
 			.photo.lightbox
-				= link_to( image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'")
-				#light2.box_content
-					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'")
+				= link_to( image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg'), 'javascript:void(0)', :onclick => "document.getElementById('light4').style.display='block';document.getElementById('fade4').style.display='block'")
+				#light4.box_content
+					= link_to( "X", 'javascript:void(0)', :onclick => "document.getElementById('light4').style.display='none';document.getElementById('fade4').style.display='none'")
 					= image_tag('process/craft/infobionic_ekg_patientreport_ipad.jpg')
-				#fade2.black_overlay
+				#fade4.black_overlay
 				%h3 Translating complex data
 				%p.caption We specialize in taking large amounts of complex information and designing human-readable interfaces that improve user experiences.
 	%section.process-section

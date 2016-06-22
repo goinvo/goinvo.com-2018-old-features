@@ -170,6 +170,18 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 }
 
+#process {
+	background-image: image-url('home/aps.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#diabetes {
+	background-image: image-url('healthcare/diabetes.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #disrupt {
   .photo-container {
     display: none;
