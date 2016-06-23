@@ -7,7 +7,7 @@ Website for goinvo.com
 
 To view this site via a local middleman server, open up your favorite shell, `cd` to this directory and install the dependencies via:
 
-	$ bundle install && bundle update
+	$ bundle install
 
 Then run
 
