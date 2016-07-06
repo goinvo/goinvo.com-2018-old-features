@@ -66,15 +66,6 @@
   email: "edwin@goinvo.com"
   photo: edwin_choi.jpg
 
-- first_name: Yanyang
-  last_name: Zhou
-  title: Engineer
-  bio: Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.
-  github_username: "yvonnechow"
-  linkedin_url: "https://www.linkedin.com/in/zhouyanyang"
-  email: "yanyang@goinvo.com"
-  photo: yanyang_zhou.jpg
-
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
