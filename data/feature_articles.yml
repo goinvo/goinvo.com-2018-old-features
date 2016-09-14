@@ -19,7 +19,7 @@ articles:
     tag_line: "Part 1: Definition and History"
     date: "2016-03-01"
     image: "features/careplans/feature_page_1.jpg"
-    url: "careplans/part-1.html"
+    url: "careplans"
     id: "careplans"
 
   - title: "Understanding Zika"

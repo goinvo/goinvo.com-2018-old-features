@@ -248,7 +248,7 @@ a {
 				left: calc(50% - 155px);
 			}
 			@media only screen and (min-width:769px) {
-				right: 10%;	
+				right: 10%;
 			}
 			p {
 				font-size: 6rem;
@@ -356,7 +356,7 @@ a {
 		.col:last-child {
 			border-right: none;
 		}
-		
+
 		@media only screen and (min-width:992px) {
 			.col {
 				border-right: solid rgb(11, 94, 148) 2px;
@@ -495,7 +495,7 @@ a {
 		.control {
 			top: 45%;
 		}
-		
+
 	}
 	.mobile {
 		margin-top: 150px;
@@ -769,7 +769,7 @@ a {
 }
 .careplan-diagram.mobile {
 	padding: 0;
-	
+
 	span.dropdown-toggle {
 		display: inline-block;
 		width: 100%;
@@ -1178,7 +1178,7 @@ Feature II: Product Landscape
 	width: 120px;
 
 	img {
-		width: auto;	
+		width: auto;
 		margin: 0 auto;
 	}
 }
@@ -1214,7 +1214,7 @@ Feature II: Product Landscape
 		font-weight: normal;
 		top: -30px;
 		left: 0;
-	}	
+	}
 }
 .part.two .desktop .product-matrix .table-bordered > tbody > tr:first-child > td .table-header + .popover {
 	top: -300px !important;
@@ -1308,7 +1308,7 @@ Feature II: Product Landscape mobile
 	height: 30px;
 	background-color: #a4c5de;
 	position: relative;
-		
+
 	span {
 		position: absolute;
 		right: 15px;
@@ -1494,7 +1494,7 @@ Feature II: Barriers
     height: 100%;
     width: 1px;
 	}
-	
+
 	@media only screen and (min-width: 769px) {
 		ul.history-items li.last-year:before {
 			width: 0;
@@ -1777,7 +1777,7 @@ Feature II: Next Steps
 	.forecast {
 		width: 100%;
 		p {
-			float: right; 
+			float: right;
 			width: 60%;
 		}
 	}
@@ -1892,7 +1892,7 @@ Feature II: Next Steps
 	.forecast {
 		width: 100%;
 		p {
-			float: right; 
+			float: right;
 			width: 48%;
 		}
 	}
@@ -1924,7 +1924,7 @@ contributor and reference
 	.author .image {
 		width: 190px;
 	}
-	
+
 	@media only screen and (min-width: 769px) {
 		.author .info {
 			width: calc( 100% - 230px);
@@ -2005,7 +2005,7 @@ Feature III
 		@media  (min-width: 768px) {
 			right: 20%;
 			position: absolute;
-			top: 100px; 
+			top: 100px;
 		}
 	}
 	.title h1 {
@@ -2130,7 +2130,7 @@ Feature III: Navigation
 			width: 11.8%;
 		}
 		position: relative;
-	}	
+	}
 	.circle:before {
 		content: ' ';
 		width: calc(100% - 16px);
@@ -2139,12 +2139,12 @@ Feature III: Navigation
 		position: absolute;
 		left: calc(-50% + 5px);
 		top: 5px;
-	}	
+	}
 	.circle.none:before {
 		display: none;
 	}
 	.circle:first-child:before {
-		content: ' ';		
+		content: ' ';
 		width: calc(50% - 15px);
 		height: 10px;
 		border-top-left-radius: 5px;
@@ -2388,7 +2388,7 @@ Feature III: Part Three
 }
 #feature-article .part.three.featureIII h1 {
 	text-align: right;
-	
+
 	@media  (min-width: 768px) {
 		span:first-child {
 			font-size: 2.5rem;
@@ -2445,7 +2445,7 @@ Feature III: Part Four
 }
 #feature-article .part.four.featureIII h1 {
 	color: #ffffff;
-	
+
 	@media  (min-width: 768px) {
 		strong {
 			font-size: 3rem;
@@ -2797,7 +2797,7 @@ Feature III: Part Nine
 #feature-article .part.nine.featureIII .container-fluid .row .col-sm-3 {
 	padding-left: 0;
 }
- 
+
 #feature-article .part.nine.featureIII ul {
 	padding-left: 1.2rem;
 	list-style-image: url('../../images/features/careplans/part3/list_style_image.png');
@@ -2908,7 +2908,7 @@ Intro Page
 		vertical-align: top;
 		margin-top: 1rem;
 	}
-	
+
 }
 #feature-article.intro header.nav-wrapper.scroll-nav.intro a {
 	color: #ffffff;
@@ -2934,6 +2934,7 @@ Intro Page
 	margin-bottom: 2rem;
 }
 #feature-article.intro .download-ebook {
+	padding-left: 1rem;
 	@media  (min-width: 768px) {
 		float: right;
 	}
