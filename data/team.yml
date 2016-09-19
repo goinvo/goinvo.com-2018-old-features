@@ -41,7 +41,7 @@
 
 - first_name: Jennifer
   last_name: Patel
-  title: "Designer, Engineer"
+  title: Designer, Engineer
   bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
   mbti: ISFJ
   twitter_username: "catamariface"
@@ -66,6 +66,32 @@
   email: "edwin@goinvo.com"
   photo: edwin_choi.jpg
 
+- first_name: Craig
+  last_name: McGinley
+  title: Engineer
+  bio: "Craig is an engineer devoted to full stack design and development. He brings skillful javascripting, front-end development techniques, and application logic design to software projects. Craig is a Launch Academy graduate, vegan, musician and social justice advocate."
+  linkedin_url: "http://www.linkedin.com/in/craigmcginley"
+  github_username: "craigmcginley"
+  email: "craig@goinvo.com"
+  photo: craig_mcginley.jpg
+
+- first_name: Sharon
+  last_name: Lee
+  title: Designer
+  bio: "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia."
+  linkedin_url: "https://www.linkedin.com/in/sharon-lee-a137199"
+  twitter_username: 
+  email: "sharon@goinvo.com"
+  photo: sharon_lee.jpg
+
+- first_name: Hrothgar
+  last_name: " "
+  title: Designer, Engineer
+  bio: "Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice Univeristy, and joined Invo in 2016 following doctoral studies at the University of Oxford."
+  github_username: "hrothgar"
+  email: "hrothgar@goinvo.com"
+  photo: hrothgar.jpg
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
@@ -75,24 +101,6 @@
   github_username: "jonfollett"
   email: "jon@goinvo.com"
   photo: jon_follett.jpg
-
-- first_name: Craig
-  last_name: McGinley
-  title: "Engineer"
-  bio: "Craig is an engineer devoted to full stack design and development. He brings skillful javascripting, front-end development techniques, and application logic design to software projects. Craig is a Launch Academy graduate, vegan, musician and social justice advocate."
-  linkedin_url: "http://www.linkedin.com/in/craigmcginley"
-  github_username: "craigmcginley"
-  email: "craig@goinvo.com"
-  photo: craig_mcginley.jpg
-
-- first_name: Sharon
-  last_name: Lee
-  title: "Designer"
-  bio: "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia."
-  linkedin_url: "https://www.linkedin.com/in/sharon-lee-a137199"
-  twitter_username: 
-  email: "sharon@goinvo.com"
-  photo: sharon_lee.jpg
 
 - first_name: Dirk
   last_name: Knemeyer
