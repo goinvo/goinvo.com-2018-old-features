@@ -1,12 +1,12 @@
 - content_for(:title) do
     = "Social Determinants of Health"
 - content_for(:page_head) do
-    = stylesheet_link_tag "feature-elements"
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:300,700"
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Raleway:400,300,600"
     = stylesheet_link_tag "vendor/normalize"
     = stylesheet_link_tag "vendor/skeleton"
     = stylesheet_link_tag "features/determinants-of-health"
+    = stylesheet_link_tag "feature-elements"
     = javascript_include_tag "//www.gstatic.com/charts/loader.js"
     = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
@@ -53,31 +53,32 @@
 
         <hr style="margin-bottom:0" id="use_jump"></hr>
 
-        %div#uses.left_spacing.right_spacing
-            <p style="padding: 2rem 0rem 1.5rem; font-weight:600; letter-spacing:0.05rem">HOW CAN WE USE THE DETERMINANTS?</p>
+        %div#uses
+            %div.left_spacing.right_spacing
+                <p style="padding: 2rem 0rem 1.5rem; font-weight:600; letter-spacing:0.05rem">HOW CAN WE USE THE DETERMINANTS?</p>
 
         %div#uses_img_1
-        %div#uses1.left_spacing.right_spacing
-            %div
+        %div#uses1
+            %div.left_spacing.right_spacing
                 %h5 Individualized health care
                 %p By having care providers take greater care in learning about a patient's life experience and obtaining a better understanding of how these experiences impact a patient's overall health, they will be able to gtive patients better treatment and more accurate diagnoses due to improved undersatnding of contextual information surrounding the patient.
 
         %div#uses_img_2
-        %div#uses2.left_spacing.right_spacing
-            %div
+        %div#uses2
+            %div.left_spacing.right_spacing
                 %h5 Standard health record
                 %p In the US there is currently no national standardized health record (SHR). Among the health records that do exist, they are primarily focused on storing clinical information. The determinants of health can be used to create an SHR that views health not just at a clinical level, but at a holistic level. Patients should be able to access information that is relevant both inside and outside the clinical space, giving further opportunity for improved intervention and self-driven care.
                 %p <a href="http://standardhealthrecord.org/">http://standardhealthrecord.org/</a>
 
         %div#uses_img_3
-        %div#uses3.left_spacing.right_spacing
-            %div
+        %div#uses3
+            %div.left_spacing.right_spacing
                 %h5 Population health
                 %p Greater breadth of data correlating to people and communities will dramatically increase the pool of contextual health data. More targeted public health interventions and policies can be administered. Data scientists would be able to design improved predictive population health models that would be able to more easily track health trends on a large scale, as well as predict future trends and areas of improvement across the country.
 
         %div#uses_img_4
-        %div#uses4.left_spacing.right_spacing
-            %div
+        %div#uses4
+            %div.left_spacing.right_spacing
                 %h5 Research and data access
                 %p The implementation of the determinants of health paired with the creation of the standard health record (SHR) would result in massive amounts of contextual data that would be available for clinicians, students, patients and laboratories across the country. This new data would enable researchers to track health trends and discover new relatioinships between non-clinical factors and our health.
 
@@ -96,46 +97,47 @@
                     </form>
 
         <hr style="padding:0 auto; margin:0 auto;"></hr>
-        %div#credits.left_spacing.right_spacing
-            <h5 style="padding-top:3rem">AUTHORS</h5>
-            %div.row
-                %div.three.columns
-                    <img src="../../images/features/determinants-of-health/edwin_img.jpg">
-                %div.nine.columns
-                    <p class="affiliation">Involution Studios</p>
-                    <p class="name">Edwin Choi</p>
-                    <p class="description">
-                    Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of University of Washington, and has a masters in biomedical design from Johns Hopkins University.
-                    </p>
-            %div.row
-                %div.three.columns
-                    <img src="../../images/features/determinants-of-health/hrothgar_img.jpg">
-                %div.nine.columns
-                    <p class="affiliation">Involution Studios</p>
-                    <p class="name">Hrothgar</p>
-                    <p class="description">
-                    Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.
-                    </p>
-            %div.row
-                %div.three.columns
-                    <img src="../../images/features/determinants-of-health/juhan_img.jpg">
-                %div.nine.columns
-                    <p class="affiliation">Involution Studios, MIT</p>
-                    <p class="name">Juhan Sonin</p>
-                    <p class="description">
-                    Juhan specialized in software design and system engineering. He operates, and is the director of, Involution Studios. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT.
-                    </p>
+        %div#credits
+            %div.left_spacing.right_spacing
+                <h5 style="padding-top:3rem">AUTHORS</h5>
+                %div.row
+                    %div.three.columns
+                        <img src="../../images/features/determinants-of-health/edwin_img.jpg">
+                    %div.nine.columns
+                        <p class="affiliation">Involution Studios</p>
+                        <p class="name">Edwin Choi</p>
+                        <p class="description">
+                        Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of University of Washington, and has a masters in biomedical design from Johns Hopkins University.
+                        </p>
+                %div.row
+                    %div.three.columns
+                        <img src="../../images/features/determinants-of-health/hrothgar_img.jpg">
+                    %div.nine.columns
+                        <p class="affiliation">Involution Studios</p>
+                        <p class="name">Hrothgar</p>
+                        <p class="description">
+                        Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.
+                        </p>
+                %div.row
+                    %div.three.columns
+                        <img src="../../images/features/determinants-of-health/juhan_img.jpg">
+                    %div.nine.columns
+                        <p class="affiliation">Involution Studios, MIT</p>
+                        <p class="name">Juhan Sonin</p>
+                        <p class="description">
+                        Juhan specialized in software design and system engineering. He operates, and is the director of, Involution Studios. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT.
+                        </p>
 
-            <h5 style="padding-top:1rem">CONTRIBUTORS</h5>
-            %div.row
-                %div.three.columns
-                    <img src="../../images/features/determinants-of-health/kelsey_img.jpg">
-                %div.nine.columns
-                    <p class="affiliation">Dartmouth College</p>
-                    <p class="name">Kelsey Kittleson</p>
-                    <p class="description">
-                    Kelsey is a designer and engineer. She specializes in taking an analytical approach to problem solving while focusing on human needs. She is currently studying engineering with a concentration in human-centered design and product development at Dartmouth College.
-                    </p>
+                <h5 style="padding-top:1rem">CONTRIBUTORS</h5>
+                %div.row
+                    %div.three.columns
+                        <img src="../../images/features/determinants-of-health/kelsey_img.jpg">
+                    %div.nine.columns
+                        <p class="affiliation">Dartmouth College</p>
+                        <p class="name">Kelsey Kittleson</p>
+                        <p class="description">
+                        Kelsey is a designer and engineer. She specializes in taking an analytical approach to problem solving while focusing on human needs. She is currently studying engineering with a concentration in human-centered design and product development at Dartmouth College.
+                        </p>
 
         <hr style="padding:0 auto; margin:0 auto;"></hr>
         %div#references.left_spacing.right_spacing
@@ -160,56 +162,57 @@
 
 
         <hr style="padding:0 auto; margin:0 auto;"></hr>
-        %div#methodology.left_spacing.right_spacing
-            <h5 style="letter-spacing:0.1rem; padding-top:2rem;">METHODOLOGY</h5>
-            %p The 5 main determinants of health (genetics, medical care, social circumstances, environment, and individual behavior) were chosen due to their consistency across the following 7 out of 8 organizations:
+        %div#methodology
+            %div.left_spacing.right_spacing
+                <h5 style="letter-spacing:0.1rem; padding-top:2rem;">METHODOLOGY</h5>
+                %p The 5 main determinants of health (genetics, medical care, social circumstances, environment, and individual behavior) were chosen due to their consistency across the following 7 out of 8 organizations:
 
-            <ul>
-            <li class="remove_sentence_space">NCHHSTP [1]</li>
-            <li class="remove_sentence_space">WHO [2]</li>
-            <li class="remove_sentence_space">Healthy People [3]</li>
-            <li class="remove_sentence_space">Kaiser Family Foundation [4]</li>
-            <li class="remove_sentence_space">NEJM [5]</li>
-            <li class="remove_sentence_space">Health Affairs [6]</li>
-            <li class="remove_sentence_space">Institute of Medicine [7]</li>
-            <li class="remove_sentence_space">New South Wales Department of Health [8]</li>
-            </ul>
+                <ul>
+                <li class="remove_sentence_space">NCHHSTP [1]</li>
+                <li class="remove_sentence_space">WHO [2]</li>
+                <li class="remove_sentence_space">Healthy People [3]</li>
+                <li class="remove_sentence_space">Kaiser Family Foundation [4]</li>
+                <li class="remove_sentence_space">NEJM [5]</li>
+                <li class="remove_sentence_space">Health Affairs [6]</li>
+                <li class="remove_sentence_space">Institute of Medicine [7]</li>
+                <li class="remove_sentence_space">New South Wales Department of Health [8]</li>
+                </ul>
 
-            %p The 29 macrodeterminants and 66 microdeterminants below each main category were found by compiling the determinant lists of the previously mentioned organizations.
+                %p The 29 macrodeterminants and 66 microdeterminants below each main category were found by compiling the determinant lists of the previously mentioned organizations.
 
-            %p The section below documents our analysis of the data and how we calculated the final impact percentages for the 5 main categories of determinants.
+                %p The section below documents our analysis of the data and how we calculated the final impact percentages for the 5 main categories of determinants.
 
-            %p The relative contribution of each of the determinant categories to one’s health was found using the estimated values referenced by the seven primary sources listed below.
+                %p The relative contribution of each of the determinant categories to one’s health was found using the estimated values referenced by the seven primary sources listed below.
 
-            <ul>
-            <li class="remove_sentence_space">DHHS [9]</li>
-            <li class="remove_sentence_space">JAMA [10, 12]</li>
-            <li class="remove_sentence_space">Health Affairs [11]</li>
-            <li class="remove_sentence_space">PLoS [13]</li>
-            <li class="remove_sentence_space">WHO [14]</li>
-            <li class="remove_sentence_space">U.Wisconsin [15]</li>
-            </ul>
+                <ul>
+                <li class="remove_sentence_space">DHHS [9]</li>
+                <li class="remove_sentence_space">JAMA [10, 12]</li>
+                <li class="remove_sentence_space">Health Affairs [11]</li>
+                <li class="remove_sentence_space">PLoS [13]</li>
+                <li class="remove_sentence_space">WHO [14]</li>
+                <li class="remove_sentence_space">U.Wisconsin [15]</li>
+                </ul>
 
-            %p Each determinant category was then averaged based on the values from each of the aforementioned sources (the methodology in the primary sources were different depending on the source. The final percentages should therefore be an estimate and not be viewed as absolute numbers).
+                %p Each determinant category was then averaged based on the values from each of the aforementioned sources (the methodology in the primary sources were different depending on the source. The final percentages should therefore be an estimate and not be viewed as absolute numbers).
 
-            %p.remove_sentence_space Behavior: (50 + 38 + 40 + 39 + 36 + 45 + 30) / 6 = 46.33.
-            %p.remove_sentence_space Social: (15 + 40) / 2 = 27.5.
-            %p.remove_sentence_space Genetics: (20 + 30) / 2 = 25.
-            %p.remove_sentence_space Medical care: (10 + 10 + 20) / 3 = 13.33.
-            %p Environment: (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4.
-            %p The ratio for each determinant was then found by taking the average values found for each of the determinant categories and dividing them by the total determinant value.
-            %p.remove_sentence_space Behavior: 46.33 / 120.56 = 38.43%.
-            %p.remove_sentence_space Social: 27.5 / 120.56 = 22.81%.
-            %p.remove_sentence_space Genetics: 25 / 120.56 = 20.74%.
-            %p.remove_sentence_space Medical care: 13.33 / 120.56 = 11.06%.
-            %p.remove_sentence_space Environment: 8.4 / 120.56 = 7%.
-            %p Total: 38.43 + 22.81 + 20.74 + 7 + 11.06 = 100.4%.
-            %p The final percentages are as follows.
-            %p.remove_sentence_space Behavioral determinants at 38%.
-            %p.remove_sentence_space Social determinants at 23%.
-            %p.remove_sentence_space Genetic determinants at 21%.
-            %p.remove_sentence_space Medical care determinants at 11%.
-            %p Environmental determinants at 7%.
+                %p.remove_sentence_space Behavior: (50 + 38 + 40 + 39 + 36 + 45 + 30) / 6 = 46.33.
+                %p.remove_sentence_space Social: (15 + 40) / 2 = 27.5.
+                %p.remove_sentence_space Genetics: (20 + 30) / 2 = 25.
+                %p.remove_sentence_space Medical care: (10 + 10 + 20) / 3 = 13.33.
+                %p Environment: (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4.
+                %p The ratio for each determinant was then found by taking the average values found for each of the determinant categories and dividing them by the total determinant value.
+                %p.remove_sentence_space Behavior: 46.33 / 120.56 = 38.43%.
+                %p.remove_sentence_space Social: 27.5 / 120.56 = 22.81%.
+                %p.remove_sentence_space Genetics: 25 / 120.56 = 20.74%.
+                %p.remove_sentence_space Medical care: 13.33 / 120.56 = 11.06%.
+                %p.remove_sentence_space Environment: 8.4 / 120.56 = 7%.
+                %p Total: 38.43 + 22.81 + 20.74 + 7 + 11.06 = 100.4%.
+                %p The final percentages are as follows.
+                %p.remove_sentence_space Behavioral determinants at 38%.
+                %p.remove_sentence_space Social determinants at 23%.
+                %p.remove_sentence_space Genetic determinants at 21%.
+                %p.remove_sentence_space Medical care determinants at 11%.
+                %p Environmental determinants at 7%.
 
         %div.left_spacing.right_spacing
             <p style="opacity: 0.5; padding-top:2rem;">Copyright © 2016 Involution Studios LLC  |  Licensed under Creative Commons Attribution v3  |  Github  |  info@goinvo.com</p>
