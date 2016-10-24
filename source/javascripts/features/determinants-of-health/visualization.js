@@ -110,7 +110,7 @@ $(document).ready(function() {
 
     function selectHandler(e) {
       var selectedItem = chart.getSelection()[0];
-      console.log(selectedItem);
+      // console.log(selectedItem);
 
       if (selectedItem) {
         currentSelection = selectedItem.row;
