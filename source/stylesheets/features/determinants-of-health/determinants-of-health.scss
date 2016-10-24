@@ -518,7 +518,7 @@ article#feature-article div.doh-container {
     }
   	ol {
   		list-style-position: outside;
-  		padding-left: 1.1rem;
+  		// padding-left: 1.1rem;
   	}
   	ol li {
   		overflow-wrap: break-word;
@@ -533,6 +533,9 @@ article#feature-article div.doh-container {
   	p, li {
   		opacity: 0.5;
   	}
+    li {
+      list-style-position: outside;
+    }
   }
 
 } /* doh-container */
