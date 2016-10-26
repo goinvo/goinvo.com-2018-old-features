@@ -53,7 +53,7 @@ activate :cache_buster
 # If you really need to push to production bucket and cannot
 # use CodeShip, change this variable temporarily, but don't
 # commit that change to GitHub
-s3_bucket = 'www.goinvo.com'
+s3_bucket = 'staging.goinvo.com'
 
 # S3 Sync
 activate :s3_sync do |s3_sync|
