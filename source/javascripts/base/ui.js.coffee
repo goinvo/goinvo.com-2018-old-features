@@ -9,9 +9,7 @@ window.hideMenu = ->
   $('#main-menu').removeClass('shown')
   $('#menu-button').removeClass('active')
 
-
 $ ->
-
   # Close flash messages when the 'x' is clicked
   $('.message a.close').click (event) ->
     event.preventDefault()
@@ -39,31 +37,32 @@ $ ->
     if $('#main-menu').is(':visible')
       window.hideMenu()
 
- # # Clicking anywhere within an article in the main menu takes you to the article
+  # # Clicking anywhere within an article in the main menu takes you to the article
   $('#main-menu li.article').click ->
     window.location = $(this).find('.title a').attr('href')
-    
-  $('header#main-header #mobile-hamburger').click ->
-    if $('header#main-header #nav-buttons-mobile').is(':visible')
-      $('header#main-header #nav-buttons-mobile').css('display', 'none')
+
+  $mainHeader = $('#main-header')
+  $fullNavItems = $('#nav-full a')
+
+  fadeInNavItems = () ->
+    setTimeout(() ->
+      $.each($fullNavItems, (i, el) ->
+        setTimeout(() ->
+            $(el).addClass('nav-visible')
+          (i + 1) * 50))
+      200)
+
+  $('#nav-hamburger').click ->
+    $mainHeader.toggleClass('mobile-nav-open')
+
+    if !($mainHeader.hasClass('mobile-nav-open')) and $($fullNavItems).hasClass('nav-visible')
+      $fullNavItems.removeClass('nav-visible')
     else
-      $('header#main-header #nav-buttons-mobile').css('display', 'block')
-   
+      if $mainHeader.hasClass('mobile-nav-open')
+        $fullNavItems.removeClass('nav-visible')
+        fadeInNavItems()
 
 
-
-  # Populate and render GitHub commit sparklines
-  # $('.github-commits.sparkline .graph').each (i,el) ->
-  #   el = $(el)
-  #   id = el.data('member-id')
-  #   $.ajax
-  #     url: "/team/#{id}/github/commit_history",
-  #     success: (data) ->
-  #       totalCommits = 0
-  #       $.each data, ->
-  #         totalCommits += parseInt(this) || 0
-  #
-  #       el.html(data.join(','))
-  #       el.siblings('label').html("#{totalCommits} commits in the last 30d")
-  #       el.sparkline('html', {type: 'bar', barColor: '#EBEBEB', barWidth: 3} )
-  #       el.show()
+  $(window).resize ->
+    if $(window).width() >= 768
+      $mainHeader.removeClass('mobile-nav-open')

@@ -8,13 +8,6 @@
  *** screen sizes.
  ************************************/
 
-@media only screen and (max-width: 1157px) {
-	.header-content {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
 @media only screen and (max-width: 1105px) {
 	#content-area .expandedcards {
 		display: block;
@@ -112,21 +105,6 @@
 	div.sidebar.mobile-hide, section.timeline.mobile-hide {
 		display:none;
 	}
-	//replaced hamburger with 2-line nav
-	header#main-header {
-		height: 85px;
-	}
-	header#main-header #nav-buttons {
-		text-align: right;
-    	margin-top: -29px;
-    	 a{
-    	 	padding-bottom: 10px;
-    	 }
-	}
-	// Bring back that tagline
-	.header-content .tag-line {
-		display: inline-block;
-	}
 }
 
 @media only screen and (max-width: 749px) {
@@ -196,7 +174,7 @@
 		padding-right:10px;
 	}
 
-	
+
 	#main-container .homepage-header {
 		&.one .title{
 			h2 {
@@ -254,28 +232,28 @@
 
 @media only screen and (max-width: 860px) {
   #content-area.caseStudyContent .projectDetails {
-     margin-top: 60px; 
+     margin-top: 60px;
   }
 }
 
 @media only screen and (max-width: 800px) {
   form.hs-form fieldset {
-    max-width: none;  
+    max-width: none;
   }
-  
+
   .careers .sidebar.left {
-     display: none; 
+     display: none;
   }
-  
+
   .careers .sidebar.right {
     display: block;
     width:100%;
   }
-  
+
   .careers div.centerContent {
-     width:100%; 
+     width:100%;
   }
-  
+
   div.video-box .fluid-width-video-wrapper {
     padding-top:60% !important;
   }
