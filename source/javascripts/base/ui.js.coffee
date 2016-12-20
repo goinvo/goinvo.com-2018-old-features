@@ -50,9 +50,10 @@ $ ->
         setTimeout(() ->
             $(el).addClass('nav-visible')
           (i + 1) * 50))
-      200)
+      300)
 
   $('#nav-hamburger').click ->
+    $(document.body).toggleClass('mobile-nav-open')
     $mainHeader.toggleClass('mobile-nav-open')
 
     if !($mainHeader.hasClass('mobile-nav-open')) and $($fullNavItems).hasClass('nav-visible')
@@ -65,4 +66,5 @@ $ ->
 
   $(window).resize ->
     if $(window).width() >= 768
+      $(document.body).removeClass('mobile-nav-open')
       $mainHeader.removeClass('mobile-nav-open')

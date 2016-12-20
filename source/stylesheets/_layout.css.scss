@@ -11,7 +11,7 @@ html {
 
 html, html a {
 	-webkit-font-smoothing: antialiased !important;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);	
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 html.no-js {
@@ -19,7 +19,7 @@ html.no-js {
 		display: inherit;
 	}
 	.next-title, #next-project {
-		display: none; 
+		display: none;
 	}
 }
 
@@ -28,13 +28,13 @@ html.no-js {
 	border: 5px dotted rgba(0,0,0,.03);
 	padding: 10px;
 	background-color: rgba(255, 255, 0, 0.03);
-	
+
 	&.center-it {
 		width: 50%;
 		max-width: 400px;
 		margin: 0 auto;
 		margin-top: 50px;
-		line-height: 1.5em;	
+		line-height: 1.5em;
 	}
 }
 
@@ -51,7 +51,16 @@ body {
 	max-width: 80rem;
 	margin: 0 auto;
 }
+.main-container {
+	margin-top: 55px;
 
+	&.has-sub-header {
+		margin-top: 81px;
+		@media only screen and (min-width: 768px) {
+			margin-top: 115px;
+		}
+	}
+}
 .image-container {
 	height: 200px;
 	margin-top: 9px;
@@ -66,9 +75,9 @@ body {
 	position: relative;
 	z-index: 1;
 	min-height: 570px;
-	
+
 	@media only screen and (max-width: 700px) {
-		min-height: 600px;	
+		min-height: 600px;
 	}
 
 	.title {
@@ -77,7 +86,7 @@ body {
 		bottom: 5px;
 		width: 100%;
 		padding-bottom: 25px;
-		
+
 	}
 
 	h2, h3 {
@@ -106,11 +115,11 @@ body {
 	padding: 0 1.25em;
 	line-height: 1.1em;
 	color: $darkgray;
-  
+
     p.caption {
         padding: 0 20px 20px;
     }
-    
+
     p.caption, .video h3.quote, .photo h3.quote {
         font-size: 1.1em;
         line-height: 1.3em;
@@ -177,138 +186,4 @@ div.hsformerror {
 div.value {
 	padding-top: 7px;
 	font-size: 20px;
-}
-
-#site-overlay {
-	#studio-header {
-		height: 85px;
-		background-color: rgba(9, 9, 9, .875);
-		overflow-x: auto;
-		transition: height 300ms ease-in-out;	
-		overflow-y: hidden;
-		&.hide-me {
-			height: 0px;	
-		}
-		@media (max-width: 769px) {
-			height: auto;
-		}
-		
-		.studio-head-container {
-			width: auto;
-			@media (min-width: 769px) {
-				min-width: 1325px; //change this number if we add more items to the nav
-			}
-			height: 40px;
-			padding: 10px 3.125em;
-			position: relative;
-			border-radius: 3px;
-			@media (max-width: 769px) {
-				min-width: auto;
-				padding-left: 2.125em;
-				padding-right: 2.125em;
-
-				& a:nth-child(3) {
-					display: none;
-				}
-			}
-			
-			.studio-head-item {
-				height: 50px;
-				width: 225px;
-				margin-right: 15px;
-				display: inline-block;
-				background-color: gray;
-				position: relative;
-				overflow: hidden;
-				border-radius: 3px;
-				@media (max-width: 769px) {
-					width: auto;
-					height: auto;
-					background: none;
-					border: none;
-				}
-				
-				&.active-studio {
-					border: 2px solid white;	
-					@media (max-width: 769px) {
-						border-top: none;
-						border-left: none;
-						border-right: none;
-						border-radius: 0;
-					}
-				}
-				
-				.image-box {
-					border-radius: 3px;
-					width: 100%;
-					height: 107px;
-					transform: scale(1,1);
-					transition: 300ms ease-in-out;
-					@media (max-width: 769px) {
-						display: none;
-					}
-				}
-				
-				&:hover {
-					.image-box {
-						transform: scale(1.03, 1.03);
-					}
-				}	
-				
-				&#team .image-box{
-					background-image: image-url('studio-nav/team.png');
-					background-position-y: -38px;
-				}
-				
-				&#careers .image-box{
-					background-image: image-url('studio-nav/careers.png');
-					background-position-y: -40px;
-				}
-				
-				&#live .image-box{
-					background-image: image-url('studio-nav/live.png');
-					background-position-y: -39px;
-				}
-
-				&#open-office-hours .image-box{
-					background-image: image-url('studio-nav/open-office-hours.jpg');
-					background-size: cover;
-					background-position-y: -49px;
-				}
-				
-				&#history .image-box{
-					background-image: image-url('studio-nav/history.png');
-					background-size: cover;
-					background-position-y: -49px;
-				}
-				
-				.studio-title {
-					color: #fdfdfd;
-					transform: scale(1,1);
-					transition: 300ms ease-in-out;
-					@media (min-width: 769px) {
-						font-size: 1.3em;
-						position: absolute;
-						bottom: 5px;
-						left: 25px;
-						&.desktop {
-							display: inline-block;
-						}
-						&.mobile {
-							display: none;
-						}
-					}
-					@media (max-width: 769px) {
-						font-size: 1em;
-						&.mobile {
-							display: inline-block;
-						}
-						&.desktop {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
 }

@@ -39,70 +39,44 @@
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		#page-wrapper
-			%header.main-header#main-header
-				%nav.nav-content
-					%a{:href => asset_url('/'), :id => "site-title"}
-						= image_tag('logo-header@2x.png', alt: "Involution Studios", width: "48", height: "26")
-					%a.nav-button.nav-partial.healthcare{:href => asset_url('healthcare')} Services
-					%a.nav-button.nav-partial.studio{:href => asset_url('studio/team')} About
-					.nav-hamburger#nav-hamburger Derp
-				%nav.nav-full#nav-full
-					%a.nav-button.healthcare{:href => asset_url('healthcare')} Services
-					%a.nav-button.products{:href => asset_url('products')} Products
-					%a.nav-button.studio{:href => asset_url('studio/team')} About
-					%a.nav-button.articles{:href => asset_url('articles')} Articles
-					%a.nav-button.contact{:href => asset_url('contact')} Contact
+			%header
+				.main-header#main-header
+					%nav.nav-content
+						%a{:href => asset_url('/'), :id => "site-title", :class => "header-logo"}
+							= partial "partials/logo-goinvo"
+						%a.nav-button.nav-partial.healthcare{:href => asset_url('healthcare')} Services
+						%a.nav-button.nav-partial.studio{:href => asset_url('studio/team')} About
+						.nav-hamburger#nav-hamburger
+							= partial "partials/icon-menu"
+					%nav.nav-full#nav-full
+						%a.nav-button.healthcare{:href => asset_url('healthcare')} Services
+						%a.nav-button.products{:href => asset_url('products')} Products
+						%a.nav-button.studio{:href => asset_url('studio/team')} About
+						%a.nav-button.articles{:href => asset_url('articles')} Articles
+						%a.nav-button.contact{:href => asset_url('contact')} Contact
 				- if currentPage.include? "studio"
-					%header#studio-header
-						.studio-head-container
-							%a{:href => "/studio/team"}
-								-if currentPage.include? "team"
-									.studio-head-item.active-studio#team
-										.image-box
-										.studio-title Team
-								-else
-									.studio-head-item#team
-										.image-box
-										.studio-title Team
-							%a{:href => "/studio/careers"}
-								-if currentPage.include? "careers"
-									.studio-head-item.active-studio#careers
-										.image-box
-										.studio-title Careers
-								-else
-									.studio-head-item#careers
-										.image-box
-										.studio-title Careers
-							%a{:href => "/studio/live"}
-								-if currentPage.include? "live"
-									.studio-head-item.active-studio#live
-										.image-box
-										.studio-title Live
-								-else
-									.studio-head-item#live
-										.image-box
-										.studio-title Live
-							%a{:href => "/studio/open-office-hours"}
-								-if currentPage.include? "open-office-hours"
-									.studio-head-item.active-studio#open-office-hours
-										.image-box
-										.studio-title.desktop Office Hours
-										.studio-title.mobile Visit
-								-else
-									.studio-head-item#open-office-hours
-										.image-box
-										.studio-title.desktop Office Hours
-										.studio-title.mobile Visit
-							%a{:href => "/studio/history"}
-								-if currentPage.include? "history"
-									.studio-head-item.active-studio#history
-										.image-box
-										.studio-title History
-								-else
-									.studio-head-item#history
-										.image-box
-										.studio-title History
-			#main-container
+					.sub-header.studio-header#studio-header
+						%a{:href => "/studio/team", :class => ('active-studio' if currentPage.include? 'team')}
+							.studio-head-item#team
+								.image-box
+								.studio-title Team
+						%a{:href => "/studio/careers", :class => ('active-studio' if currentPage.include? 'careers')}
+							.studio-head-item#careers
+								.image-box
+								.studio-title Careers
+						%a{:href => "/studio/live", :class => ('active-studio' if currentPage.include? 'live')}
+							.studio-head-item#live
+								.image-box
+								.studio-title Live
+						%a{:href => "/studio/open-office-hours", :class => ('active-studio' if currentPage.include? 'open-office-hours')}
+							.studio-head-item#open-office-hours
+								.image-box
+								.studio-title Office Hours
+						%a{:href => "/studio/history", :class => ('active-studio' if currentPage.include? 'history')}
+							.studio-head-item#history
+								.image-box
+								.studio-title History
+			.main-container#main-container{class: ('has-sub-header' if currentPage.include? 'studio')}
 				.container.content
 					= yield
 			%footer#main-footer
