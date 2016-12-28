@@ -3,7 +3,7 @@
 	%head
 		%meta{charset: "utf-8"}
 		%meta{name: "viewport",  content: "width=device-width, initial-scale=1.0, minimum-scale=1.0"}
-
+		%link{href: "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i", rel: "stylesheet"}
 		%title
 			- if content_for? :title
 				= yield_content :title
@@ -13,9 +13,6 @@
 		:javascript
 			document.documentElement.className = "";
 		= javascript_include_tag 'all'
-		%script{:type => "text/javascript", :src => "//use.typekit.net/brw1pwx.js"}
-		:javascript
-			try{Typekit.load();}catch(e){ }
 		= yield_content :page_head
 	- currentPage = current_page.path
 	- if currentPage.include? "healthcare"
@@ -44,12 +41,12 @@
 					%nav.nav-content
 						%a{:href => asset_url('/'), :id => "site-title", :class => "header-logo"}
 							= partial "partials/logo-goinvo"
-						%a.nav-button.nav-partial.healthcare{:href => asset_url('healthcare')} Services
+						%a.nav-button.nav-partial.healthcare{:href => asset_url('healthcare')} Work
 						%a.nav-button.nav-partial.studio{:href => asset_url('studio/team')} About
 						.nav-hamburger#nav-hamburger
 							= partial "partials/icon-menu"
 					%nav.nav-full#nav-full
-						%a.nav-button.healthcare{:href => asset_url('healthcare')} Services
+						%a.nav-button.healthcare{:href => asset_url('healthcare')} Work
 						%a.nav-button.products{:href => asset_url('products')} Products
 						%a.nav-button.studio{:href => asset_url('studio/team')} About
 						%a.nav-button.articles{:href => asset_url('articles')} Articles
