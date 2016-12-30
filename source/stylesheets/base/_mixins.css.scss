@@ -53,3 +53,25 @@
 	 */
 	*zoom: 1;
 }
+
+// @function rem($pixels, $context: $font-size-browser-context) {
+// 	@if (unitless($pixels)) {
+// 		$pixels: $pixels * 1px;
+// 	}
+// 	@if (unitless($context)) {
+// 		$context: $context * 1px;
+// 	}
+// 	@return #{$pixels/$context}rem;
+// }
+
+@mixin breakpoint($mq1: 0, $mq2: false, $maxmin: min-width) {
+	@if $mq2 == false {
+		@media ($maxmin: $mq1) {
+			@content;
+		}
+	} @else {
+		@media (min-width: $mq1) and (max-width: $mq2) {
+			@content;
+		}
+	}
+}

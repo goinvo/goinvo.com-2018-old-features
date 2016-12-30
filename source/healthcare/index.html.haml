@@ -20,39 +20,16 @@
 		%img.header-image{:src => '/images/healthcare/ipad_hero.png'}
 		%a{:href => "/healthcare/hgraph/"}
 			.button-h Read Case Study
-	.small-quote We help healthcare organizations make clinical strength software for high-test, high stress environments.
-	.projects-row
-		%a{:href => "/healthcare/3m"}
-			.project-item
-				.top-description
-					.desc-text Processing $4B/year
-				.image-wrapper
-					%img{:src => "/images/healthcare/3m_card.png"}
-				.bottom-description How our skunkworks for an ambitious start-up led to a $150M exit.
-				.company-name CodeRyte (3M acquisition)
-		%a{:href => "/healthcare/inspired-ehrs"}
-			.project-item
-				.top-description
-					.desc-text Influencing US Policy
-				.image-wrapper
-					%img{:src => "/images/healthcare/ehr_card.jpg"}
-				.bottom-description Evidence-based and clinically relevant graphic techniques for medical records.
-				.company-name National Institute of Health and University of Missouri
-		%a{:href => "/healthcare/personal-genome-project/"}
-			.project-item
-				.top-description
-					.desc-text Open Source Genomics
-				.image-wrapper
-					%img{:src => "/images/healthcare/pgp.jpg"}
-				.bottom-description The mission is to sequence and publicize 100,000 volunteers’ genomes in hope personal genomes will be used to improve the management of human health and disease.
-				.company-name Personal Genome Project
-	.very-large-quote
-		.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
+	.quote
+		%h2.quote-content We help healthcare organizations make clinical strength software for high-test, high stress environments.
+	= partial("partials/project-row", locals: {projects: data.project_rows.projects[0..2]})
+	.quote
+		%h2.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
 	.mountsinai-container
 		.left-content
-			.large-quote
-				.quote-content Genomics is brutally complicated. Patients struggle. Doctors flounder. Invo made them all smile.&#148;
+			.quote.justified
+				%h2.quote-content Genomics is brutally complicated. Patients struggle. Doctors flounder. Invo made them all smile.&#148;
 				.quote-author Elissa Levin, Director of Genomics, Mount Sinai Hospital, New York
 			%a{:href => "/healthcare/mount-sinai/"}
 				.button See how Invo designed genetic reporting
@@ -71,65 +48,14 @@
 		css: '',
 		  });
 		</script>
-	.very-large-quote
-		.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
+	.quote
+		%h2.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
 		.quote-author Serban Georgescu MD, InfoBionic Director of Clinical Development
-	.projects-row
-		%a{:href => "/healthcare/partners-gene-insight"}
-			.project-item
-				.top-description Genetic Interpretation
-				.image-wrapper
-					%img{:src => "/images/healthcare/geneinsight.png"}
-				.bottom-description GeneInsight is an IT platform used to streamline the analytics, interpretation and reporting of complex genetic test results.
-				.company-name Partners GeneInsight
-		%a{:href => "/healthcare/segterra"}
-			.project-item
-				.top-description
-					.desc-text Tuning Olympic Performance
-				.image-wrapper
-					%img{:src => "/images/healthcare/segterra.png"}
-				.bottom-description Inside Tracker: using blood analytics to improve health
-				.company-name Segterra
-		%a{:href => "/healthcare/diabetes/"}
-			.project-item
-				.top-description Diabetes Care
-				.image-wrapper
-					%img{:src => "/images/healthcare/diabetes.jpg"}
-				.bottom-description Designing techniques, behavior, and technology to dramatically change overhead required to manage chronic conditions.
-	.very-large-quote
-		.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
+	= partial("partials/project-row", locals: {projects: data.project_rows.projects[3..5]})
+	.quote
+		%h2.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
 		.quote-author George Moon, VP of Product, CodeRyte Inc.
-	.projects-row.bottom-margin
-		%a{:href => "/healthcare/tabeeb"}
-			.project-item
-				.top-description
-					.desc-text Crowdsourced Diagnostics
-				.image-wrapper
-					%img{:src => "/images/healthcare/tabeeb.png"}
-				.bottom-description Bringing global medical specialists to rural communities with the flick of a finger.
-				.company-name Tabeeb
-		%a{:href => "/products/care-cards"}
-			.project-item
-				.top-description Healthy Habits
-				.image-wrapper
-					%img{:src => "/images/healthcare/health-axioms.jpg"}
-				.bottom-description Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible.
-				.company-name Care Cards
-		%a{:href => "/healthcare/numera/"}
-			.project-item
-				.top-description Social Behavior Change
-				.image-wrapper
-					%img{:src => "/images/healthcare/numera.jpg"}
-				.bottom-description Behavioral data with rich visualizations and lifestyle recommendations.
-				.company-name Numera Health
-		%a
-			.project-item
-				.top-description
-					.desc-text
-				.image-wrapper
-					%img
-				.bottom-description
-				.company-name
+	= partial("partials/project-row", locals: {projects: data.project_rows.projects[6..8], row_class: 'margin-bottom'})
 	.design-med-wrapper
 		.content
 			%h1 Design is Medicine
@@ -216,7 +142,7 @@
 					%td
 						%a{:href => "/healthcare/hgraph"}
 							%img{:src => "/images/healthcare/partners/wallgreen.png"}
-	.enterprise-banner 
+	.enterprise-banner
 		.small-title We've shipped for the Enterprise too.
 		%a{:href => "/enterprise"}
 			.button See Our Case Studies

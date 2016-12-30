@@ -3,13 +3,13 @@
 .container {
 	padding-top: 55px;
 	margin-bottom: 0px;
-	
+
 	h6.subheader {
 		margin-top: 40px;
 		font-size: 1.375em;
 		font-weight: 400;
 		text-transform: uppercase;
-		
+
 		&.name {
 			text-transform: none;
 			margin-top: 0px;
@@ -18,47 +18,46 @@
 			margin-bottom: 3em;
 		}
 	}
-	
+
 	img {
 		padding-bottom: 60px;
 		width: 100%;
 		height: auto;
-		
+
 		&.with-caption {
-			padding-bottom: 1em;	
+			padding-bottom: 1em;
 		}
 	}
-	
+
 	.bottom-margin {
-		margin-bottom: 140px;	
+		margin-bottom: 140px;
 	}
-	
+
 	.top-margin {
-		margin-top: 2em;	
+		margin-top: 2em;
 	}
-	
+
 	.no-top-margin {
 		margin-top: 0px !important;
 	}
-	
+
 	.no-top-padding {
-		padding-top: 0px !important;	
+		padding-top: 0px !important;
 	}
-	
+
 	.no-bottom-margin {
 		margin-bottom: 0px !important;
 	}
-	
+
 	.medium-bottom-margin {
 		margin-bottom: 60px;
 	}
-	
+
 	.small-bottom-margin {
-		margin-bottom: 2em !important;	
+		margin-bottom: 2em !important;
 	}
-	
+
 	p {
-		line-height: 1.36363636em;
 		&.quote {
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
@@ -72,22 +71,22 @@
 				content: "\201D";
 			}
 		}
-		
+
 	}
-	
+
 	p.caption {
 		max-width: 75%;
 		margin-bottom: 3em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
-		
+
 		img {
 			max-width: 50%;
 			padding-bottom: 0px;
 		}
 	}
-	
+
 	ul {
 		font-size: 22px;
 		line-height: 28px;
@@ -95,7 +94,7 @@
 		margin-top: 20px;
 		list-style: disc;
 	}
-	
+
 	li {
 		margin-top: 15px;
 		line-height: 1.36363636em;
@@ -121,14 +120,14 @@
 		width: 75%;
 		padding-left: 2em;
 	}
-	
+
 	p.caption {
 		font-size: 18px;
 		line-height: 22.7px;
 		color: $gray;
-		
+
 		&.black {
-			color: #000;	
+			color: #000;
 		}
 	}
 }

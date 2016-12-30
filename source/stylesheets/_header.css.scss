@@ -36,7 +36,10 @@ body.mobile-nav-open {
 	transition: max-height 250ms;
 
 	a {
+		display: flex;
+		align-items: center;
 		color: $white;
+		font-size: 1.25rem;
 	}
 
 	&.mobile-nav-open {
@@ -97,14 +100,13 @@ body.mobile-nav-open {
 	flex: 1;
 
 	> a.nav-button {
-		padding: 4px 10px 0 10px;
+		padding: 0 10px;
 		opacity: 1;
 		transition: opacity 250ms;
 	}
 }
 .nav-full {
 	display: none;
-	padding-top: 4px;
 
 	> a {
 		opacity: 0;

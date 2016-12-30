@@ -3,33 +3,47 @@
 
 @import "compass/typography";
 
-/*************************************************************
- *  TYPES OF TYPE
-**************************************************************/
-
-body {
-	font-family: 'Roboto', sans-serif;
-	color: $black;
-	text-rendering: optimizeLegibility;
-	font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	margin-bottom: 0.5em;
-	line-height: 1;
-	display: block;
-	&.name {
-		font-weight: 400;
+@mixin font-size-map($font-size-map) {
+	@each $breakpoint, $font-size in $font-size-map {
+		@if $breakpoint == null {
+			font-size: $font-size;
+		} @else {
+			@include breakpoint($breakpoint) {
+				font-size: $font-size;
+			}
+		}
 	}
 }
 
+$font-break-point: 480px;
+
+$font-size-base: 20px;
+$font-size-body: (null: $font-size-base);
+$font-size-h1: (null: 2.75rem, $font-break-point: 3.75rem);
+$font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
+
+$font-weight-base: 300;
+$font-weight-bold: 700;
+
+html {
+	@include font-size-map($font-size-body);
+	font-family: 'Roboto', sans-serif;
+	color: $black;
+	text-rendering: optimizeLegibility;
+	font-weight: $font-weight-base;
+	line-height: 1.5;
+}
+
 h1 {
-	font-size: 3em;
+	@include font-size-map($font-size-h1);
+	line-height: 1.07;
+	font-weight: $font-weight-bold;
 }
 
 h2 {
-	font-size: 2.8em;
+	@include font-size-map($font-size-h2);
+	line-height: 1.15;
+	font-weight: $font-weight-bold;
 }
 
 h3 {
@@ -66,7 +80,6 @@ a {
 }
 
 p {
-	font-size: 1.375em;
 	margin-bottom: 1em;
 	em {
 		font-style: italic;

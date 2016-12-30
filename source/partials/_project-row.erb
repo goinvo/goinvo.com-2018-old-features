@@ -1,0 +1,14 @@
+<div class="projects-row <%= if defined? row_class then row_class end %>">
+	<% projects.each do |project| %>
+		<a class="project <%= if defined? project_class then project_class end %>" href="<%= project[:href] %>">
+			<div class="top-description">
+				<div class="desc-text"><%= project[:top_description] %></div>
+			</div>
+			<div class="image-wrapper">
+				<img src="<%= project[:image_url] %>"/>
+			</div>
+			<div class="bottom-description"><%= project[:bottom_description] %></div>
+			<div class="company-name"><%= project[:company_name] %></div>
+		</a>
+	<% end %>
+</div>
