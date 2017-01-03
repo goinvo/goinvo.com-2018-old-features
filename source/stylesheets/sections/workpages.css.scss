@@ -1064,7 +1064,6 @@
 			}
 		}
 		
-		
 		.item {
 			width: 33%;
 			vertical-align: top;
@@ -1072,7 +1071,7 @@
 			max-width: 410px;
 			padding: 0px 5px;
 			padding-right: 20px;
-			height: 150px; 
+			// height: 250px; 
 			
 			> a .icon {
 				transition: 400ms ease-in-out;	
@@ -1083,30 +1082,12 @@
 					transform: scale(1.15, 1.15);	 
 				 }
 			}
-			
-			@media only screen and (max-width: 1230px) {
-				height: 170px;
-			}
-			
-			@media only screen and (max-width: 1030px) {
-				//height: 220px;
-			}
-			
-			@media only screen and (max-width: 990px) {
-				height: 235px;
-			}
-			
-			@media only screen and (max-width: 790px) {
-				//height: 325px;
-			}
-			
 
 			@media only screen and (max-width: 740px) {
 				display: block;
 				padding: 0px 5px;
 				width: 100%;
 				margin: 0 auto;
-				height: 150px;
 				margin-bottom: 20px;
 			}
 			
@@ -1116,6 +1097,24 @@
 					background-size: cover;
 					background-repeat: no-repeat;
 					background-position: 0px;
+				}
+			}
+
+			&#open-playbook{
+				> a .icon {
+					background-image: image-url('products/open-source/playbook.png');	
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: 0px;
+				}
+			}
+
+			&#open-doh{
+				> a .icon {
+					background-image: image-url('products/determinants-of-health.png');	
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: -53px;
 				}
 			}
 			
@@ -1141,6 +1140,15 @@
 					@media only screen and (max-width: 790px) and (min-width: 740px){
 						background-position: -9px -2px;
 					}
+				}
+			}
+
+			&#open-pearl {
+				> a .icon {
+					background-image: image-url('products/open-source/pearl.png');	
+					background-size: 120%;
+					background-repeat: no-repeat;
+					background-position: -10px -8px;
 				}
 			}
 			
@@ -1259,48 +1267,18 @@
 						text-decoration: underline;	
 					}
 				}
-				
-				.website, .demo, .github, .ios {
-					display: inline-block;
-					margin-bottom: 5px;
-					margin-top: 2px;
-					
-					a {
-						margin-right: 5px;
-						&:last-of-type {
-							margin-right: 0px;	
-						}
-						.icon {
-							width: 20px;
-							height: 20px;
-							display: inline-block;
-							background-size: contain;
-							background-repeat: no-repeat;
-							box-shadow: none;
-							transition: 200ms ease-in-out;
-							
-							&:hover {
-								transform: scale(1.075,1.075);
-							}
-						}
-					}
-				}
-				
-				.ios .icon {
-					background: image-url('products/open-source/icons/itunes.svg');
-					background-size: 80% !important;
-					background-position: 2px 0px;
-					
-				}
-				.website .icon, .demo .icon {
-					background: image-url('products/open-source/icons/web.svg');
-					background-position-y: 1px;
-				}
-				.github .icon {
-					background: image-url('products/open-source/icons/github.svg');
-				}
+
 				.description {
 					margin-top: 2px;
+
+					p {
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					a {
+						margin-bottom: 5px;
+					}
 				}
 			}
 			
