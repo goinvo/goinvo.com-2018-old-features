@@ -80,17 +80,26 @@
   title: Designer
   bio: "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia."
   linkedin_url: "https://www.linkedin.com/in/sharon-lee-a137199"
-  twitter_username: 
+  twitter_username:
   email: "sharon@goinvo.com"
   photo: sharon_lee.jpg
 
 - first_name: Hrothgar
-  last_name: " "
+  last_name: ""
   title: Designer, Engineer
   bio: "Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice Univeristy, and joined Invo in 2016 following doctoral studies at the University of Oxford."
   github_username: "hrothgar"
   email: "hrothgar@goinvo.com"
   photo: hrothgar.jpg
+
+- first_name: Karishma
+  last_name: Bhatia
+  title: Designer, MD Candidate
+  bio: "Karishma is a scientist with an artistic vein. She is building a future in which health information is presented in a more accessible, understandable, and beautiful way. She's designed a Patient Hospital Guide for an NGO in Mumbai and an open source healthcare dataset search engine. Karishma joined Invo in 2016 with a degree in Computer Science from Brown University and is completing her medical degree from Brown in 2020."
+  email: "karishma@goinvo.com"
+  photo: karishma_bhatia.jpg
+  github_username: kbhatia2011
+  linkedin_url: "https://www.linkedin.com/in/karishma-bhatia-8487b974"
 
 - first_name: Jon
   last_name: Follett
