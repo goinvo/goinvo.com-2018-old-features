@@ -352,11 +352,13 @@ article#feature-article div.doh-container {
       }
   	}
   	button {
-  		/*margin-bottom: 3.5rem;*/
-  		margin: 0 auto 3.5rem;
-  		display: block;
-  		color: white;
-  		background-color: #1D5377;
+      display: inline-block;
+      width: 15.5rem;
+      height: 3rem;
+      padding: 0px;
+      margin: auto;
+      font-size: 16px;
+      text-align: center;
   	}
   }
 
