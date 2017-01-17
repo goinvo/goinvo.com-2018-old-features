@@ -21,9 +21,7 @@ input[type=submit].button {
 	@include button();
 }
 .button {
-		font-size: 1.4em;
-		line-height: .2em;
-		letter-spacing: .04em;
+	padding: 10px 20px;
 	&.disabled {
 		background: #BBB;
 	}
@@ -50,9 +48,7 @@ input[type=submit].button {
 	label {
 		display: block;
 		font-weight: 700;
-		font-size: 1.4em;
-		line-height: 0.2em;
-		letter-spacing: 0.04em;
+		font-size: 1rem;
 	}
 
 	input[type=text],
@@ -62,9 +58,7 @@ input[type=submit].button {
 	input[type=email],
 	input[type=tel],
 	textarea {
-		font-size: 1.6em;
-		line-height: .2em;
-		letter-spacing: .04em;
+		font-size: 1rem;
 		border: 1px solid #BBB;
 		padding: 0.75em;
 		@include border-radius(2px);
@@ -106,7 +100,7 @@ input[type=submit].button {
 
 form {
 	input[type=text], input[type=email], textarea, button, input[type=submit], #email-50d88d90-87a2-48ed-94a9-a141da52c545, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
-		font-size: 1.4em;
+		font-size: 1rem;
 		letter-spacing: inherit;
 		line-height: inherit;
 		font-weight: inherit;
@@ -122,7 +116,6 @@ form {
 		border: 2px solid $lightgray;
 		border-radius: 5px;
 		margin-bottom: 0.75em;
-		line-height: 1.4;
 		&:focus {
 			border-color: $blue;
 			outline: 0;
@@ -184,11 +177,10 @@ span.hs-form-required {
 }
 
 #send, .hs-button.primary.large {
-		margin-top: .5em;
-		padding: 15px 50px;
-		border-radius: 5px;
-		font-size: 1.3em;
-	}
+	margin-top: .5em;
+	padding: 15px 50px;
+	border-radius: 5px;
+}
 
 #hsForm_50d88d90-87a2-48ed-94a9-a141da52c545 input.hs-button.primary.large {
 	position: inherit;

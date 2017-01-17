@@ -25,13 +25,14 @@ $font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
 $font-weight-base: 300;
 $font-weight-bold: 700;
 
-html {
+html,
+body {
 	@include font-size-map($font-size-body);
 	font-family: 'Roboto', sans-serif;
 	color: $black;
 	text-rendering: optimizeLegibility;
 	font-weight: $font-weight-base;
-	line-height: 1.5;
+	line-height: 1.25;
 }
 
 h1 {
@@ -129,6 +130,15 @@ ol {
 }
 
 a {
-	display: inline-block;
 	color: $blue;
+}
+
+.font-thin {
+	font-weight: $font-weight-base;
+}
+.font-bold {
+	font-weight: $font-weight-bold;
+}
+.font-small {
+	font-size: .8rem;
 }

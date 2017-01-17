@@ -22,7 +22,7 @@
 			.button-h Read Case Study
 	.quote
 		%h2.quote-content We help healthcare organizations make clinical strength software for high-test, high stress environments.
-	= partial("partials/project-row", locals: {projects: data.project_rows.projects[0..2]})
+	= partial("partials/project-row", locals: {projects: get_projects_by_name(['coderyte', 'ehr', 'personal-genome-project'])})
 	.quote
 		%h2.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
@@ -38,8 +38,7 @@
 			.ted-container
 				%img{:src => '/images/healthcare/ted.gif'}
 	.micro-hs-form
-		%h4 Want to take your Healthcare product to the next level? Get in touch.
-
+		%h2 Want to take your Healthcare product to the next level? Get in touch.
 		<script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
 		<script>
 		  hbspt.forms.create({
@@ -51,103 +50,25 @@
 	.quote
 		%h2.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
 		.quote-author Serban Georgescu MD, InfoBionic Director of Clinical Development
-	= partial("partials/project-row", locals: {projects: data.project_rows.projects[3..5]})
+	= partial("partials/project-row", locals: {projects: get_projects_by_name(['partners-gene-insight', 'segterra', 'diabetes'])})
 	.quote
 		%h2.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
 		.quote-author George Moon, VP of Product, CodeRyte Inc.
-	= partial("partials/project-row", locals: {projects: data.project_rows.projects[6..8], row_class: 'margin-bottom'})
+	= partial("partials/project-row", locals: {projects: get_projects_by_name(['tabeeb', 'care-cards', 'numera']), row_class: 'margin-bottom'})
 	.design-med-wrapper
 		.content
-			%h1 Design is Medicine
+			%h2 Design is Medicine
 			%p It's time to design products to capture life and physiologic signs invisibly… usually through non-invasive sensors that don't require a single drop of blood, but just whiffs and sniffs. And when it is visible, it must be designed to feel wonderful.
 			%p Listen to Juhan Sonin discuss where patient health visits is heading in 20 years.
 		.audio-wrapper
 			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110751754&color=475e8a&show_artwork=false"></iframe>
-	.partners
-		.small-title A Few of Our Healthcare Partners
-		%ul.mobile
-			%li
-				%a{:href => "http://www.3m.com/"}
-					%img{:src => "/images/healthcare/partners/3m.png"}
-			%li
-				%a{:href => "http://www.himss.org/"}
-					%img{:src => "/images/healthcare/partners/hms.png"}
-			%li
-				%a{:href => "http://infobionic.com/"}
-					%img{:src => "/images/healthcare/partners/infob.png"}
-			%li
-				%a{:href => "http://www.jnj.com/"}
-					%img{:src => "/images/healthcare/partners/jandj.png"}
-			%li
-				%a{:href => "http://www.jopm.org/"}
-					%img{:src => "/images/healthcare/partners/pmed.png"}
-			%li
-				%a{:href => "http://www.mountsinai.org/"}
-					%img{:src => "/images/healthcare/partners/mtsinai.png"}
-			%li
-				%a{:href => "http://www.nih.gov/"}
-					%img{:src => "/images/healthcare/partners/nih.png"}
-			%li
-				%a{:href => "http://www.nsf.gov/"}
-					%img{:src => "/images/healthcare/partners/nsf.png"}
-			%li
-				%a{:href => "http://www.bd.com/"}
-					%img{:src => "/images/healthcare/partners/bd.png"}
-			%li
-				%a{:href => "http://www.partners.org/"}
-					%img{:src => "/images/healthcare/partners/partners.png"}
-			%li
-				%a{:href => "http://www.personalgenomes.org/"}
-					%img{:src => "/images/healthcare/partners/pgp.png"}
-			%li
-				%a{:href => "http://www.walgreens.com/"}
-					%img{:src => "/images/healthcare/partners/wallgreen.png"}
-		%table.non-mobile
-			%tbody
-				%tr
-					%td
-						%a{:href => "/healthcare/3m"}
-							%img{:src => "/images/healthcare/partners/3m.png"}
-					%td
-						%a{:href => "http://www.himss.org/"}
-							%img{:src => "/images/healthcare/partners/hms.png"}
-					%td
-						%a{:href => "http://www.infobionic.com/"}
-							%img{:src => "/images/healthcare/partners/infob.png"}
-					%td
-						%a{:href => "http://www.jnj.com/"}
-							%img{:src => "/images/healthcare/partners/jandj.png"}
-					%td
-						%a{:href => "http://www.jopm.org/"}
-							%img{:src => "/images/healthcare/partners/pmed.png"}
-					%td
-						%a{:href => "/healthcare/mount-sinai"}
-							%img{:src => "/images/healthcare/partners/mtsinai.png"}
-				%tr
-					%td
-						%a{:href => "/healthcare/inspired-ehrs"}
-							%img{:src => "/images/healthcare/partners/nih.png"}
-					%td
-						%a{:href => "http://www.nsf.gov/"}
-							%img{:src => "/images/healthcare/partners/nsf.png"}
-					%td
-						%a{:href => "http://www.bd.com/"}
-							%img{:src => "/images/healthcare/partners/bd.png"}
-					%td
-						%a{:href => "/healthcare/partners-gene-insight"}
-							%img{:src => "/images/healthcare/partners/partners.png"}
-					%td
-						%a{:href => "/healthcare/personal-genome-project"}
-							%img{:src => "/images/healthcare/partners/pgp.png"}
-					%td
-						%a{:href => "/healthcare/hgraph"}
-							%img{:src => "/images/healthcare/partners/wallgreen.png"}
+	= partial("partials/partners", locals: {title: "A Few of Our Healthcare Partners", partners: partners_of_type('healthcare')})
 	.enterprise-banner
-		.small-title We've shipped for the Enterprise too.
+		%h2.font-thin We've shipped for the Enterprise too.
 		%a{:href => "/enterprise"}
 			.button See Our Case Studies
 		%a{:href => "/enterprise"}
 			%img{:src => "/images/enterprise/dx-full.png"}
 	.office-hours
-		.small-title.white Want honest design feedback on your product?
-		.small-title.blue <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.
+		%h2.font-thin Want honest design feedback on your product?
+		%h2.font-thin <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.

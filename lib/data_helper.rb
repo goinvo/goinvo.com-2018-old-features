@@ -27,4 +27,26 @@ module DataHelper
   def feature_article_date(article)
     Date.parse(article.date).strftime("%B %Y")
   end
+
+  def get_projects_by_name(projects_to_find)
+    projects_to_find = [*projects_to_find]
+    projects_found = []
+
+    projects_to_find.each do |project_name|
+      match = data.project_rows.projects.detect { |project| project.name == project_name }
+      projects_found.push(match) if match
+    end
+
+    projects_found
+  end
+
+  def partners_of_type(type)
+    partners = []
+
+    data.partners.each do |partner|
+      partners.push(partner) if partner.type == type
+    end
+
+    partners
+  end
 end

@@ -17,171 +17,22 @@
 		%h1.title Understanding the entire product lifecycle…<br>because we create our own products.
 		%a{:href => "http://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519/ref=sr_1_fkmr0_1?ie=UTF8&qid=1418396483&sr=8-1-fkmr0&keywords=designing+for+emerging+tech"}
 			.button-h Buy our book
-	.small-quote.small-bottom-padding We have funded, designed, built, marketed, managed, sold, and revised our own products. We know that pain, the struggle, the intensity.
-	.small-quote.no-top-padding It’s a tough sell unless you’ve been there.
-	.projects-row
-		%a{:href => "/products/hgraph"}
-			.project-item
-				.top-description Your Health in One Picture
-				.image-wrapper
-					%img{:src => "/images/products/hgraph.png"}
-				.bottom-description hGraph is a visual representation of a patient's health status, designed to increase awareness of the individual's factors that can affect overall health.
-				.company-name hGraph
-		%a{:href => "/products/visual-government/"}
-			.project-item
-				.top-description Government Transparency
-				.image-wrapper
-					%img{:src => "/images/products/visual-budget.png"}
-				.bottom-description Government budgets can be tough to understand, but now the Town of Arlington, Massachusetts is providing the next generation of accessibility in financial information that allows citizens to view, engage with, and discuss.
-				.company-name Visual Government
-		%a{:href => "/products/care-cards"}
-			.project-item
-				.top-description Healthy Habits
-				.image-wrapper
-					%img{:src => "/images/products/health-axioms.png"}
-				.bottom-description Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible.
-				.company-name Care Cards
-	.very-large-quote
-		.quote-content “I wanted to reach out and say how fun the Care Cards cards you sent over were, merging simplicity of presentation and complex data representation.”
+	.quote.small-bottom-padding
+		%h2.quote-content We have funded, designed, built, marketed, managed, sold, and revised our own products. We know that pain, the struggle, the intensity.
+	.quote.no-top-padding
+		%h2.quote-content It’s a tough sell unless you’ve been there.
+	= partial("partials/project-row", locals: {projects: get_projects_by_name(['hgraph', 'visual-government', 'care-cards'])})
+	.quote
+		%h2.quote-content “I wanted to reach out and say how fun the Care Cards cards you sent over were, merging simplicity of presentation and complex data representation.”
 		.quote-author Mirar Bristol, MA. Director, Special Projects, Department of Medicine, Massachusetts General Hospital
 	.open-source-projects
-		.open-row
-			%h1 Open Source Projects
-		.open-row
-			.item#open-hgraph
-				%a{href: "http://hgraph.org/"}
-					.icon
-				.info
-					%a.title{href: "http://hgraph.org/"} hGraph
-					.website
-						%a{href: "http://hgraph.org/"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/hGraph"}
-							.icon
-					.description An open source javascript-based web application for visualizing health data.
-			.item#open-ehr
-				%a{href: "http://inspiredehrs.org/"}
-					.icon
-				.info
-					%a.title{href: "http://inspiredehrs.org/"} Inspired EHRs
-					.website
-						%a{href: "http://inspiredehrs.org/"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/EHR"}
-							.icon
-					.description The code repository for the prototypes included in the eBook <em>Inspired EHRs - Designing for Clinicians</em>.
-			.item#open-health-axioms
-				%a{href: "http://carecards.me/"}
-					.icon
-				.info
-					%a.title{href: "http://carecards.me/"} Care Cards
-					.website
-						%a{href: "http://carecards.me/"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/CareCards"}
-							.icon
-					.description Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible.
-		.open-row
-			.item#open-town-budget
-				%a{href: "http://www.arlingtonvisualbudget.org/"}
-					.icon
-				.info
-					%a.title{href: "http://www.arlingtonvisualbudget.org/"} Visual Town Budget
-					.demo
-						%a{href: "http://www.arlingtonvisualbudget.org/"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/Visual-Town-Budget"}
-							.icon
-					.description An open-source budget visualization framework.
-			.item#open-pain-trackr
-				%a{href: "http://www.paintrackr.com/"}
-					.icon
-				.info
-					%a.title{href: "http://www.paintrackr.com/"} PainTrackr
-					.website
-						%a{href: "http://www.paintrackr.com/"}
-							.icon
-					.ios
-						%a{href: "https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/PainTrackr"}
-							.icon
-					.description An open-source app that monitors physical pain. It logs pain based on severity and location and stores this data so that it can be easily transmitted.
-			.item#open-hmixer
-				%a{href: "http://www.hscoremixer.org/"}
-					.icon
-				.info
-					%a.title{href: "https://github.com/goinvo/hMixer"} hMixer
-					.github
-						%a{href: "https://github.com/goinvo/hMixer"}
-							.icon
-					.description A tool for doctors to quantify how individual factors impact overall health.
-		.open-row
-			.item#open-design-axioms
-				%a{href: "http://www.designaxioms.com/"}
-					.icon
-				.info
-					%a.title{href: "http://www.designaxioms.com/"} Design Axioms
-					.website
-						%a{href: "http://www.designaxioms.com/"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/DesignAxioms"}
-							.icon
-					.description The Design Axioms describe the minimal rule set for designing interfaces: the foundational concepts that are required knowledge for engineers and designers to create usable and elegant interfaces.
-			.item#open-pophealth
-				%a{href: "http://code.goinvo.com/pophealth"}
-					.icon
-				.info
-					%a.title{href: "https://github.com/goinvo/PopHealth"} popHealth
-					.github
-						%a{href: "https://github.com/goinvo/PopHealth"}
-							.icon
-					.description A tool for analyzing the patient population for hospitals, leveraging CHIA hospital and provider data.
-			.item#open-runnan
-				%a{href: "http://www.runnanthegame.com/"}
-					.icon
-				.info
-					%a.title{href: "http://www.runnanthegame.com/"} Runnan
-					.website
-						%a{href: "http://www.runnanthegame.com/"}
-							.icon
-					.ios
-						%a{href: "https://itunes.apple.com/us/app/runnan/id672915929?mt=8"}
-							.icon
-					.github
-						%a{href: "https://github.com/goinvo/Runnan"}
-							.icon
-					.description Runnan is simple but tough! You control a carrot with no arms who needs to navigate his way through an obstacle ridden universe of odd shapes, quirky people, and ambiguous looking foods.
-	.projects-row.bottom-margin.large-margin
-		%a{:href => "/products/design-axioms"}
-			.project-item
-				.top-description Design Edu in a Box
-				.image-wrapper
-					%img{:src => "/images/products/design-axioms.png"}
-				.bottom-description The Design Axioms describe the minimal rule set for designing interfaces: the 16 foundational concepts that are required knowledge for engineers and designers to create usable and elegant interfaces.
-				.company-name Design Axioms
-		%a{:href => "/products/staff-plan/"}
-			.project-item
-				.top-description Staff Planning
-				.image-wrapper
-					%img{:src => "/images/products/staffplan.png"}
-				.bottom-description Our internal tool for project planning.
-				.company-name StaffPlan
-		%a{:href => "/products/paintrackr/"}
-			.project-item
-				.top-description Track Pain
-				.image-wrapper
-					%img{:src => "/images/products/paintrackr.png"}
-				.bottom-description PainTrackr logs pain based on severity and location and stores this data so that it can be easily transmitted.
-				.company-name PainTrackr
+		%h2 Open Source Projects
+		.open-source-row
+			- data.open_source_projects.each do |project|
+				= partial("partials/open-source-project", locals: {project: project})
+	= partial("partials/project-row", locals: {projects: get_projects_by_name(['design-axioms', 'staff-plan', 'paintrackr']), row_class: "bottom-margin large-margin"})
 	.micro-hs-form
-		%h4 Need help designing your next product? Get in touch.
+		%h2 Need help designing your next product? Get in touch.
 
 		<script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
 		<script>
@@ -197,5 +48,5 @@
 			#video-bg
 				<video autoplay loop muted preload><source type="video/webm" src="../../videos/products/runnan.webmhd.webm"><source type="video/mp4" src="../../videos/products/runnan.mp4"></video>
 	.office-hours
-		.small-title.white Want honest design feedback on your product?
-		.small-title.blue <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.
+		%h2.font-thin Want honest design feedback on your product?
+		%h2.font-thin <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.

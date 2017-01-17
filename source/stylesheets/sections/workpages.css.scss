@@ -9,7 +9,7 @@
 		margin: 0 auto;
 	}
 
-	.title{
+	.title {
 		text-align: center;
 		margin: 0 auto;
 		padding: 50px 25px 20px 25px;
@@ -229,7 +229,7 @@
 	margin-bottom: 4em;
 
 	&.large-margin {
-		margin-bottom: 12em;
+		margin-bottom: 8em;
 	}
 }
 
@@ -501,22 +501,21 @@
 	}
 }
 
-.small-title {
-	font-size: 32px;
-	line-height: 38px;
-	text-align: center;
-
-	&.blue {
+.office-hours {
+	h2:first-of-type {
+		color: $white;
+	}
+	h2:nth-of-type(2) {
 		color: #A1BAD8;
 
 		a, a:visited {
 			color: #A1BAD8;
 			text-decoration: underline;
-		}
-	}
 
-	&.white {
-		color: #FFFFFF;
+			&:hover {
+				color: $white;
+			}
+		}
 	}
 }
 
@@ -526,48 +525,29 @@
 	padding-bottom: 30px;
 	color: #9B9B9B;
 
-	.small-title {
-		color: #9B9B9B;
+	h2 {
 		margin-bottom: 30px;
 		padding-top: 60px;
 	}
 
-	table.non-mobile {
-		width: 100%;
 
-		@media  only screen and (max-width: 500px) {
-			display: none !important;
-		}
-
-		tbody {
-			tr {
-				td {
-					text-align: center;
-					padding: 25px 15px;
-					vertical-align: middle;
-					img {
-						margin: 0 auto;
-					}
-				}
-			}
-		}
-	}
-
-	ul.mobile {
-		display: none;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
 		list-style: none;
-		width: auto;
-		margin: 0 auto;
-
-		@media  only screen and (max-width: 500px) {
-			display: inline-block !important;
-		}
 
 		li {
-			margin: 0 auto;
-	        width: 100%;
+			flex: 1 1 200px;
 			margin-bottom: 40px;
 			text-align: center;
+
+			a {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+			}
 			img {
 				margin: 0 auto;
 			}
@@ -604,7 +584,6 @@
 .enterprise-banner {
 	color: #9B9B9B;
 	background: radial-gradient(100% 80% at bottom, #8DA1B7, #F9F9F9);
-	border-top: 1px solid #edecec;
 	text-align: center;
 	max-height: 360px;
 	padding-top: 30px;
@@ -616,23 +595,13 @@
 		max-width: 950px;
 	}
 
-	a {
-		display: block;
-		margin: 10px 0;
-	}
-
 	.button {
-		color: #9B9B9B;
-		padding: 18px 20px 16px 20px;
-		height: auto;
 		display: inline-block;
-		font-size: 25px;
+		margin: 10px auto;
+		color: #9B9B9B;
 		border-radius: 3px;
-		display: block;
 		border: 1px solid #9B9B9B;
 		cursor: pointer;
-		width: 340px;
-		margin: 0 auto;
 	}
 }
 
@@ -770,22 +739,21 @@
 			margin: 0px;
 			margin-left: 60px;
 			padding-top: 50px;
-			margin-top: 0px;
-			text-align: left;
 			color: $white;
-			line-height: 1.2em;
+			text-align: left;
 		}
 		a {
-			width: 90%;
+			display: inline-block;
+			margin-left: 85px;
 		}
-
 		.button-h {
+			display: inline-block;
+			position: relative;
+			bottom: auto;
+			left: auto;
 			color: $white;
 			border-color: $white;
-			display: inline-block;
-			position: static;
-			margin-left: 60px;
-			margin-top: 30px;
+			transform: none;
 		}
 
 
@@ -793,14 +761,14 @@
 			height: 700px;
 			h1.title {
 				width: 600px;
-				font-size: 50px;
+				// font-size: 50px;
 			}
 		}
 
 		@media only screen and (max-width: 950px) {
 			height: 550px;
 			h1.title {
-				font-size: 45px;
+				// font-size: 45px;
 			}
 		}
 
@@ -811,11 +779,8 @@
 				padding-left: 20px;
 				margin-left: 0px;
 				margin: 0 auto;
-				font-size: 40px;
+				// font-size: 40px;
 				padding-top: 80px;
-			}
-			a {
-				width: 80%;
 			}
 			.button-h {
 				margin-left:0px;
@@ -892,39 +857,26 @@
 	margin-bottom: 190px;
 	background-color: rgba(156, 174, 189, 0.05);
 
-	.open-row {
-		width: auto;
+	h2 {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.open-source-row {
+		display: flex;
+		flex-wrap: wrap;
 		margin: 0 auto;
-		padding: 0px 5px;
 		max-width: 1280px;
 		padding-top: 40px;
-
-		&:nth-of-type(1) {
-			padding-top: 0px;
-		}
-
 
 		@media only screen and (max-width: 740px) {
 			padding-top: 0px;
 		}
 
-		h1 {
-			padding-left: 5px;
-			text-align: center;
-			@media only screen and (max-width: 740px) {
-				margin-bottom: 1em;
-			}
-		}
 
-
-		.item {
-			width: 33%;
-			vertical-align: top;
-			display: inline-block;
-			max-width: 410px;
-			padding: 0px 5px;
-			padding-right: 20px;
-			height: 150px;
+		.open-source-project {
+			flex: 1 1 400px;
+			padding: 10px 10px 20px 10px;
 
 			> a .icon {
 				transition: 400ms ease-in-out;
@@ -934,32 +886,6 @@
 				 > a .icon {
 					transform: scale(1.15, 1.15);
 				 }
-			}
-
-			@media only screen and (max-width: 1230px) {
-				height: 170px;
-			}
-
-			@media only screen and (max-width: 1030px) {
-				//height: 220px;
-			}
-
-			@media only screen and (max-width: 990px) {
-				height: 235px;
-			}
-
-			@media only screen and (max-width: 790px) {
-				//height: 325px;
-			}
-
-
-			@media only screen and (max-width: 740px) {
-				display: block;
-				padding: 0px 5px;
-				width: 100%;
-				margin: 0 auto;
-				height: 150px;
-				margin-bottom: 20px;
 			}
 
 			&#open-pain-trackr{
@@ -1112,7 +1038,7 @@
 					}
 				}
 
-				.website, .demo, .github, .ios {
+				.website, .github, .ios {
 					display: inline-block;
 					margin-bottom: 5px;
 					margin-top: 2px;
@@ -1285,14 +1211,9 @@
 	padding: 30px 30px;
 	text-align: center;
 
-	h4 {
+	h2 {
 		color: white;
-	}
-
-	.hs-button.primary.large {
-		margin-top: 0;
-		width: 25%;
-		min-width: 250px;
+		margin-bottom: 15px;
 	}
 }
 
@@ -1309,8 +1230,5 @@
 
 	.hs-input {
 		border: 2px solid #a3a3a4;
-	}
-
-	.hs-button {
 	}
 }
