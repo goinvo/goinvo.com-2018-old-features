@@ -1,6 +1,6 @@
 @import "base/colors";
+@import "base/mixins";
 @import "base/type";
-@import "../base/mixins";
 
 /************************************
  **  Careers
@@ -16,7 +16,7 @@
 	}
 	.hero {
 		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/careers/careers.jpg');
-		
+
 	}
 
 	#content-area {
@@ -111,6 +111,6 @@
 
 @media only screen and (max-width: 750px) {
 	#video-bg {
-		display: none;	
+		display: none;
 	}
 }

@@ -1,5 +1,5 @@
 - id: "hgraph"
-  name: "gGraph"
+  name: "hGraph"
   site: "http://hgraph.org/"
   github: "https://github.com/goinvo/hGraph"
   description: "An open source javascript-based web application for visualizing health data."
