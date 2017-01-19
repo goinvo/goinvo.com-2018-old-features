@@ -6,7 +6,7 @@
 			var post = posts[0];
 			// Set the recent blog post section
 			$('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + post.title + '</h2></div></a>');
-			$('#blog .photo-container').css('background-image', 'url(' + findFirstBlogPostImage(post) + ')');
+			$('#blog .photo-container').css('background-image', 'url(' + post.imageUrl + ')');
 		}
 		getHubspotBlogPosts(makeBlogPostBottom);
 		var homepageHeaderContent = [

@@ -6,15 +6,12 @@
   :javascript
     function renderBlogPosts(posts) {
       var blogArticleList = $('ul.blog-article-list');
+      if (!posts) {
+        blogArticleList.text('Oops! We can\'t load our blog articles right now, but you can click the link below to see them all.')
+        return;
+      };
       $.each(posts, function(i, post) {
-        var currentString = post.encoded;
-        var sIndex = currentString.indexOf('<img');
-        currentString = currentString.substr(sIndex + 4);
-        sIndex = currentString.indexOf('src=');
-        currentString = currentString.substr(sIndex + 5);
-        sIndex = currentString.indexOf('"');
-        currentString = currentString.substr(0, sIndex);
-        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
+        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + post.imageUrl + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
       });
     }
     $(function() {
