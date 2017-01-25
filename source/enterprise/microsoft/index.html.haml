@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Microsoft")
+- client = get_project_by_id("microsoft")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Microsoft
+		%h2.client{style: "color: #{client.primary_color}"} Microsoft
 
 		%h6.subheader Results
 		%p Invo&rsquo;s redesign transformed one of Expression Web&rsquo;s key features, Super Preview, from having 60% of the screen being dedicated to UI an affordances to under 10%, all while improving functionality and usability.
@@ -76,4 +76,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

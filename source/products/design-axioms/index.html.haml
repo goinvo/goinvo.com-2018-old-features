@@ -12,16 +12,16 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Design Axioms")
+- client = get_project_by_id("design-axioms")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Design Axioms
+		%h2.client{style: "color: #{client.primary_color}"} Design Axioms
 
 		%h6.subheader Recognition
 		%p.quote.no-top-margin.no-top-padding Overall, Design Axioms is an excellent reference deck for the beginning interface designer and provides a good set of principles to start building an educational foundation upon.
 		%p.caption Dominic Flask, Editor at Designers Review of Books
-		
+
 		%h6.subheader Practice Areas
 		%p.small-bottom-margin UX Strategy, Open Source
 
@@ -43,50 +43,50 @@
 			%img.with-caption{alt: "Design Axioms", src: "../../images/clients/design-axioms/all_cards.jpg"}/
 		%p.caption The Design Axioms set of 21 cards is a framework for design problem solving.
 
-		%h4 Overview
+		%h2 Overview
 		%p Four years in the making, the card set has been published as a physical deck, available via Amazon, and as digital art on designaxioms.com. The initial deck, which includes 21 beautiful cards illustrated by Sarah Kaiser, provides a simple but powerful reference set to inspire and excite UI designers and engineers. Perfect for use during brainstorming sessions, design critiques, or as a day-to-day reference, Design Axioms is the fun gift that UI and UX practitioners will want to give themselves. It is not only a fantastic design education, but a piece of artwork as well. Best of all, the content is open source and ready for anyone to creatively remix, share, hack, and make these ideas better. The Design Axioms content from illustrations to words to concepts are licensed under Creative Commons Attribution 3.0.
-		
+
 		%div
 			%img.with-caption{alt: "Care Cards card Move More.",  src: "../../images/clients/design-axioms/make_things.jpg"}/
-		
-		%h4.top-margin What problems does Design Axioms solve?
+
+		%h2.top-margin What problems does Design Axioms solve?
 		%p There are hundreds of design books on usability, HCI principles, design research, user interface patterns, and graphic design. However, there is a dearth of concise interface design advice for the craftsman, for the lone engineer trying to be the interface designer, and for IT teams struggling to develop elegant services. Design Axioms is the analog for The Elements of Style by Strunk and White on user interface that encompasses layout, interaction, visual design, and prototyping tenets. The designer reading these tenets should think, “This is the essence of what I should do” and they will refer to the axioms as a reference and constant reminder of good interface design practices.
 
 		%div.top-margin
 			%img.with-caption{alt: "Care Cards card Move More.",  src: "../../images/clients/design-axioms/design_box.jpg"}/
-		
-		%h4.top-margin What are you going to get out of Design Axioms?
+
+		%h2.top-margin What are you going to get out of Design Axioms?
 		%p.no-bottom-margin
 			%em It's a framework for design problem solving.
 		%p Don’t tell me the answer, tell me how to think about the problem.
-		
+
 		%p.no-bottom-margin
 			%em It's a multi-disciplinary attack on interface design
 		%p Interface designers need a spectrum of skills — not just wireframing or usability analysis — to craft elegant designs. Fluency in graphic design, human-computer interaction, human factors, type setting, and many other skills are required.
-		
+
 		%p.no-bottom-margin
 			%em It will fit in your pocket.
 		%p It’s not a 500-page tome that describes how to use checkboxes versus pull-down menus. Concept-based mantras based on visual stories rather than pages of description allow people to quickly grok the notion and implement. Reading about visual design is counter intuitive; you need to see it … and consume and retain the ideas. 500 page text-filled bibles miss the mark. And who reads anymore?
-		
+
 		%p.no-bottom-margin
 			%em It makes us feel good to design compelling experiences.
 		%p As product designers, we make design choices because it’s good for users and us (the designers). The designer behind the MacBook Pro’s auto-hiding magnetic lid hook most likely felt great about the final product: it’s a spectacularly elegant design. This is why we sweat over pixels and typography: we want to love and be proud of our work.
-		
-		%h4.top-margin Philosophy
+
+		%h2.top-margin Philosophy
 		%p Architects are expected to have a handle on civil, material, and mechanical engineering, landscape architecture, building contracting and city codes, aesthetics, interior design, manipulating light, home energy consumption, and how people engage with buildings and each other.
 		%p Interface designers require a similarly broad spectrum of skills from typography to layout and graphic design to interaction design to storytelling.
 		%p And there is an impedance mismatch with the design community (and with company cultures) on these skills and practices required for designing software interfaces.
 		%p Design Axioms is the bromide for design disorientation. Rather than concentrate on a single discipline within interface design (such as interaction or usability), Design Axioms takes a holistic approach to describing the key concepts of the entire act of creating an interface from prototyping to using real data to visual design and layout to interaction patterns.
-		
+
 		%p
 			%a{href: "http://www.amazon.com/gp/product/B006GGHQ3G/"}
 		%div
 			%img.with-caption{alt: "Design Axioms", src: "../../images/clients/design-axioms/ipad.jpg"}/
 		%p.caption Also available for free download on <a href = "https://itunes.apple.com/app/designaxioms/id576445408?mt=8">iTunes</a>.
-		
+
 
 #next-project.row
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

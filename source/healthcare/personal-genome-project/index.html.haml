@@ -12,7 +12,7 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Personal Genome Project")
+- client = get_project_by_id("personal-genome-project")
 
 %article#complex-case.pgp
 	%header.hero
@@ -20,7 +20,7 @@
 			.medium-6.small-12.small-centered.columns
 				.title
 					.inner-title
-						%h2 Personal Genome Project:
+						%h1 Personal Genome Project:
 						%h3 The PGP Gains New Business Focus with Invo Workshop
 	.row#mainContent
 		.medium-6.small-12.small-centered.columns
@@ -58,4 +58,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

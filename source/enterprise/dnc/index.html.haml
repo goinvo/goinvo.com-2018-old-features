@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("DNC")
+- client = get_project_by_id("dnc")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} DNC
+		%h2.client{style: "color: #{client.primary_color}"} DNC
 
 		%h6.subheader Results
 		%p The DNC was able to deploy this new voter registration infrastructure in time for the 2010 mid-term elections, increasing voting accessibility for American citizens.
@@ -62,4 +62,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

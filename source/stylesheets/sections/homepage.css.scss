@@ -240,13 +240,13 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	position: relative;
 
 	&.long-text {
-		.actual-title {
-			font-size: 50px;
-		}
-		.actual-content {
-			font-size: 22px;
-			line-height: 26px;
-		}
+		// .actual-title {
+		// 	font-size: 50px;
+		// }
+		// .actual-content {
+		// 	font-size: 22px;
+		// 	line-height: 26px;
+		// }
 	}
 
 	&:hover {
@@ -271,26 +271,8 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		padding-top: 0;
 	}
 
-	.actual-title {
-		font-size: 70px;
-		@media only screen and (max-width: 1380px)  and (min-width: 1213px){
-		}
-
-		@media only screen and (max-width: 980px) and (min-width: 750px){
-			font-size: 60px;
-			line-height: 63px;
-		}
-
-		@media only screen and (max-width: 750px){
-			font-size: 50px;
-			line-height: 52px;
-		}
-	}
-
 	.actual-content {
-		font-size: 28px;
 		margin-top: 14px;
-		line-height: 36px;
 	}
 
 	.actual-portfolio {
@@ -317,7 +299,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		left: 0;
 
 		p {
-			font-size: 1em;
 			margin-bottom: 0;
 		}
 	}
@@ -363,7 +344,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	.actual-button {
 		padding-left: 30px;
 		padding-right: 30px;
-		font-size: 23px;
 	}
 
 	.sub-title {
@@ -381,8 +361,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	color: #9B9B9B;
 
 	.small-title {
-		font-size: 32px;
-		line-height: 38px;
 		margin: 0 20px 30px;
 		padding-top: 60px;
 		text-align: center;
@@ -536,7 +514,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		@media only screen and (min-width: 601px) {
 	        padding: 6em 3em 2em;
 	     }
-		font-size: 1.25em;
 		color: $white;
 		position:absolute;
 		bottom: 0;
@@ -545,28 +522,18 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		h2, h3, h5 {
-			font-weight: 400;
 			margin-bottom: 0;
 		}
 		.name {
-			font-size:75px;
 			margin-bottom:0px;
 		}
-		.sub-name {
-			font-size:40px;
-		}
 		h2 {
-			font-size: 40px;
 			margin-bottom: 0.2em;
-		}
-		h3 {
-			font-size: 1.65em;
 		}
 		.tag, .button {
 			display: inline-block;
 			margin-bottom: 1em;
 			text-transform: uppercase;
-			font-size: 23px;
 		}
     .tag {
        margin-bottom: 10px;
@@ -574,11 +541,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 }
 
-@media only screen and (max-width: 1024px) {
-	.block .title {
-		font-size: 1em;
-	}
-}
 
 @media only screen and (max-width: 640px) {
 	.double {
@@ -594,21 +556,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	.block {
-		.title {
-			.tag {
-				font-size: 14px;
-			}
-			.name {
-				font-size: 52px;
-			}
-			.sub-name {
-				font-size: 26px;
-			}
-		}
-	}
-}
 
 #blog {
   .photo-container {

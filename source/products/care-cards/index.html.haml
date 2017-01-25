@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Care Cards")
+- client = get_project_by_id("care-cards")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Card Cards
+		%h2.client{style: "color: #{client.primary_color}"} Card Cards
 
 		%h6.subheader Results
 
@@ -56,13 +56,13 @@
 		%div
 			%img{alt: "Card Cards", src: "../../images/clients/health-axioms/health-axioms-cards-fanned-out.jpg"}
 
-		%h4 Overview
+		%h2 Overview
 		%p Care Cards gives you habits to improve your health and well-being, literally changing your life. There are 40 cards. On the front of each is a beautiful illustration reminding you of a specific, healthful axiom. On the back are essential insights and tips that help you bring the axiom into your everyday life.
 
-		%h4 Creation
+		%h2 Creation
 		%p Our Chief Creative Officer, Juhan Sonin, was trying to live healthier. While he discovered an abundance of tips and resources on the Internet they were far-flung and temporal. While his doctor offered sage advice that also proved impermanent after the doctor’s visit and within the pace of everyday life. He needed something to take healthful tips and inject them in a more lasting way.
 
-		%h4 Philosophy
+		%h2 Philosophy
 		%p We are part of a global movement to shift the healthcare system to:
 		%ul
 			%li Non-invasive personal diagnostics
@@ -101,4 +101,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

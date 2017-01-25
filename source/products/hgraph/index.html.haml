@@ -12,14 +12,14 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("hGraph")
+- client = get_project_by_id("hgraph")
 
 %article#complex-case.hgraph
 	%header.hero
 		.medium-6.small-12.small-centered.columns
 			.title
 				.inner-title
-					%h2 hGraph:
+					%h1 hGraph:
 					%h3 Your health in one picture.
 	#mainContent
 		%p hGraph is currently the only <a href="https://github.com/goinvo/hGraph">open source tool</a> for visualizing a patient&rsquo;s complete range of health metrics. This one-of-a-kind visualization approach aggregates health data both on a personal and community level. It provides clinicians with at-a-glance analytics of a patient&rsquo;s overall health, allowing doctors to spot patterns and red flags. It works by comparing a person&rsquo;s health data against targeted health ranges based on factors like age and gender. Metrics that appear red are either lower or higher than the &ldquo;good health&rdquo; range. The hScore is an overall, aggregated score of health (1-100) that represents a person&rsquo;s health status, or grade.
@@ -69,9 +69,9 @@
 			%img{:src => "../../images/clients/hgraph/hgraph-health-history-timeline.jpg", :alt => "hGraph displaying a medical timeline for a patient, showing how heatlh statistics and numbers can be tracked and change over time."}
 			.caption hGraph stores data from all medical providers making it easier for patients to follow up with their primary care physicians.
 		%p.bottom To learn about what you can do with <a href="https://www.hgraph.org">hGraph</a> and how you can participate in its <a href="https://github.com/goinvo/hGraph">development</a>, contact us at <a href="mailto:hgraph@goinvo.com">hgraph@goinvo.com</a>.
-		
+
 .row#next-project
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

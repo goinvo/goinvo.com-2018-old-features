@@ -12,17 +12,17 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("DataXu")
+- client = get_project_by_id("dataxu")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} DataXu
+		%h2.client{style: "color: #{client.primary_color}"} DataXu
 
 		%h6.subheader Results
 		%p DataXu had a unique vision to be a leader in the big data game. Thanks to the Invo redesign that data now gives their clients many recommendations and methods to forecast, in real time, anytime.
 
 		%p DataXu also made significant revenue strides for the second year running, growing from <a href="http://www.adexchanger.com/online-advertising/inc-revenue-survey-mediamath-topped-300m-in-2013-dataxu-118m/">$87 million in 2012 to $118.4 million in 2013</a>.
-		
+
 		%p.quote <a href="http://www.businesswire.com/news/home/20140327005894/en/DataXu-Simplifies-Programmatic-Marketing-Software-Console#.U5tYSJRdWps">At any given moment, our team is managing hundreds of different campaigns, so how we use our time is critical. With this new console, DataXu has made a huge leap forward for programmatic ease of use.</a>
 		%p.caption Joel Nierman, VP, media and digital strategy, Liquidus
 
@@ -57,7 +57,7 @@
 			%video{auto: "true", width: "100%", preload: "true", controls: "true", poster: "../../videos/dataxu/DataXu_poster.png"}
 				%source{src: "../../videos/dataxu/DataXu.mp4", type: 'video/mp4'}
 				%source{src: "../../videos/dataxu/DataXu.webm", type: 'video/webm'}
-		%p.caption 
+		%p.caption
 		/ %p.caption Group design session with DataXu team to define user profiles.
 		%div
 			%img.with-caption{alt: "Exploration of many concepts for various parts of the software", src: "../../images/clients/dataxu/dataxu-ux-concept-sketches.jpg"}/
@@ -69,4 +69,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

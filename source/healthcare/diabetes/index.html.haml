@@ -12,20 +12,20 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Diabetes")
+- client = get_project_by_id("diabetes")
 
 %article#complex-case.diabetes
 	%header.hero
 		.medium-6.small-12.small-centered.columns
 			.title
 				.inner-title
-					%h2 Live your life, <br />not the condition.
+					%h1 Live your life, <br />not the condition.
 					%h3 We understand living with, treating, and designing for Type I and Type II Diabetes.
 	#mainContent
 		.center-image-content.large
 			%img{:src => "../../images/clients/diabetes/diabetes-needs-map.jpg", :alt => "Needs Map of a patient living with Diabetes."}
 
-		%h3 We have researched, designed, tested, and validated chronic condition management software and hardware that drive life-critical medical decisions.
+		%h2 We have researched, designed, tested, and validated chronic condition management software and hardware that drive life-critical medical decisions.
 
 		.center-image-content.large
 			%img{:src => "../../images/clients/diabetes/ux-diabetes-research.jpg", :alt => "Collecting and coalescing user feedback to inform design decisions."}
@@ -42,7 +42,7 @@
 
 		%p Testing key human factor issues such as workflow, ease of use, contrast, low-light readability, and handling life-critical situations.
 
-		%h3 We've conducted market and gap analysis to steer business, technology, and design requirements.
+		%h2 We've conducted market and gap analysis to steer business, technology, and design requirements.
 
 		.center-image-content.large
 			%img{:src => "../../images/clients/diabetes/technology-exploration.jpg", :alt => "Exploring the market of emerging technologies."}
@@ -59,12 +59,12 @@
 
 		%p A "war room" for design helps with spatial memory, manipulating ideas, and building shared understanding.
 
-		%h3 We've designed battle-tested and FDA approved medical services.
+		%h2 We've designed battle-tested and FDA approved medical services.
 
 		.center-image-content.large
 			%img{:src => "../../images/clients/diabetes/diabetes-device-concept.jpg", :alt => "Diabetes care in the palm of your hands."}
 
-		%p Diabetes care in the palm of your hands. 
+		%p Diabetes care in the palm of your hands.
 
 		.center-image-content.large
 			%img{:src => "../../images/clients/diabetes/diabetes-device-ui-concept.jpg", :alt => "A person's health status trending into a life-critical situtation."}
@@ -75,9 +75,9 @@
 			%img{:src => "../../images/clients/diabetes/ux-diabetes-device.jpg", :alt => "People can easily care for themselves on the go."}
 
 		%p People can easily care for themselves on the go.
-		
+
 .row#next-project
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

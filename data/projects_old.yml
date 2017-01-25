@@ -1,0 +1,189 @@
+- client: "3M"
+  main_image: "3m_main.jpg"
+  practice_area_names: "Enterprise, Health"
+  description: "How our skunkworks for an ambitious start-up led to a $150M exit."
+  budget: 500000 #Verify
+  duration: 60 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: 3m.jpg
+  phases: #Verify
+    - duration: 8
+      full_time_staff: 1
+      service_names: "Envision"
+    - duration: 8
+      full_time_staff: 1.5
+      service_names: "Envision, Craft"
+    - duration: 32
+      full_time_staff: 3
+      service_names: "Envision, Blueprint, Craft, Build, Support"
+    - duration: 12
+      full_time_staff: 2.25
+      service_names: "Craft, Build, Support"
+  milestones:
+    - description: "Product vision realized, sales team hits pavement."
+      during_week: 10
+    - description: "Prototype captures first customer, production begins."
+      during_week: 16
+    - description: "CodeRyte sold to 3M"
+      during_week: 40
+    - description: "v01 launched, 50% efficiency gains."
+      during_week: 48
+
+- client: "hGraph"
+  main_image: "hgraph-your-health-in-one-picture.jpg"
+  practice_area_names: "Health"
+  description: "Open source solution for visualizing a complete range of health metrics."
+  budget: 50000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: hgraph.jpg
+
+- client: "Affinnova"
+  main_image: "concept-studio-product-blueprint-stickies.jpg"
+  practice_area_names: "Enterprise, Marketing Optimization"
+  description: "Product marketing workflow & testing system."
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: true
+  story_template: false
+  hide_in_layout: false
+  logo: affinnova.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+
+
+## ROW 2 ##
+
+- client: "DataXu"
+  main_image: "dataxu-campaign-dashboard-user-interface-tablet.jpg"
+  practice_area_names: "Enterprise, Marketing Optimization"
+  description: "Real-time decision engine for marketing investments."
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: true
+  story_template: false
+  hide_in_layout: false
+  logo: dataxu.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+
+- client: "Oracle"
+  main_image: oracle-agile-plm-ui-design-development.jpg
+  practice_area_names: "Enterprise"
+  description: "A complete suite redesign, a new internal UX team, and an agile development process."
+  budget: 500000 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  hide_in_layout: false
+  logo: oracle.jpg
+
+# - client: "Infobionic"
+#   main_image: #require
+#   practice_area_names: "Healthcare"
+#   description: "Design strategy and UI design for remote patient monitoring of EKGs (electrocardiogram)."
+#   budget: 100000 #Verify
+#   duration: #require
+#   repeat_client: #require
+#   story_template: false
+#   hide_in_layout: false
+#   logo: #require
+
+- client: "McAfee"
+  main_image: "mcafee-total-protection-desktop-app-design.jpg"
+  practice_area_names: "Consumer"
+  description: "Flagship consumer and enterprise computer security software."
+  budget: 500000 #Verify
+  duration: 14 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  hide_in_layout: false
+  logo: mcafee.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+
+## ROW 3 ##
+
+- client: "Numera"
+  main_image: "numera-iphone-ios-design.jpg"
+  practice_area_names: "Health"
+  description: "Behavioral data with rich visualizations and lifestyle recommendations."
+  budget: 100000 #Verify
+  duration: 14 #Verify
+  repeat_client: true
+  story_template: false
+  hide_in_layout: false
+  logo: numera.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+
+- client: "Personal Genome Project"
+  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
+  practice_area_names: "Health"
+  description: "New business strategy and visualization."
+  budget: 20000 #Verify
+  repeat_client: true
+  story_template: true
+  hide_in_layout: false
+  logo: curl.jpg
+
+- client: "Microsoft"
+  main_image: "microsoft-expression-studio-product-architecture.jpg"
+  practice_area_names: "Consumer"
+  description: "New design patterns to compete with Adobe."
+  budget: 200000 #Verify
+  duration: 14 #Verify
+  repeat_client: false #Verify
+  story_template: false
+  hide_in_layout: false
+  logo: microsoft.jpg
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"
+
+## ROW 4 ##
+
+- client: "SCSK Corporation"
+  main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
+  practice_area_names: "Enterprise, Data Analytics"
+  description: "Powerful big data platform to showcase new technology."
+  budget: 24000 #Verify
+  duration: 6 #Verify
+  repeat_client: false
+  story_template: false
+
+- client: "DNC"
+  main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
+  practice_area_names: "Consumer"
+  description: " A better voter registration process for all."
+  budget: 20000 #Verify
+  repeat_client: false
+  story_template: false
+  hide_in_layout: false
+  logo: dnc.jpg
+
+- client: "Rue La La"
+  main_image: "ruelala-calendar-user-interface.jpg"
+  practice_area_names: "Enterprise"
+  description: "Management of an upscale, members-only online fashion boutique."
+  budget: 200000 #Verify
+  repeat_client: true #Verify
+  story_template: false
+  hide_in_layout: false
+  logo: ruelala.jpg
+  duration: 14 #Verify
+  phases: #Verify
+    - duration: 14
+      full_time_staff: 2
+      service_names: "Envision, Craft"

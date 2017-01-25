@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Telerik")
+- client = get_project_by_id("telerik")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Telerik
+		%h2.client{style: "color: #{client.primary_color}"} Telerik
 
 		%h6.subheader Results
 		%p The brand architecture created by Invo paved the way for the Telerik team to create a selling framework for current and future products. The purchase path for customers became crystal clear.
@@ -29,9 +29,9 @@
 			%li Delivered customer purchase paths, successful implementation plan, and research findings and brand report for telerik.com.
 
 		%h6.subheader Press
-		%p 
+		%p
 			%a{href: "http://techcrunch.com/2014/01/28/telerik-launches-new-development-platform-for-web-hybrid-and-native-apps/"} Telerik launches new development platform for web, hybrid, and native apps
-		
+
 		%h6.subheader Practice Areas
 		%p Consumer, B2C
 
@@ -51,24 +51,24 @@
 	.projectDetails
 		%p The previous <a href = "http://www.telerik.com">Telerik.com</a> website was the natural result of growth and development. The company and the website had grown in the recent years to house several product families that were divergent both in their individual product lines as well as the audiences that were interested in them. As a result, the website contained a massive amount of information that often resulted in an experience using it that was overwhelming, confusing, or distracting.
 		%p In addition, the site didn’t perform an adequate job speaking to the core values of the Telerik brand: quality, support, and innovation.
-		
+
 		%div
 			%img.with-caption{alt: "The Involution team developed and iterated a brand architecture with the core Telerik team to create a framework for current and future products.", src: "../../images/clients/telerik/invo_telerik_report_purchaseproducts.jpg"}/
 		%p.caption The Involution team developed and iterated a brand architecture with the core Telerik team to create a framework for current and future products.
-		
+
 		%div
 			%img.with-caption{alt: "The research document is a summary of the work done on this Brand Architecture and Information Architecture project, which covered an initial exploration into defining the brand architecture across all Telerik products and the subsequent implications on the information architecture.", src: "../../images/clients/telerik/invo_telerik_report_thumbnails.jpg"}/
 		%p.caption The research document is a summary of the work done on this Brand Architecture and Information Architecture project, which covered an initial exploration into defining the brand architecture across all Telerik products and the subsequent implications on the information architecture.
-		
+
 		%div
 			%img{alt: "...", src: "../../images/clients/telerik/invo_telerik_report_producttrials.jpg"}/
-		
+
 		%p The Invo team developed and iterated a brand architecture with the core Telerik team to create a framework for current and future products.
 		%p The research phase included 24 interviews with customers and stakeholders across the key Telerik products. The interviews informed updates to both Brand Architecture, Information Architecture, and workflows for <a href = "http://www.telerik.com">www.Telerik.com</a>.
 		%p.medium-bottom-margin The Invo team also developed a high-level information architecture and navigation schema based on the new brand architecture, which resulted in a navigation system and a set of workflows for a few key processes.
-		
+
 #next-project.row
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

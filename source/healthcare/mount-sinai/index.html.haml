@@ -12,14 +12,14 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Mount Sinai")
+- client = get_project_by_id("mount-sinai")
 
 %article#complex-case.mount-sinai
 	%header.hero
 		.title
 			.inner-title
 				%p <img src = "../../images/client_logos/mount-sinai-sm.png" width = auto height = auto>
-				%h2 A search for unexpected genetic heroes.
+				%h1 A search for unexpected genetic heroes.
 				%h3 The Resilience Project was born at TED 2014. Invo crafted the genetic reporting and electronic consent service.
 	#mainContent
 		%h2 Big Data for Bigger Research
@@ -40,7 +40,7 @@
 		%p.bottom We were connected to Eric Schadt, director and founder of the Icahn Institute of Genetics, via Jason Bobe of Harvard University and head of the Personal Genome Project. We also had met Elissa at a genomics/health conference in Boston in 2013, purely coincidentally.
 
 		%h2 We Worked With
-		%p <a href="http://en.wikipedia.org/wiki/Eric_Schadt">Eric Schadt, Director and Founder of the Icahn Institute for Genomics and Multiscale Biology, Professor</a> 
+		%p <a href="http://en.wikipedia.org/wiki/Eric_Schadt">Eric Schadt, Director and Founder of the Icahn Institute for Genomics and Multiscale Biology, Professor</a>
 		%p.bottom <a href="http://www.mountsinai.org/profiles/elissa-levin">Elissa Levin, Head of Genomics + Integrative Health Innovations, Assistant Professor</a>
 
 		%h2 The Odd Couple
@@ -50,7 +50,7 @@
 			<img src = "../../images/clients/mount-sinai/rma-ny-clinic-ivf-training.jpg" alt = "RMA NY Doctor preparing the classroom for people starting Day 1 of the IVF journey." width = 100% height = auto>
 			.caption.small-bottom-margin RMA NY Doctor preparing the classroom for people starting Day 1 of the IVF journey.
 
-		%p.bottom The required paperwork, scheduling of nurse and doctor appointments, diet regime, and fertility drugs routines were staggeringly complex and painful to implement (from our discussions with current and past patients). Almost half of couples don’t get beyond the initial training seminar and paper-based consent. The IVF clinic nurses and administrators yearned for a digital consent service available on patients phones, tablets, and desktops to better help and track them through the process, drive up completion and efficiency rates, and ultimately provide a better experience with IVF. 
+		%p.bottom The required paperwork, scheduling of nurse and doctor appointments, diet regime, and fertility drugs routines were staggeringly complex and painful to implement (from our discussions with current and past patients). Almost half of couples don’t get beyond the initial training seminar and paper-based consent. The IVF clinic nurses and administrators yearned for a digital consent service available on patients phones, tablets, and desktops to better help and track them through the process, drive up completion and efficiency rates, and ultimately provide a better experience with IVF.
 
 		%h2 Genetics for Non-Geneticists
 		%p Elissa Levin, head of Genomics and Integrative Health Innovations at Mount Sinai, was the driving force for delivering a working eConsent service for The Resilience Project. As a former genetic counselor, she knew the difficulty in describing the complex lab results to doctors and patients. Those very personal results need to be easily digestible by patients, proxies, and doctors (because many docs aren't up on genomics).
@@ -98,4 +98,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

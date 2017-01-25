@@ -14,63 +14,29 @@
 
 %article#enterprise
 	%header#article-header
-		%h1.title We design massive bottom line<br>impact for our clients.
+		%h1.title We design massive bottom line impact for our clients.
 		.projects-row.impact.top-margin.bottom-margin-2
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title 50% Productivity Boost
-					.description Oracle saw a 50% drop in time to complete core tasks.
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title $150M Buyout
-					.description CodeRyte was bought by 3M for $150M for its breakthrough ICD coding software and NLP tech.
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title $17M Funding
-					.description InfoBionic raised an additional $17M based on our patented designs.
-		.projects-row.impact
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title $43M Funding
-					.description uTest's new analytics software, Applause, takes off. The company rebrands itself around it.
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title Return on Investment
-					.description In 8 months, a single customer’s use returned the $800k project design budget.
-			%a
-				.project-item.light-gray
-					.top-row
-						.arrow-title 85M in Trust
-					.description For McAfee, 85M people trusted and installed the new Total Protection Suite.
-	.projects-row
-		%a{:href => "/enterprise/nielsen"}
-			.project-item
-				.top-description Optimized Marketing
-				.image-wrapper
-					%img{:src => "/images/enterprise/affinova.png"} 
-				.bottom-description How our brand-driven product provided explosive growth for Nielsen.
-				.company-name Nielsen (formerly Affinnova)
-		%a{:href => "/enterprise/dnc/"}
-			.project-item
-				.top-description Voice of the Nation
-				.image-wrapper
-					%img{:src => "/images/enterprise/dnc.png"} 
-				.bottom-description Citizens found an easier path to driving the nation’s future through their vote.
-				.company-name Democratic National Committee
-		%a{:href => "/enterprise/ruelala/"}
-			.project-item
-				.top-description Orchestrating Business Process
-				.image-wrapper
-					%img{:src => "/images/enterprise/ruelala.png"} 
-				.bottom-description Streamlining fashion from $250M to $2B.
-				.company-name RueLaLa	
-	.very-large-quote 
-		.quote-content “Concept Studio is likely to transform our business in fundamental ways.”
+			%a.project
+				.project-title 50% Productivity Boost
+				.description Oracle saw a 50% drop in time to complete core tasks.
+			%a.project
+				.project-title $150M Buyout
+				.description CodeRyte was bought by 3M for $150M for its breakthrough ICD coding software and NLP tech.
+			%a.project
+				.project-title $17M Funding
+				.description InfoBionic raised an additional $17M based on our patented designs.
+			%a.project
+				.project-title $43M Funding
+				.description uTest's new analytics software, Applause, takes off. The company rebrands itself around it.
+			%a.project
+				.project-title Return on Investment
+				.description In 8 months, a single customer’s use returned the $800k project design budget.
+			%a.project
+				.project-title 85M in Trust
+				.description For McAfee, 85M people trusted and installed the new Total Protection Suite.
+	= partial("partials/project-row", locals: { projects: get_projects_by_id(['nielsen', 'dnc', 'ruelala']) })
+	.quote
+		%h2.quote-content “Concept Studio is likely to transform our business in fundamental ways.”
 		.quote-author Steve Lamoureux, Chief Product Officer, Nielsen
 	.dataxu-container
 		.dataxu-wrapper
@@ -85,139 +51,22 @@
 				%a{:href => "/enterprise/dataxu"}
 					.button Read Case Study
 	.micro-hs-form
-		%h4 Need help designing an elegant Enterprise product? Get in touch.
-
+		%h2 Need help designing an elegant Enterprise product? Get in touch.
 		<script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
 		<script>
-		  hbspt.forms.create({ 
+		  hbspt.forms.create({
 		    portalId: '356419',
 		    formId: '7ed4769c-d25a-4da4-b741-5c77055470ec',
 		css: '',
 		  });
 		</script>
-	.very-large-quote 
-		.quote-content “Involution was much more than our redesign partner. They helped us re-think our product development process. They were as strong technically as they were with the design. ”
+	.quote
+		%h2.quote-content “Involution was much more than our redesign partner. They helped us re-think our product development process. They were as strong technically as they were with the design. ”
 		.quote-author Brian Trombley
 		.quote-author McAfee Director, Consumer Product Management
-	.projects-row.margin-bottom
-		%a{:href => "/enterprise/microsoft/"}
-			.project-item
-				.top-description Goliath Challenging Goliath
-				.image-wrapper
-					%img{:src => "/images/enterprise/microsoft.png"} 
-				.bottom-description Key SuperPreview feature with an eye to a new system design.
-				.company-name Microsoft
-		%a{:href => "/enterprise/oracle/"}
-			.project-item
-				.top-description Day to Day Product Lifecycle
-				.image-wrapper
-					%img{:src => "/images/enterprise/agile.png"} 
-				.bottom-description Users take 50% less time to complete core tasks after the Involution redesign.
-				.company-name Agile (Oracle acquisition)
-		%a{:href => "/enterprise/mcafee/"}
-			.project-item
-				.top-description Protecting 80M Digital Lives
-				.image-wrapper
-					%img{:src => "/images/enterprise/mcafee.png"} 
-				.bottom-description The Total Protection UX, traditionally the product’s Achilles heel, was hailed by the media and led to increased market share - 24% in the first year and double-digits every year since.
-				.company-name McAfee
-	.projects-row.bottom-margin
-		%a{:href => "/enterprise/scskcorporation/"}
-			.project-item
-				.top-description Powerful Sales Tool
-				.image-wrapper
-					%img{:src => "/images/enterprise/scsk.png"} 
-				.bottom-description A showcase for next generation technology.
-				.company-name SCSK Corporation
-		%a{:href => "/enterprise/telerik/"}
-			.project-item
-				.top-description Streamlined eCommerce
-				.image-wrapper
-					%img{:src => "/images/enterprise/telerik.png"} 
-				.bottom-description The brand architecture created by Invo paved the way for the Telerik team to create a sales framework for current and future products. The purchase path for customers became crystal clear.
-				.company-name Telerik
-		%a{:href => "#"}
-			.project-item
-	.partners
-		.small-title A Few of Our Enterprise Partners
-		%ul.mobile
-			%li
-				%a{:href => "http://go.applause.com/"}
-					%img{:src => "/images/enterprise/partners/applause.png"}
-			%li
-				%a{:href => "http://www.curl.com/"}
-					%img{:src => "/images/enterprise/partners/curl.png"}
-			%li
-				%a{:href => "https://www.dataxu.com/"}
-					%img{:src => "/images/enterprise/partners/dataxu.png"}
-			%li
-				%a{:href => "http://www.lithium.com/"}
-					%img{:src => "/images/enterprise/partners/lithium.png"}
-			%li
-				%a{:href => "http://www.mcafee.com/us/"}
-					%img{:src => "/images/enterprise/partners/mcafee.png"}
-			%li
-				%a{:href => "http://www.microsoft.com/"}
-					%img{:src => "/images/enterprise/partners/microsoft.png"}
-			%li
-				%a{:href => "http://www.oracle.com/index.html"}
-					%img{:src => "/images/enterprise/partners/oracle.png"}
-			%li
-				%a{:href => "http://paypal.com/"}
-					%img{:src => "/images/enterprise/partners/paypal.png"}
-			%li
-				%a{:href => "http://www.ptc.com/"}
-					%img{:src => "/images/enterprise/partners/ptc.png"}
-			%li
-				%a{:href => "http://www.shutterfly.com/"}
-					%img{:src => "/images/enterprise/partners/shutterfly.png"}
-			%li
-				%a{:href => "https://www.surveysampling.com/"}
-					%img{:src => "/images/enterprise/partners/ssi.png"}
-			%li
-				%a{:href => "https://www.yahoo.com/"}
-					%img{:src => "/images/enterprise/partners/yahoo.png"}
-		%table.non-mobile
-			%tbody
-				%tr
-					%td
-						%a{:href => "http://go.applause.com/"}
-							%img{:src => "/images/enterprise/partners/applause.png"}
-					%td
-						%a{:href => "http://www.curl.com/"}
-							%img{:src => "/images/enterprise/partners/curl.png"}
-					%td
-						%a{:href => "https://www.dataxu.com/"}
-							%img{:src => "/images/enterprise/partners/dataxu.png"}
-					%td
-						%a{:href => "http://www.lithium.com/"}
-							%img{:src => "/images/enterprise/partners/lithium.png"}
-					%td
-						%a{:href => "http://www.mcafee.com/us/"}
-							%img{:src => "/images/enterprise/partners/mcafee.png"}
-					%td
-						%a{:href => "http://www.microsoft.com/"}
-							%img{:src => "/images/enterprise/partners/microsoft.png"}
-				%tr
-					%td
-						%a{:href => "http://www.oracle.com/index.html"}
-							%img{:src => "/images/enterprise/partners/oracle.png"}
-					%td
-						%a{:href => "http://paypal.com/"}
-							%img{:src => "/images/enterprise/partners/paypal.png"}
-					%td
-						%a{:href => "http://www.ptc.com/"}
-							%img{:src => "/images/enterprise/partners/ptc.png"}
-					%td
-						%a{:href => "http://www.shutterfly.com/"}
-							%img{:src => "/images/enterprise/partners/shutterfly.png"}
-					%td
-						%a{:href => "https://www.surveysampling.com/"}
-							%img{:src => "/images/enterprise/partners/ssi.png"}
-					%td
-						%a{:href => "https://www.yahoo.com/"}
-							%img{:src => "/images/enterprise/partners/yahoo.png"}
+	= partial("partials/project-row", locals: { row_class: "margin-bottom", projects: get_projects_by_id(['microsoft', 'oracle', 'mcafee']) })
+	= partial("partials/project-row", locals: { row_class: "margin-bottom", projects: get_projects_by_id(['scskcorporation', 'telerik']) })
+	= partial("partials/partners", locals: {title: "A Few of Our Enterprise Partners", partners: get_partners_by_type('enterprise')})
 	.office-hours
-		.small-title.white Want honest design feedback on your product?
-		.small-title.blue <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.
-			
+		%h2.font-thin Want honest design feedback on your product?
+		%h2.font-thin <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.

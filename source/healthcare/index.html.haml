@@ -22,7 +22,7 @@
 			.button-h Read Case Study
 	.quote
 		%h2.quote-content We help healthcare organizations make clinical strength software for high-test, high stress environments.
-	= partial("partials/project-row", locals: {projects: get_projects_by_name(['coderyte', 'ehr', 'personal-genome-project'])})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['3m', 'inspired-ehrs', 'personal-genome-project'])})
 	.quote
 		%h2.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
@@ -50,11 +50,11 @@
 	.quote
 		%h2.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
 		.quote-author Serban Georgescu MD, InfoBionic Director of Clinical Development
-	= partial("partials/project-row", locals: {projects: get_projects_by_name(['partners-gene-insight', 'segterra', 'diabetes'])})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['partners-gene-insight', 'segterra', 'diabetes'])})
 	.quote
 		%h2.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
 		.quote-author George Moon, VP of Product, CodeRyte Inc.
-	= partial("partials/project-row", locals: {projects: get_projects_by_name(['tabeeb', 'care-cards', 'numera']), row_class: 'margin-bottom'})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['tabeeb', 'care-cards', 'numera']), row_class: 'margin-bottom'})
 	.design-med-wrapper
 		.content
 			%h2 Design is Medicine
@@ -62,7 +62,7 @@
 			%p Listen to Juhan Sonin discuss where patient health visits is heading in 20 years.
 		.audio-wrapper
 			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110751754&color=475e8a&show_artwork=false"></iframe>
-	= partial("partials/partners", locals: {title: "A Few of Our Healthcare Partners", partners: partners_of_type('healthcare')})
+	= partial("partials/partners", locals: {title: "A Few of Our Healthcare Partners", partners: get_partners_by_type('healthcare')})
 	.enterprise-banner
 		%h2.font-thin We've shipped for the Enterprise too.
 		%a{:href => "/enterprise"}

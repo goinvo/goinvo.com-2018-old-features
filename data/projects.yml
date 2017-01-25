@@ -1,189 +1,388 @@
-- client: "3M"
-  main_image: "3m_main.jpg"
-  practice_area_names: "Enterprise, Health"
-  description: "How our skunkworks for an ambitious start-up led to a $150M exit."
-  budget: 500000 #Verify
-  duration: 60 #Verify
-  repeat_client: true
-  story_template: true
-  hide_in_layout: false
-  logo: 3m.jpg
-  phases: #Verify
-    - duration: 8
-      full_time_staff: 1
-      service_names: "Envision"
-    - duration: 8
-      full_time_staff: 1.5
-      service_names: "Envision, Craft"
-    - duration: 32
-      full_time_staff: 3
-      service_names: "Envision, Blueprint, Craft, Build, Support"
-    - duration: 12
-      full_time_staff: 2.25
-      service_names: "Craft, Build, Support"
-  milestones:
-    - description: "Product vision realized, sales team hits pavement."
-      during_week: 10
-    - description: "Prototype captures first customer, production begins."
-      during_week: 16
-    - description: "CodeRyte sold to 3M"
-      during_week: 40
-    - description: "v01 launched, 50% efficiency gains."
-      during_week: 48
+# Project item structure:
+# -----------------------
+# uid:                     Unique identifier (should correspond with detail page name)
+#                          Use this ID to look up projects with the data_helper.rb functions
+#
+# href:                    The path to the internal detail page for the project
+#
+# client_url:              External URL for the client's own website
+#                          Used in partners template (partials/_partners)
+#
+# primary_color:           Used on client detail pages to color client name
+#
+# partner_logo:            Name of the image to use for our featured partners lists
+#                          Only include this prop if you want to feature this project as a 'partner' on the corresponding list page for the 'type'
+#                          The rest of the image URL is generated automatically using the 'type' (e.g. '/images/{type}/partners/{partner_logo}')
+#
+# tag_line:                A short title for use in the project row template (partials/_project-row)
+#
+# feature_image_url:       Full path to the image desired for the project row template
+#
+# summary:                 A brief summary of the project to be used in the project row template
+#
+# client_name:             The name of the client to be used in the project row template
+#
+# project_name:            The name of the project (used in partials/_open_source_project)
+#
+# site:                    The main hosted site of the project (used in partials/_open_source_project)
+#                          Projects used in the open source template ideally have at least one: site, ios, or github
+#
+# ios:                     The project's iOS app store page (used in partials/_open_source_project)
+#
+# github:                  The project's github page (used in partials/_open_Source_project)
+#
+# open_source_description: A brief summary of the project to be used in the open source project template (partials/_open_source_project)
 
-- client: "hGraph"
-  main_image: "hgraph-your-health-in-one-picture.jpg"
-  practice_area_names: "Health"
-  description: "Open source solution for visualizing a complete range of health metrics."
-  budget: 50000 #Verify
-  repeat_client: true
-  story_template: true
-  hide_in_layout: false
-  logo: hgraph.jpg
+- uid: "3m"
+  type: "healthcare"
+  href: "/healthcare/3m"
+  client_url: "http://www.3m.com/"
+  primary_color: "#FF2800"
+  partner_logo: "3m.png"
+  tag_line: "Processing $4B/year"
+  feature_image_url: "/images/healthcare/3m_card.png"
+  summary: "How our skunkworks for an ambitious start-up led to a $150M exit."
+  client_name: "CodeRyte (3M acquisition)"
 
-- client: "Affinnova"
-  main_image: "concept-studio-product-blueprint-stickies.jpg"
-  practice_area_names: "Enterprise, Marketing Optimization"
-  description: "Product marketing workflow & testing system."
-  budget: 200000 #Verify
-  duration: 14 #Verify
-  repeat_client: true
-  story_template: false
-  hide_in_layout: false
-  logo: affinnova.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "nielsen"
+  type: "enterprise"
+  href: "/enterprise/nielsen"
+  client_url: "http://www.nielsen.com/"
+  primary_color: "#EA592C"
+  tag_line: "Optimized Marketing"
+  feature_image_url: "/images/enterprise/affinova.png"
+  summary: "How our brand-driven product provided explosive growth for Nielsen."
+  client_name: "Nielsen (formerly Affinnova)"
 
+- uid: "applause"
+  type: "enterprise"
+  client_url: "https://www.applause.com/"
+  primary_color: "#28bcd2"
+  partner_logo: "applause.png"
 
-## ROW 2 ##
+- uid: "care-cards"
+  type: "products"
+  href: "/products/care-cards"
+  client_url: "http://carecards.me/"
+  primary_color: "#67B0BF"
+  tag_line: "Healthy Habits"
+  feature_image_url: "/images/healthcare/health-axioms.jpg"
+  summary: "Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible."
+  client_name: "Care Cards"
+  project_name: "Care Cards"
+  site: "http://carecards.me/"
+  ios: "https://itunes.apple.com/us/app/care-cards/id1163912103?mt=8"
+  github: "https://github.com/goinvo/CareCards"
+  open_source_description: "Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible."
 
-- client: "DataXu"
-  main_image: "dataxu-campaign-dashboard-user-interface-tablet.jpg"
-  practice_area_names: "Enterprise, Marketing Optimization"
-  description: "Real-time decision engine for marketing investments."
-  budget: 200000 #Verify
-  duration: 14 #Verify
-  repeat_client: true
-  story_template: false
-  hide_in_layout: false
-  logo: dataxu.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "scskcorporation"
+  type: "enterprise"
+  href: "/enterprise/scskcorporation/"
+  client_url: "http://www.curl.com/"
+  primary_color: "#058386"
+  partner_logo: "curl.png"
+  tag_line: "Powerful Sales Tool"
+  feature_image_url: "/images/enterprise/scsk.png"
+  summary: "A showcase for next generation technology."
+  client_name: "SCSK Corporation"
 
-- client: "Oracle"
-  main_image: oracle-agile-plm-ui-design-development.jpg
-  practice_area_names: "Enterprise"
-  description: "A complete suite redesign, a new internal UX team, and an agile development process."
-  budget: 500000 #Verify
-  repeat_client: true #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: oracle.jpg
+- uid: "dataxu"
+  type: "enterprise"
+  client_url: "https://www.dataxu.com/"
+  primary_color: "#0e4474"
+  partner_logo: "dataxu.png"
 
-# - client: "Infobionic"
-#   main_image: #require
-#   practice_area_names: "Healthcare"
-#   description: "Design strategy and UI design for remote patient monitoring of EKGs (electrocardiogram)."
-#   budget: 100000 #Verify
-#   duration: #require
-#   repeat_client: #require
-#   story_template: false
-#   hide_in_layout: false
-#   logo: #require
+- uid: "dnc"
+  type: "enterprise"
+  href: "/enterprise/dnc/"
+  client_url: "https://www.democrats.org/"
+  primary_color: "#006AD8"
+  tag_line: "Voice of the Nation"
+  feature_image_url: "/images/enterprise/dnc.png"
+  summary: "Citizens found an easier path to driving the nation’s future through their vote."
+  client_name: "Democratic National Committee"
 
-- client: "McAfee"
-  main_image: "mcafee-total-protection-desktop-app-design.jpg"
-  practice_area_names: "Consumer"
-  description: "Flagship consumer and enterprise computer security software."
-  budget: 500000 #Verify
-  duration: 14 #Verify
-  repeat_client: true #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: mcafee.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "design-axioms"
+  type: "products"
+  href: "/products/design-axioms"
+  client_url: "http://www.designaxioms.com/"
+  primary_color: "#9e3d2d"
+  tag_line: "Design Edu in a Box"
+  feature_image_url: "/images/products/design-axioms.png"
+  summary: "The Design Axioms describe the minimal rule set for designing interfaces: the 16 foundational concepts that are required knowledge for engineers and designers to create usable and elegant interfaces."
+  client_name: "Design Axioms"
+  proect_name: "Design Axioms"
+  site: "http://www.designaxioms.com/"
+  ios: "https://itunes.apple.com/us/app/designaxioms/id576445408?mt=8"
+  github: "https://github.com/goinvo/DesignAxioms"
+  open_source_description: "The Design Axioms describe the minimal rule set for designing interfaces: the foundational concepts that are required knowledge for engineers and designers to create usable and elegant interfaces."
 
-## ROW 3 ##
+- uid: "inspired-ehrs"
+  type: "healthcare"
+  href: "/healthcare/inspired-ehrs"
+  client_url: "http://inspiredehrs.org/"
+  primary_color: "#000000"
+  tag_line: "Influencing US Policy"
+  feature_image_url: "/images/healthcare/ehr_card.jpg"
+  summary: "Evidence-based and clinically relevant graphic techniques for medical records."
+  client_name: "National Institute of Health and University of Missouri"
+  project_name: "Inspired EHRs"
+  site: "http://inspiredehrs.org/"
+  github: "https://github.com/goinvo/EHR"
+  open_source_description: "The code repository for the prototypes included in the eBook <em>Inspired EHRs - Designing for Clinicians</em>."
 
-- client: "Numera"
-  main_image: "numera-iphone-ios-design.jpg"
-  practice_area_names: "Health"
-  description: "Behavioral data with rich visualizations and lifestyle recommendations."
-  budget: 100000 #Verify
-  duration: 14 #Verify
-  repeat_client: true
-  story_template: false
-  hide_in_layout: false
-  logo: numera.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "mcafee"
+  type: "enterprise"
+  href: "/enterprise/mcafee/"
+  client_url: "https://home.mcafee.com"
+  primary_color: "#B51737"
+  partner_logo: "mcafee.png"
+  tag_line: "Protecting 80M Digital Lives"
+  feature_image_url: "/images/enterprise/mcafee.png"
+  summary: "The Total Protection UX, traditionally the product’s Achilles heel, was hailed by the media and led to increased market share - 24% in the first year and double-digits every year since."
+  client_name: "McAfee"
 
-- client: "Personal Genome Project"
-  main_image: "pgp-openhumans-ecosystem-thumb.jpg"
-  practice_area_names: "Health"
-  description: "New business strategy and visualization."
-  budget: 20000 #Verify
-  repeat_client: true
-  story_template: true
-  hide_in_layout: false
-  logo: curl.jpg
+- uid: "microsoft"
+  type: "enterprise"
+  href: "/enterprise/microsoft/"
+  client_url: "https://www.microsoft.com/"
+  primary_color: "#00A1F1"
+  partner_logo: "microsoft.png"
+  tag_line: "Goliath Challenging Goliath"
+  feature_image_url: "/images/enterprise/microsoft.png"
+  summary: "Key SuperPreview feature with an eye to a new system design."
+  client_name: "Microsoft"
 
-- client: "Microsoft"
-  main_image: "microsoft-expression-studio-product-architecture.jpg"
-  practice_area_names: "Consumer"
-  description: "New design patterns to compete with Adobe."
-  budget: 200000 #Verify
-  duration: 14 #Verify
-  repeat_client: false #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: microsoft.jpg
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "mount-sinai"
+  type: "healthcare"
+  client_url: "http://resilienceproject.com/"
+  primary_color: "#d8288c"
+  partner_logo: "mount-sinai.png"
 
-## ROW 4 ##
+- uid: "numera"
+  type: "healthcare"
+  href: "/healthcare/numera/"
+  client_url: "http://numera.com/"
+  primary_color: "#2488C8"
+  tag_line: "Social Behavior Change"
+  feature_image_url: "/images/healthcare/numera.jpg"
+  summary: "Behavioral data with rich visualizations and lifestyle recommendations."
+  client_name: "Numera Health"
 
-- client: "SCSK Corporation"
-  main_image: "curl-gapminder-style-information-visualization-UI-design.jpg"
-  practice_area_names: "Enterprise, Data Analytics"
-  description: "Powerful big data platform to showcase new technology."
-  budget: 24000 #Verify
-  duration: 6 #Verify
-  repeat_client: false
-  story_template: false
+- uid: "oracle"
+  type: "enterprise"
+  href: "/enterprise/oracle/"
+  client_url: "https://www.oracle.com/"
+  primary_color: "#FF0000"
+  partner_logo: "oracle.png"
+  tag_line: "Day to Day Product Lifecycle"
+  feature_image_url: "/images/enterprise/agile.png"
+  summary: "Users take 50% less time to complete core tasks after the Involution redesign."
+  client_name: "Agile (Oracle acquisition)"
 
-- client: "DNC"
-  main_image: "democratic-national-committee-voter-registration-UI-design.jpg"
-  practice_area_names: "Consumer"
-  description: " A better voter registration process for all."
-  budget: 20000 #Verify
-  repeat_client: false
-  story_template: false
-  hide_in_layout: false
-  logo: dnc.jpg
+- uid: "paintrackr"
+  type: "products"
+  href: "/products/paintrackr"
+  client_url: "http://www.paintrackr.com/"
+  primary_color: "#FF0000"
+  tag_line: "Track Pain"
+  feature_image_url: "/images/products/paintrackr.png"
+  summary: "PainTrackr logs pain based on severity and location and stores this data so that it can be easily transmitted."
+  client_name: "PainTrackr"
+  project_name: "PainTrackr"
+  site: "http://www.paintrackr.com/"
+  ios: "https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8"
+  github: "https://github.com/goinvo/PainTrackr"
+  open_source_description: "An open-source app that monitors physical pain. It logs pain based on severity and location and stores this data so that it can be easily transmitted."
 
-- client: "Rue La La"
-  main_image: "ruelala-calendar-user-interface.jpg"
-  practice_area_names: "Enterprise"
-  description: "Management of an upscale, members-only online fashion boutique."
-  budget: 200000 #Verify
-  repeat_client: true #Verify
-  story_template: false
-  hide_in_layout: false
-  logo: ruelala.jpg
-  duration: 14 #Verify
-  phases: #Verify
-    - duration: 14
-      full_time_staff: 2
-      service_names: "Envision, Craft"
+- uid: "partners-gene-insight"
+  type: "healthcare"
+  href: "/healthcare/partners-gene-insight"
+  client_url: "http://www.geneinsight.com/"
+  primary_color: "#D77E48"
+  partner_logo: "partners-gene-insight.png"
+  tag_line: "Genetic Interpretation"
+  feature_image_url: "/images/healthcare/geneinsight.png"
+  summary: "GeneInsight is an IT platform used to streamline the analytics, interpretation and reporting of complex genetic test results."
+  client_name: "Partners GeneInsight"
+
+- uid: "personal-genome-project"
+  type: "healthcare"
+  href: "/healthcare/personal-genome-project/"
+  client_url: "http://personalgenomes.org/"
+  primary_color: "#006DC4"
+  partner_logo: "personal-genome-project.png"
+  tag_line: "Open Source Genomics"
+  feature_image_url: "/images/healthcare/pgp.jpg"
+  summary: "The mission is to sequence and publicize 100,000 volunteers’ genomes in hope personal genomes will be used to improve the management of human health and disease."
+  client_name: "Personal Genome Project"
+
+- uid: "ruelala"
+  type: "enterprise"
+  href: "/enterprise/ruelala/"
+  client_url: "https://www.ruelala.com/"
+  primary_color: "#ef164b"
+  tag_line: "Orchestrating Business Process"
+  feature_image_url: "/images/enterprise/ruelala.png"
+  summary: "Streamlining fashion from $250M to $2B."
+  client_name: "RueLaLa"
+
+- uid: "segterra"
+  type: "healthcare"
+  href: "/healthcare/segterra"
+  client_url: "https://www.insidetracker.com/"
+  primary_color: "#8ed13c"
+  tag_line: "Tuning Olympic Performance"
+  feature_image_url: "/images/healthcare/segterra.png"
+  summary: "Inside Tracker: using blood analytics to improve health."
+  client_name: "Segterra"
+
+- uid: "staff-plan"
+  type: "products"
+  href: "/products/staff-plan"
+  client_url: "https://www.staffplan.com/"
+  primary_color: "#5e9b69"
+  tag_line: "Staff Planning"
+  feature_image_url: "/images/products/staff-plan.png"
+  summary: "Our internal tool for project planning."
+  client_name: "StaffPlan"
+
+- uid: "tabeeb"
+  type: "healthcare"
+  href: "/healthcare/tabeeb"
+  primary_color: "#4BACD9"
+  tag_line: "Crowdsourced Diagnostics"
+  feature_image_url: "/images/healthcare/tabeeb.png"
+  summary: "Bringing global medical specialists to rural communities with the flick of a finger."
+  client_name: "Tabeeb"
+
+- uid: "telerik"
+  type: "enterprise"
+  href: "/enterprise/telerik/"
+  client_url: "http://www.telerik.com/"
+  primary_color: "#acd608"
+  tag_line: "Streamlined eCommerce"
+  feature_image_url: "/images/enterprise/telerik.png"
+  summary: "The brand architecture created by Invo paved the way for the Telerik team to create a sales framework for current and future products. The purchase path for customers became crystal clear."
+  client_name: "Telerik"
+
+- uid: "visual-government"
+  type: "products"
+  href: "/products/visual-government"
+  client_url: "http://visgov.com/"
+  primary_color: "#0d7ec9"
+  tag_line: "Government Transparency"
+  feature_image_url: "/images/products/visual-budget.png"
+  summary: "Government budgets can be tough to understand, but now the Town of Arlington, Massachusetts is providing the next generation of accessibility in financial information that allows citizens to view, engage with, and discuss."
+  client_name: "Visual Government"
+  project_name: "Visual Town Budget"
+  site: "http://www.arlingtonvisualbudget.org/"
+  github: "https://github.com/goinvo/Visual-Town-Budget"
+  open_source_description: "An open-source budget visualization framework."
+
+- uid: "yahoo"
+  type: "enterprise"
+  client_url: "https://www.yahoo.com/"
+  primary_color: "#500095"
+  partner_logo: "yahoo.png"
+
+- uid: "lithium"
+  type: "enterprise"
+  client_url: "http://www.lithium.com/"
+  partner_logo: "lithium.png"
+
+- uid: "paypal"
+  type: "enterprise"
+  client_url: "https://www.paypal.com/"
+  partner_logo: "paypal.png"
+
+- uid: "ptc"
+  type: "enterprise"
+  client_url: "http://www.ptc.com/"
+  partner_logo: "ptc.png"
+
+- uid: "shutterfly"
+  type: "enterprise"
+  client_url: "https://www.shutterfly.com/"
+  partner_logo: "shutterfly.png"
+
+- uid: "ssi"
+  type: "enterprise"
+  client_url: "https://www.surveysampling.com/"
+  partner_logo: "ssi.png"
+
+- uid: "bd"
+  type: "healthcare"
+  client_url: "http://www.bd.com/"
+  partner_logo: "bd.png"
+
+- uid: "himss"
+  type: "healthcare"
+  client_url: "http://www.himss.org/"
+  partner_logo: "himss.png"
+
+- uid: "infobionic"
+  type: "healthcare"
+  client_url: "https://infobionic.com/"
+  partner_logo: "infobionic.png"
+
+- uid: "johnson-and-johnson"
+  type: "healthcare"
+  client_url: "https://www.jnj.com/"
+  partner_logo: "johnson-and-johnson.png"
+
+- uid: "nih"
+  type: "healthcare"
+  client_url: "http://www.nih.gov/"
+  partner_logo: "nih.png"
+
+- uid: "nsf"
+  type: "healthcare"
+  client_url: "https://www.nsf.gov/"
+  partner_logo: "nsf.png"
+
+- uid: "participatory-medicine"
+  type: "healthcare"
+  client_url: "http://www.jopm.org/"
+  partner_logo: "participatory-medicine.png"
+
+- uid: "walgreens"
+  type: "healthcare"
+  client_url: "https://www.walgreens.com/"
+  partner_logo: "walgreens.png"
+
+- uid: "diabetes"
+  href: "/healthcare/diabetes/"
+  tag_line: "Diabetes Care"
+  feature_image_url: "/images/healthcare/diabetes.jpg"
+  summary: "Designing techniques, behavior, and technology to dramatically change overhead required to manage chronic conditions."
+  client_name: ""
+
+- uid: "hgraph"
+  href: "/products/hgraph"
+  tag_line: "Your Health in One Picture"
+  feature_image_url: "/images/products/hgraph.png"
+  summary: "hGraph is a visual representation of a patient's health status, designed to increase awareness of the individual's factors that can affect overall health."
+  client_name: "hGraph"
+  project_name: "hGraph"
+  site: "http://hgraph.org/"
+  github: "https://github.com/goinvo/hGraph"
+  open_source_description: "An open source javascript-based web application for visualizing health data."
+
+- uid: "hmixer"
+  project_name: "hMixer"
+  site: "http://www.hscoremixer.org/"
+  github: "https://github.com/goinvo/hMixer"
+  open_source_description: "A tool for doctors to quantify how individual factors impact overall health."
+
+- uid: "pophealth"
+  project_name: "popHealth"
+  github: "https://github.com/goinvo/PopHealth"
+  open_source_description: "A tool for analyzing the patient population for hospitals, leveraging CHIA hospital and provider data."
+
+- uid: "runnan"
+  project_name: "Runnan"
+  site: "http://www.runnanthegame.com/"
+  ios: "https://itunes.apple.com/us/app/runnan/id672915929?mt=8"
+  github: "https://github.com/goinvo/Runnan"
+  open_source_description: "Runnan is simple but tough! You control a carrot with no arms who needs to navigate his way through an obstacle ridden universe of odd shapes, quirky people, and ambiguous looking foods."

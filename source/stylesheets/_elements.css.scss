@@ -20,15 +20,15 @@ hr {
 	padding-bottom: 1.5em;
 }
 
-.slider { 
-	position: relative; 
+.slider {
+	position: relative;
 	overflow: auto;
 	li {
 		list-style: none;
 		padding: 0 100px;
 	}
 	ul li {
-		float: left; 
+		float: left;
 	}
 	.unslider-arrow {
 		position: absolute;
@@ -48,6 +48,37 @@ hr {
 			border-left: 15px solid #AAA;
 			border-right: 0;
 			right: 40px;
+		}
+	}
+}
+.quote {
+	position: relative;
+	width: auto;
+	max-width: 827px;
+	margin: 0 auto;
+	padding: 6rem 10px;
+	text-align: center;
+
+	.quote-author {
+		padding-top: 10px;
+	}
+
+	&.small-bottom-padding {
+		padding-bottom: 2rem;
+	}
+	&.no-top-padding {
+		padding-top: 0px;
+	}
+	&.justified {
+		text-align: left;
+		.quote-content {
+			position: relative;
+			&:before {
+				content: "\201C";
+				position: absolute;
+				left: -19px;
+				top: 0;
+			}
 		}
 	}
 }

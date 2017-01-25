@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		"healthcare" : {
 			"hgraph" : {
 				"title" : "hGraph",
-				"url" : "/healthcare/hgraph/",
+				"url" : "/products/hgraph/",
 				"image" : "hgraph.jpg",
 				"next-id" : "3m"
 			},
@@ -21,13 +21,13 @@ $( document ).ready(function() {
 			"inspired-ehrs" : {
 				"title" : "Inspired EHRs: Designing for Clinicians",
 				"url" : "/healthcare/inspired-ehrs/",
-				"image" : "ehr.jpg",
+				"image" : "inspired-ehrs.jpg",
 				"next-id" : "personal-genome-project"
 			},
 			"personal-genome-project" : {
 				"title" : "Personal Genome Project",
 				"url" : "/healthcare/personal-genome-project/",
-				"image" : "pgp.jpg",
+				"image" : "personal-genome-project.jpg",
 				"next-id" : "mount-sinai"
 			},
 			"mount-sinai" : {
@@ -39,7 +39,7 @@ $( document ).ready(function() {
 			"partners-gene-insight" : {
 				"title" : "Partners Gene Insight",
 				"url" : "/healthcare/partners-gene-insight/",
-				"image" : "pgi.png",
+				"image" : "partners-gene-insight.png",
 				"next-id" : "segterra"
 			},
 			"segterra" : {
@@ -63,7 +63,7 @@ $( document ).ready(function() {
 			"care-cards" : {
 				"title" : "Care Cards",
 				"url" : "/products/care-cards/",
-				"image" : "health-axioms.jpg",
+				"image" : "care-cards.jpg",
 				"next-id" : "numera"
 			},
 			"numera" : {
@@ -125,7 +125,7 @@ $( document ).ready(function() {
 			"scskcorporation" : {
 				"title" : "SCSKcorporation",
 				"url" : "/enterprise/scskcorporation/",
-				"image" : "scsk.jpg",
+				"image" : "scskcorporation.jpg",
 				"next-id" : "telerik"
 			},
 			"telerik" : {
@@ -157,7 +157,7 @@ $( document ).ready(function() {
 			"care-cards" : {
 				"title" : "Care Cards",
 				"url" : "/products/care-cards/",
-				"image" : "health-axioms.jpg",
+				"image" : "care-cards.jpg",
 				"next-id" : "design-axioms"
 			},
 			"design-axioms" : {
@@ -169,7 +169,7 @@ $( document ).ready(function() {
 			"staff-plan" : {
 				"title" : "StaffPlan",
 				"url" : "/products/staff-plan/",
-				"image" : "staffplan.png",
+				"image" : "staff-plan.png",
 				"next-id" : "paintrackr"
 			},
 			"paintrackr" : {
@@ -190,7 +190,7 @@ $( document ).ready(function() {
 
 	var next = $('#next-project');
 	var nextArea = $('div.next-title');
-	var nextTitle = $('div.next-title span');
+	var nextTitle = $('#next');
 
 	var imgURL = "";
 

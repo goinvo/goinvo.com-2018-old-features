@@ -12,19 +12,19 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Inspired EHRs")
+- client = get_project_by_id("inspired-ehrs")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client.title-with-sub{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Inspired EHRs:
+		%h2.client.title-with-sub{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Inspired EHRs:
 		%h5.client.title-with-sub{style: "color: #{client.primary_color}; font-weight: 100;"} Designing for Clinicians
 
 		%h6.subheader Results
 		%p An <a href="http://inspiredehrs.org">open source ebook</a> full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies.
-		
+
 		%h6.subheader Details
 		%p Inspirational design on the usability and functionality of electronic health records.
-		
+
 		%ul.details
 			%li Provided usability, technical, and software design expertise
 			%li Co-authored and produced HTML5- based ebook
@@ -32,7 +32,7 @@
 			%li Designed illustrations and interface examples
 			%li Prototyped interactive examples of designs
 			%li 1 year of design and code
-		
+
 		%h6.subheader Practice Areas
 		%p Healthcare IT, Open Source
 
@@ -62,19 +62,19 @@
 		%div
 			%img.with-caption{alt: "Involution helped lead workshops.", src: "../../images/clients/ehr/ux-design-workshop.jpg"}/
 		%p.caption Involution helped lead workshops that were instrumental in defining the key ideas and techniques laying the groundwork for the topics in the book.
-		
+
 		%div
 			%img.with-caption{alt: "EHR Medication Guideline", src: "../../images/clients/ehr/interactive-medications-table.jpg"}/
 		%p.caption The medication list is designed to be scanned quickly, but is also searchable and sortable to get to more detailed information.
-		
+
 		%div
 			%img.with-caption{alt: "EHR Medication Timeline", src: "../../images/clients/ehr/interactive-medication-timeline.jpg"}/
 		%p.caption Our medication timeline allows physicians to track a patient’s medications over time to see how their condition has evolved.
-		
+
 		%div
 			%img.with-caption{alt: "EHR Medication Prototype", src: "../../images/clients/ehr/ehr-medication-prototype.png"}/
 		%p.caption We prototyped the medication list and medication timeline early on to evolve our concepts farther and more rapidly.
-		
+
 		%div
 			%img.with-caption{alt: "EHR eBook", src: "../../images/clients/ehr/electronic-health-record-book.png"}/
 		%p.caption The ebook is available on the web, built on HTML5 and CSS3, and also as a printable PDF.
@@ -83,4 +83,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next
