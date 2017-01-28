@@ -1,14 +1,17 @@
 @import "../base/core";
 
 .container {
-	padding-top: 55px;
 	margin-bottom: 0px;
 
 	h6.subheader {
 		margin-top: 40px;
-		font-size: 1.375em;
+		font-size: 1.1rem;
 		font-weight: 400;
 		text-transform: uppercase;
+
+    @include breakpoint($font-break-point) {
+			font-size: 1.375rem;
+		}
 
 		&.name {
 			text-transform: none;
@@ -108,16 +111,26 @@
 		float: left;
 	}
 	.projectData {
-		width: 25%;
-		p.caption {
+		width: 30%;
+
+    .quote {
+      padding: 0;
+			margin: 2em 0 0 0;
+      text-align: left;
+    }
+		.caption {
 			max-width: 100%;
+
+      img {
+        max-width: 150px;
+      }
 		}
 		p a {
 			display: inline;
 		}
 	}
 	.projectDetails {
-		width: 75%;
+		width: 70%;
 		padding-left: 2em;
 	}
 
@@ -135,11 +148,16 @@
 .similar-project-container {
 	h6.subheader {
 		text-transform: none;
-		font-size: 1.375em;
-		margin: 0;
+		font-size: 1.1rem;
+		margin: 40px 0 0 0;
 		padding-bottom: .5em;
+
+		@include breakpoint($font-break-point) {
+			font-size: 1.375rem;
+		}
 	}
 	a.button.radius {
+		display: inline-block;
 		font-size: 1.25em;
 		padding: 20px 20px;
 		padding-top: 22px;
@@ -166,8 +184,11 @@
 	}
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 950px) {
 	#content-area {
+    .projectData {
+      margin-bottom: 2rem;
+    }
 		.projectData, .projectDetails {
 			width: 100%;
 			padding: 0;

@@ -136,20 +136,28 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	background-image: image-url('features/world-cup/hero.jpg');
 }
 
-#hgraph .photo-container{
+#hgraph .photo-container {
 	background-image: image-url('home/hgraph_large.png');
 }
 
-#oracle .photo-container{
+#oracle .photo-container {
 	background-image:  image-url('home/oracle.jpg');
 }
 
-#three-m .photo-container{
+#three-m .photo-container {
 	background-image: image-url('home/3m.jpg');
 }
 
 #culture .photo-container {
 	background-image: image-url('home/culture.jpg');
+}
+
+#process .photo-container {
+	background-image: image-url('home/aps.jpg');
+}
+
+#diabetes .photo-container {
+	background-image: image-url('healthcare/diabetes.jpg');
 }
 
 #ebola-guide {
@@ -182,18 +190,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 				color: #A5DEF1;
 			}
 	}
-}
-
-#process {
-	background-image: image-url('home/aps.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#diabetes {
-	background-image: image-url('healthcare/diabetes.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #disrupt {
@@ -238,16 +234,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	color: #FFFFFF;
 	text-shadow: 0px 2px 20px rgba(0, 0, 0, .8);
 	position: relative;
-
-	&.long-text {
-		// .actual-title {
-		// 	font-size: 50px;
-		// }
-		// .actual-content {
-		// 	font-size: 22px;
-		// 	line-height: 26px;
-		// }
-	}
 
 	&:hover {
 		.photo-container, .video-container {
@@ -447,7 +433,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	}
 
-.video-container, .photo-container  {
+  .video-container, .photo-container  {
     width: 100%;
     min-height: 472px;
     -webkit-backface-visibility: hidden;

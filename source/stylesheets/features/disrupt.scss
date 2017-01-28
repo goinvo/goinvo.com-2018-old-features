@@ -20,6 +20,10 @@ $gridWidth: 100%;
 $gridLeft: 0;
 $gridTop: 0;
 
+.container.content {
+  font-size: 16px;
+}
+
 /* ===== No JS ===== */
 .no-js {
   position: absolute;
@@ -94,7 +98,7 @@ $gridTop: 0;
       }
       &[data-row="4"] {
         &:before {
-          border-color: $pink; 
+          border-color: $pink;
         }
       }
       &:before {

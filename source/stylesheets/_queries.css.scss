@@ -40,14 +40,6 @@
 	}
 
 	#main-container .homepage-header {
-		&.one .title{
-			h2 {
-				font-size: 45px;
-				font-size: 4.5rem;
-				line-height: 45px;
-				line-height: 4.5rem;
-			}
-		}
 		&.two, &.three {
 			width: 100%;
 		}
@@ -135,11 +127,6 @@
 		display:inherit;
 	}
 
-	.hero .title h2 {
-		font-size:4.5rem;
-		line-height: 4.5rem;
-	}
-
 	#careers section.centerContent, section.team-cards.twelve.columns {
 		padding-left:0px;
 		padding-right:0px;
@@ -155,41 +142,6 @@
 	div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
 		min-width:0;
 
-	}
-}
-
-@media only screen and (max-width: 652px) {
-	//hide everything that should be hidden (some elements of class: mobile-hide)
-
-	.hero .title h2 {
-		font-size:3.5rem;
-		line-height: 3.5rem;
-	}
-
-	.hero .title h3 {
-		font-size: 1.3rem;
-		letter-spacing: 0.09rem;
-		line-height: 1.5rem;
-		padding-lef:10px;
-		padding-right:10px;
-	}
-
-
-	#main-container .homepage-header {
-		&.one .title{
-			h2 {
-				font-size: 35px;
-				font-size: 3.5rem;
-				line-height: 35px;
-				line-height: 3.5rem;
-			}
-			h3 {
-				font-size: 28px;
-				font-size: 2.8rem;
-				line-height: 28px;
-				line-height: 2.8rem;
-			}
-		}
 	}
 }
 

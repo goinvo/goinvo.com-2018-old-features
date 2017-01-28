@@ -7,7 +7,7 @@ $light-grey:#dedede;
 $medium-grey: #bebebe;
 $dark-grey:#9a9a9a;
 $black : #000;
-$light-blue:rgb(177, 205, 234); 
+$light-blue:rgb(177, 205, 234);
 $light-blue-hover:rgb(142, 175, 208);
 $light-blue-selected: rgb(106, 141, 177);
 $light-purple: rgb(201, 203, 222);
@@ -19,17 +19,19 @@ $dark-purple: rgb(133, 137, 186);
   padding: 0px;
   margin: 0;
   &.content {
-    overflow: hidden; 
+    overflow: hidden;
   }
 }
-
+.container.content {
+  font-size: 16px;
+}
 #cost-comparison-boston-container svg path:hover {
-  cursor: default; 
+  cursor: default;
 }
 
 svg {
   circle:hover, rect:hover, path:hover {
-    cursor: pointer; 
+    cursor: pointer;
   }
   .country-label {
     font-family: 'Lato';
@@ -52,10 +54,10 @@ svg {
   @media only screen and (max-width: 768px) {
       display: none;
   }
-  
+
   ul {
     margin: 0 auto;
-    
+
     li {
       display: inline-block;
       white-space: nowrap;
@@ -77,7 +79,7 @@ svg {
 }
 
 strong {
-  font-weight: 800; 
+  font-weight: 800;
 }
 
 .stuff-below-nav {
@@ -97,9 +99,14 @@ strong {
   text-align: center;
   background: url("/images/features/us-healthcare/jumbotron3.jpg");
   background-size: cover;
-  
+  background-position: top center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
   @media only screen and (max-width: 768px){
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .footnote {
@@ -143,14 +150,14 @@ header p{
   td {
     transition: inherit;
     padding: 6px;
-    
+
     &:first-of-type {
-      min-width: 96px; 
+      min-width: 96px;
     }
   }
   opacity: 0;
   pointer-events: none;
-  
+
   &.is-visible {
     opacity: 1;
     pointer-events: auto;
@@ -158,7 +165,7 @@ header p{
   @media only screen and (max-width: 1150px){
     top: auto;
     bottom: 1%;
-    width: 80px; 
+    width: 80px;
     height: 60px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.3);
@@ -175,7 +182,7 @@ header p{
     width: 180px;
     height: auto;
     color: rgba(0, 0, 0, 1);
-    background-color: rgba(255, 255, 255, 1);   
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 
@@ -188,14 +195,14 @@ h1 {
   font-weight: 900;
   font-size: 3em;
   letter-spacing: 0.03em;
-  
+
   @media only screen and (max-width: 768px){
-    font-size: 2em; 
+    font-size: 2em;
   }
 }
 
 h5 {
-  font-size: 1.25em; 
+  font-size: 1.25em;
 }
 
 p {
@@ -210,7 +217,7 @@ article, footer {
   width: 70%;
   margin: 0 auto;
   padding: 40px 0px 40px;
-  
+
   @media only screen and (max-width: 768px){
     padding: 20px 0px 20px;
     width: 85%;
@@ -219,7 +226,7 @@ article, footer {
     padding: 40px 0px 40px;
     width: 840px;
   }
-  
+
 }
 
 article h2, article h1 {
@@ -255,10 +262,10 @@ a:hover {
 
 .previous-successes {
     margin: auto;
-  
+
   @media only screen and (max-width: 768px) {
     .col-sm-4 {
-      margin-top: 2em;   
+      margin-top: 2em;
     }
   }
 }
@@ -294,7 +301,7 @@ a:hover {
   padding: 0% 5%;
   padding-top: 10px;
   padding-bottom: 75px;
-  
+
   p {
     font-size: 1em;
   }
@@ -390,19 +397,19 @@ p.tab_p {
   display: none;
   background: #fff;
   &.current {
-    display: inherit; 
+    display: inherit;
   }
-  
+
   p {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 1em;
-    
+
     @media only screen and (max-width: 768px){
       padding: 20px 0px 20px;
       width: 85%;
       margin-bottom: 0px;
-    } 
+    }
   }
 }
 
@@ -514,12 +521,12 @@ div.tooltip {
   pointer-events: none;
   z-index: 100;
   word-wrap: break-word;
-  
+
   strong {
-    font-family: 'Lato';  
+    font-family: 'Lato';
     font-size: 1.1em;
   }
-  
+
   @media only screen and (max-width: 768px){
     min-width: 0px;
     width: auto;
@@ -532,9 +539,9 @@ div.tooltip {
       margin-top: .3em;
       font-size: 1.4em;
     }
-    
+
   }
-  
+
 }
 .annotation{
     background-color:rgba(213, 230, 245, 0.76);
@@ -660,11 +667,11 @@ sup {
 
 .chart-container {
   width: 100%;
-  
+
   h4 {
    font-weight: bold;
   }
-  
+
   div{
     margin: 0 auto;
   }
@@ -673,14 +680,14 @@ sup {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 1em;
-    
+
     @media only screen and (max-width: 768px){
       padding: 20px 0px 20px;
       width: 85%;
       margin-bottom: 0px;
-    } 
+    }
   }
-  
+
 }
 
 .chart-container, .tabs {
@@ -690,12 +697,12 @@ sup {
     @media only screen and (max-width: 768px){
       padding: 20px 0px 20px;
       width: 85%;
-      
+
       .col-sm-4 {
-        margin-bottom: .5em !important; 
+        margin-bottom: .5em !important;
       }
-    } 
-  }  
+    }
+  }
 }
 
 
@@ -745,7 +752,7 @@ sup {
 
 .toggle-btn-grp.cssonly div label {
     width: 100%;
-    height: 5.5rem;
+    height: 5.5em;
     margin: 0 auto;
     vertical-align: middle;
     text-align:center;
@@ -813,10 +820,10 @@ sup {
 */
 .link[data-highlight="forwards"]{
   stroke: $dark-purple;
-} 
+}
 .link[data-highlight="backwards"]{
   stroke: $dark-purple;
-} 
+}
 
 .sankey-wrapper {
   width: 100%;
@@ -827,7 +834,8 @@ sup {
   width: calc(100vw - 254px);
   display: inline-block;
   vertical-align: top;
-  
+  margin: 0 auto;
+
   @media only screen and (max-width: 768px){
     display: none;
   }
@@ -849,7 +857,7 @@ sup {
   line-height: 26px;
   height: 100%;
   overflow: visible;
-  
+
   #sankey-link {
     visibility: hidden;
     position: absolute;
@@ -857,20 +865,20 @@ sup {
     left: 0;
     pointer-events: none;
   }
-  
+
   .sankey-menu {
-    text-align: right; 
+    text-align: right;
     vertical-align: top;
-    
+
     .sankey-menu-wrapper {
       &:not(:first-child) {
-        margin-top: 1em; 
+        margin-top: 1em;
       }
     }
   }
-  
+
   .perspectives, .action-container {
-    display: inline; 
+    display: inline;
     width: auto;
     li {
       cursor: pointer;
@@ -882,7 +890,7 @@ sup {
       margin-top: 1px;
       margin-top: 1px;
       &:first-child {
-        display: inline-block; 
+        display: inline-block;
         margin-top: 0;
       }
       &:hover {
@@ -891,8 +899,8 @@ sup {
           background-color: rgba(#8589ba, .15);
           color: lighten(black, 25%);
         }
-      } 
-      
+      }
+
       .perspective, .individual-action {
         transition: all 250ms ease-in-out;
         padding: 1px 3px 2px 5px;
@@ -905,11 +913,11 @@ sup {
       }
     }
   }
-  
+
   .action-container {
     li {
       &:first-child {
-        display: block; 
+        display: block;
         margin-top: 1px;
       }
     }
@@ -918,7 +926,7 @@ sup {
 
 
 
-  
+
 
 .individual-result {
   text-align: center;
@@ -955,13 +963,13 @@ sup {
     padding: 25px;
     border-radius: 8px;
     transition: .2s ease-in-out;
-    
+
     @media only screen and (max-width: 768px) {
       width: 100% !important;
       display:block;
       margin-bottom: 1.25em;
     }
-    
+
     &:hover{
 //      background-color: lighten($light-grey,5%);
       //transform: scale(1.07);
@@ -973,14 +981,14 @@ sup {
     &[data-selected="no"]{
       background-color: #ffffff;
     }
-    
+
     h3{
       height:2em;
       vertical-align: middle;
       font-size: 1em;
       text-transform: uppercase;
     }
-    
+
     p {
       font-size: 1em;
       text-align: center;
@@ -992,7 +1000,7 @@ sup {
 .decision, .next, .outcome{
   margin:10px;
   @media only screen and (max-width: 768px) {
-    margin: 10px 0; 
+    margin: 10px 0;
   }
 }
 
@@ -1004,9 +1012,9 @@ sup {
 .outcome-container {
   display: none;
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
   transition: background-color 150ms ease-in-out;
-  
+
   &.done-transitioning[data-outcome="positive"]{
     background-color: rgba(76, 214, 51, 0.09)
   }
@@ -1016,7 +1024,7 @@ sup {
   .outcome{
     font-size: 1em;
     padding: 5px 20px;
-    padding-top: 1rem;
+    padding-top: 1em;
   }
 }
 
@@ -1099,11 +1107,11 @@ sup {
 #contributors-table {
   	margin: 40px 10px 30px;
   	border-radius: 8px;
-	
+
 	.col-sm-6 {
     	padding: 0px;
 	}
-	
+
 	.row {
 		background-color: $light-grey;
 		border-radius: 8px;
@@ -1147,15 +1155,15 @@ sup {
 	}
 }
 
-// Timeline Styles 
+// Timeline Styles
 
 .timeline-wrapper {
   padding: 30px 0 50px 0;
   border-top: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
-  
+
   @media only screen and (max-width: 768px){
-    padding: 30px 0; 
+    padding: 30px 0;
   }
 }
 
@@ -1164,26 +1172,26 @@ sup {
   width: 100%;
   height: 350px;
 
-  
+
   @media only screen and (max-width: 768px){
     height: 600px;
   }
-  
+
   .vco-storyslider{
     box-shadow: 0 -3px 6px rgba(0,0,0,0);
   }
-  
+
   h2.vco-headline, .vco-timeaxis-tick-text {
     font-family: 'Lato', sans-serif;
   }
-  
+
   .vco-slidenav-next, .vco-slidenav-previous {
-    top: 50px !important; 
+    top: 50px !important;
     @media only screen and (max-width: 768px){
-      top: 200px !important; 
+      top: 200px !important;
     }
   }
-  
+
   .vco-slidenav-previous {
     .vco-slidenav-icon {
       position: relative;
@@ -1205,7 +1213,7 @@ sup {
       }
     }
   }
-    
+
   .vco-slidenav-next {
     .vco-slidenav-icon {
       position: relative;
@@ -1225,42 +1233,42 @@ sup {
       }
     }
   }
-  
+
   .vco-slidenav-content-container {
     * {
-      transition: all 250ms ease-in-out; 
+      transition: all 250ms ease-in-out;
     }
     .vco-slidenav-title, .vco-slidenav-description {
-      font-family: 'Lato', sans-serif;  
+      font-family: 'Lato', sans-serif;
       text-transform: uppercase;
     }
-    
+
     &:hover {
       .vco-slidenav-icon {
         &:before {
-          opacity: 1 !important; 
+          opacity: 1 !important;
         }
       }
     }
   }
-  
+
   .vco-slide {
     .vco-slide-content {
-      padding-left: 0 !Important; 
+      padding-left: 0 !Important;
     }
     .vco-text {
       width: 840px;
       max-width: 840px;
       margin-left: calc((50vw - 420px));
       padding: 0 5%;
-      
+
       @media only screen and (max-width: 768px){
         width: 85vw;
         max-width: 85vw;
         margin-left: calc((50vw - 42.5vw));
-      }      
+      }
     }
-    
+
     .vco-headline-date {
       font-family: 'Lato', sans-serif;
       font-size: 12px;
@@ -1277,7 +1285,7 @@ sup {
       line-height: 24px;
       color: black;
     }
-    
+
   }
-  
+
 }

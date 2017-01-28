@@ -183,10 +183,10 @@ article#complex-case {
 		}
 
 		.center-graph-content {
-			padding: 3em;
+			padding: 1em;
 			position: relative;
 			&.no-vertical-padding {
-				padding: 0 3rem;
+				padding: 0 1rem;
 			}
 			svg {
 				max-width: 100%;
@@ -213,12 +213,18 @@ article#complex-case {
 
 		span.image-float {
 			position:relative;
-			left: -120px;
-			float: left;
+      float: left;
+      width: 200px;
 			padding: 18px;
 			padding-left: 0px;
 			padding-bottom: 20px;
-			margin-right: -110px;
+      @include breakpoint(500px) {
+        width: auto;
+      }
+      @include breakpoint(900px) {
+        left: -120px;
+        margin-right: -110px;
+      }
 		}
 		.image-float .caption {
 			display: block;
