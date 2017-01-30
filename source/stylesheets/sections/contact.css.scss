@@ -2,6 +2,11 @@
 @import "base/mixins";
 @import "base/type";
 
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
 body {
 	background-image: url('../../images/google_map.png');
 	background-size: cover;

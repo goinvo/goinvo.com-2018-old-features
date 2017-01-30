@@ -168,6 +168,7 @@ body {
 	font-weight: 300;
 	word-break: normal;
 }
+
 #feature-article {
 	color: $font-color-base;
 }
@@ -192,6 +193,7 @@ body {
 	font-family: $font-family-title;
 	font-weight: 300;
 	text-transform: uppercase;
+  margin-bottom: .5em;
 
 }
 #feature-article h1 {
@@ -477,7 +479,6 @@ img.scale-with-grid {
 	background: url("../../images/features/zika/header.png");
 	background-size: cover;
 	background-position: center center;
-	margin-top: 55px;
 	height: 376px;
 	@include shadow($main-nav-shadow);
 	//border: solid #000 1px;

@@ -8,6 +8,11 @@ $ethics-padding: 30px;
  **  Team
  ************************************/
 
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
 div.team {
 	.video-box {
 		padding-bottom: 0;

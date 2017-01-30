@@ -15,11 +15,11 @@ body {
 }
 
 a {
-	display: inline;	
+	display: inline;
 }
 
 .sidebar a {
-	display: inline;	
+	display: inline;
 }
 
 #main-container {
@@ -27,7 +27,7 @@ a {
 }
 
 .bold {
-	font-weight: 800;	
+	font-weight: 800;
 }
 
 .scroll-nav {
@@ -36,7 +36,7 @@ a {
 
 h4.intro-quote {
 	margin: 0 auto;
-	margin-bottom: 2.5em;	
+	margin-bottom: 2.5em;
 	color: #776e6a;
 	text-align: center;
 	max-width: 1080px;
@@ -52,7 +52,7 @@ h4.intro-quote {
   padding: 0;
   margin: 0;
 
-	
+
   }
 
 .rslides li {
@@ -80,21 +80,21 @@ h4.intro-quote {
 
 .rslides-container {
 	position: relative;
-	max-width: 1280px;	
+	max-width: 1280px;
 	margin: 0 auto;
 	margin-top: 40px;
 	margin-bottom: 60px;
 	width: 100%;
 	padding: 0px 30px 0px 60px;
-	
+
 	@media only screen and (max-width: 750px) {
-		padding: 0px 20px;	
+		padding: 0px 20px;
 	}
-	
+
 	.caption {
 		font-size: 18px;
 		line-height: 28px;
-		margin-bottom: 0px;	
+		margin-bottom: 0px;
 		color: rgba(0, 0, 0, 0.45);
 		padding: 10px 0px;
 	}
@@ -113,20 +113,20 @@ h4.intro-quote {
 	height: 38px;
 	width: 38px;
 	background: transparent image-url("features/an-oral-history/slides/arrows.gif") no-repeat left center;
-	margin-top: -45px;	
+	margin-top: -45px;
 	border-radius: 50%;
-	
+
 	@media only screen and (max-width: 750px) {
-		left: 25px;	
+		left: 25px;
 	}
-	
+
 	@media only screen and (max-width: 400px) {
-		visibility: hidden;	
+		visibility: hidden;
 	}
 }
 
 a.rslides1_nav.prev {
-	
+
 }
 
 a.rslides1_nav.next {
@@ -134,7 +134,7 @@ a.rslides1_nav.next {
 	background-position: right center;
 	right: 40px;
 	@media only screen and (max-width: 750px) {
-		right: 25px;	
+		right: 25px;
 	}
 }
 
@@ -144,7 +144,7 @@ a.rslides1_nav.next {
 
 #feature-article{
 	width: 100%;
-	
+
 	.overall-header {
 		width: 100%;
 		height: 188px;
@@ -153,22 +153,22 @@ a.rslides1_nav.next {
 		text-align: center;
 		vertical-align: middle;
 		padding-top: 65px;
-		
+
 		@media only screen and (max-width: 910px) {
-			font-size: 50px;	
+			font-size: 50px;
 			padding-top: 75px;
 		}
-		
+
 		@media only screen and (max-width: 740px) {
-			font-size: 40px;	
+			font-size: 40px;
 			padding-top: 80px;
 		}
-		
-		@media only screen and (max-width: 590px) {	
+
+		@media only screen and (max-width: 590px) {
 			padding-top: 60px;
 		}
 	}
-	
+
 	header {
 		width: 100%;
 		background-color: gray;
@@ -178,31 +178,31 @@ a.rslides1_nav.next {
 		background-size: cover;
 			background-position: center;
 		&#section1-origins {
-			background-image: image-url('features/an-oral-history/hero-part_1.jpg');	
+			background-image: image-url('features/an-oral-history/hero-part_1.jpg');
 		}
 		&#section2-silicon {
-			background-image: image-url('features/an-oral-history/hero-part_2.jpg');		
+			background-image: image-url('features/an-oral-history/hero-part_2.jpg');
 		}
 		&#section3-interesting-times {
-			background-image: image-url('features/an-oral-history/hero-part_3.jpg');	
+			background-image: image-url('features/an-oral-history/hero-part_3.jpg');
 			background-position: top;
 		}
 		&#section4-boston {
-			background-image: image-url('features/an-oral-history/hero-part_4.jpg');		
+			background-image: image-url('features/an-oral-history/hero-part_4.jpg');
 		}
 		&#section5-todaytomorrow {
-			background-image: image-url('features/an-oral-history/hero-part_5.jpg');		
+			background-image: image-url('features/an-oral-history/hero-part_5.jpg');
 			background-position: top;
 		}
-		
+
 		.header-wrapper {
 			position: absolute;
 			bottom: 40px;
 			left: 0px;
 			width: 100%;
-			
+
 			.inner-header-wrapper {
-				max-width: 1280px;	
+				max-width: 1280px;
 				margin: 0 auto;
 				width: 100%;
 				padding: 0px 0px 0px 60px;
@@ -210,7 +210,7 @@ a.rslides1_nav.next {
 					width: 100%;
 					max-width: 100%;
 				}
-				
+
 				@media only screen and (max-width: 750px) {
 					width: 100%;
 					max-width: 100%;
@@ -218,31 +218,31 @@ a.rslides1_nav.next {
 				}
 			}
 		}
-		
+
 		.main-header-content {
 			display: inline-block;
 			width: 100%;
 			min-width: 730px;
-			
+
 			&.two-col {
-				width: calc(100% - 330px);	
+				width: calc(100% - 330px);
 				min-width: 0px;
 				@media only screen and (max-width: 750px) {
 					width: 100%;
 					display: block;
 				}
-				
+
 			}
-			
+
 			@media only screen and (max-width: 960px) {
 				width: 100%;
 				padding-left: 10px;
 				padding-right: 10px;
 				min-width: 0px;
 			}
-			
+
 			.header-title {
-				font-size: 65px;	
+				font-size: 65px;
 				line-height: 85px;
 				@media only screen and (max-width: 560px) {
 					font-size: 45px;
@@ -250,7 +250,7 @@ a.rslides1_nav.next {
 				}
 			}
 			.header-content {
-				padding-left: 0px;	
+				padding-left: 0px;
 				font-size: 22px;
 				line-height: 32px;
 				@media only screen and (max-width: 560px) {
@@ -266,7 +266,7 @@ a.rslides1_nav.next {
 			border-left: 1.5px dotted #fff;
 			padding-left: 20px;
 			padding-top: 20px;
-			
+
 			@media only screen and (max-width: 750px) {
 				width: 100%;
 				display: block;
@@ -275,23 +275,23 @@ a.rslides1_nav.next {
 				padding: 0px 10px;
 				padding-top: 30px;
 			}
-			
+
 			.two-images {
 				img {
 					display: inline-block;
 					width: 45%;
 					height: auto;
-					
+
 					@media only screen and (max-width: 750px) {
 						display: none;
 					}
-					
+
 					&:first-child {
-						margin-right: 10px;	
+						margin-right: 10px;
 					}
 				}
 			}
-			
+
 			.content {
 				margin-top: .5em;
 				font-size: 18px;
@@ -312,32 +312,33 @@ a.rslides1_nav.next {
 	border-bottom: 1px solid #000;
 	min-height: 0;
 	height: auto;
-	
+
 	@media only screen and (max-width: 1130px) {
-		padding: 0px 31px;	
-		padding-right: 10px;		
+		padding: 0px 31px;
+		padding-right: 10px;
 	}
-	
+
 	@media only screen and (max-width: 750px) {
-		padding: 0px 25px;		
+		padding: 0px 25px;
 	}
-	
-	
-	
+
+
+
 	.nav-button {
 		display: none;
 	}
 	.title {
-		display: inline-block;	
+		display: inline-block;
 		color: rgb(109, 110, 106);
 		margin-right: 60px;
 		padding-top: 10px;
 		padding-bottom: 8px;
 	}
 	a {
+		display: inline-block;
 		padding-top: 10px;
 		padding-bottom: 8px;
-		color: rgb(166, 167, 162);	
+		color: rgb(166, 167, 162);
 		font-weight: 100;
 		margin-right: 30px;
 		transition: 300ms ease-in-out;
@@ -345,31 +346,31 @@ a.rslides1_nav.next {
 			text-decoration: underline;
 			color: rgb(109, 110, 106);
 		}
-		
+
 		&:hover {
-			color: rgb(109, 110, 106);	
+			color: rgb(109, 110, 106);
 		}
 	}
-	
+
 	&.scroll-nav {
 		position: fixed;
 		top: 55px;
 		left: 0;
 		display: none;
 	}
-	
+
 	&.middle-nav {
 		display: none;
-		
+
 		@media only screen and (max-width: 750px) {
 			display: block;
-		}	
+		}
 	}
 }
 
 section.interview-content {
 	margin-top: 63px;
-	margin-bottom: 120px;	
+	margin-bottom: 120px;
 	padding-top: 30px;
 }
 
@@ -380,90 +381,90 @@ section.interview-content {
 	max-width: 1280px;
 	.sidebar {
 		display: inline-block;
-		max-width: 325px;	
+		max-width: 325px;
 		line-height: initial;
 		padding: 0px;
 		color: #000;
-		
+
 		@media only screen and (max-width: 1080px) {
-			max-width: 300px;	
+			max-width: 300px;
 		}
 		@media only screen and (max-width: 900px) {
-			max-width: 250px;	
+			max-width: 250px;
 		}
-		
+
 		@media only screen and (max-width: 750px) {
-			//max-width: 250px;	
+			//max-width: 250px;
 			display:block;
 			max-width: 100%;
 			width: 100%;
 			margin-bottom: 40px;
 		}
-		
+
 		.sidebar-box {
 			padding: 40px 20px;
 			color: rgba(0, 0, 0, .45);
-			
+
 			&.mobile-hide {
 				@media only screen and (max-width: 750px) {
-					display: none;	
+					display: none;
 				}
 			}
-			
+
 			p {
 				font-size: 18px;
-				line-height: 28px;	
+				line-height: 28px;
 				margin-bottom: 0px;
 			}
-			
+
 			img {
 				width: 100%;
 				margin-bottom: 15px;
 				height: auto;
 				min-width: 216px;
-				
+
 				@media only screen and (max-width: 750px) {
-					width: 100%;	
+					width: 100%;
 				}
-				
+
 				&.center {
-					margin: 0 auto;	
+					margin: 0 auto;
 					margin-bottom: 15px;
 				}
-				
+
 				&.small-size {
-					width: 50%;	
+					width: 50%;
 				}
 			}
-			
+
 			&.solid {
-				background-color: rgb(249, 249, 248);	
+				background-color: rgb(249, 249, 248);
 			}
-			
+
 			&.blank{
-				height: 300px;	
-				
+				height: 300px;
+
 				@media only screen and (max-width: 900px) {
-					height: 250px;	
+					height: 250px;
 				}
 
 				@media only screen and (max-width: 750px) {
 					display: none;
 				}
 			}
-			
+
 			&.dotted {
-				border-left: 2px dotted rgb(157,195,182);	
-				padding: 20px 20px;	
+				border-left: 2px dotted rgb(157,195,182);
+				padding: 20px 20px;
 				@media only screen and (max-width: 750px) {
-					border-left: none;	
+					border-left: none;
 				}
 			}
-			
+
 			&.extra-top-margin {
-				margin-top: 50px;	
+				margin-top: 50px;
 				&.double-top {
-					margin-top: 100px;	
+					margin-top: 100px;
 				}
 			}
 		}
@@ -474,34 +475,34 @@ section.interview-content {
 		display: inline-block;
 		vertical-align: top;
 		padding: 0px 60px;
-		
+
 		@media only screen and (max-width: 1080px) {
 			width: calc(100% - 330px);
 		}
-		
+
 		@media only screen and (max-width: 900px) {
 			width: calc(100% - 280px);
 		}
-		
+
 		@media only screen and (max-width: 750px) {
-			//max-width: 250px;	
+			//max-width: 250px;
 			width: 100%;
 			display: block;
 			padding: 0px 15px;
-			
+
 		}
-		
+
 		.interview-content {
-			
+
 			.speaker-avatar, .speaker-speaks {
-				display: inline-block;	
+				display: inline-block;
 				vertical-align: top;
-				
+
 				@media only screen and (max-width: 750px) {
-					display: block;	
+					display: block;
 				}
 			}
-			
+
 			.speaker-avatar {
 				width: 40px;
 				height: 40px;
@@ -510,45 +511,45 @@ section.interview-content {
 				-moz-border-radius: 50%;
 				-webkit-border-radius: 50%;
 				border-radius: 50%;
-			
-				
+
+
 				@media only screen and (max-width: 750px) {
-					margin-bottom: 0px;	
+					margin-bottom: 0px;
 					float: left;
 					width: 0px;
 					height: 0px;
 				}
-				
+
 				&.dirk {
 					background-image: image-url('features/an-oral-history/icon-dirk.jpg');
 					background-size: 42px 42px;
 				}
 				&.andrei {
-					background-image: image-url('features/an-oral-history/icon-andrei.jpg');	
+					background-image: image-url('features/an-oral-history/icon-andrei.jpg');
 				}
 				&.juhan {
-					background-image: image-url('features/an-oral-history/icon-juhan.jpg');	
+					background-image: image-url('features/an-oral-history/icon-juhan.jpg');
 				}
 				&.donna {
-					background-image: image-url('features/an-oral-history/icon-donna.jpg');	
+					background-image: image-url('features/an-oral-history/icon-donna.jpg');
 				}
 				&.ben {
-					background-image: image-url('features/an-oral-history/icon-ben.jpg');	
+					background-image: image-url('features/an-oral-history/icon-ben.jpg');
 				}
 				&.uday {
-					background-image: image-url('features/an-oral-history/icon-uday.jpg');	
+					background-image: image-url('features/an-oral-history/icon-uday.jpg');
 				}
 				&.eric {
-					background-image: image-url('features/an-oral-history/icon-eric.jpg');	
+					background-image: image-url('features/an-oral-history/icon-eric.jpg');
 				}
 				&.jon {
-					background-image: image-url('features/an-oral-history/icon-jon.jpg');	
+					background-image: image-url('features/an-oral-history/icon-jon.jpg');
 				}
 				&.sarah {
-					background-image: image-url('features/an-oral-history/icon-sarah.jpg');	
+					background-image: image-url('features/an-oral-history/icon-sarah.jpg');
 				}
 				&.jen {
-					background-image: image-url('features/an-oral-history/icon-jen.jpg');	
+					background-image: image-url('features/an-oral-history/icon-jen.jpg');
 				}
 				background-size: 41px 41px;
 
@@ -568,21 +569,21 @@ section.interview-content {
 				font-size: 18px;
 				line-height: 28px;
 				font-weight: 100;
-				
+
 				@media only screen and (max-width: 750px) {
-					width: 100%;	
+					width: 100%;
 					margin-bottom: 30px;
 					padding-top: 0px;
 				}
-				
+
 				.full-name {
 					font-weight: 700;
-				}	
+				}
 			}
 		}
-		
+
 	}
-	
+
 }
 
 .social-buttons {
@@ -686,17 +687,17 @@ section.interview-content {
 			color: $lightgray;
 		}
 	}
-	
-	
+
+
 	.authors {
 		margin-bottom: 50px;
-		
+
 		h1 {
 			font-weight: 100;
 			font-size:65px;
 			line-height: 75px;
 			color: rgba(0,0,0,.6);
-			
+
 			@media only screen and(max-width: 620px) {
 				font-size: 55px;
 				line-height: 65px;
@@ -707,15 +708,15 @@ section.interview-content {
 				margin-bottom: 1em;
 			}
 		}
-		
+
 		.person {
 			margin-bottom: 50px;
-			
+
 			.image, .content  {
-				display: inline-block;	
+				display: inline-block;
 				vertical-align: top;
 			}
-			
+
 			.image {
 				width: 150px;
 				height: auto;
@@ -725,40 +726,40 @@ section.interview-content {
 			}
 			p.mobile {
 					padding-top: 10px;
-					color: rgba(0,0,0,.6);	
+					color: rgba(0,0,0,.6);
 					display: none;
 					@media only screen and (max-width: 750px) {
-						display: block;	
+						display: block;
 					}
 			}
 			.content {
 				padding-left: 15px;
-				width: calc(100% - 155px);	
-				
+				width: calc(100% - 155px);
+
 				@media only screen and(max-width: 1170px) {
-					width: calc(100% - 135px);	
+					width: calc(100% - 135px);
 				}
-				
+
 				h2 {
 					color: rgba(0,0,0,.6);
-					
+
 					@media only screen and(max-width: 680px) {
 						font-size: 35px;
 					}
-					
+
 					@media only screen and(max-width: 597px) {
 						font-size: 30px;
 					}
 				}
-				
+
 				p {
 					padding-top: 5px;
-					color: rgba(0,0,0,.6);	
+					color: rgba(0,0,0,.6);
 					@media only screen and (max-width: 750px) {
-						display: none;	
+						display: none;
 					}
 				}
-				
+
 				small {
 					@media only screen and(max-width: 1170px) {
 						display: block;
@@ -766,12 +767,12 @@ section.interview-content {
 					}
 				}
 			}
-				
+
 		}
-		
+
 	}
-	
-	
+
+
 	.contributors.download-links {
 		margin-top: 20px;
 		font-size: 24px;
@@ -791,11 +792,11 @@ section.interview-content {
 			width: 906px;
 			margin: 0 auto;
 			@media only screen and (max-width: 400px) {
-				padding-left: calc(50% - 80px);	
+				padding-left: calc(50% - 80px);
 			}
-			
+
 			h2 {
-				text-align: center;	
+				text-align: center;
 				font-size: 28px;
 				line-height: 22px;
 				width: 100%;
@@ -803,10 +804,10 @@ section.interview-content {
 				margin-bottom: 30px;
 				color: rgba(0,0,0,.6);
 				@media only screen and (max-width: 750px) {
-					text-align: left;	
+					text-align: left;
 				}
 			}
-			
+
 			@media only screen and(max-width: 1170px) {
 				max-width: 305px;
 				width: 100%;
@@ -833,7 +834,7 @@ section.interview-content {
 			font-size: 18px;
 			padding-top: 0px;
 			margin-top: 0px;
-			font-weight: 100;	
+			font-weight: 100;
 		}
 		.contributor {
 			display: inline-block;
@@ -843,12 +844,12 @@ section.interview-content {
 				height: 100px;
 			}
 			@media only screen and (max-width: 400px) {
-				height: auto;	
+				height: auto;
 			}
 			.image, .info {
 				float: left;
 				@media only screen and (max-width: 400px) {
-					float: none;	
+					float: none;
 					display: block;
 				}
 			}
@@ -856,7 +857,7 @@ section.interview-content {
 				width: 75px;
 				height: auto;
 				@media only screen and (max-width: 400px) {
-					width: 90px;	
+					width: 90px;
 				}
 			}
 			.info {
@@ -866,12 +867,12 @@ section.interview-content {
 					padding-left: 0;
 					width: 100%;
 					padding: 10px 0px 25px 0px;
-					max-width: 100%;	
+					max-width: 100%;
 				}
 			}
 		}
 	}
-	
+
 	@media only screen and (max-width: 978px) {
 		padding-left: 3em;
 		padding-right: 3em;

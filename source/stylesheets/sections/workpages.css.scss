@@ -1,5 +1,9 @@
 @import "../base/core";
 
+html,
+body {
+	@include font-size-map($font-size-body-new-pages);
+}
 
 #article-header {
 	background-color: #f9f9f9;

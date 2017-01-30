@@ -1,5 +1,10 @@
 @import "../base/core";
 
+html,
+body {
+   @include font-size-map($font-size-body-new-pages);
+}
+
 article#complex-case {
 
 	.no-top-margin {

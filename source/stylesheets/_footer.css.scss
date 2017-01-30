@@ -1,4 +1,5 @@
 #main-footer {
+  @include font-size-map($font-size-body-new-pages);
 	background-color: $black;
 	padding: 1em 2.125em;
 	width: 100%;

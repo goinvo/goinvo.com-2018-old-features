@@ -17,8 +17,10 @@
 
 $font-break-point: 500px;
 
-$font-size-base: 20px;
-$font-size-body: (null: $font-size-base);
+$font-size-base-old: 16px; // Kept around for feature article pages (which get super messed up if changed)
+$font-size-base-new: 20px;
+$font-size-body-old-pages: (null: $font-size-base-old);
+$font-size-body-new-pages: (null: $font-size-base-new); // Optionally apply this on page containers to override old font size
 $font-size-h1: (null: 2.75rem, $font-break-point: 3.75rem);
 $font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
 $font-size-h3: (null: 1.25rem, $font-break-point: 1.75rem);
@@ -29,7 +31,7 @@ $font-weight-bold: 700;
 
 html,
 body {
-	@include font-size-map($font-size-body);
+	@include font-size-map($font-size-body-old-pages); // Kept around for feature article pages
 	font-family: 'Roboto', sans-serif;
 	color: $black;
 	text-rendering: optimizeLegibility;

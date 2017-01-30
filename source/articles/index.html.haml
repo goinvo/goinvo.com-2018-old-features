@@ -18,8 +18,9 @@
       getHubspotBlogPosts(renderBlogPosts);
 
       var $featureArticleListContainer = $('.feature-article-list-container');
-      var numOfFeatures = $('.feature-article-list').find('li').length;
-      var featureHeight = $('.feature-article-list').find('li').height();
+      var $featureArticleListItems = $('.feature-article-list li');
+      var numOfFeatures = $featureArticleListItems.length;
+      var featureHeight = $featureArticleListItems.height();
 
       $featureArticleListContainer.css('max-height', 3 * featureHeight);
 

@@ -6,6 +6,11 @@
  **  Careers
  ************************************/
 
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
 .careers.open-office-hours .hero {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/open-office-hours/open-studio.jpg');
 }

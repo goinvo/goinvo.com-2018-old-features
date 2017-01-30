@@ -4,6 +4,10 @@
  **  History
  ************************************/
 
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
 
 .time-wrapper {
 	background-color: white;
