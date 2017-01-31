@@ -4,7 +4,9 @@ html,
 body {
    @include font-size-map($font-size-body-new-pages);
 }
-
+#complex-case #mainContent .quote h2.quote-content {
+  margin-top: 0;
+}
 article#complex-case {
 
 	.no-top-margin {
@@ -91,13 +93,9 @@ article#complex-case {
 	#mainContent {
 		padding-top: 60px;
 
-		ul {
-			font-size: 1.375em;
-
-			li {
-				margin-bottom: .75em;
-			}
-		}
+    ul li {
+      margin-bottom: 10px;
+    }
 
 		p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
 			max-width: 640px;
@@ -245,7 +243,7 @@ article#complex-case {
 		background-color: lighten($gray, 25%);
 		padding: 60px 9%;
 
-		div.testimonial-image {
+		.testimonial-image {
 			width: 200px;
 			height:200px;
 			background-size: cover;
@@ -262,16 +260,23 @@ article#complex-case {
 			}
 		}
 
-		h2.quote{
+		h2.quote-content {
 			font-weight: 400;
 			margin: 0 auto;
-			margin-bottom:30px;
-			max-width:70rem;
+			max-width: 70rem;
+      margin-top: 0;
+
+      &.margin-bottom {
+        margin-bottom: 30px;
+      }
 		}
 
-		p.quote-author, p.block-header {
-			color:$gray;
+		p.quote-author, .block-header {
+			color: $gray;
 		}
+    .block-header {
+      margin-bottom: 30px;
+    }
 	}
 
 	#image-background {

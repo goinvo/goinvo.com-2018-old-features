@@ -24,7 +24,7 @@ $( document ).ready(function() {
 			"title" : "Healthcare",
 			"url" : "/healthcare/",
 			"image" : "hgraph.jpg",
-			"next-id" : "enterprise"
+			"next-id" : "products"
 		},
 		"3m" : {
 			"title" : "3M",
@@ -78,13 +78,13 @@ $( document ).ready(function() {
 			"title" : "Numera",
 			"url" : "/healthcare/numera/",
 			"image" : "numera.jpg",
-			"next-id" : "enterprise"
+			"next-id" : "products"
 		},
 		"enterprise" : {
 			"title" : "Enterprise",
 			"url" : "/enterprise/",
 			"image" : "dataxu.jpg",
-			"next-id" : "products"
+			"next-id" : "healthcare"
 		},
 		"nielsen" : {
 			"title" : "Nielsen",
@@ -138,13 +138,13 @@ $( document ).ready(function() {
 			"title" : "Telerik",
 			"url" : "/enterprise/telerik/",
 			"image" : "telerik.jpg",
-			"next-id" : "products"
+			"next-id" : "healthcare"
 		},
 		"products" : {
 			"title" : "Products",
 			"url" : "/products/",
 			"image" : "care-cards.jpg",
-			"next-id" : "healthcare"
+			"next-id" : "enterprise"
 		},
 		"hgraph" : {
 			"title" : "hGraph",
@@ -182,7 +182,7 @@ $( document ).ready(function() {
 			"title" : "PainTrackr",
 			"url" : "/products/paintrackr/",
 			"image" : "paintrackr.jpg",
-			"next-id" : "healthcare"
+			"next-id" : "enterprise"
 		}
 	};
 
@@ -206,7 +206,7 @@ $( document ).ready(function() {
 	if(nextID === "enterprise" || nextID === "healthcare") {
 		nextArea.html('See our work in <h1>' + projects[nextID].title + '</h1>');
 	} else if (nextID === "products") {
-		nextArea.html('Check out our <h1>' + projects[nextID].title + '</h1>');
+		nextArea.html('See our <h1>' + projects[nextID].title + '</h1>');
 	} else {
 		nextTitle.html(projects[nextID].title);
 	}

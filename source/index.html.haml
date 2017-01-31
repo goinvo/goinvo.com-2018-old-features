@@ -48,6 +48,7 @@
 			}
 		];
 		var homepageHeader = homepageHeaderContent[Math.floor(Math.random() * 4)];
+		homepageHeader = homepageHeaderContent[2];
 		$(function() {
 			$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
 			$('#homepage-hero .actual-title').text(homepageHeader.headerText);

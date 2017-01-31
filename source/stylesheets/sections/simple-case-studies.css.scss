@@ -10,13 +10,8 @@ body {
 
 	h6.subheader {
 		margin-top: 40px;
-		font-size: 1.1rem;
 		font-weight: 400;
 		text-transform: uppercase;
-
-    @include breakpoint($font-break-point) {
-			font-size: 1.375rem;
-		}
 
 		&.name {
 			text-transform: none;
@@ -153,24 +148,17 @@ body {
 .similar-project-container {
 	h6.subheader {
 		text-transform: none;
-		font-size: 1.1rem;
+		font-size: 1rem;
 		margin: 40px 0 0 0;
 		padding-bottom: .5em;
-
-		@include breakpoint($font-break-point) {
-			font-size: 1.375rem;
-		}
 	}
 	a.button.radius {
 		display: inline-block;
-		font-size: 1.25em;
-		padding: 20px 20px;
-		padding-top: 22px;
-		background-color:rgb(235, 235, 235);
+		padding: 10px 20px;
+		background-color: rgba(235, 235, 235, 0.6);
 		color: #aaa;
 		&:hover{
-			//color:rgb(247, 247, 247);
-			background-color: #dbdddc;
+			background-color: rgba(235, 235, 235, 0.8)
 		}
 	}
 }

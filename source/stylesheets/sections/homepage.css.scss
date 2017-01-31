@@ -268,7 +268,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 
 	.actual-portfolio {
 		position: absolute;
-		bottom: 100px;
+		bottom: 115px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -282,7 +282,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	.actual-portfolio-description {
 		-webkit-backdrop-filter: blur(15px);
 		width: 100%;
-		height: 100px;
+		height: 115px;
 		padding: 15px 15px 0;
 		background: rgba(0, 0, 0, .3);
 		position: absolute;
@@ -301,9 +301,9 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		display: inline-block;
 		padding: 10px 35px;
 		transition: 250ms;
-		background-color: rgba(255,255,255,.2);
+		background-color: rgba(255,255,255,.15);
 		&:hover {
-			transform: scale(1.05,1.05);
+			background-color: rgba(255,255,255,.2);
 		}
 	}
 }
@@ -318,7 +318,6 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	cursor: pointer;
 
 	&:hover {
-		transform: scale(1.1,1.1);
 		background: rgba(0,0,0,.2);
 	}
 }
