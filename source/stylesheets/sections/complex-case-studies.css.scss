@@ -344,3 +344,22 @@ article#complex-case {
 		color: #f7f7f7;
 	}
 }
+
+.hgraph-patterns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0 20px;
+
+  div {
+    width: 100%;
+
+    @include breakpoint(650px) {
+      width: 45%;
+    }
+  }
+  div:last-of-type {
+    margin-left: auto;
+  }
+}
