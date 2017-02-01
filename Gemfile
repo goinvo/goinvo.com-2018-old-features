@@ -4,7 +4,11 @@ gem "middleman", '3.3.7'
 gem "middleman-livereload"
 gem "middleman-smusher"
 gem "haml"
-gem "compass"
+git 'https://github.com/ably-forks/compass', branch: 'sass-deprecation-warning-fix' do
+  # This bit fixes some warnings from Compass, no fix/PR has been merged yet
+  # https://github.com/Compass/compass/issues/2052
+  gem 'compass-core'
+end
 gem "middleman-autoprefixer"
 gem "middleman-s3_sync", '3.3.5'
 gem "middleman-s3_redirect"
