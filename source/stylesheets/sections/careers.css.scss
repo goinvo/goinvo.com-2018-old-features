@@ -21,7 +21,7 @@ body {
 	}
 	.hero {
 		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/careers/careers.jpg');
-
+    text-shadow: 0 2px 20px rgba(0,0,0,.8);
 	}
 
 	#content-area {
@@ -59,7 +59,13 @@ body {
 		line-height: 30px;
 	}
 }
-
+.form-title {
+  font-weight: $font-weight-bold;
+}
+.caption.caption-quote {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 #dbutton, #dbutton2, #attach_resume-02f6d985-bc3d-40a0-9bff-c8610111844b {
 	padding-top: 11px;
 	padding-bottom: 7px;

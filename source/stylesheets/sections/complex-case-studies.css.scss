@@ -147,6 +147,11 @@ article#complex-case {
 				margin: 0 0 30px;
 				max-width: 100%;
 				text-align: center;
+
+        iframe {
+          width: 100%;
+          min-height: 480px;
+        }
 			}
 		}
 
@@ -285,9 +290,9 @@ article#complex-case {
 			max-width:80rem;
 			margin: 0 auto;
 		}
-		background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
+		background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 10%,rgba(103,116,124,1) 20%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
 		background-size: contain;
-		padding-top: 375px;
+		padding-top: 200px;
 		color: $white;
 		.full-two-images {
 			max-width: 1600px;
@@ -299,6 +304,11 @@ article#complex-case {
 			margin-top: 7px;
 			margin-bottom: 60px;
 		}
+
+    @include breakpoint(500px) {
+      background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 20%,rgba(103,116,124,1) 25%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
+      background-size: contain;
+    }
 	}
 
 	#email-content {

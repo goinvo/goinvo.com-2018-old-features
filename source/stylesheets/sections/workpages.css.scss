@@ -28,12 +28,11 @@ body {
 		color: $black;
 		border-radius: 3px;
 		border: 1px solid $black;
-		transform: translateX(-50%) scale(1,1);
+		transform: translateX(-50%);
 		transition: 300ms ease-in-out;
 		cursor: pointer;
 
 		&:hover {
-			transform: translateX(-50%) scale(1.05, 1.05);
 			background-color: rgba(249, 249, 249, .6);
 		}
 
@@ -268,17 +267,11 @@ body {
 		left: 0;
 		top: 0;
 		height: 100%;
-		padding: 140px 20px 40px 60px;
-
-		@media  only screen and (max-width: 1100px) {
-			padding-top: 90px;
-		}
+		padding: 20px 40px;
 
 		@media  only screen and (max-width: 730px) {
 			width: 100%;
 			z-index: 10;
-			padding-left: 30px;
-			padding-top: 30px;
 		}
 
 
@@ -512,6 +505,11 @@ body {
 		border-radius: 3px;
 		border: 1px solid #9B9B9B;
 		cursor: pointer;
+    transition: background-color 250ms;
+
+    &:hover {
+      background-color: transparentize(#9B9B9B, .95);
+    }
 	}
 }
 
@@ -607,14 +605,10 @@ body {
 			width: 100px;
 			height: 100px;
 			cursor: pointer;
-			transform: scale(1,1);
 			transition: 300ms ease-in-out;
 			position: absolute;
 			left: 60%;
 			bottom: 210px;
-			&:hover {
-				transform: scale(1.2, 1.2);
-			}
 
 			@media only screen and (max-width: 940px) {
 				left: 75%;
@@ -637,7 +631,7 @@ body {
 
 #products {
 	#article-header {
-		height: 800px;
+		height: 620px;
 		background-image: image-url('products/hero.png');
 		background-size: cover;
 		background-repeat:none;
@@ -654,7 +648,11 @@ body {
 		}
 		a {
 			display: inline-block;
-			margin-left: 85px;
+			margin-left: 25px;
+
+			@include breakpoint(651px) {
+				margin-left: 85px;
+			}
 		}
 		.button-h {
 			display: inline-block;
@@ -666,19 +664,12 @@ body {
 			transform: none;
 		}
 
-
+		@include breakpoint(530px) {
+			height: 800px;
+		}
 		@media only screen and (max-width: 1170px) {
-			height: 700px;
 			h1.title {
 				width: 600px;
-				// font-size: 50px;
-			}
-		}
-
-		@media only screen and (max-width: 950px) {
-			height: 550px;
-			h1.title {
-				// font-size: 45px;
 			}
 		}
 
@@ -689,15 +680,11 @@ body {
 				padding-left: 20px;
 				margin-left: 0px;
 				margin: 0 auto;
-				// font-size: 40px;
 				padding-top: 80px;
 			}
 			.button-h {
-				margin-left:0px;
 				width: 100%;
-				margin:0 auto;
-				margin-top: 30px;
-				margin-left: 5%;
+				margin: 0 auto;
 				text-align: center;
 			}
 		}
@@ -1063,14 +1050,12 @@ body {
 		display: inline-block;
 		padding: 5px 15px;
 		cursor: pointer;
-		transform: scale(1,1);
 		transition: 300ms ease-in-out;
 		color: black;
 		text-align: center;
 		background-color: rgba(255,255,255,.4);
 
 		&:hover {
-			transform: scale(1.2, 1.2);
 			background-color: rgba(255,255,255,.6);
 		}
 	}
