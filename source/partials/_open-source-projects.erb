@@ -6,32 +6,26 @@
       </a>
       <div class="info">
         <a href="<%= project.site ? project.site : project.github ? project.github : project.ios ? project.ios : 'javascript:void(0)' %>" class="title"><%= project.project_name %></a>
-        <% if project.site %>
-          <div class="website">
-            <a href="<%= project.site %>">
-              <div class="icon"></div>
-            </a>
-          </div>
-        <% end %>
-        <% if project.ios %>
-          <div class="ios">
-            <a href="<%= project.ios %>">
-              <div class="icon"></div>
-            </a>
-          </div>
-        <% end %>
-        <% if project.github %>
-          <div class="github">
-              <a href="<%= project.github %>">
-                <div class="icon"></div>
-              </a>
-          </div>
-        <% end %>
         <% if project.open_source_description %>
           <div class="description font-small">
             <%= project.open_source_description %>
           </div>
     		<% end %>
+        <% if project.site %>
+          <div>
+            <a class="font-small" href="<%= project.site %>"><%= pretty_url(project.site) %></a>
+          </div>
+        <% end %>
+        <% if project.ios %>
+          <div>
+            <a class="font-small" href="<%= project.ios %>">iOS App</a>
+          </div>
+        <% end %>
+        <% if project.github %>
+          <div>
+            <a class="font-small" href="<%= project.github %>">Download Code</a>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

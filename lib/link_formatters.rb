@@ -29,6 +29,10 @@ module LinkFormatters
     "mailto:#{address}"
   end
 
+  def pretty_url(url)
+    url.sub(/^https?\:\/\//, '').sub(/^www./,'').sub(/(\/)+$/,'')
+  end
+
   # Greets a user
   def greeting_for(user)
     greetings = {
