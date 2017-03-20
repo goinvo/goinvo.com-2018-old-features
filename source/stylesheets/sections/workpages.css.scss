@@ -906,16 +906,13 @@
 
 #products {
 	#article-header {
-		height: 800px;
+		height: 450px;
 		background-image: image-url('products/hero.png');
 		background-size: cover;
 		background-repeat:none;
 		
-		
-		
 		h1.title {
-			width: 700px;
-			margin:0px;
+			margin: 0px;
 			margin-left: 60px;
 			padding-top: 140px;
 			margin-top: 0px;
@@ -924,7 +921,7 @@
 			line-height: 1.2em;
 		}
 		a {
-			width: 90%;	
+			width: 90%;
 		}
 		
 		.button-h {
@@ -938,15 +935,12 @@
 		
 		
 		@media only screen and (max-width: 1170px) {
-			height: 700px;
 			h1.title {
-				width: 600px;	
 				font-size: 50px;
 			}
 		}
 		
 		@media only screen and (max-width: 950px) {
-			height: 550px;
 			h1.title {
 				font-size: 45px;
 			}
@@ -954,13 +948,11 @@
 		
 		@media only screen and (max-width: 650px) {
 			h1.title {
-				width: 100%;	
 				padding-right: 20px;
 				padding-left: 20px;
 				margin-left: 0px;
 				margin: 0 auto;
 				font-size: 40px;
-				padding-top: 80px;
 			}
 			a {
 				width: 80%;	
