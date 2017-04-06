@@ -38,6 +38,12 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 		margin-bottom: 10px;
 	}
 }
+#killer-truths {
+  .photo-container {
+    background: linear-gradient(rgba(2, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%) , image-url('features/killer-truths/killer-truths-banner.png') rgba(0, 0, 0, 0.62);
+		background-size: 100%, cover;
+  }
+}
 
 #zika {
 	.photo-container {
@@ -154,7 +160,7 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 }
 
 #culture .photo-container {
-	background-image: image-url('home/culture.jpg');
+	background-image: image-url('home/culture-2017.jpg');
 }
 
 #process .photo-container {

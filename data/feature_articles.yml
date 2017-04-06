@@ -15,6 +15,13 @@
   # style rules for background images and the likes.
 
 articles:
+  - title: "Killer Truths"
+    tag_line: "How citizens of the USA really die (from 2007-2014)."
+    date: "2017-04-01"
+    image: "features/killer-truths/killer-truths-banner.png"
+    url: "killer-truths"
+    id: "killer-truths"
+
   - title: "Determinants of Health"
     tag_line: "Health means more than your diet and your doctor."
     date: "2016-10-24"

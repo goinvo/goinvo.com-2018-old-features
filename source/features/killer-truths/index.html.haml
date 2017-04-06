@@ -1,0 +1,176 @@
+- content_for(:title) do
+  = "Killer Truths"
+- content_for(:page_head) do
+  = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans|Ropa+Sans|Raleway"
+  = stylesheet_link_tag "features/killer-truths"
+  = javascript_include_tag "https://d3js.org/d3.v3.js"
+
+- meta = page_for_meta("killer-truths")
+%meta{:name => "description", :content => "#{meta.description}" }
+%meta{:name => "keywords", :content => "#{meta.keywords}" }
+%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+%meta{:name => "twitter:description", :content => "#{meta.description}"}
+- if (meta.twitterimage)
+  %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+%meta{:property => "og:url", :content => "http://www.goinvo.com/features/disrupt/"}/
+%meta{:property => "og:title", :content => "Disrupt: Designing for Emerging Technologies"}/
+%meta{:property => "og:description", :content => "Today, emerging technologies from robotics to synthetic biology to the Internet of Things are opening up new possibilities."}/
+%meta{:property => "og:type", :content => "article"}/
+%meta{:property => "og:image", :content => "http://www.goinvo.com/images/features/disrupt/twitter.jpg"}/
+
+.killer-truths
+  %header.section.header.cf
+    .killer-hero
+      %img{:alt => "Killer Truths", :src => "/images/features/killer-truths/killer_truths_title.png"}/
+  .section.chart-wrapper
+    %p.chart-description
+      Estimated number of deaths in USA from 2007-2014.
+    #killer-chart
+  .section.download-wrapper
+    .container
+      %ul
+        %li.github
+          %a{:href => "https://github.com/goinvo/killertruths"}
+            .dl-img
+              %svg#github{"enable-background" => "new 0 0 83.576 81.519", :height => "81.519px", :version => "1.1", :viewbox => "0 0 83.576 81.519", :width => "83.576px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
+                %path{"clip-rule" => "evenodd", :d => "M41.786,0C18.709,0,0,18.715,0,41.793\n                            c0,18.464,11.97,34.127,28.58,39.654c2.089,0.381,2.851-0.907,2.851-2.015c0-0.991-0.035-3.622-0.055-7.109\n                            c-11.625,2.525-14.08-5.602-14.08-5.602c-1.899-4.826-4.64-6.113-4.64-6.113c-3.793-2.591,0.288-2.54,0.288-2.54\n                            c4.194,0.295,6.401,4.309,6.401,4.309c3.728,6.384,9.781,4.54,12.161,3.473c0.381-2.701,1.46-4.545,2.656-5.587\n                            c-9.28-1.058-19.035-4.64-19.035-20.654c0-4.564,1.628-8.292,4.299-11.214c-0.428-1.057-1.864-5.306,0.411-11.058\n                            c0,0,3.507-1.127,11.492,4.284c3.334-0.927,6.907-1.393,10.462-1.408c3.55,0.015,7.123,0.481,10.462,1.408\n                            c7.979-5.412,11.481-4.284,11.481-4.284c2.28,5.752,0.845,10.001,0.416,11.058c2.676,2.921,4.294,6.649,4.294,11.214\n                            c0,16.054-9.771,19.586-19.08,20.619c1.501,1.293,2.836,3.843,2.836,7.741c0,5.587-0.05,10.092-0.05,11.464\n                            c0,1.118,0.751,2.416,2.873,2.01c16.593-5.537,28.553-21.189,28.553-39.649C83.576,18.715,64.867,0,41.786,0z", :fill => "#FFFFFF", "fill-rule" => "evenodd"}
+            .dl-text GitHub
+        %li.download
+          %a{:href => "/images/features/killer-truths/Killer_Truths_Slide.png"}
+            .dl-img
+              %svg#download{"enable-background" => "new -0.884 0 80.884 77.521", :height => "77.521px", :version => "1.1", :viewbox => "-0.884 0 80.884 77.521", :width => "80.884px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
+                %g
+                  %rect{:fill => "#FFFFFF", :height => "9", :width => "80", :x => "-0.352", :y => "68.352"}
+                  %path{:d => "M68.648,32.352h-19v-25c0-5.523-0.479-7-6-7h-8c-5.523,0-6,1.477-6,7v25h-20l29.5,26.094L68.648,32.352z", :fill => "#FFFFFF"}
+            .dl-text Download
+        %li.data
+          %a{:href => "https://docs.google.com/spreadsheets/d/1dE0CATyI9hDNp3WlgueY7d6bJOiw7HEiyi-MEzHgDig/edit?usp=sharing", :target => "_blank"}
+            .dl-img
+              %svg#raw_data{"enable-background" => "new 0 -1.199 79.016 69.199", :height => "69.199px", :version => "1.1", :viewbox => "0 -1.199 79.016 69.199", :width => "79.016px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
+                %path{:d => "M69.008-0.599h-58c-6.627,0-10.5,2.873-10.5,9.5v48c0,6.627,3.873,10.5,10.5,10.5h58\n                            c6.627,0,9.5-3.873,9.5-10.5v-48C78.508,2.274,75.635-0.599,69.008-0.599z M20.508,57.4h-9v-9h9V57.4z M20.508,38.4h-9v-9h9V38.4z\n                             M20.508,19.401h-9v-9h9V19.401z M68.508,57.4h-38v-9h38V57.4z M68.508,38.4h-38v-9h38V38.4z M68.508,19.401h-38v-9h38V19.401z", :fill => "#FFFFFF"}
+            .dl-text Raw Data
+        %li.connect
+          %a{:href => "mailto:info@goinvo.com", :target => "_blank"}
+            .dl-img
+              %svg#contact{"enable-background" => "new 0 0 83.002 59", :height => "59px", :version => "1.1", :viewbox => "0 0 83.002 59", :width => "83.002px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
+                %g
+                  %polygon{:fill => "#FFFFFF", :points => "76.5,0.5 8.167,0.5 42,34.167    ", :stroke => "#FFFFFF", "stroke-miterlimit" => "10"}
+                  %path{:d => "M82.5,49V9.5L42.073,49.375L0.5,8v41c0,0-0.095,2.436,2.415,6.084\n                                    C4.75,57.75,9,58.5,9,58.5h66c0,0,2.528-0.277,4.953-3.118C82.655,52.216,82.5,49,82.5,49z", :fill => "#FFFFFF", :stroke => "#FFFFFF", "stroke-miterlimit" => "10"}
+            .dl-text Connect
+  .section.authors-wrapper
+    .container
+      .authors
+        %h2 Authors
+        .author
+          .auth-img
+            %img.scale-with-grid{:alt => "Sharon Lee", :src => "/images/features/killer-truths/author_sharon.jpg"}/
+          .authtext
+            %p.studio Involution Studios
+            %h3 Sharon Lee
+            %p Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.
+      .contributors
+        %h2 Contributors
+        .author
+          .auth-img
+            %img.scale-with-grid{:alt => "Jen Patel", :src => "/images/features/killer-truths/contributer_jen.jpg"}/
+          .authtext
+            %p.studio Involution Studios
+            %h3 Jennifer Patel
+            %p Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology.
+        .author
+          .auth-img
+            %img.scale-with-grid{:alt => "Juhan Sonin", :src => "/images/features/killer-truths/contributer_juhan.jpg"}/
+          .authtext
+            %p.studio Involution Studios
+            %h3 Juhan Sonin
+            %p Juhan specialized in software design and system engineering. He operates, and is the director of, Involution Studios. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT.
+  .section.sources-wrapper
+    .container
+      %h2 Sources
+      .footnotes
+        %ol
+          %li#ref-1
+            Accidents or Unintentional Injuries. (2016, September 15). Retrieved January 23, 2017, from
+            %a{:href => "https://www.cdc.gov/nchs/fastats/accidental-injury.htm", :target => "_blank"} https://www.cdc.gov/nchs/fastats/accidental-injury.htm
+          %li#ref-2
+            Alzheimer's Disease. (2015, March 05). Retrieved January 23, 2017, from
+            %a{:href => "https://www.cdc.gov/aging/aginginfo/alzheimers.htm", :target => "_blank"} https://www.cdc.gov/aging/aginginfo/alzheimers.htm
+          %li#ref-3
+            Bacterial Pneumonia. (n.d.). Retrieved January 23, 2017, from
+            %a{:href => "http://www.healthline.com/health/bacterial-pneumonia#RiskFactors3", :target => "_blank"} http://www.healthline.com/health/bacterial-pneumonia#RiskFactors3
+          %li#ref-4
+            Behaviors That Increase Risk for Stroke. (2014, March 17). Retrieved January 23, 2017, from
+            %a{:href => "https://www.cdc.gov/stroke/behavior.htm", :target => "_blank"} https://www.cdc.gov/stroke/behavior.htm
+          %li#ref-5
+            Cancer. (2015, February). Retrieved January 23, 2017, from
+            %a{:href => "http://www.who.int/mediacentre/factsheets/fs297/en/", :target => "_blank"} http://www.who.int/mediacentre/factsheets/fs297/en/
+          %li#ref-6
+            Chan, A. (2010, September 10). The 10 Deadliest Cancers and Why There's No Cure. Retrieved January 23, 2017, from
+            %a{:href => "http://www.livescience.com/11041-10-deadliest-cancers-cure.html", :target => "_blank"} http://www.livescience.com/11041-10-deadliest-cancers-cure.html
+          %li#ref-7
+            Chronic Obstructive Pulmonary Disease (COPD) Includes: Chronic Bronchitis and Emphysema. (2016, October 07). Retrieved January 23, 2017, from
+            %a{:href => "https://www.cdc.gov/nchs/fastats/copd.htm", :target => "_blank"} https://www.cdc.gov/nchs/fastats/copd.htm
+          %li#ref-8
+            Drug Poisoning Mortality: United States, 1999–2014. (2016, March 30). Retrieved January 12, 2017, from
+            %a{:href => "https://blogs.cdc.gov/nchs-data-visualization/drug-poisoning-mortality/", :target => "_blank"} https://blogs.cdc.gov/nchs-data-visualization/drug-poisoning-mortality/
+          %li#ref-9
+            Drunk driving statistics. (n.d.). Retrieved January 12, 2017, from
+            %a{:href => "http://www.alcoholalert.com/drunk-driving-statistics-2007.html", :target => "_blank"} http://www.alcoholalert.com/drunk-driving-statistics-2007.html
+          %li#ref-10
+            Drunk driving statistics. (n.d.). Retrieved January 12, 2017, from
+            %a{:href => "http://www.alcoholalert.com/drunk-driving-statistics-2008.html", :target => "_blank"} http://www.alcoholalert.com/drunk-driving-statistics-2008.html
+          %li#ref-11
+            Drunk driving statistics. (n.d.). Retrieved January 12, 2017, from
+            %a{:href => "http://www.alcoholalert.com/drunk-driving-statistics-2010.html", :target => "_blank"} http://www.alcoholalert.com/drunk-driving-statistics-2010.html
+          %li#ref-12
+            Heart disease Causes. (2014, July 29). Retrieved January 23, 2017, from
+            %a{:href => "http://www.mayoclinic.org/diseases-conditions/heart-disease/basics/causes/con-20034056", :target => "_blank"} http://www.mayoclinic.org/diseases-conditions/heart-disease/basics/causes/con-20034056
+          %li#ref-13
+            Intoxalock Ignition Interlock Device – Car Breathalyzer - 888-283-5899. (n.d.). Intoxalock Ignition Interlock. Retrieved January 12, 2017, from
+            %a{:href => "https://www.intoxalock.com/ignition-interlock-devices/statistics", :target => "_blank"} https://www.intoxalock.com/ignition-interlock-devices/statistics
+          %li#ref-14
+            Kochanek, K. D., M.A., Murphy, S. L., B.S., &amp; Xu, J., M.D. (2015, July 27). National Vital Statistics Report, Deaths: Final Data for 2011 (Rep. No. Volume 63, Number 3). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr63/nvsr63_03.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr63/nvsr63_03.pdf
+          %li#ref-15
+            Kochanek, K. D., M.A., Murphy, S. L., B.S., Xu, J., M.D., &amp; Tejada-Vera, B., M.S. (2016, June 30). National Vital Statistics Report, Deaths: Final Data for 2014 (Rep. No. Volume 65, Number 4). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr65/nvsr65_04.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr65/nvsr65_04.pdf
+          %li#ref-16
+            Kochanek, K. D., M.A., Xu, J., M.D., Murphy, S. L., B.S., Miniño, A. M., M.P.H., &amp; Kung, H., Ph.D. (2011, December 29). National Vital Statistics Report, Deaths: Final Data for 2009 (Rep. No. Volume 60, Number 3). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr60/nvsr60_03.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr60/nvsr60_03.pdf
+          %li#ref-17
+            M. (n.d.). MADD - 2012 Drunk Driving Fatalities by State. Retrieved January 12, 2017, from
+            %a{:href => "http://www.madd.org/blog/2013/november/2012-drunk-driving-fatalities.html", :target => "_blank"} http://www.madd.org/blog/2013/november/2012-drunk-driving-fatalities.html
+          %li#ref-18
+            Makary, M. A., &amp; Daniel, M. (2016, May 3). Medical error-the third leading cause of death in the US. Retrieved January 12, 2017, from
+            %a{:href => "http://www.bmj.com/content/353/bmj.i2139", :target => "_blank"} http://www.bmj.com/content/353/bmj.i2139
+          %li#ref-19
+            Miniño, A. M., M.P.H., Murphy, S. L., B.S., Xu, J., M.D., &amp; Kochanek, K. D., M.A. (2011, December 07). National Vital Statistics Report, Deaths: Final Data for 2008 (Rep. No. Volume 59, Number 10). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr59/nvsr59_10.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr59/nvsr59_10.pdf
+          %li#ref-20
+            Murphy, S. L., B.S., Kochanek, K. D., M.A.,  Xu, J., M.D., &amp; Heron, M., Ph.D. (2015, August 31). National Vital Statistics Report, Deaths: Final Data for 2012 (Rep. No. Volume 63, Number 9). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr63/nvsr63_09.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr63/nvsr63_09.pdf
+          %li#ref-21
+            Murphy, S. L., B.S. , Xu, J., &amp; M.D., Kochanek, K. D., M.A. (2013, May 8). National Vital Statistics Report, Deaths: Final Data for 2010 (Rep. No. Volume 60, Number 3). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr61/nvsr61_04.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr61/nvsr61_04.pdf
+          %li#ref-22
+            National Consortium for the Study of Terrorism and Responses to Terrorism Fact Sheet: American Deaths in Terrorist Attacks [PDF]. (2015, October).
+          %li#ref-23
+            Rudd, R. A., MSPH, Aleshire, N., JD, Zibbell, J. E., PhD, &amp; Gladden, M. R., PhD. (2016, January 01). Increases in Drug and Opioid Overdose Deaths — United States, 2000–2014. Retrieved January 23, 2017, from
+            %a{:href => "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6450a3.htm?s_cid=mm6450a3_w#tab", :target => "_blank"} https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6450a3.htm?s_cid=mm6450a3_w#tab
+          %li#ref-24
+            Statistics About Diabetes. (2016, December 12). Retrieved January 23, 2017, from
+            %a{:href => "", :target => "_blank"} http://www.diabetes.org/diabetes-basics/statistics/
+          %li#ref-25
+            Tobacco-Related Mortality. (2016, December 01). Retrieved January 12, 2017, from
+            %a{:href => "https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/tobacco_related_mortality/", :target => "_blank"} https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/tobacco_related_mortality/
+          %li#ref-26
+            Xu, J., M.D., Kochanek, K. D., M.A., Murphy, S. L., B.S., &amp; Tejada-Vera, B., B.S. (2010, May 20). National Vital Statistics Report, Deaths: Final Data for 2007 (Rep. No. Volume 58, Number 19). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr58/nvsr58_19.pdf", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr58/nvsr58_19.pdf
+          %li#ref-27
+            Xu, J., M.D., Murphy, S. L., B.S., Kochanek, K. D., M.A., &amp; Bastian, B. A., B.S. (2016, February 16). National Vital Statistics Report, Deaths: Final Data for 2013 (Rep. No. Volume 64, Number 2). Retrieved January 17, 2017, from CDC website:
+            %a{:href => "https://www.cdc.gov/nchs/data/nvsr/nvsr64/", :target => "_blank"} https://www.cdc.gov/nchs/data/nvsr/nvsr64/nvsr64_02.pdf
+
+= javascript_include_tag "features/killer-truths/killer-chart.js"

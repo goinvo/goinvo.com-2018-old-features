@@ -560,15 +560,12 @@ body {
 
 #products {
 	#article-header {
-		height: 620px;
+		height: 450px;
 		background-image: image-url('products/hero.png');
 		background-size: cover;
 		background-repeat:none;
 
-
-
 		h1.title {
-			width: 550px;
 			margin: 0px;
 			margin-left: 60px;
 			padding-top: 50px;
@@ -593,10 +590,13 @@ body {
 			transform: none;
 		}
 
-		@include breakpoint(530px) {
-			height: 800px;
-		}
 		@media only screen and (max-width: 1170px) {
+			h1.title {
+				font-size: 50px;
+			}
+		}
+
+		@media only screen and (max-width: 950px) {
 			h1.title {
 				width: 600px;
 			}
@@ -604,12 +604,11 @@ body {
 
 		@media only screen and (max-width: 650px) {
 			h1.title {
-				width: 100%;
 				padding-right: 20px;
 				padding-left: 20px;
 				margin-left: 0px;
 				margin: 0 auto;
-				padding-top: 80px;
+				font-size: 40px;
 			}
 			.button-h {
 				width: 100%;

@@ -392,3 +392,11 @@
   twittersite: "@goinvo"
   twittertitle: "Determinants of Health"
   twitterimage: "http://www.goinvo.com/images/features/determinants-of-health/determinants-of-health-twitter-card.jpg"
+
+- page: "killer-truths"
+  description: "How citizens of the USA really die (from 2007-2014)."
+  keywords: "health, death, healthcare, cancer, healthcare, medicalerror, deaths, goinvo, invo, graph, infographic"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Killer Truths"
+  twitterimage: "http://www.goinvo.com/images/features/killer-truths/Killer_Truths_Slide.png"

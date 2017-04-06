@@ -132,3 +132,18 @@ Before running any of these commands, you should make sure that you have all of 
 #### Live Deployments
 
 To deploy the build to the live server simply merge the `deploy` branch into `master`. Everything in master will automatically be built and uploaded to the server.
+
+
+#### Image Compression
+
+When saving images to go onto the website, always be sure to save small files.
+
+When you can, use SVGs for your vector images.
+
+When saving JPGs, open the file in Photoshop and change the image size: 
+* If the resolution is currently greater than 72ppi, then do not resample the image and change the resolution
+* Go back in and allow PS to resample, and resize the document to 200% larger than it's maximum size needs to be (this is so that the image can retain enough quality when compressed even on retina devices)
+* When saving as JPG, select progressive and reduce the quality as low as possible before degradation is apparent. 2-6 are recommended
+* Upload files to https://kraken.io/ and make them even smaller
+* Aim for around < 150KB
+* Now you're ready to rock!
