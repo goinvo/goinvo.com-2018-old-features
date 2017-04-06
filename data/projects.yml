@@ -72,6 +72,11 @@
   open_source_description: "An open source javascript-based web application for visualizing health data."
 
 - uid: "determinants-of-health"
+  href: "/features/determinants-of-health"
+  tag_line: "Determinants of Health"
+  feature_image_url: "/images/products/determinants-of-health.png"
+  summary: "A holistic measure of an individual's entire living situation and life experience."
+  client_name: "Determinants of Heath"
   project_name: "Determinants of Health"
   site: "http://determinantsofhealth.org"
   github: "https://github.com/goinvo/HealthDeterminants"

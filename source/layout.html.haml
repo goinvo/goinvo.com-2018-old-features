@@ -10,6 +10,9 @@
 			- else
 				Boston UX Design &amp; UI Design | Involution Studios
 		= stylesheet_link_tag 'all', :async => true
+		%script{:type => "text/javascript", :src => "//use.typekit.net/brw1pwx.js"}
+		:javascript
+			try{Typekit.load();}catch(e){ }
 		:javascript
 			document.documentElement.className = "";
 		= javascript_include_tag 'all'

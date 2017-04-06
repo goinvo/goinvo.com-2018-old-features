@@ -880,7 +880,8 @@ body {
 				}
 
 				.title {
-					font-size: 2em;
+					@include font-family-serif();
+					font-size: 1.5rem;
 					display:block;
 					color: black;
 
