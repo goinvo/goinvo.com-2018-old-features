@@ -5,8 +5,8 @@
 		function makeBlogPostBottom(posts) {
 			var post = posts[0];
 			// Set the recent blog post section
-			$('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><h5 class="tag">Latest Blog Post</h5><h2>' + post.title + '</h2></div></a>');
-			$('#blog .photo-container').css('background-image', 'url(' + findFirstBlogPostImage(post) + ')');
+			$('.recent-blog-post.dynamic').append('<a href="' + post.link + '" id="blog" class="block bar"><div class = "photo-container"></div><div class="title"><div class="tag">Latest Blog Post</div><h1>' + post.title + '</h1></div></a>');
+			$('#blog .photo-container').css('background-image', 'url(' + post.imageUrl + ')');
 		}
 		getHubspotBlogPosts(makeBlogPostBottom);
 		var homepageHeaderContent = [
@@ -16,7 +16,7 @@
 				subHeaderText: 'We design beautiful user experiences for patients, clinicians, and hospitals.',
 				portfolioImage: '/images/home/hgraph-visualize-health.png',
 				portfolioText: 'See your health in one picture.',
-				caseStudyUrl: 'healthcare/hgraph/',
+				caseStudyUrl: 'products/hgraph/?from=healthcare',
 				longTextClass: false
 			},
 			{
@@ -49,7 +49,7 @@
 		];
 		var homepageHeader = homepageHeaderContent[Math.floor(Math.random() * 4)];
 		$(function() {
-			$('#homepage-hero .photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
+			$('#homepage-hero.photo-container').css('background-image', "url(" + homepageHeader.backgroundImage + ")");
 			$('#homepage-hero .actual-title').text(homepageHeader.headerText);
 			$('#homepage-hero .actual-content').append(homepageHeader.subHeaderText);
 			if(homepageHeader.longTextClass) {
@@ -57,6 +57,8 @@
 			}
 			if(homepageHeader.portfolioImage) {
 				$('#homepage-hero .actual-portfolio').prepend("<img src=" + homepageHeader.portfolioImage + " />");
+			} else {
+				$('#homepage-hero .actual-portfolio').addClass('spacer');
 			}
 			if(homepageHeader.portfolioText) {
 				$('#homepage-hero .actual-portfolio-description').prepend("<p>" + homepageHeader.portfolioText + "</p>");
@@ -79,39 +81,37 @@
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%a#homepage-hero.block.bar{:href => ""}
-	.photo-container
+%a#homepage-hero.block.bar.photo-container{:href => ""}
 	.title
-		.actual-title 
-		.actual-content 
-		.actual-portfolio 
-		.actual-portfolio-description 
-			.actual-button 
+		%h1.actual-title
+		.actual-content
+		.actual-portfolio
+		.actual-portfolio-description
+			.actual-button
 .clients
 	%table.non-mobile
-		%tbody
-			%tr
-				%td
-					%a{:href => "healthcare/partners-gene-insight"}
-						%img{:src => "/images/healthcare/partners/partners.png"}
-				%td
-					%a{:href => "healthcare/3m"}
-						%img{:src => "/images/healthcare/partners/3m.png"}
-				%td
-					%a{:href => "healthcare/inspired-ehrs"}
-						%img{:src => "/images/healthcare/partners/nih.png"}
-				%td
-					%a{:href => "healthcare/mount-sinai"}
-						%img{:src => "/images/healthcare/partners/mtsinai.png"}
-				%td
-					%a{:href => "healthcare"}
-						%img{:src => "/images/healthcare/partners/jandj.png"}
-				%td
-					%a{:href => "healthcare/personal-genome-project"}
-						%img{:src => "/images/healthcare/partners/pgp.png"}
-				%td
-					%a{:href => "healthcare/hgraph"}
-						%img{:src => "/images/healthcare/partners/wallgreen.png"}
+		%tr
+			%td
+				%a{:href => "healthcare/partners-gene-insight"}
+					%img{:src => "/images/healthcare/partners/partners-gene-insight.png"}
+			%td
+				%a{:href => "healthcare/3m"}
+					%img{:src => "/images/healthcare/partners/3m.png"}
+			%td
+				%a{:href => "healthcare/inspired-ehrs"}
+					%img{:src => "/images/healthcare/partners/nih.png"}
+			%td
+				%a{:href => "healthcare/mount-sinai"}
+					%img{:src => "/images/healthcare/partners/mount-sinai.png"}
+			%td
+				%a{:href => "healthcare"}
+					%img{:src => "/images/healthcare/partners/johnson-and-johnson.png"}
+			%td
+				%a{:href => "healthcare/personal-genome-project"}
+					%img{:src => "/images/healthcare/partners/personal-genome-project.png"}
+			%td
+				%a{:href => "products/hgraph?from=healthcare"}
+					%img{:src => "/images/healthcare/partners/walgreens.png"}
 
 - feature_articles_sorted_by_date().first(2).each do |article|
 	%a.block.bar{ :href => "features/#{article.url}", :id => article.id }
@@ -119,21 +119,21 @@
 		- # At least for now...
 		.photo-container
 		.title
-			%h2.name= article.title
-			%h3.sub-name= article.tag_line
+			%h1.name= article.title
+			.sub-name= article.tag_line
 .double
 	%a#three-m.block.half{:href => "healthcare/3m"}
 		.photo-container
 		.title
-			%h5.tag Client Story: 3M
+			.tag Client Story: 3M
 			%h2 &ldquo;Invo designed our way to a $150M exit.&rdquo;
 	%a#culture.block.half{:href => "studio/careers"}
 		.photo-container
 		.title
-			%h5.tag Our Culture
+			.tag Our Culture
 			%h2 Radical transparency is just part of our story&hellip;
 .news
-	.small-title Our work has been showcased by
+	%h2.small-title.font-thin Our work has been showcased by
 	%ul.mobile
 		%li
 			%a{:href => "http://www.bostonglobe.com/business/2013/02/04/boston-sport-apps-run-packs/vXFHV2rVMZp9UJHqm7IvBK/story.html"}
@@ -188,5 +188,5 @@
 %a#from-bathroom-to-healthroom.block.bar{:href => "features/from-bathroom-to-healthroom/"}
 	.photo-container
 	.title
-		%h2.name From Bathroom to Healthroom
-		%h3.sub-name How magical technology will revolutionize human health
+		%h1.name From Bathroom to Healthroom
+		.sub-name How magical technology will revolutionize human health

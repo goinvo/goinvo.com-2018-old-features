@@ -5,30 +5,41 @@
   = javascript_include_tag "hubspot_blog_posts"
   :javascript
     function renderBlogPosts(posts) {
-      if (!posts) return;
       var blogArticleList = $('ul.blog-article-list');
+      if (!posts) {
+        blogArticleList.text('Oops! We can\'t load our blog articles right now, but you can click the link below to see them all.')
+        return;
+      };
       $.each(posts, function(i, post) {
-        var currentString = post.encoded;
-        var sIndex = currentString.indexOf('<img');
-        currentString = currentString.substr(sIndex + 4);
-        sIndex = currentString.indexOf('src=');
-        currentString = currentString.substr(sIndex + 5);
-        sIndex = currentString.indexOf('"');
-        currentString = currentString.substr(0, sIndex);
-        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + currentString + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
+        blogArticleList.append('<li><a href="' + post.link + '"><div class="blog-post-container" style="background-image: url(\'' + post.imageUrl + '\')"><div class="blog-post-title">' + post.title + '</div></div></a></li>');
       });
     }
-    getHubspotBlogPosts(renderBlogPosts);
     $(function() {
-      $('.feature-article-list-container').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd',
+      getHubspotBlogPosts(renderBlogPosts);
+
+      var $featureArticleListContainer = $('.feature-article-list-container');
+      var $featureArticleListItems = $('.feature-article-list li');
+      var numOfFeatures = $featureArticleListItems.length;
+      var featureHeight = $featureArticleListItems.height();
+
+      $featureArticleListContainer.css('max-height', 3 * featureHeight);
+
+      $featureArticleListContainer.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd',
         function() {
           $(this).removeClass('transitioning');
         }
       );
       $('#show-all-features').click(function() {
-        $('.feature-article-list-container').addClass('transitioning');
-        $('.feature-article-list-container').toggleClass('show-all');
-        $(this).text(function(i, text){
+        if ($featureArticleListContainer.hasClass('show-all')) {
+          $featureArticleListContainer.removeClass('show-all')
+          $featureArticleListContainer.addClass('transitioning');
+          $featureArticleListContainer.css('max-height', 3 * featureHeight);
+        } else {
+          $featureArticleListContainer.addClass('show-all')
+          $featureArticleListContainer.addClass('transitioning');
+          $featureArticleListContainer.css('max-height', numOfFeatures * featureHeight);
+        }
+        $(this).text(function(i, text) {
           return text === "Show All Features" ? "Minimize Features" : "Show All Features";
         });
       });
@@ -48,11 +59,11 @@
   %header.most-recent-article{ :id => most_recent_feature.url, :style => "background-image: url('/images/#{most_recent_feature.image}');" }
     .outer-container
       .inner-container
-        %span
+        %span.font-small
           Feature:
           = feature_article_date(most_recent_feature)
-        %h1= most_recent_feature.title
-        %h3= most_recent_feature.tag_line
+        %h1.font-bold= most_recent_feature.title
+        %span= most_recent_feature.tag_line
 .feature-article-list-container
   .feature-list-title Features
   %ul.feature-article-list
@@ -61,9 +72,10 @@
         %li{ :id => article.url }
           %a{ :href => "/features/#{article.url}" }
             .feature-block{ :style => "background-image: url('/images/#{article.image}')" }
-              .feature-label= feature_article_date(article)
-              %h1= article.title
-              %h3= article.tag_line
+              .feature-info
+                .feature-label.font-small= feature_article_date(article)
+                %h1= article.title
+                %span= article.tag_line
 .show-features-link-container
   %a#show-all-features Show All Features
 

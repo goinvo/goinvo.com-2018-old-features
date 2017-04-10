@@ -7,7 +7,12 @@ $ethics-padding: 30px;
 /************************************
  **  Team
  ************************************/
- 
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
 div.team {
 	.video-box {
 		padding-bottom: 0;
@@ -17,8 +22,7 @@ div.team {
 .hero {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/team/team.jpg');
 	background-position: 0 15%;
-	
-	
+  text-shadow: 0 2px 20px rgba(0,0,0,.8);
 }
 
 #content-area {
@@ -29,9 +33,9 @@ div.team {
 #team-design-button, #team-button {
 	cursor: pointer;
 	transition: 500ms ease-in-out;
-	
+
 	&:hover {
-		transform: scale(1.1, 1.1);	
+		transform: scale(1.1, 1.1);
 		background-color: rgba(255, 255, 255, 0.2);
 	}
 }
@@ -43,21 +47,10 @@ div.team {
 .team-cards {
 	color: $white;
 	width: 75%;
-	h3 {
-		color: $white;
-		font-size: 3.2em;
-		line-height: .9rem;
-	}
-	
-	h4 {
-		color: $white;
-		font-size: 1.4em;
-		margin-bottom: 7px;
-		margin-top: -0.2em;
-	}
-	
+
 	.social-icons {
 		list-style: none;
+		margin-top: 5px;
 		margin-left: 0px;
 		margin-right: 0px;
 		padding-left: 0px;
@@ -75,9 +68,8 @@ div.team {
 	.bio {
 		margin-top: 40px;
 		width: 50%;
-		line-height: 1.25em;
 	}
-	
+
 	.careerButton, {
 		border-style: solid;
 		border-width: 1px;
@@ -87,19 +79,18 @@ div.team {
 		margin-right: 10px;
 		display: inline-block;
 		font-size: 1.2rem;
-		font-weight: 100;
 	}
-	
+
 	a {
-		color: inherit;   
+		color: inherit;
 	}
-	
+
 	.character-sheet {
 		color: transparentize($white, .3);
 		background-color: transparentize($black, .2);
 		height: 70px;
 		display: none;
-		
+
 		.content {
 			vertical-align: middle;
 			width: 100%;
@@ -107,24 +98,24 @@ div.team {
 			height: 100%;
 			padding-left: $stats-padding;
 			padding-right: $stats-padding;
-			
+
 			.myers-briggs {
 				display: table-cell;
 				text-align: left;
 				vertical-align: middle;
 				width: auto;
 				padding-right: $stats-padding;
-				
+
 				span.value {
 					border-style: solid;
 					border-width: 1px;
 					border-color: transparentize($white, .8);
 					border-radius: 5px;
 					padding: 4px 20px;
-					margin-left: 10px;        
+					margin-left: 10px;
 				}
 			}
-			
+
 			.sparkline.github-commits {
 				display: table-cell;
 				text-align: left;
@@ -134,7 +125,7 @@ div.team {
 			}
 		}
 	}
-	
+
 	.team-card {
 		background-color: black;
 		background-position: top right;
@@ -143,14 +134,14 @@ div.team {
 		height: 0px;
 		padding-bottom: 62.5%;
 		position: relative;
-		
+
 		.stats {
 			padding-left: $stats-padding;
 			padding-right: $stats-padding;
 			padding-top: $stats-padding;
-		   
+
 		}
-		
+
 		.character-sheet {
 			width: 100%;
 			position: absolute;
@@ -159,31 +150,31 @@ div.team {
 	}
 }
 
-.expandedcards {  
+.expandedcards {
 	.team-card-info {
-		color: $white; 
+		color: $white;
 		background-color: transparentize($black, 0.1);
 		padding: $stats-padding - 10px;
-		
+
 		.bio {
-			width: 100%;  
+			width: 100%;
 			margin-bottom: 0px;
 		}
-		
+
 		h3, h4 {
-			color: $white;   
+			color: $white;
 		}
 	}
-	
+
 	.team-card-character {
-		margin-bottom: 40px;   
-		
+		margin-bottom: 40px;
+
 		.character-sheet {
-			height: 70px;   
+			height: 70px;
 			background-color: transparentize($black, 0);
-			
+
 			.content {
-				padding-left: 30px;   
+				padding-left: 30px;
 			}
 		}
 	}
@@ -192,38 +183,45 @@ div.team {
 .sidebar {
 	width: 25%;
 	padding-left: 2em;
+
+
+	h3, h4 {
+		color: $darkgray;
+		font-size: 26px;
+		line-height: 30px;
+		margin-bottom: 10px;
+
+		em {
+			font-style: italic;
+		}
+	}
+
 	.code-of-ethics {
 		text-align: center;
 		color: $darkgray;
 		background-color: darken($off_white, 2%);
 		padding: 10px;
-        margin-bottom: 1em;
-        border-radius: 5px;
-		
-		h2, h3 {
-			color: $darkgray;
-			font-size: 26px;
-			line-height: 30px;
-			
-			em {
-				font-style: italic;  
-			}
-		}
-		
-		h2 {
-			margin-bottom: $ethics-padding;  
+    margin-bottom: 1em;
+    border-radius: 5px;
+		h3 {
+			margin-bottom: $ethics-padding;
 			padding-top: $ethics-padding;
 		}
-		
 		p {
 			width: 100%;
 			margin: 0 auto;
 			margin-bottom: $ethics-padding;
 			&:last-child {
-				padding-bottom: $ethics-padding;       
+				padding-bottom: $ethics-padding;
 			}
 		}
 	}
+}
+
+#Dirk {
+  .bio {
+    margin-top: 10px;
+  }
 }
 
 //Video
@@ -265,6 +263,6 @@ div.team {
 
 @media only screen and (max-width: 750px) {
 	#video-bg {
-		display: none;	
+		display: none;
 	}
 }

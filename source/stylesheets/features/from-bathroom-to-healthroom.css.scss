@@ -7,9 +7,13 @@ $gold: #F4D37B;
 $contentBorder: rgba(0,0,0, .21);
 $bodyBackground: rgba(0,0,0, .01);
 
+.container.content {
+  font-weight: 400;
+  font-size: 16px;
+}
 
 .header-contents, .sec-header {
-	font-family: 'adobe-jenson-pro', serif;	
+	font-family: 'adobe-jenson-pro', serif;
 }
 .navigation {
 	position: fixed;
@@ -22,7 +26,7 @@ $bodyBackground: rgba(0,0,0, .01);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.21);
 	box-shadow: 0px -2px 7px;
 	padding: 0px 26px;
-	
+
 	ul, ol {
 		margin: 0 auto;
 		li {
@@ -31,10 +35,10 @@ $bodyBackground: rgba(0,0,0, .01);
 			padding: 8px;
 			padding-right: 20px;
 			font-size: .8em;
-			
+
 			a {
-				color: black;	
-				transition: all 250ms ease-in-out;	
+				color: black;
+				transition: all 250ms ease-in-out;
 				cursor: pointer;
 				text-transform: uppercase;
 				&:hover {
@@ -46,7 +50,7 @@ $bodyBackground: rgba(0,0,0, .01);
 }
 
 .container.content {
-    background-color: $bodyBackground;   
+    background-color: $bodyBackground;
 }
 
 article.design-for-life {
@@ -58,16 +62,16 @@ article.design-for-life {
     background-color: white;
 }
 
-.main-header {
+.bathroom-header {
 	padding-top: 55px;
 	padding-bottom: calc(24em - 10px);
-    
+
     @media only screen and (min-width: 1200px) {
-        padding-bottom: 16em;   
+        padding-bottom: 16em;
     }
-    
+
 	z-index: 0;
-	
+
 	.byline {
 		color: #939598	;
 	}
@@ -85,28 +89,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			margin-bottom: 0;
 			//padding-bottom: 0.4em;
 		}
-		
+
 		h2 {
 			font-size: 1.5em;
 			font-weight: 400;
 		}
-		
+
 		.email, .author {
 			font-size: 1.2em;
 			font-weight: 400;
-			
+
 			a {
 				color: black;
 				&:hover {
-					text-decoration: underline;	
+					text-decoration: underline;
 				}
 			}
 		}
-		
+
 		.author {
-			margin-bottom: 0.3em;	
+			margin-bottom: 0.3em;
 		}
-		
+
 		.email {
 			margin-bottom: 0.75em;
 		}
@@ -122,10 +126,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		fill: $offwhite;
 		transition: background 250ms ease-in-out;
 		&:hover {
-			background:#83838E;	
+			background:#83838E;
 		}
 	}
-	
+
 	&.right-align {
 		float: right;
 		margin-right: 9%;
@@ -208,23 +212,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			float: none !important;
 			width: 100% !important;
 		}
-		
+
 		&.initial-margin {
 			margin-left: 50%;
 			@media only screen and (max-width: 450px) {
-				margin-left: 0%;	
+				margin-left: 0%;
 			}
 		}
 	}
-	
+
 	.video {
 		transition: all 550ms ease-in-out;
 		opacity: 1;
-		
+
 		@media only screen and (max-width: 450px) {
-			width: 90% !important;	
+			width: 90% !important;
 		}
-		
+
 		&.initial-hide {
 			opacity: 0;
 			width: 0 !Important;
@@ -260,7 +264,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	margin: 0 auto;
 	img {
 		margin: 0;
-	}	
+	}
 	.seamless {
 		margin-bottom: 0;
 	}
@@ -274,9 +278,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 .media-block {
 	p, ul, ol {
 		font-size: 1.1em;
-		line-height: 1.3em;	
+		line-height: 1.3em;
 	}
-	
+
 	&.inline {
 		max-width: 800px;
 		margin: 0 auto 2em;
@@ -284,7 +288,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			margin-bottom: 0.5em;
 		}
 	}
-    
+
     &.wide {
         width: 100%;
         max-width: 100%;
@@ -292,12 +296,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
         img {
             margin-bottom: 3em;
             margin-top: 3em;
-        }   
+        }
     }
-	
+
 	&.relative {
 		position: relative;
-		
+
 		.axiom-link {
 			position: absolute;
 			left: 10px;
@@ -328,12 +332,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		&:focus {
 			outline: none;
 		}
-        
+
         position: relative;
-        
+
         &:after {
             content: " ";
-            position: absolute; 
+            position: absolute;
             background-color: rgb(163, 12, 41);
             width: 8px;
 			height: 8px;
@@ -387,7 +391,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		z-index: 1000;
 		font-size: 0.7em;
 	}
-	
+
 	.slick-prev, .slick-next {
 		background-image: image-url('arrow.png');
 		background-size: contain;
@@ -397,29 +401,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		top: calc(50% - 20px);
 		opacity: .65 !important;
 		transition: opacity 250ms ease-in-out;
-		
+
 		&:hover {
 			opacity: 1 !important;
 		}
-		
+
 		&:after, &:before {
-			content: "";	
+			content: "";
 		}
 	}
-	
+
 	.slick-prev {
 		left: 15px;
 		transform: rotate(180deg);
 	}
-	
+
 	.slick-next {
 		right: 15px;
 	}
-	
+
     .slick-list {
         border: 3px solid #000;
         border-top: 0;
-        border-radius: 0 0 10px 10px;   
+        border-radius: 0 0 10px 10px;
     }
 	.slick-slider {
 		margin-bottom: 0;
@@ -538,23 +542,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 }
 
 #dates {
-    
+
     .slick-slide {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
         &.slick-active {
-            opacity: 1;   
+            opacity: 1;
         }
     }
-    
+
 	.slider-aside {
         width: 30%;
-        
+
         p {
             padding-left: 22px;
 			padding-right: 89px;
         }
-        
+
 		.slider-controls {
 			position: relative;
 			display: table;
@@ -566,7 +570,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 				color: #000;
                 span {
                     z-index: 10;
-                }   
+                }
 				.button {
 					position: relative;
 					display: block;
@@ -582,7 +586,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 					background-color: $gold;
 				}
 			}
-            
+
             &:after {
                 content: "";
                 position: absolute;
@@ -604,7 +608,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 
 #locations {
 	position: relative;
-	
+
 	.calendar-graphics {
 		div {
 			max-width: 200px;
@@ -614,7 +618,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			z-index: 900;
 			opacity: 0;
 			transition: all 250ms ease-in-out;
-			
+
 			&.one {
 				max-width: 195px;
 			}
@@ -633,14 +637,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			&.six {
 				max-width: 264px;
 			}
-			
+
 			&.active {
-				opacity: 1;	
-				
+				opacity: 1;
+
 			}
 		}
 	}
-	
+
 	.slider-controls {
 		@include clearfix();
 		border: 2px solid black;
@@ -673,7 +677,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			}
 		}
 	}
-		
+
 }
 
 
@@ -682,60 +686,60 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	background-color: #2a2d33;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	
+
 	.cont-wrapper {
 		font-family: "Lato", Helvetica, Arial, sans-serif;
 		max-width: 1200px;
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
-	
+
 	table {
 		margin: 0 auto;
 		width: 100%;
 		margin-top: 40px;
 		margin-bottom: 20px;
-		
+
 		tbody tr td {
 			table.column {
-				width: 32.5%;	
-				
+				width: 32.5%;
+
 				td {
 					&.label {
-						color: #7a7b7e;	
+						color: #7a7b7e;
 						text-align: left;
 						padding-right: 10px;
 					}
 					&.person {
-						color: #ffffff;	
+						color: #ffffff;
 						text-align: left;
 						white-space: nowrap;
 					}
-					
+
 					padding-top: 3px;
 					padding-bottom: 3px;
 				}
 			}
 		}
 	}
-	
+
 	.footer-logo {
 		width: 100%;
 		padding-left: 9%;
-		
+
 		.logo, a {
-			display: inline-block;	
+			display: inline-block;
 		}
-		
+
 		.logo {
-			margin-right: 25px;	
+			margin-right: 25px;
 		}
-		
+
 		a {
-			color: #fff;	
+			color: #fff;
 			transition: color 250ms ease-in-out;
-			
+
 			&:hover {
-				color: #dbdbdb;	
+				color: #dbdbdb;
 			}
 		}
 	}
@@ -746,21 +750,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 	margin-bottom: 2em;
 	transition: height 10ms ease-in-out;
 	.full {
-		margin-bottom: 0px;	
+		margin-bottom: 0px;
 	}
-	
+
 	&.fix-me {
 		position: fixed;
 		width: 100%;
 		max-width: 1199px;
-		z-index: 1000;	
+		z-index: 1000;
 	}
-	
+
 	.scroll-empty {
 		height: 0;
 		transition: height 10ms ease-in-out;
 	}
-	
+
 	.video.full, img, div, .media-block.wide img{
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -769,15 +773,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 
 @media only screen and (max-width: 1000px) {
 	.navigation {
-		display: none;	
+		display: none;
 	}
-	
+
 	.section-content p, .section-content ul, .section-content ol, .media-block p, .media-block ul, .media-block ol {
 		font-size: .8em;
 		padding: 0px 20px;
 	}
-	
-	.main-header {
+
+	.bathroom-header {
 		padding-bottom: 4em;
 		.header-contents {
 			padding-bottom: 62px;
@@ -785,62 +789,62 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 			padding-left: 20px;
 			padding-top: calc(5.5em + 220px);
 			h1 {
-				font-size: 2em;	
+				font-size: 2em;
 			}
-			
+
 			h2 {
-				font-size: 1.25em;	
+				font-size: 1.25em;
 			}
-			
+
 			.email, .author {
-				font-size: 1em;	
+				font-size: 1em;
 			}
 		}
 	}
-	
+
 	.sec-header {
-		padding-left: 20px;	
+		padding-left: 20px;
 	}
-	
+
 	#eye-tracking {
-		padding: 6em 0;	
+		padding: 6em 0;
 	}
-	
+
 	#aging-wrapper {
-		margin-top: 20px;	
+		margin-top: 20px;
 	}
-	
+
 	#timeline {
 		padding-right: 14px;
 		padding-left: 14px;
-		
+
 		.byline {
 			bottom: 2em;
-			left: 4em;	
+			left: 4em;
 			font-size: 0.45em;
 		}
 	}
-	
+
 	#timechart {
-		padding: 0px 10px;	
+		padding: 0px 10px;
 		padding-right: 7px;
 		img {
-			left: 0px;	
+			left: 0px;
 		}
 	}
-	
+
 	#locations, #crane-wrapper, #crane-empty , .scrol-empty, #timeline-slider-controller, #timeline-dates {
-		display: none;	
+		display: none;
 	}
-	
+
 	.aside-media .video, .slider .video {
-		margin-right: 20px;	
+		margin-right: 20px;
 	}
-	
+
 	.aside-media .caption, .aside-media .slider-aside, .slider .caption, .slider .slider-aside {
-		width: 27%;	
+		width: 27%;
 	}
-	
+
 	#dates.slider {
 		max-width: 100%;
 		margin: 0px;
@@ -849,54 +853,54 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 		float: none;
 		margin-bottom: 20px;
 	}
-	
+
 	#dates .slider-aside {
-		width: 100%;	
+		width: 100%;
 	}
-	
+
 	#dates .slider-aside .slider-controls {
 		width: 300px;
 		margin: 0 auto;
 		margin-bottom: 20px;
 		margin-left: 26px;
- 
+
 	}
-	
+
 	#dates .slider-aside {
 		float: none;
 		p {
 			padding: 0px 65px;
-			margin-bottom: 10px;	
+			margin-bottom: 10px;
 		}
 	}
-	
+
 	#dates.slider .slider-contents {
-		width: 100%; 
+		width: 100%;
 		float: none;
-		
+
 	}
-	
+
 	.media-block.relative .axiom-link {
-		font-size: .65em;	
+		font-size: .65em;
 	}
-	
+
 	.contributions table td {
-		font-size: 0.725em;	
+		font-size: 0.725em;
 	}
-	
+
 	.contributions .footer-logo {
 		padding: 0px 20px;
-		
+
 		.logo {
 			max-width: 100px;
 		}
-		
+
 		a {
-			font-size: 0.8em;	
+			font-size: 0.8em;
 		}
 	}
 }
 
 p.margin-bottom {
-	margin-bottom: 4em;	
+	margin-bottom: 4em;
 }

@@ -12,12 +12,12 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Nielsen")
+- client = get_project_by_id("nielsen")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client.title-with-sub{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Nielsen
-		%h5.client.title-with-sub{style: "color: #{client.primary_color}; font-weight: 100;"} (formerly Affinnova)
+		%h2.client.title-with-sub{style: "color: #{client.primary_color}; margin-bottom: 0px;"} Nielsen
+		%h5.client.title-with-sub{style: "color: #{client.primary_color};"} (formerly Affinnova)
 
 		%h6.subheader Results
 
@@ -82,4 +82,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

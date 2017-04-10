@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Curl")
+- client = get_project_by_id("scskcorporation")
 
 #content-area
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} SCSK Corporation
+		%h2.client{style: "color: #{client.primary_color}"} SCSK Corporation
 
 		%h6.subheader Results
 		%p The eyeDecide concept prototype created by Invo enabled SCSK&rsquo;s executive Curl technology team to sell the next generation of their technology to major corporations.
@@ -68,4 +68,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

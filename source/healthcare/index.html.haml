@@ -18,41 +18,18 @@
 	%header#article-header
 		%h1.title hGraph: Your health in one picture
 		%img.header-image{:src => '/images/healthcare/ipad_hero.png'}
-		%a{:href => "/healthcare/hgraph/"}
+		%a{:href => "/products/hgraph/?from=healthcare"}
 			.button-h Read Case Study
-	.small-quote We help healthcare organizations make clinical strength software for high-test, high stress environments.
-	.projects-row
-		%a{:href => "/healthcare/3m"}
-			.project-item
-				.top-description
-					.desc-text Processing $4B/year
-				.image-wrapper
-					%img{:src => "/images/healthcare/3m_card.png"}
-				.bottom-description How our skunkworks for an ambitious start-up led to a $150M exit.
-				.company-name CodeRyte (3M acquisition)
-		%a{:href => "/healthcare/inspired-ehrs"}
-			.project-item
-				.top-description
-					.desc-text Influencing US Policy
-				.image-wrapper
-					%img{:src => "/images/healthcare/ehr_card.jpg"}
-				.bottom-description Evidence-based and clinically relevant graphic techniques for medical records.
-				.company-name National Institute of Health and University of Missouri
-		%a{:href => "/healthcare/personal-genome-project/"}
-			.project-item
-				.top-description
-					.desc-text Open Source Genomics
-				.image-wrapper
-					%img{:src => "/images/healthcare/pgp.jpg"}
-				.bottom-description The mission is to sequence and publicize 100,000 volunteers’ genomes in hope personal genomes will be used to improve the management of human health and disease.
-				.company-name Personal Genome Project
-	.very-large-quote
-		.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
+	.quote
+		%h2.quote-content We help healthcare organizations make clinical strength software for high-test, high stress environments.
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['3m', 'inspired-ehrs', 'personal-genome-project'])})
+	.quote
+		%h2.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
 	.mountsinai-container
 		.left-content
-			.large-quote
-				.quote-content Genomics is brutally complicated. Patients struggle. Doctors flounder. Invo made them all smile.&#148;
+			.quote.justified
+				%h2.quote-content Genomics is brutally complicated. Patients struggle. Doctors flounder. Invo made them all smile.&#148;
 				.quote-author Elissa Levin, Director of Genomics, Mount Sinai Hospital, New York
 			%a{:href => "/healthcare/mount-sinai/"}
 				.button See how Invo designed genetic reporting
@@ -61,8 +38,7 @@
 			.ted-container
 				%img{:src => '/images/healthcare/ted.gif'}
 	.micro-hs-form
-		%h4 Want to take your Healthcare product to the next level? Get in touch.
-
+		%h2 Want to take your Healthcare product to the next level? Get in touch.
 		<script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
 		<script>
 		  hbspt.forms.create({
@@ -71,157 +47,28 @@
 		css: '',
 		  });
 		</script>
-	.very-large-quote
-		.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
+	.quote
+		%h2.quote-content &#147;With Invo, design wasn’t just design. It impacted our IP portfolio. It changed our business.&#148;
 		.quote-author Serban Georgescu MD, InfoBionic Director of Clinical Development
-	.projects-row
-		%a{:href => "/healthcare/partners-gene-insight"}
-			.project-item
-				.top-description Genetic Interpretation
-				.image-wrapper
-					%img{:src => "/images/healthcare/geneinsight.png"}
-				.bottom-description GeneInsight is an IT platform used to streamline the analytics, interpretation and reporting of complex genetic test results.
-				.company-name Partners GeneInsight
-		%a{:href => "/healthcare/segterra"}
-			.project-item
-				.top-description
-					.desc-text Tuning Olympic Performance
-				.image-wrapper
-					%img{:src => "/images/healthcare/segterra.png"}
-				.bottom-description Inside Tracker: using blood analytics to improve health
-				.company-name Segterra
-		%a{:href => "/healthcare/diabetes/"}
-			.project-item
-				.top-description Diabetes Care
-				.image-wrapper
-					%img{:src => "/images/healthcare/diabetes.jpg"}
-				.bottom-description Designing techniques, behavior, and technology to dramatically change overhead required to manage chronic conditions.
-	.very-large-quote
-		.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['partners-gene-insight', 'segterra', 'diabetes'])})
+	.quote
+		%h2.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
 		.quote-author George Moon, VP of Product, CodeRyte Inc.
-	.projects-row.bottom-margin
-		%a{:href => "/healthcare/tabeeb"}
-			.project-item
-				.top-description
-					.desc-text Crowdsourced Diagnostics
-				.image-wrapper
-					%img{:src => "/images/healthcare/tabeeb.png"}
-				.bottom-description Bringing global medical specialists to rural communities with the flick of a finger.
-				.company-name Tabeeb
-		%a{:href => "/products/care-cards"}
-			.project-item
-				.top-description Healthy Habits
-				.image-wrapper
-					%img{:src => "/images/healthcare/health-axioms.jpg"}
-				.bottom-description Care Cards put you in touch with habits to improve your health, life, and well-being. Our sometimes surprising, always practical axioms nudge you toward the healthiest life possible.
-				.company-name Care Cards
-		%a{:href => "/healthcare/numera/"}
-			.project-item
-				.top-description Social Behavior Change
-				.image-wrapper
-					%img{:src => "/images/healthcare/numera.jpg"}
-				.bottom-description Behavioral data with rich visualizations and lifestyle recommendations.
-				.company-name Numera Health
-		%a
-			.project-item
-				.top-description
-					.desc-text
-				.image-wrapper
-					%img
-				.bottom-description
-				.company-name
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['tabeeb', 'care-cards', 'numera']), row_class: 'margin-bottom'})
 	.design-med-wrapper
 		.content
-			%h1 Design is Medicine
+			%h2 Design is Medicine
 			%p It's time to design products to capture life and physiologic signs invisibly… usually through non-invasive sensors that don't require a single drop of blood, but just whiffs and sniffs. And when it is visible, it must be designed to feel wonderful.
 			%p Listen to Juhan Sonin discuss where patient health visits is heading in 20 years.
 		.audio-wrapper
 			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110751754&color=475e8a&show_artwork=false"></iframe>
-	.partners
-		.small-title A Few of Our Healthcare Partners
-		%ul.mobile
-			%li
-				%a{:href => "http://www.3m.com/"}
-					%img{:src => "/images/healthcare/partners/3m.png"}
-			%li
-				%a{:href => "http://www.himss.org/"}
-					%img{:src => "/images/healthcare/partners/hms.png"}
-			%li
-				%a{:href => "http://infobionic.com/"}
-					%img{:src => "/images/healthcare/partners/infob.png"}
-			%li
-				%a{:href => "http://www.jnj.com/"}
-					%img{:src => "/images/healthcare/partners/jandj.png"}
-			%li
-				%a{:href => "http://www.jopm.org/"}
-					%img{:src => "/images/healthcare/partners/pmed.png"}
-			%li
-				%a{:href => "http://www.mountsinai.org/"}
-					%img{:src => "/images/healthcare/partners/mtsinai.png"}
-			%li
-				%a{:href => "http://www.nih.gov/"}
-					%img{:src => "/images/healthcare/partners/nih.png"}
-			%li
-				%a{:href => "http://www.nsf.gov/"}
-					%img{:src => "/images/healthcare/partners/nsf.png"}
-			%li
-				%a{:href => "http://www.bd.com/"}
-					%img{:src => "/images/healthcare/partners/bd.png"}
-			%li
-				%a{:href => "http://www.partners.org/"}
-					%img{:src => "/images/healthcare/partners/partners.png"}
-			%li
-				%a{:href => "http://www.personalgenomes.org/"}
-					%img{:src => "/images/healthcare/partners/pgp.png"}
-			%li
-				%a{:href => "http://www.walgreens.com/"}
-					%img{:src => "/images/healthcare/partners/wallgreen.png"}
-		%table.non-mobile
-			%tbody
-				%tr
-					%td
-						%a{:href => "/healthcare/3m"}
-							%img{:src => "/images/healthcare/partners/3m.png"}
-					%td
-						%a{:href => "http://www.himss.org/"}
-							%img{:src => "/images/healthcare/partners/hms.png"}
-					%td
-						%a{:href => "http://www.infobionic.com/"}
-							%img{:src => "/images/healthcare/partners/infob.png"}
-					%td
-						%a{:href => "http://www.jnj.com/"}
-							%img{:src => "/images/healthcare/partners/jandj.png"}
-					%td
-						%a{:href => "http://www.jopm.org/"}
-							%img{:src => "/images/healthcare/partners/pmed.png"}
-					%td
-						%a{:href => "/healthcare/mount-sinai"}
-							%img{:src => "/images/healthcare/partners/mtsinai.png"}
-				%tr
-					%td
-						%a{:href => "/healthcare/inspired-ehrs"}
-							%img{:src => "/images/healthcare/partners/nih.png"}
-					%td
-						%a{:href => "http://www.nsf.gov/"}
-							%img{:src => "/images/healthcare/partners/nsf.png"}
-					%td
-						%a{:href => "http://www.bd.com/"}
-							%img{:src => "/images/healthcare/partners/bd.png"}
-					%td
-						%a{:href => "/healthcare/partners-gene-insight"}
-							%img{:src => "/images/healthcare/partners/partners.png"}
-					%td
-						%a{:href => "/healthcare/personal-genome-project"}
-							%img{:src => "/images/healthcare/partners/pgp.png"}
-					%td
-						%a{:href => "/healthcare/hgraph"}
-							%img{:src => "/images/healthcare/partners/wallgreen.png"}
-	.enterprise-banner 
-		.small-title We've shipped for the Enterprise too.
+	= partial("partials/partners", locals: {title: "A Few of Our Healthcare Partners", partners: get_partners_by_type('healthcare')})
+	.enterprise-banner
+		%h2.font-thin We've shipped for the Enterprise too.
 		%a{:href => "/enterprise"}
 			.button See Our Case Studies
 		%a{:href => "/enterprise"}
 			%img{:src => "/images/enterprise/dx-full.png"}
 	.office-hours
-		.small-title.white Want honest design feedback on your product?
-		.small-title.blue <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.
+		%h2.font-thin Want honest design feedback on your product?
+		%h2.font-thin <a href="/studio/open-office-hours">Sign up</a> for Open Office hours every Thursday 4-6p.

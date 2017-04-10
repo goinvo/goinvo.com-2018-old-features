@@ -8,13 +8,6 @@
  *** screen sizes.
  ************************************/
 
-@media only screen and (max-width: 1157px) {
-	.header-content {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
 @media only screen and (max-width: 1105px) {
 	#content-area .expandedcards {
 		display: block;
@@ -47,14 +40,6 @@
 	}
 
 	#main-container .homepage-header {
-		&.one .title{
-			h2 {
-				font-size: 45px;
-				font-size: 4.5rem;
-				line-height: 45px;
-				line-height: 4.5rem;
-			}
-		}
 		&.two, &.three {
 			width: 100%;
 		}
@@ -112,21 +97,6 @@
 	div.sidebar.mobile-hide, section.timeline.mobile-hide {
 		display:none;
 	}
-	//replaced hamburger with 2-line nav
-	header#main-header {
-		height: 85px;
-	}
-	header#main-header #nav-buttons {
-		text-align: right;
-    	margin-top: -29px;
-    	 a{
-    	 	padding-bottom: 10px;
-    	 }
-	}
-	// Bring back that tagline
-	.header-content .tag-line {
-		display: inline-block;
-	}
 }
 
 @media only screen and (max-width: 749px) {
@@ -157,11 +127,6 @@
 		display:inherit;
 	}
 
-	.hero .title h2 {
-		font-size:4.5rem;
-		line-height: 4.5rem;
-	}
-
 	#careers section.centerContent, section.team-cards.twelve.columns {
 		padding-left:0px;
 		padding-right:0px;
@@ -177,41 +142,6 @@
 	div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
 		min-width:0;
 
-	}
-}
-
-@media only screen and (max-width: 652px) {
-	//hide everything that should be hidden (some elements of class: mobile-hide)
-
-	.hero .title h2 {
-		font-size:3.5rem;
-		line-height: 3.5rem;
-	}
-
-	.hero .title h3 {
-		font-size: 1.3rem;
-		letter-spacing: 0.09rem;
-		line-height: 1.5rem;
-		padding-lef:10px;
-		padding-right:10px;
-	}
-
-	
-	#main-container .homepage-header {
-		&.one .title{
-			h2 {
-				font-size: 35px;
-				font-size: 3.5rem;
-				line-height: 35px;
-				line-height: 3.5rem;
-			}
-			h3 {
-				font-size: 28px;
-				font-size: 2.8rem;
-				line-height: 28px;
-				line-height: 2.8rem;
-			}
-		}
 	}
 }
 
@@ -254,28 +184,28 @@
 
 @media only screen and (max-width: 860px) {
   #content-area.caseStudyContent .projectDetails {
-     margin-top: 60px; 
+     margin-top: 60px;
   }
 }
 
 @media only screen and (max-width: 800px) {
   form.hs-form fieldset {
-    max-width: none;  
+    max-width: none;
   }
-  
+
   .careers .sidebar.left {
-     display: none; 
+     display: none;
   }
-  
+
   .careers .sidebar.right {
     display: block;
     width:100%;
   }
-  
+
   .careers div.centerContent {
-     width:100%; 
+     width:100%;
   }
-  
+
   div.video-box .fluid-width-video-wrapper {
     padding-top:60% !important;
   }

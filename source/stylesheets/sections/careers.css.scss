@@ -1,10 +1,15 @@
 @import "base/colors";
+@import "base/mixins";
 @import "base/type";
-@import "../base/mixins";
 
 /************************************
  **  Careers
  ************************************/
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
 
 .careers.open-office-hours .hero {
 	background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/open-office-hours/open-studio.jpg');
@@ -16,16 +21,14 @@
 	}
 	.hero {
 		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/careers/careers.jpg');
-		
+    text-shadow: 0 2px 20px rgba(0,0,0,.8);
 	}
 
 	#content-area {
 		@include clearfix();
 		padding: 40px 20px;
 		.title {
-			font-size: 3.2rem;
-			line-height: 3.5rem;
-            margin-bottom: 0px;
+      margin-bottom: 0px;
 		}
 
 		#engineer ul, #engineer ul li {
@@ -56,7 +59,13 @@
 		line-height: 30px;
 	}
 }
-
+.form-title {
+  font-weight: $font-weight-bold;
+}
+.caption.caption-quote {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 #dbutton, #dbutton2, #attach_resume-02f6d985-bc3d-40a0-9bff-c8610111844b {
 	padding-top: 11px;
 	padding-bottom: 7px;
@@ -111,6 +120,6 @@
 
 @media only screen and (max-width: 750px) {
 	#video-bg {
-		display: none;	
+		display: none;
 	}
 }

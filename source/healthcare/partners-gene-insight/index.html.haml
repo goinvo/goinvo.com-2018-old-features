@@ -12,18 +12,18 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("Partners GeneInsight")
+- client = get_project_by_id("partners-gene-insight")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Partners GeneInsight
+		%h2.client{style: "color: #{client.primary_color}"} Partners GeneInsight
 
 		%h6.subheader Results
 
 		%p Partners Healthcare was able to launch this new genetic reporting service as commercial-grade software, used across multiple hospital systems in the United States.
 
 		%h6.subheader Details
-		
+
 		%p Redesigning an antiquated academic laboratory software to be commercially viable through a honed user experience.
 		%ul
 			%li Conducted usability reviews of current lab software
@@ -73,4 +73,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

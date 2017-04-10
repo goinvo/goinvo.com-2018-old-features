@@ -1,5 +1,12 @@
 @import "../base/core";
 
+html,
+body {
+   @include font-size-map($font-size-body-new-pages);
+}
+#complex-case #mainContent .quote h2.quote-content {
+  margin-top: 0;
+}
 article#complex-case {
 
 	.no-top-margin {
@@ -59,17 +66,6 @@ article#complex-case {
 		header.hero {
 			background-image: url('../../images/clients/oracle/oracle-agile-earlydesign-hero.jpg');
 			background-position: 0 80%;
-			h2 {
-				font-size: 66px;
-				line-height: 0.9em;
-				@media only screen and (max-width: 900px) {
-					font-size: 50px;
-				}
-			}
-		}
-		#bigQuote {
-			font-size: 38px;
-			line-height: 1.2em;
 		}
 	}
 	header.hero {
@@ -81,35 +77,25 @@ article#complex-case {
 		}
 		@media only screen and (max-width: 900px) {
 			padding-top: 8em;
-			h2 {
-				font-size: 40px;
-				font-size: 4rem;
-			}
-
 		}
-		h2, h3 {
+		h1, h3 {
 			text-align: left;
 			margin-left: 0px;
 			text-shadow: 2px 2px transparentize($black, .8);
 		}
 
-		h2 {
-			font-size: 75px;
-			line-height: 0.9em;
+		h1 {
 			margin-bottom: 0.25em;
+			color: $white;
 		}
 	}
 
 	#mainContent {
 		padding-top: 60px;
 
-		ul {
-			font-size: 1.375em;
-
-			li {
-				margin-bottom: .75em;
-			}
-		}
+    ul li {
+      margin-bottom: 10px;
+    }
 
 		p, h1, h2, h3, h4, h5, h6, ul, ol, dl {
 			max-width: 640px;
@@ -118,10 +104,6 @@ article#complex-case {
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-top: 1.3em;
-		}
-
-		p, ul, ol, dl {
-			line-height: 1.36363636em;
 		}
 
 		p, h2 {
@@ -147,11 +129,9 @@ article#complex-case {
 		.caption, figcaption {
 			padding-top: 5px;
 			margin-top: 5px;
-			font-size: 1.1rem;
-			line-height: 1.42rem;
 			color: $gray;
 			margin-top: 7px;
-			margin-bottom: 5em;
+			// margin-bottom: 5em;
 
 			&.bottom {
 				margin-bottom:30px;
@@ -167,6 +147,11 @@ article#complex-case {
 				margin: 0 0 30px;
 				max-width: 100%;
 				text-align: center;
+
+        iframe {
+          width: 100%;
+          min-height: 480px;
+        }
 			}
 		}
 
@@ -206,10 +191,10 @@ article#complex-case {
 		}
 
 		.center-graph-content {
-			padding: 3em;
+			padding: 1em;
 			position: relative;
 			&.no-vertical-padding {
-				padding: 0 3rem;
+				padding: 0 1rem;
 			}
 			svg {
 				max-width: 100%;
@@ -236,12 +221,18 @@ article#complex-case {
 
 		span.image-float {
 			position:relative;
-			left: -120px;
-			float: left;
+      float: left;
+      width: 200px;
 			padding: 18px;
 			padding-left: 0px;
 			padding-bottom: 20px;
-			margin-right: -110px;
+      @include breakpoint(500px) {
+        width: auto;
+      }
+      @include breakpoint(900px) {
+        left: -120px;
+        margin-right: -110px;
+      }
 		}
 		.image-float .caption {
 			display: block;
@@ -249,7 +240,7 @@ article#complex-case {
 		}
 	}
 
-	#quote {
+	.quote {
 		max-width: none;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -257,7 +248,7 @@ article#complex-case {
 		background-color: lighten($gray, 25%);
 		padding: 60px 9%;
 
-		div.testimonial-image {
+		.testimonial-image {
 			width: 200px;
 			height:200px;
 			background-size: cover;
@@ -274,16 +265,23 @@ article#complex-case {
 			}
 		}
 
-		h2.quote{
+		h2.quote-content {
 			font-weight: 400;
 			margin: 0 auto;
-			margin-bottom:30px;
-			max-width:70rem;
+			max-width: 70rem;
+      margin-top: 0;
+
+      &.margin-bottom {
+        margin-bottom: 30px;
+      }
 		}
 
-		p.quote-author, p.block-header {
-			color:$gray;
+		p.quote-author, .block-header {
+			color: $gray;
 		}
+    .block-header {
+      margin-bottom: 30px;
+    }
 	}
 
 	#image-background {
@@ -292,20 +290,25 @@ article#complex-case {
 			max-width:80rem;
 			margin: 0 auto;
 		}
-		background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 38%,rgba(103,116,124,1) 47%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
+		background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 10%,rgba(103,116,124,1) 20%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
 		background-size: contain;
-		padding-top: 375px;
+		padding-top: 200px;
 		color: $white;
 		.full-two-images {
 			max-width: 1600px;
 		}
-		h2 {
-			color:inherit;
+		h1 {
+			color: inherit;
 		}
 		.caption {
 			margin-top: 7px;
 			margin-bottom: 60px;
 		}
+
+    @include breakpoint(500px) {
+      background: linear-gradient(to bottom,  rgba(196,196,196,0.4) 0%,rgba(196,196,196,0.41) 1%,rgba(103,116,124,0.88) 20%,rgba(103,116,124,1) 25%), url('../../images/clients/3m/memorial-hermann-hospital.jpg');
+      background-size: contain;
+    }
 	}
 
 	#email-content {
@@ -334,18 +337,29 @@ article#complex-case {
 	cursor: pointer;
 	background-size: cover;
 	background-position: center;
+	padding: 80px 40px;
 	div.next-title {
-		padding: 80px 40px;
-		max-width: 820px;
+		max-width: 800px;
 		margin: 0 auto;
 		color: #f7f7f7;
-		font-size: 2.5rem;
-		line-height: 1em;
-		font-weight: 700;
-
-		span {
-			font-size: 3.5rem;
-			line-height: 1em;
-		}
 	}
+}
+
+.hgraph-patterns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0 20px;
+
+  div {
+    width: 100%;
+
+    @include breakpoint(650px) {
+      width: 45%;
+    }
+  }
+  div:last-of-type {
+    margin-left: auto;
+  }
 }

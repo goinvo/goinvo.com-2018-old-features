@@ -12,14 +12,14 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("3M")
+- client = get_project_by_id("3m")
 
 %article#complex-case.three-m
 	%header.hero
 		.title
 			.inner-title
 				%p <img src = "../../images/client_logos/3m.png" width = 75px height = auto>
-				%h2 A 180&deg; turn<br>for a $150M business
+				%h1 A 180&deg; turn<br>for a $150M business
 				%h3 How our skunkworks for an ambitious start-up led to a $150M exit.
 	#mainContent
 		%h2 Glenn Tobin has a vision.
@@ -51,10 +51,10 @@
 			.caption.other.no-bottom-margin We created over 15 different prototypes to test and iterate on our ideas and feedback.
 		%p With CodeRyte galvanized behind the project we started a new (again: small) 12 week project to make a working prototype. Evolving the design, getting in actual data, and as fully working web-based software. Not only did this improve the platform for the full design and implementation to come, it gave CodeRyte an exceptional sales tool that reinforced this would be real - not vaporware.
 		%p.bottom.double Orders quickly followed.
-		#quote
+		.quote
 			.testimonial-image.moon
-			%h2.quote &ldquo;We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.&rdquo;
-			%p.quote-author George Moon, VP of Product, CodeRyte Inc.
+			%h2.quote-content &ldquo;We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.&rdquo;
+			.quote-author George Moon, VP of Product, CodeRyte Inc.
 		#image-background
 			%h2.bottom Reality sets in: the first customer.
 			%p Memorial Hermann is the large not-for-profit healthcare system in Texas with 12 hospitals. They saw the potential of what CodeRyte was planning and signed up. More than being a first customer, they wanted to be a partner. That is the very best kind of customer.
@@ -101,11 +101,11 @@
 		%p The hospital system has since been able to change their procedure and conservatively estimates a 200% increase in efficiency in their coding workflow.
 		%p.bottom.double Maybe SAP will buy 3M just to get control of CodeRyte. With productivity gains like this, who wouldn&rsquo;t?
 		#email-content
-			%h3.top.double Praise from CodeRyte's Lead Engineer and VP of Products.
+			%h2.top.double Praise from CodeRyte's Lead Engineer and VP of Products.
 			.center-image-content
 				<img src = "../../images/clients/3m/customer-appreciation-email.png">
 .row#next-project
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

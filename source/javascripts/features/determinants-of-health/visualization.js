@@ -68,7 +68,7 @@ $(document).ready(function() {
   }
 
   function getChartData() {
-    $.getJSON( "visualization-data.json", function( data ) {
+    $.getJSON("/features/determinants-of-health/visualization-data.json", function( data ) {
       chartData = formatData(data);
 
       drawChart();

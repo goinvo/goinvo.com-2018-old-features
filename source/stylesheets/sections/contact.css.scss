@@ -1,5 +1,11 @@
 @import "base/colors";
+@import "base/mixins";
 @import "base/type";
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
 
 body {
 	background-image: url('../../images/google_map.png');
@@ -9,67 +15,33 @@ body {
 
 #content-area {
 	max-width: 760px;
-	font-size: 1.2em;
 }
 
 #contactForm {
-	padding: 100px 20px 80px;
-  
-    input[type=email], textarea {
-       font-size:22px; 
-    }
-    
-    .hs-button.primary.large {
-       margin-top: .5em; 
-    }
-  
-    label {
-       display:none; 
-    }
+	padding: 50px 20px;
 
-	.form-title {
-		line-height: 3.2rem;
+  .hs-button.primary.large {
+     margin-top: .5em;
+  }
 
-		h3, h4 {
-			margin-top: 0px;
-			margin-bottom: 0px;
-		}
+	h1 {
+		margin-bottom: 20px;
+	}
 
-		h3 {
-			font-size: 3.2rem;
-			line-height: 1rem;
-			font-weight: 800;
-			padding-top: 20px;
-			margin-bottom: 0.25em;
-		}
-
-		h4 {
-			display:inline-block;
-			font-size: 1.5rem;
-			line-height: 1.5rem;
-
-			&.address {
-				display:block;
-				padding-bottom:7px;
-			}
-
-			&.phoneNumber a{
-				color: $black;
-				letter-spacing:0rem;
-			}
-		}
+	label {
+		display: none;
 	}
 
 	.hs-form fieldset {
-		max-width:none;
+		max-width: none;
 
 		&.form-columns-1 .hs-input {
-			width:100%;
+			width: 100%;
 		}
 	}
 
 	div.actions {
-		width:auto;
+		width: auto;
 	}
 
 	ul.inputs-list.multi-container {
@@ -87,17 +59,17 @@ body {
 			line-height: inherit;
 
 			label {
+				display: inline-block;
+				width: auto;
 				margin: 0px;
 				list-style: none;
-				display: inline-block;
 				font-size: inherit;
 				line-height: inherit;
-				width: auto;
-				color:#666;
+				color: #666;
 
 				input#subscribe_to_our_newsletter0-60744b7c-0aa6-40b2-9943-42137a951d16 {
 					width: auto;
-					margin-right:10px;
+					margin-right: 10px;
 				}
 			}
 		}
@@ -109,9 +81,9 @@ body {
 
 
 	div.hs-form-checkbox-display {
-		display:inline-block;
-		color:$gray;
-		padding-left:10px;
+		display: inline-block;
+		color: $gray;
+		padding-left: 10px;
 		vertical-align: baseline;
 		width: calc(100% - 168px);
 	}

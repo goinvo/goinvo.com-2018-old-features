@@ -1,11 +1,20 @@
 require 'date'
 
 module DataHelper
-  def client_for_name(client_name)
-    match = data.clients.detect { |c| c.name == client_name }
-    puts "didn't find a match for name: #{client_name}" if match.nil?
+  def get_project_by_id(id)
+    data.projects.detect { |c| c.uid == id }
+  end
 
-    match
+  def get_projects_by_id(project_ids_to_find)
+    [*project_ids_to_find].collect { |id| data.projects.detect { |project| project.uid == id } }
+  end
+
+  def get_partners_by_type(type)
+    data.projects.select { |project| project.type == type && project.client_url && project.partner_logo }.sort_by { |project| project.partner_logo }
+  end
+
+  def get_open_source_projects()
+    data.projects.select { |project| project.project_name && project.open_source_description }
   end
 
   def page_for_meta(page)

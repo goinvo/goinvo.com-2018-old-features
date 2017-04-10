@@ -17,7 +17,7 @@
 		#video-bg
 			<video autoplay loop muted preload><source type="video/webm" src="../../videos/studio_2.webmhd.webm"><source type="video/mp4" src="../../videos/studio_1.mp4"></video>
 		.title
-			%h2 Our Team
+			%h1 Our Team
 			%h3 We bring together the very best people and deploy them on your hardest digital problems.
 	#content-area
 		%section.team-cards.contractedcards
@@ -25,8 +25,8 @@
 				- style = person.photo.nil? ? "" : "background: -moz-linear-gradient(left,  rgba(2,0,0,0.85) 0%, rgba(2,0,0,0.55) 24%, rgba(255,255,255,0.01) 68%, rgba(255,255,255,0) 69%),url(../../images/team_photos/#{person.photo}); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,0,0,0.85)), color-stop(24%,rgba(2,0,0,0.55)), color-stop(68%,rgba(255,255,255,0.01)), color-stop(69%,rgba(255,255,255,0))),url(../../images/team_photos/#{person.photo}); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/team_photos/#{person.photo}); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/team_photos/#{person.photo}); /* Opera 11.10+ */ background: -ms-linear-gradient(left,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/team_photos/#{person.photo}); /* IE10+ */ background: linear-gradient(to right,  rgba(2,0,0,0.85) 0%,rgba(2,0,0,0.55) 24%,rgba(255,255,255,0.01) 68%,rgba(255,255,255,0) 69%),url(../../images/team_photos/#{person.photo}); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9020000', endColorstr='#00ffffff',GradientType=1 ),url(../../images/team_photos/#{person.photo}); /* IE6-9 */ background-size:cover;"
 				.team-card{style: style, id: person.first_name}
 					.stats
-						%h3.name= person.first_name + " " + person.last_name
-						%h4.title= person.title
+						%h1= person.first_name + " " + person.last_name
+						%span.title= person.title
 						%ul.social-icons
 							- unless person.email.blank?
 								%li.email= link_to(image_tag('icon-email.svg'), email_url_for(person.email) )
@@ -65,8 +65,8 @@
 				.team-card{style: style}
 				.team-card-info
 					.stats
-						%h3.name= person.first_name + " " + person.last_name
-						%h4.title= person.title
+						%h1.name= person.first_name + " " + person.last_name
+						%span.title= person.title
 						%ul.social-icons
 							- unless person.email.blank?
 								%li.email= link_to(image_tag('icon-email.svg'), email_url_for(person.email) )
@@ -102,16 +102,16 @@
 									%label
 		.sidebar.omega
 			%section.code-of-ethics
-				%h2 CODE <em>of</em><br> ETHICS
-				%h3 Speak the Truth
+				%h3 CODE <em>of</em><br> ETHICS
+				%h4 Speak the Truth
 				%p.caption We tell the truth to others, with the intention and in the way of trying to do the most possible good.
-				%h3 Make the World<br>Useful, Beautiful<br>and Delightful
+				%h4 Make the World<br>Useful, Beautiful<br>and Delightful
 				%p.caption We exercise the discipline required to produce ideas and things that are useful to and beautiful in the world.
-				%h3 Learn, Share<br>& Build
+				%h4 Learn, Share<br>& Build
 				%p.caption We are curious, open creators who welcome new ideas and the input of others.
-				%h3 Be Vigilant
+				%h4 Be Vigilant
 				%p.caption Identify and respond to inequality, protecting and serving the ideas, community and people in our world.
-				%h3 Go Like Hell
+				%h4 Go Like Hell
 				%p.caption We are driven and committed to what we do, putting in extra effort in our quest for exceptional results.
 			.photo
 				= link_to( image_tag('team/boston-user-experience-design.jpg'), 'https://www.flickr.com/photos/juhansonin/8027802346/in/photolist-fVfDah-deozXh-cSZHcm-bo8QV3-d1AVw7-fVfDks-fzStGh-deoB4i-cSZHq7-fgRwzH-d1AVHS-dbreBn-fTV2B6-h4dC12' )

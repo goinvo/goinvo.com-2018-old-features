@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("PainTrackr")
+- client = get_project_by_id("paintrackr")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} PainTrackr
+		%h2.client{style: "color: #{client.primary_color}"} PainTrackr
 
 		%h6.subheader Results
 
@@ -71,4 +71,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

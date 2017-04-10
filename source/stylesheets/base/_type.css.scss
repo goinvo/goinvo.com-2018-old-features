@@ -3,80 +3,90 @@
 
 @import "compass/typography";
 
-/*************************************************************
- *  TYPES OF TYPE
-**************************************************************/
-
-body {
-	font-family: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
-	color: $black;
-	text-rendering: optimizeLegibility;
-	font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	margin-bottom: 0.5em;
-	line-height: 1;
-	display: block;
-	&.name {
-		font-weight: 400;
+@mixin font-size-map($font-size-map) {
+	@each $breakpoint, $font-size in $font-size-map {
+		@if $breakpoint == null {
+			font-size: $font-size;
+		} @else {
+			@include breakpoint($breakpoint) {
+				font-size: $font-size;
+			}
+		}
 	}
 }
 
+@mixin font-family-serif() {
+  font-family: $font-family-serif;
+}
+@mixin font-family-sans-serif() {
+  font-family: $font-family-sans-serif;
+}
+
+$font-family-serif: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
+
+$font-break-point: 530px;
+
+$font-size-base-old: 16px; // Kept around for feature article pages (which get super messed up if changed)
+$font-size-base-new: 20px;
+$font-size-body-old-pages: (null: $font-size-base-old);
+$font-size-body-new-pages: (null: $font-size-base-new); // Optionally apply this on page containers to override old font size
+$font-size-h1: (null: 2.75rem, $font-break-point: 3.75rem);
+$font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
+$font-size-h3: (null: 1.25rem, $font-break-point: 1.75rem);
+$font-size-h4: (null: 1rem, $font-break-point: 1.25rem);
+
+$font-weight-base: 300;
+$font-weight-bold: 700;
+
+html,
+body {
+	@include font-size-map($font-size-body-old-pages); // Kept around for feature article pages
+	@include font-family-sans-serif();
+	color: $black;
+	text-rendering: optimizeLegibility;
+	font-weight: $font-weight-base;
+	line-height: 1.25;
+}
+
+h1,
+h2,
+h3 {
+  @include font-family-serif();
+}
+
 h1 {
-	font-size: 3em;
+	@include font-size-map($font-size-h1);
+	line-height: 1.07;
 }
 
 h2 {
-	font-size: 2.8em;
+	@include font-size-map($font-size-h2);
+	line-height: 1.15;
 }
 
 h3 {
-	font-size: 2.4em;
+  @include font-size-map($font-size-h3);
+  line-height: 1.15;
 }
 
 h4 {
-	font-size: 2em;
-}
-
-h5 {
-	font-size: 1.8em;
-}
-
-h6 {
-	font-size: 1.6em;
+	@include font-size-map($font-size-h4);
+  font-weight: $font-weight-bold;
 }
 
 a {
-	text-decoration: none;
-}
-
-.subheader {
-	color: $gray;
-}
-
-#contactForm h4, h4.title {
-	font-size: 18px;
-	font-weight: 400;
-}
-
-.quote {
-		font-weight: 400;
+  text-decoration: none;
+  color: $blue;
 }
 
 p {
-	font-size: 1.375em;
 	margin-bottom: 1em;
 	em {
 		font-style: italic;
 	}
 	strong {
-		font-weight: 700;
-	}
-	a {
-		text-decoration: none;
-		color: $blue;
+		font-weight: $font-weight-bold;
 	}
 }
 
@@ -96,15 +106,15 @@ sub {
 }
 
 ul {
-	list-style: square;
+	list-style: disc;
 }
 
 ol {
 	list-style: decimal;
 }
 
-ol {
-	list-style: auto;
+.subheader {
+	color: $gray;
 }
 
 .social-card a {
@@ -112,10 +122,15 @@ ol {
 }
 
 .social-card a:hover {
-	color:$blue;
+	color: $blue;
 }
 
-a {
-	display: inline-block;
-	color: $blue;
+.font-thin {
+	font-weight: $font-weight-base;
+}
+.font-bold {
+	font-weight: $font-weight-bold;
+}
+.font-small {
+	font-size: .8rem;
 }

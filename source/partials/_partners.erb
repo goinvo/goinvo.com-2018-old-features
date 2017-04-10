@@ -1,0 +1,12 @@
+<div class="partners">
+	<h2 class="font-thin"><%= title %></h2>
+	<ul>
+		<% partners.each do |partner| %>
+			<li>
+				<a href="<%= partner.client_url %>">
+					<img src="/images/<%= partner.type %>/partners/<%= partner.partner_logo %>"/>
+				</a>
+			</li>
+		<% end %>
+	</ul>
+</div>

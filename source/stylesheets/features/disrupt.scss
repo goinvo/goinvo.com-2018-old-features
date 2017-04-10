@@ -94,7 +94,7 @@ $gridTop: 0;
       }
       &[data-row="4"] {
         &:before {
-          border-color: $pink; 
+          border-color: $pink;
         }
       }
       &:before {
@@ -366,7 +366,7 @@ $gridTop: 0;
       white-space: nowrap;
       padding: 8px;
       padding-right: 20px;
-      font-size: 1em;
+      font-size: 15px;
       a {
         color: rgba(255,255,255,0.8);
         transition: all 150ms ease-in-out;

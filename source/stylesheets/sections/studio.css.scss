@@ -1,5 +1,10 @@
 @import "../base/core";
 
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
 div.loading {
 	text-align:center;
 	height: 200px;
@@ -9,14 +14,14 @@ div.loading {
 #the-studio {
 	.hero {
 		background-image: url('../../images/studio/studio2.jpg');
-		
+    text-shadow: 0 2px 20px rgba(0,0,0,.8);
 	}
 
 	.content {
 		padding-bottom:30px;
 		margin:0 auto;
 	}
-	
+
 	#social-section {
 		padding-left:0px;
 		padding-right:0px;
@@ -28,7 +33,7 @@ div.loading {
 		padding-left:10px;
 		padding-right:10px;
 	}
-	
+
 	div.social-card {
 		margin-left:0px;
 		margin-right:0px;
@@ -194,6 +199,6 @@ div.loading {
 
 @media only screen and (max-width: 750px) {
 	#video-bg {
-		display: none;	
+		display: none;
 	}
 }

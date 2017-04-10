@@ -12,14 +12,14 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}/
-- client = client_for_name("Visual Budget")
+- client = get_project_by_id("visual-government")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} Visual Government
-		
+		%h2.client{style: "color: #{client.primary_color}"} Visual Government
+
 		%p Bringing financial transparency to local governments and citizens, one city at a time.
-		
+
 		%h6.subheader Results
 
 		%p A publicly available financial story of how cities allocate and spend their budgets.
@@ -32,7 +32,7 @@
 		%p <a href="http://www.masstlc.org/news/163169/Involutions-Arlington-Visual-Budget-Wins-2014-iF-Communication-Design-Gold-Award.htm">Design F Award</a>
 
 		%p <a href="http://www.mma.org/municipal-government/12853-arlington-visual-budget-illuminates-how-taxes-are-spent">Innovation Award by Mass Municipal Association</a>
-		
+
 		%p.no-bottom-margin <a href="http://sunlightfoundation.com/blog/2013/10/18/opengov-voices-transparency-with-arlington-visual-budget/">Voice of Transparency Governmen</a>
 		%p.caption The Sunlight Foundation
 
@@ -61,7 +61,7 @@
 		%div
 			%img.with-caption{alt: "Care Cards featured in Patient Safety &amp; Quality Healthcare.", src: "../../images/clients/arlington-visual-budget/arlington_visual_budget_expenses.png"}/
 		%p.caption Town Expenses
-		
+
 		%p The Visual Budget gives citizens the information they need to have informed conversations with municipal officials about values and priorities, enriching the experience for all.
 
 		%div
@@ -75,14 +75,14 @@
 		%div
 			<iframe src="//player.vimeo.com/video/113723141"  style = "max-width: 100%; width: 100%; height: 500px; " frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		%p.caption An early prototype sewed the data and dataviz together.
-		
+
 		%p Arlington Town Management Analyst Michael Bouton said he was happy to work with Invo’s creative team on the project. “It was a blank canvas,” Bouton said. “We came in with an idea and the conceptualization of it was them.” The Invo designers and engineers donated their time, and the company has made the code for the project available online for other town governments to use. An Arlington resident, Involution’s Creative Director Juhan Sonin was excited about the collaboration, saying “It’s a part of our civic responsibility as designers to get involved in the design of policy.”
-		
-		%p The code is freely available under the Apache license at <a href = "https://github.com/goinvo/Visual-Town-Budget">Github</a>. 
+
+		%p The code is freely available under the Apache license at <a href = "https://github.com/goinvo/Visual-Town-Budget">Github</a>.
 		%p The first town to adopt the service was Arlington, MA. <a href = "http://www.arlingtonvisualbudget.org/">See it live</a>.
 
 #next-project.row
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

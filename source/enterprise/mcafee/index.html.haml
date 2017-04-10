@@ -12,11 +12,11 @@
 	%meta{:name => "twitter:description", :content => "#{meta.description}"}
 	- if (meta.twitterimage)
 		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-- client = client_for_name("McAfee")
+- client = get_project_by_id("mcafee")
 
 #content-area.caseStudyContent
 	.projectData
-		%h1.client{style: "color: #{client.primary_color}"} McAfee
+		%h2.client{style: "color: #{client.primary_color}"} McAfee
 
 		%h6.subheader Results
 
@@ -80,4 +80,4 @@
 	.medium-6.small-12.small-centered.columns
 		.next-title
 			Next Project:
-			%span#next
+			%h1#next

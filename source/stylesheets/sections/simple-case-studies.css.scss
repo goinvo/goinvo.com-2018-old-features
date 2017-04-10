@@ -1,15 +1,18 @@
 @import "../base/core";
 
+html,
+body {
+   @include font-size-map($font-size-body-new-pages);
+}
+
 .container {
-	padding-top: 55px;
 	margin-bottom: 0px;
-	
+
 	h6.subheader {
 		margin-top: 40px;
-		font-size: 1.375em;
 		font-weight: 400;
 		text-transform: uppercase;
-		
+
 		&.name {
 			text-transform: none;
 			margin-top: 0px;
@@ -18,47 +21,46 @@
 			margin-bottom: 3em;
 		}
 	}
-	
+
 	img {
 		padding-bottom: 60px;
 		width: 100%;
 		height: auto;
-		
+
 		&.with-caption {
-			padding-bottom: 1em;	
+			padding-bottom: 1em;
 		}
 	}
-	
+
 	.bottom-margin {
-		margin-bottom: 140px;	
+		margin-bottom: 140px;
 	}
-	
+
 	.top-margin {
-		margin-top: 2em;	
+		margin-top: 2em;
 	}
-	
+
 	.no-top-margin {
 		margin-top: 0px !important;
 	}
-	
+
 	.no-top-padding {
-		padding-top: 0px !important;	
+		padding-top: 0px !important;
 	}
-	
+
 	.no-bottom-margin {
 		margin-bottom: 0px !important;
 	}
-	
+
 	.medium-bottom-margin {
 		margin-bottom: 60px;
 	}
-	
+
 	.small-bottom-margin {
-		margin-bottom: 2em !important;	
+		margin-bottom: 2em !important;
 	}
-	
+
 	p {
-		line-height: 1.36363636em;
 		&.quote {
 			margin-bottom: 0.25em;
 			padding-top: 0.5em;
@@ -72,22 +74,22 @@
 				content: "\201D";
 			}
 		}
-		
+
 	}
-	
+
 	p.caption {
 		max-width: 75%;
 		margin-bottom: 3em;
 		&.no-margin {
 			margin-bottom: 0.25em;
 		}
-		
+
 		img {
 			max-width: 50%;
 			padding-bottom: 0px;
 		}
 	}
-	
+
 	ul {
 		font-size: 22px;
 		line-height: 28px;
@@ -95,7 +97,7 @@
 		margin-top: 20px;
 		list-style: disc;
 	}
-	
+
 	li {
 		margin-top: 15px;
 		line-height: 1.36363636em;
@@ -109,26 +111,36 @@
 		float: left;
 	}
 	.projectData {
-		width: 25%;
-		p.caption {
+		width: 30%;
+
+    .quote {
+      padding: 0;
+			margin: 2em 0 0 0;
+      text-align: left;
+    }
+		.caption {
 			max-width: 100%;
+
+      img {
+        max-width: 150px;
+      }
 		}
 		p a {
 			display: inline;
 		}
 	}
 	.projectDetails {
-		width: 75%;
+		width: 70%;
 		padding-left: 2em;
 	}
-	
+
 	p.caption {
 		font-size: 18px;
 		line-height: 22.7px;
 		color: $gray;
-		
+
 		&.black {
-			color: #000;	
+			color: #000;
 		}
 	}
 }
@@ -136,19 +148,17 @@
 .similar-project-container {
 	h6.subheader {
 		text-transform: none;
-		font-size: 1.375em;
-		margin: 0;
+		font-size: 1rem;
+		margin: 40px 0 0 0;
 		padding-bottom: .5em;
 	}
 	a.button.radius {
-		font-size: 1.25em;
-		padding: 20px 20px;
-		padding-top: 22px;
-		background-color:rgb(235, 235, 235);
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: rgba(235, 235, 235, 0.6);
 		color: #aaa;
 		&:hover{
-			//color:rgb(247, 247, 247);
-			background-color: #dbdddc;
+			background-color: rgba(235, 235, 235, 0.8)
 		}
 	}
 }
@@ -164,19 +174,14 @@
 		max-width: 800px;
 		margin: 0 auto;
 		color: #f7f7f7;
-		font-size: 2.5rem;
-		line-height: 1em;
-		font-weight: 700;
-
-		span {
-			font-size: 3.5rem;
-			line-height: 1em;
-		}
 	}
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 950px) {
 	#content-area {
+    .projectData {
+      margin-bottom: 2rem;
+    }
 		.projectData, .projectDetails {
 			width: 100%;
 			padding: 0;
