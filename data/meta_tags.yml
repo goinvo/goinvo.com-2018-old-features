@@ -386,8 +386,8 @@
   twitterimage: "http://www.goinvo.com/images/features/world-cup/hero.jpg"
 
 - page: "determinants-of-health"
-  description: "A wholistic view of human health."
-  keywords: "determinants of health, social determinants of health, wholistic health, environment, medical care, genetics and biology, individual behavior, social circumstances"
+  description: "A holistic view of human health."
+  keywords: "determinants of health, social determinants of health, SDOH, holistic health, environment, medical care, genetics and biology, individual behavior, social circumstances"
   twittercard: "summary_large_image"
   twittersite: "@goinvo"
   twittertitle: "Determinants of Health"
