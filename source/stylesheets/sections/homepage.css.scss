@@ -203,6 +203,14 @@ $text-stroke: rgba(255, 255, 255, 0.6);
 	}
 }
 
+.quote.background {
+	background-color: white;
+	max-width: 100%;
+	padding-left: 12%;
+	padding-right: 12%;
+	// text-align: -webkit-center;
+}
+
 #disrupt {
   .photo-container {
     display: none;
