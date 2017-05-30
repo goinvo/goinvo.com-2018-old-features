@@ -49,15 +49,6 @@
   email: "jennifer@goinvo.com"
   photo: jennifer_patel.jpg
 
-- first_name: Beth
-  last_name: Herlin
-  title: Product Designer
-  bio: "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University."
-  twitter_username: "beth11herlin"
-  linkedin_url: "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
-  email: "beth@goinvo.com"
-  photo: beth_herlin.jpg
-
 - first_name: Edwin
   last_name: Choi
   title: Designer
@@ -83,14 +74,6 @@
   twitter_username:
   email: "sharon@goinvo.com"
   photo: sharon_lee.jpg
-
-- first_name: Hrothgar
-  last_name: ""
-  title: Designer, Engineer
-  bio: "Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford."
-  github_username: "hrothgar"
-  email: "hrothgar@goinvo.com"
-  photo: hrothgar.jpg
 
 - first_name: Karishma
   last_name: Bhatia

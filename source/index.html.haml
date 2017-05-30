@@ -113,7 +113,9 @@
 				%a{:href => "products/hgraph?from=healthcare"}
 					%img{:src => "/images/healthcare/partners/walgreens.png"}
 
-- feature_articles_sorted_by_date().first(2).each do |article|
+- # Dropping first item for now because we don't want to feature Killer Truths on homepage
+- # Should be changed or removed at a later date
+- feature_articles_sorted_by_date().first(2).drop(1).each_with_index do |article, index|
 	%a.block.bar{ :href => "features/#{article.url}", :id => article.id }
 		- # Should still be setting bg images in CSS, because of varying gradients.
 		- # At least for now...
@@ -122,9 +124,9 @@
 			%h1.name= article.title
 			.sub-name= article.tag_line
 .quote.background
-	%h2.quote-content 
+	%h2.quote-content
 		“The GoInvo studio is one of the most talented group of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.”
-	.quote-author 
+	.quote-author
 		Eric Topol<br />MD, Director, Scripps Translational Science Institute
 .double
 	%a#three-m.block.half{:href => "healthcare/3m"}
