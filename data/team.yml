@@ -84,6 +84,15 @@
   github_username: kbhatia2011
   linkedin_url: "https://www.linkedin.com/in/karishma-bhatia-8487b974"
 
+- first_name: Eric
+  last_name: Bai
+  title: Engineering, MD Candidate
+  bio: "Eric is an engineer with a design itch. He knows full-stack development, has experience in building user-driven services, and brings a commitment to making software for the public good. Eric joined Invo in 2017 with a degree in computational biology from Brown. He is completing his medical degree and his masters in population medicine at Brown in 2022."
+  email: "ericbai@goinvo.com"
+  photo: eric_bai.jpg
+  github_username: ericbai
+  linkedin_url: "https://www.linkedin.com/in/heyericbai"
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
