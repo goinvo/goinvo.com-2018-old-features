@@ -93,6 +93,13 @@
   github_username: ericbai
   linkedin_url: "https://www.linkedin.com/in/heyericbai"
 
+- first_name: Bryson
+  last_name: Wong
+  title: Designer
+  bio: "Bryson is a designer who spans the gamut of software strategy skills from user research to product design to usability. Bryson joined Invo in 2017 with a degree in Human Factors from Tufts University."
+  email: "bryson@goinvo.com"
+  photo: bryson_wong.jpg
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
