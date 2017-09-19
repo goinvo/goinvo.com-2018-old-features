@@ -400,3 +400,11 @@
   twittersite: "@goinvo"
   twittertitle: "Killer Truths"
   twitterimage: "http://www.goinvo.com/images/features/killer-truths/Killer_Truths_Slide.png"
+
+- page: "myrobotdoctor"
+  description: "How I learned to stop worrying and love my robot doctor"
+  keywords: "robot doctor, virtual healthcare, virtual primary care, virtual medicine, invo, goinvo"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "My Robot Doctor"
+  twitterimage: "http://www.goinvo.com/images/features/myrobotdoctor/splash-title.png"

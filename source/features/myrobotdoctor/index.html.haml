@@ -1,0 +1,254 @@
+- content_for(:title) do
+    = "How I Learned to Stop Worrying and Love my Robot Doctor"
+- content_for(:page_head) do
+    = stylesheet_link_tag "features/myrobotdoctor"
+    = stylesheet_link_tag "feature-elements"
+    = javascript_include_tag "vendor/bootstrap.min.js"
+    - meta = page_for_meta("myrobotdoctor")
+    %meta{:name => "description", :content => "#{meta.description}" }
+    %meta{:name => "keywords", :content => "#{meta.keywords}" }
+    %meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+    %meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+    %meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+    %meta{:name => "twitter:description", :content => "#{meta.description}"}
+    - if (meta.twitterimage)
+        %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+
+.robot-hero
+    .robot-hero__contents
+        %h1.robot-hero__text My Robot Doctor
+        %h2.robot-hero__text How I learned to stop worrying and love my robot doctor
+%article
+    .robot-title Life first. Health a distant second.
+    .robot-overlay-container
+        %img.robot-image.robot-image--expand-width{:src => "../../images/features/myrobotdoctor/health-app-2.png"}
+        .robot-overlay-container__text.robot-overlay-container__text--align-left
+            %p Humans don't want to think about health. But we can train robots to think about it, to be hypervigilant for us. It's the mundane, the everyday, the minute details, the mindless, the invisible tasks. Crappy for humans, but perfect for machines. Then humans can concentrate on the important stuff.
+
+            %p All of our data will be captured beautifully, without us knowing it. And when we have to input data, it will be a highly lubricated experience.
+
+            %p The data will be human and machine readable: structured, longitudinal, accessible, accurate and always updating. Unlike our current guesses, the baseline will be the ground truth. It will include all of my data — my life data.
+    .robot-overlay-container
+        %img.robot-image.robot-image--expand-width{:src => "../../images/features/myrobotdoctor/retina-exam.png"}
+        .robot-overlay-container__text.robot-overlay-container__text--align-right
+            %p My healthcare will help me understand my health status, needed behavior changes, and personalized care plans. It will also help my entire care team. The treatments that comprise my care plans will dynamically evolve based on my ever-changing health status.
+
+            %p I can my proxy my data to any person, any organization, any service — parts or whole — for today, tomorrow or forever.
+    .robot-emphasize
+        I will own, or co-own, my healthcare data. I will see my health advance.
+%article
+    .robot-title From Data to Algorithm to Measurement to Policy
+    .robot-overlay-container
+        %img.robot-image.robot-image--expand-width{:src => "../../images/features/myrobotdoctor/baseball.png"}
+        .robot-overlay-container__text.robot-overlay-container__text--align-right
+            %p The distance between home plate and the pitcher's mound is known. The distance between second base and third base is known.
+
+            %p Baseball has a fundamental set of rules that every ballpark and team has to play against. And yet each ballpark has its own quirks and personality.
+
+            %p This is opposite of healthcare wherein no fundamental rules are played on. Unlike in baseball, in healthcare you cannot complete on talent alone.
+    .robot-emphasize
+        Health System Ranking of 11 Industrialized Countries
+    .robot-adjacent-container
+        .robot-adjacent-container__item.robot-adjacent-container__item--1-of-2
+            %ol.robot-list
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half United Kingdom
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Switzerland
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Sweden
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Australia
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Germany
+                    %span National identified but not SHR
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Netherlands
+                    %span Creating a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.hide--medium
+                    %h3.margin-bottom--half New Zealand
+                    %span Creating a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.hide--medium
+                    %h3.margin-bottom--half Norway
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.hide--medium
+                    %h3.margin-bottom--half France
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.hide--medium
+                    %h3.margin-bottom--half Canada
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.hide--medium
+                    %h3.margin-bottom--half United States
+                    %span Does not have a SHR
+        .robot-adjacent-container__item.robot-adjacent-container__item--1-of-2.hide--small
+            %ol.robot-list
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large.robot-list__item--start-at-7
+                    %h3.margin-bottom--half New Zealand
+                    %span Creating a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Norway
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half France
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half Canada
+                    %span Has a Standard Health Record
+                %li.robot-list__item.robot-list__item--medium-number.robot-list__item--spacing-large
+                    %h3.margin-bottom--half United States
+                    %span Does not have a SHR
+    .carousel.slide#carousel-health-rankings{ :data => { :interval => "false" }}
+        .carousel__container{:role=>"listbox"}
+            .carousel__item.item.active
+                %h3.margin-bottom--half #1 United Kingdom
+                %p
+                    %strong Summary Care Record (SCR) established in 2010 with 97% adoption
+                %p
+                    The SCR provides a well-understood and unambiguous representation of critical and core information. It includes a medication list, adverse drug interactions, and allergies
+                %ul.pad-left--double
+                    %li 73% agreed that the SCR helped avoid medication errors.
+                    %li In 87% of encounters, SCR provided information that would otherwise be unknown.
+                    %li 97% agreed that the SCR has improved service provided to patients
+            .carousel__item.item
+                %h3.margin-bottom--half #2 Switzerland
+                %p
+                    %strong Statutory Health Insurance Smart Card established in 2007
+                %p
+                    The eHealth Strategy for Switzerland established this system to digitally encode summary information about the patient and all necessary administrative data. Since 2010, summary information is stored on the card, including the national identifier, allergies, diagnoses, and medications.
+            .carousel__item.item
+                %h3.margin-bottom--half #3 Sweden
+                %p
+                    %strong National Patient Summary (NPO) established in 2008
+                %p
+                    The NPO makes patients' health records available to all authorized care staff nationwide. This is a centralized repository of patient summary data, including medication list, diagnoses, care contacts, documentation, and lab test results. Information is transferred according to the same standard with coordinated data entry templates.
+            .carousel__item.item
+                %h3.margin-bottom--half #11 United States
+                %p
+                    %strong No Standard Health Record
+                %p
+                    The US has failed to define a key component found in all top-performing healthcare systems. No common operational picture of the patient exists, only fragmented, non-standard, and poorly-shared fragments of health data.
+                %ul.pad-left--double
+                    %li Health Information Exchange (HIE) chaos, with over 120 incompatible private and regional HIEs
+                    %li Significant questions around standards, data models, mapping, terminology, exchanging, merging, storing, securing, and authorizing third-party access to health data
+            %a.carousel__control.carousel__control--left{:href=>"#carousel-health-rankings", :role=>"button", :data=>{:slide=>"prev"}}
+                %span.carousel__control__text ◀
+            %a.carousel__control.carousel__control--right{:href=>"#carousel-health-rankings", :role=>"button", :data=>{:slide=>"next"}}
+                %span.carousel__control__text ▶
+%article
+    .robot-title Standard Health Record changes the game
+    %ul.robot-systems-list
+        %li.robot-systems-list__item.robot-systems-list__item--shr
+            %h4.margin-bottom Standardize the data
+
+            %p Focusing on exchange standards alone has been ineffective because vendors and providers have not been pushed hard enough to standardize health data.
+
+            %p Providing a clear target in the form of a well designed, computable, digital standard health record will cause a 10x acceleration in health data interoperability in the US.
+        %li.robot-systems-list__item.robot-systems-list__item--completeness
+            %h4.margin-bottom Standardize the measurement
+
+            / %img.robot-image{:src => "../../images/features/myrobotdoctor/data-completeness-by-visit.png"}
+
+            %p Standard health data requires that data collection at all entry-points to the healthcare system systematically capture aspects of the patients' health. While visits to the emergency room necessitate focus on the ongoing medical issue, primary care appointments can function as points for synthesizing a more-holistic picture of the patient's health.
+        %li.robot-systems-list__item.robot-systems-list__item--doh
+            %h4.margin-bottom Standardize the algorithms
+
+            / %img.robot-robot.robot-image--position-right{:src => "../../images/features/myrobotdoctor/doh.png"}
+
+            %p Healthcare is only a small fraction of the overall experience of health. The determinants of health can be influenced by medical attention, but the socioeconomic determinants of health play a far greater role. Means the healthcare system uses to evaluate outcomes must consider this reality.
+        %li.robot-systems-list__item.robot-systems-list__item--scenarios
+            %h4.margin-bottom Standardize primary care
+
+            / %img.robot-image{:src => "../../images/features/myrobotdoctor/ways-to-fail.png"}
+
+            %p Primary care is simultaneously the entry-point and catch-all to the healthcare system. Its central and therefore universal role underscores the mandate to standardize the primary care experience so that all may receive a high standard of care.
+
+            %p To err is to be human and variability in the primary care experience provides fodder for possible error.
+%article
+    .robot-title Primary Care Manifesto
+    .pad-left
+        %ol.robot-list
+            %li.robot-list__item.robot-list__item--large-number.robot-list__item--spacing-large
+                %p
+                    %strong Help the patient own, control, and understand their complete, merged, accurate, timely, digital standard health record.
+                %p This helps the patient own their health.
+            %li.robot-list__item.robot-list__item--large-number.robot-list__item--spacing-large
+                %p
+                    %strong Help the patient understand their health status, any needed behavior changes, and their personalized care plan
+                %p This helps the patient to manage their health.
+            %li.robot-list__item.robot-list__item--large-number.robot-list__item--spacing-large
+                %p
+                    %strong Help the patient access health services via text, email, voicemail, telephone, app, walk-in, drive thru, by appointment, and EMS.
+                %p Make health easier.
+            %li.robot-list__item.robot-list__item--large-number.robot-list__item--spacing-large
+                %p
+                    %strong Help the primary care clinician to accurately diagnose, explain, educate, and work with the patient on a consensus standard of care plan.
+                %p Empower patients in their own care.
+            %li.robot-list__item.robot-list__item--large-number.robot-list__item--spacing-large
+                %p
+                    %strong Standardize Primary Care digital health data in the United States and in the world by 2018
+                %p Begin to achieve #1, #2, #3, and #4 on any standard smartphone.
+    .robot-emphasize.robot-emphasize--align-right
+        %h5 100% Primary Healthcare =
+        %h5 70% Virtual Primary Care +
+        %h5 30% In-Person Primary Care
+%article
+    .robot-title My Robot Doctor
+    / .robot-overlay-container
+    /     %img.robot-image.robot-image--expand-cover{:src => "../../images/features/myrobotdoctor/splash.png"}
+    /     .robot-overlay-container__text.robot-overlay-container__text--align-right
+    /         <TEXT HERE>
+    .robot-process-container
+        %img.robot-image.robot-image--height-medium{:src => "../../images/features/myrobotdoctor/cartoon-app-1.png"}
+        .robot-process-container__text
+            %p
+                %strong No one should be denied healthcare.
+            %p
+                To accomplish this goal, healthcare must be made accessible at scale. Three quarters of humans on the planet have an internet-connected cell phone.
+            %p
+                We need to leverage this expanding, global reach to ensure that healthcare is a human right. Primary care for all.
+        %img.robot-image.robot-image--height-medium{:src => "../../images/features/myrobotdoctor/cartoon-app-2.png"}
+    / .robot-process-container
+    /     %img.robot-image.robot-image--height-medium{:src => "../../images/features/myrobotdoctor/aging-timeline-1.png"}
+    /     .robot-process-container__text
+    /         <TEXT HERE>
+    /     %img.robot-image.robot-image--height-medium{:src => "../../images/features/myrobotdoctor/aging-timeline-2.png"}
+    .robot-emphasize
+        / %img.robot-image.robot-image--left{:src => "../../images/features/myrobotdoctor/personal-responsibility.png"}
+        We are the most underutilized resource in healthcare.
+    .robot-adjacent-container
+        .robot-adjacent-container__item.robot-adjacent-container__item--3-of-5
+            %img.pad-all{:src => "../../images/features/myrobotdoctor/credits-1.png"}
+        .robot-adjacent-container__item.robot-adjacent-container__item--2-of-5
+            %ul.robot-list.robot-list--style-invisible.align--right.pad-right--double
+                %li.robot-list__item
+                    %h3 Juhan Sonin
+                    %p Author
+                %li.robot-list__item
+                    %h3 Eric Bai
+                    %p Web Developer
+    .robot-adjacent-container
+        .robot-adjacent-container__item.robot-adjacent-container__item--2-of-5
+            %h4.pad-left--double.pad-right--double Many thanks to
+            %ul.robot-list
+                %li.robot-list__item.robot-list__item--spacing-medium Sarah Kaiser
+                %li.robot-list__item.robot-list__item--spacing-medium Edwin Choi
+                %li.robot-list__item.robot-list__item--spacing-medium Eric Benoit
+                %li.robot-list__item.robot-list__item--spacing-medium Jen Patel
+                %li.robot-list__item.robot-list__item--spacing-medium Craig McGinley
+                %li.robot-list__item.robot-list__item--spacing-medium Sharon Lee
+                %li.robot-list__item.robot-list__item--spacing-medium Jon Follett
+                %li.robot-list__item.robot-list__item--spacing-medium Xinyu Liu
+                %li.robot-list__item.robot-list__item--spacing-medium Mark Kramer
+                %li.robot-list__item.robot-list__item--spacing-medium Andre Quina
+                %li.robot-list__item.robot-list__item--spacing-medium Eric Topol
+                %li.robot-list__item.robot-list__item--spacing-medium Harry Sleeper
+        .robot-adjacent-container__item.robot-adjacent-container__item--3-of-5
+            %img.pad-all{:src => "../../images/features/myrobotdoctor/credits-2.png"}
+
+
+
+
