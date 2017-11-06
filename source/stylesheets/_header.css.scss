@@ -106,6 +106,7 @@ body.mobile-nav-open {
 .nav-content {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	height: 25px;
 
 	> a.nav-button {
@@ -127,6 +128,16 @@ body.mobile-nav-open {
 .header-logo > svg {
 	margin-top: -3px;
 	fill: $white;
+}
+.header-tagline {
+	display: none;
+	font-size: 18px;
+	margin-left: 1rem;
+	padding-top: 4px;
+
+	@media only screen and (min-width: 860px) {
+		display: block;
+	}
 }
 .nav-hamburger {
 	cursor: pointer;
