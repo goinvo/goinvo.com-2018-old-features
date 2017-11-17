@@ -38,6 +38,15 @@ article#feature-article div.doh-container {
   	color: white;
   }
 
+  a.button {
+    color: #111;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: darken(white, 2.5%);
+    }
+    }
+
   //media Queries
   /* For devices larger than 320px */
   @media (min-width: 320px) and (max-width: 549px){
