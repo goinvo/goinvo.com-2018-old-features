@@ -1,0 +1,53 @@
+@import '../base/_mixins';
+@import '../base/_colors';
+@import '../base/_type';
+
+$section-spacing: 2.5rem;
+
+.big-betty {
+  font-family: $font-family-serif;
+  font-size: 22px;
+  padding-bottom: $section-spacing;
+
+  h1 {
+    font-size: 80px;
+  }
+
+  &__hero {
+    height: 300px;
+    background-image: image-url('features/big-betty/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 -20px 30px -30px #000;
+    margin-bottom: $section-spacing + 1rem;
+
+    @include breakpoint('600px') {
+      height: 450px;
+    }
+
+    @include breakpoint('800px') {
+      height: 600px;
+    }
+  }
+
+  &__section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__h3 {
+    margin-top: $section-spacing;
+    margin-bottom: 1rem;
+    font-size: 28px;
+
+    @include breakpoint('600px') {
+      font-size: 30px;
+    }
+  }
+
+  @include breakpoint('600px') {
+    font-size: 22px;
+  }
+}

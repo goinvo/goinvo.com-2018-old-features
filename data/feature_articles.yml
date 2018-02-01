@@ -15,6 +15,13 @@
   # style rules for background images and the likes.
 
 articles:
+  - title: "Big Betty"
+    tag_line: "After almost a decade, we finally replaced our printer."
+    date: "2018-01-01"
+    image: "TODO"
+    url: "big-betty"
+    id: "big-betty"
+
   # - title: "My Robot Doctor"
   #   tag_line: "How I learned to stop worrying and love my robot doctor"
   #   date: "2017-09-01"
