@@ -7,10 +7,19 @@ $section-spacing: 2.5rem;
 .big-betty {
   font-family: $font-family-serif;
   font-size: 22px;
+  line-height: 30px;
   padding-bottom: $section-spacing;
 
   h1 {
     font-size: 80px;
+  }
+
+  img {
+    margin: 0 auto 1.5rem auto;
+
+    @include breakpoint('600px') {
+      max-width: 80%;
+    }
   }
 
   &__hero {
@@ -40,14 +49,6 @@ $section-spacing: 2.5rem;
   &__h3 {
     margin-top: $section-spacing;
     margin-bottom: 1rem;
-    font-size: 28px;
-
-    @include breakpoint('600px') {
-      font-size: 30px;
-    }
-  }
-
-  @include breakpoint('600px') {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
