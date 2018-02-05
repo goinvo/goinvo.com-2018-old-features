@@ -4,6 +4,9 @@
 
 $section-spacing: 2.5rem;
 
+$text-shadow-source: 10px;
+$text-shadow-glow: 50px;
+
 .big-betty {
   font-family: $font-family-serif;
   font-size: 22px;
@@ -28,7 +31,7 @@ $section-spacing: 2.5rem;
     box-shadow: inset 0 -20px 30px -30px #000;
     margin-bottom: $section-spacing + 1rem;
 
-    h1.source {
+    h1 {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -38,33 +41,23 @@ $section-spacing: 2.5rem;
       transform: translate(-50%, -50%);
 
       .magenta {
-        text-shadow: 0px 0px 10px #ff00ff;
+        text-shadow: 0 0 $text-shadow-source #ff00ff, 0 0 $text-shadow-glow #ff00ff;
       }
       .cyan {
-        text-shadow: 0px 0px 10px #00ffff;
+        text-shadow: 0 0 $text-shadow-source #00ffff, 0 0 $text-shadow-glow #00ffff;
       }
       .yellow {
-        text-shadow: 0px 0px 10px #ffff00;
+        text-shadow: 0 0 $text-shadow-source #ffff00, 0 0 $text-shadow-glow #ffff00;
       }
-    }
 
-    h1.glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 100px;
-      font-weight: bold;
-      color: rgba(255, 255, 255, 0);
-      transform: translate(-50%, -50%);
+      @include breakpoint('600px') {
+        font-size: 140px;
+        white-space: nowrap;
+      }
 
-      .magenta {
-        text-shadow: 0px 0px 50px #ff00ff;
-      }
-      .cyan {
-        text-shadow: 0px 0px 50px #00ffff;
-      }
-      .yellow {
-        text-shadow: 0px 0px 50px #ffff00;
+      @include breakpoint('700px') {
+        font-size: 170px;
+        white-space: nowrap;
       }
     }
 
