@@ -17,11 +17,24 @@ $text-shadow-glow: 50px;
     margin: 0 auto 1.5rem auto;
   }
 
+  &__inline-pix,
   img:not(.tall-boy) {
     @include breakpoint('1000px') {
       width: 150%;
       max-width: 150%;
       margin-left: -25%;
+    }
+  }
+
+  &__inline-pix {
+    text-align: center;
+
+    img {
+      display: inline-block;
+
+      @include breakpoint('1000px') {
+        width: 47.5%;
+      }
     }
   }
 
