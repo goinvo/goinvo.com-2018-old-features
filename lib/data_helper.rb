@@ -33,6 +33,10 @@ module DataHelper
     data.feature_articles.articles.sort { |a,b| a.date <=> b.date }.reverse
   end
 
+  def get_feature_article_by_id(id)
+    data.feature_articles.articles.detect { |c| c.id == id }
+  end
+
   def feature_article_date(article)
     Date.parse(article.date).strftime("%B %Y")
   end
