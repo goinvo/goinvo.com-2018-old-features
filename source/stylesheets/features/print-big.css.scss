@@ -7,24 +7,36 @@ $section-spacing: 2.5rem;
 $text-shadow-source: 10px;
 $text-shadow-glow: 50px;
 
-.big-betty {
+.print-big {
   font-family: $font-family-serif;
   font-size: 22px;
-  line-height: 30px;
+  line-height: 34px;
   padding-bottom: $section-spacing;
 
   img {
     margin: 0 auto 1.5rem auto;
+  }
 
-    @include breakpoint('600px') {
-      max-width: 80%;
+  img:not(.tall-boy) {
+    @include breakpoint('1000px') {
+      width: 150%;
+      max-width: 150%;
+      margin-left: -25%;
     }
+  }
+
+  &__hero-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
   &__hero {
     position: relative;
     height: 300px;
-    background-image: image-url('features/big-betty/hero.jpg');
+    background-image: image-url('features/print-big/hero.jpg');
     background-position: center -100px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,32 +44,22 @@ $text-shadow-glow: 50px;
     margin-bottom: $section-spacing + 1rem;
 
     h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 100px;
       font-weight: bold;
       color: rgba(255, 255, 255, 0.75);
-      transform: translate(-50%, -50%);
+      font-size: 18vw;
 
       .magenta {
-        text-shadow: 0 0 $text-shadow-source #ff00ff, 0 0 $text-shadow-glow #ff00ff;
+        text-shadow: 0 0 $text-shadow-source transparentize(#ff00ff, .25), 0 0 $text-shadow-glow #ff00ff;
       }
       .cyan {
-        text-shadow: 0 0 $text-shadow-source #00ffff, 0 0 $text-shadow-glow #00ffff;
+        text-shadow: 0 0 $text-shadow-source transparentize(#00ffff, .25), 0 0 $text-shadow-glow #00ffff;
       }
       .yellow {
-        text-shadow: 0 0 $text-shadow-source #ffff00, 0 0 $text-shadow-glow #ffff00;
+        text-shadow: 0 0 $text-shadow-source transparentize(#ffff00, .25), 0 0 $text-shadow-glow #ffff00;
       }
 
-      @include breakpoint('600px') {
-        font-size: 140px;
-        white-space: nowrap;
-      }
-
-      @include breakpoint('700px') {
-        font-size: 170px;
-        white-space: nowrap;
+      @include breakpoint('1100px') {
+        font-size: 200px;
       }
     }
 

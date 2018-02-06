@@ -1,9 +1,9 @@
 - content_for(:title) do
-  = "Big Betty"
+  = "Print Big"
 - content_for(:page_head) do
   = stylesheet_link_tag "feature-elements"
-  = stylesheet_link_tag "features/big-betty"
-  - meta = page_for_meta("big-betty")
+  = stylesheet_link_tag "features/print-big"
+  - meta = page_for_meta("print-big")
   %meta{:name => "description", :content => "#{meta.description}" }
   %meta{:name => "keywords", :content => "#{meta.keywords}" }
   %meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
@@ -13,53 +13,62 @@
   - if (meta.twitterimage)
     %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
 
-%article.big-betty
-  %section.big-betty__hero
-    %h1
-      <span class="cyan">B</span><span class="magenta">i</span><span class="yellow">g</span> <span class="cyan">B</span><span class="magenta">e</span><span class="yellow">t</span><span class="cyan">t</span><span class="magenta">y</span>
-  %section.big-betty__section
+%article.print-big
+  %section.print-big__hero
+    .print-big__hero-text-wrapper
+      %h1
+        <span class="cyan">P</span><span class="magenta">r</span><span class="yellow">i</span><span class="cyan">n</span><span class="magenta">t</span> <span class="yellow">B</span><span class="cyan">i</span><span class="magenta">g</span><span class="yellow">.</span>
+        %br
+        <span class="cyan">P</span><span class="magenta">r</span><span class="yellow">i</span><span class="cyan">n</span><span class="magenta">t</span> <span class="yellow">O</span><span class="cyan">f</span><span class="magenta">t</span><span class="yellow">e</span><span class="cyan">n</span><span class="magenta">.</span>
+  %section.print-big__section
     %p After almost a decade, we finally replaced our printer.
     %p OK, so that doesn’t sound particularly momentous. Most printers cost tens or hundreds of dollars and are one step away from being merely disposable. Not our printer! Here is a picture of it being installed earlier this month:
-    %img{ src: '../../images/features/big-betty/crane-delivery.jpg', alt: 'Epson 20000 printer being delivered by a crane' }
+    %img.tall-boy{ src: '../../images/features/print-big/crane-delivery.jpg', alt: 'Epson 20000 printer being delivered by a crane' }
     %p Yes, that is a crane bringing our printer into our studio. It is a Big Printer. An Epson 20000. We are generally pretty frugal as a business, but our printer is most definitely a splurge. It even has a name: Big Betty.
     %p Splurging on a printer might seem like a predictable thing for a design studio to do. But our commitment to printing big isn’t about nerding out on lovely design. It is about putting vision ahead of execution. About considering the bigger picture. About focusing on the more important things. I know: these things don’t sound relevant to the use of a printer. Let me share five ways in which it supports our commitment to think big:
 
-  %section.big-betty__section
-    %h3.big-betty__h3 1. See the whole system together
+  %section.print-big__section
+    %h3.print-big__h3 1. See the whole system together
     %p The world is split into seemingly infinite pieces, making the most difficult problems to solve often appear impossible. We can’t see everything that needs to be considered, much less parse what is important to consider or not. It is no wonder that our current political environment is increasingly partisan and seemingly intractable!
     %p At the scale of business, system problems are also complex. Not only are there a variety of domains, such as considerations relating to the market, customers, and competitors to name just three, each domain has extensive things to be considered. Truly integrating all of them into planning and decision making requires all of awareness, understanding, relevance, and prioritization of each of them. At best, it’s complicated. At worst, it’s an unnavigable quagmire.
     %p We use our big printer to create system maps that contain everything. Whereas, in strategy, the pieces and parts are typically nested in different documents that do not allow everything to be seen at once, the ability to see everything at once, at anytime, is core to our approach. In order to work through challenges you need to see the whole thing. And you shouldn’t need to struggle to read the details. We know this commitment to visualizing the big picture lets us create better systems.
-    %img{ src: '../../images/features/big-betty/point-1.jpg', alt: 'Large scale design of the Standard Health Record ecosystem' }
+    %img{ src: '../../images/features/print-big/point-1.jpg', alt: 'Large scale design of the Standard Health Record ecosystem' }
 
-  %section.big-betty__section
-    %h3.big-betty__h3 2. Make the details important
+  %section.print-big__section
+    %h3.print-big__h3 2. Make the details important
     %p Details are easy to miss. Have you ever done an offset printing project for something like a brochure? The most critical step in the entire creationary process is pouring over the proofs and looking for any little error. After all, once they get the giant printing presses started, there is no going back. Any errors you missed are permanently in your brochure - unless you want to pay double to run the whole damn thing over again.
     %p It is easy to miss the little details. Modern work is splintered into myriad responsibilities and activities. Keeping track of our various domains are hard enough; properly addressing all of the small details to do our thing consistently optimal can feel impossible. It is too simple for tiny bits to get lost in a sea of everything.
     %p Big things are hard to lose. By printing our work big, we can show it big. Things that would be miniscule or even excluded in a more traditional representation are instead easy to see and, consequently, easy to think about. Their large presence makes them something that can’t be ignored. It allows all of the details to be considered and addressed - before the bits and bytes start getting pushed and changes, like in the example of printing the brochure, become far more expensive.
-    %img{ src: '../../images/features/big-betty/point-2.jpg', alt: 'A smiling woman kneels infront of a wall filled with large scale design print-outs' }
+    %img{ src: '../../images/features/print-big/point-2.jpg', alt: 'A smiling woman kneels infront of a wall filled with large scale design print-outs' }
 
-  %section.big-betty__section
-    %h3.big-betty__h3 3. Invite everyone to participate
+  %section.print-big__section
+    %h3.print-big__h3 3. Invite everyone to participate
     %p I don’t know about you, but I generally feel powerless to impact the world. Why? The influence and decision making process is entirely removed from my view, let alone my engagement. Sure, I know how democracy works and that my involvement is through the proxy of my elected officials. But that is hardly any better. I don’t even know if things are happening that I should care about, because I am not aware of them. Once I’m aware of them, all I can do is write or call my representative. I’m neutered from influencing the policies that impact my life.
-    %p When working in large companies, I often felt similarly disempowered. Policies and strategies changed without warning or explanation. Ill-conceived new initiatives started that seemed ignorant of on-the-ground knowledge that could have made the initiative more successful from the very beginning. My being structurally disconnected squandered my ability to contribute while demoralizing me and making me feel outside of the team and culture. This is the modus operandi in most companies, especially large ones.
+    %p When working in large companies, I often felt similarly disempowered. Policies and strategies changed without warning or explanation. Ill-conceived new initiatives started that seemed ignorant of on-the-ground knowledge that could have made the initiative more successful from the very beginning. My being structurally disconnected squandered my ability to contribute while demoralizing me and making me feel outside of the team and culture. This is the modus operandi in most companies, especially large ones. This learned complacency has to be broken. It’s not good enough only to write your state representative or plead design efforts to executives. We need to organize, make, and feed our local futures, and not lose heart at each set back. (For one example, see <a href="http://arlingtonvisualbudget.org/" target="_blank">Arlington Visual Budget</a>.)
     %p Large prints invite everyone to participate. This is true in a small meeting where, instead of people huddling and squinting to seeing what is going on they can take their own space and time and comfort to explore what we have to share. It is also true in the everyday rhythm of the company. One of the most powerful cultural impacts we have is when our big print deliverables are hung up on a wall at our clients. It invites everyone to walk up and talk a look. To discuss. To think. To share ideas. Suddenly, for example, a financial administrator is involved in the innovation process. They feel bought in. They ask questions and share ideas. They raise concerns. The extended tribe of participants now includes many people. The work we are doing is better for it; the company culture is better for it. The dynamic is, in a word, wonderful.
-    %img{ src: '../../images/features/big-betty/point-3.jpg', alt: 'A designer and client\'s huddle around a table with a large scale design print-out, pointing to areas of the design' }
+    %img{ src: '../../images/features/print-big/point-3.jpg', alt: 'A designer and client\'s huddle around a table with a large scale design print-out, pointing to areas of the design' }
 
-  %section.big-betty__section
-    %h3.big-betty__h3 4. Support a perpetual process
+  %section.print-big__section
+    %h3.print-big__h3 4. Support a perpetual process
     %p Change is a process, not an event. Yet, so much of the world implements change as if it were an event, something to be done with and move past. Much of this is the product of physical limitations. For example, the sheer volume of legislation a government needs to process, requiring a focus change once an issue has been “resolved”. Or, the physical constraints of the brochure we mentioned earlier which, once it has been printed, has to be done. The cost of paper, ink, and machineworks dictates it.
     %p The digital world has changed this, somewhat. Websites shifted the creative process for business away from the “big button” publishing model over to one of incremental and perpetual change. The lack of limitations in digital publishing compared to analog enabled this, subsequently refined over more than two decades. This carried over to areas like product development, making once-niche approaches like lean engineering what is increasingly a ubiquitous standard.
     %p Remember the point about putting big prints on the wall for all to see? Inclusivity and participation are part of that, but so is a commitment to iteration and perpetual improvement. The presence of the work in a format and environment that encourages engagement from all results in a form of intellectual testing and retesting that goes on for the weeks, months, or years that the invention or innovation requires. It moves the work from one of deliverable drops and coarse opportunities for interactivity to a perpetual process of refinement. The results are spectacular.
-    %img{ src: '../../images/features/big-betty/point-4.jpg', alt: 'Invo\'s giant Determinants of Health poster hangs in the halls of MITRE' }
+    %img.tall-boy{ src: '../../images/features/print-big/point-4.jpg', alt: 'Invo\'s Care Cards printed as large posters, hung up in various areas of the doctor\'s office.' }
 
-  %section.big-betty__section
-    %h3.big-betty__h3 5. Encourage play to stimulate success
+  %section.print-big__section
+    %h3.print-big__h3 5. Encourage play to stimulate success
     %p Over the last 20 years we’ve seen the boundaries between our work lives and personal lives blur. This is a product of technology, as things like email, laptops, and smartphones equipped us with magical devices that erased the constraints of time.
     %p Yet, while our work and personal lives are blurring, our work is scarcely becoming any more fun. We are losing part of our personal lives, where we can let our hair down and express ourselves, which is merely being appropriated by our work. And for most people, work remains work. One of my favorite quotes is from playwright Noel Coward. Looking back on his life he remarked “Work was more fun than fun.” Is that the case for you? For most of us? Hardly.
     %p As a design studio, it is taken for granted that we offer a work environment that is more expressive and, yes, fun than what a typical corporation is able to offer. But Big Betty allows us to take that to a different level, in a way that any company can as well. Both in the client work we are proud of and amazed by, and in our own advocacy and internal projects, our big printer enables us to amplify those efforts. Beautiful art is lovely and feels good but is not necessarily fun. Beautiful art printed out at a massive scale that would impress even the Banksy and Shepard Fairey’s of the world? FUN! Decidedly, unambiguously fun.
-    %img{ src: '../../images/features/big-betty/point-5.jpg', alt: 'Overhead shot of Invo artwork printed very large, spread out on the floor with the studio team scattered around smiling' }
+    %img{ src: '../../images/features/print-big/point-5.jpg', alt: 'Overhead shot of Invo artwork printed very large, spread out on the floor with the studio team scattered around smiling' }
 
-  %section.big-betty__section
+  %section.print-big__section
     %p So, sure. Big Betty is likely not going to completely change the world. It certainly helps us to make better things, and to have and help build cultures that encourage creativity, inclusion, and perpetual improvement. It makes us happier. And the things we make change lives, in some cases millions of them.
     %p You know, Big Betty just might be changing the world after all.
-    %img{ src: '../../images/features/big-betty/end.jpg', alt: 'Invo team members having fun displaying their \'Healthcare is a Human Right\' large-scale print-out on the floor' }
+    %img.tall-boy{ src: '../../images/features/print-big/end.jpg', alt: 'Invo team members having fun displaying their \'Healthcare is a Human Right\' large-scale print-out on the floor' }
+
+  %section.print-big__section
+    %p
+      By Juhan Sonin
+      %br
+      <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
