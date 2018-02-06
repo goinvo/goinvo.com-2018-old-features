@@ -37,7 +37,7 @@ $text-shadow-glow: 50px;
     position: relative;
     height: 300px;
     background-image: image-url('features/print-big/hero.jpg');
-    background-position: center -100px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0 -20px 30px -30px #000;
@@ -72,17 +72,7 @@ $text-shadow-glow: 50px;
     }
 
     @include breakpoint('1000px') {
-      height: 800px;
-      background-position: center -200px;
-    }
-    @include breakpoint('1400px') {
-      background-position: center -300px;
-    }
-    @include breakpoint('1750px') {
-      background-position: center -500px;
-    }
-    @include breakpoint('2000px') {
-      background-position: center -650px;
+      height: 700px;
     }
   }
 
