@@ -2,7 +2,7 @@
 [
   {
     "title" : "Individual Behavior",
-    "percentage" : 38,
+    "percentage" : 36,
     "descriptions" : [
       "Smoking habits, sleep and exercise patterns, sexual activity, and mood levels are all examples of individual behavior, which is a critical determinant for our physical health, mental health, and overall well being. Positive changes to our individual behavior can reduce the risk for developing a variety of diseases, and many public health interventions have already focused on altering dangerous behaviors."
     ],
@@ -48,7 +48,7 @@
 
   {
     "title" : "Social Circumstances",
-    "percentage" : 23,
+    "percentage" : 24,
     "descriptions" : [
       "Social circumstances are factors that reflect the social environment that we have lived and developed in. An individual's social status, early childhood development and culture impacts their social development and personal health. Poor social circumstances such as discrimination, concentrated poverty, and low education level often result in poor health outcomes and a lower quality-of-life."
     ],
@@ -82,6 +82,9 @@
         ]
       },
       {
+        "title": "Race and ethnicity"
+      },
+      {
         "title" : "Citizenship Status"
       },
       {
@@ -107,7 +110,7 @@
 
   {
     "title" : "Genetics and Biology",
-    "percentage" : 21,
+    "percentage" : 22,
     "descriptions" : [
       "While they may be thought of as the primary components of health, genetic makeup, physical body structure, and bodily function in fact determine only about a fifth of our measurable health. In the future, genome sequencing will become more important for predicting and preparing for future health outcomes, but it is not feasible to sequence everyone's genome at this point in time. Some biological and genetic factors that have varying impacts on different segments of the population, and so variance must be considered when applying the determinants of health. The effects of aging and inherited conditions (sickle-cell anemia, cystic fibrosis, etc.) are examples of factors with varying levels of impact on the population."
     ],
@@ -119,8 +122,7 @@
           "Chromosomal",
           "Multifactorial",
           "Mitochondrial DNA-linked",
-          "Gender",
-          "Race and ethnicity"
+          "Gender"
         ]
       },
       {

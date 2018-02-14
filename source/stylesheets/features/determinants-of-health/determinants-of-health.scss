@@ -20,6 +20,9 @@ article#feature-article div.doh-container {
   	font-weight: bold;
   	letter-spacing: 0.1rem;
   }
+  .bold {
+  	font-weight: bold;
+  }
 
   .left_spacing {
   	margin-left: 7%;
@@ -237,7 +240,7 @@ article#feature-article div.doh-container {
 
   #header_image {
   	background-color: #fff;
-  	background-image: url("../../../images/features/determinants-of-health/header_img.svg");
+  	background-image: url("../../../images/features/determinants-of-health/feature_banner2.jpg");
   	background-repeat: no-repeat;
   	background-size: cover;
   	background-position: center;
@@ -518,7 +521,7 @@ article#feature-article div.doh-container {
   		padding-top: 3.5rem;
   	}
   	p, li {
-  		opacity: 0.5;
+  		color: #909090;
   	}
     a {
        color: #1D5377;
@@ -541,7 +544,7 @@ article#feature-article div.doh-container {
   	background-color: #F4F8F9;
   	padding-bottom: 4rem;
   	p, li {
-  		opacity: 0.5;
+      color: #909090;
   	}
     li {
       list-style-position: outside;
