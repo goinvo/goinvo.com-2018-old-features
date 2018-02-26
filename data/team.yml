@@ -100,6 +100,14 @@
   email: "bryson@goinvo.com"
   photo: bryson_wong.jpg
 
+- first_name: Daniel
+  last_name: Reeves
+  title: Designer, Engineer
+  bio: "Daniel is a designer and developer with a diverse background in software, design, and postdoctoral research in interdisciplinary physics. He strives to build engaging and satisfying user interfaces, experiences, and installations, a passion that was kindled at Small Design Firm prior to joining the GoInvo team in 2018."
+  email: "daniel@goinvo.com"
+  linkedin_url: "https://www.linkedin.com/in/danielfreeves"
+  photo: daniel_reeves.jpg
+
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
@@ -119,6 +127,8 @@
   twitter_username: "dknemeyer"
   email: "dirk@goinvo.com"
   photo: dirk_knemeyer.jpg
+
+
 
 # - first_name: Ben
 #   last_name: Listwon
