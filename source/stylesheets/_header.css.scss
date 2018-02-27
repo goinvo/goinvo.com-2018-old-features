@@ -48,6 +48,10 @@ body.mobile-nav-open {
 		}
 	}
 
+	.nav-partial {
+		margin-top: 2px;
+	}
+
 	&.mobile-nav-open {
 		flex-direction: column;
 		height: 100%;
@@ -105,8 +109,8 @@ body.mobile-nav-open {
 }
 .nav-content {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: flex-end;
+	align-items: end;
 	height: 25px;
 
 	> a.nav-button {
@@ -117,6 +121,7 @@ body.mobile-nav-open {
 }
 .nav-full {
 	display: none;
+	margin-top: 2px;
 
 	> a {
 		opacity: 0;
@@ -125,15 +130,19 @@ body.mobile-nav-open {
 		transition: opacity 200ms, transform 200ms;
 	}
 }
-.header-logo > svg {
-	margin-top: -3px;
-	fill: $white;
+.header-logo {
+	margin-right: auto;
+
+	> svg {
+		margin-top: -3px;
+		fill: $white;
+	}
 }
 .header-tagline {
 	display: none;
 	font-size: 18px;
 	margin-left: 1rem;
-	padding-top: 4px;
+	padding-top: 6.5px;
 
 	@media only screen and (min-width: 860px) {
 		display: block;
@@ -141,6 +150,7 @@ body.mobile-nav-open {
 }
 .nav-hamburger {
 	cursor: pointer;
+	margin-left: 12px;
 
 	> svg {
 		width: 25px;
