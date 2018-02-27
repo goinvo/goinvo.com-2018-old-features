@@ -21,7 +21,18 @@
     %meta{:name => "twitter:description", :content => "#{meta.description}"}
     - if (meta.twitterimage)
         %meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
-
+%header.doh-fixed-header
+    %ul.doh-nav
+        %li
+            %a{ href: 'https://github.com/goinvo/HealthDeterminants/blob/master/poster/health_determinants_poster_42x50.pdf', target: '_blank' }
+                <span>Download <span class="doh--hide-tiny"> the Poster</span></span>
+        %li
+            %a{ href: 'https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/', target: '_blank' }
+                <span>Buy <span class="doh--hide-tiny"> Print</span></span>
+        %li
+            %a{ href: '#methodology' } Methodology
+        %li
+            %a{ href: '#references' } References
 %article#feature-article
     %div.doh-container
         %div.row
