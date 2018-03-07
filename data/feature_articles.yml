@@ -110,10 +110,3 @@ articles:
     image: "features/ebola-care-guideline/haz_zoom_bg.png"
     url: "ebola-care-guideline"
     id: ebola-care-guideline
-
-  - title: "The 10 Best Nations in World Cup History"
-    tag_line: "77 teams over 84 years"
-    date: "2014-08-01"
-    image: "features/world-cup/hero.jpg"
-    url: "the-10-best-nations-in-world-cup-history"
-    id: "the-10-best-nations-in-world-cup-history"

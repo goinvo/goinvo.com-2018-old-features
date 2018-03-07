@@ -255,3 +255,5 @@ redirect '/africa-the-next-frontier/comment-page-1', 'http://yes.goinvo.com/arti
 redirect '/techtalks/', 'http://yes.goinvo.com/articles/around-the-studio-tech-talks'
 redirect '/car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/', 'http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz'
 redirect '/work/personalgenomeproject/', '/healthcare/personal-genome-project/'
+redirect '/studio/live', '/studio/team'
+redirect '/features/the-10-best-nations-in-world-cup-history/', '/articles'

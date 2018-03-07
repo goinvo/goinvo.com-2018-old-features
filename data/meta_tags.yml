@@ -377,14 +377,6 @@
   twittertitle: "Redesign Democracy"
   twitterimage: "http://www.goinvo.com/images/home/democracy.png"
 
-- page: "world-cup"
-  description: "World Cup History Visualized"
-  keywords: "world cup history, world cup visualized, world cup info viz"
-  twittercard: "summary_large_image"
-  twittersite: "@goinvo"
-  twittertitle: "The 10 Best Nations in World Cup History: 77 teams over 84 years"
-  twitterimage: "http://www.goinvo.com/images/features/world-cup/hero.jpg"
-
 - page: "determinants-of-health"
   description: "A holistic view of human health."
   keywords: "determinants of health, social determinants of health, SDOH, holistic health, environment, medical care, genetics and biology, individual behavior, social circumstances"
