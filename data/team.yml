@@ -1,7 +1,7 @@
 - first_name: Juhan
   last_name: Sonin
   title: "Director"
-  bio: "Juhan specializes in software design and system engineering. He operates, and is the Director of, Involution Studios. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT."
+  bio: "Juhan specializes in software design and system engineering. He operates, and is the Director of, GoInvo. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT."
   mbti: ENTP
   linkedin_url: "http://www.linkedin.com/in/juhansonin"
   flickr_username: "juhansonin"
@@ -102,7 +102,7 @@
 - first_name: Jon
   last_name: Follett
   title: Business Catalyst
-  bio: "Jonathan is an executive who previously ran his own design studio. He is the director of business development for Involution Studios. Jonathan joined Invo in 2009 and is a graduate of Boston University."
+  bio: "Jonathan is an executive who previously ran his own design studio. He is the director of business development for GoInvo. Jonathan joined Invo in 2009 and is a graduate of Boston University."
   linkedin_url: "https://www.linkedin.com/in/jonfollett"
   twitter_username: "jonfollett"
   github_username: "jonfollett"
@@ -112,7 +112,7 @@
 - first_name: Dirk
   last_name: Knemeyer
   title: Founder
-  bio: "Dirk is a social futurist and a founder of Involution Studios. He envisions new systems for organizational, social, and personal change, helping leaders to make radical transformation. Dirk is a frequent speaker who has shared his ideas at TEDx, Transhumanism+ and SXSW along with keynotes in Europe and the US. He has been published in Business Week and participated on the 15 boards spanning industries like healthcare, publishing, and education."
+  bio: "Dirk is a social futurist and a founder of GoInvo. He envisions new systems for organizational, social, and personal change, helping leaders to make radical transformation. Dirk is a frequent speaker who has shared his ideas at TEDx, Transhumanism+ and SXSW along with keynotes in Europe and the US. He has been published in Business Week and participated on the 15 boards spanning industries like healthcare, publishing, and education."
   linkedin_url: "https://www.linkedin.com/in/knemeyer"
   mbti: INFJ
   twitter_username: "dknemeyer"
@@ -132,7 +132,7 @@
 # - first_name: Ben
 #   last_name: Listwon
 #   title: Engineer
-#   bio: "Ben Listwon co-founded Involution Studios in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
+#   bio: "Ben Listwon co-founded GoInvo in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life."
 #   flickr_username: "nettles"
 #   twitter_username: "benjaminlistwon"
 #   github_username: "BenjaminListwon"
