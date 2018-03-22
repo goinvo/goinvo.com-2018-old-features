@@ -190,14 +190,12 @@
 - uid: "paintrackr"
   type: "products"
   href: "/products/paintrackr"
-  client_url: "http://www.paintrackr.com/"
   primary_color: "#FF0000"
   tag_line: "Track Pain"
   feature_image_url: "/images/products/paintrackr.png"
   summary: "PainTrackr logs pain based on severity and location and stores this data so that it can be easily transmitted."
   client_name: "PainTrackr"
   project_name: "PainTrackr"
-  site: "http://www.paintrackr.com/"
   ios: "https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8"
   github: "https://github.com/goinvo/PainTrackr"
   open_source_description: "An open-source app that monitors physical pain. It logs pain based on severity and location and stores this data so that it can be easily transmitted."
@@ -367,7 +365,6 @@
 
 - uid: "hmixer"
   project_name: "hMixer"
-  site: "http://www.hscoremixer.org/"
   github: "https://github.com/goinvo/hMixer"
   open_source_description: "A tool for doctors to quantify how individual factors impact overall health."
 
