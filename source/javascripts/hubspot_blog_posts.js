@@ -1,7 +1,7 @@
 function getHubspotBlogPosts(callback) {
   $.ajax({
     dataType : 'xml',
-    url      : 'http://yes.goinvo.com/articles/rss.xml',
+    url      : 'https://yes.goinvo.com/articles/rss.xml',
     success  : function (data) {
       var posts = [];
 
