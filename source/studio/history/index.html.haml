@@ -2,7 +2,6 @@
 	= "The History of GoInvo"
 - content_for(:page_head) do
 	= stylesheet_link_tag "sections/history"
-	= javascript_include_tag 'http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js'
 	- meta = page_for_meta("history")
 	%meta{:name => "description", :content => "#{meta.description}" }
 	%meta{:name => "keywords", :content => "#{meta.keywords}" }
@@ -16,5 +15,4 @@
 	.time-wrapper
 		.js-disabled-callout.center-it This timeline is built using JavaScript. To view the timeline of Invo's history please enable JavaScript and reload the page.
 		#timeline-embed
-
-= javascript_include_tag 'timeline'
+			<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1em1JKKCs47bf4bS54Arq2BYA-q8CbLEwW4K0-JZDQA8&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
