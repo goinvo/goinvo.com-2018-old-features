@@ -78,54 +78,52 @@ To build a version of the site, which compiles all resources and consolidates al
 
 ### Codeship
 
-Codeship now handles deployment to Amazon S3 for the live site. Any push to `master` branch will automatically build and sync to the `www.goinvo.com` bucket on s3. 
+Codeship now handles deployment to Amazon S3 for the live site. Any push to `master` branch will automatically build and sync to the `www.goinvo.com` bucket on s3.
 
-If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_sync gem as described below. The appropriate s3 bucket can be targeted with the `s3_bucket` variable in `config.rb`.  
+If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_wesbite gem as described below.  
 
 Codeship does not sync to `staging.goinvo.com`. That must be done manually.
 
 ### AWS Setup
 
-To deploy, you'll first need to add a `.s3_sync` file to the root directory. This file should contain the `aws_access_key_id` and `aws_secret_access_key` both of which a team member can provide, just ask. This file should be ignored.
+To deploy, you'll first need to add a `.env` file to the root directory. This file should contain the environment variables below, which a team member can help procure for you, just ask. This file should be ignored by git, so it's something you must create manually.
+
+Note that the AWS IAM account must have the appropriate access for S3 and Cloudfront.
+
+```
+AWS_ACCESS_KEY_ID=<your-aws-access-key>
+AWS_SECRET_KEY=<your-aws-secret-key>
+S3_BUCKET=staging.goinvo.com
+CF_DISTRIBUTION_ID=<cloudfront-distribution-id>
+```
 
 
 #### Redirections
 
-Before deploying, verify that this variable is set as follows in `config.rb`
+To modify and update redirect rules, append new rules to the bottom of `config.rb` file with the following format:
 
-	`s3_bucket = 'www.goinvo.com'`
+	redirect '/path1/', 'url or path'
 
-To modify and update redirect rules, append new rules to the `config.rb` file with the following format:
 
-	redirect '/path1', 'url or path'
+Redirects will be built on successful Codeship deployments. If for some reason you need to manually trigger redirects build, you can run the below command (which also utilizes `.env` file as specified above).
 
-Then run
-
-	$ middleman s3_redirect
-
-to apply generated objects to the server.
+$ bundle exec middleman s3_redirect
 
 
 #### Staged Deployments
 
-To deploy the build to the staging server, be sure the following line is set as follows in `config.rb`:
+First you need the s3_website gem installed: `$ gem install s3_website`.
 
-	`s3_bucket = 'staging.goinvo.com'`
+Ensure your `.env` variable `S3_BUCKET` is set to `staging.goinvo.com`.
+
+Make sure you've built the website with `$ bundle exec middleman build`
 
 Then run
 
-	$ middleman s3_sync
-
--OR-
-
-	$ middleman s3_sync --force
-
--OR to build and deploy in one fell swoop-
-
-	$ bundle exec middleman build && middleman s3_sync
+`$ s3_website push`
 
 
-Before running any of these commands, you should make sure that you have all of the assets on your local computer. As of Dec 10th 2014, there are 8 videos (4 .mp4’s and 4 .webm’s).  that need to be in the .../source/videos/ folder. They are in the dropbox at .../Invo_Projects/Goinvo.com/NEW goinvo.com/artwork/videos . Since they are already uploaded to the server, not having them on your local computer shouldn't be a problem. But I highly recommend having them locally as a precaution.
+Before running any of these commands, you should make sure that you have all of the assets on your local computer.
 
 
 
@@ -140,7 +138,7 @@ When saving images to go onto the website, always be sure to save small files.
 
 When you can, use SVGs for your vector images.
 
-When saving JPGs, open the file in Photoshop and change the image size: 
+When saving JPGs, open the file in Photoshop and change the image size:
 * If the resolution is currently greater than 72ppi, then do not resample the image and change the resolution
 * Go back in and allow PS to resample, and resize the document to 200% larger than it's maximum size needs to be (this is so that the image can retain enough quality when compressed even on retina devices)
 * When saving as JPG, select progressive and reduce the quality as low as possible before degradation is apparent. 2-6 are recommended

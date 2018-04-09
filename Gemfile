@@ -10,8 +10,8 @@ git 'https://github.com/ably-forks/compass', branch: 'sass-deprecation-warning-f
   gem 'compass-core'
 end
 gem "middleman-autoprefixer"
-gem "middleman-s3_sync", '3.3.5'
 gem "middleman-s3_redirect"
+gem "middleman-dotenv"
 gem "fog-core", "=1.32"
 
 require 'rbconfig'

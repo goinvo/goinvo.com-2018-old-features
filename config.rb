@@ -48,33 +48,63 @@ activate :autoprefixer
 # Enable cache buster
 activate :cache_buster
 
-# Default s3 bucket in case you can't use CodeShip for some reason
-# Ideally, CodeShip should be the only thing syncing to s3
-# If you really need to push to production bucket and cannot
-# use CodeShip, change this variable temporarily, but don't
-# commit that change to GitHub
-s3_bucket = 'staging.goinvo.com'
 
-# S3 Sync
-activate :s3_sync do |s3_sync|
-	s3_sync.bucket                     = s3_bucket # The name of the S3 bucket you are targetting. This is globally unique.
-	s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
-	s3_sync.delete                     = true # We delete stray files by default.
-	s3_sync.after_build                = false # We do not chain after the build step by default.
-	s3_sync.prefer_gzip                = true
-	s3_sync.path_style                 = true
-	s3_sync.reduced_redundancy_storage = false
-	s3_sync.acl                        = 'public-read'
-	s3_sync.encryption                 = false
-	s3_sync.version_bucket             = true
+# Methods defined in the helpers block are available in templates
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
+
+# Add bower's directory to sprockets asset path
+after_configuration do
+	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+	sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
-default_caching_policy max_age:(60 * 60 * 24 * 365)
+
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+
+# Build-specific configuration
+configure :build do
+	# For example, change the Compass output style for deployment
+	activate :minify_css
+
+	# Minify Javascript on build
+	activate :minify_javascript
+
+	# Use relative URLs
+	activate :relative_assets
+
+	activate :gzip
+
+	# Compress PNGs after build
+	# First: gem install middleman-smusher
+	# require "middleman-smusher"
+	#activate :smusher
+
+	# Or use a different image path
+	# set :http_path, "image"
+end
+
+
+require 'lib/link_formatters'
+require 'lib/data_helper'
+
+helpers DataHelper
+helpers LinkFormatters
+
+# Use dotenv for s3_redirects environment variables
+activate :dotenv
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-	config.bucket                = s3_bucket # The name of the S3 bucket you are targetting. This is globally unique.
+	config.bucket                = ENV['S3_BUCKET'] # The name of the S3 bucket you are targetting. This is globally unique.
 	config.region                = 'us-east-1'     # The AWS region for your bucket.
+	config.aws_access_key_id     = ENV['AWS_ACCESS_KEY_ID']
+	config.aws_secret_access_key = ENV['AWS_SECRET_KEY']
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
 
@@ -358,51 +388,3 @@ redirect '/car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/', 'h
 redirect '/work/personalgenomeproject/', '/healthcare/personal-genome-project/'
 redirect '/studio/live', '/studio/team'
 redirect '/features/the-10-best-nations-in-world-cup-history', '/articles'
-
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-# Add bower's directory to sprockets asset path
-after_configuration do
-	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-	sprockets.append_path File.join "#{root}", @bower_config["directory"]
-end
-
-
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
-
-# Build-specific configuration
-configure :build do
-	# For example, change the Compass output style for deployment
-	activate :minify_css
-
-	# Minify Javascript on build
-	activate :minify_javascript
-
-	# Use relative URLs
-	activate :relative_assets
-
-	activate :gzip
-
-	# Compress PNGs after build
-	# First: gem install middleman-smusher
-	# require "middleman-smusher"
-	#activate :smusher
-
-	# Or use a different image path
-	# set :http_path, "image"
-end
-
-
-require 'lib/link_formatters'
-require 'lib/data_helper'
-
-helpers DataHelper
-helpers LinkFormatters
