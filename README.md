@@ -80,7 +80,7 @@ To build a version of the site, which compiles all resources and consolidates al
 
 Codeship now handles deployment to Amazon S3 for the live site. Any push to `master` branch will automatically build and sync to the `www.goinvo.com` bucket on s3.
 
-If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_wesbite gem as described below.  
+If you for some reason need to sync manually (Codeship runs out of builds for the month or isn't working), you can still use the s3_wesbite gem as described below.
 
 Codeship does not sync to `staging.goinvo.com`. That must be done manually.
 
@@ -91,12 +91,13 @@ To deploy, you'll first need to add a `.env` file to the root directory. This fi
 Note that the AWS IAM account must have the appropriate access for S3 and Cloudfront.
 
 ```
-AWS_ACCESS_KEY_ID=<your-aws-access-key>
-AWS_SECRET_KEY=<your-aws-secret-key>
-S3_BUCKET=staging.goinvo.com
-CF_DISTRIBUTION_ID=<cloudfront-distribution-id>
+GOINVO_AWS_ACCESS_KEY_ID=<your-aws-access-key>
+GOINVO_AWS_SECRET_KEY=<your-aws-secret-key>
+GOINVO_S3_BUCKET=staging.goinvo.com
+GOINVO_CF_DISTRIBUTION_ID=<cloudfront-distribution-id>
 ```
 
+If you run into a permissions error while attempting to deploy to staging, check that you do not have conflicting environment variables declared in other files that may take precedence over the values in `.env`.
 
 #### Redirections
 
