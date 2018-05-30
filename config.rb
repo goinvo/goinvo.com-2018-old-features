@@ -101,10 +101,10 @@ activate :dotenv
 
 # Manage all them redirects
 activate :s3_redirect do |config|
-	config.bucket                = ENV['S3_BUCKET'] # The name of the S3 bucket you are targetting. This is globally unique.
+	config.bucket                = ENV['GOINVO_S3_BUCKET'] # The name of the S3 bucket you are targetting. This is globally unique.
 	config.region                = 'us-east-1'     # The AWS region for your bucket.
-	config.aws_access_key_id     = ENV['AWS_ACCESS_KEY_ID']
-	config.aws_secret_access_key = ENV['AWS_SECRET_KEY']
+	config.aws_access_key_id     = ENV['GOINVO_AWS_ACCESS_KEY_ID']
+	config.aws_secret_access_key = ENV['GOINVO_AWS_SECRET_KEY']
 	config.after_build           = false # We chain after the build step by default. This may not be your desired behavior...
 end
 
