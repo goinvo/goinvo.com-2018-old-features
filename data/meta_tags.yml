@@ -408,3 +408,11 @@
   twittersite: "@goinvo"
   twittertitle: "Print Big. Print Often."
   twitterimage: "http://www.goinvo.com/images/features/print-big/hero.jpg"
+
+- page: "vui-open-office-hours"
+  description: "Our studio is open for anyone tackling Voice User Interface (VUI) technology, every Wednesday from 4-6p."
+  keywords: "voice, voice user iterface, VUI, open office hours, design critiques, boston design studio, ux design, ux design studio"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "Stop by for VUI Open Office Hours"
+  twitterimage: "http://www.goinvo.com/images/open-office-hours/open-studio.jpg"
