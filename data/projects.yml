@@ -242,6 +242,16 @@
   summary: "Inside Tracker: using blood analytics to improve health."
   client_name: "Segterra"
 
+- uid: "snap"
+  type: "healthcare"
+  href: "/healthcare/snap"
+  client_url: "https://dtaconnect.eohhs.mass.gov"
+  primary_color: "#043855"
+  tag_line: "Closing the SNAP gap"
+  feature_image_url: "/images/healthcare/snap.png"
+  summary: "Closing the SNAP gap for 760,000 MA residents."
+  client_name: "MA DTA SNAP"
+
 - uid: "staff-plan"
   type: "products"
   href: "/products/staff-plan"

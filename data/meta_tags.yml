@@ -190,6 +190,14 @@
   twittertitle: "goinvo - Rue La La"
   twitterimage: "http://www.goinvo.com/images/clients/ruelala/ruelala-calendar-info-visualization.jpg"
 
+- page: "snap"
+  description: "Closing the SNAP gap for 760,000 MA residents."
+  keywords: "product strategy, ui design, ux design, research, software development"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - MA DTA SNAP"
+  twitterimage: "http://www.goinvo.com/images/clients/snap/snap.png"
+
 - page: "scskcorporation"
   description: "The eyeDecide prototype that Invo created enabled Curl's technology team to sell the next generation technology."
   keywords: "ui engineering, ux design, ux prototype, ui prototype, curl, scsk corporation"
