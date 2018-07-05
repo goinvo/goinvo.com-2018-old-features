@@ -30,12 +30,12 @@ $( document ).ready(function() {
 			"title" : "3M",
 			"url" : "/healthcare/3m/",
 			"image" : "3m.jpg",
-			"next-id" : "inspired-ehrs"
+			"next-id" : "snap"
 		},
-		"inspired-ehrs" : {
-			"title" : "Inspired EHRs: Designing for Clinicians",
-			"url" : "/healthcare/inspired-ehrs/",
-			"image" : "inspired-ehrs.jpg",
+		"snap" : {
+			"title" : "SNAP",
+			"url" : "/healthcare/snap/",
+			"image" : "snap.jpg",
 			"next-id" : "personal-genome-project"
 		},
 		"personal-genome-project" : {
@@ -78,6 +78,12 @@ $( document ).ready(function() {
 			"title" : "Numera",
 			"url" : "/healthcare/numera/",
 			"image" : "numera.jpg",
+			"next-id" : "inspired-ehrs"
+		},
+		"inspired-ehrs" : {
+			"title" : "Inspired EHRs: Designing for Clinicians",
+			"url" : "/healthcare/inspired-ehrs/",
+			"image" : "inspired-ehrs.jpg",
 			"next-id" : "products"
 		},
 		"enterprise" : {

@@ -22,7 +22,7 @@
 			.button-h Read Case Study
 	.quote
 		%h2.quote-content We help healthcare organizations make clinical strength software for high-test, high stress environments.
-	= partial("partials/project-row", locals: {projects: get_projects_by_id(['3m', 'inspired-ehrs', 'personal-genome-project'])})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['3m', 'snap', 'personal-genome-project'])})
 	.quote
 		%h2.quote-content &#147;Invo beautifully helped shape our next generation clinician and patient experience.&#148;
 		.quote-author Igor Gershfang, Walgreens Emerging Tech Director
@@ -54,7 +54,8 @@
 	.quote
 		%h2.quote-content “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
 		.quote-author George Moon, VP of Product, CodeRyte Inc.
-	= partial("partials/project-row", locals: {projects: get_projects_by_id(['tabeeb', 'care-cards', 'numera']), row_class: 'margin-bottom'})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['tabeeb', 'care-cards', 'numera'])})
+	= partial("partials/project-row", locals: {projects: get_projects_by_id(['inspired-ehrs']), row_class: 'margin-bottom'})
 	.design-med-wrapper
 		.content
 			%h2 Design is Medicine
