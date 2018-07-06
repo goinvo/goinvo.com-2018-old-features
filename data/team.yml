@@ -23,6 +23,26 @@
   email: "eric@goinvo.com"
   photo: eric_benoit.jpg
 
+- first_name: Vanessa
+  last_name: Li
+  title: Healthcare Design Strategist
+  bio: "Vanessa specializes in health systems and public health modeling, with an emphasis in substance abuse and disease prevention research. She graduated from the University of Southern California with a B.S. in Public Policy and a double minor in Business Economics and Global Health. Vanessa is at Invo for the current summer, and will continue on to complete her graduate degree in biostatistics at the University of Washington."
+  email: "vanessa@goinvo.com"
+  photo: vanessa_li.jpg
+
+- first_name: Parsuree
+  last_name: Vatanasirisuk
+  title: Designer, Illustrator
+  bio: "Parsuree is a user experience designer and illustrator with background in industrial design. She enjoys watercolor illustrations and Information design. Parsuree joined Invo in 2018 and is a MFA candidate of the Rochester Institute of Technology (RIT)."
+  email: "parsuree@goinvo.com"
+  photo: parsuree_vatanasirisuk.jpg
+
+- first_name: "Your Career"
+  last_name: Awaits!
+  title: "We're always looking for amazing talent."
+  bio: "<a class='careerButton' id='team-button' href='/studio/careers'>Learn why we should work together</a>"
+  photo: career_silhouette.jpg
+
 - first_name: Sarah
   last_name: Kaiser
   title: Designer
@@ -33,17 +53,11 @@
   email: "sarah@goinvo.com"
   photo: sarah_kaiser.jpg
 
-- first_name: "Your Career"
-  last_name: Awaits!
-  title: "We're always looking for amazing talent."
-  bio: "<a class='careerButton' id='team-button' href='/studio/careers'>Learn why we should work together</a>"
-  photo: career_silhouette.jpg
-
 - first_name: Jennifer
   last_name: Patel
   title: Designer, Engineer
   bio: "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology."
-  mbti: ISFJ
+  mbti: INTJ
   twitter_username: "catamariface"
   github_username: "jen-p"
   email: "jennifer@goinvo.com"
@@ -74,15 +88,6 @@
   twitter_username:
   email: "sharon@goinvo.com"
   photo: sharon_lee.jpg
-
-- first_name: Eric
-  last_name: Bai
-  title: Engineer, MD Candidate
-  bio: "Eric is an engineer with a design itch. He knows full-stack development, has experience in building user-driven services, and brings a commitment to making software for the public good. Eric joined Invo in 2017 with a degree in computational biology from Brown. He is completing his medical degree and his masters in population medicine at Brown in 2022."
-  email: "ericbai@goinvo.com"
-  photo: eric_bai.jpg
-  github_username: ericbai
-  linkedin_url: "https://www.linkedin.com/in/heyericbai"
 
 - first_name: Bryson
   last_name: Wong
@@ -119,6 +124,15 @@
   email: "dirk@goinvo.com"
   photo: dirk_knemeyer.jpg
 
+
+# - first_name: Eric
+#   last_name: Bai
+#   title: Engineer, MD Candidate
+#   bio: "Eric is an engineer with a design itch. He knows full-stack development, has experience in building user-driven services, and brings a commitment to making software for the public good. Eric joined Invo in 2017 with a degree in computational biology from Brown. He is completing his medical degree and his masters in population medicine at Brown in 2022."
+#   email: "ericbai@goinvo.com"
+#   photo: eric_bai.jpg
+#   github_username: ericbai
+#   linkedin_url: "https://www.linkedin.com/in/heyericbai"
 
 # - first_name: Karishma
 #   last_name: Bhatia
