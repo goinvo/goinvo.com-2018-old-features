@@ -1,4 +1,7 @@
 source "https://rubygems.org"
+
+ruby "2.5.1"
+
 gem 'colorize','0.7.4'
 gem "middleman", '3.3.7'
 gem "middleman-livereload"

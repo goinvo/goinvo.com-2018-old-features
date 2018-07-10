@@ -13,10 +13,6 @@
 # Ignore Sass' cache
 /.sass-cache
 
-.rvmrc
-
-.rvmrc
-.ruby-version
 .cache
 .DS_Store
 
