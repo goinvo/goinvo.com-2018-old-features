@@ -1,0 +1,122 @@
+- content_for(:title) do
+	= "Carrier Screening Design - Boston UX Design for Genomics"
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/complex-case-studies"
+	= javascript_include_tag 'worknav'
+	- meta = page_for_meta("wuxi")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+- client = get_project_by_id("wuxi")
+
+%article#complex-case.wuxi
+	%header.hero
+		.medium-6.small-12.small-centered.columns
+			.title
+				.inner-title
+					%h1 Carrier screening for the masses
+					%h3 Shifting from a behind the scenes genomics powerhouse to a consumer friendly service.
+	#mainContent
+		%p.no-top-margin WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi knew a different approach was needed to break into the $2.2 billion genetic carrier screening market<sup>1</sup>.
+
+		%h2 Carrier screening results are complicated
+
+		%p People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCP's are confident in interpreting genetic test results<sup>2</sup>. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 in the US<sup>3</sup>, causing a limiting factor for clinician adoption.
+
+		%h2 A beautiful carrier screening experience awaits
+
+		%p Our task was to create a beautiful, human friendly carrier screening service that worked in clinic and at home. 
+
+		%p We quickly surveyed the landscape of competitors in the field - identifying their strengths and weaknesses to see how a new carrier screening service could stand out.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/genetic-carrier-screening-competitor-analysis.jpg", :alt => "Competitor analysis for carrier screening services"}
+
+		%p Today's carrier screening reports are riddled with industry jargon, provide ambiguous next steps, and are difficult to understand the severity of the results. The result for patients is a heightened sense of stress to an already stressful situation.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-competitor-sample-reports.jpg", :alt => "Carrier screening sample reports from competitors"}
+
+		%h2 Real-world experience drives design (and not the other way around)
+
+		%p From the start, the approach was to leverage peoples firsthand experiences to lead the design journey. Since this was a new market for WuXi, we didn't have pool of existing customers to reach out to. With a short timeline, we took a grassroots approach to recruiting our Patient + Clinician User Advisory Group which consisted of 10 patients, 8 clinicians, and 2 genetic counselors.
+
+		%p With the advisory group in place, we began interviewing each to understand their experiences with carrier screening. We wanted to understand the pain points, clinical process, health literacy, experience with genomics, ordering tests, and the cultural, emotional, and financial barriers.
+
+		%p Our learnings were told through a journey map documenting the end-to-end carrier screening process. From here, we started formulating a hypothesis for ironing out the friction points.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-journey-map.jpg", :alt => "Carrier screening journey map design"}
+
+		%h2 From stress inducing to stress reducing
+
+		%p Before designing, we did a series of interviews to understand past experiences with carrier screening. The following quotes from those interviews shaped our early concepts:
+
+		%ul
+			%li "Nervous about how long it would take. Waiting, wondering if they would give results right away" - Patient
+			%li "Couldn't even read it, pronounce it" - Patient
+			%li "Scared they will be carrier for something and that it is more significant than it really is" - Clinician
+			%li "Nothing was ever given to me to make me feel certain and confident" - Patient
+
+		%h2 Demystifying the carrier mystery
+
+		%p Every human is a carrier of multiple genetic conditions<sup>4</sup>. With that as a baseline, people should not be scared about being a carrier, yet many are.
+
+		%p When the results are available, we want to clearly communicate the recipients results and the fact that it is normal to be a carrier. Second, we want to describe what this means for their future family. Finally, we want to educate the recipient on how this can impact their current family.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-ux-design-single-positive.jpg", :alt => "Carrier screening report for single carrier with positive result"}
+
+		%h2 Clarity through transparency
+
+		%p Patients deserve to know where they stand in the process and what to expect next. Introducing a carrier screening results tracker allows patients and clinicians to see the process, their status, and timeline for results.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-ux-design-sequence-progress.jpg", :alt => "In progress status of carrier results"}
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-ux-design-couple-positive.jpg", :alt => "The report will adapt to combine the results for an accurate representation of their future family."}
+
+		%h2 Establishing an industry standard
+
+		%p In 30+ interviews, a series of patterns emerged that led us to outlining a set of guidelines that should serve as an industry standard for delivering a carrier screening service.
+
+		%p <strong>1. Always deliver results to patient</strong><br>Regardless of what the results are. Patients want clinical information for their own records, even if it is a negative result.
+		
+		%p <strong>2. Results must be understandable by clinician and patient</strong><br>Assume genetic counselors are not available for the entire process. By simplifying the language for patients, you make it easier for all parties to understand the process and results.
+
+		%p <strong>3. Deliver results before consultation</strong><br>Provide all parties ample (but not too much) time to read the report on their own and note any questions they want to ask.
+
+		%p <strong>4. Spit kit for sample collection</strong><br>Saliva samples allow for a more consistently positive experience compared to blood samples.
+
+		%p <strong>5. Offer out-of-pocket payment for patients</strong><br>Dealing with insurance is time-consuming, costly, and frustrating, and does not expand internationally.
+
+		%h2 Design changes business through research, validation, and evidence.
+
+		%p In 8 short weeks there was a clear design direction the team could rally around. With the data validating the design, WuXi leadership had the confidence to begin production on a carrier screening service.
+
+		%p The first version of the service launched abroad with other countries to follow.
+
+		.center-image-content.large
+			%img{:src => "../../images/clients/wuxi/carrier-screening-results-in-clinic.jpg", :alt => "Reviewing carrier screening results with physician"}
+
+		%h2 References
+
+		%ol 
+			%li Global Carrier Screening Market - Segmented by Type of Test, Disease, and Geography - Growth, Trends and Forecasts. Retrieved July 24, 2018, from <a href="https://www.mordorintelligence.com/industry-reports/carrier-screening-market">https://www.mordorintelligence.com/industry-reports/carrier-screening-market</a>
+			%li Delivery Of Cascade Screening For Hereditary Conditions: A Scoping Review Of The Literature. Retrieved July 24, 2018, from <a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2017.1630">https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2017.1630</a>
+			%li Shortage of Genetic Counselors in Face of Growing Need. Retrieved July 24, 2018, from <a href="https://www.medscape.com/viewarticle/877135">Shttps://www.medscape.com/viewarticle/877135</a>
+			%li What It Means to Be a Carrier of a Genetic Disorder. Retrieved July 24, 2018, from <a href="https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/">https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/</a>
+
+		%p 
+
+.row#next-project
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%h1#next
