@@ -295,6 +295,16 @@
   github: "https://github.com/goinvo/Visual-Town-Budget"
   open_source_description: "An open-source budget visualization framework."
 
+- uid: "wuxi"
+  type: "healthcare"
+  href: "/healthcare/wuxi/"
+  client_url: "https://www.wuxinextcode.com"
+  primary_color: "#8CC63F"
+  tag_line: "Planning Healthy Families"
+  feature_image_url: "/images/healthcare/wuxi.jpg"
+  summary: "Shifting from a behind the scenes genomics powerhouse to a consumer friendly service."
+  client_name: "WuXi NextCODE"
+
 - uid: "yahoo"
   type: "enterprise"
   client_url: "https://www.yahoo.com/"

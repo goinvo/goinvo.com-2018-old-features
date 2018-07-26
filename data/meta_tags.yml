@@ -214,6 +214,14 @@
   twittertitle: "goinvo - Telerik"
   twitterimage: "http://www.goinvo.com/images/clients/telerik/invo_telerik_report_purchaseproducts.jpg"
 
+- page: "wuxi"
+  description: "Carrier screening for the masses."
+  keywords: "product strategy, ui design, ux design, research"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - WuXi NextCODE: Carrier screening for the masses"
+  twitterimage: "http://www.goinvo.com/images/clients/wuxi/wuxi.png"
+
 - page: "products"
   description: "Products created by Invo."
   keywords: "application design, GoInvo"
