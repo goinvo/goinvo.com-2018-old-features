@@ -36,12 +36,12 @@ $( document ).ready(function() {
 			"title" : "SNAP",
 			"url" : "/healthcare/snap/",
 			"image" : "snap.jpg",
-			"next-id" : "personal-genome-project"
+			"next-id" : "wuxi"
 		},
-		"personal-genome-project" : {
-			"title" : "Personal Genome Project",
-			"url" : "/healthcare/personal-genome-project/",
-			"image" : "personal-genome-project.jpg",
+		"wuxi" : {
+			"title" : "WuXi NextCODE",
+			"url" : "/healthcare/wuxi/",
+			"image" : "wuxi.jpg",
 			"next-id" : "mount-sinai"
 		},
 		"mount-sinai" : {
@@ -54,36 +54,42 @@ $( document ).ready(function() {
 			"title" : "Partners Gene Insight",
 			"url" : "/healthcare/partners-gene-insight/",
 			"image" : "partners-gene-insight.png",
-			"next-id" : "segterra"
+			"next-id" : "personal-genome-project"
 		},
-		"segterra" : {
-			"title" : "InsideTracker",
-			"url" : "/healthcare/segterra/",
-			"image" : "segterra.png",
-			"next-id" : "diabetes"
-		},
-		"diabetes" : {
-			"title" : "Type I and Type II Diabetes",
-			"url" : "/healthcare/diabetes/",
-			"image" : "diabetes.jpg",
-			"next-id" : "tabeeb"
-		},
-		"tabeeb" : {
-			"title" : "Tabeeb",
-			"url" : "/healthcare/tabeeb/",
-			"image" : "tabeeb.jpg",
-			"next-id" : "numera"
-		},
-		"numera" : {
-			"title" : "Numera",
-			"url" : "/healthcare/numera/",
-			"image" : "numera.jpg",
+		"personal-genome-project" : {
+			"title" : "Personal Genome Project",
+			"url" : "/healthcare/personal-genome-project/",
+			"image" : "personal-genome-project.jpg",
 			"next-id" : "inspired-ehrs"
 		},
 		"inspired-ehrs" : {
 			"title" : "Inspired EHRs: Designing for Clinicians",
 			"url" : "/healthcare/inspired-ehrs/",
 			"image" : "inspired-ehrs.jpg",
+			"next-id" : "segterra"
+		},
+		"segterra" : {
+			"title" : "InsideTracker",
+			"url" : "/healthcare/segterra/",
+			"image" : "segterra.png",
+			"next-id" : "care-cards"
+		},
+		"numera" : {
+			"title" : "Numera",
+			"url" : "/healthcare/numera/",
+			"image" : "numera.jpg",
+			"next-id" : "tabeeb"
+		},
+		"tabeeb" : {
+			"title" : "Tabeeb",
+			"url" : "/healthcare/tabeeb/",
+			"image" : "tabeeb.jpg",
+			"next-id" : "diabetes"
+		},
+		"diabetes" : {
+			"title" : "Type I and Type II Diabetes",
+			"url" : "/healthcare/diabetes/",
+			"image" : "diabetes.jpg",
 			"next-id" : "products"
 		},
 		"enterprise" : {
