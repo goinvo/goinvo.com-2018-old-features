@@ -1,0 +1,74 @@
+- content_for(:title) do
+	= "Mobile health design for real-time cardiac arrhythmia detection."
+- content_for(:page_head) do
+	= stylesheet_link_tag "sections/simple-case-studies"
+	= javascript_include_tag 'worknav'
+	- meta = page_for_meta("infobionic")
+	%meta{:name => "description", :content => "#{meta.description}" }
+	%meta{:name => "keywords", :content => "#{meta.keywords}" }
+	%meta{:name => "twitter:card", :content => "#{meta.twittercard}"}
+	%meta{:name => "twitter:site", :content => "#{meta.twittersite}" }
+	%meta{:name => "twitter:title", :content => "#{meta.twittertitle}" }
+	%meta{:name => "twitter:description", :content => "#{meta.description}"}
+	- if (meta.twitterimage)
+		%meta{:name => "twitter:image", :content => "#{meta.twitterimage}"}
+- client = get_project_by_id("infobionic")
+
+#content-area.caseStudyContent
+	.projectData
+		%h2.client{style: "color: #{client.primary_color}"} Infobionic
+
+		%h6.subheader Results
+
+		%p To convince doctors and investors, InfoBionic knew they needed a way to show the product in action. Involution delivered the vision for how doctors would use the product, and investors noticed.
+
+		%p.quote We absolutely love everything Involution has created for us, it has by far exceeded our expectations.
+		%p.caption.no-bottom-margin Serban Georgescu MD, Director of Business and Clinical Development, InfoBionic
+
+		%p.quote It is a big hit!
+		%p.caption.no-bottom-margin Nancy Briefs, CEO, InfoBionic
+
+		%h6.subheader Details
+		
+		%ul.details
+			%li Patient worn device reports arrhythmia's in real-time for doctors and nurses to review
+			%li Crafted the iPad application with cardiac arrhymthia experts from large practices like Mass General Hospital to smaller practices
+			%li Patent on <a href="https://www.google.com/patents/US8620418">processing and displaying electrocardiograph data</a>
+			%li Machine and patient detected arrhythmia's paired with important meta-data like physical activity and time of day helps doctors diagnose an issue
+			%li <a href="http://infobionic.com/news/infobionic-series-b-close-new-team-members/">Closed $17M Series B financing</a>
+			%li Received FDA approval and CE Mark for cardiac arrhythmia monitoring
+
+		%h6.subheader Practice Areas
+		%p.small-bottom-margin Healthcare
+
+		%h6.subheader Project Type
+		%p.small-bottom-margin UX Strategy, UI Design, Research
+
+		%h6.subheader Process
+		%p.small-bottom-margin Learn, Envision, Craft
+
+		%h6.subheader Price
+		%p $100k – $200k
+
+		.similar-project-container
+			%h6.subheader Have a similar project?
+			= link_to 'Contact Us', asset_url('contact'), class: 'button radius'
+
+	.projectDetails
+		%img.with-caption{alt: "iPad app for remotely monitoring patient arrhythmia's.", src: "../../images/clients/infobionic/infobionic-patient-arrhythmia-dashboard-ipad-app.jpg"}
+		%p.caption A data rich view for a Doctor to analyze and diagnose the patient remotely.
+
+		%img.with-caption{alt: "In seconds, a Doctor can see the status and health of all their patients.", src: "../../images/clients/infobionic/infobionic-all-patients-dashboard-ui-design.jpg"}
+		%p.caption In seconds, a Doctor can see the status and health of all their patients.
+
+		%img.with-caption{alt: "Doctors and nurses can monitor a patients arrhythmia's in real-time", src: "../../images/clients/infobionic/infobionic-individual-patient-dashboard-ui-design.jpg"}
+		%p.caption Doctors and nurses can monitor a patients arrhythmia's in real-time.
+
+		%img.with-caption{alt: "The timeline aggregates patient data into an easy, scannable visualization for understanding patient history and patterns.", src: "../../images/clients/infobionic/infobionic-patients-timeline-visualization.jpg"}
+		%p.caption The patient timeline shows detected cardiac events, heart-rate, and physical activity across time to aid doctors in quickly understanding the patients health.
+
+.row#next-project
+	.medium-6.small-12.small-centered.columns
+		.next-title
+			Next Project:
+			%h1#next
