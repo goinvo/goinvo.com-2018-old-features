@@ -62,6 +62,14 @@
   twittertitle: "goinvo - Healthcare - hGraph"
   twitterimage: "http://www.goinvo.com/images/healthcare/ipad_hero.png"
 
+- page: "infobionic"
+  description: "FDA approved remote patient monitoring of arrhythmia's secures $17M Series B financing."
+  keywords: "product strategy, ui design, ux design, research"
+  twittercard: "summary_large_image"
+  twittersite: "@goinvo"
+  twittertitle: "goinvo - Mobile health design for real-time  arrhythmia detection."
+  twitterimage: "http://www.goinvo.com/images/clients/infobionic/infobionic.png"
+
 - page: "inspired-ehrs"
   description: "Inspired EHRs is an open-sourced ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."
   keywords: "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"

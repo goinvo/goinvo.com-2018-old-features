@@ -90,6 +90,12 @@ $( document ).ready(function() {
 			"title" : "Type I and Type II Diabetes",
 			"url" : "/healthcare/diabetes/",
 			"image" : "diabetes.jpg",
+			"next-id" : "infobionic"
+		},
+		"infobionic" : {
+			"title" : "Infobionic",
+			"url" : "/healthcare/infobionic/",
+			"image" : "infobionic.jpg",
 			"next-id" : "products"
 		},
 		"enterprise" : {

@@ -348,8 +348,14 @@
 
 - uid: "infobionic"
   type: "healthcare"
+  href: "/healthcare/infobionic"
   client_url: "https://infobionic.com/"
+  primary_color: "#51a9dc"
   partner_logo: "infobionic.png"
+  tag_line: "Healthy Heart Monitoring"
+  feature_image_url: "/images/healthcare/infobionic.jpg"
+  summary: "FDA approved remote patient monitoring of arrhythmia's secures $17M Series B financing."
+  client_name: "Infobionic"
 
 - uid: "johnson-and-johnson"
   type: "healthcare"
