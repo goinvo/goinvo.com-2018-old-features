@@ -1,6 +1,117 @@
 // HEADER
 $doh-header-height: 40px;
 
+.doh-container {
+  .h5 {
+    margin-bottom: 1rem;
+
+    &--bold {
+      font-weight: bold;
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  .text {
+    &--light {
+      color: #889;
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+  .used-at__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 15%;
+      margin: 0 1%;
+    }
+  }
+
+  .about-goinvo {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .button:first-of-type {
+      margin-right: 2rem;
+    }
+  }
+
+  .projects-row {
+  	display: flex;
+  	flex-wrap: wrap;
+    justify-content: center;
+  	max-width: 1280px;
+  	margin: 0 auto 2rem auto;
+  	padding: 0px 5px;
+
+  	.project {
+  		flex: 0 0 33%;
+  		max-width: 410px;
+  		padding: 0px 5px;
+  		cursor: pointer;
+  		color: black;
+  		margin: 1rem auto;
+
+  		.top-description {
+  			font-weight: bold;
+  			text-align: center;
+  			padding-bottom: 10px;
+  			vertical-align: text-bottom;
+  		}
+
+  		.image-wrapper {
+  			max-height: 264px;
+  			overflow: hidden;
+        text-align: center;
+
+  			img {
+          width: 100%;
+          max-height: 200px;
+  				transform: scale(1,1);
+  				transition: 300ms ease-in-out;
+  			}
+  		}
+
+  		.bottom-description,
+  		.company-name {
+  			padding: 5px 15px;
+        font-size: 1rem;
+  		}
+
+  		.bottom-description {
+  			padding-top: 20px;
+  		}
+
+  		.company-name {
+  			color: #C8C8C8;
+  		}
+
+  		&:hover {
+  			.image-wrapper img {
+  				transform: scale(1.03, 1.03);
+  			}
+  		}
+
+  		@media only screen and (max-width: 640px) {
+  			flex: 0 0 100%;
+  		}
+
+  	}
+
+  }
+}
+
 .doh-fixed-header {
   position: fixed;
   top: 55px;
@@ -101,7 +212,7 @@ article#feature-article div.doh-container {
   	font-size: 1.3rem;
   }
 
-  a {
+  a:not(.project) {
   	text-decoration: none;
   	color: white;
   }
@@ -113,7 +224,7 @@ article#feature-article div.doh-container {
     &:hover {
       background-color: darken(white, 2.5%);
     }
-    }
+  }
 
   //media Queries
   /* For devices larger than 320px */
@@ -275,18 +386,25 @@ article#feature-article div.doh-container {
 
   #problem_statement, #uses {
     a {
+      font-size: 1.1rem;
       text-decoration: underline;
-    }
-    a:hover {
-      color: #adf;
-    }
-    a:active {
-      color: #8ac;
+
+      &:hover {
+        color: #adf;
+      }
+
+      &:active {
+        color: #8ac;
+      }
+
+      &:first-of-type {
+        margin-right: 2rem;
+      }
     }
   }
 
   #problem_statement {
-  	margin-bottom: 5rem;
+  	margin-bottom: 2rem;
   	padding: 1.5rem 0rem 1.5rem 0rem;
   }
 
@@ -356,14 +474,16 @@ article#feature-article div.doh-container {
   // [class*="#determinants-chart"] { cursor: pointer; }
 
   #determinants-chart {
-  	padding-top: 2rem;
+  	padding-top: 3rem;
     margin: -2rem 0rem 0rem 0rem;
     height: 400px;
     width: 100%;
+    cursor: pointer;
   }
 
   #determinant-info {
   	margin-top: 2rem;
+    margin-bottom: 2rem;
     h4 {
     	font-size: 1.2em;
     	margin-bottom: 0 0 4px;
@@ -417,8 +537,12 @@ article#feature-article div.doh-container {
   #order_poster {
   	img {
   		width: 100%;
-  		padding-top: 5rem;
+      margin-top: 2rem;
   	}
+    a:not(.button) {
+      color: #1D5377;
+      text-decoration: underline;
+    }
   	span {
   		img {
   			width: 30.9%;
