@@ -6,7 +6,7 @@ $(document).ready(function(event){
   var articleContent = $('.disrupt');
   var socialButtons = $('.social-container');
   var bottomNav = $('#bottom-nav');
-  var siteFooter = $('#main-footer');
+  var siteFooter = $('.twenty-eighteen .footer');
   var topFade = $('#top');
   var bottomFade = $('#bottom');
   var firstVideo = $('.top-vid');
@@ -223,7 +223,7 @@ $(document).ready(function(event){
       if (windowBottom > (documentHeight - siteFooter.outerHeight())) {
         bottomNav.delay(100).animate({
           opacity: "1",
-          bottom: siteFooter.outerHeight()
+          bottom: 0
         }, {
           duration: 500,
           complete: function() {

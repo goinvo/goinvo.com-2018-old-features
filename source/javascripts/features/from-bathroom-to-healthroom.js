@@ -2,7 +2,7 @@ var animationSpeed = 400; //(x 1ms)
 var lastSlideIndex = 0;
 var ableToNavigate = true;
 
-var videos = [ 
+var videos = [
 		'#eye-tracking',
 		'#crane'
 	];
@@ -106,7 +106,7 @@ $(document).ready(function(event){
 	var timelineObj = $('#timeline .slider-contents');
 	var datesObj = $('#dates .slider-contents');
 	var locationsObj = $('#locations .slider-contents');
-	
+
 	var videoTransitions = [
 		{
 			'caption' : $('#hgraphCaption')	,
@@ -125,13 +125,13 @@ $(document).ready(function(event){
 		min: 0,
 		step: 1
 	});
-    
+
     for(i in timelinePercents) {
         t = $('<div>' + timelinePercents[i].year + '</div>');
         t.css('left', timelinePercents[i].left);
 		$('#timeline-dates').append(t)
     }
-    
+
 
 	var timeline = timelineObj.slick({
 		arrows: true,
@@ -143,7 +143,7 @@ $(document).ready(function(event){
 			moveSlider(currentSlide, $('#timeline-slider-controller'));
 		}
 	});
-	
+
 	var dates = datesObj.slick({
 		arrows: false,
 		infinite: false,
@@ -160,30 +160,30 @@ $(document).ready(function(event){
 			ableToNavigate = true;
 		}
 	});
-	
+
 	$('.navigation ol li a').click(function() {
 		elm = $(this).data('click');
 		var sTop = $(elm).position().top - 120;
 		sTop = sTop + 'px';
-		
+
 		$( 'body' ).animate({
 			scrollTop: sTop
-		  }, 500); 
+		  }, 500);
 	});
-	
+
 	moveCard = function(button, card) {
 			var left = button.position().left;
 			var top = $('#locations .slider-graphic').outerHeight() + $('#locations .slider-controls').outerHeight() - 5;
-			var allCards = $('.calendar-graphics div'); 
-		
+			var allCards = $('.calendar-graphics div');
+
 			allCards.toggleClass('active', false);
 			allCards.css('left', '-300px');
 			allCards.css('top', top);
-		
+
 			card.toggleClass('active', true);
 			card.css('left', left);
 	};
-	
+
 	$('#locations .slide-button').click( function() {
 		var index = $(this).attr('class');
 		var i = index.indexOf(' slide');
@@ -208,11 +208,11 @@ $(document).ready(function(event){
 			case 5:
 					moveCard($(this), $('.calendar-graphics .six'));
 					break;
-			default: 
+			default:
 					break;
 		}
 	});
-    
+
     $('#timeline-slider-controller').on( "slidestop", function( event, ui ) {
         switchSlideAfter(ui.value, timelineObj, $('#timeline-slider-controller'));
     } );
@@ -226,9 +226,9 @@ $(document).ready(function(event){
 		event.preventDefault();
 		buttonSwitch(event, locationsObj, '#locations .slider-controls', this);
 	});
-	
-	
-	
+
+
+
 	var fixedElems = [
 		{
 			'scrollToShrink' : 	$('#blade-runner-wrapper'),
@@ -245,19 +245,19 @@ $(document).ready(function(event){
 			'scrollEmpty' : $('#crane-empty')
 		}
 	];
-	
+
 	moveCard($('#locations .slide-button.slide0'), $('.calendar-graphics .one'));
-	
+
 	var pastScrollTop = $(window).scrollTop();
-	
+
 	$(window).scroll(function(event) {
-		var navHeight = $('#main-header').outerHeight() + $('.navigation').outerHeight();
+		var navHeight = $('.twenty-eighteen .header-nav').outerHeight() + $('.navigation').outerHeight();
 		var currentScroll = $(window).scrollTop();
 		var totalNavHeight = currentScroll + navHeight;
 		var win = $(window);
 		var windowWidth = win.width();
 		var windowHeight = win.height();
-		
+
 		if(windowWidth > 1000){
 			var l = fixedElems.length;
 
@@ -271,15 +271,15 @@ $(document).ready(function(event){
 				var empty = elemObject.scrollEmpty;
 
 				// initial position + initial height
-				var iPosHei = iPos + iHei;  
+				var iPosHei = iPos + iHei;
 				var scrollPosition = parseInt(elem.position().top) - navHeight;
-				var currentHeight = elem.height();	 
+				var currentHeight = elem.height();
 				var hasClass = elem.hasClass('fix-me');
 
 				// Is the top of our scroll currently overlapping the element &  it hasn't been fixed yet? Then fix it
 				if(totalNavHeight >= iPos && !hasClass && totalNavHeight < iPosHei) {
 					empty.css('height', elem.outerHeight() + 36);
-					elem.toggleClass('fix-me', true);	
+					elem.toggleClass('fix-me', true);
 					elem.css('top', navHeight)
 				} else if (totalNavHeight < iPos && hasClass) {
 					elem.toggleClass('fix-me', false);
@@ -289,7 +289,7 @@ $(document).ready(function(event){
 				// Closing or opening
 				if(currentScroll > pastScrollTop && currentHeight > 0) {
 					if(currentScroll >= scrollPosition) {
-						elem.height(currentHeight - (currentScroll - pastScrollTop));	
+						elem.height(currentHeight - (currentScroll - pastScrollTop));
 					}
 				} else if(currentScroll < pastScrollTop && currentScroll < (iPosHei)  && currentHeight < iHei && totalNavHeight  < elemObject.scrollText.position().top - 36) {
 					elem.height(currentHeight + (pastScrollTop - currentScroll));
@@ -298,32 +298,32 @@ $(document).ready(function(event){
 			}
 		}
 		pastScrollTop = currentScroll; // used to determine the scroll direction
-		
+
 		var vl = videos.length;
-		
+
 		for(var j=0; j < vl; j++) {
 			var vElem = $(videos[j]);
 			var pos = vElem.position().top;
-			var ht = vElem.height();			
-			
+			var ht = vElem.height();
+
 			if(currentScroll >= pos - windowHeight && currentScroll <= pos + (ht * 2)) {
 				vElem.find('video').get(0).play();
 			}
 		}
-		
+
 		var tl = videoTransitions.length;
-		
+
 		for(var k=-0; k < tl; k++) {
 			var tElem = videoTransitions[k];
 			var tPos = tElem.caption.position().top;
-			
+
 			if(currentScroll >= tPos - windowHeight && tElem.caption.hasClass('initial-margin')) {
 				tElem.caption.toggleClass('initial-margin', false);
 				tElem.video.toggleClass('initial-hide', false);
 				tElem.video.find('video').get(0).play()
 			}
 		}
-		
+
 	});
 
 });
@@ -332,4 +332,3 @@ $(document).ready(function(event){
 $(window).load(function(){
 	$('.main-header video').get(0).play();
 });
-
