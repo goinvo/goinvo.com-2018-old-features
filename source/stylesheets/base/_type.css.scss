@@ -23,7 +23,7 @@
 }
 
 $font-family-serif: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
-$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 
 $font-break-point: 530px;
 
@@ -36,8 +36,8 @@ $font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
 $font-size-h3: (null: 1.25rem, $font-break-point: 1.75rem);
 $font-size-h4: (null: 1rem, $font-break-point: 1.25rem);
 
-$font-weight-base: 300;
-$font-weight-bold: 700;
+$font-weight-base: 400;
+$font-weight-bold: 600;
 
 html,
 body {
