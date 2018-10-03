@@ -93,7 +93,7 @@ $(document).ready(function(event){
         });
       } else {
         mainBackground.css("background-color", "white");
-        bottomNav.css("bottom", siteFooter.outerHeight());
+        bottomNav.css("bottom", 0);
       }
 
       if (page === 0) {
@@ -200,7 +200,7 @@ $(document).ready(function(event){
     topFadeBottom = topFade.offset().top + topFade.height();
     bottomFadeTop = bottomFade.offset().top;
     bottomFadeBottom = bottomFadeTop + bottomFade.height();
-    bottomNav.css("bottom", siteFooter.outerHeight());
+    bottomNav.css("bottom", 0);
   });
 
 
