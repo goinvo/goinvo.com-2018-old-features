@@ -40,6 +40,10 @@ html.no-js {
 
 body {
 	background: $white;
+
+	&.has-overlay {
+		overflow-y: hidden;
+	}
 }
 
 #page-wrapper {
