@@ -1,0 +1,275 @@
+@import "../base/core";
+
+.nav-menu {
+	position: relative;
+	z-index: 20;
+	nav {
+		padding: 5em 0 3em;
+		text-align: center;
+	}
+	a {
+		line-height: 1.5em;
+		margin: 10px;
+		color: #888;
+		padding: 5px 20px;
+		font-size: 1.25em;
+		transition: color 300ms ease, border 300ms ease;
+		border-bottom: 1px solid #CCC;
+		white-space: nowrap;
+		&:hover, &.current {
+			color: #425f8e;
+			border-bottom: 5px solid #425f8e;
+		}
+	}
+}
+
+.content-area {
+	@include clearfix();
+	margin: 0 auto;
+}
+
+section.process-section {
+	padding: 0 2em;
+	img {
+		position: relative;
+		z-index: 1;
+		display: block;
+		max-width: 60%;
+		margin: 0 auto -15em;
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+	&.intro {
+		h1, h2 {
+			text-align: center;
+			max-width: 100%;
+		}
+		h1 {
+			font-size: 8em;
+			@media screen and  (max-width: 1024px) {
+				font-size: 6em;
+			}
+			@media screen and  (max-width: 640px) {
+				font-size: 4em;
+			}
+		}
+		h2 {
+			font-size: 2em;
+			max-width: 600px;
+			max-width: 60rem;
+			@media screen and  (max-width: 1024px) {
+				font-size: 1.8em;
+			}
+			@media screen and  (max-width: 640px) {
+				font-size: 1.5em;
+			}
+		}
+	}
+	&.next-section {
+		width: 100%;
+		padding: 4em 2em;
+		background: #DDD;
+		h3, h1 {
+			text-align: left;
+			max-width: 500px;
+			max-width: 50rem;
+			margin: 0 auto;
+			padding: 0;
+			color: #444;
+		}
+		a.next {
+			padding-left: 21%;
+			@media screen and  (max-width: 640px) {
+				padding-left: 0;
+			}
+		}
+	}
+	.sidebar {
+		img {
+			max-width: 100%;
+			margin: 0 auto 0;
+		}
+	}
+}
+
+hr {
+	width: 20%;
+	margin: 0 auto;
+	border-width: 5px;
+	border-color: #EEE;
+	padding-bottom: 5em;
+}
+
+h1 {
+	font-size: 8em;
+	line-height: 1em;
+	text-align: center;
+	@media screen and  (max-width: 1024px) {
+		font-size: 5em;
+	}
+	@media screen and  (max-width: 640px) {
+		font-size: 3.5em;
+	}
+}
+h2 {
+	font-family: "adobe-jenson-pro";
+	margin: 0 auto;
+	padding-bottom: 1em;
+	text-align: center;
+	font-style: italic;
+	font-weight: 300;
+	@media screen and  (max-width: 1024px) {
+		font-size: 1.5em;
+	}
+	@media screen and  (max-width: 640px) {
+		font-size: 1em;
+	}
+}
+
+.section-header {
+	position: relative;
+	padding: 5em 0 3em;
+	z-index: 10;
+	background: linear-gradient(fade-out($white, 1), $white 50%);
+	@media screen and  (max-width: 1024px) {
+		padding-top: 8em;
+	}
+	@media screen and  (max-width: 640px) {
+		background-image: linear-gradient(fade-out($white, 1) 50%, $white 75%);
+		padding-top: 16em;
+	}
+	h2 {
+		line-height: 1em;
+		max-width: 430px;
+		max-width: 43rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.process-section {
+	max-width: 80rem;
+	margin: 0 auto;
+	@include clearfix();
+	position: relative;
+}
+
+.left, .right, .section-content {
+	display: inline-block;
+	@media screen and  (max-width: 640px) {
+		display: block;
+	}
+	
+}
+.left, .right {
+	width: 20%;
+	@media screen and  (max-width: 640px) {
+		width: 100%;
+	}
+	border: solid white 1px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.section-content {
+	position: relative;
+	z-index: 20;
+	background: $white;
+	width: 60%;
+	padding: 0 1.25em;
+	line-height: 30px;
+	@media screen and  (max-width: 640px) {
+		width: 100%;
+	}
+	h3, h4, p, ul, ol {
+		max-width: 500px;
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h3 {
+		margin-top: 0;
+		font-size: 3em;
+		line-height: 1em;
+		margin-bottom: 0.25em;
+		text-align: left;
+		@media screen and (max-width: 640px) {
+			font-size: 2em;
+		}
+	}
+	h4 {
+		font-family: "adobe-jenson-pro";
+		font-size: 2.2em;
+		line-height: 1.5em;
+		margin-bottom: 0.25em;
+		text-align: left;
+		@media screen and (max-width: 640px) {
+			font-size: 1.8em;
+		}
+	}
+	p, ul, ol {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		@media screen and (max-width: 640px) {
+			font-size: 1.3em;
+		}
+	}
+}
+
+.lightbox {
+	.black_overlay{
+		display: none;
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		z-index:1001;
+		-moz-opacity: 0.8;
+		opacity:.80;
+		filter: alpha(opacity=80);
+	}
+	.box_content {
+		display: none;
+		position: fixed;
+		top: 10%;
+		left: 25%;
+		width: 50%;
+		height: 50%;
+		padding: 16px;
+		z-index:1002;
+		overflow: visible;
+	}
+}
+
+.learning, .blueprint, .craft, .training {
+	img {
+		max-width: 40%;
+	}
+}
+.envision {
+	img {
+		margin-bottom: -10em;
+	}
+	.section-header {
+		@media screen and  (max-width: 1024px) {
+			padding-top: 8em;
+		}
+		@media screen and  (max-width: 640px) {
+			background: linear-gradient(fade-out($white, 1) 30%, $white 50%);
+		}
+	}
+}
+.communication, .support {
+	img {
+		max-width: 35%;
+		margin-bottom: -20em;
+	}
+}

@@ -1,0 +1,191 @@
+@import "base/colors";
+@import "base/type";
+
+/************************************
+ **  Main Layout
+ ************************************/
+
+html {
+	background: $black;
+}
+
+html, html a {
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+html.no-js {
+	.js-disabled-callout {
+		display: inherit;
+	}
+	.next-title, #next-project {
+		display: none;
+	}
+}
+
+.js-disabled-callout {
+	display: none;
+	border: 5px dotted rgba(0,0,0,.03);
+	padding: 10px;
+	background-color: rgba(255, 255, 0, 0.03);
+
+	&.center-it {
+		width: 50%;
+		max-width: 400px;
+		margin: 0 auto;
+		margin-top: 50px;
+		line-height: 1.5em;
+	}
+}
+
+body {
+	background: $white;
+
+	&.has-overlay {
+		overflow-y: hidden;
+	}
+}
+
+#page-wrapper {
+	position: relative;
+}
+
+#content-area {
+	max-width: 800px;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+.main-container {
+	margin-top: 50px;
+
+	&.has-sub-header {
+		margin-top: 81px;
+		@media only screen and (min-width: 768px) {
+			margin-top: 115px;
+		}
+	}
+}
+.image-container {
+	height: 200px;
+	margin-top: 9px;
+	border-radius: 3px;
+}
+
+.image-container#client3M, .image-container#clientMcAfee, .image-container#clientNumera {
+	margin-top:35px;
+}
+
+.hero {
+	position: relative;
+	z-index: 1;
+	min-height: 570px;
+
+	@media only screen and (max-width: 700px) {
+		min-height: 600px;
+	}
+
+	.title {
+		position: absolute;
+		bottom: 5px;
+		width: 100%;
+
+	}
+
+	h1, h3 {
+		text-align: center;
+		margin: 0 auto;
+		color: $white;
+	}
+
+	h3 {
+		max-width: 600px;
+		margin-bottom: 20px;
+
+	}
+}
+
+
+.sidebar {
+	padding: 0 1.25em;
+	color: $darkgray;
+
+  p.caption {
+      padding: 0 20px 20px;
+  }
+
+	.photo, .video {
+		border-radius: 5px;
+		font-size: inherit;
+		background-color: darken($off_white, 1%);
+
+		a {
+			width: 100%;
+			max-height: 225px;
+			overflow: hidden;
+		}
+
+		img {
+			width: 100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+		iframe {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			width: 100%;
+		}
+		h3 {
+			padding: 20px 20px 0;
+			line-height: 1.1em;
+			font-size: 1.3em;
+			color: inherit;
+		}
+		h3.quote {
+			text-indent: -0.45rem;
+		}
+	}
+}
+
+.expandedcards {
+	display: none;
+}
+
+.large-hide {
+	display: none;
+}
+
+div.hsformerror {
+	background-image: none;
+	background-color: $white;
+	border-width: 0px;
+	margin-top: 10px;
+
+	p, div.close-form-error {
+		color: $black !important;
+	}
+
+	em {
+		display: none;
+	}
+}
+
+
+div.value {
+	padding-top: 7px;
+	font-size: 20px;
+}
+
+.hidden {
+	&--lg {
+		@media only screen and (min-width: 54em) {
+			display: none !important;
+		}
+	}
+
+	&--until-lg {
+		@media only screen and (max-width: 54em) {
+			display: none !important;
+		}
+	}
+}

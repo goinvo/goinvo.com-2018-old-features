@@ -1,0 +1,190 @@
+@import "../base/core";
+
+html,
+body {
+   @include font-size-map($font-size-body-new-pages);
+}
+
+.container {
+	margin-bottom: 0px;
+
+	h6.subheader {
+		margin-top: 40px;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		&.name {
+			text-transform: none;
+			margin-top: 0px;
+		}
+		&.margin {
+			margin-bottom: 3em;
+		}
+	}
+
+	img {
+		padding-bottom: 60px;
+		width: 100%;
+		height: auto;
+
+		&.with-caption {
+			padding-bottom: 1em;
+		}
+	}
+
+	.bottom-margin {
+		margin-bottom: 140px;
+	}
+
+	.top-margin {
+		margin-top: 2em;
+	}
+
+	.no-top-margin {
+		margin-top: 0px !important;
+	}
+
+	.no-top-padding {
+		padding-top: 0px !important;
+	}
+
+	.no-bottom-margin {
+		margin-bottom: 0px !important;
+	}
+
+	.medium-bottom-margin {
+		margin-bottom: 60px;
+	}
+
+	.small-bottom-margin {
+		margin-bottom: 2em !important;
+	}
+
+	p {
+		&.quote {
+			margin-bottom: 0.25em;
+			padding-top: 0.5em;
+			margin-top: 2em;
+			text-indent: -0.3em;
+			&:before {
+				content: "\201C";
+				position: relative;
+			}
+			&:after {
+				content: "\201D";
+			}
+		}
+
+	}
+
+	p.caption {
+		max-width: 75%;
+		margin-bottom: 3em;
+		&.no-margin {
+			margin-bottom: 0.25em;
+		}
+
+		img {
+			max-width: 50%;
+			padding-bottom: 0px;
+		}
+	}
+
+	ul {
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 1em;
+		margin-top: 20px;
+		list-style: disc;
+	}
+
+	li {
+		margin-top: 15px;
+		line-height: 1.36363636em;
+	}
+}
+
+#content-area {
+	padding: 3em 35px 0;
+	@include clearfix();
+	.projectData, .projectDetails {
+		float: left;
+	}
+	.projectData {
+		width: 30%;
+
+    .quote {
+      padding: 0;
+			margin: 2em 0 0 0;
+      text-align: left;
+    }
+		.caption {
+			max-width: 100%;
+
+      img {
+        max-width: 150px;
+      }
+		}
+		p a {
+			display: inline;
+		}
+	}
+	.projectDetails {
+		width: 70%;
+		padding-left: 2em;
+	}
+
+	p.caption {
+		font-size: 18px;
+		line-height: 22.7px;
+		color: $gray;
+
+		&.black {
+			color: #000;
+		}
+	}
+}
+
+.similar-project-container {
+	h6.subheader {
+		text-transform: none;
+		font-size: 1rem;
+		margin: 40px 0 0 0;
+		padding-bottom: .5em;
+	}
+	a.button.radius {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: rgba(235, 235, 235, 0.6);
+		color: #aaa;
+		&:hover{
+			background-color: rgba(235, 235, 235, 0.8)
+		}
+	}
+}
+
+#next-project {
+	max-width: 100%;
+	margin-top: 0px;
+	cursor: pointer;
+	background-size: cover;
+	background-position: center;
+	padding: 80px 40px;
+	div.next-title {
+		max-width: 800px;
+		margin: 0 auto;
+		color: #f7f7f7;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	#content-area {
+    .projectData {
+      margin-bottom: 2rem;
+    }
+		.projectData, .projectDetails {
+			width: 100%;
+			padding: 0;
+		}
+	}
+}

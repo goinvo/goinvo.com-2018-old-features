@@ -1,0 +1,90 @@
+@import "base/colors";
+@import "base/mixins";
+@import "base/type";
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
+body {
+	background-image: url('../../images/google_map.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#content-area {
+	max-width: 760px;
+}
+
+#contactForm {
+	padding: 50px 20px;
+
+  .hs-button.primary.large {
+     margin-top: .5em;
+  }
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	label {
+		display: none;
+	}
+
+	.hs-form fieldset {
+		max-width: none;
+
+		&.form-columns-1 .hs-input {
+			width: 100%;
+		}
+	}
+
+	div.actions {
+		width: auto;
+	}
+
+	ul.inputs-list.multi-container {
+		margin: 0px;
+		list-style: none;
+		display: inline-block;
+		font-size: inherit;
+		line-height: inherit;
+
+		li.hs-form-checkbox {
+			margin: 0px;
+			list-style: none;
+			display: inline-block;
+			font-size: inherit;
+			line-height: inherit;
+
+			label {
+				display: inline-block;
+				width: auto;
+				margin: 0px;
+				list-style: none;
+				font-size: inherit;
+				line-height: inherit;
+				color: #666;
+
+				input#subscribe_to_our_newsletter0-60744b7c-0aa6-40b2-9943-42137a951d16 {
+					width: auto;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	#email_content2-60744b7c-0aa6-40b2-9943-42137a951d16 {
+		height: 10em;
+	}
+
+
+	div.hs-form-checkbox-display {
+		display: inline-block;
+		color: $gray;
+		padding-left: 10px;
+		vertical-align: baseline;
+		width: calc(100% - 168px);
+	}
+}

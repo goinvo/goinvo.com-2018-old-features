@@ -1,0 +1,30 @@
+#main-footer {
+  @include font-size-map($font-size-body-new-pages);
+	background-color: $black;
+	padding: 15px;
+	width: 100%;
+
+	a {
+		color: $gray;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	.footerContent {
+
+		span {
+			display: inline-block;
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+			img {
+				height: 1em;
+				position: relative;
+				top: 0.1em;
+			}
+		}
+	}
+}

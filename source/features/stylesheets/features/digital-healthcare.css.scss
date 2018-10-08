@@ -1,0 +1,523 @@
+@import "../base/core";
+
+$orange: #bc743e;
+$red: #d65f4d;
+$teal: #9ec2b7;
+$green: #7f8732;
+$blue: #51697b;
+$yellow: #ddb40a;
+$tan: #dfd6c3;
+$bluegray: mix($blue, $gray, 50%);
+
+body {
+	color: #58504A;
+	background: #FFF;
+}
+
+a {
+	display: inline;
+}
+
+#main-container {
+	margin-top: 50px;
+}
+
+.bold {
+	font-weight: 800;
+}
+
+.scroll-nav {
+	box-shadow: 0 5px 15px -8px #000
+}
+
+.content {
+}
+
+#feature-article header.nav-wrapper {
+	background-color: rgba(11, 94, 148, .95);
+	z-index: 100;
+	width: 100%;
+	border-bottom: 0;
+	font-size: 1em;
+	padding: 0px 15px;
+	min-height: 0;
+	height: auto;
+	text-align: center;
+
+	@media only screen and (max-width: 1130px) {
+		padding: 0px 31px;
+		padding-right: 10px;
+	}
+
+	@media only screen and (max-width: 750px) {
+		padding: 0px 25px;
+	}
+	.nav-button {
+		display: none;
+	}
+	a {
+		display: inline-block;
+		padding-top: 10px;
+		padding-bottom: 8px;
+		color: white;
+		font-weight: 100;
+		margin-right: 10px;
+		margin-left: 10px;
+		transition: 300ms ease-in-out;
+		&.active {
+			text-decoration: underline;
+			color: rgba(255, 255, 255, .65);
+		}
+
+		&:hover {
+			color: rgba(255, 255, 255, .65);
+		}
+	}
+
+	&.scroll-nav {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		display: none;
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&.stuck {
+		margin-bottom: 120px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+}
+
+#feature-article{
+	width: 100%;
+
+	.overall-header {
+	    width: 100%;
+	    font-size: 3.5em;
+	    padding: 17% 60px 5%;
+	    color: rgb(11, 94, 148);
+	    background-color: rgb(255, 255, 255);
+	    background-image: image-url('features/digital-healthcare/digital_health_cover_transp.gif');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: right;
+	    line-height: 1.2em;
+	    height: 80vh;
+	    max-height: 600px;
+	    min-height: 500px;
+
+	    @media only screen and (max-width: 1129px) {
+			font-size: 3em;
+			color: rgb(255, 255, 255);
+	    	background-color: rgb(11, 94, 148);
+	    	background-image: none;
+	    	padding: 5%;
+	    	text-align: center;
+	    	height: inherit;
+	    	min-height: 0px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			font-size: 3em;
+		}
+
+		.title {
+			width: calc(100% - 600px);
+			@media only screen and (max-width: 1129px) {
+				width: 100%;
+				padding: .25em;
+				font-size: .9em;
+				text-align: center;
+			}
+			@media only screen and (max-width: 768px) {
+				background: none;
+			}
+		}
+	}
+	header {
+		color: black;
+		font-size: 2.2em;
+		line-height: 1em;
+		margin-bottom: 10px;
+
+		&.left {
+			text-align: right;
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		&.right {
+			text-align: left;
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		@media only screen and (max-width: 960px) {
+			font-size: 1.8em;
+			line-height: 1.2em;
+		}
+		@media only screen and (max-width: 768px) {
+			width: 90%;
+			margin: 0 auto 3px auto;
+			font-size: 1.15em;
+			line-height: 1.2em;
+			text-align: center;
+		}
+
+	}
+
+	.small-screen-cover {
+		display: none;
+
+		@media only screen and (max-width: 1129px) {
+			display: block;
+		}
+
+		@media only screen and (max-width: 768px) {
+			background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%) , image-url('features/digital-healthcare/digital_health_cover_mobile.gif') rgba(255, 255, 255, 0.62);
+			background-size: 100%;
+			margin-bottom: 40px;
+		}
+
+		.mobile {
+			visibility: hidden;
+			width: 100%;
+			@media only screen and (max-width: 1129px) {
+				display: none;
+			}
+			@media only screen and (max-width: 768px) {
+				display: block;
+			}
+		}
+
+		.desktop {
+			display: none;
+			@media only screen and (max-width: 1129px) {
+				display: block;
+			}
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+			width: 100%;
+		}
+	}
+}
+
+.item {
+	min-height: 400px;
+	margin-bottom: 20%;
+
+}
+
+h4 {
+	margin-top: 10px;
+
+	&.intro-quote {
+		color: #849CAA;
+		font-size: 1.5em;
+		font-weight: 200;
+		margin-bottom: 20px;
+
+		@media only screen and (max-width: 768px) {
+			width: 90%;
+			margin: auto;
+			text-align: center;
+			font-size: .9em;
+			line-height: 1.25em;
+		}
+	}
+	&.header-quote {
+		font-size: .45em;
+		line-height: 1.5em;
+		color: rgb(11, 94, 148);
+		font-weight: 200;
+		@media only screen and (max-width: 1129px) {
+			color: rgb(255, 255, 255);
+			font-size: .5em;
+		}
+	}
+
+}
+
+.no-image {
+	margin-left: 470px;
+	@media only screen and (max-width: 768px) {
+		margin-left: 0;
+	}
+}
+
+.row {
+	margin: 0 auto 0 auto;
+	max-width: 1080px;
+	width: 90%;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
+	.item-wrapper {
+		.item-img {
+			max-width: 430px;
+			&.right {
+				float: right;
+				margin: 0 10px 0 40px;
+				@media only screen and (max-width: 768px) {
+					margin: 8px 1% 8px 1%;
+					float: none;
+				}
+			}
+			&.left {
+				float: left;
+				margin: 0 40px 0 10px;
+				@media only screen and (max-width: 768px) {
+					margin: 8px 1% 8px 1%;
+					float: none;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				max-width: 100%;
+			}
+
+			img.item-img {
+				width: 100%;
+				position: relative;
+				z-index: 2;
+			}
+			.caption {
+			    padding-top: 5px;
+			    font-size: 1.1rem;
+			    line-height: 1.42rem;
+			    color: #AAAAAA;
+			    margin-left: 5%;
+			}
+		}
+
+		#computer-image {
+			display: none;
+			@media only screen and (min-width: 769px) {
+				display: inherit;
+			}
+		}
+
+		#phone-image {
+			display: none;
+			@media only screen and (max-width: 768px) {
+				display: inherit;
+				margin: 10px 0 20px 0;
+			}
+		}
+
+		.item-content {
+			min-height: 300px;
+			position: relative;
+			font-size: 1.5em;
+			line-height: 1.5em;
+			z-index: 1;
+			&.left {
+				text-align: right;
+				@media only screen and (max-width: 1240px) {
+					text-align: left;
+				}
+			}
+
+		}
+		.item-text {
+			@media only screen and (max-width: 768px) {
+				font-size: .75em;
+				line-height: 1.5em;
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.social-buttons {
+	margin-top: 20px;
+	padding: 0 0 3em 5em;
+	p {
+		padding: 0;
+		margin-bottom: 0.5em;
+	}
+	a {
+		font-size: 1em;
+		padding: 0.5em 1em 0.4em;
+		color: #FFF;
+		margin-top: 10px;
+		&.fb {
+			background-color: #3b5998;
+			border-bottom: 3px solid darken(#3b5998, 15%);
+			&:hover {
+				background-color: darken(#3b5998, 5%);
+			}
+		}
+		&.twitter {
+			background-color: #00aced;
+			border-bottom: 3px solid darken(#00aced, 15%);
+			&:hover {
+				background-color: darken(#00aced, 5%);
+			}
+		}
+		&.plus {
+			background-color: #dd4b39;
+			border-bottom: 3px solid darken(#dd4b39, 15%);
+			&:hover {
+				background-color: darken(#dd4b39, 5%);
+			}
+		}
+		&.in {
+			background-color: #007bb6;
+			border-bottom: 3px solid darken(#007bb6, 15%);
+			&:hover {
+				background-color: darken(#007bb6, 5%);
+			}
+		}
+		&.mail {
+			color: #FFF;
+			background-color: #888888;
+			border-bottom: 3px solid darken(#888, 15%);
+			&:hover {
+				background-color: darken(#888888, 5%);
+			}
+		}
+	}
+	&.centered {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+.fb-comments {
+	margin: 0 auto;
+	max-width: 90rem;
+	text-align: center;
+}
+
+.credit-wrapper {
+	background-color: rgba(0,0,0,.03);
+	padding: 60px 0px;
+	border-top: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+#credits {
+	margin: 0 auto 0 auto;
+    max-width: 645px;
+    width: 60%;
+	@include clearfix();
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
+	.author, .contributors {
+		float: left;
+	}
+	h2 {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1em;
+		color: #888;
+		margin-bottom: 0;
+		padding-bottom: 0.25em;
+	}
+	small {
+		font-size: 20px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 1.3em;
+	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $lightgray;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 16px;
+		}
+	}
+	.author {
+		width: 65%;
+		padding-right: 3em;
+		color: #444;
+		//margin: 0 auto;
+	}
+	.author-content {
+		position: relative;
+		//margin-top: -25%;
+		background: $white;
+		padding: 2em;
+		border-color: $blue;
+		border-width: 0 3px 3px;
+		border-style: solid;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.contributors.download-links {
+		margin-top: 20px;
+		font-size: 24px;
+	}
+	.contributors {
+		padding: 2em;
+		border: 3px solid rgb(11, 94, 148);
+		h3 {
+			font-size: 22px;
+			padding-bottom: 0.5em;
+		}
+		p {
+			font-size: 34px;
+			line-height: 1em;
+			margin-bottom: 0;
+			@media only screen and (max-width: 768px) {
+				font-size: 28px;
+			}
+		}
+		hr {
+			width: 2em;
+			margin: 1.5em 0;
+			border-width: 5px;
+			border-color: rgb(11, 94, 148);
+		}
+		.contributor {
+			&.left {
+				float: left;
+			}
+			&.right {
+				float: right;
+			}
+			@include clearfix();
+			.image, .info {
+				float: left;
+			}
+			.image {
+				width: 20%;
+			}
+			.info {
+				padding-left: 1em;
+				width: 80%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 978px) {
+		padding-left: 3em;
+		padding-right: 3em;
+		.author {
+			padding-right: 0;
+			margin-bottom: 2em;
+		}
+		.author, .contributors {
+			width: 100%;
+		}
+		.contributor {
+			margin-bottom: 1.5em;
+		}
+	}
+}

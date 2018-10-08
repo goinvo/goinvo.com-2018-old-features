@@ -1,0 +1,1125 @@
+@import "../base/core";
+
+$orange: #bc743e;
+$red: #d65f4d;
+$teal: #9ec2b7;
+$green: #7f8732;
+$blue: #51697b;
+$yellow: #ddb40a;
+$tan: #dfd6c3;
+$bluegray: mix($blue, $gray, 50%);
+
+body {
+	color: #58504A;
+	background: #EEE;
+}
+
+#main-container {
+	margin-top: 50px;
+}
+
+.nav-wrapper {
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	border-bottom: 0;
+	.nav-button {
+		display: none;
+	}
+}
+
+.main-nav {
+	max-width: 1630px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	border-right: 2px solid #CCC;
+	border-left: 2px solid #CCC;
+	border-bottom: 2px solid #DDD;
+	background: #FFF;
+	transition: height 400ms ease;
+	box-shadow: 0 5px 15px -8px #000;
+	@include clearfix();
+	a {
+		display: block;
+		float: left;
+		height: 55px;
+		padding: 1.3rem 1rem 0;
+		font-size: 1.05em;
+		line-height: 1em;
+		color: #58504A;
+		transition: color 200ms ease, background-color 200ms ease;
+		&:after {
+			content: "";
+			display: block;
+			width: 14px;
+			border-bottom: 2px solid transparent;
+			transition: border-bottom 200ms ease;
+		}
+		&:hover, &.active {
+			color: $blue;
+			&:after {
+				content: "";
+				display: block;
+				width: 14px;
+				border-bottom: 2px solid $blue;
+			}
+		}
+		&.zero {
+			padding-top: 1.1rem;
+			font-size: 1.35em;
+			transition: none;
+			&.active {
+				color: #58504A;
+				&:after {
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
+	}
+}
+
+.action {
+	padding: 3em 5em;
+	margin-bottom: 2em;
+	color: #FFF;
+	background: linear-gradient(to bottom, fade-out($bluegray, 0.2) 0%, fade-out($bluegray, 0.2) 100%), image-url('features/democracy/ipad.jpg') center/cover no-repeat;
+	text-align: center;
+	box-shadow: inset 0 20px 20px -20px #000, inset 0 -20px 20px -20px #000;
+	.icons {
+		svg {
+			width: 72px;
+			height: 72px;
+			display: inline-block;
+			fill: #FFF;
+		}
+	}
+	.button {
+		display: block;
+		max-width: 240px;
+		margin: 0 auto;
+		line-height: 1;
+		padding: 1em 1.5em;
+		text-transform: uppercase;
+		background: $blue;
+		box-shadow: 0 1px 0 darken($blue, 12%), 0 2px 0 darken($blue, 12%), 0 3px 0 darken($blue, 12%),  0 4px 0 darken($blue, 12%),  0 5px 0 darken($blue, 12%), 0 5px 5px #000;
+		opacity: 1;
+		transition: height 400ms ease, padding-top 400ms ease, padding-bottom 400ms ease;
+		&.closed {
+			height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		&:active {
+			transform: translateY(5px);
+			box-shadow: 0 -1px 0 darken($blue, 12%), 0 -2px 0 darken($blue, 12%), 0 -3px 0 darken($blue, 12%),  0 -4px 0 darken($blue, 12%),  0 -5px 0 darken($blue, 12%), inset 0 0 5px #000;
+		}
+	}
+	iframe {
+		display: block;
+		width: 100%;
+		max-width: 720px;
+		height: 275px;
+		max-height: 0;
+		margin: 0 auto;		
+		opacity: 0;
+		transition: max-height 400ms ease, opacity 200ms ease;
+		&.open {
+			max-height: 275px;
+			opacity: 1;
+		}
+	}
+}
+
+.social-buttons {
+	padding: 0 0 3em 5em;
+	p {
+		padding: 0;
+		margin-bottom: 0.5em;
+	}
+	a {
+		font-size: 1em;
+		padding: 0.5em 1em 0.4em;
+		color: #FFF;
+		&.fb {
+			background-color: #3b5998;
+			border-bottom: 3px solid darken(#3b5998, 15%);
+			&:hover {
+				background-color: darken(#3b5998, 5%);
+			}
+		}
+		&.twitter {
+			background-color: #00aced;
+			border-bottom: 3px solid darken(#00aced, 15%);
+			&:hover {
+				background-color: darken(#00aced, 5%);
+			}
+		}
+		&.plus {
+			background-color: #dd4b39;
+			border-bottom: 3px solid darken(#dd4b39, 15%);
+			&:hover {
+				background-color: darken(#dd4b39, 5%);
+			}
+		}
+		&.in {
+			background-color: #007bb6;
+			border-bottom: 3px solid darken(#007bb6, 15%);
+			&:hover {
+				background-color: darken(#007bb6, 5%);
+			}
+		}
+		&.mail {
+			color: #FFF;
+			background-color: #888888;
+			border-bottom: 3px solid darken(#888, 15%);
+			&:hover {
+				background-color: darken(#888888, 5%);
+			}
+		}
+	}
+	&.centered {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+.comments {
+	margin: 0 auto;
+	padding: 0 8em;
+	max-width: 90rem;
+	text-align: center;
+}
+
+section {
+	padding-top: 1em;
+	margin-bottom: 3em;
+	> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+		max-width: 60%;
+		padding: 0 5rem;
+	}
+	> a.block {
+		padding-right: 0px;	
+		padding-left: 0px;
+	}
+	&#section1 hr {
+		border-color: $orange;
+	}
+	&#section2 hr {
+		border-color: $red;
+	}
+	&#section3 hr {
+		border-color: $teal;
+	}
+	&#section4 hr {
+		border-color: $green;
+	}
+	&#section5 {
+		hr {
+			border-color: $blue;
+			@include clearfix();
+		}
+		h3 {
+			margin-top: 1em;	
+		}
+	}
+}
+
+a.block {
+	color: #58504A;
+	span.hint {
+		line-height: 2em;
+		font-style: italic;
+		color: #AAA;
+	}
+}
+
+.image {
+	.image {
+		font-size: 0;
+		float: left;
+		background-size: cover;
+		background-position: center top;
+		&.winston {
+			background-image: image-url('features/democracy/winston.jpg');
+		}
+		&.avb {
+			background-image: image-url('features/democracy/avb.jpg');
+		}
+	}
+	&.no-desktop {
+		display: none;
+	}
+	&.caption-side {
+		@include clearfix();
+		p {
+			width: 50%;
+			float: left;
+			border-left: 0;
+			font-size: 1em;
+			line-height: 1.5em;
+			padding: 2em;
+		}
+	}
+	&.inline {
+		&.caption-side {
+			.image {
+				width: 65%;
+				background-position: top left;
+			}
+			p {
+				width: 35%;
+			}
+		}
+		&.no-desktop {
+			p {
+				line-height: 1.25em;
+			}
+		}
+		margin: 3em 0;
+	}
+	&.aside {
+		width: 40%;
+		padding-right: 5em;
+		float: right;
+		&.caption-bottom {
+			p {
+				border-top: 0;
+			}
+		}
+		&.caption-side {
+			.image {
+				width: 35%;
+			}
+			p {
+				width: 65%;
+				font-size: 1.25em;
+				padding: 2.5em 1.5em;
+			}
+			strong {
+				padding-top: 0.5em;
+				display: block;
+			}
+		}
+	}
+	p {
+		max-width: 100%;
+		padding: 1.5em;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		border: 3px solid #e0e0e0;
+		margin: 0;
+		&.orange {
+			border-color: $orange;
+		}
+		&.red {
+			border-color: $red;
+		}
+		&.teal {
+			border-color: $teal;
+		}
+		&.green {
+			border-color: $green;
+		}
+		&.blue {
+			border-color: $blue;
+		}
+		&.yellow {
+			border-color: $yellow;
+		}
+		&.tan {
+			border-color: $tan;
+		}
+	}
+}
+
+#congressChart {
+	margin: 5em 0;
+	@include clearfix();
+	.col {
+		float: left;
+		width: 50%;
+		&.one {
+			padding-right: 2em;
+		}
+		&.two {
+			padding-left: 2em;
+		}
+	}
+	font-family: "rosario", Helvetica, Arial, sans-serif;
+	h4 {
+		margin-bottom: 1em;
+		padding: 0.35em 0 0.6em;
+		border: 2px solid #58504A;
+		font-weight: 400;
+		font-size: 1.7em;
+		text-align: center;
+		sup {
+			font-size: 0.6em;
+		}
+	}
+	small {
+		display: block;
+		font-size: 0.75em;
+		padding-top: 0.5em;
+		text-align: right;
+	}
+	table {
+		table-layout: fixed;
+		width: 100%;
+		tr {
+			&.one {
+				font-size: 1.5em;
+			}
+			&.two {
+				font-size: 1.3em;
+			}
+			&.three {
+				font-size: 1.18em;
+			}
+			&.four {
+				font-size: 1.1em;
+			}
+			&.five {
+				font-size: 0.8em;
+			}
+		}
+		td {
+			padding: 0.5em 0 0;
+			width: 100%;
+			border-bottom: 1px solid #AAA;
+			vertical-align: bottom;
+			&:nth-child(2) {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.buttonNav a {
+	position: absolute;
+	z-index: 10;
+	font-size: 0;
+	width: 41px;
+	height: 100px;
+	top: 22rem;
+	background: image-url("arrow.png") no-repeat;
+	background-size: 41px 100px;
+	&.prev {
+		left: 30px;
+		transform: scaleX(-1);
+	}
+	&.next {
+		right: 30px;
+	}
+}
+
+.govtSlides {
+	clear: both;
+	position: relative;
+	padding: 2em 0;
+	.visualNav {
+		width: 100%;
+		display: table;
+		a {
+			display: table-cell;
+			padding: 1em;
+			width: calc(100%/6);
+			font-size: 1.25em;
+			font-weight: 700;
+			text-align: center;
+			vertical-align: middle;
+			color: #AAA;
+			background: #EEE;
+			transition-property: color, background;
+			transition: 300ms ease;
+			&:hover {
+				color: #555;
+			}
+			&.active {
+				color: #FFF;
+				&.slide0 {
+					background-color: $orange;
+				}
+				&.slide1 {
+					background-color: $red;
+				}
+				&.slide2 {
+					background-color: $teal;
+				}
+				&.slide3 {
+					background-color: $green;
+				}
+				&.slide4 {
+					background-color: $blue;
+				}
+				&.slide5 {
+					background-color: $yellow;
+				}
+			}
+		}
+		span {
+			display: none;
+		}
+	}
+}
+
+#govtSlider {
+	margin: 0;
+	.slick-slide {
+		@include clearfix();
+		header p {
+			margin: 0;
+		}
+		h4 {
+			line-height: 1;
+			font-weight: 400;
+			font-size: 4em;
+		}
+		p {
+			max-width: 100%;
+			padding: 0;
+		}
+		.text, .image {
+			float: left;
+		}
+		.text {
+			width: 75%;
+			padding: 2em 2em 2em 8em;
+		}
+		.image {
+			width: 25%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.col {
+			float: left;
+			width: 50%;
+			&.one {
+				padding-right: 1em;
+			}
+			&.two {
+				padding-left: 1em;
+			}
+		}
+	}
+	.slick-list {
+		background-color: #F5F5F5;
+		border-top: 3px solid $orange;
+		border-bottom: 3px solid $orange;
+		transition: border-color 400ms ease;
+	}
+	.theocracy {
+		hr {
+			border-color: $orange;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/king-tang.jpg');
+			background-position: center top;
+		}
+	}
+	.oligarchy {
+		hr {
+			border-color: $red;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/leonidas.jpg');
+		}
+	}
+	.feudalism {
+		hr {
+			border-color: $teal;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/oda-nobunaga.jpg');
+		}
+	}
+	.a-monarchy {
+		hr {
+			border-color: $green;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/louie.jpg');
+		}
+	}
+	.p-monarchy {
+		hr {
+			border-color: $blue;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/victoria.jpg');
+		}
+	}
+	.sps {
+		hr {
+			border-color: $yellow;
+		}
+		.image {
+			background-image: image-url('features/democracy/examples/stalin-lenin.jpg');
+		}
+	}
+}
+
+#section5 .votingSlides {
+	position: relative;
+	&.mobile-layout {
+		padding-left: 5em;
+		padding-right: 5em;
+		display: none;
+		header {
+			padding-top: 2em;
+		}
+		hr {
+			border-color: #AAA;
+		}
+		p {
+			padding: 0;
+		}
+		.image-group {
+			@include clearfix();
+			img {
+				width: 50%;
+				float: left;
+				&:first-child {
+					padding-right: 0.5em;
+				}
+				&:last-child {
+					padding-left: 0.5em;
+				}
+			}
+		}
+	}
+	.buttonNav a {
+		top: 18rem;
+	}
+}
+
+#votingSlider {
+	margin: 3em 0 0;
+	position: relative;
+	nav {
+		position: absolute;
+		width: 100%;
+		z-index: 20;
+		@include clearfix();
+		a {
+			font-size: 1.25em;
+			line-height: 1.2;
+			width: calc(100%/6);
+			float: left;
+			text-align: center;
+			padding: 1.5em 0.5em;
+			color: #FFF;
+			background: fade-out(#610101, 0.25);
+			transition: background 400ms ease;
+			&.active {
+				background: #610101;
+			}
+		}
+	}
+	.slide {
+		padding: 12em 8em 8em;
+		@include clearfix();
+		.left {
+			float: left;
+			width: 65%;
+			padding-right: 3em;
+			&.split {
+				width: 40%;
+			}
+		}
+		.right {
+			float: right;
+			width: 35%;
+			&.split {
+				width: 60%;
+			}
+			
+		}
+		.split {
+			.col {
+				@include clearfix();
+				width: 50%;
+				float: left;
+				&:first-child {
+					padding-right: 1em;
+				}
+				&:last-child {
+					padding-left: 1em;
+				}
+			}
+		}
+		&.six {
+			.left {
+				width: 35%;
+			}
+			.right {
+				width: 65%;
+			}
+		}
+		.bottom {
+			@include clearfix();
+			&.two {
+				
+			}
+		}
+		p {
+			max-width: 100%;
+		}
+		&.one {
+			color: #FFF;
+			background-image: linear-gradient(to right, fade-out(#CE2A23, 0.20) 0%, fade-out(#CE2A23, 1) 75%, fade-out(#CE2A23, 0.40) 100%), image-url('features/democracy/voting/phone.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			//Fix for OSX Font Rendering on Dark BG's
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			h3 {
+				width: 48%;
+				font-size: 3.6em;
+			}
+			hr {
+				border-color: #FFF;
+			}
+			p {
+				width: 48%;
+			}
+		}
+	}
+	h3 {
+		font-weight: 400;
+		strong {
+			font-weight: 700;
+		}
+	}
+	p {
+		padding: 0;
+	}
+}
+
+article.government {
+	background: #FFF;
+	max-width: 1630px;
+	margin: 0 auto;
+	border-left: 2px solid #CCC;
+	border-right: 2px solid #CCC;
+	z-index: 20;
+	line-height: 1.8em;
+	overflow: hidden;
+	hr {
+		margin: 2em 0;
+		width: 40px;
+		border-top: 5px solid #58504A;
+	}
+	p.emphasized {
+		font-size: 2em;
+		&.i {
+			font-style: italic;
+		}
+	}
+}
+
+header#article-header {
+	max-width: 100%;
+	padding: 30% 5rem 5%;
+	margin-bottom: 2em;
+	background: url(../../images/features/democracy/flag-hero.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #FFF;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.headline {
+		max-width: 480px;
+		padding: 1.5em;
+		border: 2px solid $blue;
+		background: #FFF;
+		color: $blue;
+	}
+	h1, h2 {
+		margin: 0;
+	}
+	h1 {
+		padding-bottom: 1rem;
+		letter-spacing: 1px;
+	}
+	h2 {
+		padding-top: 1.5rem;
+		font-size: 1.375em;
+		font-weight: 400;
+		max-width: 540px;
+	}
+	hr {
+		border-top: 3px solid $blue;
+		width: 60px;
+		margin: 0;
+	}
+}
+
+.faded {
+	padding: 3em 0 4em;
+	border-top: 2px solid #d2d2d2;
+	border-bottom: 2px solid #d2d2d2;
+	background-color: #f5f5f5;
+	ul {
+		list-style: none;
+		li:before {
+			float: left;
+			margin-left: -1em;
+			font-size: 1.375em;
+			content: "\2022";
+		}
+	}
+	.image.aside img:first-child {
+		padding-bottom: 1.5em;
+	}
+}
+
+#section5 {
+	.image.aside.bleed {
+		padding: 0;
+		margin-right: -5em;
+	}
+	ol {
+		list-style: upper-alpha;
+	}
+
+	.bigLine {
+		margin-top: 1.5em;
+		font-size: 3.5em;
+	}
+	margin-bottom: 0;
+}
+
+#credits {
+	padding: 2em 8em 4em;
+	max-width: 900px;
+	max-width: 90rem;
+	margin: 0 auto;
+	@include clearfix();
+	.author, .contributors {
+		float: left;
+	}
+	h2 {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1em;
+		color: #888;
+		margin-bottom: 0;
+		padding-bottom: 0.25em;
+	}
+	small {
+		font-size: 20px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 1.3em;
+	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $lightgray;
+		}
+	}
+	.author {
+		width: 65%;
+		padding-right: 3em;
+		color: #444;
+	}
+	.author-content {
+		position: relative;
+		margin-top: -25%;
+		background: $white;
+		padding: 2em;
+		border-color: $blue;
+		border-width: 0 3px 3px;
+		border-style: solid;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.contributors {
+		width: 35%;
+		padding: 2em;
+		border: 3px solid $red;
+		h3 {
+			font-size: 22px;
+			padding-bottom: 0.5em;
+		}
+		p {
+			font-size: 34px;
+			line-height: 1em;
+			margin-bottom: 0;
+		}
+		hr {
+			width: 2em;
+			margin: 1.5em 0;
+			border-width: 5px;
+			border-color: $red;
+		}
+		.contributor {
+			@include clearfix();
+			.image, .info {
+				float: left;
+			}
+			.image {
+				width: 20%;
+			}
+			.info {
+				padding-left: 1em;
+				width: 80%;
+			}
+		}
+	}
+	@media only screen and (max-width: 978px) {
+		padding-left: 3em;
+		padding-right: 3em;
+		.author {
+			padding-right: 0;
+			margin-bottom: 2em;
+		}
+		.author, .contributors {
+			width: 100%;
+		}
+		.contributor {
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
+@media only screen and (max-width: 1630px) {
+	article.government {
+		border: none;
+	}
+	.main-nav {
+		border-right: none;
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 1320px) {
+	.main-nav a {
+		padding: 1.3rem 0.5rem 0;
+	}
+}
+
+@media only screen and (max-width: 1175px) {
+	.main-nav {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (max-width: 1070px) {
+	.main-nav .zero {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+	#section5 .votingSlides.mobile-layout {
+		display: block;
+	}
+	#votingSlider, .votingSlides.desktop-layout {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#govtSlider {
+		.slick-slide {
+			.text {
+				width: 100%;
+				padding: 2em 8em;
+			}
+			.image {
+				width: 0;
+			}
+		}
+	}
+	.image {
+		&.no-desktop {
+			display: block;
+		}
+		&.desktop {
+			display: none;
+		}
+	}
+	section > a.block {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.main-nav a {
+		padding: 1.3rem 0.25rem 0;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.image.aside {
+		width: 80%;
+		margin: 0 auto 2em;
+		padding-left: 5em;
+		float: none;
+	}
+	section {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart {
+			max-width: 100%;
+		}
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.nav-wrapper .nav-button {
+		display: block;
+		padding: 1rem 0 0.75rem;
+		color: #AAA;
+		font-size: 1.125em;
+		letter-spacing: 0;
+		text-align: center;
+		text-transform: uppercase;
+		background: #FFF;
+		border-bottom: 2px solid #DDD;
+	}
+	.main-nav {
+		display: none;
+		padding: 0;
+		&.open {
+			display: block;
+		}
+		a {
+			height: auto;
+			padding: 0.75rem 1.25rem 0.5rem;
+			border-bottom: 2px solid #F0F0F0;
+			float: none;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				color: #FFF;
+				background-color: $blue;
+				&:after {
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 787px) {
+	.govtSlides {
+		.visualNav {
+			@include clearfix();
+			a {
+				display: block;
+				float: left;
+				width: calc(100%/2);
+				br {
+					display: none;
+				}
+				span.space {
+					display: inline;
+				}
+			}
+		}
+		.buttonNav {
+			display: none;
+		}
+	}
+	#govtSlider .slick-slide .text {
+		padding: 2em;
+		h4 {
+			font-size: 2.8em;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section .avb.image.inline.caption-side {
+		.image {
+			width: 35%;
+		}
+		.caption {
+			width: 65%;
+		}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.image.inline.no-desktop {
+		.image {
+			width: 45%;
+		}
+		p {
+			width: 55%;
+		}
+	}
+	.action iframe.open {
+		height: 360px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.image.aside {
+		width: 100%;
+	}
+	#section5 .votingSlides.mobile-layout .image-group img {
+		padding: 1em 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	header#article-header {
+		padding: 40% 2em 2em;
+		.headline {
+			font-size: 0.75em;
+		}
+	}
+	.image.aside {
+		padding: 0 2em;
+	}
+	section {
+		> h1, > h2, > h3, > h4, > h5, > h6, > header, > .image.inline, > a.block, > p, > div p, > blockquote, > ol, > ul, > dl, #congressChart, &#section5 .votingSlides.mobile-layout {
+			padding: 0 2rem;
+		}
+	}
+	.comments {
+		padding: 0 2em;
+	}
+	.action {
+		padding: 2em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.govtSlides {
+		.visualNav {
+			a {
+				display: none;
+			}
+			.hint {
+				display: block;
+				padding: 1.5em;
+				line-height: 1;
+				color: #AAA;
+				text-align: center;
+			}
+		}	
+	}
+	#govtSlider {
+		.slick-slide .col {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		} 
+	}
+}
+

@@ -1,0 +1,192 @@
+@import 'base/core';
+
+html,
+body {
+	@include font-size-map($font-size-body-new-pages);
+}
+
+#main-container {
+	margin-top: 50px;
+}
+.most-recent-article-link {
+	display: block;
+  width: 100%;
+  height: 500px;
+}
+.most-recent-article {
+	position: relative;
+	width: 100%;
+	height: 100%;
+  color: $black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.most-recent-article:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  background: linear-gradient( rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255,255,255,1) 100%);
+}
+.most-recent-article .outer-container {
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	width: 100%;
+}
+.most-recent-article .inner-container,
+.feature-article-list-container {
+	padding: 0 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 1rem;
+  }
+}
+.most-recent-article .inner-container {
+	padding: 3rem 3rem 6rem 3rem;
+  @media only screen and (max-width: 550px) {
+    padding: 3rem 1rem 6rem;
+  }
+}
+.most-recent-article .inner-container {
+  color: white;
+  text-shadow: 0px 2px 20px rgba(0,0,0,0.6);
+}
+.feature-article-list-container {
+  overflow: hidden;
+}
+.show-features-link-container {
+  padding: 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 1rem;
+  }
+}
+.feature-article-list-container.transitioning {
+  transition: max-height 500ms;
+}
+#show-all-features {
+  cursor: pointer;
+}
+#show-all-articles {
+  padding: 0 0 25px 10px;
+}
+.feature-article-list {
+	list-style: none;
+}
+.feature-article-list a {
+	display: inline-block;
+	width: 100%;
+  min-height: 350px;
+	margin-bottom: 20px;
+
+	@media only screen and (min-width: 500px) {
+    min-height: 350px;
+	}
+}
+.feature-block {
+  position: relative;
+  color: $white;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+  border-radius: 3px;
+  text-shadow: rgba(0,0,0,0.6) 0px 2px 10px;
+  min-height: 350px;
+  @media only screen and (max-width: 500px) {
+    padding: 2rem 1rem;
+  }
+}
+.feature-block:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+.feature-info h1 {
+	@media only screen and (max-width: 700px) {
+		font-size: 3rem;
+	}
+	@media only screen and (max-width: 580px) {
+		font-size: 2.4rem;
+	}
+	@media only screen and (max-width: 400px) {
+		font-size: 2rem;
+	}
+}
+.feature-info {
+	position: relative;
+}
+.feature-label {
+  text-transform: uppercase;
+}
+
+
+
+
+.blog-article-list-container {
+  max-width: 1200px;
+  padding: 0 calc(3rem - 10px); // Hack to get items to line up with above content
+  margin: 50px auto 0 auto;
+  @media only screen and (max-width: 500px) {
+    padding: 0 calc(1rem - 10px);
+  }
+}
+.blog-article-list {
+  list-style: none;
+}
+.blog-article-list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.blog-article-list li {
+  display: block;
+  width: 25%;
+  height: 200px;
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 15px;
+  @media only screen and (max-width: 900px) {
+    width: 33.33%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+.blog-article-list a {
+  width: 100%;
+  height: 100%;
+}
+.blog-post-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 3px;
+}
+.blog-post-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding-top: 10px;
+  color: black;
+  background-color: white;
+}

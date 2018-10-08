@@ -1,0 +1,136 @@
+// For some reason when building the fontURL function won't work. Changing from 'font_url' to 'font_url' (or vica versa) will fix this.
+// I have no idea why this happens and it is not consistent
+
+@import "compass/typography";
+
+@mixin font-size-map($font-size-map) {
+	@each $breakpoint, $font-size in $font-size-map {
+		@if $breakpoint == null {
+			font-size: $font-size;
+		} @else {
+			@include breakpoint($breakpoint) {
+				font-size: $font-size;
+			}
+		}
+	}
+}
+
+@mixin font-family-serif() {
+  font-family: $font-family-serif;
+}
+@mixin font-family-sans-serif() {
+  font-family: $font-family-sans-serif;
+}
+
+$font-family-serif: 'adobe-jenson-pro', Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+$font-break-point: 530px;
+
+$font-size-base-old: 16px; // Kept around for feature article pages (which get super messed up if changed)
+$font-size-base-new: 20px;
+$font-size-body-old-pages: (null: $font-size-base-old);
+$font-size-body-new-pages: (null: $font-size-base-new); // Optionally apply this on page containers to override old font size
+$font-size-h1: (null: 2.75rem, $font-break-point: 3.75rem);
+$font-size-h2: (null: 1.75rem, $font-break-point: 2.25rem);
+$font-size-h3: (null: 1.25rem, $font-break-point: 1.75rem);
+$font-size-h4: (null: 1rem, $font-break-point: 1.25rem);
+
+$font-weight-base: 400;
+$font-weight-bold: 600;
+
+html,
+body {
+	@include font-size-map($font-size-body-old-pages); // Kept around for feature article pages
+	@include font-family-sans-serif();
+	color: $black;
+	text-rendering: optimizeLegibility;
+	font-weight: $font-weight-base;
+	line-height: 1.25;
+}
+
+h1,
+h2,
+h3 {
+  @include font-family-serif();
+}
+
+h1 {
+	@include font-size-map($font-size-h1);
+	line-height: 1.07;
+}
+
+h2 {
+	@include font-size-map($font-size-h2);
+	line-height: 1.15;
+}
+
+h3 {
+  @include font-size-map($font-size-h3);
+  line-height: 1.15;
+}
+
+h4 {
+	@include font-size-map($font-size-h4);
+  font-weight: $font-weight-bold;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+p {
+	margin-bottom: 1em;
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: $font-weight-bold;
+	}
+}
+
+small {
+	line-height: 1;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+.subheader {
+	color: $gray;
+}
+
+.social-card a {
+	color: $navy;
+}
+
+.social-card a:hover {
+	color: $blue;
+}
+
+.font-thin {
+	font-weight: $font-weight-base;
+}
+.font-bold {
+	font-weight: $font-weight-bold;
+}
+.font-small {
+	font-size: .8rem;
+}

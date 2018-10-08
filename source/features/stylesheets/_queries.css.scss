@@ -1,0 +1,212 @@
+
+/************************************
+ **  Media Queries
+ **
+ *** This is where we put all (well most) of the media queries.
+ *** I tend to go by the philosophy of updating elements when they
+ *** stop looking good instead of updating elements based on common
+ *** screen sizes.
+ ************************************/
+
+@media only screen and (max-width: 1105px) {
+	#content-area .expandedcards {
+		display: block;
+	}
+
+	#content-area .contractedcards {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	div.feature-article-section .title .feature-image.second{
+		display:none;
+	}
+
+	div.feature-article-section .title .feature-image{
+		display:block;
+	}
+	#main-container .homepage-header .title, #main-footer .footerContent {
+		padding: 0;
+	}
+	#main-container .homepage-header.one .title {
+		padding-top: 65px;
+	}
+}
+
+@media only screen and (max-width: 1020px) {
+	div.social-card.photo.landscape.super-long {
+		min-width: 660px;
+	}
+
+	#main-container .homepage-header {
+		&.two, &.three {
+			width: 100%;
+		}
+		#main-footer {
+			position: relative;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1019px) {
+	button#dbutton, button#abutton, button#dbutton2, button#abutton2{
+		width:100%;
+	}
+}
+
+@media only screen and (max-width: 1110px) {
+	.header-content .tag-line {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	section.centerContent ul#choose-your-adventure li {
+		font-size:2.5rem;
+		line-height: 2.7rem;
+	 }
+
+	#careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+		padding-right:.6rem;
+	}
+
+	#careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+		padding-left:.3rem;
+	}
+
+	#content-area .expandedcards {
+		width: 100%;
+	}
+
+	.sidebar.omega {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.sidebar.omega {
+		padding-left:5px;
+		padding-right:5px;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	div.sidebar.mobile-hide, section.timeline.mobile-hide {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 749px) {
+	//videos in the sidebar need a specific height.
+	.sidebar.omega div.video iframe {
+		height: 400px;
+	}
+
+	section.centerContent ul#choose-your-adventure li {
+		font-size: 3.2rem;
+		line-height: 3.5rem;
+	}
+
+	#careers #mainContent section.centerContent ul#choose-your-adventure li:first-child {
+		padding-right:.7rem;
+	}
+
+	#careers #mainContent section.centerContent ul#choose-your-adventure li:last-child {
+		padding-left:.4rem;
+	}
+
+	//hide everything that should be hidden (class: mobile-hide)
+	div.sidebar.mobile-hide, section.timeline.mobile-hide, .mobile-hide {
+		display:none;
+	}
+
+	p.large-hide, br.large-hide, ul.large-hide {
+		display:inherit;
+	}
+
+	#careers section.centerContent, section.team-cards.twelve.columns {
+		padding-left:0px;
+		padding-right:0px;
+	}
+
+	div.career-content {
+		padding-left:5px;
+		padding-right:5px;
+	}
+}
+
+@media only screen and (max-width: 667px) {
+	div.social-card.photo.landscape.super-long, div.social-card.photo.landscape, div.social-card.soundcloud, div.social-card {
+		min-width:0;
+
+	}
+}
+
+@media only screen and (min-width: 652px) {
+	#main-header .header-content #nav-buttons-mobile {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.header-content .tag-line {
+		display: none;
+	}
+	#main-footer p {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 484px) {
+	.expandedcards .team-card-info h3 {
+		line-height:3.4rem;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	#main-footer .footerContent {
+		text-align: center;
+		font-size: 0.85em;
+		span {
+			margin: 0 5px;
+		}
+	}
+}
+
+@media (max-width: 400px), (max-device-width: 480px) and (min-device-width: 320px){
+  form.hs-form .form-columns-2 .hs-form-field.field .hs-input, form.hs-form .form-columns-3 .hs-form-field.field .hs-input {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #content-area.caseStudyContent .projectDetails {
+     margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  form.hs-form fieldset {
+    max-width: none;
+  }
+
+  .careers .sidebar.left {
+     display: none;
+  }
+
+  .careers .sidebar.right {
+    display: block;
+    width:100%;
+  }
+
+  .careers div.centerContent {
+     width:100%;
+  }
+
+  div.video-box .fluid-width-video-wrapper {
+    padding-top:60% !important;
+  }
+}

@@ -1,0 +1,77 @@
+@import "compass/css3";
+
+@mixin transparent-font($color, $opacity, $other-color: null) {
+	@if $other-color {
+		color: mix($other-color, $color, $opacity * 100.0);
+	} @else {
+		color: $color;
+	}
+	color: transparentize($color, $opacity);
+}
+
+@mixin transparent-background($color, $opacity: 0.5, $other-color: null) {
+	@if $other-color {
+		background: mix($other-color, $color, $opacity * 100.0);
+	} @else {
+		background: $color;
+	}
+	background: transparentize($color, $opacity);
+}
+
+@mixin user-select($select) {
+	-webkit-touch-callout: $select;
+	-webkit-user-select: $select;
+	-khtml-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select;
+	user-select: $select;
+}
+
+@mixin clearfix() {
+	/**
+	 * For modern browsers
+	 * 1. The space content is one way to avoid an Opera bug when the
+	 *    contenteditable attribute is included anywhere else in the document.
+	 *    Otherwise it causes space to appear at the top and bottom of elements
+	 *    that are clearfixed.
+	 * 2. The use of `table` rather than `block` is only necessary if using
+	 *    `:before` to contain the top-margins of child elements.
+	 */
+	&:before,
+	&:after {
+			content: " "; /* 1 */
+			display: table; /* 2 */
+	}
+
+	&:after {
+			clear: both;
+	}
+
+	/**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
+	*zoom: 1;
+}
+
+// @function rem($pixels, $context: $font-size-browser-context) {
+// 	@if (unitless($pixels)) {
+// 		$pixels: $pixels * 1px;
+// 	}
+// 	@if (unitless($context)) {
+// 		$context: $context * 1px;
+// 	}
+// 	@return #{$pixels/$context}rem;
+// }
+
+@mixin breakpoint($mq1: 0, $mq2: false, $maxmin: min-width) {
+	@if $mq2 == false {
+		@media ($maxmin: $mq1) {
+			@content;
+		}
+	} @else {
+		@media (min-width: $mq1) and (max-width: $mq2) {
+			@content;
+		}
+	}
+}

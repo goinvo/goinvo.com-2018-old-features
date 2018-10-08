@@ -1,0 +1,581 @@
+@import "../base/core";
+
+html,
+body {
+   @include font-size-map($font-size-body-new-pages);
+}
+
+body {
+   background-color: #0d0d0d;
+}
+
+.header-content {
+	max-width: 100%;
+}
+
+a {
+	&.bar, &.left, &.right {
+		text-decoration: none;
+	}
+}
+
+#main-container {
+	margin-top: 50px;
+}
+
+$text-stroke: rgba(255, 255, 255, 0.6);
+
+// Heros (keep old for features web page)
+#determinants-of-health {
+	.photo-container {
+		background: linear-gradient(rgba(2, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%) , image-url('features/determinants-of-health/feature_banner.jpg') rgba(0, 0, 0, 0.62);
+		background-size: 100%, cover;
+	}
+    .title {
+	   color: white;
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+}
+#killer-truths {
+  .photo-container {
+    background: linear-gradient(rgba(2, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%) , image-url('features/killer-truths/killer-truths-banner.png') rgba(0, 0, 0, 0.62);
+		background-size: 100%, cover;
+  }
+}
+
+#zika {
+	.photo-container {
+		background: linear-gradient(rgba(2, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%) , image-url('zika-map.png') rgba(0, 0, 0, 0.62);
+		background-size: 100%, cover;
+	}
+    .title {
+	   color: white;
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+}
+
+#careplans {
+	.photo-container {
+		background: linear-gradient(rgba(2, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) , image-url('features/careplans/feature_page_1.jpg') rgba(0, 0, 0, 0.62);
+		background-size: 100%, cover;
+	}
+    .title {
+	   color: white;
+
+	}
+}
+
+#digital-healthcare {
+  &.block {
+    background-color: white;
+  }
+	.photo-container {
+		background: linear-gradient(rgba(11, 94, 148, 0.3) 0%, rgba(11, 94, 148, 1) 100%) , image-url('features/digital-healthcare/digital_health_cover_transp.gif') rgba(255, 255, 255, 0.62);
+		background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+	}
+  .title {
+	  color: white;
+	}
+}
+
+#us-healthcare-feature {
+	.photo-container {
+		background: linear-gradient(rgba(2, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) , image-url('features/us-healthcare/header_image.png') rgba(0, 0, 0, 0.62);
+	}
+    .title {
+	   color: white;
+
+	}
+}
+
+#from-bathroom-to-healthroom {
+	background-color: rgba(0,0,0,.5);
+	.photo-container {
+		background:rgba(0, 0, 0, 0.5) image-url('home/bathroom.png');
+		background-size: cover;
+        background-position: center center;
+	}
+
+	.title {
+		color: white;
+	}
+}
+
+#democracy {
+	.photo-container {
+		background-image: image-url('home/democracy.png');
+	}
+
+	.title {
+		.tag {
+			color: #9B9B9B;
+		}
+		.name {
+			color: #D75F4E;
+		}
+		.sub-name {
+			color: #6C8696;
+		}
+	}
+}
+
+#oral-history{
+	.photo-container {
+		background-image: image-url('home/oral-history.jpg');
+	}
+
+	.title {
+		.tag {
+			color: #f9f9f9;
+		}
+		.name {
+			color: #f9f9f9;
+		}
+		.sub-name {
+			color: #f9f9f9;
+		}
+	}
+}
+
+#world-cup .photo-container {
+	background-image: image-url('features/world-cup/hero.jpg');
+}
+
+#hgraph .photo-container {
+	background-image: image-url('home/hgraph_large.png');
+}
+
+#oracle .photo-container {
+	background-image:  image-url('home/oracle.jpg');
+}
+
+#three-m .photo-container {
+	background-image: image-url('home/3m.jpg');
+}
+
+#culture .photo-container {
+	background-image: image-url('home/culture-2017.jpg');
+}
+
+#process .photo-container {
+	background-image: image-url('home/aps.jpg');
+}
+
+#diabetes .photo-container {
+	background-image: image-url('healthcare/diabetes.jpg');
+}
+
+#ebola-guide {
+	.photo-container {
+		background-image: image-url('features/ebola-care-guideline/haz_zoom_bg.png');
+		background-position: 85% 20%;
+		background-color: rgb(229, 245, 245);
+	}
+	.title .name {
+		color: #373D3D;
+	}
+	.sub-name {
+		color: rgb(85, 93, 98);
+	}
+}
+
+#ebola {
+	  //padding-top: 75px;
+		//padding-bottom: 75px;
+
+    .photo-container {
+      background-image: image-url('home/ebola.png');
+    }
+
+		.title {
+			.name {
+				color: #00C4E9;
+			}
+			.sub-name {
+				color: #A5DEF1;
+			}
+	}
+}
+
+.quote.background {
+	background-color: white;
+	max-width: 100%;
+	padding-left: 12%;
+	padding-right: 12%;
+	// text-align: -webkit-center;
+}
+
+#disrupt {
+  .photo-container {
+    display: none;
+    background-image: image-url('features/disrupt/video_fallbacks/section-5-top.jpg');
+    background-position: 40% 0;
+    @media only screen and (max-width: 760px) {
+      display: block;
+    }
+  }
+}
+
+#blog .title {
+	width: 100%;
+	padding: 1em 3em;
+	background: rgba(0,0,0,.55);
+}
+#blog .title:after {
+	z-index: -10;
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: fade-out(#000, 0.5);
+	width:100%;
+}
+
+.double {
+	display: table;
+	width: 100%;
+	min-height: 309px;
+	position:relative;
+}
+
+#homepage-hero {
+	background-size: cover;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow: 0px 2px 20px rgba(0, 0, 0, .8);
+	position: relative;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  background-size: cover;
+  background-position: bottom center;
+
+	&:hover {
+		.photo-container, .video-container {
+			transform: none;
+		}
+	}
+
+	.photo-container, .video-container {
+		min-height: 630px;
+		background-size: cover;
+		background-position-y: bottom;
+
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.title {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 0;
+
+    h1 {
+      padding: 0 15px;
+    }
+	}
+
+	.actual-content {
+		margin: 14px 0;
+    padding: 0 15px;
+	}
+
+	.actual-portfolio {
+		margin: 0 auto;
+		padding: 0 10px;
+
+    &.spacer {
+      height: 300px;
+    }
+	}
+
+	.actual-portfolio img {
+		margin: 0 auto;
+    width: auto;
+	}
+
+	.actual-portfolio-description {
+		-webkit-backdrop-filter: blur(15px);
+		width: 100%;
+		padding: 15px;
+		background: rgba(0, 0, 0, .3);
+
+		p {
+			margin-bottom: 0;
+
+      + .actual-button {
+        margin-top: 10px;
+      }
+		}
+	}
+
+	.actual-button {
+    margin-top: 0;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		display: inline-block;
+		padding: 10px 35px;
+		transition: 250ms;
+		background-color: rgba(255,255,255,.15);
+		&:hover {
+			background-color: rgba(255,255,255,.2);
+		}
+	}
+}
+
+.actual-button {
+	margin-top: 25px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px;
+	transition: 350ms;
+	cursor: pointer;
+
+	&:hover {
+		background: rgba(0,0,0,.2);
+	}
+}
+
+.contact-container {
+	background-size: cover;
+	text-align: center;
+	padding-bottom: 1em;
+	color: white;
+	a .actual-button {
+		color: white;
+	}
+
+	.actual-button {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.sub-title {
+		margin-top: .65em;
+	}
+
+	@media only screen and (max-width: 750px) {
+		display: none;
+	}
+}
+
+.clients, .news {
+	background: #f9f9f9;
+	text-align: center;
+	color: #9B9B9B;
+
+	.small-title {
+		margin: 0 20px 30px;
+		padding-top: 60px;
+		text-align: center;
+	}
+
+	table.non-mobile {
+		width: 100%;
+
+		@media  only screen and (max-width: 500px) {
+			display: none !important;
+		}
+
+		tbody {
+			tr {
+				td {
+					text-align: center;
+					padding: 25px 15px;
+					vertical-align: middle;
+					max-width: 300px;
+					img {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	ul.mobile {
+		display: none;
+		list-style: none;
+		width: auto;
+		margin: 0 auto;
+
+		@media  only screen and (max-width: 500px) {
+			display: inline-block !important;
+		}
+
+		li {
+			margin: 0 auto;
+	        width: 85%;
+			margin-bottom: 40px;
+			text-align: center;
+			img {
+				margin: 0 auto;
+				margin-bottom: 15px;
+			}
+			a {
+				color: #9B9B9B;
+			}
+		}
+	}
+}
+
+.news table.non-mobile tbody tr:first-child td {
+	padding: 5px 15px;
+}
+
+.news table.non-mobile tbody tr:last-child td {
+	padding-top: 0;
+	padding-bottom: 60px;
+}
+
+.recent-blog-post .block {
+	border-bottom-width: 0px;
+}
+
+
+.block {
+	position: relative;
+	display: block;
+	box-shadow: 0 0 0px #000;
+	overflow: hidden;
+	z-index: 0;
+	min-height: 472px;
+	max-height: 472px;
+
+	.photo-container {
+		transition: transform 500ms ease-in-out;
+		background-size: cover;
+		background-position: left center;
+		background-repeat: no-repeat;
+		width:100%;
+		min-height: 472px;
+		transform: scale(1, 1);
+
+	}
+
+  .video-container, .photo-container  {
+    width: 100%;
+    min-height: 472px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+    #disrupt-vid {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1000;
+      overflow: hidden;
+
+      @media only screen and (min-width: 1650px) {
+        transform: translateY(10%);
+      }
+      @media only screen and (min-width: 1900px) {
+        transform: translateY(20%);
+      }
+      @media only screen and (min-width: 2150px) {
+        transform: translateY(30%);
+      }
+      @media only screen and (max-width: 1350px) {
+        transform: translateX(10%);
+      }
+      @media only screen and (max-width: 1200px) {
+        transform: translateX(12%);
+      }
+      @media only screen and (max-width: 1000px) {
+        transform: translateX(25%);
+      }
+      @media only screen and (max-width: 760px) {
+        display: none;
+      }
+    }
+  }
+
+	&:hover {
+		.photo-container {
+			transform: scale(1.03, 1.03);
+		}
+		.video-container {
+		  transform: scale(1.1, 1.1);
+		}
+	}
+
+	//Layouts
+	&.bar {
+		width: 100%;
+		position: relative;
+	}
+	&.half {
+		width: 50%;
+		display: table-cell;
+	}
+	// Styling
+	.title {
+		@media only screen and (max-width: 600px) {
+	        padding: 6em 1em 2em;
+	     }
+		@media only screen and (min-width: 601px) {
+	        padding: 6em 3em 2em;
+	     }
+		color: $white;
+		position:absolute;
+		bottom: 0;
+		width: 100%;
+		//Fix for OSX Font Rendering on Dark BG's
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		h2, h3, h5 {
+			margin-bottom: 0;
+		}
+		.name {
+			margin-bottom:0px;
+		}
+		h2 {
+			margin-bottom: 0.2em;
+		}
+		.tag, .button {
+			display: inline-block;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+		}
+    .tag {
+       margin-bottom: 10px;
+    }
+	}
+}
+
+
+@media only screen and (max-width: 640px) {
+	.double {
+		display: block;
+	}
+	.block.half {
+		display: block;
+		width: 100%;
+	}
+
+	.block, .block .photo-container {
+		min-height: 600px;
+	}
+}
+
+
+#blog {
+  .photo-container {
+    background-position: left top;
+  }
+}

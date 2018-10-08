@@ -1,0 +1,125 @@
+@import "base/colors";
+@import "base/mixins";
+@import "base/type";
+
+/************************************
+ **  Careers
+ ************************************/
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
+.careers.open-office-hours .hero {
+	background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/open-office-hours/open-studio.jpg');
+}
+
+.careers {
+	.video-box {
+		padding-bottom: 0;
+	}
+	.hero {
+		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/careers/careers.jpg');
+    text-shadow: 0 2px 20px rgba(0,0,0,.8);
+	}
+
+	#content-area {
+		@include clearfix();
+		padding: 40px 20px;
+		.title {
+      margin-bottom: 0px;
+		}
+
+		#engineer ul, #engineer ul li {
+			font-size: 26px;
+			line-height: 30px;
+			word-spacing: 0rem;
+		}
+
+		.subtitle {
+			p {
+				color: $gray;
+			}
+            margin-bottom: 2em;
+		}
+	}
+
+	.left, .centerContent, .right {
+		float: left;
+	}
+
+	.left, .right {
+		width: 25%;
+	}
+
+	.centerContent {
+		width: 50%;
+		padding: 0 1.25em;
+		line-height: 30px;
+	}
+}
+.form-title {
+  font-weight: $font-weight-bold;
+}
+.caption.caption-quote {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#dbutton, #dbutton2, #attach_resume-02f6d985-bc3d-40a0-9bff-c8610111844b {
+	padding-top: 11px;
+	padding-bottom: 7px;
+	width: calc(100% - 219px);
+	min-width: 209px;
+}
+
+#abutton, #abutton2 {
+	padding-top: 11px;
+}
+
+#email-02f6d985-bc3d-40a0-9bff-c8610111844b, #email_content2-02f6d985-bc3d-40a0-9bff-c8610111844b, #email-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b, #email_content2-dd49f7c5-9cae-4ca9-bdb0-0600abeaa95b {
+	width: 100%;
+}
+
+//Video
+#video-bg {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}
+#video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+  #video-bg > video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-bg > video { width: 300%; left: -100%; }
+}
+/* 2. If supporting object-fit, overriding (1): */
+@supports (object-fit: cover) {
+  #video-bg > video {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	#video-bg > video {
+    	top: 0; left: 0;
+    	width: 100%; height: 100%;
+    	object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+	#video-bg {
+		display: none;
+	}
+}

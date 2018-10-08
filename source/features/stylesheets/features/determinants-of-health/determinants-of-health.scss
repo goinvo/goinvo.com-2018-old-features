@@ -1,0 +1,747 @@
+// HEADER
+$doh-header-height: 40px;
+
+.doh-container {
+  .h5 {
+    margin-bottom: 1rem;
+
+    &--bold {
+      font-weight: bold;
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  .text {
+    &--light {
+      color: #889;
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+  .used-at__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 15%;
+      margin: 0 1%;
+    }
+  }
+
+  .about-goinvo {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .button:first-of-type {
+      margin-right: 2rem;
+    }
+  }
+
+  .projects-row {
+  	display: flex;
+  	flex-wrap: wrap;
+    justify-content: center;
+  	max-width: 1280px;
+  	margin: 0 auto 2rem auto;
+  	padding: 0px 5px;
+
+  	.project {
+  		flex: 0 0 33%;
+  		max-width: 410px;
+  		padding: 0px 5px;
+  		cursor: pointer;
+  		color: black;
+  		margin: 1rem auto;
+
+  		.top-description {
+  			font-weight: bold;
+  			text-align: center;
+  			padding-bottom: 10px;
+  			vertical-align: text-bottom;
+  		}
+
+  		.image-wrapper {
+  			max-height: 264px;
+  			overflow: hidden;
+        text-align: center;
+
+  			img {
+          width: 100%;
+          max-height: 200px;
+  				transform: scale(1,1);
+  				transition: 300ms ease-in-out;
+  			}
+  		}
+
+  		.bottom-description,
+  		.company-name {
+  			padding: 5px 15px;
+        font-size: 1rem;
+  		}
+
+  		.bottom-description {
+  			padding-top: 20px;
+  		}
+
+  		.company-name {
+  			color: #C8C8C8;
+  		}
+
+  		&:hover {
+  			.image-wrapper img {
+  				transform: scale(1.03, 1.03);
+  			}
+  		}
+
+  		@media only screen and (max-width: 640px) {
+  			flex: 0 0 100%;
+  		}
+
+  	}
+
+  }
+}
+
+.doh-fixed-header {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #1D5377;
+  box-shadow: 0px -2px 7px #000;
+  z-index: 10;
+}
+.doh--hide-tiny {
+  display: none;
+
+  @media only screen and (min-width: 450px) {
+    display: inline;
+  }
+}
+.doh-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: $doh-header-height;
+  list-style: none;
+
+  li,
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  li:not(:first-of-type) {
+    margin-left: 0px;
+  }
+
+  a {
+    padding: 0 10px;
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    justify-content: center;
+
+    li:not(:first-of-type) {
+      margin-left: 20px;
+    }
+
+    a {
+      font-size: 20px;
+    }
+  }
+}
+// ALL CONTENT
+article#feature-article div.doh-container {
+  padding-top: $doh-header-height;
+
+  .starter-template {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  h5 {
+  	font-size: 1.5rem;
+  	letter-spacing: 0.1rem;
+  }
+
+  p, li {
+  	font-size: 1.3rem;
+  }
+
+  .emphasize_text {
+  	font-weight: bold;
+  	letter-spacing: 0.1rem;
+  }
+  .bold {
+  	font-weight: bold;
+  }
+
+  .left_spacing {
+  	margin-left: 7%;
+  }
+
+  .right_spacing {
+  	margin-right: 7%;
+  }
+
+  placeholder {
+  	font-size: 1.3rem;
+  }
+
+  a:not(.project) {
+  	text-decoration: none;
+  	color: white;
+  }
+
+  a.button {
+    color: #111;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: darken(white, 2.5%);
+    }
+  }
+
+  //media Queries
+  /* For devices larger than 320px */
+  @media (min-width: 320px) and (max-width: 549px){
+  	#credits {
+  		img {
+  			width: 40%;
+  		}
+  	}
+    #factors {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  	#uses_img_1, #uses_img_2 {
+  		height: 8rem;
+  	}
+  	#uses_img_3, #uses_img_4 {
+  		height: 8rem;
+  	}
+  	#header {
+  		h5 {
+  			font-size: 1rem;
+  		}
+  	}
+  	p, li {
+  		font-size: 1.3rem;
+  	}
+  	h5 {
+  		font-size: 1.3rem;
+  	}
+  	.emphasize_text {
+  		font-size: 1.3rem;
+  	}
+  	#header_image {
+  		h5 {
+  			font-size: 1.8rem;
+  		}
+  	}
+  }
+
+  /* Larger than tablet */
+  @media (min-width: 550px) {
+  	.left_spacing {
+  		margin-left: 14%;
+  	}
+
+  	.right_spacing {
+  		margin-right: 14%;
+  	}
+  	#credits {
+  		img {
+  			width: 100%;
+  		}
+  	}
+  	#uses_img_1, #uses_img_2 {
+  		height: 13rem;
+  	}
+  	#uses_img_3, #uses_img_4 {
+  		height: 13rem;
+  	}
+  	#header {
+  		h5 {
+  			font-size: 1.1rem;
+  		}
+  	}
+  	p, li {
+  		font-size: 1.1rem;
+  	}
+  	h5 {
+  		font-size: 1.1rem;
+  	}
+  	.emphasize_text {
+  		font-size: 1.1rem;
+  	}
+  	#header_image {
+  		h5 {
+  			font-size: 2.6rem;
+  		}
+  	}
+  }
+
+  /* Larger than tablet */
+  @media (min-width: 768px) {
+  	#header_image {
+  		h5 {
+  			font-size: 2.6rem;
+  		}
+  	}
+  	#uses_img_1, #uses_img_2 {
+  		height: 22rem;
+  	}
+  	#uses_img_3, #uses_img_4 {
+  		height: 18rem;
+  	}
+  }
+
+  /* Larger than desktop */
+  @media (min-width: 1024px) {
+  	.left_spacing {
+  		margin-left: 20%;
+  	}
+
+  	.right_spacing {
+  		margin-right: 20%;
+  	}
+  	#header {
+  		h5 {
+  			font-size: 1.1rem;
+  		}
+  	}
+  	p, li {
+  		font-size: 1.1rem;
+  	}
+  	h5 {
+  		font-size: 1.4rem;
+  	}
+  	.emphasize_text {
+  		font-size: 1.4rem;
+  	}
+  	#header_image {
+  		h5 {
+  			font-size: 2.6rem;
+  		}
+  	}
+  }
+
+  /* Larger than desktop */
+  @media (min-width: 1420px) {
+  	.left_spacing {
+  		margin-left: 20%;
+  	}
+  	.right_spacing {
+  		margin-right: 20%;
+  	}
+  	#header {
+  		h5 {
+  			font-size: 1.3rem;
+  		}
+  	}
+  	p, li {
+  		font-size: 1.3rem;
+  	}
+  	h5 {
+  		font-size: 1.6rem;
+  	}
+  	.emphasize_text {
+  		font-size: 1.6rem;
+  	}
+  	#header_image {
+  		h5 {
+  			font-size: 2.8rem;
+  		}
+  	}
+  }
+
+
+  // HOME
+
+  #problem_statement, #uses {
+    a {
+      font-size: 1.1rem;
+      text-decoration: underline;
+
+      &:hover {
+        color: #adf;
+      }
+
+      &:active {
+        color: #8ac;
+      }
+
+      &:first-of-type {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  #problem_statement {
+  	margin-bottom: 2rem;
+  	padding: 1.5rem 0rem 1.5rem 0rem;
+  }
+
+  #header {
+    display: none;
+    z-index: 9999;
+  	background-color: #1D5377;
+  	position: fixed;
+  	top: 0;
+  	h5 {
+  		margin: 1rem 0rem 1rem 0rem;
+  		color: white;
+  		font-weight: lighter;
+  	}
+  }
+
+  #header_image {
+  	background-color: #fff;
+  	background-image: url("../../../images/features/determinants-of-health/feature_banner2.jpg");
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center;
+  	height: 250px;
+
+  	h5:first-child {
+  		padding-top: 1.7rem;
+  	}
+  	h5 {
+  		font-weight: bold;
+  		color: #1F5279;
+  		letter-spacing: 0.2rem;
+  		margin-bottom: -0.4rem;
+  	}
+
+    @media only screen and (min-width: 800px) {
+      height: 350px;
+    }
+  }
+
+  #problem_statement {
+  	background-color: #1D5377;
+  	div {
+  		color: white;
+  		font-weight: 200;
+  		hr {
+  			margin: 0rem 0rem 1.5rem 0rem;
+  			opacity: 0.3;
+  		}
+  		p:first-child {
+  			padding-top: 2.5rem;
+  			margin-bottom:0;
+  		}
+  		p:last-child {
+  			padding-bottom: 2.5rem;
+  		}
+  	}
+  }
+
+  // VISUALIZATION
+
+  // This is to fix the flicker bug on
+  // the Google Charts pie tooltips.
+  svg > g > g:last-child {
+    pointer-events: none;
+  }
+
+  // [class*="#determinants-chart"] { cursor: pointer; }
+
+  #determinants-chart {
+  	padding-top: 3rem;
+    margin: -2rem 0rem 0rem 0rem;
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #determinant-info {
+  	margin-top: 2rem;
+    margin-bottom: 2rem;
+    h4 {
+    	font-size: 1.2em;
+    	margin-bottom: 0 0 4px;
+    	padding: 0;
+    }
+  }
+
+
+  #factors {
+  	-webkit-column-count: 2;
+  	-webkit-column-gap: 0px;
+  	-webkit-column-fill: balance;
+  	-moz-column-count: 2;
+  	-moz-column-gap: 0px;
+  	-moz-column-fill: balance;
+  	column-count: 2;
+  	column-gap: 0px;
+  	column-fill: balance;
+
+  	margin: 1em 0;
+  	padding: 0;
+
+
+    .factor {
+    	-webkit-column-break-inside: avoid;
+    	-moz-column-break-inside: avoid;
+    	column-break-inside: avoid;
+      page-break-inside: avoid;
+
+    	width: 96%;
+    	display: inline-block;
+    	padding: 0 0 1em;
+
+      h5 {
+      	margin: 0 0 4px;
+      	padding: 0;
+      }
+
+      ul, ul li {
+      	list-style-type: none;
+      	margin: 0;
+      	padding: 0;
+      	color: #889;
+        font-size: 1rem;
+      }
+    }
+  }
+
+
+  // ORDER POSTER
+  #order_poster {
+  	img {
+  		width: 100%;
+      margin-top: 2rem;
+  	}
+    a:not(.button) {
+      color: #1D5377;
+      text-decoration: underline;
+    }
+  	span {
+  		img {
+  			width: 30.9%;
+  			padding-top: 1.4rem;
+  			// padding-right: 3.5%;
+        display: inline-block;
+  		}
+      &.mid {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+      }
+  	}
+  	button {
+      display: inline-block;
+      width: 15.5rem;
+      height: 3rem;
+      padding: 0px;
+      margin: auto;
+      font-size: 16px;
+      text-align: center;
+  	}
+  }
+
+
+
+  // USES
+
+  #uses_img_1, #uses_img_2, #uses_img_3, #uses_img_4 {
+  	width: 100%;
+  	background-color: #3B6484;
+  }
+
+  #uses_img_1 {
+  	background-image: url("../../../images/features/determinants-of-health/uses_img_1.png");
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-position: 50%;
+  }
+
+  #uses_img_2 {
+  	background-image: url("../../../images/features/determinants-of-health/uses_img_2.png");
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-position: 50%;
+  }
+
+  #uses_img_3 {
+  	background-image: url("../../../images/features/determinants-of-health/uses_img_3.png");
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-position: 50%;
+  }
+
+  #uses_img_4 {
+  	background-image: url("../../../images/features/determinants-of-health/uses_img_4.png");
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-position: 50%;
+  }
+
+  #use_jump {
+  	padding-top: 3rem;
+  	border-color: white;
+  }
+
+  #uses, #uses1, #uses2, #uses3, #uses4 {
+  	padding-bottom: 5rem;
+  	background-color: #1D5377;
+  	h5 {
+  		color: white;
+  		font-weight: 600;
+  		margin-bottom: 0;
+  		padding: 1.6rem 0rem 1.1rem 0rem;
+  	}
+  	p {
+  		color: white;
+  		font-weight: 200;
+  	}
+  	p:last-child {
+  		margin-bottom: 0;
+  	}
+  }
+
+  #uses {
+  	padding-bottom: 0rem;
+  }
+
+  #uses2 a:hover {
+  	text-decoration: underline;
+  }
+
+
+
+  // CONTACT
+
+  #contact_section {
+    display: none;
+  	padding-bottom: 1rem;
+  }
+
+  #contact {
+  	margin-top: 3rem;
+  	p:first-child {
+  		padding-top: 5rem;
+  		margin-top: -3rem;
+  		margin-bottom: 0;
+  	}
+  	hr {
+  		margin: 0rem 0rem 1.5rem 0rem;
+  		opacity: 0.8;
+  	}
+  }
+  #address {
+  	p {
+  		margin-bottom: 0rem;
+  	}
+  }
+  #contact_button {
+  	margin-bottom: 3.5rem;
+  	color: white;
+  	background-color: #1D5377;
+  }
+  #contact_form_loader {
+    background-image: url('../../../images/features/determinants-of-health/loader.gif');
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+  }
+
+  textarea {
+  	font-size: 1.3rem;
+  	height: 13rem;
+  }
+
+  input {
+  	font-size: 1.3rem;
+  }
+
+
+  // CREDITS
+
+  .affiliation {
+  	margin-bottom: 0;
+  }
+
+  .name {
+  	font-size: 2rem;
+  	font-weight: 600;
+  	letter-spacing: 0.15rem;
+  	margin-bottom: 0.8rem;
+  }
+
+  .description {
+  	margin-bottom: 3.5rem;
+  }
+
+  #credits {
+  	padding-bottom: 4rem;
+  	img {
+  		padding-bottom: 0.8rem;
+  	}
+  }
+
+
+  // REFERENCES
+  #references {
+    padding-bottom: 4rem;
+  	h5 {
+  		padding-top: 3.5rem;
+  	}
+  	p, li {
+  		color: #909090;
+  	}
+    a {
+       color: #1D5377;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  	ol {
+  		list-style-position: outside;
+  		// padding-left: 1.1rem;
+  	}
+  	ol li {
+  		overflow-wrap: break-word;
+  	}
+  }
+  .remove_sentence_space {
+  	margin-bottom: 0;
+  }
+  #methodology {
+  	background-color: #F4F8F9;
+  	padding-bottom: 4rem;
+  	p, li {
+      color: #909090;
+  	}
+    li {
+      list-style-position: outside;
+    }
+  }
+
+} /* doh-container */

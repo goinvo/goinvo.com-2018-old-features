@@ -1,0 +1,465 @@
+@import "../base/core";
+
+$spacing: 1rem;
+
+.robot-hero {
+  position: relative;
+  height: 90vh;
+  background-image: image-url("features/myrobotdoctor/splash.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - #{$spacing * 2});
+    color: $off-white;
+    font-weight: $font-weight-bold;
+    transform: translateX(-50%);
+  }
+  &__text {
+    text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 50vh;
+  }
+}
+
+.robot-title {
+  @include font-size-map($font-size-h2);
+
+  min-height: $spacing * 5;
+  padding: ($spacing * 3) $spacing;
+  background-color: $black;
+  color: $off-white;
+  text-align: center;
+  font-family: $font-family-serif;
+  font-weight: $font-weight-bold;
+}
+
+.robot-emphasize {
+  @include font-size-map($font-size-h3);
+
+  min-height: $spacing * 5;
+  padding: ($spacing * 3) $spacing;
+  background-color: $lightgray;
+  text-align: center;
+  font-family: $font-family-serif;
+  font-weight: $font-weight-bold;
+
+  &--align-right {
+    padding-right: $spacing * 2;
+    text-align: right;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: ($spacing * 3);
+  }
+}
+
+.robot-image {
+  &--expand-width {
+    width: 100%;
+  }
+}
+
+.robot-overlay-container {
+  @media screen and (max-width: 1023px) {
+    $card-overlay-amount: $spacing * 5;
+
+    background-color: $off-white;
+    margin-bottom: $card-overlay-amount * -1;
+
+    &__text {
+      $pseudo-element-size: $spacing * 2;
+
+      position: relative;
+      background-color: $off-white;
+      border-top-left-radius: $pseudo-element-size;
+      border-top-right-radius: $pseudo-element-size;
+      padding: ($spacing * 3) ($spacing * 2) ($spacing * 2) ($spacing * 2);
+      top: $card-overlay-amount * -1;
+      width: calc(100% - #{$pseudo-element-size});
+      margin: 0 auto;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: $pseudo-element-size;
+        width: $pseudo-element-size;
+        background-color: transparent;
+        top: $card-overlay-amount - $pseudo-element-size;
+        left: $pseudo-element-size * -1;
+        border-radius: 100%;
+        box-shadow: 0 ($pseudo-element-size / 2) 0 ($pseudo-element-size / 4) $off-white;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        height: $pseudo-element-size;
+        width: $pseudo-element-size;
+        background-color: transparent;
+        top: $card-overlay-amount - $pseudo-element-size;
+        left: 100%;
+        border-radius: 100%;
+        box-shadow: 0 ($pseudo-element-size / 2) 0 ($pseudo-element-size / 4) $off-white;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      min-width: $spacing * 20;
+      max-width: 50%;
+      max-height: 80%;
+      padding: ($spacing * 3) ($spacing * 2);
+      background-color: $off-white;
+      transform: translateY(-50%);
+      overflow-y: auto;
+      opacity: 0.9;
+
+      &--align {
+        &-left {
+          left: 0;
+          border-top-right-radius: $spacing * 2;
+          border-bottom-right-radius: $spacing * 2;
+        }
+        &-right {
+          right: 0;
+          border-top-left-radius: $spacing * 2;
+          border-bottom-left-radius: $spacing * 2;
+        }
+      }
+    }
+  }
+}
+
+.robot-adjacent-container {
+  @include clearfix();
+
+  @media screen and (min-width: 768px) {
+    .robot-adjacent-container__item {
+      float: left;
+
+      &--1-of-2 {
+        width: calc(100% / 2);
+      }
+      &--2-of-5 {
+        width: calc(100% / 5 * 2);
+      }
+      &--3-of-5 {
+        width: calc(100% / 5 * 3);
+      }
+    }
+  }
+}
+
+.robot-process-container {
+  $card-overlay-amount: $spacing * 5;
+
+  background-color: $off-white;
+
+  &__text {
+    position: relative;
+    top: $card-overlay-amount * -1;
+    width: calc(100% - #{$spacing * 2});
+    padding: ($spacing * 3) ($spacing * 2);
+    margin: auto;
+    margin-bottom: $card-overlay-amount * -2;
+    border-radius: $spacing * 2;
+    background-color: $off-white;
+  }
+}
+
+.robot-list {
+  margin: auto;
+  padding: initial;
+  padding-left: $spacing * 3;
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
+    padding: ($spacing * 2) ($spacing * 3);
+  }
+
+  &--style-invisible {
+    padding-left: 0;
+
+    .robot-list__item {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    padding: 0 $spacing;
+
+    &--spacing {
+      &-medium {
+        padding: ($spacing / 2) $spacing 0;
+
+        &:last-child {
+          padding: ($spacing / 2) $spacing;
+        }
+      }
+      &-large {
+        padding: $spacing $spacing 0;
+
+        &:last-child {
+          padding: $spacing;
+        }
+      }
+    }
+
+    &--start-at-7 {
+      counter-reset: step-counter 6;
+    }
+
+    &--medium-number,
+    &--large-number {
+      position: relative;
+      counter-increment: step-counter;
+
+      &:before {
+        position: absolute;
+        font-weight: $font-weight-bold;
+        content: counter(step-counter);
+      }
+    }
+    &--medium-number {
+      &:before {
+        right: calc(100% + #{$spacing / 2});
+        font-size: 1.5 * $spacing;
+      }
+    }
+    &--large-number {
+      &:before {
+        right: calc(100% + #{$spacing / 4});
+        font-size: 3 * $spacing;
+      }
+    }
+  }
+}
+
+.carousel {
+  &__container {
+    position: relative;
+    padding: ($spacing * 2) ($spacing * 3);
+    background-color: $lightergray;
+  }
+  &__control {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+
+    &--left {
+      left: 0;
+
+      .carousel__control__text {
+        left: $spacing / 2;
+      }
+    }
+    &--right {
+      left: 50%;
+
+      .carousel__control__text {
+        right: $spacing / 2;
+      }
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      color: $darkgray;
+      font-weight: $font-weight-bold;
+      font-size: $spacing * 1.5;
+      transform: translateY(-50%);
+    }
+  }
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+
+    &.active {
+      position: relative;
+      left: 0;
+      opacity: 1;
+      transition: left 0.5s, opacity 0.5s;
+
+      &.left {
+        left: -100%;
+        opacity: 0;
+      }
+      &.right {
+        left: 100%;
+        opacity: 0;
+      }
+    }
+    &.prev {
+      left: -100%;
+    }
+    &.next {
+      left: 100%;
+    }
+  }
+}
+
+.robot-systems-list {
+  list-style: none;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    %to-left {
+      padding: (3 * $spacing) (1 * $spacing) (3 * $spacing) (4 * $spacing);
+      background-position-x: right;
+    }
+    %to-right {
+      padding: (3 * $spacing) (4 * $spacing) (3 * $spacing) (1 * $spacing);
+      background-position-x: $spacing * 12;
+    }
+
+    &__item {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: center;
+
+      &--shr {
+        @extend %to-right;
+        background-image: linear-gradient(to right, white 20%, transparent),
+          image-url("features/myrobotdoctor/system-shr.png");
+      }
+
+      &--completeness {
+        @extend %to-left;
+        background-image: linear-gradient(
+            to left,
+            white 50%,
+            rgba(255, 255, 255, 0.75) 80%,
+            transparent
+          ),
+          image-url("features/myrobotdoctor/system-completeness.png");
+      }
+
+      &--doh {
+        @extend %to-right;
+        background-image: linear-gradient(to right, white 20%, transparent),
+          image-url("features/myrobotdoctor/system-doh.png");
+      }
+
+      &--scenarios {
+        @extend %to-left;
+        background-image: linear-gradient(
+            to left,
+            white 50%,
+            rgba(255, 255, 255, 0.75) 80%,
+            transparent
+          ),
+          image-url("features/myrobotdoctor/system-scenarios.png");
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__item {
+      position: relative;
+      padding: $spacing ($spacing * 3) $spacing ($spacing * 10);
+      background-size: ($spacing * 8) auto;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: $spacing;
+
+      &--shr {
+        background-image: image-url("features/myrobotdoctor/system-shr.png");
+      }
+
+      &--completeness {
+        background-image: image-url("features/myrobotdoctor/system-completeness.png");
+      }
+
+      &--doh {
+        background-image: image-url("features/myrobotdoctor/system-doh.png");
+      }
+
+      &--scenarios {
+        background-image: image-url("features/myrobotdoctor/system-scenarios.png");
+      }
+
+      &:first-child:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        top: -50%;
+        left: $spacing * 5;
+        border-left: ($spacing / 2) dashed rgba(33, 94, 152, 0.2);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        top: 78%;
+        left: $spacing * 5;
+        border-left: ($spacing / 2) dashed rgba(33, 94, 152, 0.2);
+      }
+    }
+  }
+}
+
+// Utilities
+// ---------
+
+@each $direction in (top bottom left right) {
+  .pad-#{$direction}--double {
+    box-sizing: border-box;
+    padding-#{$direction}: $spacing * 2;
+  }
+  .pad-#{$direction} {
+    box-sizing: border-box;
+    padding-#{$direction}: $spacing;
+  }
+
+  .margin-#{$direction} {
+    box-sizing: border-box;
+    margin-#{$direction}: $spacing;
+  }
+  .margin-#{$direction}--half {
+    box-sizing: border-box;
+    margin-#{$direction}: $spacing / 2;
+  }
+}
+
+.pad-all {
+  box-sizing: border-box;
+  padding: $spacing;
+}
+
+.align--right {
+  text-align: right;
+}
+
+.hide {
+  &--small {
+    display: none;
+  }
+  &--medium {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide {
+    &--small {
+      display: block;
+    }
+    &--medium {
+      display: none;
+    }
+  }
+}

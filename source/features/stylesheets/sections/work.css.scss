@@ -1,0 +1,85 @@
+@import "../base/core";
+
+#projects {
+	.hero {
+		background-image: linear-gradient(to bottom, fade-out(#000, 0.65) 0%, fade-out(#000, 0.5) 100%), url('../../images/work/work.jpg');
+		background-position: center bottom;
+		margin-bottom: 15px;
+	}
+
+	select {
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.projects-container {
+		padding-bottom: 2em;
+	}
+
+	.projects-row {
+		@include clearfix();
+	}
+
+	.project {
+		display: block;
+		float: left;
+		padding: 1em;
+		width: calc(100%/3);
+		&:last-child {
+			float: left;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		.project-info {
+			padding: 10px;
+		}
+		@media screen and (max-width: 940px) {
+			width: 100%;
+		}
+	}
+	
+	.project h3 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		margin: 0;
+		margin-top: 0.5em;
+	}
+	
+	.description, .practice-areas {
+		padding-top: 0.5em;
+	}
+
+	.description {
+		margin-bottom: 0;
+		line-height: 1.2em;
+	}
+
+	.practice-areas {
+		color: #AAA;
+		font-size: 19px;
+	}
+
+	.project-image {
+		border: 2px solid $lightgray;
+		background-size: 100%;
+		background-size: cover;
+		height: 250px;   
+		cursor: pointer;
+	}
+	
+	h3, .practice-areas {
+		height: auto;
+	}
+	
+	a.button.read-story {
+		background-color: #43597b;
+		color: $white;
+	}
+
+	a.button.read-story:hover {
+		background-color: rgba(67, 89, 123, 0.8);
+		color: $white;
+	}
+}
