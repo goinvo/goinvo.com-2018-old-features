@@ -63,9 +63,9 @@ after_configuration do
 end
 
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, 'old/stylesheets'
+set :js_dir, 'old/javascripts'
+set :images_dir, 'old/images'
 
 # Build-specific configuration
 configure :build do

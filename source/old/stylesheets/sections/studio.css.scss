@@ -1,0 +1,204 @@
+@import "../base/core";
+
+html,
+body {
+  @include font-size-map($font-size-body-new-pages);
+}
+
+div.loading {
+	text-align:center;
+	height: 200px;
+	display:none;
+}
+
+#the-studio {
+	.hero {
+		background-image: url('/old/images/studio/studio2.jpg');
+    text-shadow: 0 2px 20px rgba(0,0,0,.8);
+	}
+
+	.content {
+		padding-bottom:30px;
+		margin:0 auto;
+	}
+
+	#social-section {
+		padding-left:0px;
+		padding-right:0px;
+	}
+}
+
+@media only screen and (max-width: 676px) {
+	#the-studio div#social-section {
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	div.social-card {
+		margin-left:0px;
+		margin-right:0px;
+	}
+}
+
+.social-card {
+	background-color:white;
+	overflow:hidden;
+	@include box-shadow(1px 1px 1px transparentize($black, 0.3));
+	position:relative;
+	margin-top:20px;
+	margin-left:10px;
+	margin-right:10px;
+	width:100%;
+	max-width:320px;
+	min-height:213px;
+	border: 1px solid transparentize($gray, 0.6);
+	border-radius:3px;
+	border-right-width:0px;
+	border-bottom-width:0px;
+
+	.avatar {
+		cursor: pointer;
+		height: 50px;
+		width: 50px;
+		border: 1px solid $white;
+		border: none;
+		border-radius: 4px;
+		background-size: cover;
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+	}
+
+	.social-links {
+		position:absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	.social-handle {
+		font-size: 1.25em;
+		line-height: 1.1em;
+		position: absolute;
+		bottom: 10px;
+		left: 70px;
+		text-decoration: none;
+	}
+
+	&:hover {
+		.caption {
+			top: 0;
+			@include opacity(1.0);
+		}
+	}
+
+	.caption {
+		padding: 10px 65px 10px 10px;
+		margin-bottom:0px;
+		width: 100%;
+		color: $white;
+		position: absolute;
+		top: -100px;
+		@include opacity(0.0);
+		@include transparent-background($black, 0.25);
+		@include transition(all 0.5s ease-in-out);
+  }
+
+	&.photo {
+		cursor:pointer;
+		background-size:cover;
+
+		&.portrait {
+			min-height:456px;
+		}
+
+		&.landscape {
+			min-width:660px;
+
+			&.super-long {
+				min-width:1000px;
+			}
+		}
+
+		img.flickr-photo {
+			padding-bottom:70px;
+		}
+
+	}
+
+	&.soundcloud {
+		min-width:660px;
+
+		p.contents {
+			padding:10px;
+			padding-bottom:50px;
+		}
+
+
+	}
+
+	&.tweet, &.github {
+		height:auto;
+		min-height: 100px;
+
+		p.contents {
+			padding:10px;
+			padding-top:10px;
+			padding-bottom:50px;
+			height:auto;
+
+			img.twitter-photo {
+				padding-top:5px;
+			}
+		}
+	}
+}
+
+.bottom {
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: center;
+	display:none;
+}
+
+//Video
+#video-bg {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}
+#video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+  #video-bg > video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-bg > video { width: 300%; left: -100%; }
+}
+/* 2. If supporting object-fit, overriding (1): */
+@supports (object-fit: cover) {
+  #video-bg > video {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#video-bg > video {
+    	top: 0; left: 0;
+    	width: 100%; height: 100%;
+    	object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+	#video-bg {
+		display: none;
+	}
+}

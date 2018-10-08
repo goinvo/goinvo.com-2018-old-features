@@ -4,7 +4,7 @@
 .container-fluid.profile.desktop{:data=>{:index=> index, :patient=> profile.name}}
   .row
     .col-md-3
-      %img{:src=>"../../../images/features/careplans/reggie_norm.png"}
+      %img{:src=>"/old/images/images/features/careplans/reggie_norm.png"}
     .col-md-9
       %h6.blue Patient Summary
       %span.summary=profile.summary.html_safe
@@ -25,7 +25,7 @@
         .checkbox
           %label.obesity
             %input{:type=> "checkbox", :id=>"obesity"} Obesity<span class="superscript">22-24</span>
-        .checkbox  
+        .checkbox
           %label.diabetes
             %input{:type=> "checkbox", :id=>"diabetes"} Type II Diabetes<span class="superscript">18-21</span>
         .checkbox
@@ -35,7 +35,7 @@
       %h6.blue Care Team
       %p.care-team=profile["care team"].html_safe
   .row
-    #col.col-md-12.care-plan  
+    #col.col-md-12.care-plan
       %table.table.table-bordered
         %tr.headers
           %td.header.blank

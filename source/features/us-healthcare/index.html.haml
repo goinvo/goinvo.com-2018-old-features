@@ -27,20 +27,20 @@
 
 %navigation#article-nav
   %ul
-    %li 
+    %li
       %a{:data => {:link => "#symptoms"}}1. Symptoms
-    %li 
+    %li
       %a{:data => {:link => "#history"}}2. History
-    %li 
+    %li
       %a{:data => {:link => "#diagnosis"}}3. Diagnosis
-    %li 
+    %li
       %a{:data => {:link => "#prescription"}}4. Prescription
-    %li 
+    %li
       %a{:data => {:link => "#participate"}}5. Participate
-    %li 
+    %li
       %a{:data => {:link => "#authors"}}6. Authors
-    %li 
-      %a{:data => {:link => "#bibliography"}}7. References      
+    %li
+      %a{:data => {:link => "#bibliography"}}7. References
 #medical-bill
   %h3 Medical Bill
   %table{:border => 1}
@@ -60,11 +60,11 @@
 .content-wrapper
   %article#background
     %p.p-slide
-      $9,255. That’s how much your health costs the U.S. every year. 
+      $9,255. That’s how much your health costs the U.S. every year.
       =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
       You probably don’t pay that amount, let alone use that amount in health services. In fact, 90% of Americans account for less than 33% of healthcare consumption
       =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.nihcm.org/images/Health_Care_Spending_Highly_Concentrated_CS2F2.png", :text=>"The Concentration of Health Care Spending", :source=>"NIHCM Foundation", :access=>"Web"})
-      \. 
+      \.
     %p.p-slide
       Nonetheless, you are entangled in the $2.9 trillion
       =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cdc.gov/nchs/fastats/health-expenditures.htm", :text=>"Health Expenditures", :source=>"Centers for Disease Control and Prevention", :access=>"Web"})
@@ -72,7 +72,7 @@
       =partial(footnote_link, :locals => {:footnotes=>footnotes, :href=>"http://www.cbpp.org/research/policy-basics-where-do-our-federal-tax-dollars-go", :text=>"Policy Basics: Where Do Our Federal Tax Dollars Go?", :source=>"Center on Budget and Policy Priorities", :access=>"11 Mar. 2015. Web"})
       of the federal budget—your tax dollars—is part of this $2.9 trillion. You pay a lot. But what do you get, and how good is it?
     %p.p-slide
-      Consider David. He just left his job as a high school teacher to launch an education-technology startup. With the change, he lost his health coverage and must decide whether to purchase new insurance. He’s healthy—does he really need health coverage? 
+      Consider David. He just left his job as a high school teacher to launch an education-technology startup. With the change, he lost his health coverage and must decide whether to purchase new insurance. He’s healthy—does he really need health coverage?
     %p.p-slide
       David is just one of the thousands of Americans facing tough choices like this one. He could be any one of us. What happens if David’s gamble of good health fails him? Read on to follow David’s healthcare journey as he navigates the current system. Then, discover our vision for better healthcare in the U.S. and contribute your own ideas.
   %article#symptoms
@@ -147,7 +147,7 @@
           = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Mass. Becomes First State To Require Price Tags For Health Care", :href=>"http://commonhealth.wbur.org/2014/10/mass-first-price-tags-health-care", :source=>"Bebinger, Martha", :access=>"WBUR, 8 October 2014. Web"})
           However, it is still difficult to find accurate pricing information for people without insurance.
   #cost-comparison-boston-container.chart-container
-    %p 
+    %p
       Pneumonia treatment costs in Boston range from $10,000 to $31,000
       = partial(footnote_link,:locals=>{:footnotes=>footnotes, :text=>"Boston, Massachusetts: Simple Pneumonia & Pleurisy With Complications And Comorbities", :href=>"http://www.opscost.com/search?location=Boston%2C%20Massachusetts&drg_procedure_code=194", :source=>"OpsCost", :access=>"Web"})
     #cost-comparison-boston-chart
@@ -231,7 +231,7 @@
       After a week in the hospital, David’s initial cough, allergic reaction, and pneumonia are successfully treated. But he isn't sent home empty-handed: he has a bill that says he owes $15,820.
     #total_location
     %p.p-slide
-      It doesn’t have to be this way. If David had insurance, he would have had access to a primary care physician. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have had the second and third CT scans, preventing his allergic reaction and hospital-acquired pneumonia. 
+      It doesn’t have to be this way. If David had insurance, he would have had access to a primary care physician. More opportunities for self-care would have saved David time and money. If the two EHRs had talked to each other, David likely would not have had the second and third CT scans, preventing his allergic reaction and hospital-acquired pneumonia.
     %p.p-slide
       The account of David is fictional, but it’s well within the realm of possibility.
   / end id="story"
@@ -265,11 +265,11 @@
       .row
         .col-sm-4
           .toggle-rect
-            .tab-link.current{"data-tab" => "tab-1"} 
+            .tab-link.current{"data-tab" => "tab-1"}
               Spending Over Time
         .col-sm-4
           .toggle-rect
-            .tab-link{"data-tab" => "tab-2"} 
+            .tab-link{"data-tab" => "tab-2"}
               Spending vs. GDP
         .col-sm-4
           .toggle-rect
@@ -303,7 +303,7 @@
       Other challenges like reforming malpractice laws, incentivizing outcomes, and improving EHR interoperability require legislative action. Some changes will be cultural. For example, why do we spend so much money on end-of-life care that reduces quality of life? Likewise, medical culture needs to be more patient-centered, which involves giving people access to their own health data.
     %p.p-slide
       Ultimately, everyone has a role in healing the U.S. healthcare system. Below we explore the different actions that will lead to an improved system. Each is interconnected and influenced by patients, providers, policy makers, and payers. Discover the ways you can make a difference, and join the discussion by contributing your own ideas.
-  
+
   .sankey-wrapper
     #sankeyGUI
       %a#sankey-link{:name => "sankeyRef"}
@@ -313,7 +313,7 @@
           %ul.perspectives
             - data.features.ushealthcare.perspectives.each do |perspective|
               %li{:data => {:li_key => perspective['key']}}
-                .perspective{:data => {:key => perspective['key']}} 
+                .perspective{:data => {:key => perspective['key']}}
                   %span= perspective.title
         .sankey-menu-wrapper
           I want to change
@@ -324,7 +324,7 @@
                 %li{:data => {:persp => node.impacts[0]}}
                   .individual-action{ :data => {:key => key}}
                     %span= node.title
-    #sankey-chart.chart-container  
+    #sankey-chart.chart-container
     %article#results
       %ul
         - data.features.ushealthcare.nodes.each do |key, value|
@@ -345,14 +345,14 @@
       .row
         %h3 1. Give Feedback
         %p
-          Send us an email at 
+          Send us an email at
           = mail_to "feedback-ushealthcare@goinvo.com", "feedback-ushealthcare@goinvo.com", subject: "Healing U.S. Healthcare Feedback"
-      .row    
+      .row
         %h3 2. Remix and Reuse
         %p
-          Contribute to the project with new data and insights at 
+          Contribute to the project with new data and insights at
           %a{:href => "https://github.com/goinvo/ushealthcare", :target => "_blank"} github.com
-      .row    
+      .row
         %h3 3. Share
         %p
           .social-buttons.end
@@ -370,7 +370,7 @@
             %a.plus{:href => "https://plus.google.com/share?url=http%3A%2F%2Fgoinvo.com%2Ffeatures%2Fus-healthcare%2F", :onclick => "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600);return false;", :title => "Share on Google Plus"}
               %svg{:version => "1.1", :viewBox => "0 0 512.1 512"}
                 %polygon{:points => "430,237.1 385,237.1 385,192.1 362,192.1 362,237.1 317,237.1 317,259.1 362,259.1 362,304.1 385,304.1 385,259.1 430,259.1"}
-                %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}  
+                %path{:d => "M287.6,103.1h-26.9c10.4,8.5,31.2,24.9,31.2,59c0,33.1-19.1,48.8-38.2,63.6c-5.9,5.8-12.7,12.1-12.7,22 c0,9.8,6.8,15.2,11.8,19.3l16.4,12.5c20,16.6,38.2,31.8,38.2,62.7c0,42.1-42.7,85-120.8,85c-65.9,0-96.4-31.2-96.4-64.4 c0-16.1,8.2-38.9,35-54.6c28.2-17,66.4-19.2,86.8-20.6c-6.4-8.1-13.6-16.6-13.6-30.4c0-7.6,2.3-12.1,4.6-17.5 c-5,0.4-10,0.9-14.5,0.9c-48.2,0-75.5-35.4-75.5-70.3c0-20.6,6.4-44.9,25.9-61.5c25.9-21,59-23.6,83.6-23.6l94.8,0L287.6,103.1 L287.6,103.1z M169.1,307.2c-10,3.6-39.1,14.3-39.1,46.1c0,31.8,31.4,54.7,80,54.7c43.6,0,66.8-20.6,66.8-48.4 c0-22.9-15-34.9-49.6-59.1c-3.6-0.5-5.9-0.5-10.4-0.5C212.7,300,188.1,300.9,169.1,307.2L169.1,307.2z M194.6,101.4 c-11.8,0-24.5,4.7-31.8,13.7c-7.7,9.4-10,22.6-10,34.3c0,30,17.7,79.7,56.8,79.7c11.4,0,23.6-6.5,30.9-13.7 c10.4-10.3,11.4-23.5,11.4-31.6C251.8,151.5,232.3,101.4,194.6,101.4L194.6,101.4z"}
 
   %article#authors
     %h2 Creators
