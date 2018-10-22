@@ -277,4 +277,5 @@ redirect '/techtalks/', 'http://yes.goinvo.com/articles/around-the-studio-tech-t
 redirect '/car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/', 'http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz'
 redirect '/work/personalgenomeproject/', '/healthcare/personal-genome-project/'
 redirect '/studio/live', '/studio/team'
-redirect '/features/the-10-best-nations-in-world-cup-history', '/articles'
+redirect '/features/the-10-best-nations-in-world-cup-history', '/vision/'
+redirect '/features/determinants-of-health/', '/vision/determinants-of-health/'
