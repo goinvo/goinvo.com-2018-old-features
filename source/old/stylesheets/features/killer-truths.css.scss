@@ -105,7 +105,6 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-button,
 input,
 optgroup,
 select,
@@ -114,25 +113,18 @@ textarea {
   font: inherit; /* 2 */
   margin: 0; /* 3 */
 }
-button {
-  overflow: visible;
-}
-button,
 select {
   text-transform: none;
 }
-button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
 }
-button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -354,8 +346,6 @@ a:hover {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,
-button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -376,40 +366,15 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
-.button:hover,
-button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-.button:focus,
-button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
   border-color: #888;
   outline: 0; }
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
 
 
 /* Forms
@@ -526,9 +491,6 @@ td:last-child {
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
-  margin-bottom: 1rem; }
 input,
 textarea,
 select,
