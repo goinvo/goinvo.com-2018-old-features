@@ -37,7 +37,7 @@ site: <%= Dir.pwd %>/build/
 
 # s3_reduced_redundancy: true
 
-# cloudfront_distribution_id: <%= ENV['GOINVO_CF_DISTRIBUTION_ID'] %>
+cloudfront_distribution_id: <%= ENV['GOINVO_CF_DISTRIBUTION_ID'] %>
 
 # cloudfront_distribution_config:
 #   default_cache_behavior:
@@ -49,7 +49,7 @@ site: <%= Dir.pwd %>/build/
 
 # cloudfront_invalidate_root: true
 
-# cloudfront_wildcard_invalidation: true
+cloudfront_wildcard_invalidation: true
 
 # concurrency_level: 5
 
